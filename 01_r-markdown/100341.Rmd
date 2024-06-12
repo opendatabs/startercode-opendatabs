@@ -1,0 +1,103 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Kitas und Tagesheime
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100341)
+
+Auto generated R starter code for data set 100341.
+
+## Metadata
+
+- **Dataset_identifier** `100341`
+- **Title** `Kitas und Tagesheime`
+- **Description** `«Kitas», «Kindertagesstätten» oder «Tagesheime» sind Einrichtungen, in denen Kinder regelmässig tagsüber durch qualifizierte Fachpersonen und in geeigneten Räumlichkeiten betreut werden.
+«Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2024-02-20`
+- **Modified** `2024-06-10T05:05:29+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bevölkerung', 'Geographie', 'Bildung, Wissenschaft']`
+- **Keywords** `['Kinder', 'Betreuung', 'Familie', 'Tagesstruktur', 'Horte', 'Mittagstische', 'Tagesfamilie']`
+- **Publisher** `Jugend, Familie und Sport`
+- **Reference** `www.geo.bs.ch/tagesheime_kitas; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/c6efbfc6-e156-4f98-836b-d5c89ac9d6e5`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100341.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100341/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

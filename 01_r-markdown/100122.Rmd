@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Schülerprognose Riehen und Bettingen
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100122)
+
+Auto generated R starter code for data set 100122.
+
+## Metadata
+
+- **Dataset_identifier** `100122`
+- **Title** `Schülerprognose Riehen und Bettingen`
+- **Description** `Das Statistische Amt erstellt kleinräumige Prognosen zu den Schülerzahlen in den öffentlichen Schulen der Gemeinden Riehen und Bettingen. Die Schülerzahlen werden für die ersten 8 Schulstufen (Kindergarten und Primarschule), 13 Schulperimeter und 5 Schuljahre in die Zukunft prognostiziert. Die Perimeter dienen als Planungsgrundlage und nicht als effektive Einzugsgebiete. Die Prognosen werden im Auftrag der Gemeinde Riehen erstellt und jährlich aktualisiert. Die Prognosen 2022 wurden vor Ausbruch des Ukraine-Krieges erstellt, SuS aus dem Kriegsgebiet sind somit nicht mitberücksichtigt.`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2021-03-23`
+- **Modified** `2024-06-05T06:37:55+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bildung, Wissenschaft']`
+- **Keywords** `['Gemeinden', 'Zeitreihe', 'Prognose', 'Bildung', 'Schule', 'Schüler']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `https://www.statistik.bs.ch/analysen-berichte/gesellschaft-soziales/schuelerprognose.html`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100122.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100122/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

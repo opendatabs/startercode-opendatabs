@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Wahllokale Kanton Basel-Stadt
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100098)
+
+Auto generated R starter code for data set 100098.
+
+## Metadata
+
+- **Dataset_identifier** `100098`
+- **Title** `Wahllokale Kanton Basel-Stadt`
+- **Description** `<p>In diesem Datensatz sind die Wahllokale des Kantons Basel-Stadt aufgeführt, zusammen mit Informationen zu den entsprechenden Wahllokal-IDs, Gemeinde-IDs und den zugehörigen Gemeinden.<br/>Insgesamt enthält der Datensatz Informationen zu verschiedenen Wahllokalen im Kanton Basel-Stadt, einschließlich der Angaben zu brieflichen, elektronischen und persönlichen Stimmenden an den einzelnen Standorten.<br/></p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2023-07-26`
+- **Modified** `2024-04-30T12:37:10+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik']`
+- **Keywords** `['Abstimmung', 'Wahlen', 'Demokratie']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `http://abstimmungen.bs.ch`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100098.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100098/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

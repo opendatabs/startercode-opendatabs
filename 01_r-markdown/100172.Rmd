@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Smarte Strasse: Fahrzeugdurchfahrten
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100172)
+
+Auto generated R starter code for data set 100172.
+
+## Metadata
+
+- **Dataset_identifier** `100172`
+- **Title** `Smarte Strasse: Fahrzeugdurchfahrten`
+- **Description** `<p>Der Datensatz zeigt alle Durchfahrten von Fahrzeugen mit der dazugehörigen Zeitangabe.</p><p class="" style="font-family: sans-serif;"><span style="font-weight: bolder;">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</span></p><ul><li>Informationen zum Projekt «Smarte Strasse»: <a href="https://www.entwicklung.bs.ch/grundlagen/smart-city/smarte-strasse.html" target="_blank">https://www.entwicklung.bs.ch/grundlagen/smart-city/smarte-strasse.html</a> </li><li>Genaue Standorte aller Sensoren (inkl. dem Schallsensor, der die Fahrzeugdurchfahrten zählt): <a href="https://data.bs.ch/explore/dataset/100114/table/" target="_blank">https://data.bs.ch/explore/dataset/100114/table/</a> </li><li>Weitere Datensätze aus dem Projekt «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><b>Hinweis: Die Sensoren an der Gundeldingerstrasse wurden am 29.6.23 abmontiert. Es werden keine Daten mehr erhoben.</b><br/></p><p>Änderungsprotokoll: <br/>29.06.2023 - Aktualisierungsintervall von "CONT" auf "NEVER" geändert.<br/></p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2022-02-07`
+- **Modified** `2024-02-29T14:22:14+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2022-02-20T12:45:00+00:00`
+- **Temporal_coverage_end_date** `2023-06-27T12:39:00+00:00`
+- **Themes** `['Mobilität und Verkehr']`
+- **Keywords** `['Smarte Strasse', 'Auto', 'Verkehr', 'Verkehrszählung', 'Stau']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100172.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100172/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

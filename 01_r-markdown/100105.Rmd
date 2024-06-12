@@ -1,0 +1,109 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Coronavirus (Covid-19): Positiv getestete Personen nach Alter und Geschlecht
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100105)
+
+Auto generated R starter code for data set 100105.
+
+## Metadata
+
+- **Dataset_identifier** `100105`
+- **Title** `Coronavirus (Covid-19): Positiv getestete Personen nach Alter und Geschlecht`
+- **Description** `<p>Dieser Datensatz zeigt die Personen, welche positiv auf SARS-CoV-2 getestet wurden nach Geschlecht und Altersklasse. Es werden ausschliesslich Personen mit Wohnsitz im Kanton Basel-Stadt gezeigt. Als «Datum Testresultat» gilt das Datum, an welchem das Testresultat vorlag.</p>
+<p>Weitere Datensätze zu
+Covid-19:</p>
+<p>Fallzahlen Basel-Stadt: <a href="https://data.bs.ch/explore/dataset/100073/table">https://data.bs.ch/explore/dataset/100073/table</a></p>
+<p>Tests Basel-Stadt:<a href="https://data.bs.ch/explore/dataset/100094/table" target="_blank">https://data.bs.ch/explore/dataset/100094/table</a></p>
+<p>Todesfälle Basel-Stadt nach Alter und Geschlecht: <a href="https://data.bs.ch/explore/dataset/100076/table" target="_blank">https://data.bs.ch/explore/dataset/100076/table</a>
+</p>
+<p>Covid-19 Dashboard: <a href="https://data.bs.ch/pages/covid-19-dashboard" target="_blank">https://data.bs.ch/pages/covid-19-dashboard</a><a href="https://data.bs.ch/pages/covid-19-dashboard"></a></p><p></p><ul style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></ul><p></p><p><b style="box-sizing: border-box; font-weight: bolder;">Änderungsprotokoll:</b></p><p></p><ul><li>Die Erhebung der Werte wurde per 30. Juni 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "DAILY" auf "NEVER" geändert.</li></ul>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2020-11-24`
+- **Modified** `2024-03-13T14:01:52+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-02-26T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-06-29T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Lungenentzündung', 'Pandemie', 'Corona']`
+- **Publisher** `Medizinische Dienste`
+- **Reference** `https://gesundheit.bs.ch`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100105.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100105/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

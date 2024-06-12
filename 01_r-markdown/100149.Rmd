@@ -1,0 +1,108 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Rohdaten-Zeitreihe der Belegung der Elektroauto-Ladestationen der IWB
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100149)
+
+Auto generated R starter code for data set 100149.
+
+## Metadata
+
+- **Dataset_identifier** `100149`
+- **Title** `Rohdaten-Zeitreihe der Belegung der Elektroauto-Ladestationen der IWB`
+- **Description** `<p>IWB baut im Kanton Basel-Stadt ein Netz leistungsfähiger öffentlich zugänglicher Ladestationen auf, um der umweltfreundlichen und gerade für Ballungsgebiete idealen Elektromobilität entscheidende Impulse zu geben. </p>
+
+<p>In der Pilotphase wurden die Parkplätze mit LoRa-angebunden Sensoren ausgestattet. Ziel war es festzustellen, ob Parkplätze durch Fahrzeuge besetzt werden, ohne dass diese einen aktiven Ladevorgang vornehmen. Nach internen Abstimmungen wird die IWB die Übermittlung der Daten ab ca. Mitte September 2022 nicht weiterführen. Gründe dafür sind Schwierigkeiten bei der Übertragung der Werte sowie eine fehlende Relevanz für die Praxis. Beim Roll-Out der weiteren öffentlichen Ladestationen auf Allmend werden voraussichtlich keine LoRa-Sensoren mehr verbaut.</p>
+
+<p>Echtzeitdaten zur Belegung der Elektroauto-Ladestationen der gesamten Schweiz basierend auf dem Status des Ladevorgangs sind hier zu finden: <a href="https://opendata.swiss/de/dataset/ladestationen" target="_blank">https://opendata.swiss/de/dataset/ladestationen</a></p>
+
+<p>Hier finden Sie die Zeitreihe der Rohdaten zur Belegung der Ladestationen. </p><p><b>Die vorliegenden Rohdaten enthalten insbesondere ab Mai 2021 viele doppelte Einträge, da die Sensoren ihre Belegung jeweils mehrfach und in verschiedenen Abständen melden, auch ohne dass eine Statusänderung (belegt/frei) erfolgt ist. </b></p><p>Die deduplizierte Zeitreihe ist hier zu finden: <a href="https://data.bs.ch/explore/dataset/100196" target="_blank">https://data.bs.ch/explore/dataset/100196</a>. Diese zeigt alle Statusänderungen. <a href="https://data.bs.ch/explore/dataset/100196" target="_blank"></a></p><p>Der Datensatz mit nur den aktuellsten Statusmeldungen ist hier zu finden: <a href="https://data.bs.ch/explore/dataset/100004" target="_blank">https://data.bs.ch/explore/dataset/100004</a><a href="https://data.bs.ch/explore/dataset/100004" target="_blank"></a></p><p>Änderungsprotokoll:<br/>20.09.2022 - Aktualisierungsintervall von "CONT" auf "NEVER" geändert.</p>`
+- **Contact_name** `Fachstelle Open Government Data Basel-Stadt`
+- **Issued** `2022-06-02`
+- **Modified** `2024-02-29T14:17:13+00:00`
+- **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
+- **Temporal_coverage_start_date** `2018-08-17T11:17:00+00:00`
+- **Temporal_coverage_end_date** `2022-09-20T05:49:00+00:00`
+- **Themes** `['Mobilität und Verkehr', 'Energie', 'Industrie, Dienstleistungen']`
+- **Keywords** `['Elektroautos', 'Elektromobilität', 'Ladestationen', 'IWB', 'Tankstellen', 'Elektroladestation', 'Echtzeit', 'Realtime']`
+- **Publisher** `Industrielle Werke Basel`
+- **Reference** `https://www.iwb.ch/Fuer-Zuhause/E-Mobilitaet/Oeffentliches-Ladenetz.html`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100149.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100149/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

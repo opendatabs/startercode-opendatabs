@@ -1,0 +1,103 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Strassen und Wege: Kantonsstrassen Riehen und Bettingen
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100249)
+
+Auto generated R starter code for data set 100249.
+
+## Metadata
+
+- **Dataset_identifier** `100249`
+- **Title** `Strassen und Wege: Kantonsstrassen Riehen und Bettingen`
+- **Description** `Dieser Datensatz ist Teil des kantonalen Geodatenmodells des Kantons Basel-Stadt "Strassen und Wege" und stellt die Kantonsstrassen Riehen und Bettingen dar. <br>Weitere Daten zu "Strassen und Wege":<a href="https://data.bs.ch/explore/?sort=modified&amp;q=tags=Strassen+und+Wege">https://data.bs.ch/explore/?sort=modified&amp;q=tags=Strassen+und+Wege</a><br>
+Die Kantonsstrassen Riehen und Bettingen zeigen die Kantonsstrassen in Riehen und Bettingen.`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2022-12-23`
+- **Modified** `2024-06-10T05:04:57+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Geographie', 'Mobilität und Verkehr']`
+- **Keywords** `['Weg', 'Mobilität', 'Strassennetz', 'Strasse', 'Wegnetz']`
+- **Publisher** `Amt für Mobilität`
+- **Reference** `www.geo.bs.ch/strassenwege; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/1854ab2e-7a1d-4a93-bc67-95add757f283`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100249.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100249/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

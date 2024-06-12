@@ -1,0 +1,107 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Statistische Raumeinheiten: Bezirke
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100039)
+
+Auto generated R starter code for data set 100039.
+
+## Metadata
+
+- **Dataset_identifier** `100039`
+- **Title** `Statistische Raumeinheiten: Bezirke`
+- **Description** `Die Bezirke sind Untereinheiten der Wohnviertel. Jedes Wohnviertel mit Ausnahme von Klybeck und Kleinhüningen ist in 2 bis 8 Bezirke unterteilt. Insgesamt werden auf dem gesamten Kantonsgebiet 69 Bezirke unterschieden.
+
+Statistische Nummerierung:
+Die Nummerierung der Bezirke setzt sich zusammen aus der zweistelligen Wohnviertel-Nr. und der einstelligen Bezirks-Nr. (im Label durch einen Punkt getrennt):
+- Beispiel für den Bezirk Flora (1) im Wohnviertel Matthäus (17): BEZ_ID 171, die Bezeichnung (BEZ_Label) lautet 17.1
+- Beispiel für das Wohnviertel Kleinhüningen ohne Bezirke (19.0): BEZ_ID 190, die Bezeichnung (BEZ_Label) lautet 19.0`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2024-06-10T05:02:40+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Geographie', 'Statistische Grundlagen']`
+- **Keywords** `['Statistik', 'Einteilung', 'Wohnbezirk']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `www.geo.bs.ch/statistischeraumeinheiten; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/be8ce164-33ef-4794-822c-774d17c87239; https://www.statistik.bs.ch/dam/jcr:44166ae9-c59c-4fd8-a8aa-f2b00cd53eff/Statistische-Raumeinheiten.pdf`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100039.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100039/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Gebäudeadressen und -informationen
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100259)
+
+Auto generated R starter code for data set 100259.
+
+## Metadata
+
+- **Dataset_identifier** `100259`
+- **Title** `Gebäudeadressen und -informationen`
+- **Description** `Gebäudeadressen aller im kantonalen Datenmarkt geführten Gebäude (siehe <a href="https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310</a>).`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2023-12-13`
+- **Modified** `2024-06-10T05:04:36+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bau- und Wohnungswesen', 'Geographie', 'Raum und Umwelt']`
+- **Keywords** `['Adresse', 'Wohnung', 'Gebäude', 'Wohnen', 'Abfuhrzone']`
+- **Publisher** `Grundbuch- und Vermessungsamt`
+- **Reference** `www.geo.bs.ch/gebaeudeadressen; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/52a35a63-b873-48ce-800b-b5624f1da3e7`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100259.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100259/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

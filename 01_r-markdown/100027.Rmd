@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Recyclingstationen
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100027)
+
+Auto generated R starter code for data set 100027.
+
+## Metadata
+
+- **Dataset_identifier** `100027`
+- **Title** `Recyclingstationen`
+- **Description** `Recyclingstationen für Glas, Weissblech, Aluminium und Batterien im Kanton Basel-Stadt.`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2024-06-10T05:02:04+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Öffentliche Ordnung und Sicherheit', 'Geographie']`
+- **Keywords** `['Recycling', 'Wiederverwertung', 'Abfall', 'Müll', 'Entsorgen']`
+- **Publisher** `Tiefbauamt`
+- **Reference** `www.geo.bs.ch/recyclingstellen; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/2565a2e1-0a00-4a30-84f0-168635a3d8ec`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100027.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100027/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

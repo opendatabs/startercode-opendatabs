@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Gesundheitsversorgung (GSV): Pflegeheimbewohnende
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100319)
+
+Auto generated R starter code for data set 100319.
+
+## Metadata
+
+- **Dataset_identifier** `100319`
+- **Title** `Gesundheitsversorgung (GSV): Pflegeheimbewohnende`
+- **Description** `Wichtige Kennzahlen zu den Pflegeheimbewohnenden im Kanton Basel-Stadt. Dieser Datensatz fliesst zum Teil in Form eines Dashboard in den online Bericht des Bereiches Gesundheitsversorgung (GSV) des Gesundheitsdepartement Basel-Stadt.Die Kennzahlen werden per Stichtag Anfangs Jahr erhoben.`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2023-12-15`
+- **Modified** `2023-12-15T08:03:04+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Gesundheit']`
+- **Keywords** `None`
+- **Publisher** `Statistisches Amt`
+- **Reference** `OGD_GSV_Pflegeheime_Bewohnerdaten`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100319.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100319/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

@@ -1,0 +1,105 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Coronavirus (COVID-19): In Basel-Stadt verabreichte Impfungen
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100111)
+
+Auto generated R starter code for data set 100111.
+
+## Metadata
+
+- **Dataset_identifier** `100111`
+- **Title** `Coronavirus (COVID-19): In Basel-Stadt verabreichte Impfungen`
+- **Description** `<p>Der Datensatz zeigt die Anzahl im Kanton Basel-Stadt gegen SARS-CoV-2 geimpfter Personen auf täglicher Basis. Zusätzlich wird angegeben, wie viele Personen im kantonalen Impfzentrum geimpft wurden und wie viele Impfungen durch baselstädtische Spitäler an ihr Gesundheitspersonal verabreicht wurden. Ebenso sind die Impfungen in Arzpraxen und Apotheken separat aufgeführt. Impfungen im Impfbus werden nicht separat ausgewiesen, sondern sind in der Anzahl im Impfzentrum verabreichten Impfungen integriert. Weiter finden Sie Angaben darüber, wie viele Personen mit einer ersten resp. einer zweiten Dosis geimpft wurden.  </p><p>Die im Kanton Basel-Stadt geimpften Personen müssen nicht zwingend im Kanton Basel-Stadt wohnen. Angaben zu den geimpften Personen mit Wohnsitz im Kanton Basel-Stadt finden Sie in diesem Datensatz: <a href="https://data.bs.ch/explore/dataset/100135" target="_blank">https://data.bs.ch/explore/dataset/100135</a></p><p>Die an dieser Stelle publizierten Zahlen können von jenen Zahlen abweichen, welche über Kanäle von Bundesstellen für den Kanton Basel-Stadt publiziert sind. Begründen lassen sich die Differenzen mit unterschiedlichen Aktualisierungszyklen. Es wird ab Montag, 10.5.2021 dieselbe Quelle (Vaccination Monitoring Data Lake, VMDL BAG) verwendet. </p><p>Leider können aufgrund der Quellenänderung die Impfungen der mobilen Equipen nicht mehr separat ausgewiesen werden. Sie werden zu den im Impfzentrum verabreichten Impfungen hinzugezählt. Da die VMDL-Werte auch rückwirkend übernommen werden, kommt es zu Abweichungen bei den täglich publizierten Werten gegenüber früher in diesem Datensatz veröffentlichten Werten. </p>
+<p>
+Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial sind ausschliesslich immundefiziente Personen oder Personen mit Stammzellentransplantation zu einer dritten Impfung berechtigt. Genauere Informationen werden zu gegebener Zeit auf <a href="https://coronavirus.bs.ch">https://coronavirus.bs.ch</a> veröffentlicht.</p><p>Die Meldepflicht der COVID-Impfungen via VMDL Plattform des Bundes wurde per 1. Juli 2023 aufgehoben. Nach diesem Datum wurden Impfungen deshalb nicht mehr systematisch erfasst. Der vorliegende Datensatz zeigt deshalb Impfungen nur bis 1. Juli 2023.<br/></p><p> 
+</p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2021-01-05`
+- **Modified** `2024-01-04T08:38:16+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-12-27T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-06-30T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Corona', 'impfen', 'Prophylaxe', 'Vakzin', 'COVID-19', 'Coronavirus', 'Krankheit', 'Lungenentzündung']`
+- **Publisher** `Medizinische Dienste`
+- **Reference** `https://www.coronaimpfzentrumbasel.ch/`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100111.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100111/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

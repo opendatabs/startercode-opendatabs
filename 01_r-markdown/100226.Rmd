@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Kennzahlen zu den Basler Wohnvierteln und Landgemeinden - langer Datensatz
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100226)
+
+Auto generated R starter code for data set 100226.
+
+## Metadata
+
+- **Dataset_identifier** `100226`
+- **Title** `Kennzahlen zu den Basler Wohnvierteln und Landgemeinden - langer Datensatz`
+- **Description** `Ausgewählte statistische Kennzahlen der 19 Wohnviertel der Stadt Basel sowie der zwei Gemeinden Riehen und Bettingen seit 2015. Aufgrund einer veränderten Datenlage können die Indikatoren 3 (Religionszugehörigkeit) und 18 (Arbeitslosenquote) ab der Ausgabe 2020 nicht mehr dargestellt werden. Dieser lange Datensatz wurde zusätzlich zum bisher bereits bestehenden breiten Datensatz angelegt, um neben dem Publikationsjahr auch das jeweilige Datenjahr noch zu ergänzen. Die Berechnungsmethode für die Sozialhilfequote wurde 2022 für die Jahre ab 2017 rückwirkend angepasst.Zur Definition: <a href="https://www.statistik.bs.ch/dam/jcr:2cb04e13-b746-4455-8735-029f0439dc73/Quartierradar.pdf" target="_blank">https://www.statistik.bs.ch/dam/jcr:2cb04e13-b746-4455-8735-029f0439dc73/Quartierradar.pdf</a>.`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2022-09-22`
+- **Modified** `2023-05-25T07:30:58+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Arbeit, Erwerb', 'Bau- und Wohnungswesen', 'Bevölkerung', 'Raum und Umwelt', 'Finanzen', 'Industrie, Dienstleistungen', 'Soziale Sicherheit', 'Volkswirtschaft']`
+- **Keywords** `['Wohnen', 'Bevölkerungsbestand', 'Grünraum', 'Erwerbstätige', 'Arbeitslosigkeit', 'Bevölkerungsstruktur']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `https://www.statistik.bs.ch/haeufig-gefragt/wohnviertel.html`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100226.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100226/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

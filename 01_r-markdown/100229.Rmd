@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Kantonale Abstimmungen
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100229)
+
+Auto generated R starter code for data set 100229.
+
+## Metadata
+
+- **Dataset_identifier** `100229`
+- **Title** `Kantonale Abstimmungen`
+- **Description** `Dieser Datensatz zeigt die Resultate der Volksabstimmungen im Kanton Basel-Stadt seit 1875. Die Daten vor 1921 wurden von <a href="https://baselvotes.ch/" target="_blank">baselvotes (https://baselvotes.ch)</a> zur Verfügung gestellt. Seit 1921 basieren die Daten auf den Statistischen Jahrbüchern. Für jede Abstimmungsvorlage sind alle amtlich publizierten Kennzahlen zum Schlussresultat ausgewiesen.<br><br>Zusätzlich sind alle Vorlagen inhaltlich dem hauptsächlich betroffenen Politikbereich zugeordnet. Die Zuteilung erfolgt auf Basis der Einteilung des Bundesamtes für Statistik, die im eidgenössischen Abstimmungsdatensatz der Datenplattform <a '="" href="https://swissvotes.ch/votes" target="_blank">swissvotes (https://swissvotes.ch/votes)</a> des Instituts für Politikwissenschaft der Universität Bern verwendet wird.`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2022-12-22`
+- **Modified** `2023-05-25T15:01:24+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik']`
+- **Keywords** `['Abstimmung', 'Stimmbeteiligung', 'Volksinitiative', 'Referendum', 'Grossratsbeschluss', 'Abstimungsergebnis', 'Stichfrage', 'Gegenvorschlag', 'Brieflich Wählende', 'Stimmberechtigte', 'Stimmzettel', 'Gültige Stimmen']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `https://www.statistik.bs.ch/zahlen/tabellen/17-politik.html`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100229.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100229/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

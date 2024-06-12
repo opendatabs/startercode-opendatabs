@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Allmendbewilligungen
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100018)
+
+Auto generated R starter code for data set 100018.
+
+## Metadata
+
+- **Dataset_identifier** `100018`
+- **Title** `Allmendbewilligungen`
+- **Description** `Allmendbewilligungen beinhaltet sämtliche Nutzungen, welche im öffentlichen Raum (Allmend) stattfinden. Die dargestellten genutzten Flächen sind nicht verbindlich.`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2024-06-12T05:09:46+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Öffentliche Ordnung und Sicherheit', 'Bau- und Wohnungswesen', 'Geographie']`
+- **Keywords** `['Baustelle', 'Plakat', 'Anlass', 'Fest', 'Party', 'Umleitung']`
+- **Publisher** `Tiefbauamt`
+- **Reference** `www.geo.bs.ch/allmend; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/be391318-a794-452d-bf4c-e5b7f0f6ba51`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100018.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100018/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

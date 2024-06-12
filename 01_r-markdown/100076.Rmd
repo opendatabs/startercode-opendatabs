@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Coronavirus (COVID-19): Todesfälle Basel-Stadt nach Alter und Geschlecht
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100076)
+
+Auto generated R starter code for data set 100076.
+
+## Metadata
+
+- **Dataset_identifier** `100076`
+- **Title** `Coronavirus (COVID-19): Todesfälle Basel-Stadt nach Alter und Geschlecht`
+- **Description** `<div>Todesfälle von Einwohnern des Kantons Basel-Stadt mit der Coronavirus-Krankheit (COVID-19) nach Alter und Geschlecht. Die Daten wurden zu Beginn der Pandemie von Hand aus öffentlich zugänglichen offiziellen Quellen durch Mitarbeiter der Fachstelle OGD Basel-Stadt erfasst. Inzwischen erhalten wir die Daten der Gestorbenen direkt von den Gesundheitsdiensten des Kantons. Die Quellenangabe der jeweiligen Zahlen ist direkt der Tabelle zu entnehmen.</div><div><br/></div><div>Die gesamtschweizerischen Daten aller Kantone und des Fürstentums Liechtenstein (FL), welche die Fälle nach Alter und Geschlecht ausweisen, sind hier zu finden:</div><div><ul><li><a href="https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_alter_geschlecht_csv" target="_blank">https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_alter_geschlecht_csv</a></li></ul></div><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Änderungsprotokoll:</span></p><ul><li>Die Erhebung der Werte wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "DAILY" auf "NEVER" geändert.</li></ul>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2020-04-07`
+- **Modified** `2024-03-13T14:01:41+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-03-18T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-07-04T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Todesfälle', 'Lungenentzündung', 'Pandemie', 'Alter', 'Geschlecht', 'Corona']`
+- **Publisher** `Fachstelle für OGD Basel-Stadt`
+- **Reference** `https://github.com/openZH/covid_19`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100076.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100076/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

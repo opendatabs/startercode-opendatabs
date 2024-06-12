@@ -1,0 +1,106 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Baumkronenbedeckung
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100357)
+
+Auto generated R starter code for data set 100357.
+
+## Metadata
+
+- **Dataset_identifier** `100357`
+- **Title** `Baumkronenbedeckung`
+- **Description** `<p>Dieser Datensatz zeigt die gesamte durch Bäume beschattete Fläche (Baumkronenbedeckung) im Kanton Basel-Stadt in verschiedenen Jahren. Der Kanton Basel-Stadt erhebt durch Laserabtastung der Oberfläche (LiDAR) Daten zur Baumkronenbedeckung (durch Bäume beschattete Fläche) über die gesamte Kantonsfläche. Die von LiDAR abgeleitete Baumkronenbedeckung und Kennzahlen wurden für 2012 und 2021 berechnet. Die Nachführung wird in Zukunft alle drei Jahre stattfinden (2024 und 2027), so dass die Entwicklung der Baumkronendeckung in Basel genau verfolgt werden kann.</p><p>Der Flug für die Erhebung neuer Daten in 2024 hat bereits stattgefunden, die Daten zu den Bäumen werden ausgewertet und im Herbst publiziert. In Zukunft werden, für ein genaues Monitoring, alle 3 Jahre neue Daten erhoben.</p><p>Die Stadtgärtnerei stellt der interessierten Öffentlichkeit dieses digitale Wissen zur Verfügung: <a href="https://www.stadtgaertnerei.bs.ch/stadtgruen/stadtbaeume/baumkronenbedeckung.html" target="_blank">Stadtgärtnerei des Kantons Basel-Stadt - Baumkronenbedeckung (https://www.stadtgaertnerei.bs.ch/stadtgruen/stadtbaeume/baumkronenbedeckung.html)</a>
+</p><p>
+
+Man kann die LiDAR-Daten in Form einer png- und pgw-Datei in der Tabellenansicht herunterladen. Eine PGW-Datei ist eine Weltdatei, die Georeferenzierungsdaten für ein zugehöriges Bild im PNG-Format enthält, um dessen genaue Positionierung auf einer Karte zu ermöglichen.</p><p>Hier finden Sie die URLs zu den Zip-Dateien, die beide Dateien enthalten:<br> 
+<a href="https://data-bs.ch/stata/stadtgaertnerei/Baumkronenbedeckung_2012.zip" target="_blank">https://data-bs.ch/stata/stadtgaertnerei/Baumkronenbedeckung_2012.zip</a><br><a href="https://data-bs.ch/stata/stadtgaertnerei/Baumkronenbedeckung_2021.zip" target="_blank">https://data-bs.ch/stata/stadtgaertnerei/Baumkronenbedeckung_2021.zip</a></p><p>Auf der Website des Tiefbauamts können Sie die Daten mit dem GeoViewer betrachten: <a href="https://tiefbauamt-bs.ch/geoviewer/lidar" target="_blank">https://tiefbauamt-bs.ch/geoviewer/lidar</a></p><p>Detailinformationen zur LiDAR-Technologie finden Sie hier: <a href="https://www.swisstopo.admin.ch/de/lidar-daten-swisstopo" target="_blank">https://www.swisstopo.admin.ch/de/lidar-daten-swisstopo</a> </p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2024-03-23`
+- **Modified** `2024-04-04T12:36:57+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2012-12-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Raum und Umwelt', 'Geographie']`
+- **Keywords** `['Baum', 'Baumbestand', 'Baumkrone', 'Kronenbedeckung', 'Vegetation', 'LiDAR']`
+- **Publisher** `Stadtgärtnerei`
+- **Reference** `https://tiefbauamt-bs.ch/geoviewer/lidar`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100357.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100357/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

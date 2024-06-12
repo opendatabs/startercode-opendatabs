@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Ordnungsbussen
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100058)
+
+Auto generated R starter code for data set 100058.
+
+## Metadata
+
+- **Dataset_identifier** `100058`
+- **Title** `Ordnungsbussen`
+- **Description** `<p>Dieser Datensatz zeigt die durch die Kantonspolizei Basel-Stadt ausgestellten Ordnungsbussen gemäss <a href="https://www.fedlex.admin.ch/eli/oc/2019/93/de" target="_blank">eidg. Ordnungsbussenverordnung</a>. Es handelt sich ausschliesslich um bereits bezahlte Bussen.</p><p>Der Datensatz enthält die Ordnungsbussen ab Januar 2017.</p><p>Die Daten im Zeitraum vom 1.1.2017 bis 30.11.2019 wurden korrigiert. Die entsprechenden Werte können deshalb minim von jenen abweichen, welche vor dem 21. April 2020 an dieser Stelle publiziert waren.</p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2019-12-23`
+- **Modified** `2024-04-15T11:46:35+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2016-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Öffentliche Ordnung und Sicherheit', 'Gesetzgebung', 'Mobilität und Verkehr', 'Kriminalität, Strafrecht']`
+- **Keywords** `['Strafzettel', 'Busse', 'Übertretung', 'Polizei', 'Parkplatz', 'Geschwindigkeit', 'Parkieren', 'Falschparken']`
+- **Publisher** `Kantonspolizei`
+- **Reference** `None`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100058.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100058/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

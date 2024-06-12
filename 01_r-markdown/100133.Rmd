@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Wahl von sieben Präsidentinnen oder Präsidenten des Strafgerichts
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100133)
+
+Auto generated R starter code for data set 100133.
+
+## Metadata
+
+- **Dataset_identifier** `100133`
+- **Title** `Wahl von sieben Präsidentinnen oder Präsidenten des Strafgerichts`
+- **Description** `<p>Der Datensatz zeigt die Resultate des 1. Wahlgangs der Wahl zu sieben Präsidentinnen oder Präsidenten des Strafgerichts Basel-Stadt vom 9. Mai 2021. </p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2021-05-10`
+- **Modified** `2021-05-10T08:55:58+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik', 'Gesetzgebung']`
+- **Keywords** `['Richterin', 'Richter', 'Wahlen', 'Gericht']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `https://www.staatskanzlei.bs.ch/politische-rechte/wahlen-abstimmungen.html`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100133.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100133/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

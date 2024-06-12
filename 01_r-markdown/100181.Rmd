@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Temperatur Grundwasser: Langjährige Statistiken
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100181)
+
+Auto generated R starter code for data set 100181.
+
+## Metadata
+
+- **Dataset_identifier** `100181`
+- **Title** `Temperatur Grundwasser: Langjährige Statistiken`
+- **Description** `<p>Der Datensatz enthält die absoluten extremalen Messwerte (kleinster Wert „10YMin“ bzw. grösster Wert „10YMax“) und den Mittelwert aller Messwerte („Mean“) der Grundwassertemperaturen in °C des kantonalen Grundwassermessnetzes und in der angegebenen Periode (startStatist bis endStatist, d.h. i. d. R. 10 Jahre).</p><p>Weitere Informationen: <a href="https://www.aue.bs.ch/wasser/grundwasser/grundwasserpegel-grundwasserqualitaet.html">https://www.aue.bs.ch/wasser/grundwasser/grundwasserpegel-grundwasserqualitaet.html</a></p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2022-07-11`
+- **Modified** `2024-06-12T05:25:46+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1982-12-31T23:04:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Wasser', 'Grundwasser', 'Temperatur', 'Statistik', 'Zeitreihe', 'Bohrung']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `https://www.aue.bs.ch`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100181.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100181/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

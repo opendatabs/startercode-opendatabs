@@ -1,0 +1,107 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Ständeratswahlen 2023: Kandidierende aus Basel-Stadt
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100317)
+
+Auto generated R starter code for data set 100317.
+
+## Metadata
+
+- **Dataset_identifier** `100317`
+- **Title** `Ständeratswahlen 2023: Kandidierende aus Basel-Stadt`
+- **Description** `<p style="margin: 0cm 0cm 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Für die Ständeratswahlen vom 22. Oktober 2023 kandidieren vier Personen  für den Kanton Basel-Stadt. Insgesamt wird 1 Sitz im Ständerat gewählt.<o:p></o:p></span></p><p style="margin: 0cm 0cm 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Dieser Datensatz zeigt die Kandidierenden aus dem Kanton
+Basel-Stadt nach Geschlecht, Jahrgang und Beruf sowie die jeweiligen Listen.<o:p></o:p></span></p><p style="font-family: sans-serif;">
+
+
+
+</p><p class="MsoNormal"><o:p> </o:p></p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2023-09-15`
+- **Modified** `2024-02-02T15:48:17+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik', 'Gesetzgebung', 'Verwaltung']`
+- **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `https://abstimmungen.bs.ch`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100317.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100317/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

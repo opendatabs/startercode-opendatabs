@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Rheinüberwachungsstation: Umweltanalyse Schwebstoffe
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100068)
+
+Auto generated R starter code for data set 100068.
+
+## Metadata
+
+- **Dataset_identifier** `100068`
+- **Title** `Rheinüberwachungsstation: Umweltanalyse Schwebstoffe`
+- **Description** `<p class="MsoNormal"><span style="font-size: 11pt; line-height: 16.8667px; font-family: Calibri, sans-serif;">Der Datensatz enthält die Analysedaten aus der binationalen Rheinüberwachungsstation (RÜS) in Weil am Rhein (Rhein-Kilometer 171,37) seit Bestehen der Station im Jahr 1993 aus der Matrix Schwebstoffe. </span></p><p class="MsoNormal"><span style="font-family: Calibri, sans-serif; font-size: 11pt;">Der Rhein wird aktuell auf 670 Schadstoffe untersucht, 420 davon täglich. Der Unterhalt der Anlage und die Analytik werden durch das Amt für Umwelt und Energie des Kantons Basel-Stadt (AUE) geleistet. Auftraggeber sind die Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg (LUBW) und das schweizerische Bundesamt für Umwelt (BAFU).</span><br/></p><p class="MsoNormal"><span style="line-height: 16.8667px;"><font face="Calibri, sans-serif"><span style="font-size: 14.6667px;">Weitere Informationen: <a href="http://www.aue.bs.ch/umweltanalytik/rheinueberwachungsstation-weil-am-rhein.html" target="_blank">http://www.aue.bs.ch/umweltanalytik/rheinueberwachungsstation-weil-am-rhein.html</a></span></font></span></p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2020-04-06`
+- **Modified** `2024-06-12T06:14:26+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1994-01-21T11:00:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Rhein', 'Messwert', 'Wasserqualität', 'Fluss', 'Bach', 'Chemie', 'Rüs']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100068.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100068/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

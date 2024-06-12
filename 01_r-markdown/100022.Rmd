@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Güteklassen öffentlicher Verkehr
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100022)
+
+Auto generated R starter code for data set 100022.
+
+## Metadata
+
+- **Dataset_identifier** `100022`
+- **Title** `Güteklassen öffentlicher Verkehr`
+- **Description** `Die Güteklassen zeigen auf, wie gut ein Gebiet mit dem öffentlichen Verkehr erschlossen ist. Die Klasse ist abhängig von dem Transportmittel (Kleinbus, Bus, Tram, S-Bahn, Fernverkehrszug), dem jeweiligen Takt und der Distanz zur Haltestelle. Die Klasse zeigt die beste Erschliessung auf.`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2020-01-29`
+- **Modified** `2024-06-10T05:04:07+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Mobilität und Verkehr', 'Geographie']`
+- **Keywords** `['Abdeckung', 'Tram', 'Bus', 'Distanz']`
+- **Publisher** `Amt für Mobilität`
+- **Reference** `www.geo.bs.ch/gueteklassen_oev; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/8a1d5a61-fb02-4824-90a5-e261f18e6591`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100022.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100022/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

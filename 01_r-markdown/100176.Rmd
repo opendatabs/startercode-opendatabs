@@ -1,0 +1,102 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Smarte Strasse: Parkplatz-Zonen
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100176)
+
+Auto generated R starter code for data set 100176.
+
+## Metadata
+
+- **Dataset_identifier** `100176`
+- **Title** `Smarte Strasse: Parkplatz-Zonen`
+- **Description** `<p style="font-family: sans-serif;">Der Datensatz zeigt die Standorte der Parkplätze, die im Rahmen des Projekts «Smarte Strasse» für die Testung der Sensoren einbezogen werden.<br/>Zusätzlich relevante Datensätze für die Parkplatzbelegung:</p><ul><li style=""><a href="https://data.bs.ch/explore/dataset/100171/" target="_blank">Zu- und Wegfahrten, Parkplatzauslastung</a></li><li style=""><a href="https://data.bs.ch/explore/dataset/100160/" target="_blank">Parkplatzbelegung</a><br/></li></ul><p class="" style="font-family: sans-serif;">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</p><ul><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href="https://www.entwicklung.bs.ch/grundlagen/smart-city/smarte-strasse.html" target="_blank">https://www.entwicklung.bs.ch/grundlagen/smart-city/smarte-strasse.html</a> </li><li>Genaue Standorte aller Sensoren: <a href="https://data.bs.ch/explore/dataset/100114/table/" target="_blank">https://data.bs.ch/explore/dataset/100114/table/</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><b>Hinweis:<br/>Die Parkplatz-Kamera an der Gundeldingerstrasse wurde am Dienstag 4.10.2022 abmontiert. Es werden keine Daten mehr erhoben.</b><br/></p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2022-05-24`
+- **Modified** `2022-05-24T07:58:45+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2022-04-25T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2022-10-03T22:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr']`
+- **Keywords** `['Smarte Strasse', 'Parkplatz']`
+- **Publisher** `Amt für Mobilität`
+- **Reference** `None`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100176.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100176/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

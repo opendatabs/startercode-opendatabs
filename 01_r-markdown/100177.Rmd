@@ -1,0 +1,103 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2024-06-12"
+output: html_document
+---
+
+## Dataset: Öffentlicher Archivkatalog in RDF
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100177)
+
+Auto generated R starter code for data set 100177.
+
+## Metadata
+
+- **Dataset_identifier** `100177`
+- **Title** `Öffentlicher Archivkatalog in RDF`
+- **Description** `<p>
+Das Staatsarchiv des Kantons Basel-Stadt fungiert als Gedächtnis von Staat und Stadt. Die reichhaltigen Bestände widerspiegeln die Geschichte Basels seit dem Mittelalter. Seit 1999 wird das Archivgut in einem Archivinformationssystem (scopeArchiv) erschlossen, zur Suche und Benutzung steht ein Digitaler Lesesaal (DLS) zur Verfügung (<a href="https://dls.staatsarchiv.bs.ch" target="_blank">https://dls.staatsarchiv.bs.ch</a>). </p><p>Das hier publizierte Datenset (<a href="https://ld.bs.ch/set/archival-catalog" target="_blank">https://ld.bs.ch/set/archival-catalog</a>) umfasst sämtliche öffentlich zugänglichen Informationen aus dem Archivsystem, transformiert in ein RDF-Datenmodell auf der Basis der archivspezifischen Ontologie Records in Context (RiC-O) (<a href="https://www.ica.org/standards/RiC/ontology" target="_blank">https://www.ica.org/standards/RiC/ontology</a>).  </p><p><span style="font-family: inherit; font-size: 0.875rem;">SPARQL-Endpoint zur Datenabfrage: </span><a href="https://ld.bs.ch/sparql" style="font-size: 0.875rem; background-color: rgb(255, 255, 255);" target="_blank">https://ld.bs.ch/sparql</a><span style="font-family: inherit; font-size: 0.875rem;">  </span><span style="font-family: inherit; font-size: 0.875rem;">  </span><br/></p><p>Dokumentation des Datenmodells: <a ;"="" href="https://github.com/Staatsarchiv-Basel-Stadt/StABS-scope2RDF/wiki" target="_blank">https://github.com/Staatsarchiv-Basel-Stadt/StABS-scope2RDF/wiki</a>  </p><p>Das Datenset wird permanent weiterentwickelt. Sowohl das Mapping nach RiC-O wie auch die Inhalte können ändern, Rückwärtskompatabilität kann nicht garantiert werden. Falls eine stabile Einbindung in Services geplant wird, bitten wir um Kontaktaufnahme.</p><p>Das Mapping zur Transformation der Daten nach RDF erfolgt primär durch die Mappingsprache RML (<a href="https://rml.io/specs/rml/" target="_blank">https://rml.io/specs/rml/</a>). Die Transformation erfolgt in einer ETL-Pipeline mit entsprechend integrierten Mappings (<a href="https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline" target="_blank">https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline</a>) der Firma zazuko (<a href="https://zazuko.com/" target="_blank">https://zazuko.com/</a>), deren Quellcode öffentlich ist. </p>`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Issued** `2022-05-03`
+- **Modified** `2023-11-08T13:21:33+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `1097-12-31T23:25:52+00:00`
+- **Temporal_coverage_end_date** `2023-10-04T22:00:00+00:00`
+- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Bildung, Wissenschaft', 'Verwaltung']`
+- **Keywords** `['Archiv', 'Archivkatalog', 'Geschichte Basels', 'LOD', 'LD', 'Linked Data', 'Linked Open Data', 'Linked', 'SPARQL']`
+- **Publisher** `Staatsarchiv Basel-Stadt`
+- **Reference** `https://ld.bs.ch/set/archival-catalog https://www.staatsarchiv.bs.ch/`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(skimr)
+
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Download the CSV file
+  csv_path <- file.path(getwd(), '100177.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
+    warning = function(w) NULL,
+    error = function(e) NULL
+  )
+
+  # If the dataframe has one column or less, try with semicolon as separator
+  if (is.null(data) || ncol(data) <= 1) {
+    data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+    )
+
+    if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+    }
+  }
+
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100177/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+skim(df)
+
+head(df)
+tail(df)
+
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch
