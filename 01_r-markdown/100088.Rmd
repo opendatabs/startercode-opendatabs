@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-06-12"
+date: "2024-06-13"
 output: html_document
 ---
 
@@ -19,7 +19,7 @@ Auto generated R starter code for data set 100088.
 <p>Historische Daten sind in diesem Datensatz vorhanden: <a href="https://data.bs.ch/explore/dataset/100014" target="_blank">https://data.bs.ch/explore/dataset/100014</a>. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2024-06-12T13:59:05+00:00`
+- **Modified** `2024-06-13T12:00:52+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
