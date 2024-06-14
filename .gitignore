@@ -1,2 +1,3 @@
 *.csv
-*.txt
+01_r-markdown/*.txt
+02_python/*.txt
