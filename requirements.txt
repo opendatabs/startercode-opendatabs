@@ -3,3 +3,4 @@ numpy>=2.0.0rc2
 requests>=2.32.3
 tqdm>=4.66.4
 matplotlib>=3.9.0
+missingo>=0.5.2
