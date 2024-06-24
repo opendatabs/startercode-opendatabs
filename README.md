@@ -5,7 +5,7 @@
 
 This is an experiment to provide exactly this. 
 
-With this repo you get starter code for **all datasets** (currently 297) that are available in the [open data portal of the canton of Basel-Stadt](https://data.bs.ch). 
+With this repo you get starter code for **all datasets** (currently 298) that are available in the [open data portal of the canton of Basel-Stadt](https://data.bs.ch). 
 
 In the list below you find links to preconfigured code files so that you **immediately can start analyzing the data with R or Python.**
 
@@ -22,7 +22,7 @@ For all data licenses please refer to each data set's link or the metadata API e
 
 🌻 Also many thanks to the Open Government Team of the City of Munich for providing the code to the generator: [https://github.com/it-at-m/startercode-generator-munich](https://github.com/it-at-m/startercode-generator-munich)
 
-<sub>Latest update: **2024-06-14 17:26:53**<sub>
+<sub>Latest update: **2024-06-24 11:07:42**<sub>
 
 ### Jupyter Lab: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode/main?urlpath=lab)
 ### RStudio Server: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode/main?urlpath=rstudio)
@@ -324,5 +324,6 @@ For all data licenses please refer to each data set's link or the metadata API e
 | 100360 | [Resultate der Ersatzwahl Regierungsrat 7. April 2024 (2. Wahlgang)](https://data.bs.ch/explore/dataset/100360) |[![Jupyter Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode/main?filepath=02_python/100360.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/opendatabs/startercode/blob/main/02_python/100360.ipynb) | [Python GitHub](https://github.com/opendatabs/startercode/blob/main/02_python/100360.ipynb) | [R GitHub](https://github.com/opendatabs/startercode/blob/main/01_r-markdown/100360.Rmd) |
 | 100361 | [Resultate der Ersatzwahl Regierungspräsidium 7. April 2024 (2. Wahlgang)](https://data.bs.ch/explore/dataset/100361) |[![Jupyter Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode/main?filepath=02_python/100361.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/opendatabs/startercode/blob/main/02_python/100361.ipynb) | [Python GitHub](https://github.com/opendatabs/startercode/blob/main/02_python/100361.ipynb) | [R GitHub](https://github.com/opendatabs/startercode/blob/main/01_r-markdown/100361.Rmd) |
 | 100363 | [Secondhand-Angebote / Wiederverwendungsstellen](https://data.bs.ch/explore/dataset/100363) |[![Jupyter Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode/main?filepath=02_python/100363.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/opendatabs/startercode/blob/main/02_python/100363.ipynb) | [Python GitHub](https://github.com/opendatabs/startercode/blob/main/02_python/100363.ipynb) | [R GitHub](https://github.com/opendatabs/startercode/blob/main/01_r-markdown/100363.Rmd) |
+| 100365 | [Staatsarchiv: Neuzugänge im öffentlichen Archivkatalog](https://data.bs.ch/explore/dataset/100365) |[![Jupyter Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode/main?filepath=02_python/100365.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/opendatabs/startercode/blob/main/02_python/100365.ipynb) | [Python GitHub](https://github.com/opendatabs/startercode/blob/main/02_python/100365.ipynb) | [R GitHub](https://github.com/opendatabs/startercode/blob/main/01_r-markdown/100365.Rmd) |
 | 100369 | [Abstimmung vom 9. Juni 2024 Details](https://data.bs.ch/explore/dataset/100369) |[![Jupyter Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode/main?filepath=02_python/100369.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/opendatabs/startercode/blob/main/02_python/100369.ipynb) | [Python GitHub](https://github.com/opendatabs/startercode/blob/main/02_python/100369.ipynb) | [R GitHub](https://github.com/opendatabs/startercode/blob/main/01_r-markdown/100369.Rmd) |
 | 100370 | [Kennzahlen der Abstimmung vom 9. Juni 2024](https://data.bs.ch/explore/dataset/100370) |[![Jupyter Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode/main?filepath=02_python/100370.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/opendatabs/startercode/blob/main/02_python/100370.ipynb) | [Python GitHub](https://github.com/opendatabs/startercode/blob/main/02_python/100370.ipynb) | [R GitHub](https://github.com/opendatabs/startercode/blob/main/01_r-markdown/100370.Rmd) |
