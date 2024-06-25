@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-06-24"
+date: "2024-06-25"
 output: html_document
 ---
 
@@ -24,7 +24,7 @@ Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnv
 - Beispiel Blockseite mit der Clarakirche: BLS_ID 121014_1741, die Bezeichnung (BLS_Label) lautet 12.1.014_1741`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-06-24T05:03:48+00:00`
+- **Modified** `2024-06-25T05:03:58+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -50,7 +50,7 @@ The dataset is read into a dataframe
 ```{r}
 get_dataset <- function(url) {
   # Download the CSV file
-  csv_path <- file.path(getwd(), '100041.csv')
+  csv_path <- file.path(getwd(), '..', 'data', '100041.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file

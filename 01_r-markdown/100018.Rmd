@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-06-24"
+date: "2024-06-25"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100018.
 - **Description** `Allmendbewilligungen beinhaltet sämtliche Nutzungen, welche im öffentlichen Raum (Allmend) stattfinden. Die dargestellten genutzten Flächen sind nicht verbindlich.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-06-24T05:14:23+00:00`
+- **Modified** `2024-06-25T05:11:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -43,7 +43,7 @@ The dataset is read into a dataframe
 ```{r}
 get_dataset <- function(url) {
   # Download the CSV file
-  csv_path <- file.path(getwd(), '100018.csv')
+  csv_path <- file.path(getwd(), '..', 'data', '100018.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-06-24"
+date: "2024-06-25"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100352.
 - **Description** `<p>Das Kantonsblatt ist das offizielle Publikationsorgan des Kantons Basel-Stadt. Darin werden Meldungen (Gesetze, Verordnungen, Staatsverträge usw.) des Grossen Rats, des Regierungsrats und der Verwaltung veröffentlicht. Im vorliegenden Datensatz sind die aktuellen über das offizielle API des Kantonsblatts beziehbaren Meldungen in Tabellenform enthalten. </p><p>Bitte beachten Sie auch die Datenschutzerklärung des Kantonsblattes und die Hinweise zur Rechtsgültigkeit der Meldungen unter <a href="https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy" target="_blank">https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy</a>. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-05-31`
-- **Modified** `2024-06-24T00:34:28+00:00`
+- **Modified** `2024-06-25T00:34:33+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -43,7 +43,7 @@ The dataset is read into a dataframe
 ```{r}
 get_dataset <- function(url) {
   # Download the CSV file
-  csv_path <- file.path(getwd(), '100352.csv')
+  csv_path <- file.path(getwd(), '..', 'data', '100352.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file

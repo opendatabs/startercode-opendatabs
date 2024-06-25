@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-06-24"
+date: "2024-06-25"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100304.
 - **Description** `<p style="">Dieser Datensatz beinhaltet die Summe des Gasverbrauchs, die innert Stunden-Intervallen aus dem Netz bezogen wird. Neben dem Kanton Basel-Stadt versorgt IWB auch weitere 29 Gemeinden in den Kantonen Basel-Landschaft, Solothurn und Aargau mit Gas. Diese sind auch im Datensatz enthalten.</p><p style="">Die Gemeinden, die im Versorgungsgebiet enthalten sind, sind:<br>Aesch BL, Allschwil, Arlesheim, Augst, Basel, Bettingen, Binningen, Birsfelden, Bottmingen, Dornach, Eiken, Ettingen, Frenkendorf, Frick, Füllinsdorf, Gipf-Oberfrick, Lausen, Liestal, Möhlin, Münchenstein, Muttenz, Oberwil, Oeschgen, Pfeffingen, Pratteln, Reinach BL, Rheinfelden, Riehen, Schönenbuch, Therwil, Wallbach<br></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-01-19`
-- **Modified** `2024-06-23T13:02:30+00:00`
+- **Modified** `2024-06-24T13:02:28+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-09-01T05:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -43,7 +43,7 @@ The dataset is read into a dataframe
 ```{r}
 get_dataset <- function(url) {
   # Download the CSV file
-  csv_path <- file.path(getwd(), '100304.csv')
+  csv_path <- file.path(getwd(), '..', 'data', '100304.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
