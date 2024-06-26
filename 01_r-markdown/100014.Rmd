@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100014.
 - **Description** `<p>Stündlich aktualisierte Belegungsdaten der öffentlichen Parkhäuser der Stadt Basel, bezogen über den<a href="http://www.parkleitsystem-basel.ch/rss_feed.php" target="_blank"> RSS Feed</a> des <a href="http://www.parkleitsystem-basel.ch" target="_blank">Parkleitsystems Basel</a>. </p><p>Historische Daten mit kleinerer zeitlicher Auflösung können auch über das API von ParkenDD bezogen werden, wie hier am Beispiel der Parkhäuser der Stadt Zürich beschrieben: <a href="https://opendatazurich.github.io/parkendd-api" target="_blank">https://opendatazurich.github.io/parkendd-api</a> (die Parkhäuser von Basel sind über diese URL abrufbar: <a href="https://api.parkendd.de/Basel" target="_blank">https://api.parkendd.de/Basel</a>). </p><p>Die Standorte der Parkhäuser sind in diesem Datensatz ersichtlich: <a href="https://data.bs.ch/explore/dataset/100044" target="_blank">https://data.bs.ch/explore/dataset/100044</a> </p><p><span style="font-family: inherit; font-size: 0.875rem;">Änderungsprotokoll:<br></span><span style="font-family: inherit; font-size: 0.875rem;">14.08.2023 - Neue Spalte "auslastungen" wurde hinzugefügt.</span></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2024-06-26T06:08:55+00:00`
+- **Modified** `2024-06-26T08:07:25+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-02-07T16:05:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -42,30 +42,25 @@ The dataset is read into a dataframe
 
 ```{r}
 get_dataset <- function(url) {
+  # Create directory if it does not exist
+  data_path <- file.path(getwd(), '..', 'data')
+  if (!dir.exists(data_path)) {
+    dir.create(data_path, recursive = TRUE)
+  }
   # Download the CSV file
-  csv_path <- file.path(getwd(), '..', 'data', '100014.csv')
+  csv_path <- file.path(data_path , '100014.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
   data <- tryCatch(
-    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
-    warning = function(w) NULL,
-    error = function(e) NULL
-  )
-
-  # If the dataframe has one column or less, try with semicolon as separator
-  if (is.null(data) || ncol(data) <= 1) {
-    data <- tryCatch(
       read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
       warning = function(w) NULL,
       error = function(e) NULL
-    )
-
-    if (is.null(data) || ncol(data) <= 1) {
+  )
+  # if dataframe only has one column or less the data is not ";" separated
+  if (is.null(data) || ncol(data) <= 1) {
       stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
-    }
   }
-
   return(data)
 }
 ```

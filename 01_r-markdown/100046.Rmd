@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100046.
 - **Description** `<p>Kontinuierlich gemessene Parameter der <a href="https://www.aue.bs.ch/umweltanalytik/rheinueberwachungsstation-weil-am-rhein.html" target="_blank">Rheinüberwachungsstation Weil am Rhein</a> (RUES), jeweils gemittelt über 15 Minuten. Werte werden alle 15 Minuten wie von den Sensoren gemessen als Rohdaten publiziert. Jährlich werden die Daten manuell plausibilisiert und als Stundenwerte veröffentlicht. </p><p>Standort: Rheinkilometer 171.37km</p><p>Koordinaten: <a href="https://www.google.ch/maps/place/47%C2%B036'04.7%22N+7%C2%B035'41.5%22E" target="_blank">E 7.594868 N 47.601299</a> bzw. E 7° 35‘ 39.55“ N 47° 36‘ 4.68“ bzw. 611740 / 272310</p><p>Träger: Schweizerische Eidgenossenschaft; Bundesamt für Umwelt (BAFU), Land Baden-Württemberg; Ministerium für Umwelt, Klima und Energiewirtschaft / Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg (LUBW)</p><p>Messbetrieb / Unterhalt: <a href="https://www.aue.bs.ch" target="_blank">Amt für Umwelt und Energie Basel-Stadt (AUE-BS)</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2024-06-26T06:50:19+00:00`
+- **Modified** `2024-06-26T09:00:19+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2001-12-31T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -42,30 +42,25 @@ The dataset is read into a dataframe
 
 ```{r}
 get_dataset <- function(url) {
+  # Create directory if it does not exist
+  data_path <- file.path(getwd(), '..', 'data')
+  if (!dir.exists(data_path)) {
+    dir.create(data_path, recursive = TRUE)
+  }
   # Download the CSV file
-  csv_path <- file.path(getwd(), '..', 'data', '100046.csv')
+  csv_path <- file.path(data_path , '100046.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
   data <- tryCatch(
-    read.csv(csv_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8"),
-    warning = function(w) NULL,
-    error = function(e) NULL
-  )
-
-  # If the dataframe has one column or less, try with semicolon as separator
-  if (is.null(data) || ncol(data) <= 1) {
-    data <- tryCatch(
       read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
       warning = function(w) NULL,
       error = function(e) NULL
-    )
-
-    if (is.null(data) || ncol(data) <= 1) {
+  )
+  # if dataframe only has one column or less the data is not ";" separated
+  if (is.null(data) || ncol(data) <= 1) {
       stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
-    }
   }
-
   return(data)
 }
 ```
