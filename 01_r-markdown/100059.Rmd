@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-06-25"
+date: "2024-06-26"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100059.
 - **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Gemeinde. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB).`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-03-12`
-- **Modified** `2024-06-24T23:01:25+00:00`
+- **Modified** `2024-06-25T23:01:26+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
