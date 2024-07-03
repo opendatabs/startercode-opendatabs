@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-06-26"
+date: "2024-07-03"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100008.
 - **Description** `<p>In der Stadt Basel betreibt IWB über 200 öffentliche Brunnen. Sie sind Kulturgut und «Visitenkarte» der Stadt. <a href="https://www.iwb.ch/brunnen" target="_blank">https://www.iwb.ch/brunnen</a><a href="https://www.iwb.ch/brunnen" target="_blank"></a><br/>Wenn Sie Fragen oder Anliegen rund um die Basler Brunnen haben, empfehlen wir Ihnen, sich direkt an die Industriellen Werke Basel (IWB) zu wenden, die für diese Angelegenheiten zuständig sind. Für weitere Informationen und Kontaktdetails besuchen Sie bitte die offizielle Webseite der IWB: <a href="https://www.iwb.ch/servicecenter/kontakt" target="_blank">https://www.iwb.ch/servicecenter/kontakt</a><br/></p><p>In einigen Brunnen ist auch Baden möglich und vom Eigentümer, dem Kanton Basel-Stadt, toleriert, jedoch auf eigene Verantwortung und Gefahr. Wir bitten darum, die Brunnen sauber zu hinterlassen und auf Anwohner Rücksicht zu nehmen. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-06-25T22:02:40+00:00`
+- **Modified** `2024-07-02T22:03:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -33,6 +33,11 @@ Auto generated R starter code for data set 100008.
 
 library(tidyverse)
 library(skimr)
+library(janitor)
+library(VIM)
+
+
+
 
 ```
 
@@ -87,7 +92,36 @@ tail(df)
 # Continue your code here...
 
 ```{r}
+# Remove columns that have no values with janitor
+df <- remove_empty(df, which = "cols", quiet = FALSE)
 
+# Remove rows with missing values (if appropriate)
+df <- na.omit(df)
+
+# display a small random sample transposed in order to see all variables
+t(sample_n(df, 5))
+
+# the size of the data frame in memory
+ size <- object.size(df)
+#  the size in bytes
+print(size)
+
+# describe numerical features
+summary(df[, sapply(df, is.numeric)])
+
+# describe non-numerical features
+summary(df[, sapply(df, Negate(is.numeric))])
+
+# check missing values with VIM
+aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
+
+# plot a histogram for each numerical feature
+df %>%
+  select_if(is.numeric) %>%
+  gather() %>%
+  ggplot( aes(value)) +
+  geom_histogram(bins = 10, color = "white", fill = "red") +
+    facet_wrap(~key, scales = 'free_x')
 ```
 
 ------------------------------------------------------------------------

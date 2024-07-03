@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-06-26"
+date: "2024-07-03"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100232.
 - **Description** `Wohnungen gemäss Gebäude- und Wohnungsregister (GWR). <br><br>Eine Wohnung ist eine Gesamtheit von Räumen, die für eine Wohnnutzung geeignet sind, eine bauliche Einheit bilden, einen Zugang entweder von aussen oder von einem gemeinsam mit anderen Wohnungen genutzten Bereich innerhalb des Gebäudes haben, über eine Kocheinrichtung (oder mindestens der technischen Installation für den Einbau einer Kocheinrichtung) verfügen und keine Fahrnis darstellen.<br><br>Einen Überblick über die im Register geführten Merkmal gibt folgendes Dokument: <a href="https://www.housing-stat.ch/files/881-2200.pdf" target="_blank">https://www.housing-stat.ch/files/881-2200.pdf (Merkmalskatalog 4.2)</a> bzw. online unter <a href="https://www.housing-stat.ch/de/help/42.html" target="_blank">https://www.housing-stat.ch/de/help/42.html (Online-Merkmalskatalog 4.2)</a><br><br>Die rechtliche Grundlage stellt die entsprechende eidgenössische Gesetzgebung dar: <a href="https://www.fedlex.admin.ch/eli/cc/2017/376/de" target="_blank">https://www.fedlex.admin.ch/eli/cc/2017/376/de (Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR))</a><br><br>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-11-24`
-- **Modified** `2024-06-26T01:27:43+00:00`
+- **Modified** `2024-07-03T02:27:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -33,6 +33,11 @@ Auto generated R starter code for data set 100232.
 
 library(tidyverse)
 library(skimr)
+library(janitor)
+library(VIM)
+
+
+
 
 ```
 
@@ -87,7 +92,36 @@ tail(df)
 # Continue your code here...
 
 ```{r}
+# Remove columns that have no values with janitor
+df <- remove_empty(df, which = "cols", quiet = FALSE)
 
+# Remove rows with missing values (if appropriate)
+df <- na.omit(df)
+
+# display a small random sample transposed in order to see all variables
+t(sample_n(df, 5))
+
+# the size of the data frame in memory
+ size <- object.size(df)
+#  the size in bytes
+print(size)
+
+# describe numerical features
+summary(df[, sapply(df, is.numeric)])
+
+# describe non-numerical features
+summary(df[, sapply(df, Negate(is.numeric))])
+
+# check missing values with VIM
+aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
+
+# plot a histogram for each numerical feature
+df %>%
+  select_if(is.numeric) %>%
+  gather() %>%
+  ggplot( aes(value)) +
+  geom_histogram(bins = 10, color = "white", fill = "red") +
+    facet_wrap(~key, scales = 'free_x')
 ```
 
 ------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-06-26"
+date: "2024-07-03"
 output: html_document
 ---
 
@@ -39,7 +39,7 @@ Manipulationen an Geräten können zu fehlerhaften Messungen führen.<o:p></o:p>
 Geschwindigkeitsmonitoring sind folgende Datensätze vorhanden:<o:p></o:p></span></p><ul><li>Einzelmessungen ab 2023 (dieser Datensatz): <a href="https://data.bs.ch/explore/dataset/100097" target="_blank">https://data.bs.ch/explore/dataset/100097</a><a href="https://data.bs.ch/explore/dataset/100097" target="_blank"></a></li><li>Einzelmessungen von 2021 und 2022: <a href="https://data.bs.ch/explore/dataset/100358" target="_blank">https://data.bs.ch/explore/dataset/100358</a><br></li><li>Einzelmessungen bis 2020: <a href="https://data.bs.ch/explore/dataset/100200" target="_blank">https://data.bs.ch/explore/dataset/100200</a></li><li>Kennzahlen pro Mess-Standort: <a href="https://data.bs.ch/explore/dataset/100112" target="_blank">https://data.bs.ch/explore/dataset/100112</a> </li></ul>Aufgrund der grossen Datenmenge kann es vorkommen, dass der Datensatz nicht vollständig heruntergeladen werden kann. Falls dieses Problem auftritt, kann man den vollständigen Datensatz und die Einzelmessungen der Messstationen hier herunterladen:<p></p><ul><li>vollständiger Datensatz: <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv</a></li><li>Einzelmessungen der Messstationen: <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/</a></li></ul><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href="https://map.geo.bs.ch/s/geschwindigkeit" target="_blank">https://map.geo.bs.ch/s/geschwindigkeit</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2021-02-02`
-- **Modified** `2024-06-22T04:08:37+00:00`
+- **Modified** `2024-07-02T02:27:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-01-04T08:04:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -55,6 +55,11 @@ Geschwindigkeitsmonitoring sind folgende Datensätze vorhanden:<o:p></o:p></span
 
 library(tidyverse)
 library(skimr)
+library(janitor)
+library(VIM)
+
+
+
 
 ```
 
@@ -109,7 +114,36 @@ tail(df)
 # Continue your code here...
 
 ```{r}
+# Remove columns that have no values with janitor
+df <- remove_empty(df, which = "cols", quiet = FALSE)
 
+# Remove rows with missing values (if appropriate)
+df <- na.omit(df)
+
+# display a small random sample transposed in order to see all variables
+t(sample_n(df, 5))
+
+# the size of the data frame in memory
+ size <- object.size(df)
+#  the size in bytes
+print(size)
+
+# describe numerical features
+summary(df[, sapply(df, is.numeric)])
+
+# describe non-numerical features
+summary(df[, sapply(df, Negate(is.numeric))])
+
+# check missing values with VIM
+aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
+
+# plot a histogram for each numerical feature
+df %>%
+  select_if(is.numeric) %>%
+  gather() %>%
+  ggplot( aes(value)) +
+  geom_histogram(bins = 10, color = "white", fill = "red") +
+    facet_wrap(~key, scales = 'free_x')
 ```
 
 ------------------------------------------------------------------------

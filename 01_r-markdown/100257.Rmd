@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-06-26"
+date: "2024-07-03"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100257.
 - **Description** `Zonenplan der Gemeinde Bettingen gemäss Beschluss der Einwohnergemeindeversammlung vom 2. Dezember 2008 und der Genehmigung des Bau- und Verkehrsdepartements vom 1.7.2009. Der Datensatz enthält den Zonenplan und die Bebauungspläne ist ein Teil des Geodatenmodelles des Kantons Basel-Stadt zum Thema ?Nutzungsplanung?.<br>Weitere Daten zum Thema ?Nutzungsplanung?: <a href="https://data.bs.ch/explore/?sort=modified&amp;q=tags=Nutzungsplanung">https://data.bs.ch/explore/?sort=modified&amp;q=tags=Nutzungsplanung</a>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-01-06`
-- **Modified** `2024-06-26T05:06:21+00:00`
+- **Modified** `2024-07-03T05:06:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -33,6 +33,11 @@ Auto generated R starter code for data set 100257.
 
 library(tidyverse)
 library(skimr)
+library(janitor)
+library(VIM)
+
+
+
 
 ```
 
@@ -87,7 +92,36 @@ tail(df)
 # Continue your code here...
 
 ```{r}
+# Remove columns that have no values with janitor
+df <- remove_empty(df, which = "cols", quiet = FALSE)
 
+# Remove rows with missing values (if appropriate)
+df <- na.omit(df)
+
+# display a small random sample transposed in order to see all variables
+t(sample_n(df, 5))
+
+# the size of the data frame in memory
+ size <- object.size(df)
+#  the size in bytes
+print(size)
+
+# describe numerical features
+summary(df[, sapply(df, is.numeric)])
+
+# describe non-numerical features
+summary(df[, sapply(df, Negate(is.numeric))])
+
+# check missing values with VIM
+aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
+
+# plot a histogram for each numerical feature
+df %>%
+  select_if(is.numeric) %>%
+  gather() %>%
+  ggplot( aes(value)) +
+  geom_histogram(bins = 10, color = "white", fill = "red") +
+    facet_wrap(~key, scales = 'free_x')
 ```
 
 ------------------------------------------------------------------------
