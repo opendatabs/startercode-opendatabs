@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100047.
 - **Description** `<p>Der Datensatz zeigt die Inhalte, die beim Laden eines E-Fahrzeugs erhoben werden. Diese Daten werden von der E-Ladestation erhoben, die im Rahmen des Projekts «Smarte Strasse» in Basel installiert wurde. Diese E-Ladestation wurde mit minimalem Ressourcenaufwand montiert, indem man ein Kabelverteilkasten (KVK) um genutzt hat.</p><p class="" style="font-family: sans-serif;"><span style="font-weight: bolder;">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</span></p><ul><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href="https://www.entwicklung.bs.ch/grundlagen/smart-city/smarte-strasse.html" target="_blank">https://www.entwicklung.bs.ch/grundlagen/smart-city/smarte-strasse.html</a> </li><li>Genaue Standorte aller Sensoren: <a href="https://data.bs.ch/explore/dataset/100114/table/" target="_blank">https://data.bs.ch/explore/dataset/100114/table/</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><br/></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-02-07`
-- **Modified** `2024-07-03T04:45:05+00:00`
+- **Modified** `2024-07-03T15:00:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-08-20T08:59:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -35,9 +35,6 @@ library(tidyverse)
 library(skimr)
 library(janitor)
 library(VIM)
-
-
-
 
 ```
 
@@ -89,29 +86,37 @@ tail(df)
 
 ```
 
-# Continue your code here...
-
 ```{r}
 # Remove columns that have no values with janitor
 df <- remove_empty(df, which = "cols", quiet = FALSE)
 
 # Remove rows with missing values (if appropriate)
 df <- na.omit(df)
+```
 
+```{r}
 # display a small random sample transposed in order to see all variables
 t(sample_n(df, 5))
+```
 
+```{r}
 # the size of the data frame in memory
- size <- object.size(df)
+size <- object.size(df)
 #  the size in bytes
 print(size)
+```
 
+```{r}
 # describe numerical features
 summary(df[, sapply(df, is.numeric)])
+```
 
+```{r}
 # describe non-numerical features
 summary(df[, sapply(df, Negate(is.numeric))])
+```
 
+```{r}
 # check missing values with VIM
 aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
 
@@ -124,6 +129,11 @@ df %>%
     facet_wrap(~key, scales = 'free_x')
 ```
 
+# Continue your code here...
+
+```{r}
+
+```
 ------------------------------------------------------------------------
 
 # Questions about the data?

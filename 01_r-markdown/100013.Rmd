@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100013.
 - **Description** `<p>Resultate der Messungen der Dauerzählstellen und Kurzzeitzählstellen für den Velo- und Fussgängerverkehr. </p><p>Die Zähldaten für den Fussgängerverkehr werden monatlich durch Anwendung einer Korrekturfunktion angepasst und im Anschluss veröffentlicht. Ausnahme bildet hier die Zählstelle 817 Elisabethenanlage. Diese wird auf Grund der aktuellen COVID-19 Krise täglich aufgearbeitet und beobachtet </p><p>Aus Kostengründen sind nur die Werte des aktuellen und des letzten Jahres als Tabelle / Visualisierung sichtbar bzw. via API abgreifbar. Die vollständigen Daten ab dem Jahr 2000 können hier heruntergeladen werden: </p><ul><li><a href="https://data-bs.ch/mobilitaet/converted_Velo_Fuss_Count.csv">Leicht aufbereiteter Datensatz: https://data-bs.ch/mobilitaet/converted_Velo_Fuss_Count.csv</a> </li><li><a href="https://data-bs.ch/mobilitaet/Velo_Fuss_Count.csv">Rohdaten: https://data-bs.ch/mobilitaet/Velo_Fuss_Count.csv</a></li></ul><p>Die Daten einzelner Jahre ab dem Jahr 2000 können einzeln heruntergeladen werden unter der URL mit dem Muster https://data-bs.ch/mobilitaet/[JAHR]_Velo_Fuss_Count.csv, also zum Beispiel für das Jahr 2020 hier: <a href="https://data-bs.ch/mobilitaet/2020_Velo_Fuss_Count.csv" target="_blank">https://data-bs.ch/mobilitaet/2020_Velo_Fuss_Count.csv</a>.</p><p>Die Zählstellen sind auf MET eingestellt (Spalten TimeFrom und TimeTo), d.h. die Zeitumstellung wird wie in Mitteleuropa ausgeführt. Bei der Umstellung von Winter- auf Sommerzeit fehlt die Stunde der Umstellung, dieser Tag hat dann 23 Stunden. Bei der Umstellung von Sommer- auf Winterzeit ist eine Stunde zu viel enthalten (der Tag hat 25 Stunden). In diesem Fall werden die Zähldaten der beiden Stunden zusammengezählt. </p><p><br/></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2024-07-02T06:27:31+00:00`
+- **Modified** `2024-07-03T06:27:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -35,9 +35,6 @@ library(tidyverse)
 library(skimr)
 library(janitor)
 library(VIM)
-
-
-
 
 ```
 
@@ -89,29 +86,37 @@ tail(df)
 
 ```
 
-# Continue your code here...
-
 ```{r}
 # Remove columns that have no values with janitor
 df <- remove_empty(df, which = "cols", quiet = FALSE)
 
 # Remove rows with missing values (if appropriate)
 df <- na.omit(df)
+```
 
+```{r}
 # display a small random sample transposed in order to see all variables
 t(sample_n(df, 5))
+```
 
+```{r}
 # the size of the data frame in memory
- size <- object.size(df)
+size <- object.size(df)
 #  the size in bytes
 print(size)
+```
 
+```{r}
 # describe numerical features
 summary(df[, sapply(df, is.numeric)])
+```
 
+```{r}
 # describe non-numerical features
 summary(df[, sapply(df, Negate(is.numeric))])
+```
 
+```{r}
 # check missing values with VIM
 aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
 
@@ -124,6 +129,11 @@ df %>%
     facet_wrap(~key, scales = 'free_x')
 ```
 
+# Continue your code here...
+
+```{r}
+
+```
 ------------------------------------------------------------------------
 
 # Questions about the data?

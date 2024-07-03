@@ -4,27 +4,27 @@ date: "2024-07-03"
 output: html_document
 ---
 
-## Dataset: Verkehrsreiche Strassen (50 km/h oder mehr)
+## Dataset: Kandidaturen für Gerichtspräsidienwahlen
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100034)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100379)
 
-Auto generated R starter code for data set 100034.
+Auto generated R starter code for data set 100379.
 
 ## Metadata
 
-- **Dataset_identifier** `100034`
-- **Title** `Verkehrsreiche Strassen (50 km/h oder mehr)`
-- **Description** `Der Velostadtplan zeigt dir passende Routen zu deinem Ziel und liefert Ideen, wohin du mit deinem Velo besonders gut fahren kannst. Er ist die elektronische Version der faltbaren Papierkarte, die im Buchhandel, bei Basel Tourismus, Pro Velo und Veloplus erhältlich ist.`
+- **Dataset_identifier** `100379`
+- **Title** `Kandidaturen für Gerichtspräsidienwahlen`
+- **Description** `<p>Dieser Datensatz enthält Informationen zu den Kandidaturen für alle Gerichtspräsidienwahlen seit 2024<br></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2024-07-03T05:02:54+00:00`
+- **Issued** `2024-06-25`
+- **Modified** `2024-06-27T07:51:16+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Mobilität und Verkehr', 'Geographie', 'Tourismus']`
-- **Keywords** `['Velo', 'Fahrrad', 'Veloweg', 'E-Bike', 'Pedelec', 'Einbahnstrasse', 'Gefahrenstelle', 'Tempo', 'Verkehr', 'Steil', 'Berg', 'Hügel']`
-- **Publisher** `Amt für Mobilität`
-- **Reference** `www.geo.bs.ch/velostadtplan; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/92330bd4-1feb-41df-8245-9dea15bd6a00`
+- **Themes** `['Politik']`
+- **Keywords** `['Wahlen', 'Mitbestimmung', 'Strafgericht', 'Gericht', 'Demokratie']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `https://www.staatskanzlei.bs.ch/politische-rechte/wahlen-abstimmungen/`
 
 
 # Load packages
@@ -50,7 +50,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100034.csv')
+  csv_path <- file.path(data_path , '100379.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -69,7 +69,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100034/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100379/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
