@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-07-03"
+date: "2024-07-04"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100021.
 - **Description** `Der Bevölkerung werden die verschiedenen Entsorgungsstellen für ihre Abfälle und Wertstoffe angezeigt. Sie erhalten zudem die Informationen, was, wann und wie sie diese entsorgen können.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-07-03T05:02:55+00:00`
+- **Modified** `2024-07-04T05:02:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
