@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100057.
 - **Description** `Metadaten zu den im vorliegenden Datenportal publizierten OGD Datensätzen.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-07-03T05:04:19+00:00`
+- **Modified** `2024-07-03T16:03:07+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -35,9 +35,6 @@ library(tidyverse)
 library(skimr)
 library(janitor)
 library(VIM)
-
-
-
 
 ```
 
@@ -89,29 +86,37 @@ tail(df)
 
 ```
 
-# Continue your code here...
-
 ```{r}
 # Remove columns that have no values with janitor
 df <- remove_empty(df, which = "cols", quiet = FALSE)
 
 # Remove rows with missing values (if appropriate)
 df <- na.omit(df)
+```
 
+```{r}
 # display a small random sample transposed in order to see all variables
 t(sample_n(df, 5))
+```
 
+```{r}
 # the size of the data frame in memory
- size <- object.size(df)
+size <- object.size(df)
 #  the size in bytes
 print(size)
+```
 
+```{r}
 # describe numerical features
 summary(df[, sapply(df, is.numeric)])
+```
 
+```{r}
 # describe non-numerical features
 summary(df[, sapply(df, Negate(is.numeric))])
+```
 
+```{r}
 # check missing values with VIM
 aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
 
@@ -124,6 +129,11 @@ df %>%
     facet_wrap(~key, scales = 'free_x')
 ```
 
+# Continue your code here...
+
+```{r}
+
+```
 ------------------------------------------------------------------------
 
 # Questions about the data?

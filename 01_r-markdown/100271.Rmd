@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100271.
 - **Description** `<p>Hydrologischen Vorhersagen (Wasserstand und Abfluss) für die Station "Rhein - Basel, Rheinhalle".</p><p>Die Vorhersagen basieren  auf den Meteo-Modellen ICON-CH1-EPS, ICON-CH2-EPS und IFS. Am Anfang der Zeitreihen stehen 24 Std. Messwerte, anschliessend fangen die Prognosen an. </p><p>Bei den ICON-Modellen wird der Kontroll-Lauf in den Spalten "Wasserstand" und "Abflussmenge" ausgewiesen. Der Kontroll-Lauf ist die hydrologische Vorhersage basierend auf der meteorologischen Kontrollvorhersage.</p><p>Stationsinfo: Die Station befindet sich auf der Kleinbasler Seite auf Höhe des Birs-Zuflusses.</p><p>Weitere Informationen sind hier zu finden: <a href="https://www.hydrodaten.admin.ch/de/2289.html" target="_blank">https://www.hydrodaten.admin.ch/de/2289.html</a><a href="https://www.hydrodaten.admin.ch/de/2289.html" target="_blank"></a></p><p><b>Änderungsprotokoll:</b></p><p><b>30.05.2024:</b> Für die numerische Vorhersage wurde das Wettermodell COSMO mit dem neuen Wettermodell ICON (Icosahedral Nonhydrostatic Weather and Climate Model) ersetzt. Mehr Infos dazu finden Sie hier: <a href="https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html" target="_blank">https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-03-07`
-- **Modified** `2024-07-03T05:00:54+00:00`
+- **Modified** `2024-07-03T17:01:06+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -35,9 +35,6 @@ library(tidyverse)
 library(skimr)
 library(janitor)
 library(VIM)
-
-
-
 
 ```
 
@@ -89,29 +86,37 @@ tail(df)
 
 ```
 
-# Continue your code here...
-
 ```{r}
 # Remove columns that have no values with janitor
 df <- remove_empty(df, which = "cols", quiet = FALSE)
 
 # Remove rows with missing values (if appropriate)
 df <- na.omit(df)
+```
 
+```{r}
 # display a small random sample transposed in order to see all variables
 t(sample_n(df, 5))
+```
 
+```{r}
 # the size of the data frame in memory
- size <- object.size(df)
+size <- object.size(df)
 #  the size in bytes
 print(size)
+```
 
+```{r}
 # describe numerical features
 summary(df[, sapply(df, is.numeric)])
+```
 
+```{r}
 # describe non-numerical features
 summary(df[, sapply(df, Negate(is.numeric))])
+```
 
+```{r}
 # check missing values with VIM
 aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
 
@@ -124,6 +129,11 @@ df %>%
     facet_wrap(~key, scales = 'free_x')
 ```
 
+# Continue your code here...
+
+```{r}
+
+```
 ------------------------------------------------------------------------
 
 # Questions about the data?

@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100353.
 - **Description** `Dieser Datensatz beinhaltet den täglichen Gasverbrauch sowie den mittels eines Modells berechneten, anhand des Kalendertages und der Witterung zu erwartenden Gasverbrauch.<br>Der tägliche Gasverbrauch ergibt sich als Summe des stündlich ausgewiesenen Gasverbrauchs im OGD-Datensatz "Gasverbrauch im Versorgungsgebiet der IWB" (<a href="https://data.bs.ch/explore/dataset/100304">https://data.bs.ch/explore/dataset/100304</a>). <br><br> Für die Modellevaluierung wurde der Datensatz in drei Teile unterteilt. Der Trainingsdatensatz dient zum Trainieren des Modells, der Tesdatensatz zur Bewertung der Modellleistung. Der Prognosedatensatz enthält neue, unbekannte Daten zur Vorhersage durch das mit Training- und Testdaten trainierte Modell.<br><br>Mehr Informationen zu den gewonnenen Kentnissen findet man im Webartikel: <a href="https://www.statistik.bs.ch/aktuell/gasverbrauch-2023.html">https://www.statistik.bs.ch/aktuell/gasverbrauch-2023.html</a><br><br>Der Code des Modells kann selber ausgeführt und weiterentwickelt werden. Hierfür wird Renku verwendet. Renku ist eine Plattform, die verschiedene Werkzeuge für reproduzierbare und kollaborative Datenanalyseprojekte bündelt: <a href="https://renkulab.io/projects/stata/reproducible/erwarteter-gasverbrauch-basel-stadt">https://renkulab.io/projects/stata/reproducible/erwarteter-gasverbrauch-basel-stadt</a><br>Der Code ist auch in einer Webansicht als Methodenbericht verfügbar: <a href="https://www.statistik.bs.ch/grundlagen/methodenberichte/gasverbrauchsprognose.html">https://www.statistik.bs.ch/grundlagen/methodenberichte/gasverbrauchsprognose.html</a>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-03-15`
-- **Modified** `2024-07-02T13:15:12+00:00`
+- **Modified** `2024-07-03T13:16:13+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -35,9 +35,6 @@ library(tidyverse)
 library(skimr)
 library(janitor)
 library(VIM)
-
-
-
 
 ```
 
@@ -89,29 +86,37 @@ tail(df)
 
 ```
 
-# Continue your code here...
-
 ```{r}
 # Remove columns that have no values with janitor
 df <- remove_empty(df, which = "cols", quiet = FALSE)
 
 # Remove rows with missing values (if appropriate)
 df <- na.omit(df)
+```
 
+```{r}
 # display a small random sample transposed in order to see all variables
 t(sample_n(df, 5))
+```
 
+```{r}
 # the size of the data frame in memory
- size <- object.size(df)
+size <- object.size(df)
 #  the size in bytes
 print(size)
+```
 
+```{r}
 # describe numerical features
 summary(df[, sapply(df, is.numeric)])
+```
 
+```{r}
 # describe non-numerical features
 summary(df[, sapply(df, Negate(is.numeric))])
+```
 
+```{r}
 # check missing values with VIM
 aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
 
@@ -124,6 +129,11 @@ df %>%
     facet_wrap(~key, scales = 'free_x')
 ```
 
+# Continue your code here...
+
+```{r}
+
+```
 ------------------------------------------------------------------------
 
 # Questions about the data?

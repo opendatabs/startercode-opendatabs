@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100069.
 - **Description** `<p>Der Datensatz enthält die Analysedaten aus der binationalen Rheinüberwachungsstation (RÜS) in Weil am Rhein (Rhein-Kilometer 171,37) seit Bestehen der Station im Jahr 1993 aus der Matrix Wasser.</p><p>Der Rhein wird aktuell auf 670 Schadstoffe untersucht, 420 davon täglich. Der Unterhalt der Anlage und die Analytik werden durch das Amt für Umwelt und Energie des Kantons Basel-Stadt (AUE) geleistet. Auftraggeber sind die Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg (LUBW) und das schweizerische Bundesamt für Umwelt (BAFU).</p><p>Weitere Informationen: <a href="http://www.aue.bs.ch/umweltanalytik/rheinueberwachungsstation-weil-am-rhein.html" target="_blank">http://www.aue.bs.ch/umweltanalytik/rheinueberwachungsstation-weil-am-rhein.html</a></p><p>Die Daten einzelner Jahre ab dem Jahr 1993 können heruntergeladen werden unter der URL mit dem Muster https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_[JAHR].csv, also zum Beispiel für das Jahr 2020 hier: <a href="https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_2020.csv" target="_blank">https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_2020.csv</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-04-06`
-- **Modified** `2024-07-02T06:02:46+00:00`
+- **Modified** `2024-07-03T06:02:38+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1992-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -35,9 +35,6 @@ library(tidyverse)
 library(skimr)
 library(janitor)
 library(VIM)
-
-
-
 
 ```
 
@@ -89,29 +86,37 @@ tail(df)
 
 ```
 
-# Continue your code here...
-
 ```{r}
 # Remove columns that have no values with janitor
 df <- remove_empty(df, which = "cols", quiet = FALSE)
 
 # Remove rows with missing values (if appropriate)
 df <- na.omit(df)
+```
 
+```{r}
 # display a small random sample transposed in order to see all variables
 t(sample_n(df, 5))
+```
 
+```{r}
 # the size of the data frame in memory
- size <- object.size(df)
+size <- object.size(df)
 #  the size in bytes
 print(size)
+```
 
+```{r}
 # describe numerical features
 summary(df[, sapply(df, is.numeric)])
+```
 
+```{r}
 # describe non-numerical features
 summary(df[, sapply(df, Negate(is.numeric))])
+```
 
+```{r}
 # check missing values with VIM
 aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
 
@@ -124,6 +129,11 @@ df %>%
     facet_wrap(~key, scales = 'free_x')
 ```
 
+# Continue your code here...
+
+```{r}
+
+```
 ------------------------------------------------------------------------
 
 # Questions about the data?
