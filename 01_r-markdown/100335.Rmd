@@ -4,27 +4,29 @@ date: "2024-07-04"
 output: html_document
 ---
 
-## Dataset: OGD Datensätze
+## Dataset: Baustellen
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100057)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100335)
 
-Auto generated R starter code for data set 100057.
+Auto generated R starter code for data set 100335.
 
 ## Metadata
 
-- **Dataset_identifier** `100057`
-- **Title** `OGD Datensätze`
-- **Description** `Metadaten zu den im vorliegenden Datenportal publizierten OGD Datensätzen.`
+- **Dataset_identifier** `100335`
+- **Title** `Baustellen`
+- **Description** `<p>Dieser Datensatz enthält umfassende Informationen zu aktuellen und bevorstehende Baustellen (Baubewilligung erteilt) auf öffentlichem Grund im Kanton Basel-Stadt. Er enthält Informationen wie z. B. an welcher Strasse sich die Baustelle befindet, die Beschreibung des Projektes, mögliche Zusatzinformationen, Links zum Projekt und zu Anwohnerbriefe. Die Fallnummer der Allmendbewilligung und der Link zum OGD-Datensatz mit den Allmendbewilligungen sind ebenfalls im Datensatz aufgeführt.</p><p>Dieser Datensatz ist maschinenlesbar und barrierefrei. </p><p>
+</p><p>
+Diese Daten werden vom Tiefbauamt des Kantons Basel-Stadt zur Verfügung gestellt. Die Baustellen finden Sie auch auf einer interaktiven Karte unter <a href="https://baustellen.bs.ch" target="_blank">https://baustellen.bs.ch</a>. </p><p></p><p></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2024-07-04T13:03:19+00:00`
-- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Issued** `2024-07-05`
+- **Modified** `2024-07-04T00:01:15+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Verwaltung']`
-- **Keywords** `['Datensatz', 'OGD', 'Metadaten']`
-- **Publisher** `Fachstelle für OGD Basel-Stadt`
-- **Reference** `https://data.bs.ch`
+- **Themes** `['Bau- und Wohnungswesen']`
+- **Keywords** `['Baustelle', 'bauen', 'Strasse', 'Allmendbewilligung', 'Baubeginn', 'Bauende']`
+- **Publisher** `Tiefbauamt`
+- **Reference** `https://baustellen.bs.ch`
 
 
 # Load packages
@@ -50,7 +52,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100057.csv')
+  csv_path <- file.path(data_path , '100335.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -69,7 +71,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100057/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100335/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
