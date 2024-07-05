@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100307.
 - **Description** `<p>Dieser Datensatz zeigt die Ratsmitglieder des Grossen Rates des Kantons Basel-Stadt.</p><p>Pro Datenpunkt wird eine Mitgliedschaft im Grossen Rat gezeigt. Dies kann also zu mehreren Einträgen der gleichen Person führen, falls diese Person nach einem Unterbruch wieder in den Grossen Rat gewählt wurde.</p><p>Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br/><a href="https://grosserrat.bs.ch/mitglieder" target="_blank">https://grosserrat.bs.ch/mitglieder</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-09-28`
-- **Modified** `2024-07-01T08:02:52+00:00`
+- **Modified** `2024-07-05T08:02:30+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -32,10 +32,6 @@ Auto generated R starter code for data set 100307.
 ```{r}
 
 library(tidyverse)
-library(skimr)
-library(janitor)
-library(VIM)
-
 ```
 
 # Load data
@@ -79,7 +75,6 @@ df <- get_dataset('https://data.bs.ch/explore/dataset/100307/download?format=csv
 
 glimpse(df)
 str(df)
-skim(df)
 
 head(df)
 tail(df)
@@ -87,8 +82,8 @@ tail(df)
 ```
 
 ```{r}
-# Remove columns that have no values with janitor
-df <- remove_empty(df, which = "cols", quiet = FALSE)
+# Remove columns that have no values
+df <- Filter(function(x) !all(is.na(x)), df)
 
 # Remove rows with missing values (if appropriate)
 df <- na.omit(df)
@@ -117,9 +112,18 @@ summary(df[, sapply(df, Negate(is.numeric))])
 ```
 
 ```{r}
-# check missing values with VIM
-aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
+# check missing values
+df %>%
+  mutate(row = row_number()) %>%
+  gather(key = "variable", value = "value", -row) %>%
+  ggplot(aes(x = variable, y = row)) +
+  geom_tile(aes(fill = is.na(value)), color = "black") +
+  scale_fill_manual(values = c("TRUE" = "grey", "FALSE" = "red")) +
+  labs(x = "", y = "", fill = "Missing") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
+```{r}
 # plot a histogram for each numerical feature
 df %>%
   select_if(is.numeric) %>%

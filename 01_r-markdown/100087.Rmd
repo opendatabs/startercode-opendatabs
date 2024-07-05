@@ -25,7 +25,7 @@ Pilotprojekt den Einsatz von kosteneffizienten Sensoren zur Erfassung des
 Schallpegeldaten (Leq) zur Verfügung gestellt.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-06-25`
-- **Modified** `2024-07-05T06:00:10+00:00`
+- **Modified** `2024-07-05T09:00:10+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-06-24T12:14:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -40,10 +40,6 @@ Schallpegeldaten (Leq) zur Verfügung gestellt.</p>`
 ```{r}
 
 library(tidyverse)
-library(skimr)
-library(janitor)
-library(VIM)
-
 ```
 
 # Load data
@@ -87,7 +83,6 @@ df <- get_dataset('https://data.bs.ch/explore/dataset/100087/download?format=csv
 
 glimpse(df)
 str(df)
-skim(df)
 
 head(df)
 tail(df)
@@ -95,8 +90,8 @@ tail(df)
 ```
 
 ```{r}
-# Remove columns that have no values with janitor
-df <- remove_empty(df, which = "cols", quiet = FALSE)
+# Remove columns that have no values
+df <- Filter(function(x) !all(is.na(x)), df)
 
 # Remove rows with missing values (if appropriate)
 df <- na.omit(df)
@@ -125,9 +120,18 @@ summary(df[, sapply(df, Negate(is.numeric))])
 ```
 
 ```{r}
-# check missing values with VIM
-aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
+# check missing values
+df %>%
+  mutate(row = row_number()) %>%
+  gather(key = "variable", value = "value", -row) %>%
+  ggplot(aes(x = variable, y = row)) +
+  geom_tile(aes(fill = is.na(value)), color = "black") +
+  scale_fill_manual(values = c("TRUE" = "grey", "FALSE" = "red")) +
+  labs(x = "", y = "", fill = "Missing") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
+```{r}
 # plot a histogram for each numerical feature
 df %>%
   select_if(is.numeric) %>%

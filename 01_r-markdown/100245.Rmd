@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100245.
 - **Description** `Dieser Datensatz beinhaltet den täglichen Stromverbrauch sowie den mittels eines Modells berechneten, anhand des Kalendertages und der Witterung zu erwartenden Stromverbrauch.<br>Der Stromverbrauch ist die Summe der elektrischen Energie, die im Kanton Basel-Stadt täglich aus dem Netz bezogen wird, inklusive Netzverluste. Der tägliche Stromverbrauch ergibt sich als Summe des viertelstündlich ausgewiesenen Stromverbrauchs im OGD-Datensatz "Kantonaler Stromverbrauch" (<a href="https://data.bs.ch/explore/dataset/100233/">https://data.bs.ch/explore/dataset/100233/</a>).<br>Lokal direkt am Ort der Produktion verbrauchte elektrische Energie (z.B. aus Photovoltaikanlagen), welche nicht ins öffentliche Netz eingespiesen wird, ist in den vorliegenden Daten nicht enthalten. Die Daten umfassen den an allen im Netz installierten fernausgelesenen Zählern gemessenen Verbrauch sowie ergänzend, da nicht 100% der Zähler fernauslesbar sind, Daten aus den ins Netz eingespeisten Strommengen.<br><br>Für die Modellevaluierung wurde der Datensatz in drei Teile unterteilt. Der Trainingsdatensatz dient zum Trainieren des Modells, der Tesdatensatz zur Bewertung der Modellleistung. Der Prognosedatensatz enthält neue, unbekannte Daten zur Vorhersage durch das mit Training- und Testdatensatz trainierte Modell.<br><br>Code zur Replikation:<br><a href="https://www.statistik.bs.ch/grundlagen/methodenberichte/stromverbrauchsprognose.html">https://www.statistik.bs.ch/grundlagen/methodenberichte/stromverbrauchsprognose.html</a>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-02-16`
-- **Modified** `2024-07-05T06:16:17+00:00`
+- **Modified** `2024-07-05T08:15:37+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -32,10 +32,6 @@ Auto generated R starter code for data set 100245.
 ```{r}
 
 library(tidyverse)
-library(skimr)
-library(janitor)
-library(VIM)
-
 ```
 
 # Load data
@@ -79,7 +75,6 @@ df <- get_dataset('https://data.bs.ch/explore/dataset/100245/download?format=csv
 
 glimpse(df)
 str(df)
-skim(df)
 
 head(df)
 tail(df)
@@ -87,8 +82,8 @@ tail(df)
 ```
 
 ```{r}
-# Remove columns that have no values with janitor
-df <- remove_empty(df, which = "cols", quiet = FALSE)
+# Remove columns that have no values
+df <- Filter(function(x) !all(is.na(x)), df)
 
 # Remove rows with missing values (if appropriate)
 df <- na.omit(df)
@@ -117,9 +112,18 @@ summary(df[, sapply(df, Negate(is.numeric))])
 ```
 
 ```{r}
-# check missing values with VIM
-aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
+# check missing values
+df %>%
+  mutate(row = row_number()) %>%
+  gather(key = "variable", value = "value", -row) %>%
+  ggplot(aes(x = variable, y = row)) +
+  geom_tile(aes(fill = is.na(value)), color = "black") +
+  scale_fill_manual(values = c("TRUE" = "grey", "FALSE" = "red")) +
+  labs(x = "", y = "", fill = "Missing") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
+```{r}
 # plot a histogram for each numerical feature
 df %>%
   select_if(is.numeric) %>%

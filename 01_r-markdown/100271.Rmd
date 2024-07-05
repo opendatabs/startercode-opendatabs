@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100271.
 - **Description** `<p>Hydrologischen Vorhersagen (Wasserstand und Abfluss) für die Station "Rhein - Basel, Rheinhalle".</p><p>Die Vorhersagen basieren  auf den Meteo-Modellen ICON-CH1-EPS, ICON-CH2-EPS und IFS. Am Anfang der Zeitreihen stehen 24 Std. Messwerte, anschliessend fangen die Prognosen an. </p><p>Bei den ICON-Modellen wird der Kontroll-Lauf in den Spalten "Wasserstand" und "Abflussmenge" ausgewiesen. Der Kontroll-Lauf ist die hydrologische Vorhersage basierend auf der meteorologischen Kontrollvorhersage.</p><p>Stationsinfo: Die Station befindet sich auf der Kleinbasler Seite auf Höhe des Birs-Zuflusses.</p><p>Weitere Informationen sind hier zu finden: <a href="https://www.hydrodaten.admin.ch/de/2289.html" target="_blank">https://www.hydrodaten.admin.ch/de/2289.html</a><a href="https://www.hydrodaten.admin.ch/de/2289.html" target="_blank"></a></p><p><b>Änderungsprotokoll:</b></p><p><b>30.05.2024:</b> Für die numerische Vorhersage wurde das Wettermodell COSMO mit dem neuen Wettermodell ICON (Icosahedral Nonhydrostatic Weather and Climate Model) ersetzt. Mehr Infos dazu finden Sie hier: <a href="https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html" target="_blank">https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-03-07`
-- **Modified** `2024-07-05T07:00:26+00:00`
+- **Modified** `2024-07-05T09:00:31+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -32,10 +32,6 @@ Auto generated R starter code for data set 100271.
 ```{r}
 
 library(tidyverse)
-library(skimr)
-library(janitor)
-library(VIM)
-
 ```
 
 # Load data
@@ -79,7 +75,6 @@ df <- get_dataset('https://data.bs.ch/explore/dataset/100271/download?format=csv
 
 glimpse(df)
 str(df)
-skim(df)
 
 head(df)
 tail(df)
@@ -87,8 +82,8 @@ tail(df)
 ```
 
 ```{r}
-# Remove columns that have no values with janitor
-df <- remove_empty(df, which = "cols", quiet = FALSE)
+# Remove columns that have no values
+df <- Filter(function(x) !all(is.na(x)), df)
 
 # Remove rows with missing values (if appropriate)
 df <- na.omit(df)
@@ -117,9 +112,18 @@ summary(df[, sapply(df, Negate(is.numeric))])
 ```
 
 ```{r}
-# check missing values with VIM
-aggr(df, numbers = TRUE, prop = FALSE, combined = FALSE, sortVars = TRUE,  plot = TRUE)
+# check missing values
+df %>%
+  mutate(row = row_number()) %>%
+  gather(key = "variable", value = "value", -row) %>%
+  ggplot(aes(x = variable, y = row)) +
+  geom_tile(aes(fill = is.na(value)), color = "black") +
+  scale_fill_manual(values = c("TRUE" = "grey", "FALSE" = "red")) +
+  labs(x = "", y = "", fill = "Missing") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
+```{r}
 # plot a histogram for each numerical feature
 df %>%
   select_if(is.numeric) %>%
