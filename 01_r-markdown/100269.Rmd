@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-07-08"
+date: "2024-07-09"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100269.
 - **Description** `<p>Der Datensatz zeigt die stündlichen Temperaturwerte der Wiese an.</p><p>Koordinaten: <a href="https://map.geo.bs.ch/s/7z0Q" target="_blank">47.581638577259945, 7.59193858146811</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-05-15`
-- **Modified** `2024-07-08T18:30:05+00:00`
+- **Modified** `2024-07-09T06:30:06+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-01-24T06:36:00+00:00`
 - **Temporal_coverage_end_date** `None`
