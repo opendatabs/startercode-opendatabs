@@ -22,13 +22,13 @@ For all data licenses please refer to each data set's link or the metadata API e
 
 🌻 Also many thanks to the Open Government Team of the City of Munich for providing the code to the generator: [https://github.com/it-at-m/startercode-generator-munich](https://github.com/it-at-m/startercode-generator-munich)
 
-<sub>Latest update: **2024-07-09 08:00:07**<sub>
+<sub>Latest update: **2024-07-09 12:42:24**<sub>
 
 ### Renku: [![launch - renku](https://renkulab.io/renku-badge.svg)](https://renkulab.io/projects/opendatabs/startercode-opendatabs/sessions/new?autostart=1)
 ### Jupyter Lab: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode-opendatabs/main?urlpath=lab)
 ### RStudio Server: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode-opendatabs/main?urlpath=rstudio)
 ## Overview of datasets
-| ID | Title (abbreviated to 200 chars) | Python Binder (Jupyter Notebook) | Python Colab | R Colab | Python GitHub | R GitHub |
+| ID | Title (abbreviated to 200 chars) | Python Binder | Python Colab | R Colab | Python GitHub | R GitHub |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | 100003 | [Basler Index der Konsumentenpreise](https://data.bs.ch/explore/dataset/100003) |[![Jupyter Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode-opendatabs/main?filepath=03_python/100003.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/opendatabs/startercode-opendatabs/blob/main/03_python/100003.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/opendatabs/startercode-opendatabs/blob/main/02_r-notebook/100003.ipynb) | [Python GitHub](https://github.com/opendatabs/startercode-opendatabs/blob/main/03_python/100003.ipynb) | [R GitHub](https://github.com/opendatabs/startercode-opendatabs/blob/main/01_r-markdown/100003.Rmd) |
 | 100004 | [Belegung der Elektroauto-Ladestationen der IWB](https://data.bs.ch/explore/dataset/100004) |[![Jupyter Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode-opendatabs/main?filepath=03_python/100004.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/opendatabs/startercode-opendatabs/blob/main/03_python/100004.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://githubtocolab.com/opendatabs/startercode-opendatabs/blob/main/02_r-notebook/100004.ipynb) | [Python GitHub](https://github.com/opendatabs/startercode-opendatabs/blob/main/03_python/100004.ipynb) | [R GitHub](https://github.com/opendatabs/startercode-opendatabs/blob/main/01_r-markdown/100004.Rmd) |
