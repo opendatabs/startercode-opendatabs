@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100338.
 
 - **Dataset_identifier** `100338`
 - **Title** `Resultate der Ersatzwahl Regierungspräsidium 3. März 2024`
-- **Description** `<p class="MsoNormal" style="font-family: sans-serif;">Dieser Datensatz zeigt die Resultate des ersten Wahlgangs der Regierungspräsidiums-Ersatzwahl v<o:p></o:p><span style="font-size: 0.875rem;">om 3. März 2024.</span></p><p style="font-family: sans-serif;"></p><p class="MsoNormal" style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
+- **Description** `<p class="MsoNormal" style="font-family: sans-serif;">Dieser Datensatz zeigt die Resultate des ersten Wahlgangs der Regierungspräsidiums-Ersatzwahl vom 3. März 2024.</p><p style="font-family: sans-serif;"></p><p class="MsoNormal" style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-03-02`
 - **Modified** `2024-04-07T14:15:56+00:00`
