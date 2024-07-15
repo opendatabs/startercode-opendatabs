@@ -4,27 +4,27 @@ date: "2024-07-15"
 output: html_document
 ---
 
-## Dataset: Veranstaltungen mit potenziellem Einfluss auf Veloverkehr
+## Dataset: Sauberkeitsindex pro Quartal und Wohnviertel
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100074)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100362)
 
-Auto generated R starter code for data set 100074.
+Auto generated R starter code for data set 100362.
 
 ## Metadata
 
-- **Dataset_identifier** `100074`
-- **Title** `Veranstaltungen mit potenziellem Einfluss auf Veloverkehr`
-- **Description** `<p>Dieser Datensatz zeigt ausgewählte Veranstaltungen und Veranstaltungsreihen. Der Datensatz ist ursprünglich aufgebaut worden, um das Verkehrsaufkommen bei kantonalen Fahrrad-Zählstellen – welches unter anderem auch durch Veranstaltungen beeinflusst wird – besser interpretieren zu können. Aus diesem Grund sind nicht alle Veranstaltungen auf dem Kantonsgebiet im Datensatz enthalten, sondern nur diejenigen, von denen man sich einen potentiellen Einfluss auf die Anzahl an Zählstellen gezählten Velos erwartet. Der Datensatz wird durch das Statistische Amt Basel-Stadt nach bestem Wissen und Gewissen gepflegt und aktualisiert. Es besteht kein Anspruch auf Richtigkeit oder Vollständigkeit der gemachten Angaben. </p><p>Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst.</p>`
+- **Dataset_identifier** `100362`
+- **Title** `Sauberkeitsindex pro Quartal und Wohnviertel`
+- **Description** `<p>Dieser Datensatz enthält den Sauberkeitsindex für alle Wohnviertel in der Stadt Basel. Zur Berechnung des Sauberkeitsindex wird wie folgt vorgegangen:</p><p>Auf den Kehrrichtfahrzeugen sind Kameras installiert, die während der Einsätze Videoaufnahmen der Strassen machen. Ein Computer durchsucht anschliessend diese Videoaufnahmen nach Abfällen. Dieser sortiert die Abfälle in verschiedene Abfallkategorien (Zigarettenstummel, Papier, PET-Flaschen etc.) und zählt die Anzahl der gefundenen Abfälle jeder Kategorie. Zusätzlich wird für jede Abfallkategorie der Verschmutzungsgrad und der Störfaktor bestimmt. Daraus wird der Sauberkeitsindex berechnet. Danach werden die Videoaufnahmen aus Datenschutzgründen umgehend gelöscht.</p><p>Der Sauberkeitsindex wird auf einer Skala von 0 bis 5 angegeben, wobei die Werte folgendermassen beurteilt werden:<br>Kleiner als 3: schlecht<br>Zwischen 3 und 4: mittel<br>Grösser als 4: gut<br>Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für die gesamte Stadt von mindestens 4.5.</p><p>Der Datensatz wird quartalsweise mit den Daten des Vorquartals aktualisiert.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2020-03-31`
-- **Modified** `2024-07-15T17:30:54+00:00`
+- **Issued** `2024-07-14`
+- **Modified** `2024-07-15T07:12:35+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Raum und Umwelt', 'Öffentliche Ordnung und Sicherheit']`
-- **Keywords** `['Adresse', 'Event', 'Ausgang', 'Velo', 'Ansammlung', 'Konzert', 'Publikum']`
-- **Publisher** `Statistisches Amt`
-- **Reference** `https://www.statistik.bs.ch/`
+- **Themes** `['Öffentliche Ordnung und Sicherheit', 'Raum und Umwelt', 'Bevölkerung']`
+- **Keywords** `['Sauberkeit', 'Kehrricht', 'Abfall', 'Reinigung', 'Stadtreinigung', 'Strassennetz', 'Stadthygiene', 'Verschmutzung', 'Müll']`
+- **Publisher** `Stadtreinigung`
+- **Reference** `None`
 
 
 # Load packages
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100074.csv')
+  csv_path <- file.path(data_path , '100362.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100074/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100362/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
