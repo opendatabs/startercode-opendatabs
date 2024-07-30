@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-07-29"
+date: "2024-07-30"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100010.
 - **Description** `Als Leerwohnung gilt eine Wohnung, welche am Stichtag (1. Juni) unbesetzt, aber bewohnbar ist und zur dauernden Miete von mindestens drei Monaten oder zum Verkauf angeboten wird. Folgende Wohnungen gelten nicht als Leerwohnungen: a) unbesetzt, aber bereits vermietet oder verkauft; b) unbesetzt, aber nicht zur Miete oder zum Verkauf angeboten; c) nicht mehr als Wohnung (Arztpraxen etc.) angeboten; d) einem beschränkten Personenkreis vorbehalten (z.B. Dienstwohnung); e) aus bau-, sanitätspolizeilichen oder richterlichen Gründen gesperrt; f) für weniger als drei Monate angeboten.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-08-27`
-- **Modified** `2023-08-18T08:02:29+00:00`
+- **Modified** `2024-07-30T06:57:52+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
