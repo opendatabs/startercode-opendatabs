@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100057.
 - **Description** `Metadaten zu den im vorliegenden Datenportal publizierten OGD Datensätzen.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-07-31T06:05:38+00:00`
+- **Modified** `2024-07-31T18:03:08+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
