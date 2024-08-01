@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-07-31"
+date: "2024-08-01"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100197.
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt am Jahresende auf Ebene der Postleitzahlen-Gebiete ab dem Jahr 1979. Diese Gebiete orientieren sich nicht an den statistischen Raumeinheiten (Wohnviertel, Bezirk, Block,…), sondern wurden von der Schweizerischen Post vergeben.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-06-02`
-- **Modified** `2024-07-01T01:31:44+00:00`
+- **Modified** `2024-08-01T01:31:32+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
