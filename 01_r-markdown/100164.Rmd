@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100164.
 - **Description** `<p>Der Datensatz enthält die Grundwasserstände in m ü. M. des kantonalen Grundwassermessnetzes. Es weist zur Zeit um die 80 Messstationen auf. Bei den Stationen, die mit einer Datenfernübertragung ausgerüstet sind, liegen tagesaktuelle Stundenwerte vor.</p><p>Jede Messstation ist mit der Katasternummer gemäss Bohrkataster des Kantons Basel-Stadt versehen (<a href="https://data.bs.ch/explore/dataset/100182" target="_blank">https://data.bs.ch/explore/dataset/100182</a>). Die Bohrungen sind auch auf MapBS unter dem Thema Geologie abrufbar (<a href="http://www.geo.bs.ch/bohrkataster" target="_blank">www.geo.bs.ch/bohrkataster</a>).</p><p>Weitere Informationen: <a href="https://www.aue.bs.ch/wasser/grundwasser/grundwasserpegel-grundwasserqualitaet.html" target="_blank">https://www.aue.bs.ch/wasser/grundwasser/grundwasserpegel-grundwasserqualitaet.html</a></p><div><br/></div>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-07-11`
-- **Modified** `2024-07-31T05:26:07+00:00`
+- **Modified** `2024-08-01T06:08:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1976-03-29T03:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
