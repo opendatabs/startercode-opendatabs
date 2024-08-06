@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100047.
 - **Description** `<p>Der Datensatz zeigt die Inhalte, die beim Laden eines E-Fahrzeugs erhoben werden. Diese Daten werden von der E-Ladestation erhoben, die im Rahmen des Projekts «Smarte Strasse» in Basel installiert wurde. Diese E-Ladestation wurde mit minimalem Ressourcenaufwand montiert, indem man ein Kabelverteilkasten (KVK) um genutzt hat.</p><p class="" style="font-family: sans-serif;"><span style="font-weight: bolder;">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</span></p><ul><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href="https://www.entwicklung.bs.ch/grundlagen/smart-city/smarte-strasse.html" target="_blank">https://www.entwicklung.bs.ch/grundlagen/smart-city/smarte-strasse.html</a> </li><li>Genaue Standorte aller Sensoren: <a href="https://data.bs.ch/explore/dataset/100114/table/" target="_blank">https://data.bs.ch/explore/dataset/100114/table/</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><br/></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-02-07`
-- **Modified** `2024-08-06T06:45:06+00:00`
+- **Modified** `2024-08-06T18:00:07+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-08-20T08:59:00+00:00`
 - **Temporal_coverage_end_date** `None`
