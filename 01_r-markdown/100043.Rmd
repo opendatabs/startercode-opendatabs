@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-08-06"
+date: "2024-08-07"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100043.
 - **Description** `Die im Kanton Basel-Stadt am häufigsten vorkommenden invasiven Neophyten (nicht heimische, problematische Pflanzenarten) wurden kartiert und die Fundorte je nach Pflanzenart als Flächen oder Punkte aufgenommen. Die Kartierung wurde bisher in den Jahren 2006, 2009 und 2013 durchgeführt.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-08-06T05:03:40+00:00`
+- **Modified** `2024-08-07T05:03:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2005-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
