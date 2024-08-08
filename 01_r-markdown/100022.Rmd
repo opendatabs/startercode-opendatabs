@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-08-07"
+date: "2024-08-08"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100022.
 - **Description** `Die Güteklassen zeigen auf, wie gut ein Gebiet mit dem öffentlichen Verkehr erschlossen ist. Die Klasse ist abhängig von dem Transportmittel (Kleinbus, Bus, Tram, S-Bahn, Fernverkehrszug), dem jeweiligen Takt und der Distanz zur Haltestelle. Die Klasse zeigt die beste Erschliessung auf.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-01-29`
-- **Modified** `2024-08-07T05:05:19+00:00`
+- **Modified** `2024-08-08T05:05:18+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
