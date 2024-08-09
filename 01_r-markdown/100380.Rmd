@@ -4,27 +4,29 @@ date: "2024-08-09"
 output: html_document
 ---
 
-## Dataset: Grosser Rat: Dokumente
+## Dataset: Entwicklungszummenarbeit: Unterstützte Projekte
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100313)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100380)
 
-Auto generated R starter code for data set 100313.
+Auto generated R starter code for data set 100380.
 
 ## Metadata
 
-- **Dataset_identifier** `100313`
-- **Title** `Grosser Rat: Dokumente`
-- **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt Dokumente von Geschäften, die im Grossen Rat des Kantons Basel-Stadt behandelt werden.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br/><a href="https://grosserrat.bs.ch/" target="_blank">https://grosserrat.bs.ch</a></p>`
+- **Dataset_identifier** `100380`
+- **Title** `Entwicklungszummenarbeit: Unterstützte Projekte`
+- **Description** `<p>Basel engagiert sich für die Verbesserung der Lebensumstände der Ärmsten dieser Welt. Für Projekte der ausländischen Entwicklungszusammenarbeit stellt der Kanton jährlich 2 Mio. Franken bereit. Mit den finanziellen Beiträgen sollen die Entwicklungschancen der Bevölkerung in den ärmsten Ländern der Welt oder in speziell benachteiligten Regionen nachhaltig verbessert werden. Die Entwicklungszusammenarbeit des Kantons Basel-Stadt engagiert sich ausschliesslich im Rahmen von Projekten im Ausland, wobei thematische Schwerpunkte im Fokus stehen (medizinische Versorgung, Landwirtschaft, Bildung, Gewerbeförderung etc.).</p>
+<p>Die <a href="https://www.marketing.bs.ch/Aussenbeziehungen/eza/kommission.html" target="_blank">Kommission für Entwicklungszusammenarbeit</a> (<a href="https://www.marketing.bs.ch/Aussenbeziehungen/eza/kommission.html" target="_blank">https://www.marketing.bs.ch/Aussenbeziehungen/eza/kommission.html</a>) trifft sich zwei Mal jährlich zur Auswahl von Projekten. Bei der Beurteilung von Projektanträgen orientiert sich die Kommission an einem Kriterienkatalog (Qualität, Relevanz, Effektivität, Wirkung, Nachhaltigkeit, Transparenz der Finanzierung, ethische Aspekte). Es wird darauf geachtet, dass bei der Vergabe der Mittel ein gewisser Turnus angewendet wird und Hilfswerke, welche in der Region domiziliert sind, besonders berücksichtigt werden.</p>
+<p>Die Regierungsratsbeschlüsse zur Auswahl der zu unterstützenden Projekte werden jeweils veröffentlicht unter: <a href="https://www.regierungsrat.bs.ch/geschaefte/regierungsratsbeschluesse.html" target="_blank">https://www.regierungsrat.bs.ch/geschaefte/regierungsratsbeschluesse.html</a> (Stichwort: Entwicklungszusammenarbeit)</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2023-09-29`
-- **Modified** `2024-08-09T08:04:23+00:00`
+- **Issued** `2024-08-19`
+- **Modified** `2024-07-29T18:34:18+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Politik', 'Verwaltung']`
-- **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Parlamentarische Vorstösse']`
-- **Publisher** `Parlamentsdienst des Grossen Rats`
-- **Reference** `https://grosserrat.bs.ch/`
+- **Themes** `['Politik']`
+- **Keywords** `['Entwicklung', 'Entwicklungszusammenarbeit', 'Projekte', 'Engagement', 'Ausland', 'international', 'Medizin', 'Bildung', 'Landwirtschaft', 'Gewerbeförderung', 'Hilfswerk']`
+- **Publisher** `Aussenbeziehungen und Standortmarketing`
+- **Reference** `https://www.bs.ch/Portrait/Aussenbeziehung/Entwicklungszusammenarbeit.html`
 
 
 # Load packages
@@ -46,7 +48,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100313.csv')
+  csv_path <- file.path(data_path , '100380.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +67,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100313/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100380/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
