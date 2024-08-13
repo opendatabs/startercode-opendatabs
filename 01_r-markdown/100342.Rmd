@@ -4,27 +4,27 @@ date: "2024-08-13"
 output: html_document
 ---
 
-## Dataset: Luftqualität Station Basel-Binningen
+## Dataset: Flächen der Schulstandorte (Gemeinde Basel)
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100051)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100342)
 
-Auto generated R starter code for data set 100051.
+Auto generated R starter code for data set 100342.
 
 ## Metadata
 
-- **Dataset_identifier** `100051`
-- **Title** `Luftqualität Station Basel-Binningen`
-- **Description** `<p>Stündliche Messungen der <a href="https://www.meteoschweiz.admin.ch/home/messwerte.html?param=messnetz-automatisch&amp;station=BAS" target="_blank">automatischen Wetterstation Basel-Binningen</a>. </p>`
+- **Dataset_identifier** `100342`
+- **Title** `Flächen der Schulstandorte (Gemeinde Basel)`
+- **Description** `Die Karte zeigt die Flächen der Schulstandorte (Kindergärten, Primar-, Sekundarschule, Gymnasium, Zentrum für Brückenangebote, Allgemeine Gewerbeschule, Fachmaturitätsschule, Spezialangebote sowie Tagesstrukturen, Sportplätze, Turnhallen ausserhalb von Schulstandorten und Schwimmhallen) der Gemeinde Basel. Mehr Informationen zu den Schulstandorten sind in diesem Datensatz zu finden: <a href="https://data.bs.ch/explore/dataset/100029" target="_blank">https://data.bs.ch/explore/dataset/100029</a>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2024-08-13T18:21:48+00:00`
-- **Rights** `None`
-- **Temporal_coverage_start_date** `2018-05-31T22:00:00+00:00`
+- **Issued** `2024-02-09`
+- **Modified** `2024-08-13T05:07:10+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Raum und Umwelt', 'Gesundheit', 'Tourismus']`
-- **Keywords** `['Luft', 'Ozon', 'Stickstoffdioxid', 'Stickoxid', 'NO2', 'NOX', 'Feinstaub', 'Kohlenmonoxid', 'CO', 'Partikelzahlkonzentraion', 'Russ', 'Temperatur', 'Niederschlag', 'Globalstrahlung']`
-- **Publisher** `MeteoSchweiz`
-- **Reference** `https://www.meteoschweiz.admin.ch/home/messwerte.html?param=messnetz-automatisch&station=BAS; https://www.bafu.admin.ch/bafu/de/home/themen/luft/zustand/daten/datenabfrage-nabel.html`
+- **Themes** `['Bildung, Wissenschaft', 'Bevölkerung', 'Geographie']`
+- **Keywords** `['Schule', 'Lernen', 'Schüler', 'Schülerinnen', 'Lehrer', 'Lehrerinnen']`
+- **Publisher** `Zentrale Dienste`
+- **Reference** `www.geo.bs.ch/schulstandorte-basel; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/baf5ae32-de1d-411d-8fee-1c4de41cdf39`
 
 
 # Load packages
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100051.csv')
+  csv_path <- file.path(data_path , '100342.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100051/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100342/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
