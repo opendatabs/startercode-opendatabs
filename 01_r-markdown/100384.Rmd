@@ -4,27 +4,27 @@ date: "2024-08-16"
 output: html_document
 ---
 
-## Dataset: Grosser Rat: Ratsmitgliedschaften
+## Dataset: Zeitreihe der Temperaturen der Gartenbäder
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100307)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100384)
 
-Auto generated R starter code for data set 100307.
+Auto generated R starter code for data set 100384.
 
 ## Metadata
 
-- **Dataset_identifier** `100307`
-- **Title** `Grosser Rat: Ratsmitgliedschaften`
-- **Description** `<p>Dieser Datensatz zeigt die Ratsmitglieder des Grossen Rates des Kantons Basel-Stadt.</p><p>Pro Datenpunkt wird eine Mitgliedschaft im Grossen Rat gezeigt. Dies kann also zu mehreren Einträgen der gleichen Person führen, falls diese Person nach einem Unterbruch wieder in den Grossen Rat gewählt wurde.</p><p>Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br/><a href="https://grosserrat.bs.ch/mitglieder" target="_blank">https://grosserrat.bs.ch/mitglieder</a></p>`
+- **Dataset_identifier** `100384`
+- **Title** `Zeitreihe der Temperaturen der Gartenbäder`
+- **Description** `<p style="font-family: sans-serif;">Dieser Datensatz enthält eine kontinuierliche Aufzeichnung der Wassertemperaturen in den Gartenbädern, beginnend ab dem 16. August 2024.</p><p style="font-family: sans-serif;">Die Temperaturdaten werden alle 15 Minuten aktualisiert, indem ein automatisiertes Programm die neuesten Werte von der Webseite <a href="https://www.ed-baeder.ch/" target="_blank">https://www.ed-baeder.ch/</a> abruft. Auf dieser Webseite findet man auch sonstige Meldungen zu den Gartenbädern.</p><p style="font-family: sans-serif;">Falls ein Gartenbad geschlossen ist oder keine Temperaturmessung verfügbar ist, wird für diesen Zeitraum kein Wert im Datensatz vermerkt.</p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Weiterführende Links:</span></p><p style="font-family: sans-serif;">Weitere Informationen zu den Gartenbädern: <a href="https://www.jfs.bs.ch/fuer-sportlerinnen-und-sportler/sportanlagen/gartenbaeder.html" target="_blank">https://www.jfs.bs.ch/fuer-sportlerinnen-und-sportler/sportanlagen/gartenbaeder.html</a></p><p style="font-family: sans-serif;">Diese und weitere Sportanlagen als Datensatz: <a href="https://data.bs.ch/explore/dataset/100151" target="_blank">https://data.bs.ch/explore/dataset/100151</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2023-09-28`
-- **Modified** `2024-08-16T08:03:13+00:00`
+- **Issued** `2024-08-16`
+- **Modified** `2024-08-16T19:01:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Politik', 'Verwaltung']`
-- **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament']`
-- **Publisher** `Parlamentsdienst des Grossen Rats`
-- **Reference** `https://grosserrat.bs.ch/`
+- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Tourismus']`
+- **Keywords** `['Hallenbad', 'Familienbad', 'Sportbad', 'behindertengerecht', 'Schwimmzone', 'Schwimmen', 'Baden', 'OpenSportData']`
+- **Publisher** `Jugend, Familie und Sport`
+- **Reference** `https://www.jfs.bs.ch/fuer-sportlerinnen-und-sportler/sportanlagen/gartenbaeder.html`
 
 
 # Load packages
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100307.csv')
+  csv_path <- file.path(data_path , '100384.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100307/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100384/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
