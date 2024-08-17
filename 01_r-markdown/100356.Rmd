@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-08-16"
+date: "2024-08-17"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100356.
 - **Description** `<p>Dieser Datensatz enthält die Geschwindigkeitsklassen des motorisierten Individualverkehrs. Die Daten werden vor der Veröffentlichung nicht überprüft oder ergänzt. Daher können jederzeit Datenlücken oder falsche Messungen aufgrund technischer Probleme oder Verkehrsbehinderungen auftreten.</p><p>Aus Kostengründen sind nur die Werte des aktuellen Jahres und der letzten zwei Jahre als Tabelle / Visualisierung sichtbar bzw. via API abgreifbar. Die vollständigen Daten ab dem Jahr 2014 können hier heruntergeladen werden: <br><br>Leicht aufbereiteter Datensatz: <a href="https://data-bs.ch/mobilitaet/converted_MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/converted_MIV_Speed.csv </a><br>Rohdaten: <a href="https://data-bs.ch/mobilitaet/MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/MIV_Speed.csv</a><br><br>Die Daten einzelner Jahre ab dem Jahr 2014 können heruntergeladen werden unter der URL mit dem Muster https://data-bs.ch/mobilitaet/[JAHR]_MIV_Speed.csv, als zum Beispiel für das Jahr 2020 hier: <a href="https://data-bs.ch/mobilitaet/2020_MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/2020_MIV_Speed.csv.</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-03-26`
-- **Modified** `2024-08-16T06:20:48+00:00`
+- **Modified** `2024-08-17T06:20:35+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
