@@ -4,27 +4,27 @@ date: "2024-08-18"
 output: html_document
 ---
 
-## Dataset: Standorte der öffentlichen Parkhäuser Basel
+## Dataset: Resultate der Wahl eines zusätzl. Strafgerichtspräsidium 18. August 2024
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100044)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100381)
 
-Auto generated R starter code for data set 100044.
+Auto generated R starter code for data set 100381.
 
 ## Metadata
 
-- **Dataset_identifier** `100044`
-- **Title** `Standorte der öffentlichen Parkhäuser Basel`
-- **Description** `<p>Standorte der öffentlichen Parkhäuser Basel, wie sie in <a href="https://parkendd.de/map.html#Basel" target="_blank">ParkenDD</a> verwendet werden.</p>`
+- **Dataset_identifier** `100381`
+- **Title** `Resultate der Wahl eines zusätzl. Strafgerichtspräsidium 18. August 2024`
+- **Description** `<p class="MsoNormal" style="font-family: sans-serif;">Dieser Datensatz zeigt die Resultate der Wahl eines zusätzlichen Strafgerichtspräsidiums vom 18. August 2024.</p><p style="font-family: sans-serif;"></p><p class="MsoNormal" style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">Kantonsblatt</a> (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">www.kantonsblatt.ch</a>) des Kantons Basel-Stadt publiziert werden.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2024-08-18T19:01:27+00:00`
-- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Issued** `2024-08-17`
+- **Modified** `2024-08-18T13:09:32+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Mobilität und Verkehr', 'Geographie', 'Tourismus']`
-- **Keywords** `['Parkhaus', 'Standort', 'Parken', 'Auto', 'Parkieren', 'Elektroautos', 'Basel']`
-- **Publisher** `Parkhäuser Basel-Stadt`
-- **Reference** `https://raw.githubusercontent.com/offenesdresden/ParkAPI/master/park_api/cities/Basel.geojson`
+- **Themes** `['Politik', 'Bevölkerung']`
+- **Keywords** `['Wahlen', 'Mitbestimmung', 'Teilhabe', 'Demokratie', 'Ersatzwahl', 'Zweiter Wahlgang', 'Judikative', 'Juristisch']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `https://www.staatskanzlei.bs.ch/politische-rechte/wahlen-abstimmungen/wahlen-strafgericht.html`
 
 
 # Load packages
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100044.csv')
+  csv_path <- file.path(data_path , '100381.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100044/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100381/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
