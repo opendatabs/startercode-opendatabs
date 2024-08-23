@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100252.
 - **Description** `Dieser Datensatz beinhaltet die signalisierten Tempo 30-Zonen und -Strecken.<br>Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.<br>Weitere Daten zu "Verkehrsberuhigte Zonen": <a href="https://data.bs.ch/explore/?sort=modified&amp;q=tags=Verkehrsberuhigte+Zonen">https://data.bs.ch/explore/?sort=modified&amp;q=tags=Verkehrsberuhigte+Zonen</a>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-12-30`
-- **Modified** `2024-08-20T05:07:16+00:00`
+- **Modified** `2024-08-23T12:51:59+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
