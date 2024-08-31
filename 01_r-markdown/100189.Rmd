@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-08-30"
+date: "2024-08-31"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100189.
 - **Description** `<p>Der Datensatz beinhaltet die Namen aller Strassen im Kanton Basel-Stadt sowie kurze Erläuterungen zur Bedeutung der Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer.</p><p>Der Datensatz darf für Open Street Map verwendet werden.<br></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-04-11`
-- **Modified** `2024-08-30T05:04:59+00:00`
+- **Modified** `2024-08-31T05:05:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
