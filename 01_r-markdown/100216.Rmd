@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-08-31"
+date: "2024-09-01"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100216.
 - **Description** `Seit 2013 ist der Artikel 6a des Strassenverkehrsgesetz (SVG) in Kraft. Alle Strasseneigentümer werden darin unter anderem zur gebührenden Berücksichtigung der Verkehrssicherheitsaspekte bei Planung, Bau, Unterhalt und Betrieb von Strassen sowie zur Analyse des Strassennetzes auf Unfallschwerpunkte (USP) verpflichtet. Die Analyse der USP erfolgt gemäss der Schweizer Norm SN 641 724 des Schweizerischen Verbandes der Strassen- und Verkehrsfachleute (VSS). Für das gewählte Jahr werden USP für jeweils das angegebene und die zwei vorherigen Jahre dargestellt.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-12-09`
-- **Modified** `2024-08-31T05:05:33+00:00`
+- **Modified** `2024-09-01T05:05:43+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
