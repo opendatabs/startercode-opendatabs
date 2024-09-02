@@ -26,7 +26,7 @@ Auto generated R starter code for data set 100380.
 - **Themes** `['Politik']`
 - **Keywords** `['Entwicklung', 'Entwicklungszusammenarbeit', 'Projekte', 'Engagement', 'Ausland', 'international', 'Medizin', 'Bildung', 'Landwirtschaft', 'Gewerbeförderung', 'Hilfswerk']`
 - **Publisher** `Aussenbeziehungen und Standortmarketing`
-- **Reference** `https://www.bs.ch/Portrait/Aussenbeziehung/Entwicklungszusammenarbeit.html`
+- **Reference** `https://www.bs.ch/pd/marketing/eza/unterstuetzte-eza-projekte`
 
 
 # Load packages
