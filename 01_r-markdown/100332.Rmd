@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-09-03"
+date: "2024-09-04"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100332.
 - **Description** `Der Datensatz zeigt jene Zonen, die das Amt für Mobilität für die Sharing-Anbieter der Mikromobilität (z. B. Velo, E-Scooter etc.) in Basel definiert. Es sind dies Zonen, in denen die Fahrzeuge nicht abgemeldet werden dürfen (Parkverbotszonen) und Zonen, in denen die Fahrzeuge nicht durchfahren dürfen (Sperrzonen). Die Anbieter sind frei, selber zusätzliche Parkverbots- und Sperrzonen zu definieren.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-12-06`
-- **Modified** `2024-09-03T05:06:25+00:00`
+- **Modified** `2024-09-04T05:06:18+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
