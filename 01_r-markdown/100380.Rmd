@@ -4,7 +4,7 @@ date: "2024-09-17"
 output: html_document
 ---
 
-## Dataset: Entwicklungszummenarbeit: Unterstützte Projekte
+## Dataset: Entwicklungszusammenarbeit: Unterstützte Projekte
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100380)
 
@@ -13,7 +13,7 @@ Auto generated R starter code for data set 100380.
 ## Metadata
 
 - **Dataset_identifier** `100380`
-- **Title** `Entwicklungszummenarbeit: Unterstützte Projekte`
+- **Title** `Entwicklungszusammenarbeit: Unterstützte Projekte`
 - **Description** `<p>Basel engagiert sich für die Verbesserung der Lebensumstände der Ärmsten dieser Welt. Für Projekte der ausländischen Entwicklungszusammenarbeit stellt der Kanton jährlich 2 Mio. Franken bereit. Mit den finanziellen Beiträgen sollen die Entwicklungschancen der Bevölkerung in den ärmsten Ländern der Welt oder in speziell benachteiligten Regionen nachhaltig verbessert werden. Die Entwicklungszusammenarbeit des Kantons Basel-Stadt engagiert sich ausschliesslich im Rahmen von Projekten im Ausland, wobei thematische Schwerpunkte im Fokus stehen (medizinische Versorgung, Landwirtschaft, Bildung, Gewerbeförderung etc.).</p>
 <p>Die <a href="https://www.marketing.bs.ch/Aussenbeziehungen/eza/kommission.html" target="_blank">Kommission für Entwicklungszusammenarbeit</a> (<a href="https://www.marketing.bs.ch/Aussenbeziehungen/eza/kommission.html" target="_blank">https://www.marketing.bs.ch/Aussenbeziehungen/eza/kommission.html</a>) trifft sich zwei Mal jährlich zur Auswahl von Projekten. Bei der Beurteilung von Projektanträgen orientiert sich die Kommission an einem Kriterienkatalog (Qualität, Relevanz, Effektivität, Wirkung, Nachhaltigkeit, Transparenz der Finanzierung, ethische Aspekte). Es wird darauf geachtet, dass bei der Vergabe der Mittel ein gewisser Turnus angewendet wird und Hilfswerke, welche in der Region domiziliert sind, besonders berücksichtigt werden.</p>
 <p>Die Regierungsratsbeschlüsse zur Auswahl der zu unterstützenden Projekte werden jeweils veröffentlicht unter: <a href="https://www.regierungsrat.bs.ch/geschaefte/regierungsratsbeschluesse.html" target="_blank">https://www.regierungsrat.bs.ch/geschaefte/regierungsratsbeschluesse.html</a> (Stichwort: Entwicklungszusammenarbeit)</p>`
