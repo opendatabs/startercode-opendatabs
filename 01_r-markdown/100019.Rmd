@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-09-16"
+date: "2024-09-17"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100019.
 - **Description** `Sämtliche Standorte öffentlich zugänglicher Defibrillatoren in Basel-Stadt sind im Geoportal und in der First Responder App einsehbar. Die entsprechenden Standorte sind mit einem grünen Herz-Symbol signalisiert. Finden Sie den nächsten Defibrillator in Ihrer Nähe.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-09-16T05:02:50+00:00`
+- **Modified** `2024-09-17T05:02:54+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

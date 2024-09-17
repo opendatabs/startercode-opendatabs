@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-09-16"
+date: "2024-09-17"
 output: html_document
 ---
 
@@ -18,7 +18,7 @@ Auto generated R starter code for data set 100242.
 Die Durchgangsstrassen zeigen die Durchgangsstrassen gemäss Durchgangsverordnung unterteilt nach Hauptstrassen, Nationalstrassen (A) und Europastrassen (E).`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-12-23`
-- **Modified** `2024-09-16T05:05:56+00:00`
+- **Modified** `2024-09-17T05:07:18+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
