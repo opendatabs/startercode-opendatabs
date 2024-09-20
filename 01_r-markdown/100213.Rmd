@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100213.
 - **Description** `<p></p><p>Dieser Datensatz zeigt die von Velohändlern für die Öffentlichkeit verfügbaren Velopumpen.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-12-04`
-- **Modified** `2024-09-20T05:06:10+00:00`
+- **Modified** `2024-09-20T15:05:18+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

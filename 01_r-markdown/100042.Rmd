@@ -23,7 +23,7 @@ Im Gegensatz zum amtlichen Gemeindeverzeichnis der Schweiz wird für räumliche 
 - Die Gemeinde Riehen (BFS-Code 2703) hat die Wohnviertel-Nr. 30.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-09-20T05:03:25+00:00`
+- **Modified** `2024-09-20T15:03:14+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
