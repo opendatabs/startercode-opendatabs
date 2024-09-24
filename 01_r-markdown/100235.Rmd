@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-09-23"
+date: "2024-09-24"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100235.
 - **Description** `<p>Dieser Datensatz zeigt den Wasserstand und die Abflussmenge der Wiese in Basel etwa auf Höhe der Brücke bei der Wiesenstrasse über die Wiese. Es liegen aktuelle Werte alle 5 Minuten vor. Die Messungen werden im Auftrag des Bundesamts für Umwelt durchgeführt (siehe <a href="https://www.hydrodaten.admin.ch/de/2199.html" target="_blank">https://www.hydrodaten.admin.ch/de/2199.html</a>).</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-11-10`
-- **Modified** `2024-09-23T19:00:08+00:00`
+- **Modified** `2024-09-24T07:00:09+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

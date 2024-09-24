@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-09-23"
+date: "2024-09-24"
 output: html_document
 ---
 
@@ -24,14 +24,14 @@ Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnv
 - Beispiel Blockseite mit der Clarakirche: BLS_ID 121014_1741, die Bezeichnung (BLS_Label) lautet 12.1.014_1741`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-09-23T05:03:49+00:00`
+- **Modified** `2024-09-24T05:03:43+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Statistische Grundlagen']`
 - **Keywords** `['Statistik', 'Einteilung', 'Wohnblockseite']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `www.geo.bs.ch/statistischeraumeinheiten; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/be8ce164-33ef-4794-822c-774d17c87239; https://www.statistik.bs.ch/dam/jcr:44166ae9-c59c-4fd8-a8aa-f2b00cd53eff/Statistische-Raumeinheiten.pdf`
+- **Reference** `www.geo.bs.ch/statistischeraumeinheiten; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/be8ce164-33ef-4794-822c-774d17c87239`
 
 
 # Load packages
