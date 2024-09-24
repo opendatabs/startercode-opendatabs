@@ -14,11 +14,11 @@ Auto generated R starter code for data set 100242.
 
 - **Dataset_identifier** `100242`
 - **Title** `Strassen und Wege: Durchgangsstrassen`
-- **Description** `Dieser Datensatz ist Teil des kantonalen Geodatenmodells des Kantons Basel-Stadt "Strassen und Wege" und stellt die Durchgangsstrassen dar. <br>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?sort=modified&amp;q=tags=Strassen+und+Wege">https://data.bs.ch/explore/?sort=modified&amp;q=tags=Strassen+und+Wege</a><br>
+- **Description** `Dieser Datensatz ist Teil des kantonalen Geodatenmodells des Kantons Basel-Stadt "Strassen und Wege" und stellt die Durchgangsstrassen dar. <br>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege">https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege</a><br>
 Die Durchgangsstrassen zeigen die Durchgangsstrassen gemäss Durchgangsverordnung unterteilt nach Hauptstrassen, Nationalstrassen (A) und Europastrassen (E).`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-12-23`
-- **Modified** `2024-09-24T05:06:09+00:00`
+- **Modified** `2024-09-24T13:58:52+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

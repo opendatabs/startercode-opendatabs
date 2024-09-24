@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100326.
 - **Themes** `['Bevölkerung']`
 - **Keywords** `['Zeitreihe', 'Geburtsort', 'Geschlecht', 'Herkunft', 'Geburten', 'Neugeboren']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://www.statistik.bs.ch/zahlen/tabellen/1-bevoelkerung/geburten-todesfaelle.html`
+- **Reference** `https://statistik.bs.ch/unterthema/3`
 
 
 # Load packages

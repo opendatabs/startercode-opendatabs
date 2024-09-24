@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100100.
 
 - **Dataset_identifier** `100100`
 - **Title** `Feinstaubmessungen Naturhistorisches Museum Basel`
-- **Description** `<p>Im Rahmen der Sonderausstellung <a href="https://www.nmbs.ch/home/ausstellungen/sonderausstellung-ERDE-AM-LIMIT.html" target="_blank">ERDE AM LIMIT</a> (20.11.2020 bis 3.7.2022) wurden mit Hilfe eines Mikrosensors Feinstaub (PM2.5) vom Dach des <a href="https://www.nmbs.ch/" target="_blank">Naturhistorischen Museums Basel</a> gemessen. Hier werden die unvalidierten Daten von Feinstaub PM2.5 zur Verfügung gestellt.</p>`
+- **Description** `<p>Im Rahmen der Sonderausstellung ERDE AM LIMIT (20.11.2020 bis 3.7.2022) wurden mit Hilfe eines Mikrosensors Feinstaub (PM2.5) vom Dach des <a href="https://www.nmbs.ch/" target="_blank">Naturhistorischen Museums Basel</a> gemessen. Hier werden die unvalidierten Daten von Feinstaub PM2.5 zur Verfügung gestellt.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-11-20`
 - **Modified** `2024-09-23T22:30:05+00:00`

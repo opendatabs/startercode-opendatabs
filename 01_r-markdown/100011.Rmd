@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100011.
 
 - **Dataset_identifier** `100011`
 - **Title** `Kennzahlen zu den Basler Wohnvierteln und Landgemeinden`
-- **Description** `Ausgewählte statistische Kennzahlen der 19 Wohnviertel der Stadt Basel sowie der zwei Gemeinden Riehen und Bettingen seit 2015. Aufgrund einer veränderten Datenlage können die Indikatoren 3 (Religionszugehörigkeit) und 18 (Arbeitslosenquote) ab der Ausgabe 2020 nicht mehr dargestellt werden. Die Berechnungsmethode für die Sozialhilfequote wurde 2022 für die Jahre ab 2017 rückwirkend angepasst. Zur Definition: <a href="https://www.statistik.bs.ch/dam/jcr:2cb04e13-b746-4455-8735-029f0439dc73/Quartierradar.pdf" target="_blank">https://www.statistik.bs.ch/dam/jcr:2cb04e13-b746-4455-8735-029f0439dc73/Quartierradar.pdf</a>.`
+- **Description** `Ausgewählte statistische Kennzahlen der 19 Wohnviertel der Stadt Basel sowie der zwei Gemeinden Riehen und Bettingen seit 2015. Aufgrund einer veränderten Datenlage können die Indikatoren 3 (Religionszugehörigkeit) und 18 (Arbeitslosenquote) ab der Ausgabe 2020 nicht mehr dargestellt werden. Die Berechnungsmethode für die Sozialhilfequote wurde 2022 für die Jahre ab 2017 rückwirkend angepasst. Zur Definition: <a href="https://statistik.bs.ch/files/faltblatt/Erlaeuterungen-Quartierradar.pdf" target="_blank">https://statistik.bs.ch/files/faltblatt/Erlaeuterungen-Quartierradar.pdf</a>.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
 - **Modified** `2023-05-25T07:30:57+00:00`
@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100011.
 - **Themes** `['Arbeit, Erwerb', 'Bau- und Wohnungswesen', 'Bevölkerung', 'Raum und Umwelt', 'Finanzen', 'Industrie, Dienstleistungen', 'Soziale Sicherheit', 'Volkswirtschaft']`
 - **Keywords** `['Wohnen', 'Bevölkerungsbestand', 'Grünraum', 'Erwerbstätige', 'Arbeitslosigkeit', 'Bevölkerungsstruktur']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://www.statistik.bs.ch/haeufig-gefragt/wohnviertel.html`
+- **Reference** `https://statistik.bs.ch/unterthema/16`
 
 
 # Load packages

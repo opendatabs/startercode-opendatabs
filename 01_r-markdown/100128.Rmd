@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100128.
 - **Themes** `['Bevölkerung']`
 - **Keywords** `['Alter', 'Bevölkerungsbestand', 'Geschlecht', 'Entwicklung', 'Einwohnerzahl', 'Bevölkerungsstruktur', 'Wohnviertel', 'Staatsangehörigkeit']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://www.statistik.bs.ch/zahlen/tabellen/1-bevoelkerung/bestand-struktur.html`
+- **Reference** `https://statistik.bs.ch/unterthema/1`
 
 
 # Load packages

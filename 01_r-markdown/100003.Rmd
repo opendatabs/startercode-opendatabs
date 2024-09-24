@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100003.
 - **Themes** `['Preise']`
 - **Keywords** `['Preise', 'Teuerung', 'Index', 'Warenkorb', 'Konsum']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://www.statistik.bs.ch/zahlen/tabellen/5-preise.html`
+- **Reference** `https://statistik.bs.ch/unterthema/9#Preise`
 
 
 # Load packages

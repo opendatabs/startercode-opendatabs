@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100232.
 - **Themes** `['Bau- und Wohnungswesen']`
 - **Keywords** `['Adresse', 'Wohnung', 'Gebäude', 'Wohnen', 'Wohnungsnummer', 'AWN', 'EWID']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://www.statistik.bs.ch/`
+- **Reference** `https://statistik.bs.ch/`
 
 
 # Load packages

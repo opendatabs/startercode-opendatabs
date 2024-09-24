@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100031.
 - **Description** `Öffentliche sanitäre Anlagen der Gemeinden Basel, Riehen und Bettingen: WC Anlage, WC Anlage rollstuhlgängig, nur Pissoir, Dusche, Anlage geschlossen (in Sanierung oder geschlossen).`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-09-24T05:05:45+00:00`
+- **Modified** `2024-09-24T13:58:37+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Geographie']`
 - **Keywords** `['WC', 'Toilette', 'Abort']`
 - **Publisher** `Tiefbauamt`
-- **Reference** `www.geo.bs.ch/sanitaere-anlagen; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/989710cd-8297-482b-9e5b-885d19f480d4; https://www.tiefbauamt.bs.ch/oeffentlicher-raum/oeffentliche-Toiletten.html`
+- **Reference** `www.geo.bs.ch/sanitaere-anlagen; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/989710cd-8297-482b-9e5b-885d19f480d4; https://www.bs.ch/bvd/tiefbauamt/oeffentliche-toiletten`
 
 
 # Load packages

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100382.
 - **Dataset_identifier** `100382`
 - **Title** `Solarkataster: Solarpotenzial`
 - **Description** `Über den Solarkataster kann abgeschätzt werden, wie gut sich die Dach- und Fassadenflächen im Kantonsgebiet für die solare Nutzung eignen. Die ausgewiesenen Potenziale beruhen auf Modellrechnungen und stellen keine exakten Messwerte dar.
-<br> Sämtliche Datensätze zu dem Produkt "Solarkataster": <a href="https://data.bs.ch/explore/?q=tags=solarkataster" target="_blank">https://data.bs.ch/explore/?q=tags=solarkataster</a> 
+<br> Sämtliche Datensätze zu dem Produkt "Solarkataster": <a href="https://data.bs.ch/explore/?refine.tags=solarkataster" target="_blank">https://data.bs.ch/explore/?refine.tags=solarkataster</a> 
 <br><strong>Zusätzliche Informationen</strong>
 <br>Die ausgewiesenen Potenziale beruhen auf Strahlungsmodellierungen der Firma Laserdata GmbH aus Innsbruck und stellen keine exakten Messwerte dar. Sie können lediglich eine grobe Abschätzung zur Eignung einer Dachfläche für eine solare Nutzung ermöglichen.
 Die Berechnung der solaren Globalstrahlung basiert auf dem 0.5m-Oberflächenmodell der Laserscan-Befliegung vom Frühjahr 2021 sowie der Fassaden des 3D Stadtmodells des Kantons Basel-Stadt. Die Gebäudeumrisse stammen aus der Ebene Bodenbedeckung der Amtlichen Vermessung vom 20.07.2021 und die Dachkanten vom 3D-Stadmodell Stand: 26.05.2021.
@@ -36,7 +36,7 @@ Die Berechnung der solaren Globalstrahlung basiert auf dem 0.5m-Oberflächenmode
 - Zonalstatistik der Rasterinformationen des Solarpotenzials sowie der Fassadeneinstrahlung als Attributdaten zu einem Vektorlayer der Gebäudeumrisse des Auftraggebers des Kantons Basel-Stadt`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-08-15`
-- **Modified** `2024-09-24T05:08:42+00:00`
+- **Modified** `2024-09-24T14:01:12+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

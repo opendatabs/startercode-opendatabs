@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100134.
 
 - **Dataset_identifier** `100134`
 - **Title** `Coronavirus (Covid-19): Teststellen`
-- **Description** `<p>Eine Übersicht der Standorte, an welchen sich die Bevölkerung während der Corona-Pandemie auf SARS-CoV-2 testen lassen konnte. Für Kinder werden von gewissen Teststellen zusätzlich zum Abstrich im Rachenbereich alternative Testmethoden angeboten. </p><p><b>Der Datensatz wurde vom Gesundheitsdepartement aktuell gehalten. Dieser wird seit 8. März 2023 nicht mehr aktualisiert. Man kann sich weiterhin bei einzelnen Arztpraxen und Institutionen testen lassen.</b></p><p>Weitere Informationen zum Testen in Basel-Stadt sind hier zu finden: <a href="https://www.coronavirus.bs.ch/testen.html" target="_blank">https://www.coronavirus.bs.ch/testen.html</a></p>`
+- **Description** `<p>Eine Übersicht der Standorte, an welchen sich die Bevölkerung während der Corona-Pandemie auf SARS-CoV-2 testen lassen konnte. Für Kinder werden von gewissen Teststellen zusätzlich zum Abstrich im Rachenbereich alternative Testmethoden angeboten. </p><p><b>Der Datensatz wurde vom Gesundheitsdepartement aktuell gehalten. Dieser wird seit 8. März 2023 nicht mehr aktualisiert. Man kann sich weiterhin bei einzelnen Arztpraxen und Institutionen testen lassen.</b></p><p>Weitere Informationen zum Coronavirus in Basel-Stadt sind hier zu finden: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2021-06-06`
 - **Modified** `2024-09-09T13:17:25+00:00`
