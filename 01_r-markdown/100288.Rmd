@@ -19,7 +19,7 @@ Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für di
 </p><p></p><p></p><p></p><p class="">Der Datensatz wird monatlich mit den Daten des Vormonats aktualisiert.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-07-15`
-- **Modified** `2024-09-20T07:02:32+00:00`
+- **Modified** `2024-09-25T08:48:19+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-02-07T12:39:00+00:00`
 - **Temporal_coverage_end_date** `None`
