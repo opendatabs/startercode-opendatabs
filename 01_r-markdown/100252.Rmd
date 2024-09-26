@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-09-25"
+date: "2024-09-26"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100252.
 - **Description** `Dieser Datensatz beinhaltet die signalisierten Tempo 30-Zonen und -Strecken.<br>Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.<br>Weitere Daten zu "Verkehrsberuhigte Zonen": <a href="https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen">https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen</a>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-12-30`
-- **Modified** `2024-09-25T05:06:47+00:00`
+- **Modified** `2024-09-26T05:06:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
