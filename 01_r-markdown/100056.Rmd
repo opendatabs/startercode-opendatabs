@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-09-28"
+date: "2024-09-29"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100056.
 - **Description** `Die Daten zur Schulwegsicherheit zeigen auf, wo Strassenübergänge für Kinder im Kindergarten- und Schulalter übersichtlich und einfach sind, bzw. wo erhöhte Anforderungen an das Überqueren der Strasse gestellt werden. Der Datensatz enthält die Achsen der Fusswege, das heisst Trottoirs und wo nötig Strassen. Es werden alle für Fussgänger begehbaren Wege, Strassen oder Parkwege innerhalb und an der Peripherie von Wohngebieten aufgenommen, sofern sie relevant für Schulwege sind. In Parkanlagen wurden ausgewählte Wege erfasst. Oberste Priorität hat eine topologisch korrekte Aufnahme dieser Achsen. Die Daten wurden in Basel, Bettingen und Riehen erhoben.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-12-02`
-- **Modified** `2024-09-28T05:04:07+00:00`
+- **Modified** `2024-09-29T05:03:58+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
