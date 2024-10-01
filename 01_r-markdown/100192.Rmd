@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-09-30"
+date: "2024-10-01"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100192.
 - **Description** `Dieser Datensatz zeigt die Vornamen der Neugeborenen im Kanton Basel-Stadt seit 2006. Als im Kanton Basel-Stadt Neugeborene gelten Kinder, welche ihren Wohnsitz ab Geburt im Kanton Basel-Stadt haben. Die Daten werden jährlich aktualisiert.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-05-03`
-- **Modified** `2024-08-01T01:16:29+00:00`
+- **Modified** `2024-10-01T01:16:30+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

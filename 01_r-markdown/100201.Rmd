@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-09-30"
+date: "2024-10-01"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100201.
 - **Description** `Der Datensatz beinhaltet alle Liegenschaften des Kantons. Es wird zwischen Liegenschaft und Allmendparzelle unterschieden.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-10-03`
-- **Modified** `2024-09-30T05:06:23+00:00`
+- **Modified** `2024-10-01T05:06:25+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
