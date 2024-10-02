@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100307.
 - **Description** `<p>Dieser Datensatz zeigt die Ratsmitglieder des Grossen Rates des Kantons Basel-Stadt.</p><p>Pro Datenpunkt wird eine Mitgliedschaft im Grossen Rat gezeigt. Dies kann also zu mehreren Einträgen der gleichen Person führen, falls diese Person nach einem Unterbruch wieder in den Grossen Rat gewählt wurde.</p><p>Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br/><a href="https://grosserrat.bs.ch/mitglieder" target="_blank">https://grosserrat.bs.ch/mitglieder</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-09-28`
-- **Modified** `2024-10-01T08:04:04+00:00`
+- **Modified** `2024-10-02T08:02:44+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
