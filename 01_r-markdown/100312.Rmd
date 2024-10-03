@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100312.
 - **Themes** `['Politik', 'Verwaltung']`
 - **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Parlamentarische Vorstösse']`
 - **Publisher** `Parlamentsdienst des Grossen Rats`
-- **Reference** `https://grosserrat.bs.ch/`
+- **Reference** `https://grosserrat.bs.ch`
 
 
 # Load packages

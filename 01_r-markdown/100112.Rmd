@@ -38,7 +38,7 @@ Manipulationen an Geräten können zu fehlerhaften Messungen führen.<o:p></o:p>
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Messung', 'Messwert', 'Standort', 'Mess-Stelle', 'Messstelle', 'Geschwindigkeit', 'Verkehr', 'Auto', 'PKW', 'PW', 'LKW', 'LW', 'Radar']`
 - **Publisher** `Kantonspolizei`
-- **Reference** `https://www.polizei.bs.ch/`
+- **Reference** `https://www.bs.ch/jsd/polizei`
 
 
 # Load packages

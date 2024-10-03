@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100187.
 - **Themes** `['Gesundheit']`
 - **Keywords** `['COVID-19', 'Coronavirus', 'Corona', 'Abwasser', 'Kanalisation', 'Krankheit', 'Kläranlage']`
 - **Publisher** `Kantonales Laboratorium`
-- **Reference** `https://www.kantonslabor.bs.ch/`
+- **Reference** `https://www.bs.ch/gd/kantonslabor`
 
 
 # Load packages

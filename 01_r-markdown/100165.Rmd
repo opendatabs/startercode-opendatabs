@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100165.
 - **Description** `Zentrale Grössen der Steuerstatistik Basel-Stadt seit 1991 nach Gemeinde und Wohnviertel. Die Daten stammen aus den Steuerdaten der ordentlichen Veranlagung von ganzjährig in Basel-Stadt steuerpflichtigen Personen (ohne Auswärtige). Die Vermögenssteuer 2000 wurde zusammen mit der Einkommenssteuer 1999 bezogen. In der Steuerperiode 2000 sind nur Fälle mit Beginn der Steuerpflicht im Jahr 2000 aufgeführt, da die Vermögenssteuer 2001 wegen der Steuerharmonisierung erst zusammen mit der Einkommenssteuer 2001 bezogen worden ist.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-08-17`
-- **Modified** `2023-10-31T10:40:37+00:00`
+- **Modified** `2024-10-03T13:23:26+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1990-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`

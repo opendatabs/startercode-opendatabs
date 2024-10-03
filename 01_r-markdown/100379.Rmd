@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100379.
 - **Themes** `['Politik']`
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Strafgericht', 'Gericht', 'Demokratie']`
 - **Publisher** `Staatskanzlei`
-- **Reference** `https://www.staatskanzlei.bs.ch/politische-rechte/wahlen-abstimmungen/`
+- **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen`
 
 
 # Load packages

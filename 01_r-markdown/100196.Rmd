@@ -33,7 +33,7 @@ Auto generated R starter code for data set 100196.
 - **Themes** `['Mobilität und Verkehr', 'Energie', 'Industrie, Dienstleistungen']`
 - **Keywords** `['Elektroautos', 'Elektromobilität', 'Ladestationen', 'IWB', 'Tankstellen', 'Elektroladestation', 'Echtzeit', 'Realtime']`
 - **Publisher** `Industrielle Werke Basel`
-- **Reference** `https://www.iwb.ch/Fuer-Zuhause/E-Mobilitaet/Oeffentliches-Ladenetz.html`
+- **Reference** `https://www.iwb.ch/servicecenter/oeffentliches-ladenetz/karte-ladenetz`
 
 
 # Load packages

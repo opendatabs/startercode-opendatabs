@@ -32,7 +32,7 @@ wurden keine Abwasserproben auf Influenza und RSV untersucht.</span><br></p><p><
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Abwasser', 'Influenza', 'RSV', 'Kanalisation', 'Krankheit', 'Kläranlage', 'Grippe']`
 - **Publisher** `Kantonales Laboratorium`
-- **Reference** `https://www.kantonslabor.bs.ch/`
+- **Reference** `https://www.bs.ch/gd/kantonslabor`
 
 
 # Load packages

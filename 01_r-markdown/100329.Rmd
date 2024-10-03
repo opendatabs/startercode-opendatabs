@@ -28,7 +28,7 @@ Auto generated R starter code for data set 100329.
 - **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
 - **Keywords** `['Parkieren', 'Parkzone', 'Parkierung', 'Parkplatz', 'Parken', 'Auto', 'Velo', 'Fahrrad', 'Motorrad']`
 - **Publisher** `Amt für Mobilität`
-- **Reference** `https://www.mobilitaet.bs.ch/gesamtverkehr/verkehrskennzahlen/parkplatzkataster.html`
+- **Reference** `https://www.bs.ch/bvd/mobilitaet/grundlagen-und-strategien/parkplatzkataster-stadt-basel#parkplatzkataster`
 
 
 # Load packages

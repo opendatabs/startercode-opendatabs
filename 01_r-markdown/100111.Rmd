@@ -27,7 +27,7 @@ Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial 
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Corona', 'impfen', 'Prophylaxe', 'Vakzin', 'COVID-19', 'Coronavirus', 'Krankheit', 'Lungenentzündung']`
 - **Publisher** `Medizinische Dienste`
-- **Reference** `https://www.coronaimpfzentrumbasel.ch/`
+- **Reference** `https://www.bs.ch/gd/md`
 
 
 # Load packages

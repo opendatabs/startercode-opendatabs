@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100282.
 - **Themes** `['Politik', 'Bevölkerung']`
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Parlament', 'Ständerat', 'Kleine Kammer', 'Bundeshaus']`
 - **Publisher** `Staatskanzlei`
-- **Reference** `https://www.staatskanzlei.bs.ch/politische-rechte/wahlen-abstimmungen/wahlen-2023.html`
+- **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen/wahl-und-abstimmungsresultate-archiv/national-und-staenderatswahlen-2023`
 
 
 # Load packages

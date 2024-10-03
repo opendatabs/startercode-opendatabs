@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100369.
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmung vom 9. Juni 2024 für den Kanton Basel-Stadt auf Ebene Wahllokal.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">Kantonsblatt</a> (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">https://www.kantonsblatt.ch/#!/search/publications</a>) des Kantons Basel-Stadt publiziert werden.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-06-08`
-- **Modified** `2024-06-09T15:58:14+00:00`
+- **Modified** `2024-10-03T14:11:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik']`
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
 - **Publisher** `Staatskanzlei`
-- **Reference** `http://abstimmungen.bs.ch`
+- **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen`
 
 
 # Load packages

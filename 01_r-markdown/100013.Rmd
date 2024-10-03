@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100013.
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Verkehr', 'Verkehrszählung', 'Erhebung', 'Fussgänger', 'Fussverkehr', 'Velo', 'Fahrrad']`
 - **Publisher** `Amt für Mobilität`
-- **Reference** `https://www.mobilitaet.bs.ch/gesamtverkehr/verkehrskennzahlen/verkehrszaehlung.html`
+- **Reference** `https://www.bs.ch/bvd/mobilitaet/grundlagen-und-strategien/parkplatzkataster-stadt-basel#verkehrszaehlungen`
 
 
 # Load packages

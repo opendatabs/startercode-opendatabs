@@ -27,7 +27,7 @@ Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr un
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Verkehrszählung', 'Verkehr', 'Statistik', 'Durchschnitt', 'Tagesverkehr', 'Belästigung', 'Auslastung', 'DTV']`
 - **Publisher** `Amt für Mobilität`
-- **Reference** `https://data.bs.ch/explore/?sort=modified&q=%22geschwindigkeitsmonitoring+Einzelmessungen%22`
+- **Reference** `https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring+Einzelmessungen`
 
 
 # Load packages

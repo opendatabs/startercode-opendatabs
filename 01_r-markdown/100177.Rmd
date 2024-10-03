@@ -18,14 +18,14 @@ Auto generated R starter code for data set 100177.
 Das Staatsarchiv des Kantons Basel-Stadt fungiert als Gedächtnis von Staat und Stadt. Die reichhaltigen Bestände widerspiegeln die Geschichte Basels seit dem Mittelalter. Seit 1999 wird das Archivgut in einem Archivinformationssystem (scopeArchiv) erschlossen, zur Suche und Benutzung steht ein Digitaler Lesesaal (DLS) zur Verfügung (<a href="https://dls.staatsarchiv.bs.ch" target="_blank">https://dls.staatsarchiv.bs.ch</a>). </p><p>Das hier publizierte Datenset (<a href="https://ld.bs.ch/set/archival-catalog" target="_blank">https://ld.bs.ch/set/archival-catalog</a>) umfasst sämtliche öffentlich zugänglichen Informationen aus dem Archivsystem, transformiert in ein RDF-Datenmodell auf der Basis der archivspezifischen Ontologie Records in Context (RiC-O) (<a href="https://www.ica.org/standards/RiC/ontology" target="_blank">https://www.ica.org/standards/RiC/ontology</a>).  </p><p><span style="font-family: inherit; font-size: 0.875rem;">SPARQL-Endpoint zur Datenabfrage: </span><a href="https://ld.bs.ch/sparql" style="font-size: 0.875rem; background-color: rgb(255, 255, 255);" target="_blank">https://ld.bs.ch/sparql</a><span style="font-family: inherit; font-size: 0.875rem;">  </span><span style="font-family: inherit; font-size: 0.875rem;">  </span><br/></p><p>Dokumentation des Datenmodells: <a ;"="" href="https://github.com/Staatsarchiv-Basel-Stadt/StABS-scope2RDF/wiki" target="_blank">https://github.com/Staatsarchiv-Basel-Stadt/StABS-scope2RDF/wiki</a>  </p><p>Das Datenset wird permanent weiterentwickelt. Sowohl das Mapping nach RiC-O wie auch die Inhalte können ändern, Rückwärtskompatabilität kann nicht garantiert werden. Falls eine stabile Einbindung in Services geplant wird, bitten wir um Kontaktaufnahme.</p><p>Das Mapping zur Transformation der Daten nach RDF erfolgt primär durch die Mappingsprache RML (<a href="https://rml.io/specs/rml/" target="_blank">https://rml.io/specs/rml/</a>). Die Transformation erfolgt in einer ETL-Pipeline mit entsprechend integrierten Mappings (<a href="https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline" target="_blank">https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline</a>) der Firma zazuko (<a href="https://zazuko.com/" target="_blank">https://zazuko.com/</a>), deren Quellcode öffentlich ist. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-05-03`
-- **Modified** `2023-11-08T13:21:33+00:00`
+- **Modified** `2024-10-03T14:45:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `1097-12-31T23:25:52+00:00`
 - **Temporal_coverage_end_date** `2023-10-04T22:00:00+00:00`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Bildung, Wissenschaft', 'Verwaltung']`
 - **Keywords** `['Archiv', 'Archivkatalog', 'Geschichte Basels', 'LOD', 'LD', 'Linked Data', 'Linked Open Data', 'Linked', 'SPARQL']`
 - **Publisher** `Staatsarchiv Basel-Stadt`
-- **Reference** `https://ld.bs.ch/set/archival-catalog https://www.staatsarchiv.bs.ch/`
+- **Reference** `https://www.bs.ch/pd/kultur/museen-und-andere-dienststellen/staatsarchiv`
 
 
 # Load packages

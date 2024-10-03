@@ -33,7 +33,7 @@ Online-Archivkatalog, Verpacken, Etikettieren und Magazinieren.</p>`
 - **Themes** `['Verwaltung', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Archiv', 'Akten', 'Erschliessung', 'Unterlagen', 'Archivgesetz', 'Dokumente', 'Informationen', 'Geschichte', 'Sammlung', 'Privatarchiv', 'Hauptarchiv']`
 - **Publisher** `Staatsarchiv Basel-Stadt`
-- **Reference** `https://www.staatsarchiv.bs.ch`
+- **Reference** `https://www.bs.ch/pd/kultur/museen-und-andere-dienststellen/staatsarchiv`
 
 
 # Load packages

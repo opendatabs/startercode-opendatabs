@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100051.
 - **Description** `<p>Stündliche Messungen der <a href="https://www.meteoschweiz.admin.ch/home/messwerte.html?param=messnetz-automatisch&amp;station=BAS" target="_blank">automatischen Wetterstation Basel-Binningen</a>. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-10-03T06:22:18+00:00`
+- **Modified** `2024-10-03T18:21:58+00:00`
 - **Rights** `None`
 - **Temporal_coverage_start_date** `2018-05-31T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt', 'Gesundheit', 'Tourismus']`
 - **Keywords** `['Luft', 'Ozon', 'Stickstoffdioxid', 'Stickoxid', 'NO2', 'NOX', 'Feinstaub', 'Kohlenmonoxid', 'CO', 'Partikelzahlkonzentraion', 'Russ', 'Temperatur', 'Niederschlag', 'Globalstrahlung']`
 - **Publisher** `MeteoSchweiz`
-- **Reference** `https://www.meteoschweiz.admin.ch/home/messwerte.html?param=messnetz-automatisch&station=BAS; https://www.bafu.admin.ch/bafu/de/home/themen/luft/zustand/daten/datenabfrage-nabel.html`
+- **Reference** `https://www.meteoschweiz.admin.ch/service-und-publikationen/applikationen/messwerte-und-messnetze.html#param=messnetz-automatisch&table=false&station=BAS`
 
 
 # Load packages

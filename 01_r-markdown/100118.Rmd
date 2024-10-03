@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100118.
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmungen vom 7. März 2021 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2021-03-07`
-- **Modified** `2024-05-23T15:31:27+00:00`
+- **Modified** `2024-10-03T14:57:39+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik']`
 - **Keywords** `['Abstimmung', 'Wahlen', 'Demokratie', 'Teilhabe']`
 - **Publisher** `Staatskanzlei`
-- **Reference** `http://abstimmungen.bs.ch`
+- **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen`
 
 
 # Load packages

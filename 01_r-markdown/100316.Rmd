@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100316.
 - **Themes** `['Politik', 'Gesetzgebung', 'Verwaltung']`
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
 - **Publisher** `Staatskanzlei`
-- **Reference** `https://abstimmungen.bs.ch`
+- **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen`
 
 
 # Load packages
