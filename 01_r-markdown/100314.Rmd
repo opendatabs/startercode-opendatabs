@@ -14,10 +14,10 @@ Auto generated R starter code for data set 100314.
 
 - **Dataset_identifier** `100314`
 - **Title** `Grosser Rat: Vorgänge von Geschäften`
-- **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt Vorgänge und Sitzungen von Geschäften (beziehungsweise Beschlüsse zu Geschäften), die im Grossen Rat des Kantons Basel-Stadt behandelt werden.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br/><a href="https://grosserrat.bs.ch/" target="_blank">https://grosserrat.bs.ch</a></p>`
+- **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt Vorgänge und Sitzungen von Geschäften (beziehungsweise Beschlüsse zu Geschäften), die im Grossen Rat des Kantons Basel-Stadt behandelt werden.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-09-28`
-- **Modified** `2024-10-03T08:05:39+00:00`
+- **Modified** `2024-10-04T08:04:58+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

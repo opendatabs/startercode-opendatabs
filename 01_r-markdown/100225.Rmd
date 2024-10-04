@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100225.
 
 - **Dataset_identifier** `100225`
 - **Title** `Schutzsuchende im Kanton Basel-Stadt nach Geschlecht, Altersklasse, Staatsangehörigkeit, Zuzugs- und Wegzugsmonat`
-- **Description** `Dieser Datensatz zeigt die Schutzsuchenden im Kanton Basel-Stadt nach Geschlecht, Altersgruppe, Staatsangehörigkeit, Zuzugs- und Wegzugsmonat. Er wird monatlich aktualisiert.`
+- **Description** `Dieser Datensatz zeigt die Schutzsuchenden im Kanton Basel-Stadt nach Geschlecht, Altersgruppe, Staatsangehörigkeit, Zuzugs- und Wegzugsmonat. Er wird seit März 2024 nicht mehr aktualisiert.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-09-15`
 - **Modified** `2024-02-02T16:28:09+00:00`

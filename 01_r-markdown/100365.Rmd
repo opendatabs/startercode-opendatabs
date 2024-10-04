@@ -16,7 +16,7 @@ Auto generated R starter code for data set 100365.
 - **Title** `Staatsarchiv: Neuzugänge im öffentlichen Archivkatalog`
 - **Description** `<p>Dieser Datensatz enthält die jährlich neu im Archivkatalog
 verzeichneten und öffentlich zugänglich gemachten Unterlagen (Akten, Pläne,
-Bilder, etc.). Diese sind damit im <a href="https://dls.staatsarchiv.bs.ch/" target="_blank">Digitalen Lesesaal</a> (https://dls.staatsarchiv.bs.ch/) recherchierbar und
+Bilder, etc.). Diese sind damit im <a href="https://dls.staatsarchiv.bs.ch" target="_blank">Digitalen Lesesaal</a> (https://dls.staatsarchiv.bs.ch) recherchierbar und
 können eingesehen werden. </p><p>Der Datensatz umfasst Informationen zum Inhalt der
 Unterlagen und deren Zeitraum, zur abliefernden Stelle, zum Umfang sowie zur
 Archivsignatur. </p><p>Er bildet die laufende Erschliessungsarbeit des

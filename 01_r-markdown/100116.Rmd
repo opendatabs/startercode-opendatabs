@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100116.
 
 - **Dataset_identifier** `100116`
 - **Title** `Coronavirus (Covid-19): Tests nach Nachweismethode`
-- **Description** `<p>Dieser Datensatz zeigt die Anzahl Tests auf SARS-CoV-2 für jeden Kanton, die gesamte Schweiz und das Fürstentum Liechtenstein sowie die entsprechenden Testresultate (positiv/negativ) auf täglicher Basis. Die Angaben werden täglich durch das Bundesamt für Gesundheit (BAG) zur Verfügung gestellt im <a href="https://www.covid19.admin.ch/" target="_blank">Covid-19 Situationsbericht </a>bzw. über dessen <a href="https://www.covid19.admin.ch/api/data/context" target="_blank">API</a>.</p>`
+- **Description** `<p>Dieser Datensatz zeigt die Anzahl Tests auf SARS-CoV-2 für jeden Kanton, die gesamte Schweiz und das Fürstentum Liechtenstein sowie die entsprechenden Testresultate (positiv/negativ) auf täglicher Basis. Die Angaben werden täglich durch das Bundesamt für Gesundheit (BAG) zur Verfügung gestellt im <a href="https://www.covid19.admin.ch/" target="_blank">Covid-19 Situationsbericht </a>bzw. über dessen <a href="https://stcovidappstorageprodchn.blob.core.windows.net/covid/context" target="_blank">API</a>.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2021-03-11`
 - **Modified** `2023-02-08T08:49:35+00:00`

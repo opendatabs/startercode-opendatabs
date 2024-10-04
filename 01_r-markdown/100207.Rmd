@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100207.
 
 - **Dataset_identifier** `100207`
 - **Title** `Kennzahlen der Abstimmung vom 25. September 2022`
-- **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmungen vom 25. September 2022 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.</p><p><a href="https://data.bs.ch/explore/dataset/100071"></a></p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
+- **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmungen vom 25. September 2022 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.</p><p><a href="https://data.bs.ch/explore/dataset/100071/"></a></p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-09-25`
 - **Modified** `2024-05-23T15:25:41+00:00`

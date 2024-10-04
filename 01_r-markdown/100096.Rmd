@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100096.
 
 - **Dataset_identifier** `100096`
 - **Title** `Abfuhrtermine`
-- **Description** `<p>Abfuhrtermine der Stadtreinigung (Tiefbauamt) der Stadt Basel. Siehe auch <a href="http://www.tiefbauamt.bs.ch/abfuhrplaene" target="_blank">http://www.tiefbauamt.bs.ch/abfuhrplaene</a>. Abfuhranmeldung unter <a href="http://www.tiefbauamt.bs.ch/abfuhranmeldung" target="_blank">http://www.tiefbauamt.bs.ch/abfuhranmeldung</a></p>`
+- **Description** `<p>Abfuhrtermine der Stadtreinigung (Tiefbauamt) der Stadt Basel. Siehe auch <a href="https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfuhrplaene" target="_blank">https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfuhrplaene</a>. Abfuhranmeldung unter <a href="https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfaelle-abholen-lassen" target="_blank">https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfaelle-abholen-lassen</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-08-27`
 - **Modified** `2024-05-14T07:58:43+00:00`
