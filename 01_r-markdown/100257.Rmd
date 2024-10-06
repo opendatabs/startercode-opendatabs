@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-10-05"
+date: "2024-10-06"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100257.
 - **Description** `Zonenplan der Gemeinde Bettingen gemäss Beschluss der Einwohnergemeindeversammlung vom 2. Dezember 2008 und der Genehmigung des Bau- und Verkehrsdepartements vom 1.7.2009. Der Datensatz enthält den Zonenplan und die Bebauungspläne ist ein Teil des Geodatenmodelles des Kantons Basel-Stadt zum Thema ?Nutzungsplanung?.<br>Weitere Daten zum Thema ?Nutzungsplanung?: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-01-06`
-- **Modified** `2024-10-05T05:06:18+00:00`
+- **Modified** `2024-10-06T05:06:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
