@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-10-13"
+date: "2024-10-14"
 output: html_document
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-10-13"
+date: "2024-10-14"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100309.
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die aktiven Interessensbindungen von Grossratsmitgliedern während ihrer Mitgliedschaft im Grossen Rat des Kantons Basel-Stadt.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-09-28`
-- **Modified** `2024-10-08T08:02:54+00:00`
+- **Modified** `2024-10-12T08:02:38+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
