@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-10-14"
+date: "2024-10-15"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100082.
 - **Description** `<p>Der Datensatz zeigt die Standorte der Mess-Stationen für den Datensatz <a href="https://data.bs.ch/explore/dataset/100009/" target="_blank">«Luftklima Smart Regio Basel» (https://data.bs.ch/explore/dataset/100009/)</a> .</p><p><b>Änderungsprotokoll:</b></p><p><b>18.04.2024:</b> Die Koordinaten werden automatisch plausibilisiert. Es werde nur Koordinaten angezeigt, die in einem bestimmten Umkreis von Basel sind. Der Code dazu ist hier verfügbar: <a href="https://github.com/opendatabs/data-processing/blob/master/meteoblue_wolf/etl.py" target="_blank">https://github.com/opendatabs/data-processing/blob/master/meteoblue_wolf/etl.py</a> </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-05-12`
-- **Modified** `2024-10-14T18:11:00+00:00`
+- **Modified** `2024-10-15T06:14:05+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
