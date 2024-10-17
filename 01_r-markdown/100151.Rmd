@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-10-16"
+date: "2024-10-17"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100151.
 - **Description** `Der Datensatz bildet vom Kanton Basel-Stadt betriebenen Sport- und Bewegungsanlagen ab sowie auch alle kantonalen Sportanlagen ausserhalb der Kantons- und Landesgrenzen. Im Datensatz sind zusätzlich kantonale Räumlichkeiten aufgeführt, welche für den Sportbetrieb genutzt und gemietet werden.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2021-07-23`
-- **Modified** `2024-10-16T05:05:03+00:00`
+- **Modified** `2024-10-17T05:28:14+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
