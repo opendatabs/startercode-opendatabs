@@ -18,10 +18,10 @@ Auto generated R starter code for data set 100329.
 
 <p>Die unterschiedlichen Bewirtschaftungsarten der Parkplätze haben zum Ziel, dass nebst der Anwohnerschaft auch Besucher, der Detailhandel sowie das Gewerbe von den Parkplätzen profitieren können und der Parksuchverkehr reduziert werden kann. Bei den gebührenpflichtigen Parkplätzen sind die Parkgebühren gebietsabhängig.</p>
 
-<p>Die vorliegenden Daten zeigen den aktuellen Stand der erfassten Parkplätze. Die nicht markierten Parkflächen auf dem Bruderholz sind nicht enthalten. Grob geschätzt sind dies etwa 1'400 Parkplätze in der Blauen Zone. Wegen Baustellen, Veranstaltungen oder aus anderen Gründe kann es sein, dass Parkplätze vorübergehend nicht zur Verfügung stehen. Auch ist es möglich, dass gewisse Parkplätze im Rahmen von Umbauprojekten bereits aufgehoben wurden, das Projekt aber noch nicht abgeschlossen und somit auch der Datensatz noch nicht nachgeführt ist.</p>`
+<p>Wegen Baustellen, Veranstaltungen oder aus anderen Gründe kann es sein, dass Parkplätze vorübergehend nicht zur Verfügung stehen. Auch ist es möglich, dass gewisse Parkplätze im Rahmen von Umbauprojekten bereits aufgehoben wurden, das Projekt aber noch nicht abgeschlossen und somit auch der Datensatz noch nicht nachgeführt ist.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-07-10`
-- **Modified** `2024-07-07T00:02:16+00:00`
+- **Modified** `2024-10-17T09:55:50+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
