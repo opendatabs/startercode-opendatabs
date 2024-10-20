@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-10-19"
+date: "2024-10-20"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100100.
 - **Description** `<p>Im Rahmen der Sonderausstellung ERDE AM LIMIT (20.11.2020 bis 3.7.2022) wurden mit Hilfe eines Mikrosensors Feinstaub (PM2.5) vom Dach des <a href="https://www.nmbs.ch/" target="_blank">Naturhistorischen Museums Basel</a> gemessen. Hier werden die unvalidierten Daten von Feinstaub PM2.5 zur Verfügung gestellt.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-11-20`
-- **Modified** `2024-10-18T22:30:05+00:00`
+- **Modified** `2024-10-19T22:30:04+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-10-02T13:30:00+00:00`
 - **Temporal_coverage_end_date** `2022-06-06T10:30:00+00:00`
