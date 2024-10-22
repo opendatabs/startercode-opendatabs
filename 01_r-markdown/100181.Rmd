@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-10-21"
+date: "2024-10-22"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100181.
 - **Description** `<p>Der Datensatz enthält die absoluten extremalen Messwerte (kleinster Wert „10YMin“ bzw. grösster Wert „10YMax“) und den Mittelwert aller Messwerte („Mean“) der Grundwassertemperaturen in °C des kantonalen Grundwassermessnetzes und in der angegebenen Periode (startStatist bis endStatist, d.h. i. d. R. 10 Jahre).</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-07-11`
-- **Modified** `2024-10-21T05:25:50+00:00`
+- **Modified** `2024-10-22T05:25:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1982-12-31T23:04:00+00:00`
 - **Temporal_coverage_end_date** `None`
