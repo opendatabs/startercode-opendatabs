@@ -4,7 +4,7 @@ date: "2024-10-25"
 output: html_document
 ---
 
-## Dataset: Wahl der 100 Mitglieder des Grossen Rates vom 25.10.2020
+## Dataset: Resultate der Grossratswahlen 25. Oktober 2020
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100101)
 
@@ -13,11 +13,11 @@ Auto generated R starter code for data set 100101.
 ## Metadata
 
 - **Dataset_identifier** `100101`
-- **Title** `Wahl der 100 Mitglieder des Grossen Rates vom 25.10.2020`
+- **Title** `Resultate der Grossratswahlen 25. Oktober 2020`
 - **Description** `<p>Dieser Datensatz zeigt die Einzeldaten der Grossratswahl vom 25. Oktober 2020.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-10-25`
-- **Modified** `2020-10-26T13:39:19+00:00`
+- **Modified** `2024-10-25T13:10:36+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

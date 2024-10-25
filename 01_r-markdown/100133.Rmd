@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100133.
 - **Description** `<p>Der Datensatz zeigt die Resultate des 1. Wahlgangs der Wahl zu sieben Präsidentinnen oder Präsidenten des Strafgerichts Basel-Stadt vom 9. Mai 2021. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2021-05-10`
-- **Modified** `2021-05-10T08:55:58+00:00`
+- **Modified** `2024-10-25T16:36:56+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

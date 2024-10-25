@@ -21,8 +21,8 @@ Auto generated R starter code for data set 100401.
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Politik', 'Bevölkerung']`
-- **Keywords** `['Wahlen', 'Mitbestimmung', 'Regierung', 'Exekutive', 'Teilhabe', 'Demokratie', 'Ersatzwahl', 'Erster Wahlgang']`
+- **Themes** `['Politik', 'Gesetzgebung', 'Bevölkerung']`
+- **Keywords** `['Wahlen', 'Mitbestimmung', 'Regierung', 'Exekutive', 'Teilhabe', 'Demokratie', 'Erster Wahlgang', 'Gesamterneuerungswahl', 'Präsident']`
 - **Publisher** `Staatskanzlei`
 - **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen/wahlen-20-oktober-2024`
 

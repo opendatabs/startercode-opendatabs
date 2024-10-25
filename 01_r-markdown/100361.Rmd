@@ -21,8 +21,8 @@ Auto generated R starter code for data set 100361.
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Politik', 'Bevölkerung']`
-- **Keywords** `['Wahlen', 'Mitbestimmung', 'Regierung', 'Exekutive', 'Teilhabe', 'Demokratie', 'Ersatzwahl', 'Zweiter Wahlgang']`
+- **Themes** `['Politik', 'Gesetzgebung', 'Bevölkerung']`
+- **Keywords** `['Wahlen', 'Mitbestimmung', 'Exekutive', 'Teilhabe', 'Demokratie', 'Ersatzwahl', 'Zweiter Wahlgang']`
 - **Publisher** `Staatskanzlei`
 - **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen/wahl-und-abstimmungsresultate-archiv/ersatzwahlen-2024#3-maerz-2024-erster-wahlgang`
 
