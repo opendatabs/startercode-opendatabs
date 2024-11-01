@@ -16,7 +16,7 @@ Auto generated R starter code for data set 100405.
 - **Title** `Kandidierende der Regierungsratswahl 24. November 2024 (2. Wahlgang)`
 - **Description** `<p style="font-family: sans-serif;">Im zweiten Wahlgang der Regierungsratswahl vom 24. November 2024 kandidieren zwei Personen.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden des zweiten Wahlgangs nach Geschlecht, Jahrgang und Beruf.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2024-11-24`
+- **Issued** `2024-10-31`
 - **Modified** `2024-10-25T15:11:44+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
