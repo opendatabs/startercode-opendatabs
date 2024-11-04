@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-11-03"
+date: "2024-11-04"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100292.
 - **Description** `Die Grundwasserschutzzonen S1-S3 sind das wichtigste Instrument, Fassungs-, Anreicherungsanlagen und das Grundwasser unmittelbar vor seiner Nutzung als Trinkwasser vor Beeinträchtigungen zu schützen.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-04-26`
-- **Modified** `2024-11-03T05:08:19+00:00`
+- **Modified** `2024-11-04T05:07:56+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
