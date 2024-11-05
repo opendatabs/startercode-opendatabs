@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-11-04"
+date: "2024-11-05"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100014.
 - **Description** `<p>Stündlich aktualisierte Belegungsdaten der öffentlichen Parkhäuser der Stadt Basel, bezogen über den<a href="https://www.parkleitsystem-basel.ch/alte_site/rss_feed.php" target="_blank"> RSS Feed</a> des <a href="https://www.parkleitsystem-basel.ch" target="_blank">Parkleitsystems Basel</a>. </p><p>Historische Daten mit kleinerer zeitlicher Auflösung können auch über das API von ParkenDD bezogen werden, wie hier am Beispiel der Parkhäuser der Stadt Zürich beschrieben: <a href="https://opendatazurich.github.io/parkendd-api//" target="_blank">https://opendatazurich.github.io/parkendd-api//</a> (die Parkhäuser von Basel sind über diese URL abrufbar: <a href="https://api.parkendd.de/Basel" target="_blank">https://api.parkendd.de/Basel</a>). </p><p>Die Standorte der Parkhäuser sind in diesem Datensatz ersichtlich: <a href="https://data.bs.ch/explore/dataset/100044/" target="_blank">https://data.bs.ch/explore/dataset/100044/</a></p><p><span style="font-family: inherit; font-size: 0.875rem;">Änderungsprotokoll:<br></span><span style="font-family: inherit; font-size: 0.875rem;">14.08.2023 - Neue Spalte "auslastungen" wurde hinzugefügt.</span></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2024-11-04T18:04:58+00:00`
+- **Modified** `2024-11-05T06:07:57+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-02-07T16:05:00+00:00`
 - **Temporal_coverage_end_date** `None`
