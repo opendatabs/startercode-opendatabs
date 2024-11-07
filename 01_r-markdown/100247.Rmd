@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100247.
 - **Description** `<p>Der Datensatz enthält Informationen zu Anlässen u.ä. in Gewässernähe, welche z.B. in der BachApp publiziert werden. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-05-15`
-- **Modified** `2024-10-28T08:01:07+00:00`
+- **Modified** `2024-11-07T08:15:47+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
