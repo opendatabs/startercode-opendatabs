@@ -4,27 +4,28 @@ date: "2024-11-14"
 output: html_document
 ---
 
-## Dataset: Effektiver und erwarteter täglicher Stromverbrauch
+## Dataset: OGD Dashboards
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100245)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100406)
 
-Auto generated R starter code for data set 100245.
+Auto generated R starter code for data set 100406.
 
 ## Metadata
 
-- **Dataset_identifier** `100245`
-- **Title** `Effektiver und erwarteter täglicher Stromverbrauch`
-- **Description** `Dieser Datensatz beinhaltet den täglichen Stromverbrauch sowie den mittels eines Modells berechneten, anhand des Kalendertages und der Witterung zu erwartenden Stromverbrauch.<br>Der Stromverbrauch ist die Summe der elektrischen Energie, die im Kanton Basel-Stadt täglich aus dem Netz bezogen wird, inklusive Netzverluste. Der tägliche Stromverbrauch ergibt sich als Summe des viertelstündlich ausgewiesenen Stromverbrauchs im OGD-Datensatz "Kantonaler Stromverbrauch" (<a href="https://data.bs.ch/explore/dataset/100233/">https://data.bs.ch/explore/dataset/100233/</a>).<br><br>Der Code des Modells kann selber ausgeführt und weiterentwickelt werden. Hierfür wird Renku verwendet. Renku ist eine Plattform, die verschiedene Werkzeuge für reproduzierbare und kollaborative Datenanalyseprojekte bündelt:<a href="https://renkulab.io/projects/statabs/reproducible-research/erwarteter-stromverbrauch-basel-stadt">https://renkulab.io/projects/statabs/reproducible-research/erwarteter-stromverbrauch-basel-stadt</a>`
+- **Dataset_identifier** `100406`
+- **Title** `OGD Dashboards`
+- **Description** `<p>Dieser Datensatz umfasst eine detaillierte Beschreibung der von der Fachstelle für Open Government Data (OGD) des Kantons Basel-Stadt entwickelten Dashboards. Die Dashboards dienen als visuelle Hilfsmittel zur Darstellung von Kennzahlen und Daten zu verschiedenen gesellschaftlichen Themen im Kanton Basel-Stadt.
+Die Fachstelle für Open Government Data im Kanton Basel-Stadt erstellt und pflegt diese Dashboards, um öffentlich relevante Daten benutzerfreundlich und transparent zu präsentieren.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2023-02-16`
-- **Modified** `2024-11-14T18:15:39+00:00`
+- **Issued** `2024-11-14`
+- **Modified** `2024-11-13T15:26:45+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Energie']`
-- **Keywords** `['Strom', 'Stadtlast', 'Netzlast', 'Elektrizität', 'Elektro', 'Watt', 'Kilowattstunden', 'Stromverbrauch']`
-- **Publisher** `Statistisches Amt`
-- **Reference** `https://statistik.bs.ch/unterthema/4#Stromverbrauch`
+- **Themes** `['Verwaltung']`
+- **Keywords** `['Dashboard', 'Weiterverwendung', 'Datensätze', 'Datenportal', 'Nutzeranwendungen', 'Visualisierungen', 'Projekte', 'Datenanwendung', 'Datennutzung', 'Datenanalyse']`
+- **Publisher** `Fachstelle für OGD Basel-Stadt`
+- **Reference** `https://data.bs.ch`
 
 
 # Load packages
@@ -46,7 +47,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100245.csv')
+  csv_path <- file.path(data_path , '100406.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +66,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100245/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100406/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
