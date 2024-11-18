@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100402.
 - **Description** `Die Karte zeigt eine repräsentative Auswahl an Projektstandorten laufender und abgeschlossener Hochbauprojekte des Kantons Basel-Stadt. Die Projektstandorte sind mit Projektinformationen und teilweise auch Projektdokumentationen hinterlegt, welche mittels Link abgerufen werden können.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-11-14`
-- **Modified** `2024-11-18T07:00:44+00:00`
+- **Modified** `2024-11-18T19:00:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Gebäude']`
-- **Keywords** `['Neubau', 'Umbau', 'Bauprojekte', 'Stadtentwicklung', '']`
+- **Keywords** `['Neubau', 'Umbau', 'Bauprojekte', 'Stadtentwicklung']`
 - **Publisher** `Städtebau & Architektur`
-- **Reference** `http://www.geo.bs.ch/hochbauprojekte; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/c7c91cac-f7c1-42c1-ae99-eb4352ecf439`
+- **Reference** `www.geo.bs.ch/hochbauprojekte; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/c7c91cac-f7c1-42c1-ae99-eb4352ecf439`
 
 
 # Load packages
