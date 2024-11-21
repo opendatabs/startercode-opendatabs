@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100348.
 - **Description** `<p>Dieser Datensatz bietet eine umfassende Übersicht über die Tagesordnungen und die zugehörigen Traktanden der Grossratssitzungen des Kantons Basel-Stadt.</p><p>Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch/ratsbetrieb/tagesordnung" target="_blank">https://grosserrat.bs.ch/ratsbetrieb/tagesordnung</a><br></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-05-10`
-- **Modified** `2024-11-14T08:02:13+00:00`
+- **Modified** `2024-11-21T08:01:39+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2013-01-25T10:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
