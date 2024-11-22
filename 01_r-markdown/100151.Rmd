@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100151.
 - **Description** `Der Datensatz bildet vom Kanton Basel-Stadt betriebenen Sport- und Bewegungsanlagen ab sowie auch alle kantonalen Sportanlagen ausserhalb der Kantons- und Landesgrenzen. Im Datensatz sind zusätzlich kantonale Räumlichkeiten aufgeführt, welche für den Sportbetrieb genutzt und gemietet werden.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2021-07-23`
-- **Modified** `2024-11-22T05:06:07+00:00`
+- **Modified** `2024-11-22T10:35:48+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

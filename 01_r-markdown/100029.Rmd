@@ -16,8 +16,8 @@ Auto generated R starter code for data set 100029.
 - **Title** `Schulstandorte (Gemeinde Basel)`
 - **Description** `Die Karte zeigt die Schulstandorte (Kindergärten, Primar-, Sekundarschule, Gymnasium, Zentrum für Brückenangebote, Allgemeine Gewerbeschule, Fachmaturitätsschule, Spezialangebote sowie Tagesstrukturen, Sportplätze, Turnhallen ausserhalb von Schulstandorten und Schwimmhallen) der Gemeinde Basel.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2024-11-22T05:08:25+00:00`
+- **Issued** `2024-10-15`
+- **Modified** `2024-11-22T18:30:43+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
