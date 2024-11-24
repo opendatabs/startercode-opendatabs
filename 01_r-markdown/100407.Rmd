@@ -4,27 +4,27 @@ date: "2024-11-24"
 output: html_document
 ---
 
-## Dataset: Kennzahlen der Abstimmungen
+## Dataset: Resultate der Regierungsratswahlen 24. November 2024 (2. Wahlgang)
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100346)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100407)
 
-Auto generated R starter code for data set 100346.
+Auto generated R starter code for data set 100407.
 
 ## Metadata
 
-- **Dataset_identifier** `100346`
-- **Title** `Kennzahlen der Abstimmungen`
-- **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die Resultate aller Volksabstimmungen seit dem 27. September 2020 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.</p><p style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">Kantonsblatt</a> (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">https://www.kantonsblatt.ch/#!/search/publications</a>) des Kantons Basel-Stadt publiziert werden.</p><p style="font-family: sans-serif;">Detaillierte Resultate auf Wahllokal-Ebene findet man im Datensatz <a href="https://data.bs.ch/explore/dataset/100345//" target="_blank">"Abstimmungen Details"</a> (<a href="https://data.bs.ch/explore/dataset/100345/" target="_blank">https://data.bs.ch/explore/dataset/100345/</a>)</p><p style="font-family: sans-serif;">Eine Liste der Wahllokale findet man im Datensatz "<a href="https://data.bs.ch/explore/dataset/100098//" target="_blank">Wahllokale Kanton Basel-Stadt</a>" (<a href="https://data.bs.ch/explore/dataset/100098//" target="_blank">https://data.bs.ch/explore/dataset/100098//</a>)</p>`
+- **Dataset_identifier** `100407`
+- **Title** `Resultate der Regierungsratswahlen 24. November 2024 (2. Wahlgang)`
+- **Description** `<p>Dieser Datensatz zeigt die Resultate des zweiten Wahlgangs der Regierungsratswahlen vom 24. November 2024. </p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2024-06-08`
-- **Modified** `2024-11-24T17:16:08+00:00`
+- **Issued** `2024-11-23`
+- **Modified** `2024-11-24T15:20:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Politik']`
-- **Keywords** `['Abstimmung', 'Wahlen', 'Demokratie', 'Teilhabe']`
+- **Themes** `['Politik', 'Gesetzgebung', 'Bevölkerung']`
+- **Keywords** `['Wahlen', 'Mitbestimmung', 'Regierung', 'Exekutive', 'Teilhabe', 'Demokratie', 'Ersatzwahl', 'Gesamterneuerungswahlen', 'Zweiter Wahlgang']`
 - **Publisher** `Staatskanzlei`
-- **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen`
+- **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen/wahlen-20-oktober-2024`
 
 
 # Load packages
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100346.csv')
+  csv_path <- file.path(data_path , '100407.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100346/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100407/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
