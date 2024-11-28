@@ -14,10 +14,10 @@ Auto generated R starter code for data set 100044.
 
 - **Dataset_identifier** `100044`
 - **Title** `Standorte der öffentlichen Parkhäuser Basel`
-- **Description** `<p>Standorte der öffentlichen Parkhäuser Basel, wie sie in <a href="https://parkendd.de/map.html#Basel" target="_blank">ParkenDD</a> verwendet werden.</p>`
+- **Description** `<p>Standorte der öffentlichen Parkhäuser Basel, wie sie in <a href="https://parkendd.de/map.html#Basel" target="_blank">ParkenDD</a> verwendet werden.</p><p><br></p><p>Änderungsprotokoll:</p><p>- 28.11.2024: Centralbahnparking heisst neu Centralbahn.<br></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2024-10-21T14:03:37+00:00`
+- **Modified** `2024-11-28T18:00:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
