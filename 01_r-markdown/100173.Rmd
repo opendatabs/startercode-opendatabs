@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100173.
 - **Description** `Rohe und standardisierte Sterberaten des Kantons Basel-Stadt nach Geschlecht und Altersgruppen seit 2012. Die Sterberaten werden monatlich aktualisiert. Aufgrund von verzögerten Ereignis-Meldungen können sich die Werte der Vormonate (Anzahl Todesfälle, Sterbeziffer/-rate) nach einer Aktualisierung leicht ändern. Die standardisierte Sterberate bezieht sich auf die mittlere Bevölkerung des Monats Januar 2012 des Kantons Basel-Stadt. Durch die Standardisierung erhält man so in der Altersgruppe "Alle" eine altersstandardisierte Sterberate für das jeweilige Geschlecht.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-04-01`
-- **Modified** `2024-09-26T14:00:53+00:00`
+- **Modified** `2024-12-02T09:45:36+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
