@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100193.
 - **Modified** `2022-10-24T08:54:57+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2009-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_end_date** `2021-12-30T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Fischerei', 'Fangstatistik', 'Fische', 'Rhein', 'Birs', 'Wiese']`
 - **Publisher** `Amt für Umwelt und Energie`

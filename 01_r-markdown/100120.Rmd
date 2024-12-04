@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100120.
 - **Modified** `2024-12-04T05:08:45+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2010-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Öffentliche Ordnung und Sicherheit', 'Raum und Umwelt']`
 - **Keywords** `['Verkehrsunfall', 'Fussgänger', 'Schaden', 'Gefährdung', 'Velo', 'Auto', 'Motorräder', 'Unfall', 'Verkehrsunfälle']`
 - **Publisher** `Bundesamt für Strassen ASTRA`

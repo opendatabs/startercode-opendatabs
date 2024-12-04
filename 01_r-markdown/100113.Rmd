@@ -23,8 +23,8 @@ Weitere Informationen zum Projekt Atmo-VISION sind in der <a href="https://www.b
 - **Issued** `2021-02-10`
 - **Modified** `2021-02-10T16:50:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2019-11-30T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2020-03-24T09:07:00+00:00`
+- **Temporal_coverage_start_date** `2019-11-29T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2020-03-23T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Mobilität und Verkehr']`
 - **Keywords** `['Luftqualität', 'Feinstaub', 'PM10', 'PM2.5', 'BVB']`
 - **Publisher** `Lufthygieneamt beider Basel`

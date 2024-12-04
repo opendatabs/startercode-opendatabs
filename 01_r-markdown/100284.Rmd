@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100284.
 - **Issued** `2023-05-15`
 - **Modified** `2024-11-27T14:45:35+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2023-01-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-01-31T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Tourismus']`
 - **Keywords** `['grillieren', 'grillen']`
 - **Publisher** `Jugend, Familie und Sport`

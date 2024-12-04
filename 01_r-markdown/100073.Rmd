@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100073.
 - **Issued** `2020-04-06`
 - **Modified** `2023-07-05T07:40:31+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2020-02-27T18:17:00+00:00`
-- **Temporal_coverage_end_date** `2023-07-04T22:00:00+00:00`
+- **Temporal_coverage_start_date** `2020-02-26T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-07-03T22:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Todesfälle', 'Lungenentzündung', 'Pandemie', 'Corona']`
 - **Publisher** `Fachstelle für OGD Basel-Stadt`

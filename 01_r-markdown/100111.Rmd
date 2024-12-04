@@ -23,7 +23,7 @@ Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial 
 - **Modified** `2024-01-04T08:38:16+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-12-27T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2023-06-30T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-06-29T22:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Corona', 'impfen', 'Prophylaxe', 'Vakzin', 'COVID-19', 'Coronavirus', 'Krankheit', 'Lungenentzündung']`
 - **Publisher** `Medizinische Dienste`

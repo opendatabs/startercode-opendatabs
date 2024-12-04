@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100107.
 - **Issued** `2021-02-03`
 - **Modified** `2024-11-18T07:30:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2014-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-10-30T23:00:00+00:00`
 - **Themes** `['Tourismus']`
 - **Keywords** `['Nationalität', 'Ausländer', 'Event', 'Übernachtungen', 'Hotels']`
 - **Publisher** `Statistisches Amt`

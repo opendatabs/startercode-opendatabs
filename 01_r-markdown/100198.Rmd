@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100198.
 - **Issued** `2022-07-11`
 - **Modified** `2024-04-17T14:25:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2011-01-01T15:00:00+00:00`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2010-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Parkieren', 'Parkhaus', 'Auto', 'Autos', 'Bewegungen', 'Einfahrt', 'Ausfahrt']`
 - **Publisher** `Parkhäuser Basel-Stadt`

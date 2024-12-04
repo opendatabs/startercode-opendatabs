@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100246.
 - **Issued** `2023-05-15`
 - **Modified** `2024-11-27T14:45:23+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2022-11-20T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2099-12-30T23:00:00+00:00`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Tourismus']`
 - **Keywords** `['Informationen', 'Angebote']`
 - **Publisher** `Kantons- und Stadtentwicklung`

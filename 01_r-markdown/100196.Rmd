@@ -28,8 +28,8 @@ Auto generated R starter code for data set 100196.
 - **Issued** `2022-06-01`
 - **Modified** `2022-09-21T03:28:52+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
-- **Temporal_coverage_start_date** `2018-08-17T11:17:00+00:00`
-- **Temporal_coverage_end_date** `2022-09-20T05:48:00+00:00`
+- **Temporal_coverage_start_date** `2018-08-16T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2022-09-19T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Energie', 'Industrie, Dienstleistungen']`
 - **Keywords** `['Elektroautos', 'Elektromobilität', 'Ladestationen', 'IWB', 'Tankstellen', 'Elektroladestation', 'Echtzeit', 'Realtime']`
 - **Publisher** `Industrielle Werke Basel`

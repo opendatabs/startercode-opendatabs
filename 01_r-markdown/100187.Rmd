@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100187.
 - **Issued** `2022-03-25`
 - **Modified** `2024-12-02T15:00:26+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2021-07-05T22:00:00+00:00`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2021-06-30T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-11-30T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['COVID-19', 'Coronavirus', 'Corona', 'Abwasser', 'Kanalisation', 'Krankheit', 'Kläranlage']`
 - **Publisher** `Kantonales Laboratorium`

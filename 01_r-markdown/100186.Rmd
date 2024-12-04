@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100186.
 - **Issued** `2022-11-09`
 - **Modified** `2024-11-28T09:56:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2012-06-06T07:04:41+00:00`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2012-06-05T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-11-19T23:00:00+00:00`
 - **Themes** `['Politik', 'Gesetzgebung', 'Verwaltung']`
 - **Keywords** `['Abstimmung', 'Demokratie']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`

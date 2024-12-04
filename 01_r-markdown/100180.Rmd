@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100180.
 - **Issued** `2022-07-11`
 - **Modified** `2024-12-04T05:25:22+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `1976-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `1976-03-28T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Wasser', 'Wasserstand', 'Grundwasser', 'Statistik', 'Zeitreihe', 'Bohrung']`
 - **Publisher** `Amt für Umwelt und Energie`

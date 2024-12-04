@@ -14,13 +14,13 @@ Auto generated R starter code for data set 100277.
 
 - **Dataset_identifier** `100277`
 - **Title** `Statistiken der Smiley-Geschwindigkeitsanzeigen`
-- **Description** `<p>Die Statistik der Smiley-Geschwindigkeitsanzeigen fasst die Daten über die verschiedenen Phasen zusammen (Vormessung, Betrieb, Nachmessung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen.<br/></p>`
+- **Description** `<p>Die Statistik der Smiley-Geschwindigkeitsanzeigen fasst die Daten über die verschiedenen Phasen zusammen (Vormessung, Betrieb, Nachmessung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen.<br></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-12-19`
 - **Modified** `2024-11-08T09:57:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2023-02-08T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-09-05T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Öffentliche Ordnung und Sicherheit']`
 - **Keywords** `['Smiley', 'Tempolimit', 'Verkehr', 'Tagesverkehr', 'Tempo', 'Vormessung', 'Nachmessung']`
 - **Publisher** `Kantonspolizei`

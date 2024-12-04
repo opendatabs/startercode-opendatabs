@@ -27,8 +27,8 @@ ausserhalb des im Projekt definierten Zeitraums vorfallen. <o:p></o:p></span></
 - **Issued** `2023-12-19`
 - **Modified** `2024-11-11T17:49:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2023-02-08T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-10-16T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Öffentliche Ordnung und Sicherheit']`
 - **Keywords** `['Smiley', 'Tempolimit', 'Verkehr', 'Tagesverkehr', 'Tempo', 'Vormessung', 'Nachmessung']`
 - **Publisher** `Kantonspolizei`

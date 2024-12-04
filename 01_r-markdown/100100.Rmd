@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100100.
 - **Issued** `2020-11-20`
 - **Modified** `2024-12-03T23:30:23+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2020-10-02T13:30:00+00:00`
-- **Temporal_coverage_end_date** `2022-06-06T10:30:00+00:00`
+- **Temporal_coverage_start_date** `2020-10-01T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2022-07-05T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Luftqualität', 'Feinstaub', 'PM25', 'PM2.5', 'Museum']`
 - **Publisher** `Lufthygieneamt beider Basel`

@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100004.
 - **Issued** `2019-11-06`
 - **Modified** `2024-02-29T14:08:14+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2019-08-29T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2022-09-19T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Energie', 'Industrie, Dienstleistungen', 'Tourismus']`
 - **Keywords** `['Elektroautos', 'Elektromobilität', 'Ladestationen', 'IWB', 'Tankstellen', 'Elektroladestation', 'Echtzeit', 'Realtime']`
 - **Publisher** `Industrielle Werke Basel`

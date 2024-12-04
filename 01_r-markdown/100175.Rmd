@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100175.
 - **Issued** `2022-02-07`
 - **Modified** `2024-03-01T08:00:31+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2022-02-01T13:26:00+00:00`
-- **Temporal_coverage_end_date** `2023-06-27T12:39:00+00:00`
+- **Temporal_coverage_start_date** `2022-01-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-06-26T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Smarte Strasse', 'Tempo', 'Lärm', 'Lautstärke', 'Auto']`
 - **Publisher** `Amt für Umwelt und Energie`

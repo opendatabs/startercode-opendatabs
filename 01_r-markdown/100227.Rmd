@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100227.
 - **Issued** `2022-11-17`
 - **Modified** `2024-11-11T14:30:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `1920-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-10-30T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Zeitreihe', 'Klima', 'Luft', 'Eistage', 'Frosttage', 'Sommertage', 'Hitzetage', 'Tage ohne Sonne', 'Schneefall', 'Schneedecke', 'Reif', 'Nebel', 'Gewitter', 'Hagel', 'Wind', 'Heizgradtage']`
 - **Publisher** `Statistisches Amt`
