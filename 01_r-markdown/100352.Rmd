@@ -19,7 +19,7 @@ Auto generated R starter code for data set 100352.
 - **Issued** `2024-05-31`
 - **Modified** `2024-12-05T00:34:13+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2024-12-04T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2024-12-05T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2029-12-03T23:00:00+00:00`
 - **Themes** `['Verwaltung', 'Gesetzgebung', 'Bau- und Wohnungswesen', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Publikation', 'Veröffentlichung', 'Baupublikationen', 'Reglemente', 'Handänderung', 'Anordnung', 'Verfügung', 'Beschlüsse', 'Erlasse', 'Konkurse', 'Grundbuch', 'Bewilligungen', 'Nutzungsgesuche', 'Kantonale Bekanntmachungen', 'Gerichtliche Entscheide', 'Vorladungen', 'Handelsregister', 'Amtsblatt', 'Zahlungsbefehl']`

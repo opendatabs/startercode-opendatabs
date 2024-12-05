@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100006.
 - **Modified** `2024-12-05T06:26:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2021-12-30T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2024-12-01T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-12-02T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Autos', 'Motorräder', 'Busse', 'Lieferwagen', 'Lastwagen', 'Anhänger', 'Verkehr', 'Verkehrszählung', 'Erhebung']`
 - **Publisher** `Amt für Mobilität`
