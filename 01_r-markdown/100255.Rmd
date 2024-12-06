@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100255.
 - **Description** `<p>Der Datensatz enthält Informationstexte und FAQs, inkl. Details zur Kampagne #RHYLAX (<a href="https://www.bs.ch/pd/kantons-und-stadtentwicklung/stadtteile/vermittlung#rhylax-respekt-und-ruecksicht-am-rheinbord" target="_blank">https://www.bs.ch/pd/kantons-und-stadtentwicklung/stadtteile/vermittlung#rhylax-respekt-und-ruecksicht-am-rheinbord</a>) des Kantons, welche in der BachApp veröffentlicht werden. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-05-15`
-- **Modified** `2024-11-27T14:45:35+00:00`
+- **Modified** `2024-12-06T08:30:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2022-11-20T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2099-12-30T23:00:00+00:00`

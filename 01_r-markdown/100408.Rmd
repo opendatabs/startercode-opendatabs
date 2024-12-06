@@ -4,27 +4,27 @@ date: "2024-12-06"
 output: html_document
 ---
 
-## Dataset: Events in Gewässernähe
+## Dataset: Veränderte Wahlzettel der Grossratswahlen 2024
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100247)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100408)
 
-Auto generated R starter code for data set 100247.
+Auto generated R starter code for data set 100408.
 
 ## Metadata
 
-- **Dataset_identifier** `100247`
-- **Title** `Events in Gewässernähe`
-- **Description** `<p>Der Datensatz enthält Informationen zu Anlässen u.ä. in Gewässernähe, welche z.B. in der BachApp publiziert werden. </p>`
+- **Dataset_identifier** `100408`
+- **Title** `Veränderte Wahlzettel der Grossratswahlen 2024`
+- **Description** `<p>Bei den Grossratswahlen im Kanton Basel-Stadt am 20. Oktober 2024 kandidierten 870 Personen (verfügbar unter <a href="https://data.bs.ch/explore/dataset/100385/" target="_blank">https://data.bs.ch/explore/dataset/100385/</a>) für insgesamt 100 zu vergebende Sitze.</p><p> Es gingen insgesamt 42 640 gültige Wahlzettel ein, von denen 20 733 verändert wurden. Der Datensatz zeigt diese 20 733 Wahlzettel und jegliche Details dazu. </p><p>Leere Felder bei der Stimme bedeuten, dass das Feld leer gelassen wurde. Felder mit NULL bei der Stimme bedeuten, dass in diesem Wahlkreis weniger Stimmen zur Verfügung standen.</p><p>Die Listennummer 00 bedeutet, dass ein Wahlzettel ohne Bezeichnung ausgefüllt wurde (insgesamt 3 326 Wahlzettel). In diesem Fall werden leere Stimmen nicht gezählt.</p><p>Es gibt zwei Arten wie man einen Wahlzettel verändern kann: <br>Panaschieren bedeutet, dass Kandidierende von anderen Listen auf die ausgewählte Liste übertragen wurden. <br>Kumulieren bezeichnet das Mehrfachnennen eines Kandidierenden, wodurch diese mehr als eine Stimme erhält. <br>Im Datensatz wird "p" für panaschiert und "k" für kumuliert verwendet. Wenn ein Wahlzettel sowohl panaschiert als auch kumuliert wurde, wird ebenfalls "p" ausgewiesen. </p><p><span>Die Wahlergebnisse sind in einem separaten Datensatz (</span><a 255);"="" 255,="" background-color:="" href="https://data.bs.ch/explore/dataset/100399/" rgb(255,="" target="_blank">https://data.bs.ch/explore/dataset/100399/</a><span>) einsehbar, der die Verteilung der Stimmen und die gewählten Vertreter detailliert darstellt.</span></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2023-05-15`
-- **Modified** `2024-12-06T08:30:51+00:00`
+- **Issued** `2024-12-06`
+- **Modified** `2024-12-02T17:18:28+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Tourismus']`
-- **Keywords** `['Veranstaltungen', 'Event']`
-- **Publisher** `Jugend, Familie und Sport`
-- **Reference** `None`
+- **Themes** `['Politik', 'Bevölkerung']`
+- **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe', 'Parlament', 'Grosser Rat', 'Grossrat', 'Grossrätin']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen`
 
 
 # Load packages
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100247.csv')
+  csv_path <- file.path(data_path , '100408.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100247/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100408/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
