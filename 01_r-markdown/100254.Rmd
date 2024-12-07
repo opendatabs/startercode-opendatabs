@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100254.
 - **Description** `<p>Tagesdaten der NBCN-Station (Swiss National Basic Climatological Network) Basel-Binningen der MeteoSchweiz. Komplette, <a href="https://www.meteoschweiz.admin.ch/klima/klimawandel/entwicklung-temperatur-niederschlag-sonnenschein/homogene-messreihen-ab-1864/homogenisierung-von-klima-messreihen.html" target="_blank">nicht homogenisierte</a>  Datenreihe der wichtigsten Tageswerte seit Messbeginn.</p><p> Methodischer Hinweis:<br>Die Berechnung des Tagesmittels der Lufttemperatur erfolgte je nach historischer Zeitperiode unterschiedlich. <br>Bis 1980 wurden die Temperaturwerte nur dreimal täglich erfasst, der Mittelwert basiert entsprechend auf diesen drei Ablesungen. Ab 1981 liegen Stundenmittel zugrunde und ab 2018 10min-Werte. Das tägliche Minimum und Maximum der Lufttemperatur wurde bis 1980 anhand von Minimum- bzw. Maximum-Thermometern erfasst.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-02-10`
-- **Modified** `2024-12-06T15:00:31+00:00`
+- **Modified** `2024-12-07T15:00:56+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1863-12-31T23:30:14+00:00`
 - **Temporal_coverage_end_date** `2024-12-04T23:00:00+00:00`
