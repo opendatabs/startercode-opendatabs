@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-12-07"
+date: "2024-12-08"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100356.
 - **Modified** `2024-12-07T06:19:25+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-12-30T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2024-12-03T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-12-04T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Auto', 'Motorrad', 'Bus', 'Lieferwagen', 'Lastwagen', 'Anhänger', 'Verkehr', 'Geschwindigkeit', 'km/h']`
 - **Publisher** `Amt für Mobilität`
