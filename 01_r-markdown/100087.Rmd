@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-12-11"
+date: "2024-12-12"
 output: html_document
 ---
 
@@ -25,7 +25,7 @@ Pilotprojekt den Einsatz von kosteneffizienten Sensoren zur Erfassung des
 Schallpegeldaten (Leq) zur Verfügung gestellt.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2020-06-25`
-- **Modified** `2024-12-11T18:00:12+00:00`
+- **Modified** `2024-12-12T07:00:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-06-23T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-12-10T23:00:00+00:00`
