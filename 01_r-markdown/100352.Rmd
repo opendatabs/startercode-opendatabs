@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-12-16"
+date: "2024-12-17"
 output: html_document
 ---
 
@@ -17,10 +17,10 @@ Auto generated R starter code for data set 100352.
 - **Description** `<p>Das Kantonsblatt ist das offizielle Publikationsorgan des Kantons Basel-Stadt. Darin werden Meldungen (Gesetze, Verordnungen, Staatsverträge usw.) des Grossen Rats, des Regierungsrats und der Verwaltung veröffentlicht. Im vorliegenden Datensatz sind die aktuellen über das offizielle API des Kantonsblatts beziehbaren Meldungen in Tabellenform enthalten. </p><p>Bitte beachten Sie auch die Datenschutzerklärung des Kantonsblattes und die Hinweise zur Rechtsgültigkeit der Meldungen unter <a href="https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy" target="_blank">https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy</a>. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-05-31`
-- **Modified** `2024-12-16T00:34:16+00:00`
+- **Modified** `2024-12-17T00:34:12+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2024-12-16T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2029-12-11T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2024-12-17T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2029-12-16T23:00:00+00:00`
 - **Themes** `['Verwaltung', 'Gesetzgebung', 'Bau- und Wohnungswesen', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Publikation', 'Veröffentlichung', 'Baupublikationen', 'Reglemente', 'Handänderung', 'Anordnung', 'Verfügung', 'Beschlüsse', 'Erlasse', 'Konkurse', 'Grundbuch', 'Bewilligungen', 'Nutzungsgesuche', 'Kantonale Bekanntmachungen', 'Gerichtliche Entscheide', 'Vorladungen', 'Handelsregister', 'Amtsblatt', 'Zahlungsbefehl']`
 - **Publisher** `Staatskanzlei`
