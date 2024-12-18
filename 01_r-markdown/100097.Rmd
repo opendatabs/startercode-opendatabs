@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-12-17"
+date: "2024-12-18"
 output: html_document
 ---
 
@@ -41,7 +41,7 @@ Geschwindigkeitsmonitoring sind folgende Datensätze vorhanden:<o:p></o:p></span
 - **Issued** `2021-02-02`
 - **Modified** `2024-12-17T04:30:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2024-02-04T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2024-01-14T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-12-01T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Geschwindigkeit', 'Verkehr', 'Auto', 'PW', 'PKW', 'LW', 'LKW', 'Messwert', 'Einzelmessung', 'Messung']`
