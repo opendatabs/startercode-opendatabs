@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100038.
 - **Modified** `2024-12-23T05:06:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1973-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2021-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-06-30T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Geographie']`
 - **Keywords** `['Auto', 'Velo', 'Fussgänger', 'Lastwagen', 'LKW', 'Anhänger']`
 - **Publisher** `Amt für Mobilität`

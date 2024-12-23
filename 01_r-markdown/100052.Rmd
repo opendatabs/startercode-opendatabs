@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100052.
 - **Modified** `2024-12-23T05:06:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1769-02-28T23:25:52+00:00`
-- **Temporal_coverage_end_date** `2024-11-26T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-12-17T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Geographie']`
 - **Keywords** `['Baum', 'Baumbestand', 'Stadtbaum', 'Baumschutz', 'Unterhalt', 'Pflege', 'Kataster']`
 - **Publisher** `Stadtgärtnerei`
