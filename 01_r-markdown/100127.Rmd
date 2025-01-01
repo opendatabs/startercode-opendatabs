@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2024-12-31"
+date: "2025-01-01"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100127.
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Nachnamen. Die Daten werden jährlich aktualisiert. Bei mehreren Nachnamen wird nur der erste berücksichtigt, unabhängig davon, ob die Nachnamen mit einem Bindestrich verbunden sind oder nicht. Nachnamen, die weniger als viermal vorkommen, werden in der Rubrik 'Übrige' zusammengefasst. <br>Die hier veröffentlichten Werte des Jahres 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 2011 auf Auswertungen aus dem Einwohnerregister.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2021-03-25`
-- **Modified** `2024-11-01T02:31:55+00:00`
+- **Modified** `2025-01-01T02:31:57+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
