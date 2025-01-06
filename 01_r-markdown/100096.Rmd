@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-01-05"
+date: "2025-01-06"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100096.
 - **Modified** `2025-01-05T10:01:02+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2017-01-01T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-01-01T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Öffentliche Ordnung und Sicherheit', 'Verwaltung']`
 - **Keywords** `['Abfall', 'Recycling', 'Grüngut']`
 - **Publisher** `Tiefbauamt`
