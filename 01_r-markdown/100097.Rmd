@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-01-08"
+date: "2025-01-09"
 output: html_document
 ---
 
@@ -39,10 +39,10 @@ Manipulationen an Geräten können zu fehlerhaften Messungen führen.<o:p></o:p>
 Geschwindigkeitsmonitoring sind folgende Datensätze vorhanden:<o:p></o:p></span></p><ul><li>Einzelmessungen ab 2024 (dieser Datensatz): <a href="https://data.bs.ch/explore/dataset/100097/" target="_blank">https://data.bs.ch/explore/dataset/100097/</a></li><li>Einzelmessungen von 2021 bis 2023: <a href="https://data.bs.ch/explore/dataset/100358/" target="_blank">https://data.bs.ch/explore/dataset/100358/</a><br></li><li>Einzelmessungen bis 2020: <a href="https://data.bs.ch/explore/dataset/100200/" target="_blank">https://data.bs.ch/explore/dataset/100200/</a></li><li>Kennzahlen pro Mess-Standort: <a href="https://data.bs.ch/explore/dataset/100112/" target="_blank">https://data.bs.ch/explore/dataset/100112/</a> </li></ul>Aufgrund der grossen Datenmenge kann es vorkommen, dass der Datensatz nicht vollständig heruntergeladen werden kann. Falls dieses Problem auftritt, kann man den vollständigen Datensatz und die Einzelmessungen der Messstationen hier herunterladen:<p></p><ul><li>vollständiger Datensatz: <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv</a></li><li>Einzelmessungen der Messstationen: <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/</a></li></ul><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href="https://map.geo.bs.ch/?map_x=2614442&amp;map_y=1267497&amp;map_zoom=2&amp;lang=de&amp;baselayer_ref=Grundkarte%20farbig&amp;tree_groups=Geschwindigkeit&amp;tree_group_layers_Geschwindigkeit=RM_Geschwindigkeitsmonitoring" target="_blank">https://map.geo.bs.ch/?map_x=2614442↦_y=1267497↦_zoom=2⟨=de&amp;baselayer_ref=Grundkarte%20farbig&amp;tree_groups=Geschwindigkeit&amp;tree_group_layers_Geschwindigkeit=RM_Geschwindigkeitsmonitoring</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2021-02-02`
-- **Modified** `2025-01-08T02:57:21+00:00`
+- **Modified** `2025-01-09T03:52:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-01-14T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2024-12-29T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-01-05T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Geschwindigkeit', 'Verkehr', 'Auto', 'PW', 'PKW', 'LW', 'LKW', 'Messwert', 'Einzelmessung', 'Messung']`
 - **Publisher** `Kantonspolizei`
