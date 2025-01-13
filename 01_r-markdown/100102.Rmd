@@ -4,7 +4,7 @@ date: "2025-01-13"
 output: html_document
 ---
 
-## Dataset: Resultate der Regierungsrats- und Regierungspräsidiumswahl 2020
+## Dataset: Resultate der Regierungsrats- und Regierungspräsidiumswahlen 2020
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100102)
 
@@ -13,9 +13,8 @@ Auto generated R starter code for data set 100102.
 ## Metadata
 
 - **Dataset_identifier** `100102`
-- **Title** `Resultate der Regierungsrats- und Regierungspräsidiumswahl 2020`
-- **Description** `<p class="MsoNormal">Dieser Datensatz zeigt die Resultate der Regierungsratswahl
-und der Regierungspräsidiumswahl vom 25. Oktober und vom 29. November 2020. <o:p></o:p></p><p>
+- **Title** `Resultate der Regierungsrats- und Regierungspräsidiumswahlen 2020`
+- **Description** `<p class="MsoNormal">Dieser Datensatz zeigt die Resultate der Regierungsratswahlen und der Regierungspräsidiumswahlen vom 25. Oktober und vom 29. November 2020. <o:p></o:p></p><p>
 
 </p><p class="MsoNormal">Bitte beachten Sie, dass die offiziell gültigen
 Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.<o:p></o:p></p>`

@@ -4,7 +4,7 @@ date: "2025-01-13"
 output: html_document
 ---
 
-## Dataset: Kandidierende der Ersatzwahl Regierungsrat 3. März 2024
+## Dataset: Kandidierende der Ersatzwahlen Regierungsrat 3. März 2024
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100333)
 
@@ -13,8 +13,8 @@ Auto generated R starter code for data set 100333.
 ## Metadata
 
 - **Dataset_identifier** `100333`
-- **Title** `Kandidierende der Ersatzwahl Regierungsrat 3. März 2024`
-- **Description** `<p style="font-family: sans-serif;">Für die Ersatzwahl eines Mitglieds des Regierungsrat vom 3. März 2024 kandidieren vier Personen.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden des ersten Wahlgangs nach Geschlecht, Jahrgang und Beruf.</p>`
+- **Title** `Kandidierende der Ersatzwahlen Regierungsrat 3. März 2024`
+- **Description** `<p style="font-family: sans-serif;">Für die Ersatzwahlen eines Mitglieds des Regierungsrat vom 3. März 2024 kandidieren vier Personen.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden des ersten Wahlgangs nach Geschlecht, Jahrgang und Beruf.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-01-08`
 - **Modified** `2024-03-21T12:41:54+00:00`

@@ -4,7 +4,7 @@ date: "2025-01-13"
 output: html_document
 ---
 
-## Dataset: Wahl von fünf Präsidentinnen oder Präsidenten des Appellationsgerichts
+## Dataset: Resultate der Wahl von fünf Präsidentinnen oder Präsidenten des Appellationsgerichts 9. Mai 2021
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100131)
 
@@ -13,7 +13,7 @@ Auto generated R starter code for data set 100131.
 ## Metadata
 
 - **Dataset_identifier** `100131`
-- **Title** `Wahl von fünf Präsidentinnen oder Präsidenten des Appellationsgerichts`
+- **Title** `Resultate der Wahl von fünf Präsidentinnen oder Präsidenten des Appellationsgerichts 9. Mai 2021`
 - **Description** `<p>Dieser Datensatz zeigt die Schlussresultate des 1. Wahlgangs der Wahl von fünf Präsidentinnen oder Präsidenten des Appellationsgerichts Basel-Stadt vom 9. Mai 2021. </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2021-05-10`

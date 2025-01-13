@@ -4,7 +4,7 @@ date: "2025-01-13"
 output: html_document
 ---
 
-## Dataset: Ständeratswahlen 2023: Kandidierende aus Basel-Stadt
+## Dataset: Kandidierende der Ständeratswahlen 22. Oktober 2023
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100317)
 
@@ -13,7 +13,7 @@ Auto generated R starter code for data set 100317.
 ## Metadata
 
 - **Dataset_identifier** `100317`
-- **Title** `Ständeratswahlen 2023: Kandidierende aus Basel-Stadt`
+- **Title** `Kandidierende der Ständeratswahlen 22. Oktober 2023`
 - **Description** `<p style="margin: 0cm 0cm 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Für die Ständeratswahlen vom 22. Oktober 2023 kandidieren vier Personen  für den Kanton Basel-Stadt. Insgesamt wird 1 Sitz im Ständerat gewählt.<o:p></o:p></span></p><p style="margin: 0cm 0cm 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Dieser Datensatz zeigt die Kandidierenden aus dem Kanton
 Basel-Stadt nach Geschlecht, Jahrgang und Beruf sowie die jeweiligen Listen.<o:p></o:p></span></p><p style="font-family: sans-serif;">
 
