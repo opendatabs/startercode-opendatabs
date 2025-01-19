@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-01-18"
+date: "2025-01-19"
 output: html_document
 ---
 
@@ -36,7 +36,7 @@ Die Berechnung der solaren Globalstrahlung basiert auf dem 0.5m-Oberflächenmode
 - Zonalstatistik der Rasterinformationen des Solarpotenzials sowie der Fassadeneinstrahlung als Attributdaten zu einem Vektorlayer der Gebäudeumrisse des Auftraggebers des Kantons Basel-Stadt`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-08-15`
-- **Modified** `2025-01-18T05:08:24+00:00`
+- **Modified** `2025-01-19T05:08:57+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
