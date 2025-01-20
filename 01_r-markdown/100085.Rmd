@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100085.
 - **Temporal_coverage_end_date** `2024-05-04T22:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['COVID-19', 'Coronavirus', 'Corona', 'Krankheit', 'Lungenentzündung']`
-- **Publisher** `Fachstelle für OGD Basel-Stadt`
+- **Publisher** `Open Data Basel-Stadt`
 - **Reference** `None`
 
 

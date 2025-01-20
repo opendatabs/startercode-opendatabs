@@ -24,7 +24,7 @@ Die Fachstelle für Open Government Data im Kanton Basel-Stadt erstellt und pfle
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Verwaltung']`
 - **Keywords** `['Dashboard', 'Weiterverwendung', 'Datensätze', 'Datenportal', 'Nutzeranwendungen', 'Visualisierungen', 'Projekte', 'Datenanwendung', 'Datennutzung', 'Datenanalyse']`
-- **Publisher** `Fachstelle für OGD Basel-Stadt`
+- **Publisher** `Open Data Basel-Stadt`
 - **Reference** `https://data.bs.ch`
 
 
