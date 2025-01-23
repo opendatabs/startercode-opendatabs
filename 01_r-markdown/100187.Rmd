@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-01-22"
+date: "2025-01-23"
 output: html_document
 ---
 
@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100187.
 - **Issued** `2022-03-25`
 - **Modified** `2025-01-22T16:00:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2021-06-30T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-01-18T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2021-05-30T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-02-14T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['COVID-19', 'Coronavirus', 'Corona', 'Abwasser', 'Kanalisation', 'Krankheit', 'Kläranlage']`
 - **Publisher** `Kantonales Laboratorium`
