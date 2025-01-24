@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100076.
 - **Dataset_identifier** `100076`
 - **Title** `Coronavirus (COVID-19): Todesfälle Basel-Stadt nach Alter und Geschlecht`
 - **Description** `<div>Todesfälle von Einwohnern des Kantons Basel-Stadt mit der Coronavirus-Krankheit (COVID-19) nach Alter und Geschlecht. Die Daten wurden zu Beginn der Pandemie von Hand aus öffentlich zugänglichen offiziellen Quellen durch Mitarbeiter der Fachstelle OGD Basel-Stadt erfasst. Inzwischen erhalten wir die Daten der Gestorbenen direkt von den Gesundheitsdiensten des Kantons. Die Quellenangabe der jeweiligen Zahlen ist direkt der Tabelle zu entnehmen.</div><div><br></div><div>Die gesamtschweizerischen Daten aller Kantone und des Fürstentums Liechtenstein (FL), welche die Fälle nach Alter und Geschlecht ausweisen, sind hier zu finden:</div><div><ul><li><a href="https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_alter_geschlecht_csv" target="_blank">https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_alter_geschlecht_csv</a></li></ul></div><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Änderungsprotokoll:</span></p><ul><li>Die Erhebung der Werte wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "DAILY" auf "NEVER" geändert.</li></ul>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-04-07`
 - **Modified** `2024-03-13T14:01:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
