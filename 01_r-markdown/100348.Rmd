@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-01-24"
+date: "2025-01-25"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100348.
 - **Modified** `2025-01-24T08:02:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2013-01-24T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-01-02T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-01-22T23:00:00+00:00`
 - **Themes** `['Politik', 'Verwaltung']`
 - **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Parlamentarische Vorstösse']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`
