@@ -20,7 +20,7 @@ Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr un
 </p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2022-09-21`
-- **Modified** `2025-01-22T03:01:42+00:00`
+- **Modified** `2025-01-29T14:12:43+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-01-19T23:00:00+00:00`
