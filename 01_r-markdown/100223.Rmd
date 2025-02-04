@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100223.
 - **Description** `<div>Dieser Datensatz zeigt die briefliche Stimmbeteiligung der Urnengänge für die Stadt Basel. Vor Urnengängen informiert die Staatskanzlei regelmässig über den Stand der Stimmbeteiligung per brieflicher Abgabe.</div><div><br></div><div>Die effektive Stimm-/Wahlbeteiligung inkl. persönlicher Stimmabgabe an der Urne steht erst nach der Auszählung am Abstimmungssontag fest und wird ebenfalls auf diesem Datenportal zur Verfügung gestellt (<a href="https://data.bs.ch/explore/?sort=modified&amp;refine.publisher=Staatskanzlei&amp;q=%22Kennzahlen+der+Abstimmung%22+OR+%22Wahl+der+100%22+OR+%22Wahlgangs%22" target="_blank">Kennzahlen Wahlen/Abstimmungen</a>). </div><div><br></div>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-02-21`
-- **Modified** `2025-02-03T10:30:09+00:00`
+- **Modified** `2025-02-04T09:30:12+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2020-01-19T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-02-02T23:00:00+00:00`
