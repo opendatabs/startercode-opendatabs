@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100413.
 
 - **Dataset_identifier** `100413`
 - **Title** `Tägliche Ankünfte, Logiernächte, Zimmer nach Hotelkategorie`
-- **Description** `Dieser Datensatz zeigt die Anzahl Ankünfte, Logiernächte, verfügbare und belegte Zimmer sowie die Zimemrauslastung in baselstädtischen Hotels nach Kategorie auf täglicher Basis.`
+- **Description** `Dieser Datensatz zeigt die Anzahl Ankünfte, Logiernächte, verfügbare und belegte Zimmer sowie die Zimmerauslastung in baselstädtischen Hotels nach Kategorie auf täglicher Basis.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2025-02-06`
 - **Modified** `2025-02-06T08:41:21+00:00`
@@ -22,7 +22,7 @@ Auto generated R starter code for data set 100413.
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Tourismus']`
-- **Keywords** `['Nationalität', 'Ausländer', 'Event', 'Übernachtungen', 'Hotels']`
+- **Keywords** `['Nationalität', 'Event', 'Übernachtungen', 'Hotels', 'Ausland']`
 - **Publisher** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/unterthema/8`
 

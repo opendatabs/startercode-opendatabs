@@ -22,7 +22,7 @@ Auto generated R starter code for data set 100414.
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Tourismus']`
-- **Keywords** `['Nationalität', 'Ausländer', 'Event', 'Übernachtungen', 'Hotels']`
+- **Keywords** `['Nationalität', 'Event', 'Übernachtungen', 'Hotels', 'Ausland']`
 - **Publisher** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/unterthema/8`
 
