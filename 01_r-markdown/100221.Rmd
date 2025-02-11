@@ -4,27 +4,27 @@ date: "2025-02-11"
 output: html_document
 ---
 
-## Dataset: Standorte der öffentlichen Parkhäuser Basel
+## Dataset: Swisslos-Sportfonds Basel-Stadt
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100044)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100221)
 
-Auto generated R starter code for data set 100044.
+Auto generated R starter code for data set 100221.
 
 ## Metadata
 
-- **Dataset_identifier** `100044`
-- **Title** `Standorte der öffentlichen Parkhäuser Basel`
-- **Description** `<p>Standorte der öffentlichen Parkhäuser Basel, wie sie in <a href="https://parkendd.de/map.html#Basel" target="_blank">ParkenDD</a> verwendet werden.</p><p><br></p><p>Änderungsprotokoll:</p><p>- 28.11.2024: Centralbahnparking heisst neu Centralbahn.<br></p>`
+- **Dataset_identifier** `100221`
+- **Title** `Swisslos-Sportfonds Basel-Stadt`
+- **Description** `<p>Der Datensatz „Swisslos-Sportfonds Basel-Stadt“ dokumentiert die Vergabe von Fördermitteln aus dem Swisslos-Sportfonds im Kanton Basel-Stadt. Die Mittel dienen der Unterstützung des Breitensports, der Förderung von Sportvereinen und -verbänden sowie der Realisierung von Projekten im Leistungssport.</p><p>Der Datensatz enthält Informationen zu den begünstigten Sportvereinen und Organisationen, den geförderten Projekten sowie den jeweiligen Förderbeträgen. Die Unterstützung reicht von Beiträgen für Vereinsaktivitäten über die Anschaffung von Sportmaterial bis hin zur Durchführung von Veranstaltungen und Investitionen in Sportanlagen.</p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2025-02-11T19:00:46+00:00`
-- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
-- **Temporal_coverage_start_date** `2025-02-10T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-02-10T23:00:00+00:00`
-- **Themes** `['Mobilität und Verkehr', 'Geographie', 'Tourismus']`
-- **Keywords** `['Parkhaus', 'Standort', 'Parken', 'Auto', 'Parkieren', 'Elektroautos', 'Basel']`
-- **Publisher** `Parkhäuser Basel-Stadt`
-- **Reference** `https://raw.githubusercontent.com/offenesdresden/ParkAPI/master/park_api/cities/Basel.geojson`
+- **Issued** `2025-02-10`
+- **Modified** `2025-02-07T02:00:48+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport']`
+- **Keywords** `['Sport', 'Förderung', 'Swisslos']`
+- **Publisher** `Jugend, Familie und Sport`
+- **Reference** `https://www.bs.ch/ed/jfs/sport/finanzielle-unterstuetzung-fuer-den-sport`
 
 
 # Load packages
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100044.csv')
+  csv_path <- file.path(data_path , '100221.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100044/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100221/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
