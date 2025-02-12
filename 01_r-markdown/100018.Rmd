@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100018.
 - **Description** `Allmendbewilligungen beinhaltet sämtliche Nutzungen, welche im öffentlichen Raum (Allmend) stattfinden. Die dargestellten genutzten Flächen sind nicht verbindlich.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-02-12T05:12:56+00:00`
+- **Modified** `2025-02-12T13:07:57+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1927-03-23T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2999-12-31T23:00:00+00:00`
