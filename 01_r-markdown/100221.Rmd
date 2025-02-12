@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-11"
+date: "2025-02-12"
 output: html_document
 ---
 
@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100221.
 - **Issued** `2025-02-10`
 - **Modified** `2025-02-07T02:00:48+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2016-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Sport', 'Förderung', 'Swisslos']`
 - **Publisher** `Jugend, Familie und Sport`
