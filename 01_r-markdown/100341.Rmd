@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-13"
+date: "2025-02-14"
 output: html_document
 ---
 
@@ -18,7 +18,7 @@ Auto generated R starter code for data set 100341.
 «Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2024-02-20`
-- **Modified** `2025-02-13T05:07:24+00:00`
+- **Modified** `2025-02-14T05:07:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
