@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-14"
+date: "2025-02-15"
 output: html_document
 ---
 
@@ -21,7 +21,7 @@ Auto generated R starter code for data set 100005.
 <p>Echtzeitdaten zur Belegung der Elektroauto-Ladestationen der gesamten Schweiz basierend auf dem Status des Ladevorgangs sind hier zu finden: <a href="https://opendata.swiss/de/dataset/ladestationen" target="_blank">https://opendata.swiss/de/dataset/ladestationen</a></p>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2025-02-13T23:00:33+00:00`
+- **Modified** `2025-02-14T23:00:07+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
