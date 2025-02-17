@@ -4,27 +4,27 @@ date: "2025-02-17"
 output: html_document
 ---
 
-## Dataset: Wilde Abfall-Deponien
+## Dataset: Wasserverbrauch im Kanton Basel-Stadt und in Binningen seit 1951
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100070)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100420)
 
-Auto generated R starter code for data set 100070.
+Auto generated R starter code for data set 100420.
 
 ## Metadata
 
-- **Dataset_identifier** `100070`
-- **Title** `Wilde Abfall-Deponien`
-- **Description** `<p>Dieser Datensatz zeigt die Abfälle, welche an unerlaubten Orten, in nicht gebührenpflichtigen Säcken oder/und zur Unzeit deponiert wurden und durch die Stadtreinigung der Abfallkontrolle des Amts für Umwelt und Energie gemeldet wurden. <br><br>Die genauen geographischen Koordinaten werden einem 50x50 Meter Raster zugeteilt. Der süd-westliche Eckpunkt dieses Rasters wird jeweils als Geopunkt ausgewiesen, um die Anonymität zu garantieren.   </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
-- **Issued** `2020-08-24`
-- **Modified** `2025-02-17T14:01:01+00:00`
+- **Dataset_identifier** `100420`
+- **Title** `Wasserverbrauch im Kanton Basel-Stadt und in Binningen seit 1951`
+- **Description** `Der Datensatz „Wasserverbrauch im Kanton Basel-Stadt und in Binningen“ enthält Informationen zum Wasserverbrauch in dieser Region. Er umfasst jährliche Verbrauchsdaten seit 1951 sowie monatliche Verbrauchsdaten seit 2005. Die Daten stammen von den Industriellen Werken Basel (IWB) und werden vom Statistischen Amt des Kantons Basel-Stadt veröffentlicht. Die Erhebung erfolgt durch öffentliche Organe, insbesondere die IWB, wobei die Daten jeweils zum Monats- und Jahresende erfasst werden. Der Datensatz enthält verschiedene Kategorien des Wasserverbrauchs, darunter Haushaltungen und Gewerbe, Grossbezüger wie Industriebetriebe, öffentliche Brunnen sowie weitere öffentliche Zwecke. Zudem sind der Eigenbedarf der IWB und die Wasserverluste im Versorgungsnetz erfasst. Neben diesen Gesamtverbräuchen gibt es auch Angaben zum mittleren und grössten Tagesverbrauch pro Kopf. Die Daten werden in Litern angegeben und auf Jahres- oder Monatsebene aggregiert. Sie basieren auf der Wasserabgabe im eigenen Versorgungsgebiet, das den Kanton Basel-Stadt und Binningen umfasst, ohne Berücksichtigung von Transitlieferungen an Gemeinden ausserhalb des Versorgungsgebiets. Bis 1985 wurden Haushaltungen ohne Gewerbe separat ausgewiesen, während Industrie und Gewerbe bis zu diesem Zeitpunkt gemeinsam erfasst wurden. Die Kategorie „Öffentliche Brunnen“ umfasst Brunnen im Stadtgebiet, die durch die IWB betrieben und unterhalten werden. Zudem wurden die Werte für die Jahre 2015 bis 2019 im Jahr 2021 revidiert.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-02-17`
+- **Modified** `2025-02-17T15:01:30+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2019-05-05T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-02-13T23:00:00+00:00`
-- **Themes** `['Raum und Umwelt', 'Bevölkerung', 'Verwaltung', 'Öffentliche Ordnung und Sicherheit']`
-- **Keywords** `['Müll', 'Bebbisagg', 'illegal']`
-- **Publisher** `Stadtreinigung`
-- **Reference** `None`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Wasser']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `https://statistik.bs.ch/`
 
 
 # Load packages
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100070.csv')
+  csv_path <- file.path(data_path , '100420.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100070/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100420/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 

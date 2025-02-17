@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100417.
 - **Description** `<p>Der Datensatz umfasst Fragen und Antworten zum Eurovision Song Contest (ESC) und dient als strukturierte Informationsquelle für Interessierte. Die enthaltenen Informationen beziehen sich auf verschiedene Themen wie Tickets, Veranstaltungsorte, Programme und organisatorische Details.</p>`
 - **Contact_name** `None`
 - **Issued** `None`
-- **Modified** `2025-02-12T08:14:28+00:00`
+- **Modified** `2025-02-17T10:15:31+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
