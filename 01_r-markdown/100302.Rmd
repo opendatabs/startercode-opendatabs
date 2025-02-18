@@ -25,7 +25,7 @@ wurden keine Abwasserproben auf Influenza und RSV untersucht.</span><br></p><p><
 </div>`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2023-12-19`
-- **Modified** `2025-02-17T14:00:17+00:00`
+- **Modified** `2025-02-18T10:00:24+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-08-13T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
