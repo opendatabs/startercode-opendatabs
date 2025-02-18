@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-17"
+date: "2025-02-18"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100389.
 - **Modified** `2025-02-17T15:01:30+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2018-07-02T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-02-13T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-02-16T23:00:00+00:00`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Raum und Umwelt']`
 - **Keywords** `['Graffiti', 'Street Art', 'Wandkunst', 'öffentliche Kunst', 'Kultur', 'Wandbilder']`
 - **Publisher** `Stadtreinigung`
