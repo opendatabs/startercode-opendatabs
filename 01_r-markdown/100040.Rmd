@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-18"
+date: "2025-02-19"
 output: html_document
 ---
 
@@ -20,9 +20,9 @@ Statistische Nummerierung:
 Die Nummerierung der Blöcke setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr (im Label jeweils durch Punkte getrennt):
 - Blöcke haben keine Namensbezeichnung und werden lediglich über die Nummer referenziert.
 - Beispiel Block rund um die Clarakirche: BLO_ID 121014, die Bezeichnung (BLO_Label) lautet 12.1.014`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-02-18T15:21:22+00:00`
+- **Modified** `2025-02-19T05:03:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

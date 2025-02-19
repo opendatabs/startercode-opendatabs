@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-18"
+date: "2025-02-19"
 output: html_document
 ---
 
@@ -21,9 +21,9 @@ Im Gegensatz zum amtlichen Gemeindeverzeichnis der Schweiz wird für räumliche 
 - Die Stadt Basel (BFS-Code 2701) hat keine eigene Identifikationsnummer. Auswertungen beruhen auf einem Zusammenzug der 19 Wohnviertel, die von 01 bis 19 nummeriert sind.
 - Die Gemeinde Bettingen (BFS-Code 2702) hat die Wohnviertel-Nr. 20.
 - Die Gemeinde Riehen (BFS-Code 2703) hat die Wohnviertel-Nr. 30.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-02-18T15:21:25+00:00`
+- **Modified** `2025-02-19T05:03:32+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

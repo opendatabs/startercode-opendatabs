@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-18"
+date: "2025-02-19"
 output: html_document
 ---
 
@@ -22,9 +22,9 @@ Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnv
 (sowohl im Label als auch in der ID durch einen Unterstrich verbunden):
 - Blockseiten haben wie die Blöcke keine Namensbezeichnung und werden lediglich über die Nummer referenziert.
 - Beispiel Blockseite mit der Clarakirche: BLS_ID 121014_1741, die Bezeichnung (BLS_Label) lautet 12.1.014_1741`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-02-18T15:21:28+00:00`
+- **Modified** `2025-02-19T05:03:37+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

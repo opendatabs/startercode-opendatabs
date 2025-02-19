@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-18"
+date: "2025-02-19"
 output: html_document
 ---
 
@@ -15,9 +15,9 @@ Auto generated R starter code for data set 100259.
 - **Dataset_identifier** `100259`
 - **Title** `Gebäudeadressen und -informationen`
 - **Description** `Gebäudeadressen aller im kantonalen Datenmarkt geführten Gebäude (siehe <a href="https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310</a>).`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-13`
-- **Modified** `2025-02-18T15:22:31+00:00`
+- **Modified** `2025-02-19T05:05:02+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
