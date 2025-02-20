@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100391.
 - **Dataset_identifier** `100391`
 - **Title** `Kandidierende der Grossratswahlen nach Geschlecht seit 1968`
 - **Description** `<p style="">Dieser Datensatz zeigt die Kandidierenden der Grossratswahlen nach amtlichen Geschlecht seit 1968</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-08-26`
 - **Modified** `2024-10-21T09:03:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

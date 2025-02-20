@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100290.
 - **Dataset_identifier** `100290`
 - **Title** `BachApp: Extras`
 - **Description** `<p>Dieser Datensatz enthält Informationen, welche noch in keinem anderen kantonalen System geführt werden, aber für die BachApp benötigt werden. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
 - **Modified** `2025-01-13T06:15:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100335.
 - **Description** `<p>Dieser Datensatz enthält umfassende Informationen zu aktuellen und bevorstehende Baustellen (Baubewilligung erteilt) auf öffentlichem Grund im Kanton Basel-Stadt. Er enthält Informationen wie z. B. an welcher Strasse sich die Baustelle befindet, die Beschreibung des Projektes, mögliche Zusatzinformationen, Links zum Projekt und zu Anwohnerinformationen. Die Fallnummer der Allmendbewilligung und der Link zum OGD-Datensatz mit den Allmendbewilligungen sind ebenfalls im Datensatz aufgeführt.</p><p>Dieser Datensatz ist maschinenlesbar und barrierefrei. </p><p>
 </p><p>
 Diese Daten werden vom Tiefbauamt des Kantons Basel-Stadt zur Verfügung gestellt. Die Baustellen finden Sie auch auf einer interaktiven Karte unter <a href="https://baustellen.bs.ch" target="_blank">https://baustellen.bs.ch</a>. </p><p></p><p></p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-07-04`
 - **Modified** `2025-02-20T01:01:39+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100339.
 - **Dataset_identifier** `100339`
 - **Title** `Abstimmung vom 3. März 2024 Details`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmung vom 3. März 2024 für den Kanton Basel-Stadt auf Ebene Wahllokal.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-03-02`
 - **Modified** `2024-05-23T15:20:36+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

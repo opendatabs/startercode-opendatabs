@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100299.
 - **Dataset_identifier** `100299`
 - **Title** `Kennzahlen der Abstimmung vom 18. Juni 2023`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmungen vom 18. Juni 2023 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-06-17`
 - **Modified** `2024-05-23T15:23:09+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100154.
 - **Dataset_identifier** `100154`
 - **Title** `Abstimmung vom 26. September 2021 Details`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmung vom 26. September 2021 für den Kanton Basel-Stadt auf Ebene Wahllokal.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-09-26`
 - **Modified** `2024-05-23T15:29:58+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100287.
 - **Dataset_identifier** `100287`
 - **Title** `Baustellen in Gewässernähe`
 - **Description** `<p>Dieser Datensatz enthält Informationen zu Baustellen in Gewässernähe, über welche die Bevölkerung z.B. via BachApp informiert werden soll. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
 - **Modified** `2025-01-13T06:15:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100288.
 - **Description** `<p class="">Dieser Datensatz enthält den Sauberkeitsindex für alle Strassenabschnitte in der Stadt Basel. Zur Berechnung des Sauberkeitsindex wird wie folgt vorgegangen:</p><p>Auf den Kehrrichtfahrzeugen sind Kameras installiert, die während der Einsätze Videoaufnahmen der Strassen machen. Ein Computer durchsucht anschliessend diese Videoaufnahmen nach Abfällen. Dieser sortiert die Abfälle in verschiedene Abfallkategorien (Zigarettenstummel, Papier, PET-Flaschen etc.) und zählt die Anzahl der gefundenen Abfälle jeder Kategorie. Zusätzlich wird für jede Abfallkategorie der Verschmutzungsgrad und der Störfaktor bestimmt. Daraus wird der Sauberkeitsindex berechnet. Danach werden die Videoaufnahmen aus Datenschutzgründen umgehend gelöscht.</p><p></p><p>Der Sauberkeitsindex wird auf einer Skala von 0 bis 5 angegeben, wobei die Werte folgendermassen beurteilt werden:<br><span style="font-family: inherit; font-size: 0.875rem;">Kleiner als 3: schlecht<br></span><span style="font-family: inherit; font-size: 0.875rem;">Zwischen 3 und 4: mittel<br></span><span style="font-family: inherit; font-size: 0.875rem;">Grösser als 4: gut</span></p><p>
 Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für die gesamte Stadt von mindestens 4.5.
 </p><p></p><p></p><p></p><p class="">Der Datensatz wird monatlich mit den Daten des Vormonats aktualisiert.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-07-15`
 - **Modified** `2025-02-01T07:01:12+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

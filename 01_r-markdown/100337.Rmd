@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100337.
 - **Dataset_identifier** `100337`
 - **Title** `Resultate der Ersatzwahlen Regierungsrat 3. März 2024`
 - **Description** `Dieser Datensatz zeigt die Resultate des ersten Wahlgangs der Regierungsrats-Ersatzwahlen vom 3. März 2024. Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-03-02`
 - **Modified** `2024-04-07T14:15:48+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

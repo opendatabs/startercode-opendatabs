@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100393.
 - **Dataset_identifier** `100393`
 - **Title** `Kandidierende der Grossratswahlen 2024 nach Häufigkeit der Kandidatur seit 2008`
 - **Description** `<p style="">Dieser Datensatz zeigt die Kandidierenden der Grossratswahlen 2024 nach Häufigkeit ihrer Kandidatur seit 2008<br></p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-08-26`
 - **Modified** `2024-08-30T07:08:35+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

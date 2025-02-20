@@ -17,9 +17,9 @@ Auto generated R starter code for data set 100088.
 - **Description** `<p>Minütlich aktualisierte Anzahl freie Parkplätze der öffentlich zugänglichen Parkhäuser der Stadt Basel, bezogen  über das Parkleitsystem Basel (<a href="https://www.parkleitsystem-basel.ch" target="_blank">https://www.parkleitsystem-basel.ch</a>).<br></p>
 
 <p>Historische Daten sind im folgenden Datensatz vorhanden: <a href="https://data.bs.ch/explore/dataset/100014/" target="_blank">https://data.bs.ch/explore/dataset/100014/</a>. <br></p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2025-02-20T07:00:09+00:00`
+- **Modified** `2025-02-20T19:01:04+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2025-02-19T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-02-19T23:00:00+00:00`

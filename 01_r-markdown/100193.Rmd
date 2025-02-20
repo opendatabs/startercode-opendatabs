@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100193.
 - **Dataset_identifier** `100193`
 - **Title** `Fischereistatistik Basel-Stadt`
 - **Description** `<p>Die Fischereistatistik enthält alle Fische, die aus Gewässern des Kantons Basel-Stadt entnommen worden sind. Fänge invasiver Schwarzmeergrundeln (Schwarzmundgrundeln und Kesslergrundeln) werden separat registriert. </p><p>Die Karte der verschiedenen Gewässer gibt einen Hinweis auf die Orte, an denen gefischt wird. Es kann aus ihr nicht abgeleitet werden, wo das Fischen nicht erlaubt ist. </p><p>Die Daten werden jährlich ergänzt.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-08-15`
 - **Modified** `2022-10-24T08:54:57+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

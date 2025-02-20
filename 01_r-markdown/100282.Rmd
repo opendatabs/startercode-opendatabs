@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100282.
 - **Dataset_identifier** `100282`
 - **Title** `Resultate der Ständeratswahlen 22. Oktober 2023`
 - **Description** `<p class="MsoNormal" style="font-family: sans-serif;">Dieser Datensatz zeigt die Resultate der Ständeratswahl vom 22. Oktober 2023.<o:p></o:p></p><p style="font-family: sans-serif;"></p><p class="MsoNormal" style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-10-22`
 - **Modified** `2024-01-30T07:48:37+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

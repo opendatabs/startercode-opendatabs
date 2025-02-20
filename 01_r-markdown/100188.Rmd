@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100188.
 - **Dataset_identifier** `100188`
 - **Title** `Grosser Rat: Sitzungskalender`
 - **Description** `<p>Dieser Datensatz zeigt die Termine der Sitzungen des Grossen Rates Basel-Stadt. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-09`
 - **Modified** `2025-01-23T00:38:07+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100285.
 - **Dataset_identifier** `100285`
 - **Title** `Treppen und Ausstiegsleitern an Gewässern`
 - **Description** `<p>Ein- und Ausstigsmöglichkeiten in bzw. aus Rhein, Birs und Wiese, welche z.B. in der BachApp publiziert werden. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
 - **Modified** `2024-12-20T14:13:17+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

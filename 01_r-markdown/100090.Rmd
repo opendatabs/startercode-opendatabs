@@ -15,9 +15,9 @@ Auto generated R starter code for data set 100090.
 - **Dataset_identifier** `100090`
 - **Title** `Standorte Mess-Stationen Smart Climate Schallpegelmessungen`
 - **Description** `Der Datensatz zeigt die Standorte der Mess-Stationen für den Datensatz <a href="https://data.bs.ch/explore/dataset/100087/" target="_blank">«Smart Climate Schallpegelmessungen»</a>.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-25`
-- **Modified** `2024-10-04T12:49:43+00:00`
+- **Modified** `2025-02-20T11:51:58+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

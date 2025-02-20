@@ -22,7 +22,7 @@ Covid-19:</p>
 <p>Todesfälle Basel-Stadt nach Alter und Geschlecht: <a href="https://data.bs.ch/explore/dataset/100076/" target="_blank">https://data.bs.ch/explore/dataset/100076/</a>
 </p>
 <p>Covid-19 Dashboard: <a href="https://data.bs.ch/pages/covid-19-dashboard/" target="_blank">https://data.bs.ch/pages/covid-19-dashboard/</a><a href="https://data.bs.ch/pages/covid-19-dashboard/"></a></p><p></p><ul style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></ul><p></p><p><b style="box-sizing: border-box; font-weight: bolder;">Änderungsprotokoll:</b></p><p></p><ul><li>Die Erhebung der Werte wurde per 30. Juni 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "DAILY" auf "NEVER" geändert.</li></ul>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-11-24`
 - **Modified** `2024-03-13T14:01:52+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

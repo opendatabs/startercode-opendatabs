@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100104.
 - **Dataset_identifier** `100104`
 - **Title** `Kennzahlen der Abstimmung vom 29. November 2020`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmungen vom 29. November 2020 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-11-29`
 - **Modified** `2024-05-23T15:31:35+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

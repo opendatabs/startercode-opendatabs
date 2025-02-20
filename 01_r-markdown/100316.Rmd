@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100316.
 - **Dataset_identifier** `100316`
 - **Title** `Kandidierende der Nationalratswahlen 22. Oktober 2023`
 - **Description** `<p style="font-family: sans-serif;">Für die Nationalratswahlen vom 22. Oktober 2023 kandidieren 122 Personen auf insgesamt 32 Listen für den Kanton Basel-Stadt. Insgesamt werden vier Sitze im Nationalrat gewählt.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden aus dem Kanton Basel-Stadt nach Geschlecht, Jahrgang und Beruf sowie alle Listen und ihre Haupt- und Unterlistenverbindungen.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-09-15`
 - **Modified** `2024-02-15T13:50:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

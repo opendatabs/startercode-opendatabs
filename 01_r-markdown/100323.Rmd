@@ -35,9 +35,9 @@ Vorschriften der Norm ISO 7027 <br>
 normal"><span style="font-size: 10.5pt; font-family: Arial, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Messbetrieb / Unterhalt: <a href="https://www.bs.ch/wsu/aue" target="_blank">Amt
 für Umwelt und Energie Basel-Stadt (AUE-BS)</a> <br>
 (siehe https://www.bs.ch/wsu/aue)<o:p></o:p></span></p></div><p></p><p></p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-11-23`
-- **Modified** `2025-02-20T07:00:22+00:00`
+- **Modified** `2025-02-20T18:50:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2023-10-17T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-02-19T23:00:00+00:00`

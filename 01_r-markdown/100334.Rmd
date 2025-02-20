@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100334.
 - **Dataset_identifier** `100334`
 - **Title** `Kandidierende der Ersatzwahlen Regierungspräsidium 3. März 2024`
 - **Description** `<p style="font-family: sans-serif;">Für die Ersatzwahlen des Regierungspräsidiums vom 3. März 2024 kandidieren vier Personen.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden des ersten Wahlgangs nach Geschlecht, Jahrgang und Beruf.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-01-08`
 - **Modified** `2024-03-21T12:43:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100387.
 - **Dataset_identifier** `100387`
 - **Title** `Kandidierende der Regierungspräsidiumswahlen 20. Oktober 2024`
 - **Description** `<p style="font-family: sans-serif;">Für die Gesamterneuerungswahlen des Regierungspräsidiums vom 20. Oktober 2024 kandidieren drei Personen.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden des ersten Wahlgangs nach Geschlecht, Jahrgang und Beruf.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-08-26`
 - **Modified** `2024-08-30T07:08:39+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

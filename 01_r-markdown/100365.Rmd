@@ -24,7 +24,7 @@ Staatsarchivs ab. Mit der Erschliessung wird der Entstehungszusammenhang der
 Unterlagen nachvollziehbar gemacht und ihre Auffindbarkeit ermöglicht. Zur
 Erschliessungsarbeit gehören das Ordnen der Unterlagen, das Verzeichnen im
 Online-Archivkatalog, Verpacken, Etikettieren und Magazinieren.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-06-19`
 - **Modified** `2024-06-18T13:03:19+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`

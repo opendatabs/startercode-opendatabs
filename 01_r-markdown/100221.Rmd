@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100221.
 - **Dataset_identifier** `100221`
 - **Title** `Swisslos-Sportfonds Basel-Stadt`
 - **Description** `<p>Der Datensatz „Swisslos-Sportfonds Basel-Stadt“ dokumentiert die Vergabe von Fördermitteln aus dem Swisslos-Sportfonds im Kanton Basel-Stadt. Die Mittel dienen der Unterstützung des Breitensports, der Förderung von Sportvereinen und -verbänden sowie der Realisierung von Projekten im Leistungssport.</p><p>Der Datensatz enthält Informationen zu den begünstigten Sportvereinen und Organisationen, den geförderten Projekten sowie den jeweiligen Förderbeträgen. Die Unterstützung reicht von Beiträgen für Vereinsaktivitäten über die Anschaffung von Sportmaterial bis hin zur Durchführung von Veranstaltungen und Investitionen in Sportanlagen.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-02-10`
 - **Modified** `2025-02-07T02:00:48+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

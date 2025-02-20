@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100278.
 - **Dataset_identifier** `100278`
 - **Title** `Fischereiverbotszonen Rhein`
 - **Description** `<p>Der Datensatz beinhaltet die Zonen innerhalb des Kantons Basel-Stadt, in welchen das Fischen nicht erlaubt ist. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
 - **Modified** `2024-12-20T14:54:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

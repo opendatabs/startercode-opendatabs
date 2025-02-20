@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100279.
 - **Dataset_identifier** `100279`
 - **Title** `Abstimmung vom 12. März 2023 Details`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmung vom 12. März 2023 für den Kanton Basel-Stadt auf Ebene Wahllokal.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-03-11`
 - **Modified** `2024-05-23T15:24:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

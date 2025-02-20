@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100276.
 - **Dataset_identifier** `100276`
 - **Title** `Feuerstellen in Gewässernähe`
 - **Description** `<p>Gewässernahe Feuerstellen. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
 - **Modified** `2023-03-29T15:40:20+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

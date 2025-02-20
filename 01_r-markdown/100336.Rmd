@@ -14,8 +14,8 @@ Auto generated R starter code for data set 100336.
 
 - **Dataset_identifier** `100336`
 - **Title** `Einzugsgebiet der ARA Basel`
-- **Description** `<p>Das Untersuchungsgebiet des Abwassermonitoring umfasst das Einzugsgebiet der ARA Basel, welches sich hauptsächlich aus dem Kanton Basel-Stadt sowie den Gemeinden Allschwil, Binningen, Birsfelden, Bottmingen, Oberwil und Schönenbuch (alle Kanton Baselland) zusammensetzt.<br/></p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Description** `<p>Das Untersuchungsgebiet des Abwassermonitoring umfasst das Einzugsgebiet der ARA Basel, welches sich hauptsächlich aus dem Kanton Basel-Stadt sowie den Gemeinden Allschwil, Binningen, Birsfelden, Bottmingen, Oberwil und Schönenbuch (alle Kanton Baselland) zusammensetzt.<br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-01-18`
 - **Modified** `2024-01-18T14:39:47+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

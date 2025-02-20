@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100360.
 - **Dataset_identifier** `100360`
 - **Title** `Resultate der Ersatzwahlen Regierungsrat 7. April 2024 (2. Wahlgang)`
 - **Description** `<p class="MsoNormal" style="font-family: sans-serif;">Dieser Datensatz zeigt die Resultate des zweiten Wahlgangs der Regierungsrats-Ersatzwahlen vom 7. April 2024.</p><p class="MsoNormal" style="font-family: sans-serif;"><o:p></o:p></p><p style="font-family: sans-serif;"></p><p class="MsoNormal" style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">Kantonsblatt</a> (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">www.kantonsblatt.ch</a>) des Kantons Basel-Stadt publiziert werden.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-04-06`
 - **Modified** `2024-04-07T14:18:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

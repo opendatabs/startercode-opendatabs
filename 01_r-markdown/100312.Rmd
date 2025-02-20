@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100312.
 - **Dataset_identifier** `100312`
 - **Title** `Grosser Rat: Zuweisungen von Geschäften`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt Zuweisungen von Geschäften, die im Grossen Rat des Kantons Basel-Stadt behandelt werden.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-09-28`
 - **Modified** `2025-02-20T04:01:54+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100071.
 - **Dataset_identifier** `100071`
 - **Title** `Abstimmung 27. September 2020 Details`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmung vom 27. September 2020 für den Kanton Basel-Stadt auf Ebene Wahllokal.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-09-27`
 - **Modified** `2024-05-23T15:32:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

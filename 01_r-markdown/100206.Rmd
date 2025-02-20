@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100206.
 - **Dataset_identifier** `100206`
 - **Title** `Abstimmung vom 25. September 2022 Details`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmung vom 25. September 2022 für den Kanton Basel-Stadt auf Ebene Wahllokal.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-09-25`
 - **Modified** `2024-05-23T15:25:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

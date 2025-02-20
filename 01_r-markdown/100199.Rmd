@@ -18,7 +18,7 @@ Auto generated R starter code for data set 100199.
 
 Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr und müssen im Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse Messungen während einer ausserordentlichen Verkehrsführung (z.B. Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben. Diese Messungen sind ab dem Jahr 2022 in der Spalte «Ausserordentliche Verkehrsführung» mit «True» gekennzeichnet. Manipulationen an Geräten können zu fehlerhaften Messungen führen.
 </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-09-21`
 - **Modified** `2025-02-19T03:01:40+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100084.
 - **Dataset_identifier** `100084`
 - **Title** `Standorte Mess-Stationen Smart Climate Feinstaubmessungen`
 - **Description** `<p>Standorte der Mess-Stationen für Feinstaub für den Datensatz «Smart Climate Feinstaubmessungen» <a href="https://data.bs.ch/explore/dataset/100081/" target="_blank">https://data.bs.ch/explore/dataset/100081/</a>.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-05-13`
 - **Modified** `2021-01-12T15:57:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

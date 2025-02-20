@@ -23,7 +23,7 @@ eingeschaltet. Nachfolgend werden die Anzeigen ausgeschaltet und die
 Geschwindigkeit der Fahrzeuge an den Smiley-Geschwindigkeitsanzeigen wird
 erneut gemessen. Die letzte Phase "nach Ende" sind Messungen, die
 ausserhalb des im Projekt definierten Zeitraums vorfallen. <o:p></o:p></span></p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
 - **Modified** `2024-11-11T17:49:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

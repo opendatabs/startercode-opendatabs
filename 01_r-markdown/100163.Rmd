@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100163.
 - **Dataset_identifier** `100163`
 - **Title** `Kennzahlen der Abstimmung vom  28. November 2021`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmungen vom 28. November 2021 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.<br></p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-11-28`
 - **Modified** `2024-10-03T14:57:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

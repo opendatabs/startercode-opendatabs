@@ -16,9 +16,9 @@ Auto generated R starter code for data set 100089.
 - **Title** `Rhein Wasserstand, Pegel und Abfluss`
 - **Description** `<p>Dieser Datensatz zeigt den Wasserstand und die Abflussmenge des Rheins in Basel auf der Kleinbasler Seite auf Höhe des Birs-Zuflusses. Es liegen aktuelle Werte alle 5 Minuten vor. Die Messungen werden im Auftrag des Bundesamts für Umwelt durchgeführt (siehe <a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289" target="_blank">https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289</a>).</p>
 <p>Der Pegel wird berechnet als [Wasserstand] - 240 m ü. M., siehe <a href="https://port-of-switzerland.ch/hafenservice/pegel/" target="_blank">https://port-of-switzerland.ch/hafenservice/pegel</a>. </p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-29`
-- **Modified** `2025-02-20T06:00:08+00:00`
+- **Modified** `2025-02-20T18:55:04+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2020-06-21T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-02-19T23:00:00+00:00`

@@ -23,7 +23,7 @@ wurden keine Abwasserproben auf Influenza und RSV untersucht.</span><br></p><p><
 <div class="html_button btn-left">
     <a class="btn customButton large" href="https://data.bs.ch/pages/abwassermonitoring-dashboard/">Hier gehts zum Dashboard</a>
 </div>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
 - **Modified** `2025-02-18T10:00:24+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

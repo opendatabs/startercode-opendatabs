@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100284.
 - **Dataset_identifier** `100284`
 - **Title** `Grillstellen in Gewässernähe`
 - **Description** `<p>Der Datensatz zeigt die Koordinaten gewässernaher Grillstellen in Basel-Stadt.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
 - **Modified** `2025-01-13T06:15:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

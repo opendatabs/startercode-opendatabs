@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100277.
 - **Dataset_identifier** `100277`
 - **Title** `Statistiken der Smiley-Geschwindigkeitsanzeigen`
 - **Description** `<p>Die Statistik der Smiley-Geschwindigkeitsanzeigen fasst die Daten über die verschiedenen Phasen zusammen (Vormessung, Betrieb, Nachmessung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen.<br></p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
 - **Modified** `2024-11-08T09:57:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100169.
 - **Dataset_identifier** `100169`
 - **Title** `Kennzahlen der Abstimmung vom 13. Februar 2022`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Volksabstimmungen vom 13. Februar 2022 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.</p><p><a href="https://data.bs.ch/explore/dataset/100071/"></a></p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-02-13`
 - **Modified** `2024-05-23T15:28:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

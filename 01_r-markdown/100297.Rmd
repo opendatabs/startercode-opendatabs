@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100297.
 - **Dataset_identifier** `100297`
 - **Title** `Resultate der Nationalratswahlen 22. Oktober 2023 (aggregierte Daten)`
 - **Description** `<p class="MsoNormal" style="font-family: sans-serif;">Dieser Datensatz zeigt die aggregierten Resultate der Nationalratswahlen vom 22. Oktober 2023.<o:p></o:p></p><p style="font-family: sans-serif;"></p><p class="MsoNormal" style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-10-22`
 - **Modified** `2023-10-22T18:45:36+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

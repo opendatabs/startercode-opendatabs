@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100333.
 - **Dataset_identifier** `100333`
 - **Title** `Kandidierende der Ersatzwahlen Regierungsrat 3. März 2024`
 - **Description** `<p style="font-family: sans-serif;">Für die Ersatzwahlen eines Mitglieds des Regierungsrat vom 3. März 2024 kandidieren vier Personen.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden des ersten Wahlgangs nach Geschlecht, Jahrgang und Beruf.</p>`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-01-08`
 - **Modified** `2024-03-21T12:41:54+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
