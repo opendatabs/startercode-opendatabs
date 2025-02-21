@@ -4,7 +4,7 @@ date: "2025-02-21"
 output: html_document
 ---
 
-## Dataset: Coronavirus (Covid-19): Hospitalisierte in baselstädtischen Spitälern
+## Dataset: Coronavirus (COVID-19): Hospitalisierte in baselstädtischen Spitälern
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100109)
 
@@ -13,7 +13,7 @@ Auto generated R starter code for data set 100109.
 ## Metadata
 
 - **Dataset_identifier** `100109`
-- **Title** `Coronavirus (Covid-19): Hospitalisierte in baselstädtischen Spitälern`
+- **Title** `Coronavirus (COVID-19): Hospitalisierte in baselstädtischen Spitälern`
 - **Description** `<p>Dieser Datensatz zeigt Kennzahlen auf Tagesebene zu den in baselstädtischen Spitälern hospitalisierten Personen mit einem positiven Testresultat auf SARS-CoV-2. </p><p><b>Die tägliche Erhebung der baselstädtischen Spitalkapazitäten wurde per 1. Mai 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert.</b></p><p>Weitere Angaben zu den positiv auf SARS-CoV-2 getesteten Personen mit Wohnsitz im Kanton Basel-Stadt finden Sie unter diesem Link: <a href="https://data.bs.ch/explore/dataset/100073/table/?sort=timestamp">Coronavirus (COVID-19): Fallzahlen Basel-Stadt</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-12-10`

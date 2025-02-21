@@ -4,7 +4,7 @@ date: "2025-02-21"
 output: html_document
 ---
 
-## Dataset: Coronavirus (Covid-19): Fallzahlen und Inzidenzen Basel-Stadt
+## Dataset: Coronavirus (COVID-19): Fallzahlen und Inzidenzen Basel-Stadt
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100108)
 
@@ -13,7 +13,7 @@ Auto generated R starter code for data set 100108.
 ## Metadata
 
 - **Dataset_identifier** `100108`
-- **Title** `Coronavirus (Covid-19): Fallzahlen und Inzidenzen Basel-Stadt`
+- **Title** `Coronavirus (COVID-19): Fallzahlen und Inzidenzen Basel-Stadt`
 - **Description** `<p>Dieser Datensatz zeigt die Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz im Kanton Basel-Stadt sowie die kumulierten Werte über die letzten 7 resp. 14 Tage, die jeweiligen Mittelwerte und die Inzidenzen pro 100 000 EinwohnerInnen gemäss <a href="https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/erhebungen/statpop.html" target="_blank">STATPOP</a>. </p><p>Die Zahlen werden gemäss dem Datum des Test-Resultats ausgewiesen, also gemäss jenem Datum, an dem ein Testresultat vorliegt. Dies geschieht in aller Regel innerhalb von 24 Stunden nach einem erfolgten Test. Bei nachträglich eintreffenden Meldungen werden die Zahlen der Vortage entsprechend korrigiert.</p><p></p><ul style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></ul><p></p><p><b style="box-sizing: border-box; font-weight: bolder;">Änderungsprotokoll:</b></p><ul><li>Die Erhebung der Werte wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "WEEKLY" auf "NEVER" geändert.</li></ul><p><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-12-04`
