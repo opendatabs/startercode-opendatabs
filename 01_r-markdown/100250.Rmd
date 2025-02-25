@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-24"
+date: "2025-02-25"
 output: html_document
 ---
 
@@ -18,7 +18,7 @@ Auto generated R starter code for data set 100250.
 Die Strassentypen und Wege zeigen die Strassentypen (nach VSS - Schweizerischer Verband der Strassen- und Verkehrsfachleute) und Wege im Kanton Basel-Stadt. Darunter fallen verkehrsorientierte Strassen, siedlungsorientierte Strassen und Wege im Kanton.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-12-23`
-- **Modified** `2025-02-24T05:09:16+00:00`
+- **Modified** `2025-02-25T05:10:09+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

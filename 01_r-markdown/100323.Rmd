@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-24"
+date: "2025-02-25"
 output: html_document
 ---
 
@@ -37,10 +37,10 @@ für Umwelt und Energie Basel-Stadt (AUE-BS)</a> <br>
 (siehe https://www.bs.ch/wsu/aue)<o:p></o:p></span></p></div><p></p><p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-11-23`
-- **Modified** `2025-02-24T17:50:42+00:00`
+- **Modified** `2025-02-25T07:00:28+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2023-10-17T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-02-23T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-02-24T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Rhein', 'Trübung', 'Lichtdurchlässigkeit', 'Baden']`
 - **Publisher** `Amt für Umwelt und Energie`

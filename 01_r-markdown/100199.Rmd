@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-02-24"
+date: "2025-02-25"
 output: html_document
 ---
 
@@ -20,10 +20,10 @@ Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr un
 </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-09-21`
-- **Modified** `2025-02-19T03:01:40+00:00`
+- **Modified** `2025-02-25T03:01:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-02-14T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-02-23T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Verkehrszählung', 'Verkehr', 'Statistik', 'Durchschnitt', 'Tagesverkehr', 'Belästigung', 'Auslastung', 'DTV']`
 - **Publisher** `Amt für Mobilität`
