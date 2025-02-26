@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100326.
 - **Dataset_identifier** `100326`
 - **Title** `Lebendgeborene seit 1901`
 - **Description** `Dieser Datensatz zeigt die jährliche Anzahl Lebendgeburten nach demografischen Merkmalen des Kindes und der Mutter und nach Geschlecht des Kindes seit 1901.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-01-03`
 - **Modified** `2025-01-14T14:30:32+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

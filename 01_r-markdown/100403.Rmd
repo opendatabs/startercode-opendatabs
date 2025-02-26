@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100403.
 - **Dataset_identifier** `100403`
 - **Title** `Gesundheitsversorgung (GSV): Patientenkennzahlen`
 - **Description** `Dieser Datensatz enthält Kennzahlen zur stationären Gesundheitsversorgung von Patienten aus Basel-Stadt sowie von ausserkantonalen Patienten, die in baselstädtischen Spitälern behandelt werden. Er zeigt, in welche Kantone baselstädtische Patienten zur stationären Behandlung gehen und aus welchen Kantonen die Patienten stammen, die in baselstädtischen Spitälern behandelt werden. Der Datensatz beschreibt Behandlungsfälle, Pflegetage und die Verteilung nach Fachbereichen, Geschlechtern, Altersgruppen und Diagnosen. Erfasst werden sowohl Fälle aus der Akutsomatik als auch aus der Psychiatrie und Rehabilitation. Der Fokus liegt auf Patienten mit Wohnsitz im Kanton Basel-Stadt.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-12-20`
 - **Modified** `2024-12-17T17:02:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100378.
 - **Dataset_identifier** `100378`
 - **Title** `Gesundheitsversorgung (GSV): Pflegebedürftige im Bereich der Pflege zu Hause (PzH)`
 - **Description** `Dieser Datensatz enthält Kennzahlen zu Pflegebedürftigen im Bereich der Pflege zu Hause (PzH). Er umfasst Daten zur Anzahl der Pflegebedürftigen, aufgeschlüsselt nach Geschlecht, sowie Informationen zum Durchschnittsalter der Pflegebedürftigen insgesamt und getrennt nach Frauen und Männern.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-12-20`
 - **Modified** `2024-11-26T10:30:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

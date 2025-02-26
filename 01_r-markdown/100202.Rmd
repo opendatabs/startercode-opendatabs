@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100202.
 - **Dataset_identifier** `100202`
 - **Title** `Zuordnung von Parzellen auf Statistische Raumeinheiten`
 - **Description** `Zuordnung von Liegenschaften und Allmendparzellen auf Statistische Raumeinheiten (Wohnviertel, Bezirk, Block). Zur Methodik: Von jeder Parzelle wird ein Mittelpunkt berechnet (Zentroid), und mit der Geometrie der statistischen Raumeinheiten verschnitten. Falls ein Parzellenmittelpunkt auf eine Grenze zwischen mehreren Raumeinheiten zu liegen kommt, so wird die Parzelle all diesen Raumeinheiten zugeordnet (es entstehen dadurch pro Parzelle mehrere Zeilen im Datensatz). Parzellen auf dem Rhein werden keiner statistischen Raumeinheit zugeordnet.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-10-03`
 - **Modified** `2023-01-02T15:26:01+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

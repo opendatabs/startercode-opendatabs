@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100197.
 - **Dataset_identifier** `100197`
 - **Title** `Wohnbevölkerung nach Postleitzahl seit 1979`
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt am Jahresende auf Ebene der Postleitzahlen-Gebiete ab dem Jahr 1979. Diese Gebiete orientieren sich nicht an den statistischen Raumeinheiten (Wohnviertel, Bezirk, Block,…), sondern wurden von der Schweizerischen Post vergeben.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-06-02`
 - **Modified** `2025-01-01T02:30:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

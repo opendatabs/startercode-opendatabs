@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100320.
 - **Dataset_identifier** `100320`
 - **Title** `Gesundheitsversorgung (GSV): Spitalkennzahlen`
 - **Description** `Wichtige Kennzahlen der baselstädtischen Spitäler. Dieser Datensatz fliesst in den Bericht des Bereiches Gesundheitsversorgung (GSV) des Gesundheitsdepartements, vor allem in Form eines Dashboards.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-15`
 - **Modified** `2024-12-11T13:45:44+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

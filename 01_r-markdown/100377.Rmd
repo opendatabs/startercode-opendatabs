@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100377.
 - **Dataset_identifier** `100377`
 - **Title** `Gesundheitsversorgung (GSV): Tagesgäste von Tages- und Nachtpflegeeinrichtungen (TNP)`
 - **Description** `Dieser Datensatz enthält Kennzahlen zu den Tagesgästen von Tages- und Nachtpflegeeinrichtungen (TNP) im Kanton Basel-Stadt. Er umfasst Daten zur Anzahl der Gäste, aufgeschlüsselt nach Geschlecht, sowie Informationen zum Durchschnittsalter der Gäste.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-12-20`
 - **Modified** `2024-11-26T10:30:47+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100191.
 - **Dataset_identifier** `100191`
 - **Title** `Studierende der Universität Basel nach Geschlecht und Fakultät`
 - **Description** `Der Datensatz zeigt die Studierenden der Universität Basel nach Geschlecht, Fakultät und Staatsangehörigkeit. Die Daten werden jährlich aktualisiert.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-05-02`
 - **Modified** `2025-01-07T14:45:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

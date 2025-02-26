@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100122.
 - **Dataset_identifier** `100122`
 - **Title** `Schülerprognose Riehen und Bettingen`
 - **Description** `Das Statistische Amt erstellt kleinräumige Prognosen zu den Schülerzahlen in den öffentlichen Schulen der Gemeinden Riehen und Bettingen. Die Schülerzahlen werden für die ersten 8 Schulstufen (Kindergarten und Primarschule), 13 Schulperimeter und 5 Schuljahre in die Zukunft prognostiziert. Die Perimeter dienen als Planungsgrundlage und nicht als effektive Einzugsgebiete. Die Prognosen werden im Auftrag der Gemeinde Riehen erstellt und jährlich aktualisiert. Die Schülerinnen und Schüler mit dem Schutzstatus S werden in diesem Datensatz nicht ausgewiesen.`
-- **Contact_name** `Fachstelle für OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-03-23`
 - **Modified** `2024-06-05T06:37:55+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
