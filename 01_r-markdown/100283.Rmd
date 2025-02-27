@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100283.
 - **Dataset_identifier** `100283`
 - **Title** `Buvetten in Gewässernähe`
 - **Description** `<p>Der Datensatz enthält Informationen zu den gewässernahen Buvetten, welche z.B. auf der Karte in der BachApp verzeichnet sind. </p>`
-- **Contact_name** `Fachstelle OGD Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
 - **Modified** `2025-01-13T06:15:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`

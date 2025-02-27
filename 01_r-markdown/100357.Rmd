@@ -21,7 +21,7 @@ Man kann die LiDAR-Daten in Form einer png- und pgw-Datei in der Tabellenansicht
 <a href="https://data-bs.ch/stata/stadtgaertnerei/Baumkronenbedeckung_2012.zip" target="_blank">https://data-bs.ch/stata/stadtgaertnerei/Baumkronenbedeckung_2012.zip</a><br><a href="https://data-bs.ch/stata/stadtgaertnerei/Baumkronenbedeckung_2021.zip" target="_blank">https://data-bs.ch/stata/stadtgaertnerei/Baumkronenbedeckung_2021.zip</a></p><p>Auf der Website des Tiefbauamts können Sie die Daten mit dem GeoViewer betrachten: <a href="https://tiefbauamt-bs.ch/geoviewer/lidar" target="_blank">https://tiefbauamt-bs.ch/geoviewer/lidar</a></p><p>Detailinformationen zur LiDAR-Technologie finden Sie hier: <a href="https://www.swisstopo.admin.ch/de/lidar-daten-swisstopo" target="_blank">https://www.swisstopo.admin.ch/de/lidar-daten-swisstopo</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-03-23`
-- **Modified** `2025-02-20T11:47:35+00:00`
+- **Modified** `2025-02-27T15:27:12+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2012-12-30T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`

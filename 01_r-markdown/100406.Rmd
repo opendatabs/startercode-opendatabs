@@ -4,7 +4,7 @@ date: "2025-02-27"
 output: html_document
 ---
 
-## Dataset: OGD Dashboards
+## Dataset: Dashboards - Open Data Basel-Stadt
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100406)
 
@@ -13,9 +13,9 @@ Auto generated R starter code for data set 100406.
 ## Metadata
 
 - **Dataset_identifier** `100406`
-- **Title** `OGD Dashboards`
-- **Description** `<p>Dieser Datensatz umfasst eine detaillierte Beschreibung der von der Fachstelle für Open Government Data (OGD) des Kantons Basel-Stadt entwickelten Dashboards. Die Dashboards dienen als visuelle Hilfsmittel zur Darstellung von Kennzahlen und Daten zu verschiedenen gesellschaftlichen Themen im Kanton Basel-Stadt.
-Die Fachstelle für Open Government Data im Kanton Basel-Stadt erstellt und pflegt diese Dashboards, um öffentlich relevante Daten benutzerfreundlich und transparent zu präsentieren.</p>`
+- **Title** `Dashboards - Open Data Basel-Stadt`
+- **Description** `<p>Dieser Datensatz umfasst eine detaillierte Beschreibung der von Open Data Basel-Stadt entwickelten Dashboards. Die Dashboards dienen als visuelle Hilfsmittel zur Darstellung von Kennzahlen und Daten zu verschiedenen gesellschaftlichen Themen im Kanton Basel-Stadt.
+Open Data Basel-Stadt erstellt und pflegt diese Dashboards, um öffentlich relevante Daten benutzerfreundlich und transparent zu präsentieren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-11-14`
 - **Modified** `2025-01-24T07:40:49+00:00`
