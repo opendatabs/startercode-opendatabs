@@ -4,7 +4,7 @@ date: "2025-03-04"
 output: html_document
 ---
 
-## Dataset: Verkehrsreiche Strassen (50 km/h oder mehr)
+## Dataset: Verkehrsreiche Strassen (Tempo 50 oder mehr)
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100034)
 
@@ -13,7 +13,7 @@ Auto generated R starter code for data set 100034.
 ## Metadata
 
 - **Dataset_identifier** `100034`
-- **Title** `Verkehrsreiche Strassen (50 km/h oder mehr)`
+- **Title** `Verkehrsreiche Strassen (Tempo 50 oder mehr)`
 - **Description** `Der Velostadtplan zeigt dir passende Routen zu deinem Ziel und liefert Ideen, wohin du mit deinem Velo besonders gut fahren kannst. Er ist die elektronische Version der faltbaren Papierkarte, die im Buchhandel, bei Basel Tourismus, Pro Velo und Veloplus erhältlich ist.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
