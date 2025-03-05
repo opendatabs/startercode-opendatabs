@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100003.
 - **Description** `Entwicklung des Basler Index der Konsumentenpreise BIK (Basis Dezember 2020 = 100) nach Hauptgruppe seit 1939.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-02-13T07:37:40+00:00`
+- **Modified** `2025-03-05T08:09:23+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1939-07-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-01-30T23:00:00+00:00`
