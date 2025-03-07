@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-03-06"
+date: "2025-03-07"
 output: html_document
 ---
 
@@ -17,10 +17,10 @@ Auto generated R starter code for data set 100271.
 - **Description** `<p>Hydrologischen Vorhersagen (Wasserstand und Abfluss) für die Station "Rhein - Basel, Rheinhalle".</p><p>Die Vorhersagen basieren  auf den Meteo-Modellen ICON-CH1-EPS, ICON-CH2-EPS und IFS. Am Anfang der Zeitreihen stehen 24 Std. Messwerte, anschliessend fangen die Prognosen an. </p><p>Bei den ICON-Modellen wird der Kontroll-Lauf in den Spalten "Wasserstand" und "Abflussmenge" ausgewiesen. Der Kontroll-Lauf ist die hydrologische Vorhersage basierend auf der meteorologischen Kontrollvorhersage.</p><p>Stationsinfo: Die Station befindet sich auf der Kleinbasler Seite auf Höhe des Birs-Zuflusses.</p><p>Weitere Informationen sind hier zu finden: <a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289" target="_blank">https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289</a><a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289" target="_blank"></a></p><p><b>Änderungsprotokoll:</b></p><p><b>30.05.2024:</b> Für die numerische Vorhersage wurde das Wettermodell COSMO mit dem neuen Wettermodell ICON (Icosahedral Nonhydrostatic Weather and Climate Model) ersetzt. Mehr Infos dazu finden Sie hier: <a href="https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html" target="_blank">https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-03-07`
-- **Modified** `2025-03-06T19:00:20+00:00`
+- **Modified** `2025-03-07T07:00:28+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
-- **Temporal_coverage_start_date** `2025-03-03T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-03-14T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2025-03-04T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-03-15T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Vorhersage', 'Gewässer', 'Fliessgewässer', 'Hydrologie']`
 - **Publisher** `Bundesamt für Umwelt BAFU`

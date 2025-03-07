@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-03-06"
+date: "2025-03-07"
 output: html_document
 ---
 
@@ -17,10 +17,10 @@ Auto generated R starter code for data set 100018.
 - **Description** `Allmendbewilligungen beinhaltet sämtliche Nutzungen, welche im öffentlichen Raum (Allmend) stattfinden. Die dargestellten genutzten Flächen sind nicht verbindlich.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-03-06T05:15:56+00:00`
+- **Modified** `2025-03-07T05:16:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `1984-11-04T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2112-12-19T23:00:00+00:00`
+- **Temporal_coverage_start_date** `1927-03-23T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2999-12-31T23:00:00+00:00`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Bau- und Wohnungswesen', 'Geographie']`
 - **Keywords** `['Baustelle', 'Plakat', 'Anlass', 'Fest', 'Party', 'Umleitung']`
 - **Publisher** `Tiefbauamt`
