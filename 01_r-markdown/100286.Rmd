@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-03-10"
+date: "2025-03-11"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100286.
 - **Description** `Die Smiley-Geschwindigkeitsanzeigen dienen der Kantonspolizei Basel-Stadt zur Erhöhung der Verkehrssicherheit an der betreffenden Örtlichkeit. Die Wechselanzeige von der aktuell gefahrenen Geschwindigkeit und Smiley-Symbol (Lob oder Tadel) ohne Repression weist auf freundliche Weise auf ein allfälliges Fahrverhalten hin. Durch diese Selbstkontrolle soll das Fahrverhalten positiv beeinflusst, die vorgeschriebene Geschwindigkeit besser eingehalten und die Aufmerksamkeit der Verkehrsteilnehmenden erhöht werden. Mit den Geräten können zudem Verkehrsdaten anonym erfasst werden. Die Geschwindigkeitsanzeigen stehen nicht in einem Zusammenhang mit Ordnungsbussen oder einer strafrechtlichen Verfolgung.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-04-06`
-- **Modified** `2025-03-10T05:10:30+00:00`
+- **Modified** `2025-03-11T05:10:16+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-07-30T22:00:00+00:00`
