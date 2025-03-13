@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100245.
 - **Description** `Dieser Datensatz beinhaltet den täglichen Stromverbrauch sowie den mittels eines Modells berechneten, anhand des Kalendertages und der Witterung zu erwartenden Stromverbrauch.<br>Der Stromverbrauch ist die Summe der elektrischen Energie, die im Kanton Basel-Stadt täglich aus dem Netz bezogen wird, inklusive Netzverluste. Der tägliche Stromverbrauch ergibt sich als Summe des viertelstündlich ausgewiesenen Stromverbrauchs im OGD-Datensatz "Kantonaler Stromverbrauch" (<a href="https://data.bs.ch/explore/dataset/100233/">https://data.bs.ch/explore/dataset/100233/</a>).<br><br>Der Code des Modells kann selber ausgeführt und weiterentwickelt werden. Hierfür wird Renku verwendet. Renku ist eine Plattform, die verschiedene Werkzeuge für reproduzierbare und kollaborative Datenanalyseprojekte bündelt:<a href="https://renkulab.io/projects/statabs/reproducible-research/erwarteter-stromverbrauch-basel-stadt">https://renkulab.io/projects/statabs/reproducible-research/erwarteter-stromverbrauch-basel-stadt</a>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-02-16`
-- **Modified** `2025-03-13T06:15:35+00:00`
+- **Modified** `2025-03-13T18:15:37+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

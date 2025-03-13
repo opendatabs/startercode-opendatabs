@@ -15,9 +15,9 @@ Auto generated R starter code for data set 100414.
 - **Dataset_identifier** `100414`
 - **Title** `Tägliche Ankünfte und Logiernächte nach Herkunftsland`
 - **Description** `Dieser Datensatz zeigt die Anzahl Ankünfte und Logiernächte in baselstädtischen Hotels nach Herkunftsland und Kategorie auf täglicher Basis.`
-- **Contact_name** `Open Data Basel-Stadt`
+- **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2025-02-06`
-- **Modified** `2025-02-26T14:33:58+00:00`
+- **Modified** `2025-03-13T14:02:19+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
