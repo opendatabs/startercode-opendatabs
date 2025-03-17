@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100069.
 - **Description** `<p>Der Datensatz enthält die Analysedaten aus der binationalen Rheinüberwachungsstation (RÜS) in Weil am Rhein (Rhein-Kilometer 171,37) seit Bestehen der Station im Jahr 1993 aus der Matrix Wasser.</p><p>Der Rhein wird aktuell auf 670 Schadstoffe untersucht, 420 davon täglich. Der Unterhalt der Anlage und die Analytik werden durch das Amt für Umwelt und Energie des Kantons Basel-Stadt (AUE) geleistet. Auftraggeber sind die Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg (LUBW) und das schweizerische Bundesamt für Umwelt (BAFU).</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues" target="_blank">https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues</a></p><p>Die Daten einzelner Jahre ab dem Jahr 1993 können heruntergeladen werden unter der URL mit dem Muster https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_[JAHR].csv, also zum Beispiel für das Jahr 2020 hier: <a href="https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_archive/gew_rhein_rues_wasser_2020.csv" target="_blank">https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_archive/gew_rhein_rues_wasser_2020.csv</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-04-06`
-- **Modified** `2025-03-15T06:02:53+00:00`
+- **Modified** `2025-03-17T06:03:07+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1992-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`

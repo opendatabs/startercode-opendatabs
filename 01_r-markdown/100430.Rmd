@@ -4,27 +4,27 @@ date: "2025-03-17"
 output: html_document
 ---
 
-## Dataset: Wohnbevölkerung nach Staatsangehörigkeit und Bezirk
+## Dataset: Lichtsignalanlagen
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100061)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100430)
 
-Auto generated R starter code for data set 100061.
+Auto generated R starter code for data set 100430.
 
 ## Metadata
 
-- **Dataset_identifier** `100061`
-- **Title** `Wohnbevölkerung nach Staatsangehörigkeit und Bezirk`
-- **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Bezirk. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB).`
+- **Dataset_identifier** `100430`
+- **Title** `Lichtsignalanlagen`
+- **Description** `Der Datensatz Lichtsignalanlagen umfasst alle Standorte von Lichtsignalanalgen Basel-Stadt, welche durch die Abteilung Verkehrssteuerung vom Amt für Mobilität projektiert, gebaut und betrieben werden.`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2020-03-12`
-- **Modified** `2025-03-17T10:38:57+00:00`
+- **Issued** `2025-03-17`
+- **Modified** `2025-03-17T18:30:48+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Bevölkerung']`
-- **Keywords** `None`
-- **Publisher** `Statistisches Amt`
-- **Reference** `https://www.basleratlas.ch/`
+- **Themes** `['Mobilität und Verkehr']`
+- **Keywords** `['Verkehr']`
+- **Publisher** `Amt für Mobilität`
+- **Reference** `www.geo.bs.ch/lsa; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/bcf11578-c1f7-47d7-b424-8136adad07c9`
 
 
 # Load packages
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100061.csv')
+  csv_path <- file.path(data_path , '100430.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100061/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100430/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
