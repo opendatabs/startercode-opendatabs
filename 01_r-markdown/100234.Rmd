@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-03-21"
+date: "2025-03-22"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100234.
 - **Description** `Dieser Datensatz beinhaltet Informationen über die Grundnutzung überlagernder Flächen und ist ein Teil des Geodatenmodelles des Kantons Basel-Stadt zum Thema ?Nutzungsplanung?.<br>Weitere Daten zum Thema ?Nutzungsplanung?: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-12-16`
-- **Modified** `2025-03-21T05:06:06+00:00`
+- **Modified** `2025-03-22T05:06:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1941-02-12T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-02-12T23:00:00+00:00`
