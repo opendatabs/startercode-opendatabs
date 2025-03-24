@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100106.
 - **Description** `Dieser Datensatz zeigt die Anzahl Logiernächte, verfügbare und belegte Zimmer in baselstädtischen Hotels nach Kategorie auf täglicher Basis.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-02-03`
-- **Modified** `2025-02-26T08:01:40+00:00`
+- **Modified** `2025-03-24T07:45:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2014-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-01-30T23:00:00+00:00`
