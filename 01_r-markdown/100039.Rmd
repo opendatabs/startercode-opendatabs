@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-03-26"
+date: "2025-03-27"
 output: html_document
 ---
 
@@ -22,7 +22,7 @@ Die Nummerierung der Bezirke setzt sich zusammen aus der zweistelligen Wohnviert
 - Beispiel für das Wohnviertel Kleinhüningen ohne Bezirke (19.0): BEZ_ID 190, die Bezeichnung (BEZ_Label) lautet 19.0`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-03-26T05:03:43+00:00`
+- **Modified** `2025-03-27T05:03:19+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

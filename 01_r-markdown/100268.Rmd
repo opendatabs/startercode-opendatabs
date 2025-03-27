@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-03-26"
+date: "2025-03-27"
 output: html_document
 ---
 
@@ -25,7 +25,7 @@ erneut gemessen. Die letzte Phase "nach Ende" sind Messungen, die
 ausserhalb des im Projekt definierten Zeitraums vorfallen. <o:p></o:p></span></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
-- **Modified** `2024-11-11T17:49:21+00:00`
+- **Modified** `2025-03-26T19:03:44+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-02-08T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-10-16T22:00:00+00:00`
