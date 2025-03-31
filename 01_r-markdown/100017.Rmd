@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-03-30"
+date: "2025-03-31"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100017.
 - **Description** `Zum Kanton Basel-Stadt zählen die Stadt Basel und die Gemeinden Riehen und Bettingen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-03-30T05:02:52+00:00`
+- **Modified** `2025-03-31T05:02:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2008-01-03T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2008-01-03T23:00:00+00:00`
