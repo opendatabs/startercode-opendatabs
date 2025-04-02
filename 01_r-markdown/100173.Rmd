@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-04-01"
+date: "2025-04-02"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100173.
 - **Modified** `2025-04-01T12:31:06+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2011-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2024-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-01-31T23:00:00+00:00`
 - **Themes** `['Bevölkerung', 'Statistische Grundlagen']`
 - **Keywords** `['Alter', 'Altersstruktur', 'Bevölkerungsbestand', 'Demographie', 'Geschlecht', 'Todesfälle', 'Einwohnerzahl', 'Bevölkerungsstruktur', 'Tod', 'Verstorben', 'Sterberate']`
 - **Publisher** `Statistisches Amt`
