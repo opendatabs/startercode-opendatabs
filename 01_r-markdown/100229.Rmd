@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100229.
 - **Description** `Dieser Datensatz zeigt die Resultate der Volksabstimmungen im Kanton Basel-Stadt seit 1875. Die Daten vor 1921 wurden von <a href="https://baselvotes.ch/" target="_blank">baselvotes (https://baselvotes.ch)</a> zur Verfügung gestellt. Seit 1921 basieren die Daten auf den Statistischen Jahrbüchern. Für jede Abstimmungsvorlage sind alle amtlich publizierten Kennzahlen zum Schlussresultat ausgewiesen.<br><br>Zusätzlich sind alle Vorlagen inhaltlich dem hauptsächlich betroffenen Politikbereich zugeordnet. Die Zuteilung erfolgt auf Basis der Einteilung des Bundesamtes für Statistik, die im eidgenössischen Abstimmungsdatensatz der Datenplattform <a '="" href="https://swissvotes.ch/votes" target="_blank">swissvotes (https://swissvotes.ch/votes)</a> des Instituts für Politikwissenschaft der Universität Bern verwendet wird.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-12-22`
-- **Modified** `2024-11-24T20:00:32+00:00`
+- **Modified** `2025-04-04T08:31:50+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1875-04-18T23:30:14+00:00`
 - **Temporal_coverage_end_date** `2024-11-23T23:00:00+00:00`

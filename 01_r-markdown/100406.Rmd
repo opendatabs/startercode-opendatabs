@@ -18,7 +18,7 @@ Auto generated R starter code for data set 100406.
 Open Data Basel-Stadt erstellt und pflegt diese Dashboards, um öffentlich relevante Daten benutzerfreundlich und transparent zu präsentieren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-11-14`
-- **Modified** `2025-01-24T07:40:49+00:00`
+- **Modified** `2025-04-04T08:33:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

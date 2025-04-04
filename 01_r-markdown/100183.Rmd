@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100183.
 - **Description** `<p>Dieser Datensatz zeigt die SARS-CoV-2-Tests, welche ab Mitte März 2022 an Schülerinnen und Schülern (SuS) sowie Lehrpersonen an baselstädtischen Schulen durchgeführt wurden. Es werden die Anzahl durchgeführter Tests sowie die Test-Positivitätsrate pro Woche aufgeführt. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a><a href="https://www.coronavirus.bs.ch/testen/testen-in-schulen.html" target="_blank"></a></p><p>Daten zu Massentests an Schulen vor Mitte März 2022, sowie in Betrieben im Kanton Basel-Stadt sind hier zu finden: <a href="https://data.bs.ch/explore/?sort=modified&amp;q=massentests" target="_blank">https://data.bs.ch/explore/?sort=modified&amp;q=massentests</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-06-22`
-- **Modified** `2023-02-14T07:00:23+00:00`
+- **Modified** `2025-04-04T08:31:40+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2022-03-13T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2023-02-12T23:00:00+00:00`

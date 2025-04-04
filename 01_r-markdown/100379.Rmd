@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100379.
 - **Description** `<p>Dieser Datensatz enthält Informationen zu den Kandidaturen für alle Gerichtspräsidienwahlen seit 2024<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-06-25`
-- **Modified** `2024-06-27T07:51:16+00:00`
+- **Modified** `2025-04-04T08:33:19+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

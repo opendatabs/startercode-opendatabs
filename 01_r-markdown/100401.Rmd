@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100401.
 - **Description** `<p class="MsoNormal" style="font-family: sans-serif;">Dieser Datensatz zeigt die Resultate des ersten Wahlgangs der Regierungspräsidiumswahl vom 20. Oktober 2024.</p><p style="font-family: sans-serif;"></p><p class="MsoNormal" style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-10-19`
-- **Modified** `2024-10-20T20:21:34+00:00`
+- **Modified** `2025-04-04T08:33:24+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

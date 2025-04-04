@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100132.
 - **Description** `<p>Dieser Datensatz zeigt die Resultate des 1. Wahlgangs der Wahl eines Mitglieds des Gerichts für fürsorgerische Unterbringung vom 9. Mai 2021. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-05-10`
-- **Modified** `2024-10-25T16:36:38+00:00`
+- **Modified** `2025-04-04T08:31:14+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

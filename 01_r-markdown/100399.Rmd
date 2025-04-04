@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100399.
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Wahl der 100 Mitglieder des Grossen Rates vom 20. Oktober 2024. </p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-10-19`
-- **Modified** `2024-10-25T12:44:37+00:00`
+- **Modified** `2025-04-04T08:33:28+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

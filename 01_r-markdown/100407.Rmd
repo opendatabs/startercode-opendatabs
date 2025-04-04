@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100407.
 - **Description** `<p>Dieser Datensatz zeigt die Resultate des zweiten Wahlgangs der Regierungsratswahlen vom 24. November 2024. </p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-11-23`
-- **Modified** `2024-11-24T15:20:27+00:00`
+- **Modified** `2025-04-04T08:33:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100238.
 - **Description** `Der Datensatz zeigt die Bevölkerung des Kantons Basel-Stadt nach Heimat, 1-Jahres-Altersklassen am Ende des Jahres. Die Daten werden jährlich aktualisiert. <br><br>Methodischer Hinweise: <br>- In der Kategorie CH sind auch die Kantonsbürger (Kategorie BS) enthalten. Addiert man die beiden Kategorien, so werden die Kantonsbürger doppelt gezählt.<br>- In den Jahren von 1964 bis 1990 basiert die Bevölkerungszahlen auf Fortschreibungen von Volkszählungen; <br>- In den Jahren von 1990 bis 2011 beruhten die jährlichen Fortschreibungen auf dem Bestand des kantonalen Einwohnerregisters am 31.12.1990.<br>- Seit dem Jahr 2012 basiert die Bevölkerungszahlen direkt auf Auswertungen aus dem kantonalen Einwohnerregister.<br>- Im Jahr 1989 und 1990:  Ab dem 94. Altersjahr wurden die Daten  an den Bestand der Einwohnerkontrolle Basel-Stadt angeglichen.<br> - Im Jahr 2019: Infolge einer Systemumstellung ohne Grenzgänger mit Wochenaufenthalt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-01-24`
-- **Modified** `2025-01-01T02:15:57+00:00`
+- **Modified** `2025-04-04T08:32:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
