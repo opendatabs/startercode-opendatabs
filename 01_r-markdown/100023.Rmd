@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-04-03"
+date: "2025-04-04"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100023.
 - **Description** `Der Plan zeigt Örtlichkeiten, an welchen eine Leinenpflicht oder ein Hundeverbot gilt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-04-03T05:03:04+00:00`
+- **Modified** `2025-04-04T05:03:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
