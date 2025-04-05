@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-04-04"
+date: "2025-04-05"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100018.
 - **Modified** `2025-04-04T05:06:52+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1817-04-03T23:25:52+00:00`
-- **Temporal_coverage_end_date** `2999-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2112-12-19T23:00:00+00:00`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Bau- und Wohnungswesen', 'Geographie']`
 - **Keywords** `['Baustelle', 'Plakat', 'Anlass', 'Fest', 'Party', 'Umleitung']`
 - **Publisher** `Tiefbauamt`
