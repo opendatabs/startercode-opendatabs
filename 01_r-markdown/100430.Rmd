@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100430.
 - **Description** `Der Datensatz Lichtsignalanlagen umfasst alle Standorte von Lichtsignalanalgen Basel-Stadt, welche durch die Abteilung Verkehrssteuerung vom Amt für Mobilität projektiert, gebaut und betrieben werden.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-03-17`
-- **Modified** `2025-04-07T06:34:52+00:00`
+- **Modified** `2025-04-07T18:32:57+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100201.
 - **Description** `Der Datensatz beinhaltet alle Liegenschaften des Kantons. Es wird zwischen Liegenschaft und Allmendparzelle unterschieden.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-10-03`
-- **Modified** `2025-04-04T05:05:12+00:00`
+- **Modified** `2025-04-07T08:17:02+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
