@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100064.
 - **Description** `Der Datensatz zeigt das Liniennetz des öffentlichen Verkehrs im Kanton Basel-Stadt sowie teilweise in der trinationalen Agglomeration. Es wird nach Liniennummer, Transportunternehmen und Zeitdauer das Angebots unterschieden.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-01-29`
-- **Modified** `2025-04-08T05:03:34+00:00`
+- **Modified** `2025-04-08T12:40:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
