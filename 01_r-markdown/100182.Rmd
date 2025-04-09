@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-04-08"
+date: "2025-04-09"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100182.
 - **Description** `Diese Karte zeigt alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen. Sie gibt Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-04-12`
-- **Modified** `2025-04-08T12:41:58+00:00`
+- **Modified** `2025-04-09T05:04:54+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

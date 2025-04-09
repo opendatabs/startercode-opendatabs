@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-04-08"
+date: "2025-04-09"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100404.
 - **Description** `Der Velostadtplan zeigt dir passende Routen zu deinem Ziel und liefert Ideen, wohin du mit deinem Velo besonders gut fahren kannst. Er ist die elektronische Version der faltbaren Papierkarte, die im Buchhandel, bei Basel Tourismus, Pro Velo und Veloplus erhältlich ist.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-03-03`
-- **Modified** `2025-04-08T18:35:21+00:00`
+- **Modified** `2025-04-09T04:34:05+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
