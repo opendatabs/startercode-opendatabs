@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-04-16"
+date: "2025-04-17"
 output: html_document
 ---
 
@@ -17,10 +17,10 @@ Auto generated R starter code for data set 100057.
 - **Description** `Metadaten zu den im vorliegenden Datenportal publizierten OGD Datensätzen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-04-16T18:03:11+00:00`
+- **Modified** `2025-04-17T06:03:22+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
-- **Temporal_coverage_start_date** `1097-08-11T23:25:52+00:00`
-- **Temporal_coverage_end_date** `2999-12-29T23:00:00+00:00`
+- **Temporal_coverage_start_date** `1097-08-10T23:25:52+00:00`
+- **Temporal_coverage_end_date** `2999-12-28T23:00:00+00:00`
 - **Themes** `['Verwaltung']`
 - **Keywords** `['Datensatz', 'OGD', 'Metadaten']`
 - **Publisher** `Open Data Basel-Stadt`
