@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-04-21"
+date: "2025-04-22"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100254.
 - **Modified** `2025-04-21T14:00:58+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1863-12-31T23:30:14+00:00`
-- **Temporal_coverage_end_date** `2025-04-18T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-04-19T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Niederschlag', 'Strahlung', 'Druck', 'Luftdruck', 'Sonne', 'Klimatologie', 'Klima', 'Temperatur', 'Lufttemperatur', 'Sonnenschein', 'Sonnenscheindauer', 'Wetter', 'Luftfeuchtigkeit', 'Atmosphäre']`
 - **Publisher** `MeteoSchweiz`
