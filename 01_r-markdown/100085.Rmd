@@ -15,7 +15,7 @@ Auto generated R starter code for data set 100085.
 - **Dataset_identifier** `100085`
 - **Title** `Coronavirus (COVID-19): Ergänzte Fallzahlen ganze Schweiz`
 - **Description** `<p>Dieser Datensatz bildet die Grundlage des Covid-19 Dashboards (<a href="https://data.bs.ch/pages/covid-19-dashboard/" target="_blank">https://data.bs.ch/pages/covid-19-dashboard/</a>). Bitte verwenden Sie für Ihre Analysen nicht den vorliegenden Datensatz, sondern diesen: <a href="https://data.bs.ch/explore/dataset/100077/" target="_blank">https://data.bs.ch/explore/dataset/100077/</a>.</p>
-<p>Zum Zweck der einfachen Visualisierung wurden Tage ohne gemeldete Fallzahlen mit den letzten gemeldeten Fallzahlen des entsprechenden Kantons aufgefüllt.</p>`
+<p>Zum Zweck der einfachen Visualisierung wurden Tage ohne gemeldete Fallzahlen mit den letzten gemeldeten Fallzahlen des entsprechenden Kantons aufgefüllt.</p><p><b>Hinweis:<br></b>Da seit dem 6. Mai 2024 keine Fallzahlen mehr von den Kantonen geliefert werden, wird dieser Datensatz nicht mehr aktualisiert.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-04-07`
 - **Modified** `2024-05-05T08:01:25+00:00`

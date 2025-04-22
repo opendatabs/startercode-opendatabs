@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100077.
 
 - **Dataset_identifier** `100077`
 - **Title** `Coronavirus (COVID-19): Fallzahlen ganze Schweiz`
-- **Description** `<p>Dieser Datensatz basiert auf dem Github-repository (<a href="https://github.com/openZH/covid_19" target="_blank">https://github.com/openZH/covid_19</a>), das von OpenZH verwaltet wird. DIe Daten wurden mit den geographischen Daten der Kantone angereichert, um Visualisierungen zu produzieren.</p>`
+- **Description** `<p>Dieser Datensatz basiert auf dem Github-repository (<a href="https://github.com/openZH/covid_19" target="_blank">https://github.com/openZH/covid_19</a>), das von OpenZH verwaltet wird. DIe Daten wurden mit den geographischen Daten der Kantone angereichert, um Visualisierungen zu produzieren.</p><p><span style="font-weight: bolder;">Hinweis:<br></span>Da seit dem 6. Mai 2024 keine Fallzahlen mehr von den Kantonen geliefert werden, wird dieser Datensatz nicht mehr aktualisiert. Auch die oben genannte Github-Repository wurde archiviert.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-04-07`
 - **Modified** `2024-04-17T08:05:30+00:00`

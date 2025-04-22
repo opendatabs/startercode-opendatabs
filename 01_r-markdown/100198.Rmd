@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100198.
 - **Description** `<p>Der Datensatz zeigt die Anzahl Ein- und Ausfahrten pro Stunde in bzw. aus öffentlichen Parkhäusern Basel. Die Daten werden jährlich ergänzt. Aus technischen Gründen sind die Daten des Parkhauses City erst ab 2021 vorhanden. <br></p><p>Im Parkhaus St. Jakob werden manchmal bei Grossanlässen keine Ein- und Ausfahrten gezählt. Diese Metriken sind für dieses Parkhaus deshalb mit Vorsicht zu analysieren. <br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-07-11`
-- **Modified** `2024-04-17T14:25:51+00:00`
+- **Modified** `2025-04-22T15:19:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2010-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
