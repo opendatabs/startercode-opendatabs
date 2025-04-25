@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-04-24"
+date: "2025-04-25"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100233.
 - **Modified** `2025-04-24T08:08:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2011-12-30T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-04-19T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-04-20T22:00:00+00:00`
 - **Themes** `['Energie']`
 - **Keywords** `['Stadtlast', 'Netzlast', 'Strom', 'Elektrizität', 'Elektro', 'Watt', 'Kilowattstunden', 'Stromverbrauch']`
 - **Publisher** `Industrielle Werke Basel`
