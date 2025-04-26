@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-04-25"
+date: "2025-04-26"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100120.
 - **Description** `Die Strassenverkehrsunfälle im Kanton Basel-Stadt seit 2011 werden nach Unfalltyp und Unfallschweregrad kategorisiert dargestellt. Die Daten werden jährlich aktualisiert.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-03-27`
-- **Modified** `2025-04-25T05:05:06+00:00`
+- **Modified** `2025-04-26T05:05:13+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2010-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
