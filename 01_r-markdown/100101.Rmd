@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100101.
 - **Description** `<p>Dieser Datensatz zeigt die Einzeldaten der Grossratswahlen vom 25. Oktober 2020.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-10-25`
-- **Modified** `2025-04-04T08:31:10+00:00`
+- **Modified** `2025-04-28T07:45:39+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

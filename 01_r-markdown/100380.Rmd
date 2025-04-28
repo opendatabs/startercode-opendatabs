@@ -19,7 +19,7 @@ Auto generated R starter code for data set 100380.
 <p>Die Regierungsratsbeschlüsse zur Auswahl der zu unterstützenden Projekte werden jeweils veröffentlicht unter: <a href="https://www.bs.ch/apps/regierungsratsbeschluesse" target="_blank">https://www.bs.ch/apps/regierungsratsbeschluesse</a> (Stichwort: Entwicklungszusammenarbeit)</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-08-09`
-- **Modified** `2025-04-04T08:33:34+00:00`
+- **Modified** `2025-04-28T07:48:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`

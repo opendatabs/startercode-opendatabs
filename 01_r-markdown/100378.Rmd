@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100378.
 - **Description** `Dieser Datensatz enthält Kennzahlen zu Pflegebedürftigen im Bereich der Pflege zu Hause (PzH). Er umfasst Daten zur Anzahl der Pflegebedürftigen, aufgeschlüsselt nach Geschlecht, sowie Informationen zum Durchschnittsalter der Pflegebedürftigen insgesamt und getrennt nach Frauen und Männern.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-12-20`
-- **Modified** `2025-04-04T08:33:20+00:00`
+- **Modified** `2025-04-28T07:47:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2015-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`

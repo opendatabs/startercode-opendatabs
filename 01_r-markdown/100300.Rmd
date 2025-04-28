@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100300.
 - **Description** `<p>Der vorliegende Datensatz beinhaltet Resultate der Bürgergemeinderatswahlen Basel vom 18. Juni 2023 auf Ebene der einzelnen Kandidierenden. Weitere Informationen zu den Wahlen sind hier zu finden: <a href="https://bgbasel.ch/de/politische-organe/buergergemeinderat/wahlen2023.html" target="_blank">https://bgbasel.ch/de/politische-organe/buergergemeinderat/wahlen2023.html</a><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-06-17`
-- **Modified** `2025-04-04T08:32:26+00:00`
+- **Modified** `2025-04-28T07:47:13+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

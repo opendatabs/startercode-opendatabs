@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100124.
 - **Description** `Die Karte zeigt Schulperimeter im Kanton Basel-Stadt. Die Perimeter werden zu Planungszwecken vom Erziehungsdepartement Basel-Stadt und von der Gemeinde Riehen verwendet. Insbesondere dienen sie als räumliche Grundlage für die kleinräumigen Schülerprognosen, die im Auftrag des Erziehungsdepartements Basel-Stadt und der Gemeinde Riehen erstellt werden. Die Perimeter dienen als Planungsgrundlage und nicht als effektive Einzugsgebiete.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-03-23`
-- **Modified** `2025-04-04T08:31:45+00:00`
+- **Modified** `2025-04-28T07:46:31+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

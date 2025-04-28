@@ -26,7 +26,7 @@ Erschliessungsarbeit gehören das Ordnen der Unterlagen, das Verzeichnen im
 Online-Archivkatalog, Verpacken, Etikettieren und Magazinieren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-06-19`
-- **Modified** `2025-04-04T08:33:04+00:00`
+- **Modified** `2025-04-28T07:47:44+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2013-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`

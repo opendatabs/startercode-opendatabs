@@ -22,7 +22,7 @@ Basel-Stadt nach Geschlecht, Jahrgang und Beruf sowie die jeweiligen Listen.<o:p
 </p><p class="MsoNormal"><o:p> </o:p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-09-15`
-- **Modified** `2025-04-04T08:32:42+00:00`
+- **Modified** `2025-04-28T07:47:26+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

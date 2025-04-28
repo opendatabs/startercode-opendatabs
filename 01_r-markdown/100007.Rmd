@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100007.
 - **Description** `Die Bevölkerungsszenarien liefern kleinräumige Ergebnisse auf der Ebene Wahlkreise der Stadt Basel sowie gemeinsam für die Gemeinden Riehen und Bettingen. Neben der absoluten Bevölkerungsentwicklung stellen die Szenarien auch die Entwicklung der Bevölkerungsstruktur bis 2045 dar: Die Bevölkerung wird nach Alter, Geschlecht und Staatsangehörigkeit (Schweiz und Ausland) ausgewiesen. Auch stehen verschiedene demografische Komponenten wie Geburten und Sterbefälle, Einbürgerungen oder Wanderungsbewegungen zur Verfügung. Aufgrund von Meldeverzögerungen werden die Nulljährigen in Datenjahren der Vergangenheit geringfügig unterschätzt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-04-04T08:33:34+00:00`
+- **Modified** `2025-04-28T07:47:43+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
