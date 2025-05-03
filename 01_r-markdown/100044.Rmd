@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-05-02"
+date: "2025-05-03"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100044.
 - **Description** `<p>Standorte der öffentlichen Parkhäuser Basel, wie sie in <a href="https://parkendd.de/map.html#Basel" target="_blank">ParkenDD</a> verwendet werden.</p><p><br></p><p>Änderungsprotokoll:</p><p>- 28.11.2024: Centralbahnparking heisst neu Centralbahn.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-05-02T19:00:50+00:00`
+- **Modified** `2025-05-03T06:01:18+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2025-04-27T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-04-27T22:00:00+00:00`
