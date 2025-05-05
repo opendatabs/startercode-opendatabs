@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100414.
 - **Description** `Dieser Datensatz zeigt die Anzahl Ankünfte und Logiernächte in baselstädtischen Hotels nach Herkunftsland und Kategorie auf täglicher Basis.`
 - **Contact_name** `Fachstelle für OGD Basel-Stadt`
 - **Issued** `2025-02-06`
-- **Modified** `2025-05-05T06:17:52+00:00`
+- **Modified** `2025-05-05T16:03:38+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
