@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-05-05"
+date: "2025-05-06"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100241.
 - **Description** `Der Datensatz beinhaltet alle Veloabstellplätze auf öffentlichem Grund, die grossen Abstellanlagen bei den Bahnhöfen, Velostationen, Bike+Ride-Anlagen und Cargovelo-Plätze. Die Punkte befinden sich in der Mitte der Parkfelder.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-12-06`
-- **Modified** `2025-05-05T05:04:49+00:00`
+- **Modified** `2025-05-06T05:04:14+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
