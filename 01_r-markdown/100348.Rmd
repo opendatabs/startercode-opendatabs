@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100348.
 - **Modified** `2025-05-02T03:01:45+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2013-01-24T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-03-26T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-04-30T22:00:00+00:00`
 - **Themes** `['Politik', 'Verwaltung']`
 - **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Parlamentarische Vorstösse']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`

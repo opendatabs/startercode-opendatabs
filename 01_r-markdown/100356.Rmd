@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100356.
 - **Modified** `2025-05-12T07:26:52+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2022-12-30T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-04-24T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-05-09T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Auto', 'Motorrad', 'Bus', 'Lieferwagen', 'Lastwagen', 'Anhänger', 'Verkehr', 'Geschwindigkeit', 'km/h']`
 - **Publisher** `Amt für Mobilität`
