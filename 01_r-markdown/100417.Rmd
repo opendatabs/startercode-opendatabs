@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-05-13"
+date: "2025-05-14"
 output: html_document
 ---
 
@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100417.
 
 - **Dataset_identifier** `100417`
 - **Title** `ESC Eurovision Song Contest - FAQ`
-- **Description** `<p>Der Datensatz umfasst Fragen und Antworten zum Eurovision Song Contest (ESC) und dient als strukturierte Informationsquelle für Interessierte. Die enthaltenen Informationen beziehen sich auf verschiedene Themen wie Tickets, Veranstaltungsorte, Programme und organisatorische Details.</p>`
+- **Description** `<p>Der Datensatz umfasst Fragen und Antworten zum Eurovision Song Contest (ESC) und dient als strukturierte Informationsquelle für Interessierte. Die enthaltenen Informationen beziehen sich auf verschiedene Themen wie Tickets, Veranstaltungsorte, Programme und organisatorische Details.</p><p>Hier geht es zum FAQ: <a href="https://eurovision-basel.ch/faq/" target="_blank">https://eurovision-basel.ch/faq/</a></p>`
 - **Contact_name** `None`
 - **Issued** `2025-02-07`
 - **Modified** `2025-05-07T09:10:37+00:00`
