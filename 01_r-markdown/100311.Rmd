@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-05-20"
+date: "2025-05-21"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100311.
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz bietet eine umfassende Übersicht über Geschäfte, die im Grossen Rat des Kantons Basel-Stadt behandelt werden.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-09-28`
-- **Modified** `2025-05-16T03:02:10+00:00`
+- **Modified** `2025-05-21T03:02:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

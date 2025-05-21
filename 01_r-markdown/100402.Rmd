@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-05-20"
+date: "2025-05-21"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100402.
 - **Description** `Die Karte zeigt eine repräsentative Auswahl an Projektstandorten laufender und abgeschlossener Hochbauprojekte des Kantons Basel-Stadt. Die Projektstandorte sind mit Projektinformationen und teilweise auch Projektdokumentationen hinterlegt, welche mittels Link abgerufen werden können.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-11-14`
-- **Modified** `2025-05-20T16:31:53+00:00`
+- **Modified** `2025-05-21T06:37:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1991-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2031-12-30T23:00:00+00:00`
