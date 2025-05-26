@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-05-25"
+date: "2025-05-26"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100086.
 - **Description** `<p>Dieser Datensatz ermöglichte einen thematischen Überblick über die politischen Vorstösse des Grossen Rats des Kantons Basel-Stadt. Es sind darin Geschäfte zwischen Januar 2019 und März 2024 enthalten, welche überwiesen und manuell mit Thema kategorisiert worden sind. Die Zuteilung zu Themen erfolgte durch die Kantons- und Stadtentwicklung. Eine Datenvisualisierung war unter <a href="https://politmonitor.bs.ch" target="_blank">politmonitor.bs.ch</a> auffindbar.</p><p>Wichtig: Seit März 2024 wird dieser Datensatz nicht mehr aktualisiert, und die Visualisierung ist nicht mehr einsehbar. Wir arbeiten daran, die politischen Vorstösse neu mittels KI zu kategorisieren, und die Visualisierung wieder zu publizieren, und hoffen, dies im Verlauf des Jahres 2025 abschliessen zu können. </p><p>Siehe auch Datensatz "Grosser Rat: Geschäfte":  (<a href="https://data.bs.ch/explore/dataset/100311" target="_blank">https://data.bs.ch/explore/dataset/100311</a>)</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-29`
-- **Modified** `2025-05-25T02:00:12+00:00`
+- **Modified** `2025-05-26T02:00:14+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-01-08T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-03-05T23:00:00+00:00`
