@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-05-27"
+date: "2025-05-28"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100291.
 - **Description** `Die Gewässerschutzkarte ist das zentrale planerische Instrument für den praktischen Vollzug des Grundwasserschutzes. Dargestellt sind die Gewässerschutzbereiche und die Grundwasserschutzzonen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-04-26`
-- **Modified** `2025-05-27T05:05:44+00:00`
+- **Modified** `2025-05-28T05:05:28+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
