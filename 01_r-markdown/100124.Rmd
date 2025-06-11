@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-05-08"
+date: "2025-06-11"
 output: html_document
 ---
 
@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100124.
 
 - **Dataset_identifier** `100124`
 - **Title** `Perimeter der Schülerprognosen Basel-Stadt`
-- **Description** `Die Karte zeigt Schulperimeter im Kanton Basel-Stadt. Die Perimeter werden zu Planungszwecken vom Erziehungsdepartement Basel-Stadt und von der Gemeinde Riehen verwendet. Insbesondere dienen sie als räumliche Grundlage für die kleinräumigen Schülerprognosen, die im Auftrag des Erziehungsdepartements Basel-Stadt und der Gemeinde Riehen erstellt werden. Die Perimeter dienen als Planungsgrundlage und nicht als effektive Einzugsgebiete.`
+- **Description** `Die Karte zeigt Schulperimeter im Kanton Basel-Stadt. Die Perimeter werden zu Planungszwecken vom Erziehungsdepartement Basel-Stadt und von der Gemeinde Riehen verwendet. Insbesondere dienen sie als räumliche Grundlage für die kleinräumigen Schülerprognosen, die im Auftrag des Erziehungsdepartements Basel-Stadt und der Gemeinde Riehen erstellt werden.<br><br><b>Hinweis:</b><br>Die Perimeter entsprechen dem Stand der Prognose vor dem Schuljahr 2024/2025 und sind nicht mehr aktuell. Der Datensatz bleibt aus Gründen der Transparenz weiterhin verfügbar. Eine Aktualisierung wird geprüft.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-03-23`
 - **Modified** `2025-04-28T07:46:31+00:00`
