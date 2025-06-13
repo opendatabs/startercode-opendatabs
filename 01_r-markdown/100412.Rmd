@@ -4,27 +4,27 @@ date: "2025-06-13"
 output: html_document
 ---
 
-## Dataset: Überwachung Luftqualität Transformation Areal Rosental: Online Sensor Feinstaub
+## Dataset: Befragung 55plus (2023)
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100275)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100412)
 
-Auto generated R starter code for data set 100275.
+Auto generated R starter code for data set 100412.
 
 ## Metadata
 
-- **Dataset_identifier** `100275`
-- **Title** `Überwachung Luftqualität Transformation Areal Rosental: Online Sensor Feinstaub`
-- **Description** `<p>Bedingt durch die frühere Nutzung des Rosental Areals – auch bekannt als die Wiege der Basler Chemie - ist der Untergrund mit Schadstoffen belastet. Während der Tiefbauarbeiten im Rahmen der «Transformation <a href="https://rosentalmitte.ch/" target="_blank">Rosental Mitte</a>» überwacht das <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene" target="_blank">Lufthygieneamt beider Basel (LHA)</a> die Immissionen mittels Messungen der Luft <a href="https://data.bs.ch/pages/rosental-dashboard/" target="_blank">(Dashboard)</a>. </p><p>Änderungsprotokoll:<br>23.4.2024: Die Messstation ROSEN 3 wurde verschoben. Alte geografische Breiten- und Längengrade 47.567827676637364, 7.603804744961502. Neue Breiten- und Lägengrade 47.567997530870265, 7.60479830196066.<br></p><div><br></div>`
+- **Dataset_identifier** `100412`
+- **Title** `Befragung 55plus (2023)`
+- **Description** `Antworten der kantonalen Bevölkerunsgbefragung von Personen ab 55 Jahren, wird alle vier Jahre durchgeführt. <br><br> Dieser Datensatz enthält pro Zeile eine Antwort einer Person zu einer Frage der Befragung. Die Daten können in anderen Formaten als ZIP Datei hier heruntergeladen werden: <a href="https://data-bs.ch/stata/befragungen/55plus/2023.zip">https://data-bs.ch/stata/befragungen/55plus/2023.zip</a> <br><br> Weitere Informationen zur Befragung sind im Statistikportal abgebildet:  <a href='https://statistik.bs.ch/suche?search={"query":"2023","filterTheme":"successor-50.4"}'>https://statistik.bs.ch/suche?search={"query":"2023","filterTheme":"successor-50.4"}</a>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2023-10-09`
-- **Modified** `2025-06-13T19:00:12+00:00`
+- **Issued** `2025-06-13`
+- **Modified** `2025-05-12T13:44:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2023-04-22T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-06-09T22:00:00+00:00`
-- **Themes** `['Raum und Umwelt']`
-- **Keywords** `['Luftqualität']`
-- **Publisher** `Lufthygieneamt beider Basel`
-- **Reference** `https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bevölkerung']`
+- **Keywords** `['Alter', 'Geschlecht', 'Einkommen']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `https://statistik.bs.ch/hintergrund/befragungen`
 
 
 # Load packages
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100275.csv')
+  csv_path <- file.path(data_path , '100412.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100275/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100412/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
