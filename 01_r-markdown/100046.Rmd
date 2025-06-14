@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100046.
 - **Description** `<p>Kontinuierlich gemessene Parameter der <a href="https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues" target="_blank">Rheinüberwachungsstation Weil am Rhein</a> (RUES), jeweils gemittelt über 15 Minuten. Werte werden alle 15 Minuten wie von den Sensoren gemessen als Rohdaten publiziert. Jährlich werden die Daten manuell plausibilisiert und als Stundenwerte veröffentlicht. </p><p>Standort: Rheinkilometer 171.37km</p><p>Koordinaten: <a href="https://www.google.ch/maps/place/47%C2%B036'04.7%22N+7%C2%B035'41.5%22E" target="_blank">E 7.594868 N 47.601299</a> bzw. E 7° 35‘ 39.55“ N 47° 36‘ 4.68“ bzw. 611740 / 272310</p><p>Träger: Schweizerische Eidgenossenschaft; Bundesamt für Umwelt (BAFU), Land Baden-Württemberg; Ministerium für Umwelt, Klima und Energiewirtschaft / Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg (LUBW)</p><p>Messbetrieb / Unterhalt: <a href="https://www.bs.ch/wsu/aue" target="_blank">Amt für Umwelt und Energie Basel-Stadt (AUE-BS)</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2025-06-14T07:00:32+00:00`
+- **Modified** `2025-06-14T20:00:39+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `1899-12-28T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-06-09T22:00:00+00:00`
