@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-06-14"
+date: "2025-06-15"
 output: html_document
 ---
 
@@ -18,7 +18,7 @@ Auto generated R starter code for data set 100089.
 <p>Der Pegel wird berechnet als [Wasserstand] - 240 m ü. M., siehe <a href="https://port-of-switzerland.ch/hafenservice/pegel/" target="_blank">https://port-of-switzerland.ch/hafenservice/pegel</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-29`
-- **Modified** `2025-06-14T19:55:08+00:00`
+- **Modified** `2025-06-15T07:00:18+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2020-06-21T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-06-10T22:00:00+00:00`
