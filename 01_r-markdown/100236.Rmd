@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-06-18"
+date: "2025-06-19"
 output: html_document
 ---
 
@@ -17,10 +17,10 @@ Auto generated R starter code for data set 100236.
 - **Description** `<p>Dieser Datensatz zeigt den Wasserstand, die Abflussmenge und die Temperatur der Birs bei "Hofmatt" in Münchenstein etwa auf Höhe der Brücke "Baselstrasse" über die Birs. Es liegen aktuelle Werte alle 5 Minuten vor. Die Messungen werden im Auftrag des Bundesamts für Umwelt durchgeführt (siehe <a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2106" target="_blank">https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2106</a>).</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-10`
-- **Modified** `2025-06-18T19:00:15+00:00`
+- **Modified** `2025-06-19T08:00:12+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2022-10-28T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-06-17T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-06-18T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser', 'Tiefe', 'Birs', 'Temperatur']`
 - **Publisher** `Bundesamt für Umwelt BAFU`
