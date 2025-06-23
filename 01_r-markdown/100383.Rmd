@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-06-22"
+date: "2025-06-23"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100383.
 <br>Die Klasse Dachkante ist besonders nützlich für Fachleute, die sich mit der Planung und Bewertung von Solaranlagen beschäftigen. Sie dient als Grundlage für detaillierte Analysen und Entscheidungsprozesse in der solartechnischen Nutzung von Gebäuden.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-08-15`
-- **Modified** `2025-06-22T05:11:45+00:00`
+- **Modified** `2025-06-23T05:11:19+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
