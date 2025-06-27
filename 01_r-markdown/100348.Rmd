@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-06-26"
+date: "2025-06-27"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100348.
 - **Description** `<p>Dieser Datensatz bietet eine umfassende Übersicht über die Tagesordnungen und die zugehörigen Traktanden der Grossratssitzungen des Kantons Basel-Stadt.</p><p>Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch/ratsbetrieb/tagesordnung" target="_blank">https://grosserrat.bs.ch/ratsbetrieb/tagesordnung</a><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-05-10`
-- **Modified** `2025-06-26T03:02:32+00:00`
+- **Modified** `2025-06-27T03:02:36+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2013-01-24T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-06-11T22:00:00+00:00`
