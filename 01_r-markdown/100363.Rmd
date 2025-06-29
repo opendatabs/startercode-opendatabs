@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-06-28"
+date: "2025-06-29"
 output: html_document
 ---
 
@@ -22,7 +22,7 @@ Elektrofachgeschäfte umfassen. Bei einigen Standorten sind zusätzliche
 Informationen wie Telefonnummern und Links zu ihren Internetseiten verfügbar.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-04-09`
-- **Modified** `2025-06-28T05:05:29+00:00`
+- **Modified** `2025-06-29T05:05:26+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
