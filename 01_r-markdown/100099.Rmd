@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-06-30"
+date: "2025-07-01"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100099.
 - **Description** `Dieser Datensatz zeigt die Geborenen im Kanton Basel-Stadt nach Geschlecht, Staatsangehörigkeit und Geburtsmonat sowie nach Alter, Staatsangehörigkeit und Zivilstand der Eltern. Die Daten werden monatlich aktualisiert, wobei die Zahlen eines Monats jeweils am 16. Tag des nächsten Monats publiziert werden. Aufgrund von Nachmeldungen kann es jederzeit zu Änderungen bei bereits veröffentlichten Werten kommen. In den Daten der Jahre bis 2023 sind nur die Lebendgeborenen berücksichtigt, in denjenigen der Jahre seit 2024 auch die Totgeborenen. Dies liegt daran, dass die Angabe zur Lebensfähigkeit jeweils erst im Juli des Folgejahres verfügbar ist. Auch die Angaben zur Geburtenfolge und zum Zivilstand der Eltern sind jeweils erst im Juli des Folgejahres verfügbar. <br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der <a href="https://statistik.bs.ch/unterthema/3" target="_blank">kantonalen öffentlichen Statistik (https://statistik.bs.ch/unterthema/3)</a> abweichen: In Letzterer werden nachträglich gemeldete Geburten während vier Monaten gesammelt, danach gelten die Zahlen als definitiv. Später eintreffende Meldungen werden im letzten noch nicht abgeschlossenen Monat gezählt. In diesem Datensatz werden sie im Monat des Geburtsdatums gezählt. <br><br>Aus Gründen des Persönlichkeitsschutzes können im <a href="https://data.bs.ch/explore/dataset/100092/" target="_blank">Datensatz mit dem Geburtsdatum (https://data.bs.ch/explore/dataset/100092/)</a> weniger Attribute veröffentlicht werden als im vorliegenden Datensatz. <br><br>Eine leere Zelle bedeutet «Wert unbekannt».`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-01-19`
-- **Modified** `2025-06-30T01:02:43+00:00`
+- **Modified** `2025-07-01T01:03:05+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
