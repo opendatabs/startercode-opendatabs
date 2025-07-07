@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-06"
+date: "2025-07-07"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100414.
 - **Description** `Dieser Datensatz zeigt die Anzahl Ankünfte und Logiernächte in baselstädtischen Hotels nach Herkunftsland und Kategorie auf täglicher Basis.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-02-06`
-- **Modified** `2025-07-06T19:47:18+00:00`
+- **Modified** `2025-07-07T07:47:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
