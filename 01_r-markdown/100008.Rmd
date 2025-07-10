@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-09"
+date: "2025-07-10"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100008.
 - **Description** `<p>In der Stadt Basel betreibt IWB über 200 öffentliche Brunnen. Sie sind Kulturgut und «Visitenkarte» der Stadt: <a href="https://www.iwb.ch/klimadreh/ratgeber/sauberes-trinkwasser/die-geschichte-der-basler-brunnen" target="_blank">https://www.iwb.ch/klimadreh/ratgeber/sauberes-trinkwasser/die-geschichte-der-basler-brunnen</a><a href="https://www.iwb.ch/klimadreh/ratgeber/sauberes-trinkwasser/die-geschichte-der-basler-brunnen" target="_blank"></a> <a href="https://www.iwb.ch/klimadreh/ratgeber/sauberes-trinkwasser/die-geschichte-der-basler-brunnen" target="_blank"></a><br>Wenn Sie Fragen oder Anliegen rund um die Basler Brunnen haben, empfehlen wir Ihnen, sich direkt an die Industriellen Werke Basel (IWB) zu wenden, die für diese Angelegenheiten zuständig sind. Für weitere Informationen und Kontaktdetails besuchen Sie bitte die offizielle Webseite der IWB: <a href="https://www.iwb.ch/servicecenter/kontakt" target="_blank">https://www.iwb.ch/servicecenter/kontakt</a> <br></p><p>In einigen Brunnen ist auch Baden möglich und vom Eigentümer, dem Kanton Basel-Stadt, toleriert, jedoch auf eigene Verantwortung und Gefahr. Wir bitten darum, die Brunnen sauber zu hinterlassen und auf Anwohner Rücksicht zu nehmen. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-07-08T22:04:08+00:00`
+- **Modified** `2025-07-09T22:03:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
