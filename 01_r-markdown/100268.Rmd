@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100268.
 
 - **Dataset_identifier** `100268`
 - **Title** `Einzelmessungen der Smiley-Geschwindigkeitsanzeigen`
-- **Description** `<p>Ausschnitt aus einem grösseren Datensatz, welcher bei uns</p><p><br></p><p>Einzelmessungen der Smiley-Geschwindigkeitsanzeigen der Kantonspolizei Basel-Stadt ab 2023 (Zeitpunkt des Beginns der Messung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen. Hinweis: Die Messungen sind nicht repräsentativ für das ganze Jahr und müssen im Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse Messungen während einer ausserordentlichen Verkehrsführung (z.B. Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben. Manipulationen an Geräten können zu fehlerhaften Messungen führen.</p><p class="MsoNormal"><span class="ui-provider">Die Geschwindigkeitsmessungen
+- **Description** `<p>Einzelmessungen der Smiley-Geschwindigkeitsanzeigen der Kantonspolizei Basel-Stadt ab 2023 (Zeitpunkt des Beginns der Messung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen. Hinweis: Die Messungen sind nicht repräsentativ für das ganze Jahr und müssen im Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse Messungen während einer ausserordentlichen Verkehrsführung (z.B. Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben. Manipulationen an Geräten können zu fehlerhaften Messungen führen.</p><p class="MsoNormal"><span class="ui-provider">Die Geschwindigkeitsmessungen
 durchlaufen vier Phasen: <b>Vormessung</b>, <b>Betrieb</b>, <b>Nachmessung</b> und <b>nach Ende</b>. In der
 Vormessungsphase wird die Geschwindigkeit der Fahrzeuge an den
 Smiley-Geschwindigkeitsanzeigen gemessen, wobei die Anzeigen nicht aktiviert
@@ -25,7 +25,7 @@ erneut gemessen. Die letzte Phase "nach Ende" sind Messungen, die
 ausserhalb des im Projekt definierten Zeitraums vorfallen. <o:p></o:p></span></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
-- **Modified** `2023-01-17T09:24:34+00:00`
+- **Modified** `2025-07-11T09:16:23+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-02-08T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-10-16T22:00:00+00:00`
