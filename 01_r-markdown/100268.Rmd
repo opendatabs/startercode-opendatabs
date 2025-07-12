@@ -25,7 +25,7 @@ erneut gemessen. Die letzte Phase "nach Ende" sind Messungen, die
 ausserhalb des im Projekt definierten Zeitraums vorfallen. <o:p></o:p></span></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
-- **Modified** `2025-07-12T04:17:27+00:00`
+- **Modified** `2025-07-12T18:37:50+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-05-05T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-10-16T22:00:00+00:00`
