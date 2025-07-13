@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-12"
+date: "2025-07-13"
 output: html_document
 ---
 
@@ -28,7 +28,7 @@ ausserhalb des im Projekt definierten Zeitraums vorfallen. <o:p></o:p></span></
 - **Modified** `2025-07-12T18:37:50+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-05-05T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2024-10-16T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-03-19T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Öffentliche Ordnung und Sicherheit']`
 - **Keywords** `['Smiley', 'Tempolimit', 'Verkehr', 'Tagesverkehr', 'Tempo', 'Vormessung', 'Nachmessung']`
 - **Publisher** `Kantonspolizei`
