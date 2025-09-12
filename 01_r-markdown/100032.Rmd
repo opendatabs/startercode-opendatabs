@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100032.
 - **Themes** `['Mobilität und Verkehr', 'Geographie', 'Tourismus']`
 - **Keywords** `['Velo', 'Fahrrad', 'Veloweg', 'E-Bike', 'Pedelec']`
 - **Publisher** `Amt für Mobilität`
-- **Reference** `www.geo.bs.ch/velostadtplan; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/817232d1-49ca-44bf-9551-b234c0b52da9`
+- **Reference** `None`
 
 
 # Load packages

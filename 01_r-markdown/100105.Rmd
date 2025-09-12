@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -31,7 +31,7 @@ COVID-19:</p>
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Lungenentzündung', 'Pandemie', 'Corona']`
 - **Publisher** `Medizinische Dienste`
-- **Reference** `https://www.bs.ch/gd/md`
+- **Reference** `None`
 
 
 # Load packages

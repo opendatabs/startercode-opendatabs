@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100394.
 - **Themes** `['Politik', 'Gesetzgebung', 'Verwaltung']`
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe', 'Gesamterneuerungswahl']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://statistik.bs.ch/unterthema/25`
+- **Reference** `None`
 
 
 # Load packages

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -25,7 +25,7 @@ Open Data Basel-Stadt erstellt und pflegt diese Dashboards, um öffentlich relev
 - **Themes** `['Verwaltung']`
 - **Keywords** `['Dashboard', 'Weiterverwendung', 'Datensätze', 'Datenportal', 'Nutzeranwendungen', 'Visualisierungen', 'Projekte', 'Datenanwendung', 'Datennutzung', 'Datenanalyse']`
 - **Publisher** `Open Data Basel-Stadt`
-- **Reference** `https://data.bs.ch`
+- **Reference** `None`
 
 
 # Load packages

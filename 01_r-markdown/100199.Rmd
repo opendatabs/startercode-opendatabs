@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -14,20 +14,20 @@ Auto generated R starter code for data set 100199.
 
 - **Dataset_identifier** `100199`
 - **Title** `Durchschnittlicher Tagesverkehr (basierend auf dem Geschwindigkeitsmonitoring der Kantonspolizei)`
-- **Description** `<p>Dieser Datensatz resultiert aus dem Daten des Geschwindigkeitsmonitorings der Kantonspolizei Basel-Stadt (siehe <a href="https://data.bs.ch/explore/?sort=modified&amp;q=%22geschwindigkeitsmonitoring+Einzelmessungen%22" target="_blank">https://data.bs.ch/explore/?sort=modified&amp;q=%22geschwindigkeitsmonitoring+Einzelmessungen%22</a>). Es wird zu jeder Messung und Richtung (ein Messgerät an einem Standort misst in zwei Richtungen) der durchschnittliche Tagesverkehr berechnet. </p><p>
+- **Description** `<p>Dieser Datensatz resultiert aus dem Daten des Geschwindigkeitsmonitorings der Kantonspolizei Basel-Stadt (siehe <a href="https://data.bs.ch/explore/dataset/100097/" target="_blank">https://data.bs.ch/explore/dataset/100097/</a>). Es wird zu jeder Messung und Richtung (ein Messgerät an einem Standort misst in zwei Richtungen) der durchschnittliche Tagesverkehr berechnet. </p><p>
 
-Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr und müssen im Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse Messungen während einer ausserordentlichen Verkehrsführung (z.B. Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben. Diese Messungen sind ab dem Jahr 2022 in der Spalte «Ausserordentliche Verkehrsführung» mit «True» gekennzeichnet. Manipulationen an Geräten können zu fehlerhaften Messungen führen.
+Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr und müssen im Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse Messungen während einer ausserordentlichen Verkehrsführung (z.B. Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben. Diese Messungen sind ab dem Jahr 2022 in der Spalte «Ausserordentliche Verkehrsführung» mit «True» gekennzeichnet. Manipulationen an Geräten können zu fehlerhaften Messungen führen.</p><p><font face="Arial, sans-serif">Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href="https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring" style="background-color: rgb(255, 255, 255); font-family: sans-serif; font-size: 14px; font-weight: 400;" target="_blank">https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face="Arial, sans-serif"> aufrufbar.</font></p><p>
 </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-09-21`
-- **Modified** `2025-07-09T03:04:50+00:00`
+- **Modified** `2025-09-02T04:03:16+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-07-06T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-08-31T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Verkehrszählung', 'Verkehr', 'Statistik', 'Durchschnitt', 'Tagesverkehr', 'Belästigung', 'Auslastung', 'DTV']`
 - **Publisher** `Amt für Mobilität`
-- **Reference** `https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring+Einzelmessungen`
+- **Reference** `None`
 
 
 # Load packages

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100238.
 - **Themes** `['Bevölkerung']`
 - **Keywords** `['Alter', 'Bevölkerungsbestand', 'Geschlecht', 'Herkunft', 'Bevölkerungsstruktur', 'Staatsangehörigkeit']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://www.statistik.bs.ch/zahlen/statistisches-jahrbuch.html`
+- **Reference** `None`
 
 
 # Load packages

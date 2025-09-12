@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100420.
 - **Description** `Der Datensatz „Wasserverbrauch im Kanton Basel-Stadt und in Binningen“ enthält Informationen zum Wasserverbrauch in dieser Region. Er umfasst jährliche Verbrauchsdaten seit 1951 sowie monatliche Verbrauchsdaten seit 2005. Die Daten stammen von den Industriellen Werken Basel (IWB) und werden vom Statistischen Amt des Kantons Basel-Stadt veröffentlicht. Die Erhebung erfolgt durch öffentliche Organe, insbesondere die IWB, wobei die Daten jeweils zum Monats- und Jahresende erfasst werden. Der Datensatz enthält verschiedene Kategorien des Wasserverbrauchs, darunter Haushaltungen und Gewerbe, Grossbezüger wie Industriebetriebe, öffentliche Brunnen sowie weitere öffentliche Zwecke. Zudem sind der Eigenbedarf der IWB und die Wasserverluste im Versorgungsnetz erfasst. Neben diesen Gesamtverbräuchen gibt es auch Angaben zum mittleren und grössten Tagesverbrauch pro Kopf. Die Daten werden in Litern angegeben und auf Jahres- oder Monatsebene aggregiert. Sie basieren auf der Wasserabgabe im eigenen Versorgungsgebiet, das den Kanton Basel-Stadt und Binningen umfasst, ohne Berücksichtigung von Transitlieferungen an Gemeinden ausserhalb des Versorgungsgebiets. Bis 1985 wurden Haushaltungen ohne Gewerbe separat ausgewiesen, während Industrie und Gewerbe bis zu diesem Zeitpunkt gemeinsam erfasst wurden. Die Kategorie „Öffentliche Brunnen“ umfasst Brunnen im Stadtgebiet, die durch die IWB betrieben und unterhalten werden. Zudem wurden die Werte für die Jahre 2015 bis 2019 im Jahr 2021 revidiert.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-02-17`
-- **Modified** `2025-07-04T13:01:54+00:00`
+- **Modified** `2025-08-04T08:45:59+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Wasser']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://statistik.bs.ch/`
+- **Reference** `None`
 
 
 # Load packages

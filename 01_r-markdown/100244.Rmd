@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100244.
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Rhein', 'Birs', 'Wiese', 'Pegel', 'Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser']`
 - **Publisher** `Bundesamt für Umwelt BAFU`
-- **Reference** `https://www.hydrodaten.admin.ch/de/`
+- **Reference** `None`
 
 
 # Load packages

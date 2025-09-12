@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100096.
 - **Themes** `['Raum und Umwelt', 'Öffentliche Ordnung und Sicherheit', 'Verwaltung']`
 - **Keywords** `['Abfall', 'Recycling', 'Grüngut']`
 - **Publisher** `Tiefbauamt`
-- **Reference** `https://www.geo.bs.ch/abfuhrzonen`
+- **Reference** `None`
 
 
 # Load packages

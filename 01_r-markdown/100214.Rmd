@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100214.
 - **Description** `Überblick über die öffentlichen Kunstwerke im Eigentum des Kantons Basel-Stadt. Es wird unterschieden zwischen Kunst im öffentlichen Raum (KiöR), die sich auf der Allmend befindet, und Kunst und Bau (KuB), die in Gebäuden oder auf den Parzellen von öffentlichen Gebäuden zu finden sind.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-02-22`
-- **Modified** `2025-07-13T05:10:13+00:00`
+- **Modified** `2025-07-22T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Bevölkerung', 'Bildung, Wissenschaft', 'Raum und Umwelt']`
 - **Keywords** `['Kunst', 'Kunsthandwerk', 'Öffentlichkeit', 'Raum', 'Architektur', 'Städtebau']`
 - **Publisher** `Städtebau & Architektur`
-- **Reference** `www.geo.bs.ch/kunst-im-oeffentlichen-raum; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/3b3367af-7263-49c1-a23a-99ec8626e9e6`
+- **Reference** `None`
 
 
 # Load packages

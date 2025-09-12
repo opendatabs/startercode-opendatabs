@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100319.
 - **Description** `Wichtige Kennzahlen zu den Pflegeheimbewohnenden im Kanton Basel-Stadt. Dieser Datensatz fliesst zum Teil in Form eines Dashboard in den online Bericht des Bereiches Gesundheitsversorgung (GSV) des Gesundheitsdepartement Basel-Stadt. Die Kennzahlen werden per Stichtag Anfangs Jahr erhoben.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-15`
-- **Modified** `2025-02-26T15:45:44+00:00`
+- **Modified** `2025-08-19T23:00:58+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Gesundheit']`
 - **Keywords** `None`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://www.bs.ch/gd/bereich-gesundheitsversorgung/`
+- **Reference** `None`
 
 
 # Load packages

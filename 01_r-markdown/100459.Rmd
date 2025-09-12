@@ -1,0 +1,145 @@
+---
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+date: "2025-09-12"
+output: html_document
+---
+
+## Dataset: Notfalltreffpunkte
+
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100459)
+
+Auto generated R starter code for data set 100459.
+
+## Metadata
+
+- **Dataset_identifier** `100459`
+- **Title** `Notfalltreffpunkte`
+- **Description** `Die Notfalltreffpunkte Basel-Stadt sind Standorte, an denen Sie im Notfall jederzeit einen Notruf absetzen können. Sollte die übliche Informations- und Kommunikationstechnologie (IKT) – wie Festnetztelefon, Mobiltelefon oder Fernseher – infolge eines Ereignisses über längere Zeit ausfallen, erhalten Sie dort Informationen und Unterstützung durch die Behörden`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-04-28`
+- **Modified** `2025-02-24T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Öffentliche Ordnung und Sicherheit', 'Geographie']`
+- **Keywords** `['Notunterkunft', 'Polizei']`
+- **Publisher** `Kantonspolizei`
+- **Reference** `None`
+
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+```
+
+# Load data
+
+The dataset is read into a dataframe
+
+```{r}
+get_dataset <- function(url) {
+  # Create directory if it does not exist
+  data_path <- file.path(getwd(), '..', 'data')
+  if (!dir.exists(data_path)) {
+    dir.create(data_path, recursive = TRUE)
+  }
+  # Download the CSV file
+  csv_path <- file.path(data_path , '100459.csv')
+  download.file(url, csv_path, mode = "wb")
+
+  # Read the CSV file
+  data <- tryCatch(
+      read.csv(csv_path, sep = ";", stringsAsFactors = FALSE, encoding = "UTF-8"),
+      warning = function(w) NULL,
+      error = function(e) NULL
+  )
+  # if dataframe only has one column or less the data is not ";" separated
+  if (is.null(data) || ncol(data) <= 1) {
+      stop("The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code.")
+  }
+  return(data)
+}
+```
+
+```{r}
+
+df <- get_dataset('https://data.bs.ch/explore/dataset/100459/download?format=csv&timezone=Europe%2FZurich')
+
+```
+
+# Analyze data
+
+```{r}
+
+glimpse(df)
+str(df)
+
+head(df)
+tail(df)
+
+```
+
+```{r}
+# Remove columns that have no values
+df <- Filter(function(x) !all(is.na(x)), df)
+
+# Remove rows with missing values (if appropriate)
+df <- na.omit(df)
+```
+
+```{r}
+# display a small random sample transposed in order to see all variables
+t(sample_n(df, 5))
+```
+
+```{r}
+# the size of the data frame in memory
+size <- object.size(df)
+#  the size in bytes
+print(size)
+```
+
+```{r}
+# describe numerical features
+summary(df[, sapply(df, is.numeric)])
+```
+
+```{r}
+# describe non-numerical features
+summary(df[, sapply(df, Negate(is.numeric))])
+```
+
+```{r}
+# check missing values
+df %>%
+  mutate(row = row_number()) %>%
+  gather(key = "variable", value = "value", -row) %>%
+  ggplot(aes(x = variable, y = row)) +
+  geom_tile(aes(fill = is.na(value)), color = "black") +
+  scale_fill_manual(values = c("TRUE" = "grey", "FALSE" = "red")) +
+  labs(x = "", y = "", fill = "Missing") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r}
+# plot a histogram for each numerical feature
+df %>%
+  select_if(is.numeric) %>%
+  gather() %>%
+  ggplot( aes(value)) +
+  geom_histogram(bins = 10, color = "white", fill = "red") +
+    facet_wrap(~key, scales = 'free_x')
+```
+
+# Continue your code here...
+
+```{r}
+
+```
+------------------------------------------------------------------------
+
+# Questions about the data?
+
+Fachstelle für OGD Basel-Stadt | opendata@bs.ch

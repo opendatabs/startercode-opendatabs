@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100063.
 - **Description** `Der Datensatz zeigt die Haltestellen des öffentlichen Verkehrs im Kanton Basel-Stadt sowie teilweise in der trinationalen Agglomeration. Es wird nach Transportunternehmen, Art und Typ der Haltestelle unterschieden.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-01-29`
-- **Modified** `2025-07-13T05:03:39+00:00`
+- **Modified** `2025-04-28T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt', 'Verwaltung', 'Tourismus']`
 - **Keywords** `['Tram', 'Bus', 'Zug', 'Haltestelle', 'Baustelle', 'Umleitung', 'ÖV']`
 - **Publisher** `Amt für Mobilität`
-- **Reference** `www.geo.bs.ch/liniennetz_oev; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/ca128527-0b20-490f-a35d-0a13491ee101`
+- **Reference** `None`
 
 
 # Load packages

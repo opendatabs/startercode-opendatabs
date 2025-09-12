@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100318.
 - **Description** `Im vorliegenden Datensatz sind Einträge mit dem Attribut "Heimname" zu finden, bei denen der Wert "Alle Pflegeheime" verwendet wird. Diese Bezeichnung dient dazu, Daten zu aggregieren, die die Gesamtheit aller Pflegeheime repräsentieren. Nutzer sollten beachten, dass der Eintrag "Alle Pflegeheime" unter "Heimname" eine kollektive Perspektive auf die Daten darstellt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-15`
-- **Modified** `2025-02-26T15:45:44+00:00`
+- **Modified** `2025-08-19T23:00:57+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2016-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `None`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://www.bs.ch/gd/bereich-gesundheitsversorgung/`
+- **Reference** `None`
 
 
 # Load packages

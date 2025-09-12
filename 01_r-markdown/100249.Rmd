@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -18,14 +18,14 @@ Auto generated R starter code for data set 100249.
 Die Kantonsstrassen Riehen und Bettingen zeigen die Kantonsstrassen in Riehen und Bettingen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-12-23`
-- **Modified** `2025-07-13T05:05:07+00:00`
+- **Modified** `2024-10-31T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Mobilität und Verkehr']`
 - **Keywords** `['Weg', 'Mobilität', 'Strassennetz', 'Strasse', 'Wegnetz']`
 - **Publisher** `Amt für Mobilität`
-- **Reference** `www.geo.bs.ch/strassenwege; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/1854ab2e-7a1d-4a93-bc67-95add757f283`
+- **Reference** `None`
 
 
 # Load packages

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100134.
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Corona', 'COVID-19', 'Spital', 'Krankheit', 'Coronavirus', 'Virus', 'Pandemie', 'Test', 'Lungenentzündung']`
 - **Publisher** `Medizinische Dienste`
-- **Reference** `www.geo.bs.ch/coronatest; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/cbfb3123-a515-4a72-8c38-40da761070a0`
+- **Reference** `None`
 
 
 # Load packages

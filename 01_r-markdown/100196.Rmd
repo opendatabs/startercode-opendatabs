@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -33,7 +33,7 @@ Auto generated R starter code for data set 100196.
 - **Themes** `['Mobilität und Verkehr', 'Energie', 'Industrie, Dienstleistungen']`
 - **Keywords** `['Elektroautos', 'Elektromobilität', 'Ladestationen', 'IWB', 'Tankstellen', 'Elektroladestation', 'Echtzeit', 'Realtime']`
 - **Publisher** `Industrielle Werke Basel`
-- **Reference** `https://www.iwb.ch/servicecenter/oeffentliches-ladenetz/karte-ladenetz`
+- **Reference** `None`
 
 
 # Load packages

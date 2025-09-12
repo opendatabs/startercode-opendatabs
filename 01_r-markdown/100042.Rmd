@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -23,14 +23,14 @@ Im Gegensatz zum amtlichen Gemeindeverzeichnis der Schweiz wird für räumliche 
 - Die Gemeinde Riehen (BFS-Code 2703) hat die Wohnviertel-Nr. 30.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-07-08T05:03:45+00:00`
+- **Modified** `2023-05-02T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Statistische Grundlagen']`
 - **Keywords** `['Statistik', 'Einteilung', 'Wohnviertel', 'Quartier']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `www.geo.bs.ch/statistischeraumeinheiten; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/be8ce164-33ef-4794-822c-774d17c87239`
+- **Reference** `None`
 
 
 # Load packages

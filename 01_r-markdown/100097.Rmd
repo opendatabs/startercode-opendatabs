@@ -1,10 +1,10 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
-## Dataset: Geschwindigkeitsmonitoring: Einzelmessungen ab 2024
+## Dataset: Geschwindigkeitsmonitoring: Einzelmessungen
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100097)
 
@@ -13,9 +13,9 @@ Auto generated R starter code for data set 100097.
 ## Metadata
 
 - **Dataset_identifier** `100097`
-- **Title** `Geschwindigkeitsmonitoring: Einzelmessungen ab 2024`
-- **Description** `<p></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-family: Arial, sans-serif; font-size: 10.5pt;">Einzelmessungen des
-Geschwindigkeitsmonitorings der Kantonspolizei Basel-Stadt ab 2024 (Zeitpunkt des Beginns der Messung).</span><br></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Bei den dargestellten
+- **Title** `Geschwindigkeitsmonitoring: Einzelmessungen`
+- **Description** `<p></p><p></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Einzelmessungen des
+Geschwindigkeitsmonitorings der Kantonspolizei Basel-Stadt</p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Bei den dargestellten
 Daten handelt es sich ausschliesslich um statistische Erhebungen. Diese stehen
 nicht in einem Zusammenhang mit Ordnungsbussen oder einer strafrechtlichen
 Verfolgung. Die statistischen Geschwindigkeitsmessungen dienen der Kantonspolizei
@@ -24,29 +24,25 @@ Basel-Stadt zur Überprüfung der Geschwindigkeit sowie der Verkehrssicherheit
 Ergebnisse dienen zur Entscheidung, an welchen Örtlichkeiten Handlungsbedarf in
 Form von Geschwindigkeitskontrollen besteht. Jedes Statistikgerät besitzt eine
 einzige Punktgeometrie und ist meist mit zwei Richtungen versehen (Richtung 1
-und 2).<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Hinweis: Die
+und 2).<o:p></o:p></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Hinweis: Die
 Messungen sind nicht zwingend repräsentativ für das ganze Jahr und müssen im
 Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse
 Messungen während einer ausserordentlichen Verkehrsführung (z.B.
 Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben.
-Manipulationen an Geräten können zu fehlerhaften Messungen führen.<o:p></o:p></span></p><p>
+Manipulationen an Geräten können zu fehlerhaften Messungen führen.<o:p></o:p></p><p>
 
 
-
-
-
-</p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Zum
-Geschwindigkeitsmonitoring sind folgende Datensätze vorhanden:<o:p></o:p></span></p><ul><li>Einzelmessungen ab 2024 (dieser Datensatz): <a href="https://data.bs.ch/explore/dataset/100097/" target="_blank">https://data.bs.ch/explore/dataset/100097/</a></li><li>Einzelmessungen von 2021 bis 2023: <a href="https://data.bs.ch/explore/dataset/100358/" target="_blank">https://data.bs.ch/explore/dataset/100358/</a><br></li><li>Einzelmessungen bis 2020: <a href="https://data.bs.ch/explore/dataset/100200/" target="_blank">https://data.bs.ch/explore/dataset/100200/</a></li><li>Kennzahlen pro Mess-Standort: <a href="https://data.bs.ch/explore/dataset/100112/" target="_blank">https://data.bs.ch/explore/dataset/100112/</a> </li></ul>Aufgrund der grossen Datenmenge kann es vorkommen, dass der Datensatz nicht vollständig heruntergeladen werden kann. Falls dieses Problem auftritt, kann man den vollständigen Datensatz und die Einzelmessungen der Messstationen hier herunterladen:<p></p><ul><li>vollständiger Datensatz: <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv</a></li><li>Einzelmessungen der Messstationen: <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/</a></li></ul><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href="https://map.geo.bs.ch/?map_x=2614442&amp;map_y=1267497&amp;map_zoom=2&amp;lang=de&amp;baselayer_ref=Grundkarte%20farbig&amp;tree_groups=Geschwindigkeit&amp;tree_group_layers_Geschwindigkeit=RM_Geschwindigkeitsmonitoring" target="_blank">https://map.geo.bs.ch/?map_x=2614442↦_y=1267497↦_zoom=2⟨=de&amp;baselayer_ref=Grundkarte%20farbig&amp;tree_groups=Geschwindigkeit&amp;tree_group_layers_Geschwindigkeit=RM_Geschwindigkeitsmonitoring</a></p>`
+</p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="Arial, sans-serif">Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href="https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring" target="_blank">https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face="Arial, sans-serif"> aufrufbar.</font></p>Aus Kostengründen sind nur die Werte des aktuellen Jahres und des letzten Jahres als Tabelle / Visualisierung sichtbar.<p></p><p>Eine Vorschau aller Daten ist hier zu finden: <a href="https://datatools.bs.ch/Geschwindigkeitsmonitoring" target="_blank">https://datatools.bs.ch/Geschwindigkeitsmonitoring</a>.<br>Aufgrund der grossen Datenmenge kann es vorkommen, dass der Datensatz nicht vollständig heruntergeladen werden kann. Falls dieses Problem auftritt, kann man den vollständigen Datensatz und die Einzelmessungen der Messstationen hier herunterladen:</p><p></p><p></p><ul><li>vollständiger Datensatz (Achtung grösser als 10 GB): <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv</a></li><li>Einzelmessungen der Messstationen: <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/</a></li></ul><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href="https://www.geo.bs.ch/geschwindigkeitsmonitoring" target="_blank">https://www.geo.bs.ch/geschwindigkeitsmonitoring</a></p><p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-02-02`
-- **Modified** `2025-07-08T02:57:49+00:00`
+- **Modified** `2021-01-20T11:52:39+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-01-14T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-07-06T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-08-10T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Geschwindigkeit', 'Verkehr', 'Auto', 'PW', 'PKW', 'LW', 'LKW', 'Messwert', 'Einzelmessung', 'Messung']`
 - **Publisher** `Kantonspolizei`
-- **Reference** `https://www.bs.ch/jsd/polizei`
+- **Reference** `None`
 
 
 # Load packages

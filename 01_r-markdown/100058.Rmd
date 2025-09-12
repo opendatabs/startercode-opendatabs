@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100058.
 - **Description** `<p>Dieser Datensatz zeigt die durch die Kantonspolizei Basel-Stadt ausgestellten Ordnungsbussen gemäss <a href="https://www.fedlex.admin.ch/eli/oc/2019/93/de" target="_blank">eidg. Ordnungsbussenverordnung</a>. Es handelt sich ausschliesslich um bereits bezahlte Bussen.</p><p>Der Datensatz enthält die Ordnungsbussen ab Januar 2017.</p><p>Die Daten im Zeitraum vom 1.1.2017 bis 30.11.2019 wurden korrigiert. Die entsprechenden Werte können deshalb minim von jenen abweichen, welche vor dem 21. April 2020 an dieser Stelle publiziert waren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-12-23`
-- **Modified** `2025-05-12T08:37:08+00:00`
+- **Modified** `2025-08-23T12:58:33+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2016-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`

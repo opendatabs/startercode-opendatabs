@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100054.
 - **Description** `Der Baumkataster umfasst den durch die Stadtgärtnerei Basel (Gebiet Stadt Basel) und die Gemeinde Riehen (Gebiet Riehen) gepflegten Baumbestand. Bäume sind im Kanton Basel-Stadt gemäss Baumschutzgesetz (BSchG) geschützt. Die Fäll- und Baumersatzliste enthält diejenigen geschützten Bäume, welche innerhalb der nächsten 6 Monate gefällt, ersetzt und neu gepflanzt werden müssen. Fällungen werden jeweils im Winterhalbjahr vorgenommen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-07-13T05:03:35+00:00`
+- **Modified** `2025-09-12T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt', 'Geographie']`
 - **Keywords** `['Baum', 'Stadtbaum', 'Unterhalt', 'Pflege', 'Ersatz', 'Fällung', 'Kataster']`
 - **Publisher** `Stadtgärtnerei`
-- **Reference** `www.geo.bs.ch/https://www.geo.bs.ch/baumersatz; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/c83f0df5-e967-4967-99e3-fa3c871f384f; https://www.bs.ch/bvd/stadtgaertnerei/unsere-abteilungen/gruenflaechenunterhalt/staedtischer-baumbestand`
+- **Reference** `None`
 
 
 # Load packages

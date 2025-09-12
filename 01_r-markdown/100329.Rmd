@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -21,14 +21,14 @@ Auto generated R starter code for data set 100329.
 <p>Wegen Baustellen, Veranstaltungen oder aus anderen Gründe kann es sein, dass Parkplätze vorübergehend nicht zur Verfügung stehen. Auch ist es möglich, dass gewisse Parkplätze im Rahmen von Umbauprojekten bereits aufgehoben wurden, das Projekt aber noch nicht abgeschlossen und somit auch der Datensatz noch nicht nachgeführt ist.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-07-10`
-- **Modified** `2025-07-09T00:01:55+00:00`
+- **Modified** `2025-09-12T00:02:04+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
 - **Keywords** `['Parkieren', 'Parkzone', 'Parkierung', 'Parkplatz', 'Parken', 'Auto', 'Velo', 'Fahrrad', 'Motorrad']`
 - **Publisher** `Amt für Mobilität`
-- **Reference** `https://www.bs.ch/bvd/mobilitaet/grundlagen-und-strategien/parkplatzkataster-stadt-basel#parkplatzkataster`
+- **Reference** `None`
 
 
 # Load packages

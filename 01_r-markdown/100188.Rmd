@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100188.
 - **Description** `<p>Dieser Datensatz zeigt die Termine der Sitzungen des Grossen Rates Basel-Stadt. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-09`
-- **Modified** `2025-06-16T18:34:12+00:00`
+- **Modified** `2025-09-11T15:12:10+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2012-02-07T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2028-01-18T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2030-01-22T23:00:00+00:00`
 - **Themes** `['Politik', 'Gesetzgebung', 'Verwaltung']`
 - **Keywords** `['Demokratie', 'Abstimmung', 'Kalender']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`
-- **Reference** `https://grosserrat.bs.ch/ratsbetrieb/sitzungskalender`
+- **Reference** `None`
 
 
 # Load packages

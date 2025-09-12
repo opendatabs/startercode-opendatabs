@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100030.
 - **Description** `Schulstandorte der Primarstufe (Gemeinden Riehen und Bettingen)`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-07-13T05:05:25+00:00`
+- **Modified** `2025-09-11T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Bildung, Wissenschaft', 'Bevölkerung', 'Geographie']`
 - **Keywords** `['Schule', 'Lernen', 'Schüler', 'Schülerinnen', 'Lehrer', 'Lehrerinnen']`
 - **Publisher** `Gemeinde Riehen`
-- **Reference** `www.geo.bs.ch/schulen-riehen-bettingen; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/654fd1f4-10ee-4137-aec1-5fb763f45eaf`
+- **Reference** `None`
 
 
 # Load packages

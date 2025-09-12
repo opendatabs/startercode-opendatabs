@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -33,7 +33,7 @@ Online-Archivkatalog, Verpacken, Etikettieren und Magazinieren.</p>`
 - **Themes** `['Verwaltung', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Archiv', 'Akten', 'Erschliessung', 'Unterlagen', 'Archivgesetz', 'Dokumente', 'Informationen', 'Geschichte', 'Sammlung', 'Privatarchiv', 'Hauptarchiv']`
 - **Publisher** `Staatsarchiv Basel-Stadt`
-- **Reference** `https://www.bs.ch/pd/kultur/museen-und-andere-dienststellen/staatsarchiv`
+- **Reference** `None`
 
 
 # Load packages

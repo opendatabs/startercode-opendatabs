@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100052.
 - **Description** `Der Baumkataster umfasst den durch die Stadtgärtnerei Basel (Gebiet Stadt Basel) und die Gemeinde Riehen (Gebiet Riehen) gepflegten Baumbestand.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-28`
-- **Modified** `2025-07-13T05:04:05+00:00`
+- **Modified** `2025-09-12T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1769-02-28T23:25:52+00:00`
-- **Temporal_coverage_end_date** `2025-10-24T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-10-25T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Geographie']`
 - **Keywords** `['Baum', 'Baumbestand', 'Stadtbaum', 'Baumschutz', 'Unterhalt', 'Pflege', 'Kataster']`
 - **Publisher** `Stadtgärtnerei`
-- **Reference** `www.geo.bs.ch/baumkataster; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/c83f0df5-e967-4967-99e3-fa3c871f384f; https://www.bs.ch/bvd/stadtgaertnerei/unsere-abteilungen/gruenflaechenunterhalt/staedtischer-baumbestand`
+- **Reference** `None`
 
 
 # Load packages

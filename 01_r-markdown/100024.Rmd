@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100024.
 - **Description** `Die offene Kinder- und Jugendarbeit (OKJA) ist ein Freizeitangebot für Kindern ab 5 Jahren bis jungen Erwachsenen im Alter von bis 25 Jahren. Sie umfasst Angebote wie Jugendzentren, mobile Jugendarbeit, Abenteuerspielplätze oder Spielmobile. Spezifisches Charakteristikum ist, dass die Angebote offen, freiwillig und partizipativ organisiert sind.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-07-13T05:03:00+00:00`
+- **Modified** `2021-07-16T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Bevölkerung', 'Geographie', 'Tourismus']`
 - **Keywords** `['Sport', 'Turnen', 'Jugenarbeit', 'Freizeit', 'Treffpunkt']`
 - **Publisher** `Jugend, Familie und Sport`
-- **Reference** `www.geo.bs.ch/kinder_jugendangebot; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/3757d3ee-60bf-4928-bb4d-6df8aa1620b1`
+- **Reference** `None`
 
 
 # Load packages

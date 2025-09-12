@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100106.
 - **Description** `Dieser Datensatz zeigt die Anzahl Logiernächte, verfügbare und belegte Zimmer in baselstädtischen Hotels nach Kategorie auf täglicher Basis.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-02-03`
-- **Modified** `2025-06-24T07:02:24+00:00`
+- **Modified** `2025-09-12T13:01:24+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2014-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-05-30T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-08-30T22:00:00+00:00`
 - **Themes** `['Tourismus']`
 - **Keywords** `['Event', 'Übernachtungen', 'Hotels', 'Ausland']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `https://statistik.bs.ch/unterthema/8`
+- **Reference** `None`
 
 
 # Load packages

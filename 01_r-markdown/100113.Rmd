@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -28,7 +28,7 @@ Weitere Informationen zum Projekt Atmo-VISION sind in der <a href="https://www.b
 - **Themes** `['Raum und Umwelt', 'Mobilität und Verkehr']`
 - **Keywords** `['Luftqualität', 'Feinstaub', 'PM10', 'PM2.5', 'BVB']`
 - **Publisher** `Lufthygieneamt beider Basel`
-- **Reference** `https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene/lufthygiene/luftqualitat/atmovision-projekte#ftw-simplelayout-textblock-1`
+- **Reference** `None`
 
 
 # Load packages

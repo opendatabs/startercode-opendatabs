@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -25,14 +25,14 @@ wurden keine Abwasserproben auf Influenza und RSV untersucht.</span><br></p><p><
 </div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
-- **Modified** `2025-07-07T10:04:37+00:00`
+- **Modified** `2025-09-09T07:42:23+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-08-13T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Abwasser', 'Influenza', 'RSV', 'Kanalisation', 'Krankheit', 'Kläranlage', 'Grippe']`
 - **Publisher** `Kantonales Laboratorium`
-- **Reference** `https://www.bs.ch/gd/kantonslabor`
+- **Reference** `None`
 
 
 # Load packages

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100098.
 - **Description** `<p>In diesem Datensatz sind die Wahllokale des Kantons Basel-Stadt aufgeführt, zusammen mit Informationen zu den entsprechenden Wahllokal-IDs, Gemeinde-IDs und den zugehörigen Gemeinden.<br>Insgesamt enthält der Datensatz Informationen zu verschiedenen Wahllokalen im Kanton Basel-Stadt, einschließlich der Angaben zu brieflichen, elektronischen und persönlichen Stimmenden an den einzelnen Standorten.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-07-26`
-- **Modified** `2024-04-30T12:37:10+00:00`
+- **Modified** `2025-09-12T08:30:50+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik']`
 - **Keywords** `['Abstimmung', 'Wahlen', 'Demokratie']`
 - **Publisher** `Staatskanzlei`
-- **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen`
+- **Reference** `None`
 
 
 # Load packages

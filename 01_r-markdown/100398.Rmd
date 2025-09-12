@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -17,14 +17,14 @@ Auto generated R starter code for data set 100398.
 - **Description** `Dieser Datensatz enthält die Standorte von Grundwasserentnahme- und Rückgabestellen im Kanton Basel-Stadt. Die Daten zeigen, wo Grundwasser beispielsweise für thermische Nutzung oder als Brauchwasser verwendet wird.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-13`
-- **Modified** `2025-07-13T05:07:04+00:00`
+- **Modified** `2025-04-01T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Wasser', 'Grundwasser', 'Grundwassernutzung', 'Brunnen', 'Umwelt']`
 - **Publisher** `Amt für Umwelt und Energie`
-- **Reference** `www.geo.bs.ch/grundwassernutzung; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/569bc0e6-1ef4-4231-bb24-fc470a4fa44b`
+- **Reference** `None`
 
 
 # Load packages

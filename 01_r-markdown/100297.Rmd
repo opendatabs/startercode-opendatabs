@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100297.
 - **Themes** `['Politik', 'Bevölkerung']`
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Parlament', 'Nationalrat', 'Grosse Kammer', 'Bundeshaus', 'aggregiert']`
 - **Publisher** `Staatskanzlei`
-- **Reference** `https://www.bs.ch/regierungsrat/staatskanzlei/politische-rechte/wahlen-und-abstimmungen/wahl-und-abstimmungsresultate-archiv/national-und-staenderatswahlen-2023`
+- **Reference** `None`
 
 
 # Load packages

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -25,7 +25,7 @@ Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial 
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Impfung', 'SARS-CoV-2', 'Coronavirus', 'Corona', 'Vaccination', 'impfen', 'geimpft']`
 - **Publisher** `Medizinische Dienste`
-- **Reference** `https://www.bs.ch/gd`
+- **Reference** `None`
 
 
 # Load packages

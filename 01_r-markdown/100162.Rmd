@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -24,7 +24,7 @@ Auto generated R starter code for data set 100162.
 - **Themes** `['Gesundheit']`
 - **Keywords** `['SARS-CoV-2', 'Corona', 'Coronavirus', 'COVID-19', 'impfen', 'Impfung', 'Impftermin', 'Impfzentrum', 'Spital']`
 - **Publisher** `Medizinische Dienste`
-- **Reference** `https://www.bs.ch/gd/md`
+- **Reference** `None`
 
 
 # Load packages

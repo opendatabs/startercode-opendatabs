@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -31,7 +31,7 @@ Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnv
 - **Themes** `['Geographie', 'Statistische Grundlagen']`
 - **Keywords** `['Statistik', 'Einteilung', 'Wohnblockseite']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `www.geo.bs.ch/statistischeraumeinheiten; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/be8ce164-33ef-4794-822c-774d17c87239`
+- **Reference** `None`
 
 
 # Load packages

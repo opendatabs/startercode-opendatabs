@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-07-13"
+date: "2025-09-12"
 output: html_document
 ---
 
@@ -22,14 +22,14 @@ Elektrofachgeschäfte umfassen. Bei einigen Standorten sind zusätzliche
 Informationen wie Telefonnummern und Links zu ihren Internetseiten verfügbar.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-04-09`
-- **Modified** `2025-07-13T05:05:38+00:00`
+- **Modified** `2025-08-07T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Handel', 'Geographie', 'Raum und Umwelt']`
 - **Keywords** `['Recycling', 'Entsorgung', 'Brauchbares', 'Secondhand-Shop', 'Brockenhaus', 'Bücher', 'Flohmarkt', 'Textilien', 'Elektrogeräte', 'Lebensmittel', 'Kleidung', 'Kleider', 'Antiquitäten']`
 - **Publisher** `Amt für Umwelt und Energie`
-- **Reference** `www.geo.bs.ch/entsorgungsstellen; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/0cdddb20-fcd2-4219-b671-3c5f20de77bb`
+- **Reference** `None`
 
 
 # Load packages
