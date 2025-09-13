@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100106.
 - **Modified** `2025-09-12T13:01:24+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2014-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-08-30T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-07-30T22:00:00+00:00`
 - **Themes** `['Tourismus']`
 - **Keywords** `['Event', 'Übernachtungen', 'Hotels', 'Ausland']`
 - **Publisher** `Statistisches Amt`

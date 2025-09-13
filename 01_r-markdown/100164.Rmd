@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100164.
 - **Modified** `2025-09-13T05:25:37+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1976-03-28T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-09-09T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-11T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Pegel', 'Wasserstand', 'Wasser', 'Trinkwasser']`
 - **Publisher** `Amt für Umwelt und Energie`
