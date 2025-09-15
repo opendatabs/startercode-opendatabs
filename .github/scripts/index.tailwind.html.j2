@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>marimo apps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <div class="max-w-5xl mx-auto py-10 px-6">
+    <h1 class="text-3xl font-bold mb-6">marimo apps</h1>
+    <p class="mb-8 text-sm text-gray-600">
+      Interactive marimo apps exported to static HTML/WebAssembly.
+    </p>
+    <ul class="grid md:grid-cols-2 gap-4">
+      {% for app in apps %}
+      <li class="border rounded-lg bg-white p-4 hover:shadow">
+        <div class="font-semibold">{{ app.name }}</div>
+        <div class="text-xs text-gray-500 mt-1">{{ app.py_path }}</div>
+        <a class="inline-block mt-3 text-blue-600 underline" href="{{ app.html_path }}">Open</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <hr class="my-10" />
+    <a class="text-sm text-blue-600 underline" href="../">← Back to site</a>
+  </div>
+</body>
+</html>
