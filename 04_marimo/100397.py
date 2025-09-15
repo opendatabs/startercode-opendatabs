@@ -1,62 +1,73 @@
-# 100397 — marimo starter (Polars)
-# Run:  marimo run 04_marimo/100397.py   (or: marimo edit ...)
+# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
+# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+
+# /// script
+# requires-python = ">=3.10"
+# dependencies = [
+#   "marimo>=0.8.0",
+#   "polars>=1.5.0",
+#   "pandas>=2.0.0",
+#   "matplotlib>=3.8.0",
+#   "requests>=2.31.0"
+# ]
+# ///
 
 import os
 import io
 import requests
 import polars as pl
+import pandas as pd
 import marimo as mo
 import matplotlib.pyplot as plt
 
-app = mo.app()
+app = mo.App()
 
-# --- CONFIG / LINKS -----------------------------------------------------------
-PROVIDER = "Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-IDENTIFIER = "100397"
-TITLE = "Schulferien Kanton Basel-Stadt"
-DESCRIPTION = "<p>Dieser Datensatz listet alle Schulferien der Schülerinnen und Schüler des Kantons Basel-Stadt auf. Einige weitere schulfreie Tage sind nicht enthalten. Die Schülerinnen und Schüler haben nämlich zusätzlich frei<br>
-</p><ul><li>an den gesetzlichen Feiertagen: <a href='https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt'>https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt</a> und<br></li><li>an der Jahresversammlung der Kantonalen Schulkonferenz 
-(obligatorische Veranstaltung für Lehr- und Fachpersonen).</li></ul>Daten zu Schulferien von vergangenen Jahren sind auf edudoc.ch (<a href='https://edudoc.ch/search?cc=idesferienliste&amp;ln=de&amp;c=idesferienliste' target='_blank'>https://edudoc.ch/search?cc=idesferienliste&amp;ln=de&amp;c=idesferienliste</a>) verfügbar. Interessierte können uns gerne eine Anfrage für diese Daten in maschinenlesbarem Format schicken.<p></p><p>Um den Kalender als iCal zu abonnieren, kopieren Sie bitte den folgenden Link und fügen ihn in Ihrem bevorzugten Kalenderprogramm unter der Funktion „Kalender abonnieren“ ein. WICHTIG: Verwenden Sie unbedingt die Abonnieren-Option, damit der Kalender automatisch mit den neuesten Daten aktualisiert wird: <a href='https://data-bs.ch/stata/ed/schulferien/SchulferienBS.ics' target='_blank'>https://data-bs.ch/stata/ed/schulferien/SchulferienBS.ics</a> .</p><p>Die Daten werden alle 4 Jahre um weitere 4 Schuljahre ergänzt.</p><p>Das zugehörige ETL-Skript ist auf Github (<a href='https://github.com/opendatabs/data-processing/tree/master/ed_schulferien' target='_blank'>https://github.com/opendatabs/data-processing/tree/master/ed_schulferien</a>) zu finden.
-</p>"
-CONTACT = "Fachstelle für OGD Basel-Stadt | opendata@bs.ch"
-DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100397)"""
+PROVIDER = """{{ PROVIDER }}"""
+IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
+TITLE = """{{ DATASET_TITLE }}"""
+DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
+CONTACT = """{{ CONTACT }}"""
+DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
 
-# --- HELPERS ------------------------------------------------------------------
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
     os.makedirs(data_path, exist_ok=True)
     return data_path
 
 def get_dataset(url: str) -> pl.DataFrame:
-    """Download CSV once (to ../data) and read with Polars.
-    Tries common delimiters (;, ',', '\\t')."""
     _ensure_data_dir()
     csv_path = os.path.join("..", "data", f"{IDENTIFIER}.csv")
 
-    # Download (idempotent)
     try:
-        r = requests.get(url, params={"format": "csv", "timezone": "Europe%2FZurich"}, timeout=60)
+        r = requests.get(
+            url,
+            params={"format": "csv", "timezone": "Europe%2FZurich"},
+            timeout=60,
+        )
         r.raise_for_status()
         with open(csv_path, "wb") as f:
             f.write(r.content)
         content = io.BytesIO(r.content)
     except Exception:
-        # Fallback to local file if present
         content = csv_path if os.path.exists(csv_path) else None
 
     if content is None:
         raise RuntimeError("Could not download or locate dataset locally.")
 
-    # Try delimiters
     for sep in (";", ",", "\t"):
         try:
-            df = pl.read_csv(content, separator=sep, ignore_errors=True, infer_schema_length=2000)
-            if df.width > 1:  # likely correct delimiter
+            df = pl.read_csv(
+                content,
+                separator=sep,
+                ignore_errors=True,
+                infer_schema_length=2000,
+            )
+            if df.width > 1:
                 return df
         except Exception:
-            content.seek(0) if hasattr(content, "seek") else None
+            if hasattr(content, "seek"):
+                content.seek(0)
 
-    # Last attempt: let Polars auto-detect
     return pl.read_csv(content, ignore_errors=True, infer_schema_length=2000)
 
 def drop_all_null_columns(df: pl.DataFrame) -> pl.DataFrame:
@@ -66,69 +77,66 @@ def drop_all_null_columns(df: pl.DataFrame) -> pl.DataFrame:
     cols_keep = [c for c, n in zip(df.columns, null_counts_row) if n < df.height]
     return df.select(cols_keep)
 
-# --- UI CELLS -----------------------------------------------------------------
 @app.cell
 def _():
-    mo.md(f"""
-## Open Government Data, provided by **{PROVIDER}**  
-*Autogenerated Python (marimo) starter for dataset* **`{IDENTIFIER}`**
-""")
+    mo.md(
+        f"""## Open Government Data, provided by **{PROVIDER}**
+*Autogenerated Python (marimo) starter for dataset* **`{IDENTIFIER}`**"""
+    )
     return
 
 @app.cell
 def _():
-    mo.md(f"## Dataset\n# **{TITLE}**")
+    mo.md(
+        f"""## Dataset
+# **{TITLE}**"""
+    )
     return
 
 @app.cell
 def _():
-    mo.md("""## Data set links
+    mo.md(
+        """## Data set links
 
-""" + DATASHOP_MD_LINK)
+""" + DATASHOP_MD_LINK
+    )
     return
 
 @app.cell
 def _():
-    mo.md("## Metadata\n- **Dataset_identifier** `100397`
-- **Title** `Schulferien Kanton Basel-Stadt`
-- **Description** `<p>Dieser Datensatz listet alle Schulferien der Schülerinnen und Schüler des Kantons Basel-Stadt auf. Einige weitere schulfreie Tage sind nicht enthalten. Die Schülerinnen und Schüler haben nämlich zusätzlich frei<br>
-</p><ul><li>an den gesetzlichen Feiertagen: <a href='https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt'>https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt</a> und<br></li><li>an der Jahresversammlung der Kantonalen Schulkonferenz 
-(obligatorische Veranstaltung für Lehr- und Fachpersonen).</li></ul>Daten zu Schulferien von vergangenen Jahren sind auf edudoc.ch (<a href='https://edudoc.ch/search?cc=idesferienliste&amp;ln=de&amp;c=idesferienliste' target='_blank'>https://edudoc.ch/search?cc=idesferienliste&amp;ln=de&amp;c=idesferienliste</a>) verfügbar. Interessierte können uns gerne eine Anfrage für diese Daten in maschinenlesbarem Format schicken.<p></p><p>Um den Kalender als iCal zu abonnieren, kopieren Sie bitte den folgenden Link und fügen ihn in Ihrem bevorzugten Kalenderprogramm unter der Funktion „Kalender abonnieren“ ein. WICHTIG: Verwenden Sie unbedingt die Abonnieren-Option, damit der Kalender automatisch mit den neuesten Daten aktualisiert wird: <a href='https://data-bs.ch/stata/ed/schulferien/SchulferienBS.ics' target='_blank'>https://data-bs.ch/stata/ed/schulferien/SchulferienBS.ics</a> .</p><p>Die Daten werden alle 4 Jahre um weitere 4 Schuljahre ergänzt.</p><p>Das zugehörige ETL-Skript ist auf Github (<a href='https://github.com/opendatabs/data-processing/tree/master/ed_schulferien' target='_blank'>https://github.com/opendatabs/data-processing/tree/master/ed_schulferien</a>) zu finden.
-</p>`
-- **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2024-12-13`
-- **Modified** `2025-09-15T03:00:19+00:00`
-- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2024-09-27T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2032-08-07T22:00:00+00:00`
-- **Themes** `['Bevölkerung', 'Bildung, Wissenschaft']`
-- **Keywords** `['Schule', 'Lernen', 'Schüler', 'Lehrer']`
-- **Publisher** `Generalsekretariat`
-- **Reference** `None`
-")
+    mo.md(
+        """## Metadata
+{{ DATASET_METADATA }}"""
+    )
     return
 
 @app.cell
 def _():
-    mo.md("## Imports and helper functions\nUsing Polars for speed and memory efficiency.")
+    mo.md(
+        """## Imports and helper functions
+Using Polars for speed and memory efficiency."""
+    )
     return
 
 @app.cell
 def _():
-    # Intentionally empty: imports are at the top of the file
     pass
 
 @app.cell
 def _():
-    mo.md("## Load data\nThe dataset is read into a Polars DataFrame.")
+    mo.md(
+        """## Load data
+The dataset is read into a Polars DataFrame."""
+    )
     return
 
 @app.cell
 def _():
-    # Read the dataset
-    df = get_dataset('https://data.bs.ch/explore/dataset/100397/download')
+    {{LOAD_DATA}}
     df = drop_all_null_columns(df)
-    mo.md(f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns.")
+    mo.md(
+        f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."
+    )
     df
     return df
 
@@ -137,14 +145,15 @@ def _(df):
     mo.md("## Quick profile")
     duplicates = int(df.is_duplicated().sum()) if df.height else 0
     schema = "\n".join([f"- `{k}`: {v}" for k, v in df.schema.items()])
-    size_mb = f"{(df.estimated_size() or 0)/1_048_576:,.2f} MB"
+    try:
+        size_mb = f"{(df.estimated_size() or 0)/1_048_576:,.2f} MB"
+    except Exception:
+        size_mb = "n/a"
     mo.md(
-        f"""
-- Approx. memory size: **{size_mb}**  
+        f"""- Approx. memory size: **{size_mb}**  
 - Exact duplicates (row-wise): **{duplicates:,}**  
 - Schema:
-{schema}
-"""
+{schema}"""
     )
     return
 
@@ -179,6 +188,7 @@ def _(df):
         plt.title("Missingness matrix (True=missing)")
         plt.xlabel("columns")
         plt.ylabel("rows")
+        plt.tight_layout()
         plt.show()
     return
 
@@ -189,7 +199,7 @@ def _(df):
     if not num_cols:
         mo.md("_No numeric data to plot._")
     else:
-        for c in num_cols[:24]:  # cap to avoid excessive plots
+        for c in num_cols[:24]:
             s = df.select(c).drop_nulls()
             if s.height == 0:
                 continue
@@ -202,7 +212,7 @@ def _(df):
 
 @app.cell
 def _():
-    mo.md(f"**Questions about the data?** {CONTACT}")
+    mo.md(f"""**Questions about the data?** {CONTACT}""")
     return
 
 if __name__ == "__main__":
