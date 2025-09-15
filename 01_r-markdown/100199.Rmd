@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
-date: "2025-09-14"
+date: "2025-09-15"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr un
 </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-09-21`
-- **Modified** `2025-09-14T04:02:57+00:00`
+- **Modified** `2025-09-15T04:02:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-09-07T22:00:00+00:00`
