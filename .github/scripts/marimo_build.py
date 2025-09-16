@@ -22,21 +22,15 @@ from loguru import logger
 
 def _export_html_wasm(py_path: Path, out_dir: Path) -> bool:
     """Export one marimo .py to HTML/WASM in EDIT mode."""
-    rel_html = py_path.with_suffix(".html").name  # just filename.html
-    out_html = out_dir / rel_html
-    out_html.parent.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_html = out_dir / f"{py_path.stem}.html"
 
     cmd = [
-        "uvx",
-        "marimo",
-        "export",
-        "html-wasm",
+        "uvx", "marimo", "export", "html-wasm",
         "--sandbox",
-        "--mode",
-        "edit",  # EDIT mode
+        "--mode", "edit",           # EDIT mode
         str(py_path),
-        "-o",
-        str(out_html),
+        "-o", str(out_html),
     ]
     logger.debug(f"Running: {cmd}")
     try:
@@ -56,15 +50,18 @@ def main(source: Union[str, Path] = "04_marimo", output_dir: Union[str, Path] = 
     logger.info(f"Output dir: {out_dir}")
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    # Find marimo apps (top-level .py files under source; recurse if you prefer)
     py_files = sorted(source_dir.glob("*.py"))
     if not py_files:
         logger.warning("No marimo .py files found")
         return
 
+    ok_count = 0
     for nb in py_files:
-        _export_html_wasm(nb, out_dir)
+        ok_count += int(_export_html_wasm(nb, out_dir))
 
-    logger.info("Build complete.")
+    logger.info(f"Build complete. Exported {ok_count}/{len(py_files)} notebooks.")
 
 
-if __name__ == "
+if __name__ == "__main__":
+    fire.Fire(main)
