@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100076 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100076.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100076"""
+TITLE = """Coronavirus (COVID-19): Todesfälle Basel-Stadt nach Alter und Geschlecht"""
+DESCRIPTION = """<div>Todesfälle von Einwohnern des Kantons Basel-Stadt mit der Coronavirus-Krankheit (COVID-19) nach Alter und Geschlecht. Die Daten wurden zu Beginn der Pandemie von Hand aus öffentlich zugänglichen offiziellen Quellen durch Mitarbeiter <span data-teams='true'>von Open Data Basel-Stadt</span> erfasst. Inzwischen erhalten wir die Daten der Gestorbenen direkt von den Gesundheitsdiensten des Kantons. Die Quellenangabe der jeweiligen Zahlen ist direkt der Tabelle zu entnehmen.</div><div><br></div><div>Die gesamtschweizerischen Daten aller Kantone und des Fürstentums Liechtenstein (FL), welche die Fälle nach Alter und Geschlecht ausweisen, sind hier zu finden:</div><div><ul><li><a href='https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_alter_geschlecht_csv' target='_blank'>https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_alter_geschlecht_csv</a></li></ul></div><p style='font-family: sans-serif;'><span style='font-weight: bolder;'>Änderungsprotokoll:</span></p><ul><li>Die Erhebung der Werte wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von 'DAILY' auf 'NEVER' geändert.</li></ul>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100076)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100076`
+- **Title** `Coronavirus (COVID-19): Todesfälle Basel-Stadt nach Alter und Geschlecht`
+- **Description** `<div>Todesfälle von Einwohnern des Kantons Basel-Stadt mit der Coronavirus-Krankheit (COVID-19) nach Alter und Geschlecht. Die Daten wurden zu Beginn der Pandemie von Hand aus öffentlich zugänglichen offiziellen Quellen durch Mitarbeiter <span data-teams="true">von Open Data Basel-Stadt</span> erfasst. Inzwischen erhalten wir die Daten der Gestorbenen direkt von den Gesundheitsdiensten des Kantons. Die Quellenangabe der jeweiligen Zahlen ist direkt der Tabelle zu entnehmen.</div><div><br></div><div>Die gesamtschweizerischen Daten aller Kantone und des Fürstentums Liechtenstein (FL), welche die Fälle nach Alter und Geschlecht ausweisen, sind hier zu finden:</div><div><ul><li><a href="https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_alter_geschlecht_csv" target="_blank">https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_alter_geschlecht_csv</a></li></ul></div><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Änderungsprotokoll:</span></p><ul><li>Die Erhebung der Werte wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "DAILY" auf "NEVER" geändert.</li></ul>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-04-07`
+- **Modified** `2024-03-13T14:01:41+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-03-18T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-07-04T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Todesfälle', 'Lungenentzündung', 'Pandemie', 'Alter', 'Geschlecht', 'Corona']`
+- **Publisher** `Open Data Basel-Stadt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100076/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

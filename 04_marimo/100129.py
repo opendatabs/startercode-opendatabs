@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100129 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100129.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100129"""
+TITLE = """Vornamen der baselstädtischen Bevölkerung"""
+DESCRIPTION = """Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Vornamen. Die Daten werden jährlich aktualisiert. Bei mehreren Vornamen wird nur der erste berücksichtigt. Durch Bindestrich verbundene Vornamen zählen als ein Vorname. <br>Die hier veröffentlichten Werte der Jahre 1979 bis 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 1979 auf Auswertungen aus dem Einwohnerregister."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100129)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100129`
+- **Title** `Vornamen der baselstädtischen Bevölkerung`
+- **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Vornamen. Die Daten werden jährlich aktualisiert. Bei mehreren Vornamen wird nur der erste berücksichtigt. Durch Bindestrich verbundene Vornamen zählen als ein Vorname. <br>Die hier veröffentlichten Werte der Jahre 1979 bis 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 1979 auf Auswertungen aus dem Einwohnerregister.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-03-25`
+- **Modified** `2025-09-01T01:24:07+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bevölkerung']`
+- **Keywords** `['Bevölkerungsbestand', 'Entwicklung', 'Einwohnerzahl', 'Bevölkerungsstruktur', 'Nachname', 'Vorname', 'Name']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100129/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

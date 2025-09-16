@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100199 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100199.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,15 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100199"""
+TITLE = """Durchschnittlicher Tagesverkehr (basierend auf dem Geschwindigkeitsmonitoring der Kantonspolizei)"""
+DESCRIPTION = """<p>Dieser Datensatz resultiert aus dem Daten des Geschwindigkeitsmonitorings der Kantonspolizei Basel-Stadt (siehe <a href='https://data.bs.ch/explore/dataset/100097/' target='_blank'>https://data.bs.ch/explore/dataset/100097/</a>). Es wird zu jeder Messung und Richtung (ein Messgerät an einem Standort misst in zwei Richtungen) der durchschnittliche Tagesverkehr berechnet. </p><p>
+
+Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr und müssen im Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse Messungen während einer ausserordentlichen Verkehrsführung (z.B. Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben. Diese Messungen sind ab dem Jahr 2022 in der Spalte «Ausserordentliche Verkehrsführung» mit «True» gekennzeichnet. Manipulationen an Geräten können zu fehlerhaften Messungen führen.</p><p><font face='Arial, sans-serif'>Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href='https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring' style='background-color: rgb(255, 255, 255); font-family: sans-serif; font-size: 14px; font-weight: 400;' target='_blank'>https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face='Arial, sans-serif'> aufrufbar.</font></p><p>
+</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100199)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +109,23 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100199`
+- **Title** `Durchschnittlicher Tagesverkehr (basierend auf dem Geschwindigkeitsmonitoring der Kantonspolizei)`
+- **Description** `<p>Dieser Datensatz resultiert aus dem Daten des Geschwindigkeitsmonitorings der Kantonspolizei Basel-Stadt (siehe <a href="https://data.bs.ch/explore/dataset/100097/" target="_blank">https://data.bs.ch/explore/dataset/100097/</a>). Es wird zu jeder Messung und Richtung (ein Messgerät an einem Standort misst in zwei Richtungen) der durchschnittliche Tagesverkehr berechnet. </p><p>
+
+Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr und müssen im Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse Messungen während einer ausserordentlichen Verkehrsführung (z.B. Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben. Diese Messungen sind ab dem Jahr 2022 in der Spalte «Ausserordentliche Verkehrsführung» mit «True» gekennzeichnet. Manipulationen an Geräten können zu fehlerhaften Messungen führen.</p><p><font face="Arial, sans-serif">Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href="https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring" style="background-color: rgb(255, 255, 255); font-family: sans-serif; font-size: 14px; font-weight: 400;" target="_blank">https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face="Arial, sans-serif"> aufrufbar.</font></p><p>
+</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-09-21`
+- **Modified** `2025-09-16T04:02:48+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-07T22:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr', 'Tourismus']`
+- **Keywords** `['Verkehrszählung', 'Verkehr', 'Statistik', 'Durchschnitt', 'Tagesverkehr', 'Belästigung', 'Auslastung', 'DTV']`
+- **Publisher** `Amt für Mobilität`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +151,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100199/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

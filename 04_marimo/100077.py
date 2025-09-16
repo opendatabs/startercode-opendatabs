@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100077 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100077.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100077"""
+TITLE = """Coronavirus (COVID-19): Fallzahlen ganze Schweiz"""
+DESCRIPTION = """<p>Dieser Datensatz basiert auf dem Github-repository (<a href='https://github.com/openZH/covid_19' target='_blank'>https://github.com/openZH/covid_19</a>), das von OpenZH verwaltet wird. DIe Daten wurden mit den geographischen Daten der Kantone angereichert, um Visualisierungen zu produzieren.</p><p><span style='font-weight: bolder;'>Hinweis:<br></span>Da seit dem 6. Mai 2024 keine Fallzahlen mehr von den Kantonen geliefert werden, wird dieser Datensatz nicht mehr aktualisiert. Auch die oben genannte Github-Repository wurde archiviert.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100077)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100077`
+- **Title** `Coronavirus (COVID-19): Fallzahlen ganze Schweiz`
+- **Description** `<p>Dieser Datensatz basiert auf dem Github-repository (<a href="https://github.com/openZH/covid_19" target="_blank">https://github.com/openZH/covid_19</a>), das von OpenZH verwaltet wird. DIe Daten wurden mit den geographischen Daten der Kantone angereichert, um Visualisierungen zu produzieren.</p><p><span style="font-weight: bolder;">Hinweis:<br></span>Da seit dem 6. Mai 2024 keine Fallzahlen mehr von den Kantonen geliefert werden, wird dieser Datensatz nicht mehr aktualisiert. Auch die oben genannte Github-Repository wurde archiviert.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-04-07`
+- **Modified** `2024-04-17T08:05:30+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-01-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-04-15T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['covid19', 'pandemic', 'pandémie', 'Suisse', 'CH', 'Switzerland', 'coronavirus']`
+- **Publisher** `OpenZH`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100077/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

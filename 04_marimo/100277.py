@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100277 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100277.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100277"""
+TITLE = """Statistiken der Smiley-Geschwindigkeitsanzeigen"""
+DESCRIPTION = """<p>Die Statistik der Smiley-Geschwindigkeitsanzeigen fasst die Daten über die verschiedenen Phasen zusammen (Vormessung, Betrieb, Nachmessung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen.<br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100277)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100277`
+- **Title** `Statistiken der Smiley-Geschwindigkeitsanzeigen`
+- **Description** `<p>Die Statistik der Smiley-Geschwindigkeitsanzeigen fasst die Daten über die verschiedenen Phasen zusammen (Vormessung, Betrieb, Nachmessung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen.<br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-12-19`
+- **Modified** `2025-08-05T15:41:42+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2023-02-08T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-01-30T23:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr', 'Öffentliche Ordnung und Sicherheit']`
+- **Keywords** `['Smiley', 'Tempolimit', 'Verkehr', 'Tagesverkehr', 'Tempo', 'Vormessung', 'Nachmessung']`
+- **Publisher** `Kantonspolizei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100277/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

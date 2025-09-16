@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100268 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100268.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,20 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100268"""
+TITLE = """Einzelmessungen der Smiley-Geschwindigkeitsanzeigen"""
+DESCRIPTION = """<p>Einzelmessungen der Smiley-Geschwindigkeitsanzeigen der Kantonspolizei Basel-Stadt ab 2023 (Zeitpunkt des Beginns der Messung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen. Hinweis: Die Messungen sind nicht repräsentativ für das ganze Jahr und müssen im Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse Messungen während einer ausserordentlichen Verkehrsführung (z.B. Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben. Manipulationen an Geräten können zu fehlerhaften Messungen führen.</p><p class='MsoNormal'><span class='ui-provider'>Die Geschwindigkeitsmessungen
+durchlaufen vier Phasen: <b>Vormessung</b>, <b>Betrieb</b>, <b>Nachmessung</b> und <b>nach Ende</b>. In der
+Vormessungsphase wird die Geschwindigkeit der Fahrzeuge an den
+Smiley-Geschwindigkeitsanzeigen gemessen, wobei die Anzeigen nicht aktiviert
+sind. In der Betriebsphase sind die Smiley-Geschwindigkeitsanzeigen hingegen
+eingeschaltet. Nachfolgend werden die Anzeigen ausgeschaltet und die
+Geschwindigkeit der Fahrzeuge an den Smiley-Geschwindigkeitsanzeigen wird
+erneut gemessen. Die letzte Phase 'nach Ende' sind Messungen, die
+ausserhalb des im Projekt definierten Zeitraums vorfallen. </span></p><p class='MsoNormal'>Aus Kostengründen sind nur die Werte der letzten zwei Zyklen als Tabelle / Visualisierung sichtbar.</p><p class='MsoNormal'><span class='ui-provider'><o:p>Eine Vorschau aller Daten ist hier zu finden: </o:p></span><a href='https://datatools.bs.ch/Smiley-Geschwindigkeitsmessungen' target='_blank'>https://datatools.bs.ch/Smiley-Geschwindigkeitsmessungen</a><span class='ui-provider'><o:p> </o:p></span></p><p class='MsoNormal'><span class='ui-provider'><o:p>Alle Daten in dem Format wie in dieser Tabelle können hier heruntergeladen werden: </o:p></span><a href='https://data-bs.ch/stata/kapo/smileys/all_data/all_data.csv' target='_blank'>https://data-bs.ch/stata/kapo/smileys/all_data/all_data.csv</a> </p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100268)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +114,28 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100268`
+- **Title** `Einzelmessungen der Smiley-Geschwindigkeitsanzeigen`
+- **Description** `<p>Einzelmessungen der Smiley-Geschwindigkeitsanzeigen der Kantonspolizei Basel-Stadt ab 2023 (Zeitpunkt des Beginns der Messung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen. Hinweis: Die Messungen sind nicht repräsentativ für das ganze Jahr und müssen im Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse Messungen während einer ausserordentlichen Verkehrsführung (z.B. Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben. Manipulationen an Geräten können zu fehlerhaften Messungen führen.</p><p class="MsoNormal"><span class="ui-provider">Die Geschwindigkeitsmessungen
+durchlaufen vier Phasen: <b>Vormessung</b>, <b>Betrieb</b>, <b>Nachmessung</b> und <b>nach Ende</b>. In der
+Vormessungsphase wird die Geschwindigkeit der Fahrzeuge an den
+Smiley-Geschwindigkeitsanzeigen gemessen, wobei die Anzeigen nicht aktiviert
+sind. In der Betriebsphase sind die Smiley-Geschwindigkeitsanzeigen hingegen
+eingeschaltet. Nachfolgend werden die Anzeigen ausgeschaltet und die
+Geschwindigkeit der Fahrzeuge an den Smiley-Geschwindigkeitsanzeigen wird
+erneut gemessen. Die letzte Phase "nach Ende" sind Messungen, die
+ausserhalb des im Projekt definierten Zeitraums vorfallen. </span></p><p class="MsoNormal">Aus Kostengründen sind nur die Werte der letzten zwei Zyklen als Tabelle / Visualisierung sichtbar.</p><p class="MsoNormal"><span class="ui-provider"><o:p>Eine Vorschau aller Daten ist hier zu finden: </o:p></span><a href="https://datatools.bs.ch/Smiley-Geschwindigkeitsmessungen" target="_blank">https://datatools.bs.ch/Smiley-Geschwindigkeitsmessungen</a><span class="ui-provider"><o:p> </o:p></span></p><p class="MsoNormal"><span class="ui-provider"><o:p>Alle Daten in dem Format wie in dieser Tabelle können hier heruntergeladen werden: </o:p></span><a href="https://data-bs.ch/stata/kapo/smileys/all_data/all_data.csv" target="_blank">https://data-bs.ch/stata/kapo/smileys/all_data/all_data.csv</a> </p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-12-19`
+- **Modified** `2025-09-16T08:12:17+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2024-05-05T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-03-19T23:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr', 'Öffentliche Ordnung und Sicherheit']`
+- **Keywords** `['Smiley', 'Tempolimit', 'Verkehr', 'Tagesverkehr', 'Tempo', 'Vormessung', 'Nachmessung']`
+- **Publisher** `Kantonspolizei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +161,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100268/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100238 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100238.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100238"""
+TITLE = """Bevölkerung nach Geschlecht, Heimat und Altersjahr ab 1945"""
+DESCRIPTION = """Der Datensatz zeigt die Bevölkerung des Kantons Basel-Stadt nach Heimat, 1-Jahres-Altersklassen am Ende des Jahres. Die Daten werden jährlich aktualisiert. <br><br>Methodischer Hinweise: <br>- In der Kategorie CH sind auch die Kantonsbürger (Kategorie BS) enthalten. Addiert man die beiden Kategorien, so werden die Kantonsbürger doppelt gezählt.<br>- In den Jahren von 1964 bis 1990 basiert die Bevölkerungszahlen auf Fortschreibungen von Volkszählungen; <br>- In den Jahren von 1990 bis 2011 beruhten die jährlichen Fortschreibungen auf dem Bestand des kantonalen Einwohnerregisters am 31.12.1990.<br>- Seit dem Jahr 2012 basiert die Bevölkerungszahlen direkt auf Auswertungen aus dem kantonalen Einwohnerregister.<br>- Im Jahr 1989 und 1990:  Ab dem 94. Altersjahr wurden die Daten  an den Bestand der Einwohnerkontrolle Basel-Stadt angeglichen.<br> - Im Jahr 2019: Infolge einer Systemumstellung ohne Grenzgänger mit Wochenaufenthalt."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100238)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100238`
+- **Title** `Bevölkerung nach Geschlecht, Heimat und Altersjahr ab 1945`
+- **Description** `Der Datensatz zeigt die Bevölkerung des Kantons Basel-Stadt nach Heimat, 1-Jahres-Altersklassen am Ende des Jahres. Die Daten werden jährlich aktualisiert. <br><br>Methodischer Hinweise: <br>- In der Kategorie CH sind auch die Kantonsbürger (Kategorie BS) enthalten. Addiert man die beiden Kategorien, so werden die Kantonsbürger doppelt gezählt.<br>- In den Jahren von 1964 bis 1990 basiert die Bevölkerungszahlen auf Fortschreibungen von Volkszählungen; <br>- In den Jahren von 1990 bis 2011 beruhten die jährlichen Fortschreibungen auf dem Bestand des kantonalen Einwohnerregisters am 31.12.1990.<br>- Seit dem Jahr 2012 basiert die Bevölkerungszahlen direkt auf Auswertungen aus dem kantonalen Einwohnerregister.<br>- Im Jahr 1989 und 1990:  Ab dem 94. Altersjahr wurden die Daten  an den Bestand der Einwohnerkontrolle Basel-Stadt angeglichen.<br> - Im Jahr 2019: Infolge einer Systemumstellung ohne Grenzgänger mit Wochenaufenthalt.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-01-24`
+- **Modified** `2025-04-28T07:46:24+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bevölkerung']`
+- **Keywords** `['Alter', 'Bevölkerungsbestand', 'Geschlecht', 'Herkunft', 'Bevölkerungsstruktur', 'Staatsangehörigkeit']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100238/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

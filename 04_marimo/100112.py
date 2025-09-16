@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100112 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100112.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,26 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100112"""
+TITLE = """Geschwindigkeitsmonitoring: Kennzahlen pro Mess-Standort"""
+DESCRIPTION = """<p>In diesem Datensatz werden zu jeder Messung (ein Messgerät an einem Standort) die Kennzahlen V50, V85, Anzahl Fahrzeuge und Übertretungsquote pro Richtung angegeben. Die einzelnen Fahrten finden Sie im Datensatz Einzelmessungen (<a href='https://data.bs.ch/explore/dataset/100097//' target='_blank'>https://data.bs.ch/explore/dataset/100097/</a>)</p><p class='MsoNormal' style='margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'><span style='font-size: 10.5pt; font-family: Arial, sans-serif;'>Bei den dargestellten
+Daten handelt es sich ausschliesslich um statistische Erhebungen. Diese stehen
+nicht in einem Zusammenhang mit Ordnungsbussen oder einer strafrechtlichen
+Verfolgung. Die statistischen Geschwindigkeitsmessungen dienen der
+Kantonspolizei Basel-Stadt zur Überprüfung der Geschwindigkeit sowie der
+Verkehrssicherheit (z.B. Sicherheit an Fussgängerstreifen) an der betreffenden
+Örtlichkeit. Die Ergebnisse dienen zur Entscheidung, an welchen Örtlichkeiten
+Handlungsbedarf in Form von Geschwindigkeitskontrollen besteht. Jedes
+Statistikgerät besitzt eine einzige Punktgeometrie und ist meist mit zwei
+Richtungen versehen (Richtung 1 und 2).<o:p></o:p></span></p><p class='MsoNormal' style='margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'><span style='font-size: 10.5pt; font-family: Arial, sans-serif;'>Hinweis: Die
+Messungen sind nicht zwingend repräsentativ für das ganze Jahr und müssen im
+Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse
+Messungen während einer ausserordentlichen Verkehrsführung (z.B.
+Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben.
+Manipulationen an Geräten können zu fehlerhaften Messungen führen.</span></p><p class='MsoNormal' style='margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'><font face='Arial, sans-serif'>Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href='https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring' style='background-color: rgb(255, 255, 255); font-family: sans-serif; font-size: 14px; font-weight: 400;' target='_blank'>https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face='Arial, sans-serif'> aufrufbar.</font></p><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href='https://www.geo.bs.ch/geschwindigkeitsmonitoring' target='_blank'>https://www.geo.bs.ch/geschwindigkeitsmonitoring</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100112)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +120,34 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100112`
+- **Title** `Geschwindigkeitsmonitoring: Kennzahlen pro Mess-Standort`
+- **Description** `<p>In diesem Datensatz werden zu jeder Messung (ein Messgerät an einem Standort) die Kennzahlen V50, V85, Anzahl Fahrzeuge und Übertretungsquote pro Richtung angegeben. Die einzelnen Fahrten finden Sie im Datensatz Einzelmessungen (<a href="https://data.bs.ch/explore/dataset/100097//" target="_blank">https://data.bs.ch/explore/dataset/100097/</a>)</p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Bei den dargestellten
+Daten handelt es sich ausschliesslich um statistische Erhebungen. Diese stehen
+nicht in einem Zusammenhang mit Ordnungsbussen oder einer strafrechtlichen
+Verfolgung. Die statistischen Geschwindigkeitsmessungen dienen der
+Kantonspolizei Basel-Stadt zur Überprüfung der Geschwindigkeit sowie der
+Verkehrssicherheit (z.B. Sicherheit an Fussgängerstreifen) an der betreffenden
+Örtlichkeit. Die Ergebnisse dienen zur Entscheidung, an welchen Örtlichkeiten
+Handlungsbedarf in Form von Geschwindigkeitskontrollen besteht. Jedes
+Statistikgerät besitzt eine einzige Punktgeometrie und ist meist mit zwei
+Richtungen versehen (Richtung 1 und 2).<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Hinweis: Die
+Messungen sind nicht zwingend repräsentativ für das ganze Jahr und müssen im
+Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse
+Messungen während einer ausserordentlichen Verkehrsführung (z.B.
+Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben.
+Manipulationen an Geräten können zu fehlerhaften Messungen führen.</span></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="Arial, sans-serif">Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href="https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring" style="background-color: rgb(255, 255, 255); font-family: sans-serif; font-size: 14px; font-weight: 400;" target="_blank">https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face="Arial, sans-serif"> aufrufbar.</font></p><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href="https://www.geo.bs.ch/geschwindigkeitsmonitoring" target="_blank">https://www.geo.bs.ch/geschwindigkeitsmonitoring</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-02-02`
+- **Modified** `2025-09-16T02:01:24+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Mobilität und Verkehr']`
+- **Keywords** `['Messung', 'Messwert', 'Standort', 'Mess-Stelle', 'Messstelle', 'Geschwindigkeit', 'Verkehr', 'Auto', 'PKW', 'PW', 'LKW', 'LW', 'Radar']`
+- **Publisher** `Kantonspolizei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +173,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100112/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

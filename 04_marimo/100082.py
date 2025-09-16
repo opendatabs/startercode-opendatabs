@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100082 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100082.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100082"""
+TITLE = """Standorte Messstationen Smart Climate Luftklima"""
+DESCRIPTION = """<p>Der Datensatz zeigt die Standorte der Messstationen für den Datensatz <a href='https://data.bs.ch/explore/dataset/100009/' target='_blank'>«Luftklima Smart Regio Basel» (https://data.bs.ch/explore/dataset/100009/)</a>.</p><p><b>Änderungsprotokoll:</b></p><p><b>18.04.2024:</b> Die Koordinaten werden automatisch plausibilisiert. Es werde nur Koordinaten angezeigt, die in einem bestimmten Umkreis von Basel sind. Der Code dazu ist hier verfügbar: <a href='https://github.com/opendatabs/data-processing/blob/master/meteoblue_wolf/etl.py' target='_blank'>https://github.com/opendatabs/data-processing/blob/master/meteoblue_wolf/etl.py</a> </p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100082)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100082`
+- **Title** `Standorte Messstationen Smart Climate Luftklima`
+- **Description** `<p>Der Datensatz zeigt die Standorte der Messstationen für den Datensatz <a href="https://data.bs.ch/explore/dataset/100009/" target="_blank">«Luftklima Smart Regio Basel» (https://data.bs.ch/explore/dataset/100009/)</a>.</p><p><b>Änderungsprotokoll:</b></p><p><b>18.04.2024:</b> Die Koordinaten werden automatisch plausibilisiert. Es werde nur Koordinaten angezeigt, die in einem bestimmten Umkreis von Basel sind. Der Code dazu ist hier verfügbar: <a href="https://github.com/opendatabs/data-processing/blob/master/meteoblue_wolf/etl.py" target="_blank">https://github.com/opendatabs/data-processing/blob/master/meteoblue_wolf/etl.py</a> </p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-05-12`
+- **Modified** `2025-09-16T08:12:12+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1999-12-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-15T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Wetter', 'Temperatur', 'Regen', 'Niederschlag', 'Sensoren', 'Klima', 'Wolf-Areal', 'Smart City Lab']`
+- **Publisher** `meteoblue AG`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100082/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

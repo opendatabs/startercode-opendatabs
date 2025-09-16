@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100233 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100233.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100233"""
+TITLE = """Kantonaler Stromverbrauch"""
+DESCRIPTION = """<p>Dieser Datensatz beinhaltet die Summe der elektrischen Energie, die im Kanton Basel-Stadt innert 15-Minuten Intervallen aus dem Netz bezogen wird, inklusive <a href='https://de.wikipedia.org/wiki/Übertragungsverlust' target='_blank'>Netzverluste</a>. </p><p>Lokal direkt am Ort der Produktion verbrauchte elektrische Energie (z.B. aus Photovoltaikanlagen), welche nicht ins öffentliche Netz eingespiesen wird, ist in den vorliegenden Daten nicht enthalten. Seit 1. September 2020 liegen auch Daten zum Verbrauch der Kunden in der Grundversorgung vs. dem freien Markt vor. </p><p>Die Daten umfassen den an allen im Netz installierten fernausgelesenen Zählern gemessenen Verbrauch sowie ergänzend, da nicht 100 % der Zähler fernauslesbar sind, Daten aus den ins Netz eingespeisten Strommengen. </p><p>Hinweis: Die Werte der folgenden Messstartzeiten sind interpoliert: 01.01.2014 00:00, 01.11.2015 00:00 und 01.10.2019 00:00.</p><p>Änderungsprotokoll: <br>10.10.23: Aktualisierungsintervall von 'WEEKLY' auf 'DAILY' geändert.<br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100233)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100233`
+- **Title** `Kantonaler Stromverbrauch`
+- **Description** `<p>Dieser Datensatz beinhaltet die Summe der elektrischen Energie, die im Kanton Basel-Stadt innert 15-Minuten Intervallen aus dem Netz bezogen wird, inklusive <a href="https://de.wikipedia.org/wiki/Übertragungsverlust" target="_blank">Netzverluste</a>. </p><p>Lokal direkt am Ort der Produktion verbrauchte elektrische Energie (z.B. aus Photovoltaikanlagen), welche nicht ins öffentliche Netz eingespiesen wird, ist in den vorliegenden Daten nicht enthalten. Seit 1. September 2020 liegen auch Daten zum Verbrauch der Kunden in der Grundversorgung vs. dem freien Markt vor. </p><p>Die Daten umfassen den an allen im Netz installierten fernausgelesenen Zählern gemessenen Verbrauch sowie ergänzend, da nicht 100 % der Zähler fernauslesbar sind, Daten aus den ins Netz eingespeisten Strommengen. </p><p>Hinweis: Die Werte der folgenden Messstartzeiten sind interpoliert: 01.01.2014 00:00, 01.11.2015 00:00 und 01.10.2019 00:00.</p><p>Änderungsprotokoll: <br>10.10.23: Aktualisierungsintervall von "WEEKLY" auf "DAILY" geändert.<br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-11-22`
+- **Modified** `2025-09-16T08:09:17+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2011-12-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-11T22:00:00+00:00`
+- **Themes** `['Energie']`
+- **Keywords** `['Stadtlast', 'Netzlast', 'Strom', 'Elektrizität', 'Elektro', 'Watt', 'Kilowattstunden', 'Stromverbrauch']`
+- **Publisher** `Industrielle Werke Basel`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100233/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

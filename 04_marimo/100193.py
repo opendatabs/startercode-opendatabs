@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100193 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100193.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100193"""
+TITLE = """Fischereistatistik Basel-Stadt"""
+DESCRIPTION = """<p>Die Fischereistatistik enthält alle Fische, die aus Gewässern des Kantons Basel-Stadt entnommen worden sind. Fänge invasiver Schwarzmeergrundeln (Schwarzmundgrundeln und Kesslergrundeln) werden separat registriert. </p><p>Die Karte der verschiedenen Gewässer gibt einen Hinweis auf die Orte, an denen gefischt wird. Es kann aus ihr nicht abgeleitet werden, wo das Fischen nicht erlaubt ist. </p><p>Die Daten werden jährlich ergänzt.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100193)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100193`
+- **Title** `Fischereistatistik Basel-Stadt`
+- **Description** `<p>Die Fischereistatistik enthält alle Fische, die aus Gewässern des Kantons Basel-Stadt entnommen worden sind. Fänge invasiver Schwarzmeergrundeln (Schwarzmundgrundeln und Kesslergrundeln) werden separat registriert. </p><p>Die Karte der verschiedenen Gewässer gibt einen Hinweis auf die Orte, an denen gefischt wird. Es kann aus ihr nicht abgeleitet werden, wo das Fischen nicht erlaubt ist. </p><p>Die Daten werden jährlich ergänzt.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-08-15`
+- **Modified** `2022-10-24T08:54:57+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2009-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2021-12-30T23:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Fischerei', 'Fangstatistik', 'Fische', 'Rhein', 'Birs', 'Wiese']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100193/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

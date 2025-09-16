@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100352 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100352.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100352"""
+TITLE = """Kantonsblatt"""
+DESCRIPTION = """<p>Das Kantonsblatt ist das offizielle Publikationsorgan des Kantons Basel-Stadt. Darin werden Meldungen (Gesetze, Verordnungen, Staatsverträge usw.) des Grossen Rats, des Regierungsrats und der Verwaltung veröffentlicht. Im vorliegenden Datensatz sind die aktuellen über das offizielle API des Kantonsblatts beziehbaren Meldungen in Tabellenform enthalten. </p><p>Bitte beachten Sie auch die Datenschutzerklärung des Kantonsblattes und die Hinweise zur Rechtsgültigkeit der Meldungen unter <a href='https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy' target='_blank'>https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy</a>. </p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100352)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100352`
+- **Title** `Kantonsblatt`
+- **Description** `<p>Das Kantonsblatt ist das offizielle Publikationsorgan des Kantons Basel-Stadt. Darin werden Meldungen (Gesetze, Verordnungen, Staatsverträge usw.) des Grossen Rats, des Regierungsrats und der Verwaltung veröffentlicht. Im vorliegenden Datensatz sind die aktuellen über das offizielle API des Kantonsblatts beziehbaren Meldungen in Tabellenform enthalten. </p><p>Bitte beachten Sie auch die Datenschutzerklärung des Kantonsblattes und die Hinweise zur Rechtsgültigkeit der Meldungen unter <a href="https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy" target="_blank">https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy</a>. </p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-05-31`
+- **Modified** `2025-09-16T00:34:30+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2019-01-02T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2030-09-15T22:00:00+00:00`
+- **Themes** `['Verwaltung', 'Gesetzgebung', 'Bau- und Wohnungswesen', 'Kultur, Medien, Informationsgesellschaft, Sport']`
+- **Keywords** `['Publikation', 'Veröffentlichung', 'Baupublikationen', 'Reglemente', 'Handänderung', 'Anordnung', 'Verfügung', 'Beschlüsse', 'Erlasse', 'Konkurse', 'Grundbuch', 'Bewilligungen', 'Nutzungsgesuche', 'Kantonale Bekanntmachungen', 'Gerichtliche Entscheide', 'Vorladungen', 'Handelsregister', 'Amtsblatt', 'Zahlungsbefehl']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100352/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

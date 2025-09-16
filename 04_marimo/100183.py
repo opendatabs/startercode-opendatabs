@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100183 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100183.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100183"""
+TITLE = """Coronavirus (Covid-19): Massentests an Schulen"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt die SARS-CoV-2-Tests, welche ab Mitte März 2022 an Schülerinnen und Schülern (SuS) sowie Lehrpersonen an baselstädtischen Schulen durchgeführt wurden. Es werden die Anzahl durchgeführter Tests sowie die Test-Positivitätsrate pro Woche aufgeführt. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href='https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co' target='_blank'>https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a><a href='https://www.coronavirus.bs.ch/testen/testen-in-schulen.html' target='_blank'></a></p><p>Daten zu Massentests an Schulen vor Mitte März 2022, sowie in Betrieben im Kanton Basel-Stadt sind hier zu finden: <a href='https://data.bs.ch/explore/?sort=modified&amp;q=massentests' target='_blank'>https://data.bs.ch/explore/?sort=modified&amp;q=massentests</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100183)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100183`
+- **Title** `Coronavirus (Covid-19): Massentests an Schulen`
+- **Description** `<p>Dieser Datensatz zeigt die SARS-CoV-2-Tests, welche ab Mitte März 2022 an Schülerinnen und Schülern (SuS) sowie Lehrpersonen an baselstädtischen Schulen durchgeführt wurden. Es werden die Anzahl durchgeführter Tests sowie die Test-Positivitätsrate pro Woche aufgeführt. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a><a href="https://www.coronavirus.bs.ch/testen/testen-in-schulen.html" target="_blank"></a></p><p>Daten zu Massentests an Schulen vor Mitte März 2022, sowie in Betrieben im Kanton Basel-Stadt sind hier zu finden: <a href="https://data.bs.ch/explore/?sort=modified&amp;q=massentests" target="_blank">https://data.bs.ch/explore/?sort=modified&amp;q=massentests</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-06-22`
+- **Modified** `2025-04-28T07:46:15+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2022-03-13T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-02-12T23:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['SARS-CoV-2', 'COVID-19', 'Corona', 'Coronavirus', 'Test', 'PCR']`
+- **Publisher** `Medizinische Dienste`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100183/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

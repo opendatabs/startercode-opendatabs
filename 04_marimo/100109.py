@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100109 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100109.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100109"""
+TITLE = """Coronavirus (COVID-19): Hospitalisierte in baselstädtischen Spitälern"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt Kennzahlen auf Tagesebene zu den in baselstädtischen Spitälern hospitalisierten Personen mit einem positiven Testresultat auf SARS-CoV-2. </p><p><b>Die tägliche Erhebung der baselstädtischen Spitalkapazitäten wurde per 1. Mai 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert.</b></p><p>Weitere Angaben zu den positiv auf SARS-CoV-2 getesteten Personen mit Wohnsitz im Kanton Basel-Stadt finden Sie unter diesem Link: <a href='https://data.bs.ch/explore/dataset/100073/table/?sort=timestamp'>Coronavirus (COVID-19): Fallzahlen Basel-Stadt</a>. </p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100109)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100109`
+- **Title** `Coronavirus (COVID-19): Hospitalisierte in baselstädtischen Spitälern`
+- **Description** `<p>Dieser Datensatz zeigt Kennzahlen auf Tagesebene zu den in baselstädtischen Spitälern hospitalisierten Personen mit einem positiven Testresultat auf SARS-CoV-2. </p><p><b>Die tägliche Erhebung der baselstädtischen Spitalkapazitäten wurde per 1. Mai 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert.</b></p><p>Weitere Angaben zu den positiv auf SARS-CoV-2 getesteten Personen mit Wohnsitz im Kanton Basel-Stadt finden Sie unter diesem Link: <a href="https://data.bs.ch/explore/dataset/100073/table/?sort=timestamp">Coronavirus (COVID-19): Fallzahlen Basel-Stadt</a>. </p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-12-10`
+- **Modified** `2023-05-02T12:45:41+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-02-26T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-05-01T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Corona', 'COVID-19', 'Spital', 'USB', 'Intensivstation', 'ICU', 'Beatmet', 'Coronavirus', 'Krankheit', 'Lungenentzündung']`
+- **Publisher** `Bereich Gesundheitsversorgung`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100109/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

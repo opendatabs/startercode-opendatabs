@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100003 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100003.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100003"""
+TITLE = """Basler Index der Konsumentenpreise"""
+DESCRIPTION = """Entwicklung des Basler Index der Konsumentenpreise BIK (Basis Dezember 2020 = 100) nach Hauptgruppe seit 1939."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100003)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100003`
+- **Title** `Basler Index der Konsumentenpreise`
+- **Description** `Entwicklung des Basler Index der Konsumentenpreise BIK (Basis Dezember 2020 = 100) nach Hauptgruppe seit 1939.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2025-09-04T06:54:02+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1939-07-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-08-30T22:00:00+00:00`
+- **Themes** `['Preise']`
+- **Keywords** `['Preise', 'Teuerung', 'Index', 'Warenkorb', 'Konsum']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100003/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

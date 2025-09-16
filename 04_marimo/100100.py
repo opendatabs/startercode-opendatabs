@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100100 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100100.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100100"""
+TITLE = """Feinstaubmessungen Naturhistorisches Museum Basel"""
+DESCRIPTION = """<p>Im Rahmen der Sonderausstellung ERDE AM LIMIT (20.11.2020 bis 3.7.2022) wurden mit Hilfe eines Mikrosensors Feinstaub (PM2.5) vom Dach des <a href='https://www.nmbs.ch/' target='_blank'>Naturhistorischen Museums Basel</a> gemessen. Hier werden die unvalidierten Daten von Feinstaub PM2.5 zur Verfügung gestellt.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100100)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100100`
+- **Title** `Feinstaubmessungen Naturhistorisches Museum Basel`
+- **Description** `<p>Im Rahmen der Sonderausstellung ERDE AM LIMIT (20.11.2020 bis 3.7.2022) wurden mit Hilfe eines Mikrosensors Feinstaub (PM2.5) vom Dach des <a href="https://www.nmbs.ch/" target="_blank">Naturhistorischen Museums Basel</a> gemessen. Hier werden die unvalidierten Daten von Feinstaub PM2.5 zur Verfügung gestellt.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-11-20`
+- **Modified** `2025-09-15T22:30:23+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-10-01T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2022-07-05T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Luftqualität', 'Feinstaub', 'PM25', 'PM2.5', 'Museum']`
+- **Publisher** `Lufthygieneamt beider Basel`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100100/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

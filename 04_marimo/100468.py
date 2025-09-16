@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100468 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100468.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100468"""
+TITLE = """Open Data Basel-Stadt Mastodon-Posts"""
+DESCRIPTION = """<p>Dieser Datensatz beinhaltet die Beiträge des offiziellen Open Data Basel-Stadt Mastodon Accounts (ohne Bilder): <a href='https://swiss.social/@opendatabs' target='_blank'>https://swiss.social/@opendatabs</a>.</p><p>Dieser Datensatz wurde erstellt, damit der Mastodon-Feed auf der Homepage richtig geladen wird: <a href='https://data.bs.ch/pages/home/' target='_blank'>https://data.bs.ch/pages/home/</a> .</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100468)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100468`
+- **Title** `Open Data Basel-Stadt Mastodon-Posts`
+- **Description** `<p>Dieser Datensatz beinhaltet die Beiträge des offiziellen Open Data Basel-Stadt Mastodon Accounts (ohne Bilder): <a href="https://swiss.social/@opendatabs" target="_blank">https://swiss.social/@opendatabs</a>.</p><p>Dieser Datensatz wurde erstellt, damit der Mastodon-Feed auf der Homepage richtig geladen wird: <a href="https://data.bs.ch/pages/home/" target="_blank">https://data.bs.ch/pages/home/</a> .</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-09-11`
+- **Modified** `2025-09-11T10:18:11+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `2024-11-24T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-07-06T22:00:00+00:00`
+- **Themes** `['Verwaltung', 'Kultur, Medien, Informationsgesellschaft, Sport']`
+- **Keywords** `['Social Media', 'Mastodon', 'HTML', 'Emojis', 'Facebook', 'X', 'Twitter', 'WhatsApp', 'LinkedIn', 'Soziale Medien', 'Instagram', 'Threads']`
+- **Publisher** `Open Data Basel-Stadt`
+- **Reference** `https://swiss.social/@opendatabs.rss`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100468/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

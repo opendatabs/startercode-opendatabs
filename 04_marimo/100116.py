@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100116 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100116.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100116"""
+TITLE = """Coronavirus (Covid-19): Tests nach Nachweismethode"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt die Anzahl Tests auf SARS-CoV-2 für jeden Kanton, die gesamte Schweiz und das Fürstentum Liechtenstein sowie die entsprechenden Testresultate (positiv/negativ) auf täglicher Basis. Die Angaben werden täglich durch das Bundesamt für Gesundheit (BAG) zur Verfügung gestellt im <a href='https://www.covid19.admin.ch/' target='_blank'>Covid-19 Situationsbericht </a>bzw. über dessen <a href='https://stcovidappstorageprodchn.blob.core.windows.net/covid/context' target='_blank'>API</a>.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100116)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100116`
+- **Title** `Coronavirus (Covid-19): Tests nach Nachweismethode`
+- **Description** `<p>Dieser Datensatz zeigt die Anzahl Tests auf SARS-CoV-2 für jeden Kanton, die gesamte Schweiz und das Fürstentum Liechtenstein sowie die entsprechenden Testresultate (positiv/negativ) auf täglicher Basis. Die Angaben werden täglich durch das Bundesamt für Gesundheit (BAG) zur Verfügung gestellt im <a href="https://www.covid19.admin.ch/" target="_blank">Covid-19 Situationsbericht </a>bzw. über dessen <a href="https://stcovidappstorageprodchn.blob.core.windows.net/covid/context" target="_blank">API</a>.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-03-11`
+- **Modified** `2023-02-08T08:49:35+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-02-23T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2022-12-31T23:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Coronavirus', 'Corona', 'COVID-19', 'PCR', 'Antigen', 'Krankheit', 'Lungenentzündung', 'Test', 'Pandemie']`
+- **Publisher** `Bundesamt für Gesundheit BAG`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100116/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

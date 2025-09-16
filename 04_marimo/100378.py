@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100378 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100378.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100378"""
+TITLE = """Gesundheitsversorgung (GSV): Pflegebedürftige im Bereich der Pflege zu Hause (PzH)"""
+DESCRIPTION = """Dieser Datensatz enthält Kennzahlen zu Pflegebedürftigen im Bereich der Pflege zu Hause (PzH). Er umfasst Daten zur Anzahl der Pflegebedürftigen, aufgeschlüsselt nach Geschlecht, sowie Informationen zum Durchschnittsalter der Pflegebedürftigen insgesamt und getrennt nach Frauen und Männern."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100378)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100378`
+- **Title** `Gesundheitsversorgung (GSV): Pflegebedürftige im Bereich der Pflege zu Hause (PzH)`
+- **Description** `Dieser Datensatz enthält Kennzahlen zu Pflegebedürftigen im Bereich der Pflege zu Hause (PzH). Er umfasst Daten zur Anzahl der Pflegebedürftigen, aufgeschlüsselt nach Geschlecht, sowie Informationen zum Durchschnittsalter der Pflegebedürftigen insgesamt und getrennt nach Frauen und Männern.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-12-20`
+- **Modified** `2025-09-15T16:30:48+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2015-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Pflege']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100378/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

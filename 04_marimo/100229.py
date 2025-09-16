@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100229 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100229.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100229"""
+TITLE = """Kantonale Abstimmungen"""
+DESCRIPTION = """Dieser Datensatz zeigt die Resultate der Volksabstimmungen im Kanton Basel-Stadt seit 1875. Die Daten vor 1921 wurden von <a href='https://baselvotes.ch/' target='_blank'>baselvotes (https://baselvotes.ch)</a> zur Verfügung gestellt. Seit 1921 basieren die Daten auf den Statistischen Jahrbüchern. Für jede Abstimmungsvorlage sind alle amtlich publizierten Kennzahlen zum Schlussresultat ausgewiesen.<br><br>Zusätzlich sind alle Vorlagen inhaltlich dem hauptsächlich betroffenen Politikbereich zugeordnet. Die Zuteilung erfolgt auf Basis der Einteilung des Bundesamtes für Statistik, die im eidgenössischen Abstimmungsdatensatz der Datenplattform <a '='' href='https://swissvotes.ch/votes' target='_blank'>swissvotes (https://swissvotes.ch/votes)</a> des Instituts für Politikwissenschaft der Universität Bern verwendet wird."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100229)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100229`
+- **Title** `Kantonale Abstimmungen`
+- **Description** `Dieser Datensatz zeigt die Resultate der Volksabstimmungen im Kanton Basel-Stadt seit 1875. Die Daten vor 1921 wurden von <a href="https://baselvotes.ch/" target="_blank">baselvotes (https://baselvotes.ch)</a> zur Verfügung gestellt. Seit 1921 basieren die Daten auf den Statistischen Jahrbüchern. Für jede Abstimmungsvorlage sind alle amtlich publizierten Kennzahlen zum Schlussresultat ausgewiesen.<br><br>Zusätzlich sind alle Vorlagen inhaltlich dem hauptsächlich betroffenen Politikbereich zugeordnet. Die Zuteilung erfolgt auf Basis der Einteilung des Bundesamtes für Statistik, die im eidgenössischen Abstimmungsdatensatz der Datenplattform <a '="" href="https://swissvotes.ch/votes" target="_blank">swissvotes (https://swissvotes.ch/votes)</a> des Instituts für Politikwissenschaft der Universität Bern verwendet wird.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-12-22`
+- **Modified** `2025-05-21T10:45:41+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1875-04-18T23:30:14+00:00`
+- **Temporal_coverage_end_date** `2025-05-17T22:00:00+00:00`
+- **Themes** `['Politik']`
+- **Keywords** `['Abstimmung', 'Stimmbeteiligung', 'Volksinitiative', 'Referendum', 'Grossratsbeschluss', 'Abstimungsergebnis', 'Stichfrage', 'Gegenvorschlag', 'Brieflich Wählende', 'Stimmberechtigte', 'Stimmzettel', 'Gültige Stimmen']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100229/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

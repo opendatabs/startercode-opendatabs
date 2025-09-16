@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100383 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100383.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,15 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100383"""
+TITLE = """Solarkataster: Dachkanten"""
+DESCRIPTION = """Die Klasse Dachkante ist ein wesentlicher Bestandteil des Geodatenmodells (KGDM) «Solarkataster» und beschreibt die Dachkanten der Gebäude, die in der Klasse Solarpotenzial erfasst sind. 
+<br> Sämtliche Datensätze zu dem Produkt 'Solarkataster': <a href='https://data.bs.ch/explore/?refine.tags=solarkataster' target='_blank'>https://data.bs.ch/explore/?refine.tags=solarkataster</a>
+<br>Diese Dachkanten repräsentieren die Übergangsbereiche zwischen den Dachflächen und den Gebäudefassaden und dienen als visuelle Referenz zur Unterstützung der Analyse und Bewertung des Solarpotenzials.
+<br>Die Klasse Dachkante ist besonders nützlich für Fachleute, die sich mit der Planung und Bewertung von Solaranlagen beschäftigen. Sie dient als Grundlage für detaillierte Analysen und Entscheidungsprozesse in der solartechnischen Nutzung von Gebäuden."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100383)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +109,23 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100383`
+- **Title** `Solarkataster: Dachkanten`
+- **Description** `Die Klasse Dachkante ist ein wesentlicher Bestandteil des Geodatenmodells (KGDM) «Solarkataster» und beschreibt die Dachkanten der Gebäude, die in der Klasse Solarpotenzial erfasst sind. 
+<br> Sämtliche Datensätze zu dem Produkt "Solarkataster": <a href="https://data.bs.ch/explore/?refine.tags=solarkataster" target="_blank">https://data.bs.ch/explore/?refine.tags=solarkataster</a>
+<br>Diese Dachkanten repräsentieren die Übergangsbereiche zwischen den Dachflächen und den Gebäudefassaden und dienen als visuelle Referenz zur Unterstützung der Analyse und Bewertung des Solarpotenzials.
+<br>Die Klasse Dachkante ist besonders nützlich für Fachleute, die sich mit der Planung und Bewertung von Solaranlagen beschäftigen. Sie dient als Grundlage für detaillierte Analysen und Entscheidungsprozesse in der solartechnischen Nutzung von Gebäuden.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-08-15`
+- **Modified** `2022-12-14T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Energie']`
+- **Keywords** `['Solarenergie', 'Solarkollektor']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +151,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100383/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

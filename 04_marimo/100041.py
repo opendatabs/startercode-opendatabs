@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100041 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100041.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,19 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100041"""
+TITLE = """Statistische Raumeinheiten: Blockseiten"""
+DESCRIPTION = """Die Blockseite ist die dem angrenzenden Strassenraum zugeordnete Seite eines Blocks.
+
+Statistische Nummerierung:
+Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr
+(im Label jeweils durch Punkte getrennt), gefolgt von der vierstelligen Block-Nr
+(sowohl im Label als auch in der ID durch einen Unterstrich verbunden):
+- Blockseiten haben wie die Blöcke keine Namensbezeichnung und werden lediglich über die Nummer referenziert.
+- Beispiel Blockseite mit der Clarakirche: BLS_ID 121014_1741, die Bezeichnung (BLS_Label) lautet 12.1.014_1741"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100041)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +113,27 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100041`
+- **Title** `Statistische Raumeinheiten: Blockseiten`
+- **Description** `Die Blockseite ist die dem angrenzenden Strassenraum zugeordnete Seite eines Blocks.
+
+Statistische Nummerierung:
+Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr
+(im Label jeweils durch Punkte getrennt), gefolgt von der vierstelligen Block-Nr
+(sowohl im Label als auch in der ID durch einen Unterstrich verbunden):
+- Blockseiten haben wie die Blöcke keine Namensbezeichnung und werden lediglich über die Nummer referenziert.
+- Beispiel Blockseite mit der Clarakirche: BLS_ID 121014_1741, die Bezeichnung (BLS_Label) lautet 12.1.014_1741`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2025-07-08T05:03:50+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Geographie', 'Statistische Grundlagen']`
+- **Keywords** `['Statistik', 'Einteilung', 'Wohnblockseite']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +159,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100041/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100049 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100049.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100049"""
+TITLE = """Luftqualität Station St. Johannplatz"""
+DESCRIPTION = """<p>Standortbeschreibung: Die Messstation befindet sich in Basel auf dem St.Johannplatz, einem kleinen Park am Rande der Altstadt. Sie wird lokal beeinflusst durch eine mässig befahrene Strasse und Parkplatzsuchverkehr. 500m nördlich verläuft eine stark befahrene Strasse und in dieser Richtung liegt auch ein Teil der Chemischen Industrie. Die Station Basel St.Johannplatz gibt die Belastung wieder, wie sie als Hintergrund überall in der Stadt Basel anzutreffen ist.</p>Lage: Stadtzentrum in Park, offene Bebauung<p>Koordinaten: 2610790 / 1268370 bzw. N 47° 33.957 E 7° 34.921; 260 m ü. M.Geografische Lage: Juranordfuss</p><p>Siedlungsgrösse: 166'600 Einwohner</p><p>Verkehr, DTV (% LKW): &lt; 9'100 / 32'000 (8%)</p><p>Strassenabstand: 2 m / 500</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100049)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100049`
+- **Title** `Luftqualität Station St. Johannplatz`
+- **Description** `<p>Standortbeschreibung: Die Messstation befindet sich in Basel auf dem St.Johannplatz, einem kleinen Park am Rande der Altstadt. Sie wird lokal beeinflusst durch eine mässig befahrene Strasse und Parkplatzsuchverkehr. 500m nördlich verläuft eine stark befahrene Strasse und in dieser Richtung liegt auch ein Teil der Chemischen Industrie. Die Station Basel St.Johannplatz gibt die Belastung wieder, wie sie als Hintergrund überall in der Stadt Basel anzutreffen ist.</p>Lage: Stadtzentrum in Park, offene Bebauung<p>Koordinaten: 2610790 / 1268370 bzw. N 47° 33.957 E 7° 34.921; 260 m ü. M.Geografische Lage: Juranordfuss</p><p>Siedlungsgrösse: 166'600 Einwohner</p><p>Verkehr, DTV (% LKW): &lt; 9'100 / 32'000 (8%)</p><p>Strassenabstand: 2 m / 500</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2025-09-16T08:16:24+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1999-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-14T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt', 'Gesundheit', 'Tourismus']`
+- **Keywords** `['Luft', 'Feinstaub', 'Ozon', 'Echtzeit', 'Realtime', 'Stickstoffdioxid', 'Stickoxid', 'O3', 'NO2', 'NOX']`
+- **Publisher** `Lufthygieneamt beider Basel`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100049/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

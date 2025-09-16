@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100177 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100177.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,13 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100177"""
+TITLE = """Öffentlicher Archivkatalog in RDF"""
+DESCRIPTION = """<p>
+Das Staatsarchiv des Kantons Basel-Stadt fungiert als Gedächtnis von Staat und Stadt. Die reichhaltigen Bestände widerspiegeln die Geschichte Basels seit dem Mittelalter. Seit 1999 wird das Archivgut in einem Archivinformationssystem (scopeArchiv) erschlossen, zur Suche und Benutzung steht ein Digitaler Lesesaal (DLS) zur Verfügung (<a href='https://dls.staatsarchiv.bs.ch' target='_blank'>https://dls.staatsarchiv.bs.ch</a>). </p><p>Das hier publizierte Datenset (<a href='https://ld.bs.ch/set/archival-catalog' target='_blank'>https://ld.bs.ch/set/archival-catalog</a>) umfasst sämtliche öffentlich zugänglichen Informationen aus dem Archivsystem, transformiert in ein RDF-Datenmodell auf der Basis der archivspezifischen Ontologie Records in Context (RiC-O) (<a href='https://www.ica.org/standards/RiC/RiC-O_1-0-2.html' target='_blank'>https://www.ica.org/standards/RiC/RiC-O_1-0-2.html</a>).  </p><p><span style='font-family: inherit; font-size: 0.875rem;'>SPARQL-Endpoint zur Datenabfrage: </span><a href='https://ld.bs.ch/sparql/' style='font-size: 0.875rem; background-color: rgb(255, 255, 255);' target='_blank'>https://ld.bs.ch/sparql/</a><span style='font-family: inherit; font-size: 0.875rem;'>  </span><span style='font-family: inherit; font-size: 0.875rem;'>  </span><br></p><p>Dokumentation des Datenmodells: <a ;'='' href='https://github.com/Staatsarchiv-Basel-Stadt/StABS-scope2RDF' target='_blank'>https://github.com/Staatsarchiv-Basel-Stadt/StABS-scope2RDF</a>  </p><p>Das Datenset wird permanent weiterentwickelt. Sowohl das Mapping nach RiC-O wie auch die Inhalte können ändern, Rückwärtskompatabilität kann nicht garantiert werden. Falls eine stabile Einbindung in Services geplant wird, bitten wir um Kontaktaufnahme.</p><p>Das Mapping zur Transformation der Daten nach RDF erfolgt primär durch die Mappingsprache RML (<a href='https://rml.io/specs/rml/' target='_blank'>https://rml.io/specs/rml/</a>). Die Transformation erfolgt in einer ETL-Pipeline mit entsprechend integrierten Mappings (<a href='https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline' target='_blank'>https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline</a>) der Firma zazuko (<a href='https://zazuko.com/' target='_blank'>https://zazuko.com/</a>), deren Quellcode öffentlich ist. </p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100177)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +107,21 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100177`
+- **Title** `Öffentlicher Archivkatalog in RDF`
+- **Description** `<p>
+Das Staatsarchiv des Kantons Basel-Stadt fungiert als Gedächtnis von Staat und Stadt. Die reichhaltigen Bestände widerspiegeln die Geschichte Basels seit dem Mittelalter. Seit 1999 wird das Archivgut in einem Archivinformationssystem (scopeArchiv) erschlossen, zur Suche und Benutzung steht ein Digitaler Lesesaal (DLS) zur Verfügung (<a href="https://dls.staatsarchiv.bs.ch" target="_blank">https://dls.staatsarchiv.bs.ch</a>). </p><p>Das hier publizierte Datenset (<a href="https://ld.bs.ch/set/archival-catalog" target="_blank">https://ld.bs.ch/set/archival-catalog</a>) umfasst sämtliche öffentlich zugänglichen Informationen aus dem Archivsystem, transformiert in ein RDF-Datenmodell auf der Basis der archivspezifischen Ontologie Records in Context (RiC-O) (<a href="https://www.ica.org/standards/RiC/RiC-O_1-0-2.html" target="_blank">https://www.ica.org/standards/RiC/RiC-O_1-0-2.html</a>).  </p><p><span style="font-family: inherit; font-size: 0.875rem;">SPARQL-Endpoint zur Datenabfrage: </span><a href="https://ld.bs.ch/sparql/" style="font-size: 0.875rem; background-color: rgb(255, 255, 255);" target="_blank">https://ld.bs.ch/sparql/</a><span style="font-family: inherit; font-size: 0.875rem;">  </span><span style="font-family: inherit; font-size: 0.875rem;">  </span><br></p><p>Dokumentation des Datenmodells: <a ;"="" href="https://github.com/Staatsarchiv-Basel-Stadt/StABS-scope2RDF" target="_blank">https://github.com/Staatsarchiv-Basel-Stadt/StABS-scope2RDF</a>  </p><p>Das Datenset wird permanent weiterentwickelt. Sowohl das Mapping nach RiC-O wie auch die Inhalte können ändern, Rückwärtskompatabilität kann nicht garantiert werden. Falls eine stabile Einbindung in Services geplant wird, bitten wir um Kontaktaufnahme.</p><p>Das Mapping zur Transformation der Daten nach RDF erfolgt primär durch die Mappingsprache RML (<a href="https://rml.io/specs/rml/" target="_blank">https://rml.io/specs/rml/</a>). Die Transformation erfolgt in einer ETL-Pipeline mit entsprechend integrierten Mappings (<a href="https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline" target="_blank">https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline</a>) der Firma zazuko (<a href="https://zazuko.com/" target="_blank">https://zazuko.com/</a>), deren Quellcode öffentlich ist. </p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-05-03`
+- **Modified** `2025-08-22T13:36:33+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `1097-12-31T23:25:52+00:00`
+- **Temporal_coverage_end_date** `2023-10-04T22:00:00+00:00`
+- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Bildung, Wissenschaft', 'Verwaltung']`
+- **Keywords** `['Archiv', 'Archivkatalog', 'Geschichte Basels', 'LOD', 'LD', 'Linked Data', 'Linked Open Data', 'Linked', 'SPARQL']`
+- **Publisher** `Staatsarchiv Basel-Stadt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +147,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100177/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

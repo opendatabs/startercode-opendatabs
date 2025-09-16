@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100388 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100388.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100388"""
+TITLE = """Aktuelle Temperaturen der Gartenbäder"""
+DESCRIPTION = """<p style='font-family: sans-serif;'>Dieser Datensatz enthält die aktuellen Wassertemperaturen in den Gartenbädern</p><p style='font-family: sans-serif;'>Die Temperaturdaten werden alle 15 Minuten aktualisiert, indem ein automatisiertes Programm die neuesten Werte von der Webseite <a href='https://www.ed-baeder.ch/' target='_blank'>https://www.ed-baeder.ch/</a> abruft. Auf dieser Webseite findet man auch sonstige Meldungen zu den Gartenbädern.</p><p style='font-family: sans-serif;'>Falls ein Gartenbad geschlossen ist oder keine Temperaturmessung verfügbar ist, wird für diesen Zeitraum kein Wert im Datensatz vermerkt.</p><p style='font-family: sans-serif;'><span style='font-weight: bolder;'>Weiterführende Links:</span></p><p style='font-family: sans-serif;'>Weitere Informationen zu den Gartenbädern: <a href='https://www.bs.ch/themen/kultur-sport-und-freizeit/baeder-kunsteisbahnen-sportanlagen-und-raeume/gartenbaeder-basel' target='_blank'>https://www.bs.ch/themen/kultur-sport-und-freizeit/baeder-kunsteisbahnen-sportanlagen-und-raeume/gartenbaeder-basel</a></p><p style='font-family: sans-serif;'>Zeitreihe der Temperaturen der Gartenbäder als Datensatz: <a href='https://data.bs.ch/explore/dataset/100384/' target='_blank'>https://data.bs.ch/explore/dataset/100384/</a></p><p style='font-family: sans-serif;'>Diese und weitere Sportanlagen als Datensatz: <a href='https://data.bs.ch/explore/dataset/100151/' target='_blank'>https://data.bs.ch/explore/dataset/100151/</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100388)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100388`
+- **Title** `Aktuelle Temperaturen der Gartenbäder`
+- **Description** `<p style="font-family: sans-serif;">Dieser Datensatz enthält die aktuellen Wassertemperaturen in den Gartenbädern</p><p style="font-family: sans-serif;">Die Temperaturdaten werden alle 15 Minuten aktualisiert, indem ein automatisiertes Programm die neuesten Werte von der Webseite <a href="https://www.ed-baeder.ch/" target="_blank">https://www.ed-baeder.ch/</a> abruft. Auf dieser Webseite findet man auch sonstige Meldungen zu den Gartenbädern.</p><p style="font-family: sans-serif;">Falls ein Gartenbad geschlossen ist oder keine Temperaturmessung verfügbar ist, wird für diesen Zeitraum kein Wert im Datensatz vermerkt.</p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Weiterführende Links:</span></p><p style="font-family: sans-serif;">Weitere Informationen zu den Gartenbädern: <a href="https://www.bs.ch/themen/kultur-sport-und-freizeit/baeder-kunsteisbahnen-sportanlagen-und-raeume/gartenbaeder-basel" target="_blank">https://www.bs.ch/themen/kultur-sport-und-freizeit/baeder-kunsteisbahnen-sportanlagen-und-raeume/gartenbaeder-basel</a></p><p style="font-family: sans-serif;">Zeitreihe der Temperaturen der Gartenbäder als Datensatz: <a href="https://data.bs.ch/explore/dataset/100384/" target="_blank">https://data.bs.ch/explore/dataset/100384/</a></p><p style="font-family: sans-serif;">Diese und weitere Sportanlagen als Datensatz: <a href="https://data.bs.ch/explore/dataset/100151/" target="_blank">https://data.bs.ch/explore/dataset/100151/</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-08-16`
+- **Modified** `2025-09-16T08:47:19+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2025-09-15T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-15T22:00:00+00:00`
+- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Tourismus']`
+- **Keywords** `['Hallenbad', 'Familienbad', 'Sportbad', 'behindertengerecht', 'Schwimmzone', 'Schwimmen', 'Baden', 'OpenSportData', 'Live']`
+- **Publisher** `Jugend, Familie und Sport`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100388/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100317 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100317.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,17 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100317"""
+TITLE = """Kandidierende der Ständeratswahlen 22. Oktober 2023"""
+DESCRIPTION = """<p style='margin: 0cm 0cm 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'><span style='font-size: 10.5pt; font-family: Arial, sans-serif;'>Für die Ständeratswahlen vom 22. Oktober 2023 kandidieren vier Personen  für den Kanton Basel-Stadt. Insgesamt wird 1 Sitz im Ständerat gewählt.<o:p></o:p></span></p><p style='margin: 0cm 0cm 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'><span style='font-size: 10.5pt; font-family: Arial, sans-serif;'>Dieser Datensatz zeigt die Kandidierenden aus dem Kanton
+Basel-Stadt nach Geschlecht, Jahrgang und Beruf sowie die jeweiligen Listen.<o:p></o:p></span></p><p style='font-family: sans-serif;'>
+
+
+
+</p><p class='MsoNormal'><o:p> </o:p></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100317)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +111,25 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100317`
+- **Title** `Kandidierende der Ständeratswahlen 22. Oktober 2023`
+- **Description** `<p style="margin: 0cm 0cm 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Für die Ständeratswahlen vom 22. Oktober 2023 kandidieren vier Personen  für den Kanton Basel-Stadt. Insgesamt wird 1 Sitz im Ständerat gewählt.<o:p></o:p></span></p><p style="margin: 0cm 0cm 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Dieser Datensatz zeigt die Kandidierenden aus dem Kanton
+Basel-Stadt nach Geschlecht, Jahrgang und Beruf sowie die jeweiligen Listen.<o:p></o:p></span></p><p style="font-family: sans-serif;">
+
+
+
+</p><p class="MsoNormal"><o:p> </o:p></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-09-15`
+- **Modified** `2025-04-28T07:47:26+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik', 'Gesetzgebung', 'Verwaltung']`
+- **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +155,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100317/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

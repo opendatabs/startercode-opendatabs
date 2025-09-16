@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100198 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100198.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100198"""
+TITLE = """Ein- und Ausfahrten öffentlicher Parkhäuser Basel"""
+DESCRIPTION = """<p>Der Datensatz zeigt die Anzahl Ein- und Ausfahrten pro Stunde in bzw. aus öffentlichen Parkhäusern Basel. Die Daten werden jährlich ergänzt. Aus technischen Gründen sind die Daten des Parkhauses City erst ab 2021 vorhanden. <br></p><p>Im Parkhaus St. Jakob werden manchmal bei Grossanlässen keine Ein- und Ausfahrten gezählt. Diese Metriken sind für dieses Parkhaus deshalb mit Vorsicht zu analysieren. <br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100198)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100198`
+- **Title** `Ein- und Ausfahrten öffentlicher Parkhäuser Basel`
+- **Description** `<p>Der Datensatz zeigt die Anzahl Ein- und Ausfahrten pro Stunde in bzw. aus öffentlichen Parkhäusern Basel. Die Daten werden jährlich ergänzt. Aus technischen Gründen sind die Daten des Parkhauses City erst ab 2021 vorhanden. <br></p><p>Im Parkhaus St. Jakob werden manchmal bei Grossanlässen keine Ein- und Ausfahrten gezählt. Diese Metriken sind für dieses Parkhaus deshalb mit Vorsicht zu analysieren. <br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-07-11`
+- **Modified** `2025-04-22T15:19:49+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2010-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr']`
+- **Keywords** `['Parkieren', 'Parkhaus', 'Auto', 'Autos', 'Bewegungen', 'Einfahrt', 'Ausfahrt']`
+- **Publisher** `Parkhäuser Basel-Stadt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100198/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

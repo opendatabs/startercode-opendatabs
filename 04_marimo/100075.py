@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100075 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100075.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100075"""
+TITLE = """Fahrgastzahlen BVB"""
+DESCRIPTION = """<div>Die Daten umfassen die wöchentlichen Fahrgastzahlen der Basler Verkehrsbetriebe (BVB) von 2020 bis 2023. Ab 2024 werden monatliche Werte erfasst. Sie beruhen auf Messungen mit dem automatischen Fahrgastzählsystem und anschliessender Hochrechnung, und zwar für das gesamte Liniennetz der BVB. Tramlinien: 1, 2, 3, 6, 8, 14, 15, 16, 21; Buslinien: 30, 31, 32, 33, 34, 35, 36, 38, 42, 45, 46, 48, 50, Tramersatzverkehr.</div><div><br></div><div>Nicht enthalten sind hingegen die Fahrgastzahlen der SBB, BLT oder ausländischer Transportunternehmen.</div><div><br>Die Daten werden jeweils am 10. jeden Monats resp. am darauffolgenden Werktag aktualisiert.</div><div><br>In Ausnahmefällen kann es aus technischen Gründen zu Verzögerungen im Prozess der Bereitstellung und Auswertung von Zähldaten kommen. Nachträglich verfügbare Messdaten werden in der hier vorliegenden Auswertung berücksichtigt, was in diesem Fall zu rückwirkenden Korrekturen führen kann.</div><div><br></div><div>Änderungsprotokoll: </div><div>02.02.2024: Die Auswertungen auf Wochenbasis werden eingestellt und nur noch die Zeitreihe der Monatswerte werden fortgeführt.<br></div>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100075)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100075`
+- **Title** `Fahrgastzahlen BVB`
+- **Description** `<div>Die Daten umfassen die wöchentlichen Fahrgastzahlen der Basler Verkehrsbetriebe (BVB) von 2020 bis 2023. Ab 2024 werden monatliche Werte erfasst. Sie beruhen auf Messungen mit dem automatischen Fahrgastzählsystem und anschliessender Hochrechnung, und zwar für das gesamte Liniennetz der BVB. Tramlinien: 1, 2, 3, 6, 8, 14, 15, 16, 21; Buslinien: 30, 31, 32, 33, 34, 35, 36, 38, 42, 45, 46, 48, 50, Tramersatzverkehr.</div><div><br></div><div>Nicht enthalten sind hingegen die Fahrgastzahlen der SBB, BLT oder ausländischer Transportunternehmen.</div><div><br>Die Daten werden jeweils am 10. jeden Monats resp. am darauffolgenden Werktag aktualisiert.</div><div><br>In Ausnahmefällen kann es aus technischen Gründen zu Verzögerungen im Prozess der Bereitstellung und Auswertung von Zähldaten kommen. Nachträglich verfügbare Messdaten werden in der hier vorliegenden Auswertung berücksichtigt, was in diesem Fall zu rückwirkenden Korrekturen führen kann.</div><div><br></div><div>Änderungsprotokoll: </div><div>02.02.2024: Die Auswertungen auf Wochenbasis werden eingestellt und nur noch die Zeitreihe der Monatswerte werden fortgeführt.<br></div>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-05-16`
+- **Modified** `2025-09-10T15:00:30+00:00`
+- **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-02-02T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-07-31T22:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr', 'Tourismus']`
+- **Keywords** `['Tram', 'Bus', 'Haltestelle', 'Einsteiger', 'Fahrgäste', 'Passagier']`
+- **Publisher** `Basler Verkehrs-Betriebe`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100075/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

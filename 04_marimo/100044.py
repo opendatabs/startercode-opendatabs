@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100044 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100044.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100044"""
+TITLE = """Standorte der öffentlichen Parkhäuser Basel"""
+DESCRIPTION = """<p>Standorte der öffentlichen Parkhäuser Basel, wie sie in <a href='https://parkendd.de/map.html#Basel' target='_blank'>ParkenDD</a> verwendet werden.</p><p><br></p><p>Änderungsprotokoll:</p><p>- 28.11.2024: Centralbahnparking heisst neu Centralbahn.<br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100044)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100044`
+- **Title** `Standorte der öffentlichen Parkhäuser Basel`
+- **Description** `<p>Standorte der öffentlichen Parkhäuser Basel, wie sie in <a href="https://parkendd.de/map.html#Basel" target="_blank">ParkenDD</a> verwendet werden.</p><p><br></p><p>Änderungsprotokoll:</p><p>- 28.11.2024: Centralbahnparking heisst neu Centralbahn.<br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2025-09-16T08:01:23+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `2025-09-15T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-15T22:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr', 'Geographie', 'Tourismus']`
+- **Keywords** `['Parkhaus', 'Standort', 'Parken', 'Auto', 'Parkieren', 'Elektroautos', 'Basel']`
+- **Publisher** `Parkhäuser Basel-Stadt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100044/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

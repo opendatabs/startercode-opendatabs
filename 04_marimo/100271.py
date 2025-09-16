@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100271 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100271.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100271"""
+TITLE = """Vorhersagen Rhein: Wasserstand und Abfluss"""
+DESCRIPTION = """<p>Hydrologischen Vorhersagen (Wasserstand und Abfluss) für die Station 'Rhein - Basel, Rheinhalle'.</p><p>Die Vorhersagen basieren  auf den Meteo-Modellen ICON-CH1-EPS, ICON-CH2-EPS und IFS. Am Anfang der Zeitreihen stehen 24 Std. Messwerte, anschliessend fangen die Prognosen an. </p><p>Bei den ICON-Modellen wird der Kontroll-Lauf in den Spalten 'Wasserstand' und 'Abflussmenge' ausgewiesen. Der Kontroll-Lauf ist die hydrologische Vorhersage basierend auf der meteorologischen Kontrollvorhersage.</p><p>Stationsinfo: Die Station befindet sich auf der Kleinbasler Seite auf Höhe des Birs-Zuflusses.</p><p>Weitere Informationen sind hier zu finden: <a href='https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289' target='_blank'>https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289</a><a href='https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289' target='_blank'></a></p><p><b>Änderungsprotokoll:</b></p><p><b>30.05.2024:</b> Für die numerische Vorhersage wurde das Wettermodell COSMO mit dem neuen Wettermodell ICON (Icosahedral Nonhydrostatic Weather and Climate Model) ersetzt. Mehr Infos dazu finden Sie hier: <a href='https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html' target='_blank'>https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100271)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100271`
+- **Title** `Vorhersagen Rhein: Wasserstand und Abfluss`
+- **Description** `<p>Hydrologischen Vorhersagen (Wasserstand und Abfluss) für die Station "Rhein - Basel, Rheinhalle".</p><p>Die Vorhersagen basieren  auf den Meteo-Modellen ICON-CH1-EPS, ICON-CH2-EPS und IFS. Am Anfang der Zeitreihen stehen 24 Std. Messwerte, anschliessend fangen die Prognosen an. </p><p>Bei den ICON-Modellen wird der Kontroll-Lauf in den Spalten "Wasserstand" und "Abflussmenge" ausgewiesen. Der Kontroll-Lauf ist die hydrologische Vorhersage basierend auf der meteorologischen Kontrollvorhersage.</p><p>Stationsinfo: Die Station befindet sich auf der Kleinbasler Seite auf Höhe des Birs-Zuflusses.</p><p>Weitere Informationen sind hier zu finden: <a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289" target="_blank">https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289</a><a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289" target="_blank"></a></p><p><b>Änderungsprotokoll:</b></p><p><b>30.05.2024:</b> Für die numerische Vorhersage wurde das Wettermodell COSMO mit dem neuen Wettermodell ICON (Icosahedral Nonhydrostatic Weather and Climate Model) ersetzt. Mehr Infos dazu finden Sie hier: <a href="https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html" target="_blank">https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-03-07`
+- **Modified** `2025-09-16T08:02:26+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `2025-09-13T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-24T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Vorhersage', 'Gewässer', 'Fliessgewässer', 'Hydrologie']`
+- **Publisher** `Bundesamt für Umwelt BAFU`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100271/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

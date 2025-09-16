@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100016 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100016.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100016"""
+TITLE = """Postleitzahlenkreise"""
+DESCRIPTION = """Die Einteilung des Kantons in adressgenaue Postleitzahlenkreise ist eine Erweiterung der Amtlichen Vermessung des Kantons Basel-Stadt, welche in Zusammenarbeit mit der Post unterhalten wird. Sie wird für die automatische Zuweisung der PLZ zu einer Adresse im kantonalen Datenmark verwendet und an das Bundesamt für Landestopografie (swisstopo) weitergeleitet."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100016)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100016`
+- **Title** `Postleitzahlenkreise`
+- **Description** `Die Einteilung des Kantons in adressgenaue Postleitzahlenkreise ist eine Erweiterung der Amtlichen Vermessung des Kantons Basel-Stadt, welche in Zusammenarbeit mit der Post unterhalten wird. Sie wird für die automatische Zuweisung der PLZ zu einer Adresse im kantonalen Datenmark verwendet und an das Bundesamt für Landestopografie (swisstopo) weitergeleitet.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2025-09-15T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2008-01-03T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2018-02-08T23:00:00+00:00`
+- **Themes** `['Geographie', 'Verwaltung', 'Statistische Grundlagen']`
+- **Keywords** `['Post', 'Postleitzahl', 'Brief', 'Paket']`
+- **Publisher** `Grundbuch- und Vermessungsamt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100016/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

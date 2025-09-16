@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100005 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100005.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,16 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100005"""
+TITLE = """Standorte der IWB Ladestationen für Elektroautos"""
+DESCRIPTION = """<p>IWB baut im Kanton Basel-Stadt ein Netz leistungsfähiger öffentlich zugänglicher Ladestationen auf, um der umweltfreundlichen und gerade für Ballungsgebiete idealen Elektromobilität entscheidende Impulse zu geben. Hier finden Sie unsere Ladestationen.</p>
+
+<p>In der Pilotphase wurden die Parkplätze mit LoRa-angebunden Sensoren ausgestattet. Ziel war es festzustellen, ob Parkplätze durch Fahrzeuge besetzt werden, ohne dass diese einen aktiven Ladevorgang vornehmen. Nach internen Abstimmungen wird die IWB die Übermittlung der Daten ab ca. Mitte September 2022 nicht weiterführen. Gründe dafür sind Schwierigkeiten bei der Übertragung der Werte sowie eine fehlende Relevanz für die Praxis. Beim Roll-Out der weiteren öffentlichen Ladestationen auf Allmend werden voraussichtlich keine LoRa-Sensoren mehr verbaut.</p>
+
+<p>Echtzeitdaten zur Belegung der Elektroauto-Ladestationen der gesamten Schweiz basierend auf dem Status des Ladevorgangs sind hier zu finden: <a href='https://opendata.swiss/de/dataset/ladestationen' target='_blank'>https://opendata.swiss/de/dataset/ladestationen</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100005)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +110,24 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100005`
+- **Title** `Standorte der IWB Ladestationen für Elektroautos`
+- **Description** `<p>IWB baut im Kanton Basel-Stadt ein Netz leistungsfähiger öffentlich zugänglicher Ladestationen auf, um der umweltfreundlichen und gerade für Ballungsgebiete idealen Elektromobilität entscheidende Impulse zu geben. Hier finden Sie unsere Ladestationen.</p>
+
+<p>In der Pilotphase wurden die Parkplätze mit LoRa-angebunden Sensoren ausgestattet. Ziel war es festzustellen, ob Parkplätze durch Fahrzeuge besetzt werden, ohne dass diese einen aktiven Ladevorgang vornehmen. Nach internen Abstimmungen wird die IWB die Übermittlung der Daten ab ca. Mitte September 2022 nicht weiterführen. Gründe dafür sind Schwierigkeiten bei der Übertragung der Werte sowie eine fehlende Relevanz für die Praxis. Beim Roll-Out der weiteren öffentlichen Ladestationen auf Allmend werden voraussichtlich keine LoRa-Sensoren mehr verbaut.</p>
+
+<p>Echtzeitdaten zur Belegung der Elektroauto-Ladestationen der gesamten Schweiz basierend auf dem Status des Ladevorgangs sind hier zu finden: <a href="https://opendata.swiss/de/dataset/ladestationen" target="_blank">https://opendata.swiss/de/dataset/ladestationen</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-05`
+- **Modified** `2025-09-15T22:00:03+00:00`
+- **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Mobilität und Verkehr', 'Energie', 'Tourismus']`
+- **Keywords** `['Ladestationen', 'Elektroautos', 'Elektromobilität', 'Elektroladestation']`
+- **Publisher** `Industrielle Werke Basel`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +153,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100005/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100227 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100227.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100227"""
+TITLE = """Witterung"""
+DESCRIPTION = """Dieser Datensatz zeigt für die Messstation Basel-Binningen am Observatorium St. Margarethen für jeden Monat die in Bezug auf Temperatur, Niederschlag und Bewölkung registrierten Witterungserscheinungen seit 1921.Methodischer Hinweis:Daten von 1921 bis 1940 stammen von der astronomisch-meteorologischen Anstalt im Bernoullianum."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100227)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100227`
+- **Title** `Witterung`
+- **Description** `Dieser Datensatz zeigt für die Messstation Basel-Binningen am Observatorium St. Margarethen für jeden Monat die in Bezug auf Temperatur, Niederschlag und Bewölkung registrierten Witterungserscheinungen seit 1921.Methodischer Hinweis:Daten von 1921 bis 1940 stammen von der astronomisch-meteorologischen Anstalt im Bernoullianum.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-11-17`
+- **Modified** `2025-05-30T10:15:41+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1920-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-04-29T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Zeitreihe', 'Klima', 'Luft', 'Eistage', 'Frosttage', 'Sommertage', 'Hitzetage', 'Tage ohne Sonne', 'Schneefall', 'Schneedecke', 'Reif', 'Nebel', 'Gewitter', 'Hagel', 'Wind', 'Heizgradtage']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100227/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

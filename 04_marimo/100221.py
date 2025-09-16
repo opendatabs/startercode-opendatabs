@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100221 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100221.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100221"""
+TITLE = """Swisslos-Sportfonds Basel-Stadt"""
+DESCRIPTION = """<p>Der Datensatz „Swisslos-Sportfonds Basel-Stadt“ dokumentiert die Vergabe von Fördermitteln aus dem Swisslos-Sportfonds im Kanton Basel-Stadt. Die Mittel dienen der Unterstützung des Breitensports, der Förderung von Sportvereinen und -verbänden sowie der Realisierung von Projekten im Leistungssport.</p><p>Der Datensatz enthält Informationen zu den begünstigten Sportvereinen und Organisationen, den geförderten Projekten sowie den jeweiligen Förderbeträgen. Die Unterstützung reicht von Beiträgen für Vereinsaktivitäten über die Anschaffung von Sportmaterial bis hin zur Durchführung von Veranstaltungen und Investitionen in Sportanlagen.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100221)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100221`
+- **Title** `Swisslos-Sportfonds Basel-Stadt`
+- **Description** `<p>Der Datensatz „Swisslos-Sportfonds Basel-Stadt“ dokumentiert die Vergabe von Fördermitteln aus dem Swisslos-Sportfonds im Kanton Basel-Stadt. Die Mittel dienen der Unterstützung des Breitensports, der Förderung von Sportvereinen und -verbänden sowie der Realisierung von Projekten im Leistungssport.</p><p>Der Datensatz enthält Informationen zu den begünstigten Sportvereinen und Organisationen, den geförderten Projekten sowie den jeweiligen Förderbeträgen. Die Unterstützung reicht von Beiträgen für Vereinsaktivitäten über die Anschaffung von Sportmaterial bis hin zur Durchführung von Veranstaltungen und Investitionen in Sportanlagen.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-02-10`
+- **Modified** `2025-04-22T13:53:36+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2016-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
+- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport']`
+- **Keywords** `['Sport', 'Förderung', 'Swisslos']`
+- **Publisher** `Jugend, Familie und Sport`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100221/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

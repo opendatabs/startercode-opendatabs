@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100073 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100073.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100073"""
+TITLE = """Coronavirus (COVID-19): Fallzahlen Basel-Stadt"""
+DESCRIPTION = """<div><div>Anzahl Fälle der Coronavirus-Krankheit (COVID-19) in Basel-Stadt. Die Daten wurden zu Beginn der Pandemie durch Mitarbeiter von <span data-teams='true'>Open Data Basel-Stadt </span>von Hand aus öffentlich zugänglichen offiziellen Quellen eingetippt. Später wurden die Daten aus den Bulletins des Gesundheitsdepartements Basel-Stadt automatisiert ausgelesen. Mittlerweile stammen die Angaben direkt von den medizinischen Diensten des Gesundheitsdepartements Basel-Stadt.</div><div><br></div><div>Die Quellenangabe der jeweiligen Zahlen sind direkt der Tabelle zu entnehmen. </div><div><br></div></div><div>Die offiziellen Daten aller Kantone und des Fürstentums Liechtenstein (FL) sind hier zu finden: </div><ul><li>Interaktives Dashboard der Zahlen aller Kantone: <a href='https://data.bs.ch/pages/covid-19-dashboard/'>https://data.bs.ch/pages/covid-19-dashboard/</a></li><li>Alle Kantone und FL in einem File: <a href='https://github.com/openZH/covid_19/blob/master/COVID19_Fallzahlen_CH_total_v2.csv' target='_blank'>https://github.com/openZH/covid_19/blob/master/COVID19_Fallzahlen_CH_total_v2.csv</a></li><li>Ein File pro Kanton (z.T. sind in den einzelnen Files zusätzliche Spalten vorhanden gegenüber dem gesamtschweizerischen File): <a href='https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_total_csv_v2' target='_blank'>https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_total_csv_v2</a><a href='https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_total_csv_v2' target='_blank'></a></li></ul><p>Informationen zu den durchgeführten Tests auf täglicher Basis gemäss Bundesamt für Gesundheit (BAG) finden sich neu in diesem Datensatz: <a href='https://data.bs.ch/explore/dataset/100094/' target='_blank'>https://data.bs.ch/explore/dataset/100094/</a></p><p>Daten zu Todesfällen von Personen mit SARS-CoV-2 mit Wohnsitz in Basel-Stadt sind in diesem Datensatz zu finden: <a href='https://data.bs.ch/explore/dataset/100076/' target='_blank'>https://data.bs.ch/explore/dataset/100076/</a><a '='' href='https://data.bs.ch/explore/dataset/100076////' target='_blank'></a></p><p>Daten zu den 7- und 14-Tages Inzidenzen sowie den Fallzahlen pro Gemeinde (Basel, Riehen, Bettingen) sind in diesem Datensatz: <a href='https://data.bs.ch/explore/dataset/100108/' target='_blank'>https://data.bs.ch/explore/dataset/100108/</a></p><p><b>Änderungsprotokoll:</b></p><ul><li>Ab dem 5.11.2020 wurden keine Angaben mehr zu positiv getesteten Personen mit Wohnsitz ausserhalb des Kantons Basel-Stadt gemacht. Dies, weil die Tests mittlerweile durch eine grössere Anzahl Laboratorien durchgeführt wurden und nicht mehr alle Resultate der ausserkantonalen und internationalen Fälle dem kantonsärztlichen Dienst Basel-Stadt gemeldet wurden.</li><li><span>Ab 18.6.2022 wurden am Samstag und Sonntag keine neuen Daten in diesen Datensatz publiziert. </span></li><li><span>Ab 1. Februar 2023 wurden die Daten jeweils am Dienstag und am Freitag aktualisiert.</span></li><li><span>Ab 4. April 2023 werden die Daten jeweils am Dienstag aktualisiert. Die Daten werden somit einmal wöchentlich aktualisiert.</span></li><li><span>Die Erhebung der Fallzahlen wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert.</span> Aktualisierungsintervall von 'DAILY' auf 'NEVER' geändert.</li></ul><p><br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100073)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100073`
+- **Title** `Coronavirus (COVID-19): Fallzahlen Basel-Stadt`
+- **Description** `<div><div>Anzahl Fälle der Coronavirus-Krankheit (COVID-19) in Basel-Stadt. Die Daten wurden zu Beginn der Pandemie durch Mitarbeiter von <span data-teams="true">Open Data Basel-Stadt </span>von Hand aus öffentlich zugänglichen offiziellen Quellen eingetippt. Später wurden die Daten aus den Bulletins des Gesundheitsdepartements Basel-Stadt automatisiert ausgelesen. Mittlerweile stammen die Angaben direkt von den medizinischen Diensten des Gesundheitsdepartements Basel-Stadt.</div><div><br></div><div>Die Quellenangabe der jeweiligen Zahlen sind direkt der Tabelle zu entnehmen. </div><div><br></div></div><div>Die offiziellen Daten aller Kantone und des Fürstentums Liechtenstein (FL) sind hier zu finden: </div><ul><li>Interaktives Dashboard der Zahlen aller Kantone: <a href="https://data.bs.ch/pages/covid-19-dashboard/">https://data.bs.ch/pages/covid-19-dashboard/</a></li><li>Alle Kantone und FL in einem File: <a href="https://github.com/openZH/covid_19/blob/master/COVID19_Fallzahlen_CH_total_v2.csv" target="_blank">https://github.com/openZH/covid_19/blob/master/COVID19_Fallzahlen_CH_total_v2.csv</a></li><li>Ein File pro Kanton (z.T. sind in den einzelnen Files zusätzliche Spalten vorhanden gegenüber dem gesamtschweizerischen File): <a href="https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_total_csv_v2" target="_blank">https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_total_csv_v2</a><a href="https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_total_csv_v2" target="_blank"></a></li></ul><p>Informationen zu den durchgeführten Tests auf täglicher Basis gemäss Bundesamt für Gesundheit (BAG) finden sich neu in diesem Datensatz: <a href="https://data.bs.ch/explore/dataset/100094/" target="_blank">https://data.bs.ch/explore/dataset/100094/</a></p><p>Daten zu Todesfällen von Personen mit SARS-CoV-2 mit Wohnsitz in Basel-Stadt sind in diesem Datensatz zu finden: <a href="https://data.bs.ch/explore/dataset/100076/" target="_blank">https://data.bs.ch/explore/dataset/100076/</a><a "="" href="https://data.bs.ch/explore/dataset/100076////" target="_blank"></a></p><p>Daten zu den 7- und 14-Tages Inzidenzen sowie den Fallzahlen pro Gemeinde (Basel, Riehen, Bettingen) sind in diesem Datensatz: <a href="https://data.bs.ch/explore/dataset/100108/" target="_blank">https://data.bs.ch/explore/dataset/100108/</a></p><p><b>Änderungsprotokoll:</b></p><ul><li>Ab dem 5.11.2020 wurden keine Angaben mehr zu positiv getesteten Personen mit Wohnsitz ausserhalb des Kantons Basel-Stadt gemacht. Dies, weil die Tests mittlerweile durch eine grössere Anzahl Laboratorien durchgeführt wurden und nicht mehr alle Resultate der ausserkantonalen und internationalen Fälle dem kantonsärztlichen Dienst Basel-Stadt gemeldet wurden.</li><li><span>Ab 18.6.2022 wurden am Samstag und Sonntag keine neuen Daten in diesen Datensatz publiziert. </span></li><li><span>Ab 1. Februar 2023 wurden die Daten jeweils am Dienstag und am Freitag aktualisiert.</span></li><li><span>Ab 4. April 2023 werden die Daten jeweils am Dienstag aktualisiert. Die Daten werden somit einmal wöchentlich aktualisiert.</span></li><li><span>Die Erhebung der Fallzahlen wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert.</span> Aktualisierungsintervall von "DAILY" auf "NEVER" geändert.</li></ul><p><br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-04-06`
+- **Modified** `2023-07-05T07:40:31+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-02-26T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-07-03T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Todesfälle', 'Lungenentzündung', 'Pandemie', 'Corona']`
+- **Publisher** `Open Data Basel-Stadt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100073/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

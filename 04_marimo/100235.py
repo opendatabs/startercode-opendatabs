@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100235 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100235.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100235"""
+TITLE = """Wiese Wasserstand und Abfluss"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt den Wasserstand und die Abflussmenge der Wiese in Basel etwa auf Höhe der Brücke bei der Wiesenstrasse über die Wiese. Es liegen aktuelle Werte alle 5 Minuten vor. Die Messungen werden im Auftrag des Bundesamts für Umwelt durchgeführt (siehe <a href='https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2199' target='_blank'>https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2199</a>).</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100235)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100235`
+- **Title** `Wiese Wasserstand und Abfluss`
+- **Description** `<p>Dieser Datensatz zeigt den Wasserstand und die Abflussmenge der Wiese in Basel etwa auf Höhe der Brücke bei der Wiesenstrasse über die Wiese. Es liegen aktuelle Werte alle 5 Minuten vor. Die Messungen werden im Auftrag des Bundesamts für Umwelt durchgeführt (siehe <a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2199" target="_blank">https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2199</a>).</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-11-10`
+- **Modified** `2025-09-16T08:00:13+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `2022-10-28T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-15T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser', 'Tiefe', 'Wiese']`
+- **Publisher** `Bundesamt für Umwelt BAFU`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100235/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100033 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100033.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100033"""
+TITLE = """Touristische Velorouten"""
+DESCRIPTION = """Die touristischen Velorouten zeigen in Basel-Stadt und in der näheren Umgebung die signalisierten Velorouten von EuroVelo und SchweizMobil sowie die signalisierten regionalen Velorouten wie der Südschwarzwald-Radweg und der Dreiland-Radweg."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100033)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100033`
+- **Title** `Touristische Velorouten`
+- **Description** `Die touristischen Velorouten zeigen in Basel-Stadt und in der näheren Umgebung die signalisierten Velorouten von EuroVelo und SchweizMobil sowie die signalisierten regionalen Velorouten wie der Südschwarzwald-Radweg und der Dreiland-Radweg.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2024-10-08T11:23:40+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Tourismus', 'Mobilität und Verkehr', 'Geographie']`
+- **Keywords** `['Velo', 'Fahrrad', 'Veloweg', 'E-Bike', 'Pedelec']`
+- **Publisher** `Amt für Mobilität`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100033/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

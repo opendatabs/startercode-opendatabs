@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100356 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100356.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100356"""
+TITLE = """Geschwindigkeitsklassen motorisierter Individualverkehr"""
+DESCRIPTION = """<p>Dieser Datensatz enthält die Geschwindigkeitsklassen des motorisierten Individualverkehrs. Die Daten werden vor der Veröffentlichung nicht überprüft oder ergänzt. Daher können jederzeit Datenlücken oder falsche Messungen aufgrund technischer Probleme oder Verkehrsbehinderungen auftreten.</p><p>Aus Kostengründen sind nur die Werte des aktuellen Jahres und der letzten zwei Jahre als Tabelle / Visualisierung sichtbar bzw. via API abgreifbar. Die vollständigen Daten ab dem Jahr 2014 können hier heruntergeladen werden: <br><br>Leicht aufbereiteter Datensatz: <a href='https://data-bs.ch/mobilitaet/converted_MIV_Speed.csv' target='_blank'>https://data-bs.ch/mobilitaet/converted_MIV_Speed.csv </a><br>Rohdaten: <a href='https://data-bs.ch/mobilitaet/MIV_Speed.csv' target='_blank'>https://data-bs.ch/mobilitaet/MIV_Speed.csv</a><br><br>Die Daten einzelner Jahre ab dem Jahr 2014 können heruntergeladen werden unter der URL mit dem Muster https://data-bs.ch/mobilitaet/[JAHR]_MIV_Speed.csv, als zum Beispiel für das Jahr 2020 hier: <a href='https://data-bs.ch/mobilitaet/2020_MIV_Speed.csv' target='_blank'>https://data-bs.ch/mobilitaet/2020_MIV_Speed.csv.</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100356)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100356`
+- **Title** `Geschwindigkeitsklassen motorisierter Individualverkehr`
+- **Description** `<p>Dieser Datensatz enthält die Geschwindigkeitsklassen des motorisierten Individualverkehrs. Die Daten werden vor der Veröffentlichung nicht überprüft oder ergänzt. Daher können jederzeit Datenlücken oder falsche Messungen aufgrund technischer Probleme oder Verkehrsbehinderungen auftreten.</p><p>Aus Kostengründen sind nur die Werte des aktuellen Jahres und der letzten zwei Jahre als Tabelle / Visualisierung sichtbar bzw. via API abgreifbar. Die vollständigen Daten ab dem Jahr 2014 können hier heruntergeladen werden: <br><br>Leicht aufbereiteter Datensatz: <a href="https://data-bs.ch/mobilitaet/converted_MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/converted_MIV_Speed.csv </a><br>Rohdaten: <a href="https://data-bs.ch/mobilitaet/MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/MIV_Speed.csv</a><br><br>Die Daten einzelner Jahre ab dem Jahr 2014 können heruntergeladen werden unter der URL mit dem Muster https://data-bs.ch/mobilitaet/[JAHR]_MIV_Speed.csv, als zum Beispiel für das Jahr 2020 hier: <a href="https://data-bs.ch/mobilitaet/2020_MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/2020_MIV_Speed.csv.</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-03-26`
+- **Modified** `2025-09-16T07:16:32+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2022-12-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-08-05T22:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr']`
+- **Keywords** `['Auto', 'Motorrad', 'Bus', 'Lieferwagen', 'Lastwagen', 'Anhänger', 'Verkehr', 'Geschwindigkeit', 'km/h']`
+- **Publisher** `Amt für Mobilität`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100356/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

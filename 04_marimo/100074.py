@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100074 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100074.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100074"""
+TITLE = """Veranstaltungen mit potenziellem Einfluss auf Veloverkehr"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt ausgewählte Veranstaltungen und Veranstaltungsreihen. Der Datensatz ist ursprünglich aufgebaut worden, um das Verkehrsaufkommen bei kantonalen Fahrrad-Zählstellen – welches unter anderem auch durch Veranstaltungen beeinflusst wird – besser interpretieren zu können. Aus diesem Grund sind nicht alle Veranstaltungen auf dem Kantonsgebiet im Datensatz enthalten, sondern nur diejenigen, von denen man sich einen potentiellen Einfluss auf die Anzahl an Zählstellen gezählten Velos erwartet. Der Datensatz wird durch das Statistische Amt Basel-Stadt nach bestem Wissen und Gewissen gepflegt und aktualisiert. Es besteht kein Anspruch auf Richtigkeit oder Vollständigkeit der gemachten Angaben. </p><p>Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100074)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100074`
+- **Title** `Veranstaltungen mit potenziellem Einfluss auf Veloverkehr`
+- **Description** `<p>Dieser Datensatz zeigt ausgewählte Veranstaltungen und Veranstaltungsreihen. Der Datensatz ist ursprünglich aufgebaut worden, um das Verkehrsaufkommen bei kantonalen Fahrrad-Zählstellen – welches unter anderem auch durch Veranstaltungen beeinflusst wird – besser interpretieren zu können. Aus diesem Grund sind nicht alle Veranstaltungen auf dem Kantonsgebiet im Datensatz enthalten, sondern nur diejenigen, von denen man sich einen potentiellen Einfluss auf die Anzahl an Zählstellen gezählten Velos erwartet. Der Datensatz wird durch das Statistische Amt Basel-Stadt nach bestem Wissen und Gewissen gepflegt und aktualisiert. Es besteht kein Anspruch auf Richtigkeit oder Vollständigkeit der gemachten Angaben. </p><p>Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-03-31`
+- **Modified** `2025-09-15T16:31:08+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Raum und Umwelt', 'Öffentliche Ordnung und Sicherheit']`
+- **Keywords** `['Adresse', 'Event', 'Ausgang', 'Velo', 'Ansammlung', 'Konzert', 'Publikum']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100074/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100136 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100136.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100136"""
+TITLE = """Coronavirus (Covid-19): Für Impfung angemeldete Personen nach Altersklasse"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt die Anzahl Personen, welche sich im Kanton Basel-Stadt für eine Impfung gegen SARS-CoV-2 angemeldet, aber noch keine Impfung erhalten haben nach Altersklasse («Warteliste»). Zudem wird angegeben, ob die Person bereits einen Termin für die Impfung hat oder noch nicht. </p><p>Ab dem 25. Juni können sich auch Personen im Alter zwischen 12 und 15 Jahren für die Impfung anmelden. Entsprechend wird diese Altersklasse im Datensatz auch geführt. </p><p><br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100136)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100136`
+- **Title** `Coronavirus (Covid-19): Für Impfung angemeldete Personen nach Altersklasse`
+- **Description** `<p>Dieser Datensatz zeigt die Anzahl Personen, welche sich im Kanton Basel-Stadt für eine Impfung gegen SARS-CoV-2 angemeldet, aber noch keine Impfung erhalten haben nach Altersklasse («Warteliste»). Zudem wird angegeben, ob die Person bereits einen Termin für die Impfung hat oder noch nicht. </p><p>Ab dem 25. Juni können sich auch Personen im Alter zwischen 12 und 15 Jahren für die Impfung anmelden. Entsprechend wird diese Altersklasse im Datensatz auch geführt. </p><p><br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-06-11`
+- **Modified** `2021-12-16T16:38:47+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2021-02-17T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2021-12-15T23:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Impfung', 'Corona', 'Coronavirus', 'SARS-CoV-2', 'geimpft', 'Warteliste', 'Impftermin', 'Vaccination', 'COVID-19']`
+- **Publisher** `Medizinische Dienste`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100136/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

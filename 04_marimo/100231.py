@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100231 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100231.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100231"""
+TITLE = """Gebäudeeingänge (Gebäude- und Wohnungsregister GWR)"""
+DESCRIPTION = """Gebäudeeingänge bzw. Gebäudeadressen gemäss Gebäude- und Wohnungsregister (GWR). <br><br>Ein Gebäudeeingang ist ein Zugang von aussen in ein Gebäude, wobei der Eingang durch eine Gebäudeadresse idenzifiziert ist. Die Gebäudeadressierung dient der Identifikation und dem Auffinden eines Gebäudes. Zudem erleichtert sie Planungsarbeiten und verbessert, insbesondere in Notfallsituationen, eine zielgerichtete Routenwahl. Die Gebäudeadresse setzt sich aus einem Strassennamen, einer Hausnummer (auch Eingangs- oder Polizeinummer genannt) und einer Ortschaft mit zugehöriger vierstelliger Postleitzahl (PLZ) zusammen. Die Kombination Strassenname und Hausnummer muss pro Ortschaft eindeutig sein, jede Adresse in der Schweiz gibt es somit nur einmal.<br><br>Weitere Einzelheiten zur Gebäudeadressierung sind hier nachzulesen: <a href='https://www.bfs.admin.ch/bfsstatic/dam/assets/5566189/master' target='_blank'>https://www.bfs.admin.ch/bfsstatic/dam/assets/5566189/master (Empfehlung Gebäudeadressierung und Schreibweise von Strassennamen)</a><br><br>Einen Überblick über die im Register geführten Merkmal gibt folgendes Dokument: <a href='https://www.housing-stat.ch/files/881-2200.pdf' target='_blank'>https://www.housing-stat.ch/files/881-2200.pdf (Merkmalskatalog 4.2)</a> bzw. online unter <a href='https://www.housing-stat.ch/de/help/42.html' target='_blank'>https://www.housing-stat.ch/de/help/42.html (Online-Merkmalskatalog 4.2)</a><br><br>Die rechtliche Grundlage stellt die entsprechende eidgenössische Gesetzgebung dar: <a href='https://www.fedlex.admin.ch/eli/cc/2017/376/de' target='_blank'>https://www.fedlex.admin.ch/eli/cc/2017/376/de (Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR))</a><br><br>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100231)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100231`
+- **Title** `Gebäudeeingänge (Gebäude- und Wohnungsregister GWR)`
+- **Description** `Gebäudeeingänge bzw. Gebäudeadressen gemäss Gebäude- und Wohnungsregister (GWR). <br><br>Ein Gebäudeeingang ist ein Zugang von aussen in ein Gebäude, wobei der Eingang durch eine Gebäudeadresse idenzifiziert ist. Die Gebäudeadressierung dient der Identifikation und dem Auffinden eines Gebäudes. Zudem erleichtert sie Planungsarbeiten und verbessert, insbesondere in Notfallsituationen, eine zielgerichtete Routenwahl. Die Gebäudeadresse setzt sich aus einem Strassennamen, einer Hausnummer (auch Eingangs- oder Polizeinummer genannt) und einer Ortschaft mit zugehöriger vierstelliger Postleitzahl (PLZ) zusammen. Die Kombination Strassenname und Hausnummer muss pro Ortschaft eindeutig sein, jede Adresse in der Schweiz gibt es somit nur einmal.<br><br>Weitere Einzelheiten zur Gebäudeadressierung sind hier nachzulesen: <a href="https://www.bfs.admin.ch/bfsstatic/dam/assets/5566189/master" target="_blank">https://www.bfs.admin.ch/bfsstatic/dam/assets/5566189/master (Empfehlung Gebäudeadressierung und Schreibweise von Strassennamen)</a><br><br>Einen Überblick über die im Register geführten Merkmal gibt folgendes Dokument: <a href="https://www.housing-stat.ch/files/881-2200.pdf" target="_blank">https://www.housing-stat.ch/files/881-2200.pdf (Merkmalskatalog 4.2)</a> bzw. online unter <a href="https://www.housing-stat.ch/de/help/42.html" target="_blank">https://www.housing-stat.ch/de/help/42.html (Online-Merkmalskatalog 4.2)</a><br><br>Die rechtliche Grundlage stellt die entsprechende eidgenössische Gesetzgebung dar: <a href="https://www.fedlex.admin.ch/eli/cc/2017/376/de" target="_blank">https://www.fedlex.admin.ch/eli/cc/2017/376/de (Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR))</a><br><br>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-11-24`
+- **Modified** `2025-09-16T01:26:04+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bau- und Wohnungswesen']`
+- **Keywords** `['Adresse', 'Wohnung', 'Gebäude', 'Wohnen']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100231/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

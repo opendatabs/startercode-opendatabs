@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100108 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100108.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100108"""
+TITLE = """Coronavirus (COVID-19): Fallzahlen und Inzidenzen Basel-Stadt"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt die Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz im Kanton Basel-Stadt sowie die kumulierten Werte über die letzten 7 resp. 14 Tage, die jeweiligen Mittelwerte und die Inzidenzen pro 100 000 EinwohnerInnen gemäss <a href='https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/erhebungen/statpop.html' target='_blank'>STATPOP</a>. </p><p>Die Zahlen werden gemäss dem Datum des Test-Resultats ausgewiesen, also gemäss jenem Datum, an dem ein Testresultat vorliegt. Dies geschieht in aller Regel innerhalb von 24 Stunden nach einem erfolgten Test. Bei nachträglich eintreffenden Meldungen werden die Zahlen der Vortage entsprechend korrigiert.</p><p></p><ul style='box-sizing: border-box; color: rgb(0, 0, 0); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'></ul><p></p><p><b style='box-sizing: border-box; font-weight: bolder;'>Änderungsprotokoll:</b></p><ul><li>Die Erhebung der Werte wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von 'WEEKLY' auf 'NEVER' geändert.</li></ul><p><br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100108)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100108`
+- **Title** `Coronavirus (COVID-19): Fallzahlen und Inzidenzen Basel-Stadt`
+- **Description** `<p>Dieser Datensatz zeigt die Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz im Kanton Basel-Stadt sowie die kumulierten Werte über die letzten 7 resp. 14 Tage, die jeweiligen Mittelwerte und die Inzidenzen pro 100 000 EinwohnerInnen gemäss <a href="https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/erhebungen/statpop.html" target="_blank">STATPOP</a>. </p><p>Die Zahlen werden gemäss dem Datum des Test-Resultats ausgewiesen, also gemäss jenem Datum, an dem ein Testresultat vorliegt. Dies geschieht in aller Regel innerhalb von 24 Stunden nach einem erfolgten Test. Bei nachträglich eintreffenden Meldungen werden die Zahlen der Vortage entsprechend korrigiert.</p><p></p><ul style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></ul><p></p><p><b style="box-sizing: border-box; font-weight: bolder;">Änderungsprotokoll:</b></p><ul><li>Die Erhebung der Werte wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "WEEKLY" auf "NEVER" geändert.</li></ul><p><br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-12-04`
+- **Modified** `2024-03-13T14:01:44+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-02-26T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-07-04T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Krankheit', 'Gesundheit', 'Coronavirus', 'Corona', 'COVID-19', 'Test', 'Inzidenz', 'Fallzahlen', 'Lungenentzündung']`
+- **Publisher** `Medizinische Dienste`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100108/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

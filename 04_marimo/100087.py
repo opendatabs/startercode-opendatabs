@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100087 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100087.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,20 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100087"""
+TITLE = """Smart Climate Schallpegelmessungen"""
+DESCRIPTION = """<p>Im Rahmen des Projektes «Smart Climate» von
+Smart Regio Basel (<a href='https://smartregiobasel.ch/de/projekte/smart-climate-plug-and-sense' target='_blank'>https://smartregiobasel.ch/de/projekte/smart-climate-plug-and-sense</a>)
+werden an verschiedenen Standorten in der Region Basel Schallpegeldaten mit
+LoRa-Sensoren gemessen. Das Lufthygieneamt beider Basel, das Amt für Umwelt und
+Energie des Kantons Basel-Stadt, der Basler Wetterdienstleister meteoblue AG,
+die IWB sowie die Sensirion AG schlossen sich zusammen, um in diesem
+Pilotprojekt den Einsatz von kosteneffizienten Sensoren zur Erfassung des
+«regionalen Mikroklimas» zu testen. Hier werden die unvalidierten
+Schallpegeldaten (Leq) zur Verfügung gestellt.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100087)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +114,28 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100087`
+- **Title** `Smart Climate Schallpegelmessungen`
+- **Description** `<p>Im Rahmen des Projektes «Smart Climate» von
+Smart Regio Basel (<a href="https://smartregiobasel.ch/de/projekte/smart-climate-plug-and-sense" target="_blank">https://smartregiobasel.ch/de/projekte/smart-climate-plug-and-sense</a>)
+werden an verschiedenen Standorten in der Region Basel Schallpegeldaten mit
+LoRa-Sensoren gemessen. Das Lufthygieneamt beider Basel, das Amt für Umwelt und
+Energie des Kantons Basel-Stadt, der Basler Wetterdienstleister meteoblue AG,
+die IWB sowie die Sensirion AG schlossen sich zusammen, um in diesem
+Pilotprojekt den Einsatz von kosteneffizienten Sensoren zur Erfassung des
+«regionalen Mikroklimas» zu testen. Hier werden die unvalidierten
+Schallpegeldaten (Leq) zur Verfügung gestellt.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-06-25`
+- **Modified** `2025-09-16T09:00:30+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-06-23T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-15T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Schall', 'Lärm', 'Pegel', 'Lautstärke', 'Belästigung']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +161,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100087/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100389 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100389.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100389"""
+TITLE = """Sprayereien"""
+DESCRIPTION = """<p>Dieser Datensatz enthält Informationen über Sprayereien im Kanton Basel-Stadt, die sowohl öffentliche Anlagen (SprayEx) als auch private Gebäude (SprayOut) betreffen und von den zuständigen Stellen erfasst wurden. Daten von Sprayereien an privaten Gebäuden werden seit dem 31. Oktober 2023 ausgewiesen.</p><p>Die Daten beziehen sich ausschliesslich auf abgeschlossene Fälle, das heisst Sprayereien, die bereits entfernt worden sind.</p><p>Die genauen geografischen Koordinaten der Vorfälle werden einem 50x50-Meter-Raster zugeordnet. Der südwestliche Eckpunkt dieses Rasters wird als Geopunkt ausgewiesen, um die Anonymität der betroffenen Objekte zu gewährleisten.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100389)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100389`
+- **Title** `Sprayereien`
+- **Description** `<p>Dieser Datensatz enthält Informationen über Sprayereien im Kanton Basel-Stadt, die sowohl öffentliche Anlagen (SprayEx) als auch private Gebäude (SprayOut) betreffen und von den zuständigen Stellen erfasst wurden. Daten von Sprayereien an privaten Gebäuden werden seit dem 31. Oktober 2023 ausgewiesen.</p><p>Die Daten beziehen sich ausschliesslich auf abgeschlossene Fälle, das heisst Sprayereien, die bereits entfernt worden sind.</p><p>Die genauen geografischen Koordinaten der Vorfälle werden einem 50x50-Meter-Raster zugeordnet. Der südwestliche Eckpunkt dieses Rasters wird als Geopunkt ausgewiesen, um die Anonymität der betroffenen Objekte zu gewährleisten.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-01-08`
+- **Modified** `2025-09-16T08:03:59+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `2018-07-02T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-14T22:00:00+00:00`
+- **Themes** `['Öffentliche Ordnung und Sicherheit', 'Raum und Umwelt']`
+- **Keywords** `['Graffiti', 'Street Art', 'Wandkunst', 'öffentliche Kunst', 'Kultur', 'Wandbilder']`
+- **Publisher** `Stadtreinigung`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100389/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

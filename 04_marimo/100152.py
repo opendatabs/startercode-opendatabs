@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100152 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100152.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100152"""
+TITLE = """Coronavirus (COVID-19): Positiv getestete Minderjährige in 3-Jahresklassen"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt die minderjährigen Personen, welche positiv auf SARS-CoV-2 getestet wurden in 3-Jahresklassen. Die erste Klasse (0 bis 3 Jahre) enthält 4 Jahre. Es werden ausschliesslich Personen mit Wohnsitz im Kanton Basel-Stadt gezeigt. Als «Datum Testresultat» gilt das Datum, an welchem das Testresultat vorlag.</p><p>Weitere Datensätze zu COVID-19:</p><p>Fallzahlen Basel-Stadt: <a href='https://data.bs.ch/explore/dataset/100073/' target='_blank'>https://data.bs.ch/explore/dataset/100073/</a></p><p>Tests Basel-Stadt:<a href='https://data.bs.ch/explore/dataset/100094/' target='_blank'>https://data.bs.ch/explore/dataset/100094/</a></p><p>Todesfälle Basel-Stadt nach Alter und Geschlecht: <a href='https://data.bs.ch/explore/dataset/100076/' target='_blank'>https://data.bs.ch/explore/dataset/100076/</a></p><p>COVID-19 Dashboard: <a href='https://data.bs.ch/pages/covid-19-dashboard/' target='_blank'>https://data.bs.ch/pages/covid-19-dashboard/</a><a href='https://data.bs.ch/pages/covid-19-dashboard//' target='_blank'></a></p><p><span style='font-weight: bolder;'>Änderungsprotokoll:</span></p><ul><li>Die Erhebung der Werte wurde per 19. Juni 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von 'DAILY' auf 'NEVER' geändert.</li></ul><p><br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100152)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100152`
+- **Title** `Coronavirus (COVID-19): Positiv getestete Minderjährige in 3-Jahresklassen`
+- **Description** `<p>Dieser Datensatz zeigt die minderjährigen Personen, welche positiv auf SARS-CoV-2 getestet wurden in 3-Jahresklassen. Die erste Klasse (0 bis 3 Jahre) enthält 4 Jahre. Es werden ausschliesslich Personen mit Wohnsitz im Kanton Basel-Stadt gezeigt. Als «Datum Testresultat» gilt das Datum, an welchem das Testresultat vorlag.</p><p>Weitere Datensätze zu COVID-19:</p><p>Fallzahlen Basel-Stadt: <a href="https://data.bs.ch/explore/dataset/100073/" target="_blank">https://data.bs.ch/explore/dataset/100073/</a></p><p>Tests Basel-Stadt:<a href="https://data.bs.ch/explore/dataset/100094/" target="_blank">https://data.bs.ch/explore/dataset/100094/</a></p><p>Todesfälle Basel-Stadt nach Alter und Geschlecht: <a href="https://data.bs.ch/explore/dataset/100076/" target="_blank">https://data.bs.ch/explore/dataset/100076/</a></p><p>COVID-19 Dashboard: <a href="https://data.bs.ch/pages/covid-19-dashboard/" target="_blank">https://data.bs.ch/pages/covid-19-dashboard/</a><a href="https://data.bs.ch/pages/covid-19-dashboard//" target="_blank"></a></p><p><span style="font-weight: bolder;">Änderungsprotokoll:</span></p><ul><li>Die Erhebung der Werte wurde per 19. Juni 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "DAILY" auf "NEVER" geändert.</li></ul><p><br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-09-09`
+- **Modified** `2025-04-28T07:46:37+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-03-11T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-06-16T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Coronavirus', 'COVID-19', 'Virus', 'Lungenentzündung', 'Krankheit', 'Spital']`
+- **Publisher** `Medizinische Dienste`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100152/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

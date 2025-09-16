@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100121 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100121.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100121"""
+TITLE = """Schülerprognose Basel"""
+DESCRIPTION = """Das Statistische Amt erstellt kleinräumige Prognosen zu den Schülerzahlen in den öffentlichen Schulen der Stadt Basel. Die Schülerzahlen werden für die ersten 8 Schulstufen (Kindergarten und Primarschule), 25 Schulperimeter und 5 Schuljahre in die Zukunft prognostiziert. Die Perimeter dienen als Planungsgrundlage und nicht als effektive Einzugsgebiete. Die Prognosen werden im Auftrag des Erziehungsdepartements Basel-Stadt erstellt und jährlich aktualisiert. Die Prognosezahlen berücksichtigen keine Schülerinnen und Schüler, die aufgrund von künftigen Arealentwicklungen in die Schulen eintreten werden. Die Schülerinnen und Schüler mit dem Schutzstatus S werden in diesem Datensatz nicht ausgewiesen."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100121)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100121`
+- **Title** `Schülerprognose Basel`
+- **Description** `Das Statistische Amt erstellt kleinräumige Prognosen zu den Schülerzahlen in den öffentlichen Schulen der Stadt Basel. Die Schülerzahlen werden für die ersten 8 Schulstufen (Kindergarten und Primarschule), 25 Schulperimeter und 5 Schuljahre in die Zukunft prognostiziert. Die Perimeter dienen als Planungsgrundlage und nicht als effektive Einzugsgebiete. Die Prognosen werden im Auftrag des Erziehungsdepartements Basel-Stadt erstellt und jährlich aktualisiert. Die Prognosezahlen berücksichtigen keine Schülerinnen und Schüler, die aufgrund von künftigen Arealentwicklungen in die Schulen eintreten werden. Die Schülerinnen und Schüler mit dem Schutzstatus S werden in diesem Datensatz nicht ausgewiesen.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-03-23`
+- **Modified** `2025-05-08T07:02:58+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bildung, Wissenschaft']`
+- **Keywords** `['Zeitreihe', 'Prognose', 'Bildung', 'Schule', 'Schüler']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100121/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

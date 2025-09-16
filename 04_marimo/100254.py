@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100254 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100254.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100254"""
+TITLE = """Tägliche Klimadaten der NBCN-Station Basel-Binningen"""
+DESCRIPTION = """<p>Tagesdaten der NBCN-Station (Swiss National Basic Climatological Network) Basel-Binningen der MeteoSchweiz. Komplette, <a href='https://www.meteoschweiz.admin.ch/klima/klimawandel/entwicklung-temperatur-niederschlag-sonnenschein/homogene-messreihen-ab-1864/homogenisierung-von-klima-messreihen.html' target='_blank'>nicht homogenisierte</a>  Datenreihe der wichtigsten Tageswerte seit Messbeginn.</p><p> Methodischer Hinweis:<br>Die Berechnung des Tagesmittels der Lufttemperatur erfolgte je nach historischer Zeitperiode unterschiedlich. <br>Bis 1980 wurden die Temperaturwerte nur dreimal täglich erfasst, der Mittelwert basiert entsprechend auf diesen drei Ablesungen. Ab 1981 liegen Stundenmittel zugrunde und ab 2018 10min-Werte. Das tägliche Minimum und Maximum der Lufttemperatur wurde bis 1980 anhand von Minimum- bzw. Maximum-Thermometern erfasst.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100254)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100254`
+- **Title** `Tägliche Klimadaten der NBCN-Station Basel-Binningen`
+- **Description** `<p>Tagesdaten der NBCN-Station (Swiss National Basic Climatological Network) Basel-Binningen der MeteoSchweiz. Komplette, <a href="https://www.meteoschweiz.admin.ch/klima/klimawandel/entwicklung-temperatur-niederschlag-sonnenschein/homogene-messreihen-ab-1864/homogenisierung-von-klima-messreihen.html" target="_blank">nicht homogenisierte</a>  Datenreihe der wichtigsten Tageswerte seit Messbeginn.</p><p> Methodischer Hinweis:<br>Die Berechnung des Tagesmittels der Lufttemperatur erfolgte je nach historischer Zeitperiode unterschiedlich. <br>Bis 1980 wurden die Temperaturwerte nur dreimal täglich erfasst, der Mittelwert basiert entsprechend auf diesen drei Ablesungen. Ab 1981 liegen Stundenmittel zugrunde und ab 2018 10min-Werte. Das tägliche Minimum und Maximum der Lufttemperatur wurde bis 1980 anhand von Minimum- bzw. Maximum-Thermometern erfasst.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-02-10`
+- **Modified** `2025-09-15T14:00:04+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1863-12-31T23:30:14+00:00`
+- **Temporal_coverage_end_date** `2025-09-13T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Niederschlag', 'Strahlung', 'Druck', 'Luftdruck', 'Sonne', 'Klimatologie', 'Klima', 'Temperatur', 'Lufttemperatur', 'Sonnenschein', 'Sonnenscheindauer', 'Wetter', 'Luftfeuchtigkeit', 'Atmosphäre']`
+- **Publisher** `MeteoSchweiz`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100254/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

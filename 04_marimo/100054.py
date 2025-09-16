@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100054 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100054.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100054"""
+TITLE = """Baumkataster: Fäll- und Baumersatzliste"""
+DESCRIPTION = """Der Baumkataster umfasst den durch die Stadtgärtnerei Basel (Gebiet Stadt Basel) und die Gemeinde Riehen (Gebiet Riehen) gepflegten Baumbestand. Bäume sind im Kanton Basel-Stadt gemäss Baumschutzgesetz (BSchG) geschützt. Die Fäll- und Baumersatzliste enthält diejenigen geschützten Bäume, welche innerhalb der nächsten 6 Monate gefällt, ersetzt und neu gepflanzt werden müssen. Fällungen werden jeweils im Winterhalbjahr vorgenommen."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100054)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100054`
+- **Title** `Baumkataster: Fäll- und Baumersatzliste`
+- **Description** `Der Baumkataster umfasst den durch die Stadtgärtnerei Basel (Gebiet Stadt Basel) und die Gemeinde Riehen (Gebiet Riehen) gepflegten Baumbestand. Bäume sind im Kanton Basel-Stadt gemäss Baumschutzgesetz (BSchG) geschützt. Die Fäll- und Baumersatzliste enthält diejenigen geschützten Bäume, welche innerhalb der nächsten 6 Monate gefällt, ersetzt und neu gepflanzt werden müssen. Fällungen werden jeweils im Winterhalbjahr vorgenommen.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2025-09-16T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Raum und Umwelt', 'Geographie']`
+- **Keywords** `['Baum', 'Stadtbaum', 'Unterhalt', 'Pflege', 'Ersatz', 'Fällung', 'Kataster']`
+- **Publisher** `Stadtgärtnerei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100054/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

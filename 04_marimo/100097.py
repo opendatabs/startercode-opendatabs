@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100097 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100097.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,30 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100097"""
+TITLE = """Geschwindigkeitsmonitoring: Einzelmessungen"""
+DESCRIPTION = """<p></p><p></p><p class='MsoNormal' style='margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'>Einzelmessungen des
+Geschwindigkeitsmonitorings der Kantonspolizei Basel-Stadt</p><p class='MsoNormal' style='margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'>Bei den dargestellten
+Daten handelt es sich ausschliesslich um statistische Erhebungen. Diese stehen
+nicht in einem Zusammenhang mit Ordnungsbussen oder einer strafrechtlichen
+Verfolgung. Die statistischen Geschwindigkeitsmessungen dienen der Kantonspolizei
+Basel-Stadt zur Überprüfung der Geschwindigkeit sowie der Verkehrssicherheit
+(z.B. Sicherheit an Fussgängerstreifen) an der betreffenden Örtlichkeit. Die
+Ergebnisse dienen zur Entscheidung, an welchen Örtlichkeiten Handlungsbedarf in
+Form von Geschwindigkeitskontrollen besteht. Jedes Statistikgerät besitzt eine
+einzige Punktgeometrie und ist meist mit zwei Richtungen versehen (Richtung 1
+und 2).<o:p></o:p></p><p class='MsoNormal' style='margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'>Hinweis: Die
+Messungen sind nicht zwingend repräsentativ für das ganze Jahr und müssen im
+Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse
+Messungen während einer ausserordentlichen Verkehrsführung (z.B.
+Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben.
+Manipulationen an Geräten können zu fehlerhaften Messungen führen.<o:p></o:p></p><p>
+
+
+</p><p class='MsoNormal' style='margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'><font face='Arial, sans-serif'>Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href='https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring' target='_blank'>https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face='Arial, sans-serif'> aufrufbar.</font></p>Aus Kostengründen sind nur die Werte des aktuellen Jahres und des letzten Jahres als Tabelle / Visualisierung sichtbar.<p></p><p>Eine Vorschau aller Daten ist hier zu finden: <a href='https://datatools.bs.ch/Geschwindigkeitsmonitoring' target='_blank'>https://datatools.bs.ch/Geschwindigkeitsmonitoring</a>.<br>Aufgrund der grossen Datenmenge kann es vorkommen, dass der Datensatz nicht vollständig heruntergeladen werden kann. Falls dieses Problem auftritt, kann man den vollständigen Datensatz und die Einzelmessungen der Messstationen hier herunterladen:</p><p></p><p></p><ul><li>vollständiger Datensatz (Achtung grösser als 10 GB): <a href='https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv'>https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv</a></li><li>Einzelmessungen der Messstationen: <a href='https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/'>https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/</a></li></ul><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href='https://www.geo.bs.ch/geschwindigkeitsmonitoring' target='_blank'>https://www.geo.bs.ch/geschwindigkeitsmonitoring</a></p><p></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100097)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +124,38 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100097`
+- **Title** `Geschwindigkeitsmonitoring: Einzelmessungen`
+- **Description** `<p></p><p></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Einzelmessungen des
+Geschwindigkeitsmonitorings der Kantonspolizei Basel-Stadt</p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Bei den dargestellten
+Daten handelt es sich ausschliesslich um statistische Erhebungen. Diese stehen
+nicht in einem Zusammenhang mit Ordnungsbussen oder einer strafrechtlichen
+Verfolgung. Die statistischen Geschwindigkeitsmessungen dienen der Kantonspolizei
+Basel-Stadt zur Überprüfung der Geschwindigkeit sowie der Verkehrssicherheit
+(z.B. Sicherheit an Fussgängerstreifen) an der betreffenden Örtlichkeit. Die
+Ergebnisse dienen zur Entscheidung, an welchen Örtlichkeiten Handlungsbedarf in
+Form von Geschwindigkeitskontrollen besteht. Jedes Statistikgerät besitzt eine
+einzige Punktgeometrie und ist meist mit zwei Richtungen versehen (Richtung 1
+und 2).<o:p></o:p></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Hinweis: Die
+Messungen sind nicht zwingend repräsentativ für das ganze Jahr und müssen im
+Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse
+Messungen während einer ausserordentlichen Verkehrsführung (z.B.
+Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben.
+Manipulationen an Geräten können zu fehlerhaften Messungen führen.<o:p></o:p></p><p>
+
+
+</p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="Arial, sans-serif">Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href="https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring" target="_blank">https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face="Arial, sans-serif"> aufrufbar.</font></p>Aus Kostengründen sind nur die Werte des aktuellen Jahres und des letzten Jahres als Tabelle / Visualisierung sichtbar.<p></p><p>Eine Vorschau aller Daten ist hier zu finden: <a href="https://datatools.bs.ch/Geschwindigkeitsmonitoring" target="_blank">https://datatools.bs.ch/Geschwindigkeitsmonitoring</a>.<br>Aufgrund der grossen Datenmenge kann es vorkommen, dass der Datensatz nicht vollständig heruntergeladen werden kann. Falls dieses Problem auftritt, kann man den vollständigen Datensatz und die Einzelmessungen der Messstationen hier herunterladen:</p><p></p><p></p><ul><li>vollständiger Datensatz (Achtung grösser als 10 GB): <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv</a></li><li>Einzelmessungen der Messstationen: <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/</a></li></ul><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href="https://www.geo.bs.ch/geschwindigkeitsmonitoring" target="_blank">https://www.geo.bs.ch/geschwindigkeitsmonitoring</a></p><p></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-02-02`
+- **Modified** `2025-09-16T05:25:18+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2024-01-14T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-07T22:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr']`
+- **Keywords** `['Geschwindigkeit', 'Verkehr', 'Auto', 'PW', 'PKW', 'LW', 'LKW', 'Messwert', 'Einzelmessung', 'Messung']`
+- **Publisher** `Kantonspolizei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +181,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100097/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

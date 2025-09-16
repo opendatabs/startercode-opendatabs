@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100056 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100056.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100056"""
+TITLE = """Schulwegsicherheit: Fusswege"""
+DESCRIPTION = """Die Daten zur Schulwegsicherheit zeigen auf, wo Strassenübergänge für Kinder im Kindergarten- und Schulalter übersichtlich und einfach sind, bzw. wo erhöhte Anforderungen an das Überqueren der Strasse gestellt werden. Der Datensatz enthält die Achsen der Fusswege, das heisst Trottoirs und wo nötig Strassen. Es werden alle für Fussgänger begehbaren Wege, Strassen oder Parkwege innerhalb und an der Peripherie von Wohngebieten aufgenommen, sofern sie relevant für Schulwege sind. In Parkanlagen wurden ausgewählte Wege erfasst. Oberste Priorität hat eine topologisch korrekte Aufnahme dieser Achsen. Die Daten wurden in Basel, Bettingen und Riehen erhoben."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100056)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100056`
+- **Title** `Schulwegsicherheit: Fusswege`
+- **Description** `Die Daten zur Schulwegsicherheit zeigen auf, wo Strassenübergänge für Kinder im Kindergarten- und Schulalter übersichtlich und einfach sind, bzw. wo erhöhte Anforderungen an das Überqueren der Strasse gestellt werden. Der Datensatz enthält die Achsen der Fusswege, das heisst Trottoirs und wo nötig Strassen. Es werden alle für Fussgänger begehbaren Wege, Strassen oder Parkwege innerhalb und an der Peripherie von Wohngebieten aufgenommen, sofern sie relevant für Schulwege sind. In Parkanlagen wurden ausgewählte Wege erfasst. Oberste Priorität hat eine topologisch korrekte Aufnahme dieser Achsen. Die Daten wurden in Basel, Bettingen und Riehen erhoben.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-12-02`
+- **Modified** `2025-08-28T14:18:25+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Öffentliche Ordnung und Sicherheit', 'Mobilität und Verkehr']`
+- **Keywords** `['Schulweg', 'Sicherheit', 'Kindergarten', 'Primarschule', 'Sekundarschule', 'Schüler', 'Schülerin', 'Unfall', 'Prävention', 'Fussweg', 'Strasse', 'Trottoir', 'Gehsteig', 'Querung', 'überqueren', 'Fussgängerstreifen']`
+- **Publisher** `Kantonspolizei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100056/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

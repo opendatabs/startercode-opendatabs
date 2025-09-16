@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100353 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100353.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100353"""
+TITLE = """Effektiver und erwarteter täglicher Gasverbrauch"""
+DESCRIPTION = """Dieser Datensatz beinhaltet den täglichen Gasverbrauch sowie den mittels eines Modells berechneten, anhand des Kalendertages und der Witterung zu erwartenden Gasverbrauch.<br>Der tägliche Gasverbrauch ergibt sich als Summe des stündlich ausgewiesenen Gasverbrauchs im OGD-Datensatz 'Gasverbrauch im Versorgungsgebiet der IWB' (<a href='https://data.bs.ch/explore/dataset/100304/'>https://data.bs.ch/explore/dataset/100304/</a>). <br><br> Für die Modellevaluierung wurde der Datensatz in drei Teile unterteilt. Der Trainingsdatensatz dient zum Trainieren des Modells, der Tesdatensatz zur Bewertung der Modellleistung. Der Prognosedatensatz enthält neue, unbekannte Daten zur Vorhersage durch das mit Training- und Testdaten trainierte Modell.<br><br>Mehr Informationen zu den gewonnenen Kentnissen findet man im Webartikel: <a href='https://charts.basleratlas.ch/energie/webartikel_gasverbrauch.html'>https://charts.basleratlas.ch/energie/webartikel_gasverbrauch.html</a><br><br>Der Code des Modells kann selber ausgeführt und weiterentwickelt werden. Hierfür wird Renku verwendet. Renku ist eine Plattform, die verschiedene Werkzeuge für reproduzierbare und kollaborative Datenanalyseprojekte bündelt: <a href='https://renkulab.io/projects/statabs/reproducible-research/erwarteter-gasverbrauch-basel-stadt'>https://renkulab.io/projects/statabs/reproducible-research/erwarteter-gasverbrauch-basel-stadt</a>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100353)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100353`
+- **Title** `Effektiver und erwarteter täglicher Gasverbrauch`
+- **Description** `Dieser Datensatz beinhaltet den täglichen Gasverbrauch sowie den mittels eines Modells berechneten, anhand des Kalendertages und der Witterung zu erwartenden Gasverbrauch.<br>Der tägliche Gasverbrauch ergibt sich als Summe des stündlich ausgewiesenen Gasverbrauchs im OGD-Datensatz "Gasverbrauch im Versorgungsgebiet der IWB" (<a href="https://data.bs.ch/explore/dataset/100304/">https://data.bs.ch/explore/dataset/100304/</a>). <br><br> Für die Modellevaluierung wurde der Datensatz in drei Teile unterteilt. Der Trainingsdatensatz dient zum Trainieren des Modells, der Tesdatensatz zur Bewertung der Modellleistung. Der Prognosedatensatz enthält neue, unbekannte Daten zur Vorhersage durch das mit Training- und Testdaten trainierte Modell.<br><br>Mehr Informationen zu den gewonnenen Kentnissen findet man im Webartikel: <a href="https://charts.basleratlas.ch/energie/webartikel_gasverbrauch.html">https://charts.basleratlas.ch/energie/webartikel_gasverbrauch.html</a><br><br>Der Code des Modells kann selber ausgeführt und weiterentwickelt werden. Hierfür wird Renku verwendet. Renku ist eine Plattform, die verschiedene Werkzeuge für reproduzierbare und kollaborative Datenanalyseprojekte bündelt: <a href="https://renkulab.io/projects/statabs/reproducible-research/erwarteter-gasverbrauch-basel-stadt">https://renkulab.io/projects/statabs/reproducible-research/erwarteter-gasverbrauch-basel-stadt</a>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-03-15`
+- **Modified** `2025-09-14T13:15:28+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Energie']`
+- **Keywords** `['Strom', 'Stadtlast', 'Netzlast', 'Elektrizität', 'Gas', 'Wärme', 'Watt', 'Kilowattstunden', 'Gigawattstunden', 'Gasverbrauch', 'IWB']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100353/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

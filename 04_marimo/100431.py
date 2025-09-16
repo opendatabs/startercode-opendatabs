@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100431 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100431.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100431"""
+TITLE = """Kantonale Partizipationsvorhaben"""
+DESCRIPTION = """Entwicklungen im Quartier und in der Stadt haben einen direkten Einfluss auf das Lebensumfeld der Bevölkerung. Die Identifikation der Bevölkerung mit Plätzen, Einrichtungen und Angeboten in der Stadt führt zu Interesse und Anspruch der Teilhabe und Teilnahme an Entwicklungsprozessen. Gemäss § 55 der Kantonsverfassung vom 23. März 2005 und dem Partizipationsgesetz von Basel-Stadt, soll die Quartierbevölkerung von den Behörden partizipativ in die Entwicklungsprozesse einbezogen werden, welche sie besonders betreffen, in räumlicher Nähe liegen oder bedeutende Auswirkungen auf das Zusammenleben im Quartier und den öffentlichen Raum haben."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100431)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100431`
+- **Title** `Kantonale Partizipationsvorhaben`
+- **Description** `Entwicklungen im Quartier und in der Stadt haben einen direkten Einfluss auf das Lebensumfeld der Bevölkerung. Die Identifikation der Bevölkerung mit Plätzen, Einrichtungen und Angeboten in der Stadt führt zu Interesse und Anspruch der Teilhabe und Teilnahme an Entwicklungsprozessen. Gemäss § 55 der Kantonsverfassung vom 23. März 2005 und dem Partizipationsgesetz von Basel-Stadt, soll die Quartierbevölkerung von den Behörden partizipativ in die Entwicklungsprozesse einbezogen werden, welche sie besonders betreffen, in räumlicher Nähe liegen oder bedeutende Auswirkungen auf das Zusammenleben im Quartier und den öffentlichen Raum haben.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-03-24`
+- **Modified** `2025-09-01T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bevölkerung', 'Gesellschaft', 'Kultur']`
+- **Keywords** `['Partizipation', 'Quartierentwicklung', 'Projekte']`
+- **Publisher** `Kantons- und Stadtentwicklung`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100431/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

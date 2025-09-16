@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100138 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100138.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100138"""
+TITLE = """Wanderungen (Zuzug, Wegzug und Umzug) Kanton Basel-Stadt"""
+DESCRIPTION = """Dieser Datensatz zeigt die Anzahl Personen, die in den Kanton Basel-Stadt zuwanderten (Zuzug), aus dem Kanton Basel-Stadt abwanderten (Wegzug) oder innerhalb des Kantons umzogen (Umzug) nach Datum, Staatsangehörigkeit, Geschlecht, Alter und Detailangaben zum Zuzugs- und Wegzugsort.<br>Die Wanderungsbewegungen sind seit 1985 verfügbar. Detailangaben der Zuzugs- und Wegzugsorte (Gemeinde, Kanton, Land) sind seit 2006 verfügbar.<br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Wanderungsereignisse während vier Monaten gesammelt, danach gelten die Zahlen als definitiv. Später eintreffende Meldungen werden im letzten noch nicht abgeschlossenen Monat gezählt. In diesem Datensatz werden sie im Monat des Wanderungsereignisses gezählt."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100138)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100138`
+- **Title** `Wanderungen (Zuzug, Wegzug und Umzug) Kanton Basel-Stadt`
+- **Description** `Dieser Datensatz zeigt die Anzahl Personen, die in den Kanton Basel-Stadt zuwanderten (Zuzug), aus dem Kanton Basel-Stadt abwanderten (Wegzug) oder innerhalb des Kantons umzogen (Umzug) nach Datum, Staatsangehörigkeit, Geschlecht, Alter und Detailangaben zum Zuzugs- und Wegzugsort.<br>Die Wanderungsbewegungen sind seit 1985 verfügbar. Detailangaben der Zuzugs- und Wegzugsorte (Gemeinde, Kanton, Land) sind seit 2006 verfügbar.<br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Wanderungsereignisse während vier Monaten gesammelt, danach gelten die Zahlen als definitiv. Später eintreffende Meldungen werden im letzten noch nicht abgeschlossenen Monat gezählt. In diesem Datensatz werden sie im Monat des Wanderungsereignisses gezählt.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-01-27`
+- **Modified** `2025-09-16T01:41:14+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bevölkerung']`
+- **Keywords** `['Zuzug', 'Immigration', 'Alter', 'Bevölkerungsbestand', 'Geschlecht', 'Wegzug', 'Staatsangehörigkeit', 'Umzug', 'Wanderungen']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100138/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

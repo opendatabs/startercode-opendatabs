@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100134 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100134.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100134"""
+TITLE = """Coronavirus (Covid-19): Teststellen"""
+DESCRIPTION = """<p>Eine Übersicht der Standorte, an welchen sich die Bevölkerung während der Corona-Pandemie auf SARS-CoV-2 testen lassen konnte. Für Kinder werden von gewissen Teststellen zusätzlich zum Abstrich im Rachenbereich alternative Testmethoden angeboten. </p><p><b>Der Datensatz wurde vom Gesundheitsdepartement aktuell gehalten. Dieser wird seit 8. März 2023 nicht mehr aktualisiert. Man kann sich weiterhin bei einzelnen Arztpraxen und Institutionen testen lassen.</b></p><p>Weitere Informationen zum Coronavirus in Basel-Stadt sind hier zu finden: <a href='https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co' target='_blank'>https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100134)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100134`
+- **Title** `Coronavirus (Covid-19): Teststellen`
+- **Description** `<p>Eine Übersicht der Standorte, an welchen sich die Bevölkerung während der Corona-Pandemie auf SARS-CoV-2 testen lassen konnte. Für Kinder werden von gewissen Teststellen zusätzlich zum Abstrich im Rachenbereich alternative Testmethoden angeboten. </p><p><b>Der Datensatz wurde vom Gesundheitsdepartement aktuell gehalten. Dieser wird seit 8. März 2023 nicht mehr aktualisiert. Man kann sich weiterhin bei einzelnen Arztpraxen und Institutionen testen lassen.</b></p><p>Weitere Informationen zum Coronavirus in Basel-Stadt sind hier zu finden: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-06-06`
+- **Modified** `2024-10-08T11:28:36+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Corona', 'COVID-19', 'Spital', 'Krankheit', 'Coronavirus', 'Virus', 'Pandemie', 'Test', 'Lungenentzündung']`
+- **Publisher** `Medizinische Dienste`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100134/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100302 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100302.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,20 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100302"""
+TITLE = """Abwassermonitoring: Influenza und RSV"""
+DESCRIPTION = """<p><b>Figur<br></b><span>Der Datensatz zeigt den 7-Tage-Median der RNA-Kopien des angegebenen Virus jeweils pro Tag und 100‘000 Personen im Abwasser der Abwasserreinigungs-Anlage (ARA) Basel sowie den 7-Tage-Median der entsprechenden Fallzahlen. Der Datensatz wird i.d.R. jeweils dienstags mit den Daten bis vorangegangenem Sonntag aktualisiert. In einzelnen Wochen kann es zu Verschiebungen kommen.</span></p><p><span style='font-weight: bolder;'>Messung<br></span>Die ProRheno AG (Betreiber der ARA Basel) entnimmt jeweils eine 24h-Probe des Rohabwassers, welche durch das Kantonale Laboratorium Basel-Stadt (KL BS) auf RNA der angegebenen Viren untersucht wird. Die Messmethodik wurde dabei seit Beginn des Monitorings nicht verändert: siehe Publikation <a href='https://smw.ch/index.php/smw/article/view/3226' target='_blank'>https://smw.ch/index.php/smw/article/view/3226</a>. Die Plausibilität der Werte wird laufend anhand interner Qualitätsparameter überprüft. Das Untersuchungsgebiet umfasst das Einzugsgebiet der ARA Basel, welches sich hauptsächlich aus dem Kanton Basel-Stadt sowie den Gemeinden Allschwil, Binningen, Birsfelden, Bottmingen, Oberwil und Schönenbuch (alle Kanton Baselland) zusammensetzt. Bis Ende Juni 2023 wurden die Messwerte des KL BS auch auf dem Abwasser-Dashboard des BAG <a href='https://www.covid19.admin.ch/de/epidemiologic/waste-water?wasteWaterFacility=270101' target='_blank'>Covid-⁠19 Schweiz | Coronavirus | Dashboard (https://www.covid19.admin.ch/de/epidemiologic/waste-water?wasteWaterFacility=270101)</a> dargestellt. Ab Juli 2023 werden auf dieser Seite die Messwerte der EAWAG <a href='https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/' target='_blank'>SARS-CoV2 im Abwasser - Eawag</a> (<a href='https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/' target='_blank'>https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/</a>) publiziert, welche ebenfalls das Rohabwasser der ARA Basel untersucht. Die vom KL BS und der EAWAG verwendeten Untersuchungsmethoden sind sehr ähnlich aber nicht identisch.</p><p><span style='font-size:11.0pt;font-family:'Arial',sans-serif;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+DE-CH;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'>In den Zeiträumen
+29.4. bis 1.8.2022 (ausser 1.6.2022 und 5.6.2022) und 30.5.2023 bis 3.9.2023
+wurden keine Abwasserproben auf Influenza und RSV untersucht.</span><br></p><p><b>Fallzahlen <br></b>Die Fallzahlen entsprechen der Anzahl der bestätigten und dem Kanton gemeldeten Fälle der dargestellten Infektionen im Einzugsgebiet der ARA Basel.<br></p><p><b>Interpretation der Kurven<br></b><span'>Beim Monitoring von Viren im Abwasser geht es in erster Linie darum, Trends zu erkennen (insbesondere natürlich die Zunahme eines zirkulierenden Virus). Es ist nicht möglich, daraus eine bestimmte Fallzahl oder den Schweregrad einer Infektion abzuleiten. Ein Vergleich des Kurvenausschlags (Höhe der Peaks) zu verschiedenen Zeitpunkten ist kaum möglich, da z.B. unterschiedliche Virusvarianten zu unterschiedlichen Virusmengen pro Fall führen. Unterschiedliche Virusvarianten können auch die Symptomatik beeinflussen, so dass z.B. Infektionen bei Menschen spurlos verlaufen, aber dennoch Viren ins Abwasser abgegeben werden.</span'></p>
+
+<div class='html_button btn-left'>
+    <a class='btn customButton large' href='https://data.bs.ch/pages/abwassermonitoring-dashboard/'>Hier gehts zum Dashboard</a>
+</div>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100302)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +114,28 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100302`
+- **Title** `Abwassermonitoring: Influenza und RSV`
+- **Description** `<p><b>Figur<br></b><span>Der Datensatz zeigt den 7-Tage-Median der RNA-Kopien des angegebenen Virus jeweils pro Tag und 100‘000 Personen im Abwasser der Abwasserreinigungs-Anlage (ARA) Basel sowie den 7-Tage-Median der entsprechenden Fallzahlen. Der Datensatz wird i.d.R. jeweils dienstags mit den Daten bis vorangegangenem Sonntag aktualisiert. In einzelnen Wochen kann es zu Verschiebungen kommen.</span></p><p><span style="font-weight: bolder;">Messung<br></span>Die ProRheno AG (Betreiber der ARA Basel) entnimmt jeweils eine 24h-Probe des Rohabwassers, welche durch das Kantonale Laboratorium Basel-Stadt (KL BS) auf RNA der angegebenen Viren untersucht wird. Die Messmethodik wurde dabei seit Beginn des Monitorings nicht verändert: siehe Publikation <a href="https://smw.ch/index.php/smw/article/view/3226" target="_blank">https://smw.ch/index.php/smw/article/view/3226</a>. Die Plausibilität der Werte wird laufend anhand interner Qualitätsparameter überprüft. Das Untersuchungsgebiet umfasst das Einzugsgebiet der ARA Basel, welches sich hauptsächlich aus dem Kanton Basel-Stadt sowie den Gemeinden Allschwil, Binningen, Birsfelden, Bottmingen, Oberwil und Schönenbuch (alle Kanton Baselland) zusammensetzt. Bis Ende Juni 2023 wurden die Messwerte des KL BS auch auf dem Abwasser-Dashboard des BAG <a href="https://www.covid19.admin.ch/de/epidemiologic/waste-water?wasteWaterFacility=270101" target="_blank">Covid-⁠19 Schweiz | Coronavirus | Dashboard (https://www.covid19.admin.ch/de/epidemiologic/waste-water?wasteWaterFacility=270101)</a> dargestellt. Ab Juli 2023 werden auf dieser Seite die Messwerte der EAWAG <a href="https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/" target="_blank">SARS-CoV2 im Abwasser - Eawag</a> (<a href="https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/" target="_blank">https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/</a>) publiziert, welche ebenfalls das Rohabwasser der ARA Basel untersucht. Die vom KL BS und der EAWAG verwendeten Untersuchungsmethoden sind sehr ähnlich aber nicht identisch.</p><p><span style='font-size:11.0pt;font-family:"Arial",sans-serif;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
+DE-CH;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'>In den Zeiträumen
+29.4. bis 1.8.2022 (ausser 1.6.2022 und 5.6.2022) und 30.5.2023 bis 3.9.2023
+wurden keine Abwasserproben auf Influenza und RSV untersucht.</span><br></p><p><b>Fallzahlen <br></b>Die Fallzahlen entsprechen der Anzahl der bestätigten und dem Kanton gemeldeten Fälle der dargestellten Infektionen im Einzugsgebiet der ARA Basel.<br></p><p><b>Interpretation der Kurven<br></b><span">Beim Monitoring von Viren im Abwasser geht es in erster Linie darum, Trends zu erkennen (insbesondere natürlich die Zunahme eines zirkulierenden Virus). Es ist nicht möglich, daraus eine bestimmte Fallzahl oder den Schweregrad einer Infektion abzuleiten. Ein Vergleich des Kurvenausschlags (Höhe der Peaks) zu verschiedenen Zeitpunkten ist kaum möglich, da z.B. unterschiedliche Virusvarianten zu unterschiedlichen Virusmengen pro Fall führen. Unterschiedliche Virusvarianten können auch die Symptomatik beeinflussen, so dass z.B. Infektionen bei Menschen spurlos verlaufen, aber dennoch Viren ins Abwasser abgegeben werden.</span"></p>
+
+<div class="html_button btn-left">
+    <a class="btn customButton large" href="https://data.bs.ch/pages/abwassermonitoring-dashboard/">Hier gehts zum Dashboard</a>
+</div>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-12-19`
+- **Modified** `2025-09-15T17:01:06+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2023-08-13T22:00:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Abwasser', 'Influenza', 'RSV', 'Kanalisation', 'Krankheit', 'Kläranlage', 'Grippe']`
+- **Publisher** `Kantonales Laboratorium`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +161,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100302/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

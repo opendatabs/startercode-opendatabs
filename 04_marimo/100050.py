@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100050 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100050.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100050"""
+TITLE = """Luftqualität Station Feldbergstrasse"""
+DESCRIPTION = """<p>Standortbeschreibung: Die Messstation befindet sich in Basel direkt an der Kreuzung Feldbergstrasse / Hammerstrasse. Sie liegt in einer schlecht durchlüfteten Strassenschlucht mit hohem Verkehrsaufkommen und oft stehendem Kolonnenverkehr. Die Station Basel Feldbergstrasse ist ein Ort mit sehr hoher lokaler Belastung innerhalb der Stadt Basel.</p><p>Lage: Stadtzentrum an Strasse, geschlossene Bebauung</p><p>Koordinaten: 2611747 / 1268491 bzw. N 47° 34.021 E 7° 35.684; 255 m ü. M.</p><p>Geografische Lage: Juranordfuss</p><p>Siedlungsgrösse: 166'600 Einwohner</p><p>Verkehr, DTV (% LKW): 21'900 (3%)</p><p>Strassenabstand: 2 m</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100050)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100050`
+- **Title** `Luftqualität Station Feldbergstrasse`
+- **Description** `<p>Standortbeschreibung: Die Messstation befindet sich in Basel direkt an der Kreuzung Feldbergstrasse / Hammerstrasse. Sie liegt in einer schlecht durchlüfteten Strassenschlucht mit hohem Verkehrsaufkommen und oft stehendem Kolonnenverkehr. Die Station Basel Feldbergstrasse ist ein Ort mit sehr hoher lokaler Belastung innerhalb der Stadt Basel.</p><p>Lage: Stadtzentrum an Strasse, geschlossene Bebauung</p><p>Koordinaten: 2611747 / 1268491 bzw. N 47° 34.021 E 7° 35.684; 255 m ü. M.</p><p>Geografische Lage: Juranordfuss</p><p>Siedlungsgrösse: 166'600 Einwohner</p><p>Verkehr, DTV (% LKW): 21'900 (3%)</p><p>Strassenabstand: 2 m</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2025-09-16T08:16:28+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1999-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-14T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt', 'Gesundheit', 'Tourismus']`
+- **Keywords** `['Luft', 'Feinstaub', 'Stickstoffdioxid', 'Stickoxid', 'NO2', 'NOX', 'Motorräder', 'Echtzeit', 'Realtime']`
+- **Publisher** `Lufthygieneamt beider Basel`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100050/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

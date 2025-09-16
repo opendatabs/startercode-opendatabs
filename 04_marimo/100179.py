@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100179 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100179.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100179"""
+TITLE = """Temperatur Grundwasser"""
+DESCRIPTION = """<p>Der Datensatz enthält die Grundwassertemparturen in °C des kantonalen Grundwassermessnetzes. Es weist zur Zeit um die 80 Messstationen auf. Bei den Stationen, die mit einer Datenfernübertragung ausgerüstet sind, liegen tagesaktuelle Stundenwerte vor.</p><p>Jede Messstation ist mit der Katasternummer gemäss Bohrkataster des Kantons Basel-Stadt versehen (<a href='https://data.bs.ch/explore/dataset/100182/' target='_blank'>https://data.bs.ch/explore/dataset/100182/</a>). Die Bohrungen sind auch auf MapBS unter dem Thema Geologie abrufbar (<a href='http://www.geo.bs.ch/bohrkataster' target='_blank'>www.geo.bs.ch/bohrkataster</a>).</p><p>Weitere Informationen: <a href='https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser' target='_blank'>https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100179)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100179`
+- **Title** `Temperatur Grundwasser`
+- **Description** `<p>Der Datensatz enthält die Grundwassertemparturen in °C des kantonalen Grundwassermessnetzes. Es weist zur Zeit um die 80 Messstationen auf. Bei den Stationen, die mit einer Datenfernübertragung ausgerüstet sind, liegen tagesaktuelle Stundenwerte vor.</p><p>Jede Messstation ist mit der Katasternummer gemäss Bohrkataster des Kantons Basel-Stadt versehen (<a href="https://data.bs.ch/explore/dataset/100182/" target="_blank">https://data.bs.ch/explore/dataset/100182/</a>). Die Bohrungen sind auch auf MapBS unter dem Thema Geologie abrufbar (<a href="http://www.geo.bs.ch/bohrkataster" target="_blank">www.geo.bs.ch/bohrkataster</a>).</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser" target="_blank">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-07-11`
+- **Modified** `2025-09-16T05:25:41+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1982-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-13T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Wasser', 'Temperatur', 'Grundwasser', 'Wassertemperatur']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100179/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

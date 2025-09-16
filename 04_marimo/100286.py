@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100286 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100286.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100286"""
+TITLE = """Standorte der Smiley-Geschwindigkeitsanzeigen"""
+DESCRIPTION = """Die Smiley-Geschwindigkeitsanzeigen dienen der Kantonspolizei Basel-Stadt zur Erhöhung der Verkehrssicherheit an der betreffenden Örtlichkeit. Die Wechselanzeige von der aktuell gefahrenen Geschwindigkeit und Smiley-Symbol (Lob oder Tadel) ohne Repression weist auf freundliche Weise auf ein allfälliges Fahrverhalten hin. Durch diese Selbstkontrolle soll das Fahrverhalten positiv beeinflusst, die vorgeschriebene Geschwindigkeit besser eingehalten und die Aufmerksamkeit der Verkehrsteilnehmenden erhöht werden. Mit den Geräten können zudem Verkehrsdaten anonym erfasst werden. Die Geschwindigkeitsanzeigen stehen nicht in einem Zusammenhang mit Ordnungsbussen oder einer strafrechtlichen Verfolgung."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100286)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100286`
+- **Title** `Standorte der Smiley-Geschwindigkeitsanzeigen`
+- **Description** `Die Smiley-Geschwindigkeitsanzeigen dienen der Kantonspolizei Basel-Stadt zur Erhöhung der Verkehrssicherheit an der betreffenden Örtlichkeit. Die Wechselanzeige von der aktuell gefahrenen Geschwindigkeit und Smiley-Symbol (Lob oder Tadel) ohne Repression weist auf freundliche Weise auf ein allfälliges Fahrverhalten hin. Durch diese Selbstkontrolle soll das Fahrverhalten positiv beeinflusst, die vorgeschriebene Geschwindigkeit besser eingehalten und die Aufmerksamkeit der Verkehrsteilnehmenden erhöht werden. Mit den Geräten können zudem Verkehrsdaten anonym erfasst werden. Die Geschwindigkeitsanzeigen stehen nicht in einem Zusammenhang mit Ordnungsbussen oder einer strafrechtlichen Verfolgung.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-04-06`
+- **Modified** `2025-09-01T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2021-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr', 'Öffentliche Ordnung und Sicherheit', 'Geographie']`
+- **Keywords** `['Strassenverkehrssicherheit', 'Geschwindigkeit']`
+- **Publisher** `Kantonspolizei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100286/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

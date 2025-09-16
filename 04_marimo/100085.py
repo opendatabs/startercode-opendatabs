@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100085 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100085.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,13 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100085"""
+TITLE = """Coronavirus (COVID-19): Ergänzte Fallzahlen ganze Schweiz"""
+DESCRIPTION = """<p>Dieser Datensatz bildet die Grundlage des Covid-19 Dashboards (<a href='https://data.bs.ch/pages/covid-19-dashboard/' target='_blank'>https://data.bs.ch/pages/covid-19-dashboard/</a>). Bitte verwenden Sie für Ihre Analysen nicht den vorliegenden Datensatz, sondern diesen: <a href='https://data.bs.ch/explore/dataset/100077/' target='_blank'>https://data.bs.ch/explore/dataset/100077/</a>.</p>
+<p>Zum Zweck der einfachen Visualisierung wurden Tage ohne gemeldete Fallzahlen mit den letzten gemeldeten Fallzahlen des entsprechenden Kantons aufgefüllt.</p><p><b>Hinweis:<br></b>Da seit dem 6. Mai 2024 keine Fallzahlen mehr von den Kantonen geliefert werden, wird dieser Datensatz nicht mehr aktualisiert.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100085)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +107,21 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100085`
+- **Title** `Coronavirus (COVID-19): Ergänzte Fallzahlen ganze Schweiz`
+- **Description** `<p>Dieser Datensatz bildet die Grundlage des Covid-19 Dashboards (<a href="https://data.bs.ch/pages/covid-19-dashboard/" target="_blank">https://data.bs.ch/pages/covid-19-dashboard/</a>). Bitte verwenden Sie für Ihre Analysen nicht den vorliegenden Datensatz, sondern diesen: <a href="https://data.bs.ch/explore/dataset/100077/" target="_blank">https://data.bs.ch/explore/dataset/100077/</a>.</p>
+<p>Zum Zweck der einfachen Visualisierung wurden Tage ohne gemeldete Fallzahlen mit den letzten gemeldeten Fallzahlen des entsprechenden Kantons aufgefüllt.</p><p><b>Hinweis:<br></b>Da seit dem 6. Mai 2024 keine Fallzahlen mehr von den Kantonen geliefert werden, wird dieser Datensatz nicht mehr aktualisiert.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-04-07`
+- **Modified** `2024-05-05T08:01:25+00:00`
+- **Rights** `None`
+- **Temporal_coverage_start_date** `2020-01-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-05-04T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['COVID-19', 'Coronavirus', 'Corona', 'Krankheit', 'Lungenentzündung']`
+- **Publisher** `Open Data Basel-Stadt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +147,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100085/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

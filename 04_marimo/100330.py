@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100330 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100330.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100330"""
+TITLE = """Handelsregister: Firmen mit Rechtsform und Standort"""
+DESCRIPTION = """<p>Dieser Datensatz umfasst die Firmen des Kantons Basel-Stadt, die im Handelsregister des Zefix (Zentraler Firmenindex) registriert sind. Das Zefix bildet das öffentlich zugängliche Angebot des Eidgenössischen Amtes für das Handelsregister (EHRA). Es stellt die Daten des Zentralregisters über verschiedene Zugänge wie die Zefix Webapplikation (<a href='https://www.zefix.admin.ch/' target='_blank'>https://www.zefix.admin.ch/</a>), die Zefix REST API (<a href='https://www.zefix.admin.ch/ZefixPublicREST/swagger-ui/index.html' target='_blank'>https://www.zefix.admin.ch/ZefixPublicREST/swagger-ui/index.html</a>), die Zefix Mobile App (<a href='https://www.zefixapp.ch' target='_blank'>https://www.zefixapp.ch</a>/) und als Linked Data in LINDAS (<a href='https://lindas.admin.ch/' target='_blank'>https://lindas.admin.ch/</a>, was hier verwendet wurde) über das Internet zur Verfügung. Über Zefix können die Daten sämtlicher im Handelsregister eingetragener Rechtseinheiten sowie die täglichen Handelsregisterpublikationen im SHAB (Schweizerischen Handelsamtsblatt, <a href='https://www.shab.ch/' target='_blank'>https://www.shab.ch/</a>) abgerufen werden. Der hier angebotene Datensatz beinhaltet tagesaktuelle Kerndaten der aktiven, im Handelsregister eingetragenen Rechtseinheiten, wie Firma/Name, Sitz und Domiziladresse.</p><p>LINDAS (Linked Data Service) fungiert in diesem Kontext als Plattform für die Vernetzung und den Zugriff auf diverse Datenquellen in der Schweiz, einschliesslich der Daten aus dem Zefix. Zur Gewinnung spezifischer Informationen über die im Kanton Basel-Stadt registrierten Unternehmen wird eine SPARQL-Abfrage verwendet. SPARQL, eine Abfragesprache für Daten im RDF-Format, ermöglicht den Zugriff auf detaillierte Datensätze über die Firmen aus dem LINDAS-Netzwerk. Die SPARQL-Abfrage kann unter einem bereitgestellten Link (<a href='https://s.zazuko.com/2WjT8iZ' target='_blank'>https://s.zazuko.com/2WjT8iZ</a>) aufgerufen werden. Die Abfrage wurde mithilfe der vorhandenen SPARQL-Abfrage von opendata.swiss (<a href='https://opendata.swiss/de/dataset/zefix-zentraler-firmenindex' target='_blank'>https://opendata.swiss/de/dataset/zefix-zentraler-firmenindex</a>) zum Zefix erweitert: <a href='https://github.com/opendatabs/data-processing/blob/master/zefix_handelsregister/etl.py' target='_blank'>https://github.com/opendatabs/data-processing/blob/master/zefix_handelsregister/etl.py</a></p><p>Diese Zefix-Daten und die der anderen Kantone werden von Open Data Basel-Stadt täglich aktualisiert und können unter folgendem HTTPS-Link heruntergeladen werden: <br><i>https://data-bs.ch/stata/zefix_handelsregister/all_cantons/companies_[Kantonskürzel].csv<br></i>Im Beispiel von Basel-Landschaft lautet der Link:<br><a href='https://data-bs.ch/stata/zefix_handelsregister/all_cantons/companies_BL.csv' target='_blank'>https://data-bs.ch/stata/zefix_handelsregister/all_cantons/companies_BL.csv </a><br></p><p>Der Datensatz enthält neben den Grundinformationen der Firmen auch erweiterte Spalten wie die Koordinaten der Unternehmen, die mithilfe der Betriebsadresse und von Nominatim (<a href='https://nominatim.org/' target='_blank'>https://nominatim.org/</a>) berechnet wurden. Nominatim ist ein Open-Source-Tool zur Geokodierung, das heisst, es wandelt Standortdaten wie Adressen oder Ortsnamen in geografische Koordinaten (Längen- und Breitengrade) um und umgekehrt.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100330)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100330`
+- **Title** `Handelsregister: Firmen mit Rechtsform und Standort`
+- **Description** `<p>Dieser Datensatz umfasst die Firmen des Kantons Basel-Stadt, die im Handelsregister des Zefix (Zentraler Firmenindex) registriert sind. Das Zefix bildet das öffentlich zugängliche Angebot des Eidgenössischen Amtes für das Handelsregister (EHRA). Es stellt die Daten des Zentralregisters über verschiedene Zugänge wie die Zefix Webapplikation (<a href="https://www.zefix.admin.ch/" target="_blank">https://www.zefix.admin.ch/</a>), die Zefix REST API (<a href="https://www.zefix.admin.ch/ZefixPublicREST/swagger-ui/index.html" target="_blank">https://www.zefix.admin.ch/ZefixPublicREST/swagger-ui/index.html</a>), die Zefix Mobile App (<a href="https://www.zefixapp.ch" target="_blank">https://www.zefixapp.ch</a>/) und als Linked Data in LINDAS (<a href="https://lindas.admin.ch/" target="_blank">https://lindas.admin.ch/</a>, was hier verwendet wurde) über das Internet zur Verfügung. Über Zefix können die Daten sämtlicher im Handelsregister eingetragener Rechtseinheiten sowie die täglichen Handelsregisterpublikationen im SHAB (Schweizerischen Handelsamtsblatt, <a href="https://www.shab.ch/" target="_blank">https://www.shab.ch/</a>) abgerufen werden. Der hier angebotene Datensatz beinhaltet tagesaktuelle Kerndaten der aktiven, im Handelsregister eingetragenen Rechtseinheiten, wie Firma/Name, Sitz und Domiziladresse.</p><p>LINDAS (Linked Data Service) fungiert in diesem Kontext als Plattform für die Vernetzung und den Zugriff auf diverse Datenquellen in der Schweiz, einschliesslich der Daten aus dem Zefix. Zur Gewinnung spezifischer Informationen über die im Kanton Basel-Stadt registrierten Unternehmen wird eine SPARQL-Abfrage verwendet. SPARQL, eine Abfragesprache für Daten im RDF-Format, ermöglicht den Zugriff auf detaillierte Datensätze über die Firmen aus dem LINDAS-Netzwerk. Die SPARQL-Abfrage kann unter einem bereitgestellten Link (<a href="https://s.zazuko.com/2WjT8iZ" target="_blank">https://s.zazuko.com/2WjT8iZ</a>) aufgerufen werden. Die Abfrage wurde mithilfe der vorhandenen SPARQL-Abfrage von opendata.swiss (<a href="https://opendata.swiss/de/dataset/zefix-zentraler-firmenindex" target="_blank">https://opendata.swiss/de/dataset/zefix-zentraler-firmenindex</a>) zum Zefix erweitert: <a href="https://github.com/opendatabs/data-processing/blob/master/zefix_handelsregister/etl.py" target="_blank">https://github.com/opendatabs/data-processing/blob/master/zefix_handelsregister/etl.py</a></p><p>Diese Zefix-Daten und die der anderen Kantone werden von Open Data Basel-Stadt täglich aktualisiert und können unter folgendem HTTPS-Link heruntergeladen werden: <br><i>https://data-bs.ch/stata/zefix_handelsregister/all_cantons/companies_[Kantonskürzel].csv<br></i>Im Beispiel von Basel-Landschaft lautet der Link:<br><a href="https://data-bs.ch/stata/zefix_handelsregister/all_cantons/companies_BL.csv" target="_blank">https://data-bs.ch/stata/zefix_handelsregister/all_cantons/companies_BL.csv </a><br></p><p>Der Datensatz enthält neben den Grundinformationen der Firmen auch erweiterte Spalten wie die Koordinaten der Unternehmen, die mithilfe der Betriebsadresse und von Nominatim (<a href="https://nominatim.org/" target="_blank">https://nominatim.org/</a>) berechnet wurden. Nominatim ist ein Open-Source-Tool zur Geokodierung, das heisst, es wandelt Standortdaten wie Adressen oder Ortsnamen in geografische Koordinaten (Längen- und Breitengrade) um und umgekehrt.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-01-18`
+- **Modified** `2025-09-12T00:11:51+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Industrie, Dienstleistungen', 'Volkswirtschaft']`
+- **Keywords** `['Handelsregister', 'Zefix', 'Unternehmen', 'Betrieb', 'Betriebe', 'Aktiengesellschaft', 'Einzelunternehmen', 'Genossenschaft', 'GMBH', 'Kollektivgesellschaft', 'Stiftung', 'Verein']`
+- **Publisher** `Open Data Basel-Stadt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100330/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

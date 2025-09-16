@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100046 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100046.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100046"""
+TITLE = """Rheinmesswerte kontinuierlich"""
+DESCRIPTION = """<p>Kontinuierlich gemessene Parameter der <a href='https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues' target='_blank'>Rheinüberwachungsstation Weil am Rhein</a> (RUES), jeweils gemittelt über 15 Minuten. Werte werden alle 15 Minuten wie von den Sensoren gemessen als Rohdaten publiziert. Jährlich werden die Daten manuell plausibilisiert und als Stundenwerte veröffentlicht. </p><p>Standort: Rheinkilometer 171.37km</p><p>Koordinaten: <a href='https://www.google.ch/maps/place/47%C2%B036'04.7%22N+7%C2%B035'41.5%22E' target='_blank'>E 7.594868 N 47.601299</a> bzw. E 7° 35‘ 39.55“ N 47° 36‘ 4.68“ bzw. 611740 / 272310</p><p>Träger: Schweizerische Eidgenossenschaft; Bundesamt für Umwelt (BAFU), Land Baden-Württemberg; Ministerium für Umwelt, Klima und Energiewirtschaft / Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg (LUBW)</p><p>Messbetrieb / Unterhalt: <a href='https://www.bs.ch/wsu/aue' target='_blank'>Amt für Umwelt und Energie Basel-Stadt (AUE-BS)</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100046)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100046`
+- **Title** `Rheinmesswerte kontinuierlich`
+- **Description** `<p>Kontinuierlich gemessene Parameter der <a href="https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues" target="_blank">Rheinüberwachungsstation Weil am Rhein</a> (RUES), jeweils gemittelt über 15 Minuten. Werte werden alle 15 Minuten wie von den Sensoren gemessen als Rohdaten publiziert. Jährlich werden die Daten manuell plausibilisiert und als Stundenwerte veröffentlicht. </p><p>Standort: Rheinkilometer 171.37km</p><p>Koordinaten: <a href="https://www.google.ch/maps/place/47%C2%B036'04.7%22N+7%C2%B035'41.5%22E" target="_blank">E 7.594868 N 47.601299</a> bzw. E 7° 35‘ 39.55“ N 47° 36‘ 4.68“ bzw. 611740 / 272310</p><p>Träger: Schweizerische Eidgenossenschaft; Bundesamt für Umwelt (BAFU), Land Baden-Württemberg; Ministerium für Umwelt, Klima und Energiewirtschaft / Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg (LUBW)</p><p>Messbetrieb / Unterhalt: <a href="https://www.bs.ch/wsu/aue" target="_blank">Amt für Umwelt und Energie Basel-Stadt (AUE-BS)</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-05`
+- **Modified** `2025-09-16T09:00:39+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `1899-12-28T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-14T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Rhein', 'Temperatur', 'pH-Wert', 'Elektrische Leitfähigkeit', 'Sauerstoffgehalt', 'O2-Gehalt', 'Wassertemperatur']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100046/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

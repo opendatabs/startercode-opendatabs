@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100250 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100250.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,13 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100250"""
+TITLE = """Strassen und Wege: Strassentypen und Wege"""
+DESCRIPTION = """Dieser Datensatz ist Teil des kantonalen Geodatenmodells des Kantons Basel-Stadt 'Strassen und Wege' und stellt die Strassentypen und Wege dar. <br>Weitere Daten zu 'Strassen und Wege': <a href='https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege'> https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege</a><br>
+Die Strassentypen und Wege zeigen die Strassentypen (nach VSS - Schweizerischer Verband der Strassen- und Verkehrsfachleute) und Wege im Kanton Basel-Stadt. Darunter fallen verkehrsorientierte Strassen, siedlungsorientierte Strassen und Wege im Kanton."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100250)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +107,21 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100250`
+- **Title** `Strassen und Wege: Strassentypen und Wege`
+- **Description** `Dieser Datensatz ist Teil des kantonalen Geodatenmodells des Kantons Basel-Stadt "Strassen und Wege" und stellt die Strassentypen und Wege dar. <br>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege"> https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege</a><br>
+Die Strassentypen und Wege zeigen die Strassentypen (nach VSS - Schweizerischer Verband der Strassen- und Verkehrsfachleute) und Wege im Kanton Basel-Stadt. Darunter fallen verkehrsorientierte Strassen, siedlungsorientierte Strassen und Wege im Kanton.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-12-23`
+- **Modified** `2024-10-31T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Geographie', 'Mobilität und Verkehr']`
+- **Keywords** `['Weg', 'Mobilität', 'Strassennetz', 'Strasse', 'Wegnetz']`
+- **Publisher** `Amt für Mobilität`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +147,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100250/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

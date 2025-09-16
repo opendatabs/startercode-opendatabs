@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100288 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100288.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,14 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100288"""
+TITLE = """Sauberkeitsindex pro Monat und Strassenabschnitt"""
+DESCRIPTION = """<p class=''>Dieser Datensatz enthält den Sauberkeitsindex für alle Strassenabschnitte in der Stadt Basel. Zur Berechnung des Sauberkeitsindex wird wie folgt vorgegangen:</p><p>Auf den Kehrrichtfahrzeugen sind Kameras installiert, die während der Einsätze Videoaufnahmen der Strassen machen. Ein Computer durchsucht anschliessend diese Videoaufnahmen nach Abfällen. Dieser sortiert die Abfälle in verschiedene Abfallkategorien (Zigarettenstummel, Papier, PET-Flaschen etc.) und zählt die Anzahl der gefundenen Abfälle jeder Kategorie. Zusätzlich wird für jede Abfallkategorie der Verschmutzungsgrad und der Störfaktor bestimmt. Daraus wird der Sauberkeitsindex berechnet. Danach werden die Videoaufnahmen aus Datenschutzgründen umgehend gelöscht.</p><p></p><p>Der Sauberkeitsindex wird auf einer Skala von 0 bis 5 angegeben, wobei die Werte folgendermassen beurteilt werden:<br><span style='font-family: inherit; font-size: 0.875rem;'>Kleiner als 3: schlecht<br></span><span style='font-family: inherit; font-size: 0.875rem;'>Zwischen 3 und 4: mittel<br></span><span style='font-family: inherit; font-size: 0.875rem;'>Grösser als 4: gut</span></p><p>
+Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für die gesamte Stadt von mindestens 4.5.
+</p><p></p><p></p><p></p><p class=''>Der Datensatz wird monatlich mit den Daten des Vormonats aktualisiert.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100288)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +108,22 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100288`
+- **Title** `Sauberkeitsindex pro Monat und Strassenabschnitt`
+- **Description** `<p class="">Dieser Datensatz enthält den Sauberkeitsindex für alle Strassenabschnitte in der Stadt Basel. Zur Berechnung des Sauberkeitsindex wird wie folgt vorgegangen:</p><p>Auf den Kehrrichtfahrzeugen sind Kameras installiert, die während der Einsätze Videoaufnahmen der Strassen machen. Ein Computer durchsucht anschliessend diese Videoaufnahmen nach Abfällen. Dieser sortiert die Abfälle in verschiedene Abfallkategorien (Zigarettenstummel, Papier, PET-Flaschen etc.) und zählt die Anzahl der gefundenen Abfälle jeder Kategorie. Zusätzlich wird für jede Abfallkategorie der Verschmutzungsgrad und der Störfaktor bestimmt. Daraus wird der Sauberkeitsindex berechnet. Danach werden die Videoaufnahmen aus Datenschutzgründen umgehend gelöscht.</p><p></p><p>Der Sauberkeitsindex wird auf einer Skala von 0 bis 5 angegeben, wobei die Werte folgendermassen beurteilt werden:<br><span style="font-family: inherit; font-size: 0.875rem;">Kleiner als 3: schlecht<br></span><span style="font-family: inherit; font-size: 0.875rem;">Zwischen 3 und 4: mittel<br></span><span style="font-family: inherit; font-size: 0.875rem;">Grösser als 4: gut</span></p><p>
+Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für die gesamte Stadt von mindestens 4.5.
+</p><p></p><p></p><p></p><p class="">Der Datensatz wird monatlich mit den Daten des Vormonats aktualisiert.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-07-15`
+- **Modified** `2025-09-01T07:02:10+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2024-02-06T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-08-30T22:00:00+00:00`
+- **Themes** `['Öffentliche Ordnung und Sicherheit', 'Raum und Umwelt', 'Bevölkerung']`
+- **Keywords** `['Sauberkeit', 'Kehrricht', 'Abfall', 'Reinigung', 'Stadtreinigung', 'Strassennetz', 'Stadthygiene', 'Verschmutzung', 'Müll']`
+- **Publisher** `Stadtreinigung`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +149,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100288/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

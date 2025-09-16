@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100365 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100365.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,21 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100365"""
+TITLE = """Staatsarchiv: Neuzugänge im öffentlichen Archivkatalog"""
+DESCRIPTION = """<p>Dieser Datensatz enthält die jährlich neu im Archivkatalog
+verzeichneten und öffentlich zugänglich gemachten Unterlagen (Akten, Pläne,
+Bilder, etc.). Diese sind damit im <a href='https://dls.staatsarchiv.bs.ch' target='_blank'>Digitalen Lesesaal</a> (https://dls.staatsarchiv.bs.ch) recherchierbar und
+können eingesehen werden. </p><p>Der Datensatz umfasst Informationen zum Inhalt der
+Unterlagen und deren Zeitraum, zur abliefernden Stelle, zum Umfang sowie zur
+Archivsignatur. </p><p>Er bildet die laufende Erschliessungsarbeit des
+Staatsarchivs ab. Mit der Erschliessung wird der Entstehungszusammenhang der
+Unterlagen nachvollziehbar gemacht und ihre Auffindbarkeit ermöglicht. Zur
+Erschliessungsarbeit gehören das Ordnen der Unterlagen, das Verzeichnen im
+Online-Archivkatalog, Verpacken, Etikettieren und Magazinieren.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100365)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +115,29 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100365`
+- **Title** `Staatsarchiv: Neuzugänge im öffentlichen Archivkatalog`
+- **Description** `<p>Dieser Datensatz enthält die jährlich neu im Archivkatalog
+verzeichneten und öffentlich zugänglich gemachten Unterlagen (Akten, Pläne,
+Bilder, etc.). Diese sind damit im <a href="https://dls.staatsarchiv.bs.ch" target="_blank">Digitalen Lesesaal</a> (https://dls.staatsarchiv.bs.ch) recherchierbar und
+können eingesehen werden. </p><p>Der Datensatz umfasst Informationen zum Inhalt der
+Unterlagen und deren Zeitraum, zur abliefernden Stelle, zum Umfang sowie zur
+Archivsignatur. </p><p>Er bildet die laufende Erschliessungsarbeit des
+Staatsarchivs ab. Mit der Erschliessung wird der Entstehungszusammenhang der
+Unterlagen nachvollziehbar gemacht und ihre Auffindbarkeit ermöglicht. Zur
+Erschliessungsarbeit gehören das Ordnen der Unterlagen, das Verzeichnen im
+Online-Archivkatalog, Verpacken, Etikettieren und Magazinieren.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-06-19`
+- **Modified** `2025-04-28T07:47:44+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `2013-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Verwaltung', 'Kultur, Medien, Informationsgesellschaft, Sport']`
+- **Keywords** `['Archiv', 'Akten', 'Erschliessung', 'Unterlagen', 'Archivgesetz', 'Dokumente', 'Informationen', 'Geschichte', 'Sammlung', 'Privatarchiv', 'Hauptarchiv']`
+- **Publisher** `Staatsarchiv Basel-Stadt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +163,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100365/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

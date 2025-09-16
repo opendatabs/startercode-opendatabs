@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100445 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100445.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100445"""
+TITLE = """Hundebestand im Kanton Basel-Stadt seit 1970"""
+DESCRIPTION = """Dieser Datensatz zeigt die Anzahl der registrierten Hunde im Kanton Basel-Stadt seit 1970, aufgeschlüsselt nach den Gemeinden Basel, Riehen und Bettingen. Ab dem Jahr 2008 ist zusätzlich eine Aufschlüsselung nach den Wohnvierteln in Basel verfügbar.<br>Eine Sammlung aller OGD-Datensätze über Hunde finden Sie hier: <a href='https://data.bs.ch/explore/?refine.tags=hund'>https://data.bs.ch/explore/?refine.tags=hund</a><br>Weitere Informationen zu Tierbeständen im Kanton Basel-Stadt findet man im Statistikportal: <a href='https://statistik.bs.ch/suche?search={'query':'','filterTheme':'successor-16.2'}'>href='https://statistik.bs.ch/suche?search={'query':'','filterTheme':'successor-16.2'}</a>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100445)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100445`
+- **Title** `Hundebestand im Kanton Basel-Stadt seit 1970`
+- **Description** `Dieser Datensatz zeigt die Anzahl der registrierten Hunde im Kanton Basel-Stadt seit 1970, aufgeschlüsselt nach den Gemeinden Basel, Riehen und Bettingen. Ab dem Jahr 2008 ist zusätzlich eine Aufschlüsselung nach den Wohnvierteln in Basel verfügbar.<br>Eine Sammlung aller OGD-Datensätze über Hunde finden Sie hier: <a href="https://data.bs.ch/explore/?refine.tags=hund">https://data.bs.ch/explore/?refine.tags=hund</a><br>Weitere Informationen zu Tierbeständen im Kanton Basel-Stadt findet man im Statistikportal: <a href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}'>href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}</a>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-05-27`
+- **Modified** `2025-09-15T15:00:53+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport']`
+- **Keywords** `['Freizeit', 'Tiere', 'Hund']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100445/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

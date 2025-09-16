@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100165 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100165.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100165"""
+TITLE = """Steuerstatistik Basel-Stadt: Kennzahlen seit 1991 nach Gemeinde und Wohnviertel"""
+DESCRIPTION = """Zentrale Grössen der Steuerstatistik Basel-Stadt seit 1991 nach Gemeinde und Wohnviertel. Die Daten stammen aus den Steuerdaten der ordentlichen Veranlagung von ganzjährig in Basel-Stadt steuerpflichtigen Personen (ohne Auswärtige). Die Vermögenssteuer 2000 wurde zusammen mit der Einkommenssteuer 1999 bezogen. In der Steuerperiode 2000 sind nur Fälle mit Beginn der Steuerpflicht im Jahr 2000 aufgeführt, da die Vermögenssteuer 2001 wegen der Steuerharmonisierung erst zusammen mit der Einkommenssteuer 2001 bezogen worden ist."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100165)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100165`
+- **Title** `Steuerstatistik Basel-Stadt: Kennzahlen seit 1991 nach Gemeinde und Wohnviertel`
+- **Description** `Zentrale Grössen der Steuerstatistik Basel-Stadt seit 1991 nach Gemeinde und Wohnviertel. Die Daten stammen aus den Steuerdaten der ordentlichen Veranlagung von ganzjährig in Basel-Stadt steuerpflichtigen Personen (ohne Auswärtige). Die Vermögenssteuer 2000 wurde zusammen mit der Einkommenssteuer 1999 bezogen. In der Steuerperiode 2000 sind nur Fälle mit Beginn der Steuerpflicht im Jahr 2000 aufgeführt, da die Vermögenssteuer 2001 wegen der Steuerharmonisierung erst zusammen mit der Einkommenssteuer 2001 bezogen worden ist.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-08-17`
+- **Modified** `2025-04-28T07:47:18+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1990-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2020-12-31T23:00:00+00:00`
+- **Themes** `['Finanzen']`
+- **Keywords** `['Gemeinden', 'Zeitreihe', 'Steuern', 'Einkommen', 'Wohnviertel']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100165/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100066 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100066.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100066"""
+TITLE = """Umweltanalyse Oberflächengewässer"""
+DESCRIPTION = """<p>Der Datensatz enthält die Analysedaten der Beprobungen der Oberflächengewässer des Kantons Basel-Stadt seit dem Jahr 1993. Die Daten des Rheins sind hiervon ausgenommen. Es werden Konzentrationsangaben zu verschiedenen Inhalts- resp. Schadstoffen mit Bezug auf die einzelnen Fliessgewässer, sowie der geographischen Koordinaten gemacht.</p><p>Weitere Informationen: <a href='https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei' target='_blank'>https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100066)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100066`
+- **Title** `Umweltanalyse Oberflächengewässer`
+- **Description** `<p>Der Datensatz enthält die Analysedaten der Beprobungen der Oberflächengewässer des Kantons Basel-Stadt seit dem Jahr 1993. Die Daten des Rheins sind hiervon ausgenommen. Es werden Konzentrationsangaben zu verschiedenen Inhalts- resp. Schadstoffen mit Bezug auf die einzelnen Fliessgewässer, sowie der geographischen Koordinaten gemacht.</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei" target="_blank">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-04-06`
+- **Modified** `2025-09-16T06:08:07+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1993-08-23T22:00:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Rhein', 'Messwert', 'Wasserqualität', 'Fluss', 'Chemie', 'Rüs', 'Wassertemperatur']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100066/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

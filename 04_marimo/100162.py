@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100162 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100162.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100162"""
+TITLE = """Coronavirus (COVID-19): Geimpfte Personen mit Wohnsitz in Basel-Stadt"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt die SARS-CoV-2-Impfungen, welche an Personen mit Wohnsitz im Kanton Basel-Stadt verabreicht wurden nach Impfstatus. Unterschieden wird dabei auf oberster Ebene in teilweise geimpfte Personen, vollständig geimpfte Personen und Personen mit Auffrischimpfung. Die Definitionen dieser Einteilung finden Sie in den Spaltenbeschreibungen resp. im Datensatzschema. </p><p>Die Datenbasis bildet der Vaccination Monitoring Data Lake (VMDL) des BAG. Der Datensatz wird stündlich aktualisiert. </p><p>Anmerkung: Die geimpften Personen wohnen im Kanton Basel-Stadt, müssen aber nicht zwingend auch im Kanton Basel-Stadt geimpft worden sein. Aus diesem Grund unterscheiden sich die hier publizierten Zahlen auch von jenen im <a href='https://data.bs.ch/explore/dataset/100111/' target='_blank'>Datensatz mit den im Kanton Basel-Stadt verabreichten Impfungen</a>.</p><p>Methodische Hinweise:<br>Als vollständig geimpft gelten folgende Personen:</p><ul><li>Mindestens zwei Dosen einer Mehrdosisimpfung</li><li>Eine Dosis einer Einmaldosisimpfung</li><li>Genesene (positiver PCR-Test) und mindestens eine Dosis einer Einmal- oder einer Mehrdosisimpfung</li></ul><p>Als teilweise geimpft gelten folgende Personen:</p><ul><li>Erste Dosis einer Mehrdosisimpfung</li></ul><p>Als mit mindestens einer Dosis geimpft gelten folgende Personen:</p><ul><li>Mindestens eine Dosis einer Einmal- oder einer Mehrfachdosisimpfung</li></ul><p>Als Impfung aufgefrischt gelten folgende Personen:</p><ul><li>Mindestens dritte Dosis einer Mehrfachdosisimpfung nach abgeschlossener Grundimmunisierung durch Mehrdosisimpfung</li><li>Genesene (positiver PCR-Test) mit zweiter Dosis einer Mehrdosisimpfung</li><li>Erste Dosis einer Mehrdosisimpfung nach abgeschlossener Grundimmunisierung durch eine Einmaldosisimpfung</li></ul><p>Der Code für die Berechnung der verschiedenen Impftypen kann unter diesem Link eingesehen werden: <a href='https://github.com/opendatabs/data-processing/blob/master/bag_coronavirus/src/etl_vmdl_impftyp.py' target='_blank'>https://github.com/opendatabs/data-processing/blob/master/bag_coronavirus/src/etl_vmdl_impftyp.py</a><a href='https://github.com/opendatabs/data-processing/blob/master/bag_coronavirus/src/etl_vmdl_impftyp.py' target='_blank'></a></p><p>Die Meldepflicht der COVID-Impfungen via VMDL Plattform des Bundes wurde per 1. Juli 2023 aufgehoben. Nach diesem Datum wurden Impfungen deshalb nicht mehr systematisch erfasst. Der vorliegende Datensatz zeigt deshalb Impfungen nur bis 1. Juli 2023.<br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100162)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100162`
+- **Title** `Coronavirus (COVID-19): Geimpfte Personen mit Wohnsitz in Basel-Stadt`
+- **Description** `<p>Dieser Datensatz zeigt die SARS-CoV-2-Impfungen, welche an Personen mit Wohnsitz im Kanton Basel-Stadt verabreicht wurden nach Impfstatus. Unterschieden wird dabei auf oberster Ebene in teilweise geimpfte Personen, vollständig geimpfte Personen und Personen mit Auffrischimpfung. Die Definitionen dieser Einteilung finden Sie in den Spaltenbeschreibungen resp. im Datensatzschema. </p><p>Die Datenbasis bildet der Vaccination Monitoring Data Lake (VMDL) des BAG. Der Datensatz wird stündlich aktualisiert. </p><p>Anmerkung: Die geimpften Personen wohnen im Kanton Basel-Stadt, müssen aber nicht zwingend auch im Kanton Basel-Stadt geimpft worden sein. Aus diesem Grund unterscheiden sich die hier publizierten Zahlen auch von jenen im <a href="https://data.bs.ch/explore/dataset/100111/" target="_blank">Datensatz mit den im Kanton Basel-Stadt verabreichten Impfungen</a>.</p><p>Methodische Hinweise:<br>Als vollständig geimpft gelten folgende Personen:</p><ul><li>Mindestens zwei Dosen einer Mehrdosisimpfung</li><li>Eine Dosis einer Einmaldosisimpfung</li><li>Genesene (positiver PCR-Test) und mindestens eine Dosis einer Einmal- oder einer Mehrdosisimpfung</li></ul><p>Als teilweise geimpft gelten folgende Personen:</p><ul><li>Erste Dosis einer Mehrdosisimpfung</li></ul><p>Als mit mindestens einer Dosis geimpft gelten folgende Personen:</p><ul><li>Mindestens eine Dosis einer Einmal- oder einer Mehrfachdosisimpfung</li></ul><p>Als Impfung aufgefrischt gelten folgende Personen:</p><ul><li>Mindestens dritte Dosis einer Mehrfachdosisimpfung nach abgeschlossener Grundimmunisierung durch Mehrdosisimpfung</li><li>Genesene (positiver PCR-Test) mit zweiter Dosis einer Mehrdosisimpfung</li><li>Erste Dosis einer Mehrdosisimpfung nach abgeschlossener Grundimmunisierung durch eine Einmaldosisimpfung</li></ul><p>Der Code für die Berechnung der verschiedenen Impftypen kann unter diesem Link eingesehen werden: <a href="https://github.com/opendatabs/data-processing/blob/master/bag_coronavirus/src/etl_vmdl_impftyp.py" target="_blank">https://github.com/opendatabs/data-processing/blob/master/bag_coronavirus/src/etl_vmdl_impftyp.py</a><a href="https://github.com/opendatabs/data-processing/blob/master/bag_coronavirus/src/etl_vmdl_impftyp.py" target="_blank"></a></p><p>Die Meldepflicht der COVID-Impfungen via VMDL Plattform des Bundes wurde per 1. Juli 2023 aufgehoben. Nach diesem Datum wurden Impfungen deshalb nicht mehr systematisch erfasst. Der vorliegende Datensatz zeigt deshalb Impfungen nur bis 1. Juli 2023.<br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-11-30`
+- **Modified** `2024-01-04T08:34:36+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-12-27T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-06-30T22:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['SARS-CoV-2', 'Corona', 'Coronavirus', 'COVID-19', 'impfen', 'Impfung', 'Impftermin', 'Impfzentrum', 'Spital']`
+- **Publisher** `Medizinische Dienste`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100162/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

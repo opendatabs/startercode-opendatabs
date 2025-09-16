@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100113 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100113.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,16 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100113"""
+TITLE = """Feinstaubmessungen auf BVB-Trams"""
+DESCRIPTION = """<p>Der Datensatz zeigt die Feinstaubmessungen (PM2.5 und PM10) vom Dach der BVB-Trams, auf denen Mikrosensoren installiert worden sind. Ein Sensor war jeweils auf einem Tram des Typs 'Flexity lang' montiert, ausser die Sensoren 236 und 240, die zu Qualitätssicherungszwecken stationär an den Luftmessstationen 'Feldbergstrasse' und 'St. Johann-Platz' installiert waren.</p><p>
+
+Die Messkampagne startete im Dezember 2019 und endete im März 2020. Es werden nachträglich keine weiteren Messdaten dazukommen und der Datensatz wird nicht mehr aktualisiert.
+</p><p></p><p>
+Weitere Informationen zum Projekt Atmo-VISION sind in der <a href='https://www.bs.ch/medienmitteilungen/wsu/2020-atmovision-luftmessungen-auf-basler-tramlinien' target='_blank'>Medienmitteilung</a> und auf der Website des <a href='https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene/lufthygiene/luftqualitat/atmovision-projekte' target='_blank'>Lufthygieneamt beider Basel</a> zu finden. Den Bericht des Projektes gibt es <a href='https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene/lufthygiene/luftqualitat/atmovision-projekte/downloads-1/2020-11.pdf/@@download/file/2020-11-02_LHA_AtmoVision_Bericht_Feinstaubmesssungen_Tram.pdf' target='_blank'>hier</a> als PDF-Datei.</p><p>Änderungsprotokoll:<br>27.06.2023 - Aktualisierungsintervall von 'IRREG' auf 'NEVER' geändert.</p><p></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100113)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +110,24 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100113`
+- **Title** `Feinstaubmessungen auf BVB-Trams`
+- **Description** `<p>Der Datensatz zeigt die Feinstaubmessungen (PM2.5 und PM10) vom Dach der BVB-Trams, auf denen Mikrosensoren installiert worden sind. Ein Sensor war jeweils auf einem Tram des Typs "Flexity lang" montiert, ausser die Sensoren 236 und 240, die zu Qualitätssicherungszwecken stationär an den Luftmessstationen "Feldbergstrasse" und "St. Johann-Platz" installiert waren.</p><p>
+
+Die Messkampagne startete im Dezember 2019 und endete im März 2020. Es werden nachträglich keine weiteren Messdaten dazukommen und der Datensatz wird nicht mehr aktualisiert.
+</p><p></p><p>
+Weitere Informationen zum Projekt Atmo-VISION sind in der <a href="https://www.bs.ch/medienmitteilungen/wsu/2020-atmovision-luftmessungen-auf-basler-tramlinien" target="_blank">Medienmitteilung</a> und auf der Website des <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene/lufthygiene/luftqualitat/atmovision-projekte" target="_blank">Lufthygieneamt beider Basel</a> zu finden. Den Bericht des Projektes gibt es <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene/lufthygiene/luftqualitat/atmovision-projekte/downloads-1/2020-11.pdf/@@download/file/2020-11-02_LHA_AtmoVision_Bericht_Feinstaubmesssungen_Tram.pdf" target="_blank">hier</a> als PDF-Datei.</p><p>Änderungsprotokoll:<br>27.06.2023 - Aktualisierungsintervall von "IRREG" auf "NEVER" geändert.</p><p></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-02-10`
+- **Modified** `2021-02-10T16:50:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2019-11-29T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2020-03-23T23:00:00+00:00`
+- **Themes** `['Raum und Umwelt', 'Mobilität und Verkehr']`
+- **Keywords** `['Luftqualität', 'Feinstaub', 'PM10', 'PM2.5', 'BVB']`
+- **Publisher** `Lufthygieneamt beider Basel`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +153,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100113/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

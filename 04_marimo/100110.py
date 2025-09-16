@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100110 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100110.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100110"""
+TITLE = """Coronavirus (COVID-19): Reproduktionszahl (Re)"""
+DESCRIPTION = """<p>Geschätzte tägliche effektive Reproduktionszahl für die Schweiz, die Schweizer Grossregionen sowie die Schweizer Kantone. Die effektive Reproduktionszahl ist ein Mass dafür, wie viele Personen eine infizierte Person durchschnittlich ansteckt. Die Werte wurden täglich von der ETH Zürich berechnet. Die Originaldaten sind auf <a href='https://github.com/covid-19-Re/dailyRe-Data' target='_blank'>https://github.com/covid-19-Re/dailyRe-Data</a> sowie <a href='https://github.com/covid-19-Re/dailyRe-Data/blob/master/CHE-estimates.csv' target='_blank'>https://github.com/covid-19-Re/dailyRe-Data/blob/master/CHE-estimates.csv</a> verfügbar.</p><p>Die geschätzte effektive Reproduktionszahl bildet aufgrund der Infektionsdynamik (Inkubationszeit, Meldeverzug, etc.) schweizweit das Infektionsgeschehen erst mit einer zeitlichen Verzögerung von 10-13 Tagen ab. Auf kantonaler Ebene beträgt die zeitliche Verzögerung 14-17 Tage. </p><p>Weitere Informationen zur Interpretation der effektiven Reproduktionszahl finden sich bei der Swiss National COVID-19 Task Force: <a href='https://sciencetaskforce.ch/reproduktionszahl/' target='_blank'>https://sciencetaskforce.ch/reproduktionszahl/</a> </p><p>Details und Quellenangaben zur verwendeten Methodik finden sich auf dem COVID-19-Dashboard der ETH Zürich: <a href='https://ibz-shiny.ethz.ch/covid-19-re-international/' target='_blank'>https://ibz-shiny.ethz.ch/covid-19-re-international/</a> </p><div><br></div>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100110)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100110`
+- **Title** `Coronavirus (COVID-19): Reproduktionszahl (Re)`
+- **Description** `<p>Geschätzte tägliche effektive Reproduktionszahl für die Schweiz, die Schweizer Grossregionen sowie die Schweizer Kantone. Die effektive Reproduktionszahl ist ein Mass dafür, wie viele Personen eine infizierte Person durchschnittlich ansteckt. Die Werte wurden täglich von der ETH Zürich berechnet. Die Originaldaten sind auf <a href="https://github.com/covid-19-Re/dailyRe-Data" target="_blank">https://github.com/covid-19-Re/dailyRe-Data</a> sowie <a href="https://github.com/covid-19-Re/dailyRe-Data/blob/master/CHE-estimates.csv" target="_blank">https://github.com/covid-19-Re/dailyRe-Data/blob/master/CHE-estimates.csv</a> verfügbar.</p><p>Die geschätzte effektive Reproduktionszahl bildet aufgrund der Infektionsdynamik (Inkubationszeit, Meldeverzug, etc.) schweizweit das Infektionsgeschehen erst mit einer zeitlichen Verzögerung von 10-13 Tagen ab. Auf kantonaler Ebene beträgt die zeitliche Verzögerung 14-17 Tage. </p><p>Weitere Informationen zur Interpretation der effektiven Reproduktionszahl finden sich bei der Swiss National COVID-19 Task Force: <a href="https://sciencetaskforce.ch/reproduktionszahl/" target="_blank">https://sciencetaskforce.ch/reproduktionszahl/</a> </p><p>Details und Quellenangaben zur verwendeten Methodik finden sich auf dem COVID-19-Dashboard der ETH Zürich: <a href="https://ibz-shiny.ethz.ch/covid-19-re-international/" target="_blank">https://ibz-shiny.ethz.ch/covid-19-re-international/</a> </p><div><br></div>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-12-23`
+- **Modified** `2023-01-31T16:03:40+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `2020-05-23T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2022-12-15T23:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['Coronavirus', 'Reproduktionszahl', 'Re', 'R-Wert', 'Re-Wert', 'COVID-19', 'Corona', 'Krankheit', 'Lungenentzündung']`
+- **Publisher** `ETH Zurich, Department of Biosystems Science and Engineering`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100110/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

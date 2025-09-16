@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100040 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100040.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,17 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100040"""
+TITLE = """Statistische Raumeinheiten: Blöcke"""
+DESCRIPTION = """Ein Block wird in der Regel von allen Seiten durch Strassen begrenzt. In einzelnen Fällen wird die Abgrenzung durch Zonenplankategorien vorgegeben (Bahnareale, Wald, Grünzone, Landwirtschaftszone etc.).
+
+Statistische Nummerierung:
+Die Nummerierung der Blöcke setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr (im Label jeweils durch Punkte getrennt):
+- Blöcke haben keine Namensbezeichnung und werden lediglich über die Nummer referenziert.
+- Beispiel Block rund um die Clarakirche: BLO_ID 121014, die Bezeichnung (BLO_Label) lautet 12.1.014"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100040)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +111,25 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100040`
+- **Title** `Statistische Raumeinheiten: Blöcke`
+- **Description** `Ein Block wird in der Regel von allen Seiten durch Strassen begrenzt. In einzelnen Fällen wird die Abgrenzung durch Zonenplankategorien vorgegeben (Bahnareale, Wald, Grünzone, Landwirtschaftszone etc.).
+
+Statistische Nummerierung:
+Die Nummerierung der Blöcke setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr (im Label jeweils durch Punkte getrennt):
+- Blöcke haben keine Namensbezeichnung und werden lediglich über die Nummer referenziert.
+- Beispiel Block rund um die Clarakirche: BLO_ID 121014, die Bezeichnung (BLO_Label) lautet 12.1.014`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2023-05-02T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Geographie', 'Statistische Grundlagen']`
+- **Keywords** `['Statistik', 'Einteilung', 'Wohnblock']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +155,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100040/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

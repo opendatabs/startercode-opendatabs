@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100038 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100038.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100038"""
+TITLE = """Standorte der Zählstellen für Verkehrszähldaten"""
+DESCRIPTION = """Standorte der Dauerzählstellen für den motorisierten Individualverkehr (MIV) mit eigens für die Zählung installierten Induktionsschleifen und an den Induktionsschleifen von Lichtsignalanlagen (LSA). Zusätzlich die Standorte der Fussgänger- und Velozählstellen sowie der Kurzzeitzählstellen."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100038)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100038`
+- **Title** `Standorte der Zählstellen für Verkehrszähldaten`
+- **Description** `Standorte der Dauerzählstellen für den motorisierten Individualverkehr (MIV) mit eigens für die Zählung installierten Induktionsschleifen und an den Induktionsschleifen von Lichtsignalanlagen (LSA). Zusätzlich die Standorte der Fussgänger- und Velozählstellen sowie der Kurzzeitzählstellen.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2025-04-10T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1973-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-06-30T22:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr', 'Geographie']`
+- **Keywords** `['Auto', 'Velo', 'Fussgänger', 'Lastwagen', 'LKW', 'Anhänger']`
+- **Publisher** `Amt für Mobilität`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100038/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

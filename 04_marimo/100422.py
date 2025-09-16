@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100422 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100422.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,22 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100422"""
+TITLE = """Geteilte Mikromobilität nach Gemeinde und Tag"""
+DESCRIPTION = """<p>Der Datensatz zeigt die Verteilung von Fahrzeugen verschiedener Mikromobilitätsanbieter in Basel-Stadt, gegliedert nach Gemeinde und Tag. Er enthält verschiedene statistische Kennzahlen zur Anzahl der Fahrzeuge pro Gemeinde.</p>
+
+<p>Die Berechnung des Datensatzes basiert auf den Daten zur aktuellen Verfügbarkeit 
+<a href='https://data.bs.ch/explore/dataset/100415/' target='_blank'>https://data.bs.ch/explore/dataset/100415/</a>, 
+die alle 10 Minuten aktualisiert werden. Das heisst, es gibt maximal 
+<span style='font-weight: bold;'>24 × 6 = 144</span> 
+Messungen pro Tag für die Berechnung des Durchschnitts.</p>
+
+<p>Für die Gemeinden wird folgender Datensatz verwendet: <a href='https://data.bs.ch/explore/dataset/100017/' target='_blank'>https://data.bs.ch/explore/dataset/100017/</a></p>
+
+<p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href='https://data.bs.ch/explore/?refine.tags=mikromobilitaet' target='_blank'>https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100422)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +116,30 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100422`
+- **Title** `Geteilte Mikromobilität nach Gemeinde und Tag`
+- **Description** `<p>Der Datensatz zeigt die Verteilung von Fahrzeugen verschiedener Mikromobilitätsanbieter in Basel-Stadt, gegliedert nach Gemeinde und Tag. Er enthält verschiedene statistische Kennzahlen zur Anzahl der Fahrzeuge pro Gemeinde.</p>
+
+<p>Die Berechnung des Datensatzes basiert auf den Daten zur aktuellen Verfügbarkeit 
+<a href="https://data.bs.ch/explore/dataset/100415/" target="_blank">https://data.bs.ch/explore/dataset/100415/</a>, 
+die alle 10 Minuten aktualisiert werden. Das heisst, es gibt maximal 
+<span style="font-weight: bold;">24 × 6 = 144</span> 
+Messungen pro Tag für die Berechnung des Durchschnitts.</p>
+
+<p>Für die Gemeinden wird folgender Datensatz verwendet: <a href="https://data.bs.ch/explore/dataset/100017/" target="_blank">https://data.bs.ch/explore/dataset/100017/</a></p>
+
+<p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-05-12`
+- **Modified** `2025-09-16T04:02:35+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
+- **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'Shared', 'E-Mobility', 'Mobility', 'Veloverleih', 'Verkehr', 'Statistik']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +165,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100422/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

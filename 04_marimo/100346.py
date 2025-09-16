@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100346 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100346.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100346"""
+TITLE = """Kennzahlen der Abstimmungen"""
+DESCRIPTION = """<p style='font-family: sans-serif;'>Dieser Datensatz zeigt die Resultate aller Volksabstimmungen seit dem 27. September 2020 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.</p><p style='font-family: sans-serif;'>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href='https://www.kantonsblatt.ch/#!/search/publications' target='_blank'>Kantonsblatt</a> (<a href='https://www.kantonsblatt.ch/#!/search/publications' target='_blank'>https://www.kantonsblatt.ch/#!/search/publications</a>) des Kantons Basel-Stadt publiziert werden.</p><p style='font-family: sans-serif;'>Detaillierte Resultate auf Wahllokal-Ebene findet man im Datensatz <a href='https://data.bs.ch/explore/dataset/100345//' target='_blank'>'Abstimmungen Details'</a> (<a href='https://data.bs.ch/explore/dataset/100345/' target='_blank'>https://data.bs.ch/explore/dataset/100345/</a>)</p><p style='font-family: sans-serif;'>Eine Liste der Wahllokale findet man im Datensatz '<a href='https://data.bs.ch/explore/dataset/100098//' target='_blank'>Wahllokale Kanton Basel-Stadt</a>' (<a href='https://data.bs.ch/explore/dataset/100098//' target='_blank'>https://data.bs.ch/explore/dataset/100098//</a>)</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100346)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100346`
+- **Title** `Kennzahlen der Abstimmungen`
+- **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die Resultate aller Volksabstimmungen seit dem 27. September 2020 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.</p><p style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">Kantonsblatt</a> (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">https://www.kantonsblatt.ch/#!/search/publications</a>) des Kantons Basel-Stadt publiziert werden.</p><p style="font-family: sans-serif;">Detaillierte Resultate auf Wahllokal-Ebene findet man im Datensatz <a href="https://data.bs.ch/explore/dataset/100345//" target="_blank">"Abstimmungen Details"</a> (<a href="https://data.bs.ch/explore/dataset/100345/" target="_blank">https://data.bs.ch/explore/dataset/100345/</a>)</p><p style="font-family: sans-serif;">Eine Liste der Wahllokale findet man im Datensatz "<a href="https://data.bs.ch/explore/dataset/100098//" target="_blank">Wahllokale Kanton Basel-Stadt</a>" (<a href="https://data.bs.ch/explore/dataset/100098//" target="_blank">https://data.bs.ch/explore/dataset/100098//</a>)</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-06-08`
+- **Modified** `2025-05-18T15:58:09+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-09-26T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-05-17T22:00:00+00:00`
+- **Themes** `['Politik']`
+- **Keywords** `['Abstimmung', 'Wahlen', 'Demokratie', 'Teilhabe']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100346/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100092 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100092.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100092"""
+TITLE = """Geborene nach Geschlecht, Staatsangehörigkeit, Wohnviertel und Geburtsdatum"""
+DESCRIPTION = """Dieser Datensatz zeigt die Geborenen im Kanton Basel-Stadt nach Geschlecht, Staatsangehörigkeit, Wohnviertel und Geburtsdatum. Die Daten werden täglich aktualisiert, wobei nur Geburten berücksichtigt werden, die mindestens 15 Tage zurückliegen. Aufgrund von Nachmeldungen kann es jederzeit zu Änderungen bei bereits veröffentlichten Werten kommen. In den Daten des laufenden Jahres und bis ca. Juli auch in jenen des zurückliegenden Jahres sind ausser den Lebendgeborenen auch die Totgeborenen berücksichtigt, weil die Angabe zur Lebensfähigkeit jeweils erst im Juli des Folgejahres verfügbar ist. In weiter zurückliegenden Jahren sind nur die Lebendgeborenen berücksichtigt. Auch die Angabe zur Anzahl Kinder, die zusammen geboren wurden (Mehrlingsgeburten) ist jeweils erst ca. im Juli des Folgejahrs verfügbar. <br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der <a href='https://statistik.bs.ch/unterthema/3' target='_blank'>kantonalen öffentlichen Statistik (https://statistik.bs.ch/unterthema/3)</a> abweichen: In Letzterer werden nachträglich gemeldete Geburten während vier Monaten gesammelt, danach gelten die Zahlen als definitiv. Später eintreffende Meldungen werden im letzten noch nicht abgeschlossenen Monat gezählt. In diesem Datensatz werden sie im Monat des Geburtsdatums gezählt.<br><br>Aus Gründen des Persönlichkeitsschutzes können im <a href='https://data.bs.ch/explore/dataset/100099/' target='_blank'>monatlichen Datensatz (https://data.bs.ch/explore/dataset/100099/)</a> mehr Attribute veröffentlicht werden als im vorliegenden Datensatz."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100092)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100092`
+- **Title** `Geborene nach Geschlecht, Staatsangehörigkeit, Wohnviertel und Geburtsdatum`
+- **Description** `Dieser Datensatz zeigt die Geborenen im Kanton Basel-Stadt nach Geschlecht, Staatsangehörigkeit, Wohnviertel und Geburtsdatum. Die Daten werden täglich aktualisiert, wobei nur Geburten berücksichtigt werden, die mindestens 15 Tage zurückliegen. Aufgrund von Nachmeldungen kann es jederzeit zu Änderungen bei bereits veröffentlichten Werten kommen. In den Daten des laufenden Jahres und bis ca. Juli auch in jenen des zurückliegenden Jahres sind ausser den Lebendgeborenen auch die Totgeborenen berücksichtigt, weil die Angabe zur Lebensfähigkeit jeweils erst im Juli des Folgejahres verfügbar ist. In weiter zurückliegenden Jahren sind nur die Lebendgeborenen berücksichtigt. Auch die Angabe zur Anzahl Kinder, die zusammen geboren wurden (Mehrlingsgeburten) ist jeweils erst ca. im Juli des Folgejahrs verfügbar. <br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der <a href="https://statistik.bs.ch/unterthema/3" target="_blank">kantonalen öffentlichen Statistik (https://statistik.bs.ch/unterthema/3)</a> abweichen: In Letzterer werden nachträglich gemeldete Geburten während vier Monaten gesammelt, danach gelten die Zahlen als definitiv. Später eintreffende Meldungen werden im letzten noch nicht abgeschlossenen Monat gezählt. In diesem Datensatz werden sie im Monat des Geburtsdatums gezählt.<br><br>Aus Gründen des Persönlichkeitsschutzes können im <a href="https://data.bs.ch/explore/dataset/100099/" target="_blank">monatlichen Datensatz (https://data.bs.ch/explore/dataset/100099/)</a> mehr Attribute veröffentlicht werden als im vorliegenden Datensatz.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-09-25`
+- **Modified** `2025-09-16T01:16:05+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bevölkerung']`
+- **Keywords** `['Nationalität', 'Alter', 'Zeitreihe', 'Demographie', 'Geburten', 'Neugeboren']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100092/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

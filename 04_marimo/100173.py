@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100173 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100173.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100173"""
+TITLE = """Monatliche Sterberaten nach Geschlecht und Altersgruppe"""
+DESCRIPTION = """Rohe und standardisierte Sterberaten des Kantons Basel-Stadt nach Geschlecht und Altersgruppen seit 2012. Die Sterberaten werden monatlich aktualisiert. Aufgrund von verzögerten Ereignis-Meldungen können sich die Werte der Vormonate (Anzahl Todesfälle, Sterbeziffer/-rate) nach einer Aktualisierung leicht ändern. Die standardisierte Sterberate bezieht sich auf die mittlere Bevölkerung des Monats Januar 2012 des Kantons Basel-Stadt. Durch die Standardisierung erhält man so in der Altersgruppe 'Alle' eine altersstandardisierte Sterberate für das jeweilige Geschlecht."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100173)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100173`
+- **Title** `Monatliche Sterberaten nach Geschlecht und Altersgruppe`
+- **Description** `Rohe und standardisierte Sterberaten des Kantons Basel-Stadt nach Geschlecht und Altersgruppen seit 2012. Die Sterberaten werden monatlich aktualisiert. Aufgrund von verzögerten Ereignis-Meldungen können sich die Werte der Vormonate (Anzahl Todesfälle, Sterbeziffer/-rate) nach einer Aktualisierung leicht ändern. Die standardisierte Sterberate bezieht sich auf die mittlere Bevölkerung des Monats Januar 2012 des Kantons Basel-Stadt. Durch die Standardisierung erhält man so in der Altersgruppe "Alle" eine altersstandardisierte Sterberate für das jeweilige Geschlecht.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-04-01`
+- **Modified** `2025-09-01T11:30:45+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2011-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-06-30T22:00:00+00:00`
+- **Themes** `['Bevölkerung', 'Statistische Grundlagen']`
+- **Keywords** `['Alter', 'Altersstruktur', 'Bevölkerungsbestand', 'Demographie', 'Geschlecht', 'Todesfälle', 'Einwohnerzahl', 'Bevölkerungsstruktur', 'Tod', 'Verstorben', 'Sterberate']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100173/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100014 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100014.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100014"""
+TITLE = """Zeitreihe der Belegung öffentlicher Parkhäuser Basel"""
+DESCRIPTION = """<p>Stündlich aktualisierte Belegungsdaten der öffentlichen Parkhäuser der Stadt Basel, bezogen über das Parkleitsystem Basel (<a href='https://www.parkleitsystem-basel.ch' target='_blank'>https://www.parkleitsystem-basel.ch</a>).</p><p>Historische Daten mit kleinerer zeitlicher Auflösung können auch über das API von ParkenDD bezogen werden, wie hier am Beispiel der Parkhäuser der Stadt Zürich beschrieben: <a href='https://opendatazurich.github.io/parkendd-api//' target='_blank'>https://opendatazurich.github.io/parkendd-api//</a> (die Parkhäuser von Basel sind über diese URL abrufbar: <a href='https://api.parkendd.de/Basel' target='_blank'>https://api.parkendd.de/Basel</a>). </p><p>Die Standorte der Parkhäuser sind in diesem Datensatz ersichtlich: <a href='https://data.bs.ch/explore/dataset/100044/' target='_blank'>https://data.bs.ch/explore/dataset/100044/</a>.<a href='https://data.bs.ch/explore/dataset/100044/' target='_blank'></a></p><p>Änderungsprotokoll:</p><p>14.08.2023 - Neue Spalte 'auslastungen' wurde hinzugefügt.</p><p>28.11.2024 - Es gibt eine Lücke vom 21. Oktober 2024 bis zum 28. November 2024.</p><p>28.11.2024 - Centralbahnparking wurde zu Centralbahn umbenannt in den Spalten id, id2, name, title.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100014)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100014`
+- **Title** `Zeitreihe der Belegung öffentlicher Parkhäuser Basel`
+- **Description** `<p>Stündlich aktualisierte Belegungsdaten der öffentlichen Parkhäuser der Stadt Basel, bezogen über das Parkleitsystem Basel (<a href="https://www.parkleitsystem-basel.ch" target="_blank">https://www.parkleitsystem-basel.ch</a>).</p><p>Historische Daten mit kleinerer zeitlicher Auflösung können auch über das API von ParkenDD bezogen werden, wie hier am Beispiel der Parkhäuser der Stadt Zürich beschrieben: <a href="https://opendatazurich.github.io/parkendd-api//" target="_blank">https://opendatazurich.github.io/parkendd-api//</a> (die Parkhäuser von Basel sind über diese URL abrufbar: <a href="https://api.parkendd.de/Basel" target="_blank">https://api.parkendd.de/Basel</a>). </p><p>Die Standorte der Parkhäuser sind in diesem Datensatz ersichtlich: <a href="https://data.bs.ch/explore/dataset/100044/" target="_blank">https://data.bs.ch/explore/dataset/100044/</a>.<a href="https://data.bs.ch/explore/dataset/100044/" target="_blank"></a></p><p>Änderungsprotokoll:</p><p>14.08.2023 - Neue Spalte "auslastungen" wurde hinzugefügt.</p><p>28.11.2024 - Es gibt eine Lücke vom 21. Oktober 2024 bis zum 28. November 2024.</p><p>28.11.2024 - Centralbahnparking wurde zu Centralbahn umbenannt in den Spalten id, id2, name, title.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-05`
+- **Modified** `2025-09-16T08:08:50+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2019-02-06T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-15T22:00:00+00:00`
+- **Themes** `['Mobilität und Verkehr']`
+- **Keywords** `['Parkplatz', 'Parkhaus', 'Autos', 'Elektroautos', 'Frei', 'Echtzeit', 'Realtime']`
+- **Publisher** `Parkhäuser Basel-Stadt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100014/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

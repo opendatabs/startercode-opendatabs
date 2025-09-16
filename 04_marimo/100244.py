@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100244 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100244.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100244"""
+TITLE = """Gefahrenstufen für Hochwasser"""
+DESCRIPTION = """<p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: 'Frutiger Neue Regular', Arial, sans-serif;'><span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif; font-size: 15.4px;'>Entsprechend den Bestimmungen der Alarmierungsverordnung verwendet das BAFU für die Warnung vor Hochwasser eine fünfstufige Gefahrenskala. Die Gefahrenstufen geben Auskunft über die Intensität des Ereignisses, die möglichen Auswirkungen und Verhaltensempfehlungen.</span><br></p><p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: 'Frutiger Neue Regular', Arial, sans-serif;'>Die Schwellenwerte, die die Gefahrenstufen abgrenzen, werden ausgehend vom vorhandenen Wissen über das Verhalten des jeweiligen Fliessgewässers festgelegt (Pegel, ab dem das Gewässer über die Ufer tritt, ab dem erste Schäden eintreten usw.). Diese Schwellenwerte entsprechen in etwa der Jährlichkeit von Hochwasserereignissen, also einer Wiederkehrperiode von durchschnittlich 2, 10, 30 oder 100 Jahren.</p><ul style='line-height: 1.5; margin: 1.5em 0px 0px; padding: 0px 0px 0px 0.4em; list-style-type: square; color: rgb(69, 69, 69); font-family: 'Frutiger Neue Regular', Arial, sans-serif;'><li style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'>Die <span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif;'>Gefahrenstufe 1 </span>entspricht ungefähr einer Abflussmenge, die unter dem Wert liegt, der im Durchschnitt einmal in 2 Jahren erreicht wird.</li><li style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'>Die <span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif;'>Gefahrenstufe 2 </span>entspricht ungefähr einer Abflussmenge, die durchschnittlich einmal innerhalb von 2 bis 10 Jahren auftritt.</li><li style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'>Die <span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif;'>Gefahrenstufe 3 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 10 bis 30 Jahren auftritt.</li><li style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'>Die <span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif;'>Gefahrenstufe 4 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 30 bis 100 Jahren auftritt.</li><li style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'>Die <span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif;'>Gefahrenstufe 5 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt höchstens einmal in 100 Jahren auftritt.</li></ul><p style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'><br></p><p style='line-height: 1.5; margin-left: 0.8em;'><span style='font-size: 15.4px;'>Für weitere Informationen siehe </span><a href='https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser' target='_blank'>https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser</a><span style='font-size: 15.4px;'> </span><br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100244)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100244`
+- **Title** `Gefahrenstufen für Hochwasser`
+- **Description** `<p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'><span style='font-family: "Frutiger Neue Bold", Arial, sans-serif; font-size: 15.4px;'>Entsprechend den Bestimmungen der Alarmierungsverordnung verwendet das BAFU für die Warnung vor Hochwasser eine fünfstufige Gefahrenskala. Die Gefahrenstufen geben Auskunft über die Intensität des Ereignisses, die möglichen Auswirkungen und Verhaltensempfehlungen.</span><br></p><p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'>Die Schwellenwerte, die die Gefahrenstufen abgrenzen, werden ausgehend vom vorhandenen Wissen über das Verhalten des jeweiligen Fliessgewässers festgelegt (Pegel, ab dem das Gewässer über die Ufer tritt, ab dem erste Schäden eintreten usw.). Diese Schwellenwerte entsprechen in etwa der Jährlichkeit von Hochwasserereignissen, also einer Wiederkehrperiode von durchschnittlich 2, 10, 30 oder 100 Jahren.</p><ul style='line-height: 1.5; margin: 1.5em 0px 0px; padding: 0px 0px 0px 0.4em; list-style-type: square; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 1 </span>entspricht ungefähr einer Abflussmenge, die unter dem Wert liegt, der im Durchschnitt einmal in 2 Jahren erreicht wird.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 2 </span>entspricht ungefähr einer Abflussmenge, die durchschnittlich einmal innerhalb von 2 bis 10 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 3 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 10 bis 30 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 4 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 30 bis 100 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 5 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt höchstens einmal in 100 Jahren auftritt.</li></ul><p style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;"><br></p><p style="line-height: 1.5; margin-left: 0.8em;"><span style="font-size: 15.4px;">Für weitere Informationen siehe </span><a href="https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser" target="_blank">https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser</a><span style="font-size: 15.4px;"> </span><br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-01-25`
+- **Modified** `2022-12-16T12:54:26+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Rhein', 'Birs', 'Wiese', 'Pegel', 'Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser']`
+- **Publisher** `Bundesamt für Umwelt BAFU`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100244/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

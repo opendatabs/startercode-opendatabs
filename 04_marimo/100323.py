@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100323 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100323.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,32 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100323"""
+TITLE = """Rheintrübung kontinuierlich"""
+DESCRIPTION = """<p class=''></p><div style='text-align: left;'><p class='MsoNormal' style='margin-bottom: 0.0001pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'><span style='font-size: 10.5pt; font-family: Arial, sans-serif;'>Kontinuierlich gemessene Trübungsmesswerte der <a href='https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues' target='_blank'><span style='background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'>Rheinüberwachungsstation
+Weil am Rhein</span></a> (RUES, siehe
+https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues),
+jeweils gemittelt über eine Stunde. <br>
+ <o:p></o:p></span></p>
+
+<p class='MsoNormal' style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size: 10.5pt; font-family: Arial, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'>Erklärung zur Einheit: Die Trübung einer
+Flüssigkeit wird optisch ermittelt, jedoch mittels elektronischer Auswertung
+gemessen. Die Wellenlänge der Mess-Strahlung liegt üblicherweise im
+Infrarotbereich bei 860 nm (nach ISO 7027). <br>
+<br>
+FNU: Formazine Nephelometric Unit – Streulichtmessung (Winkel 90°) gemäß den
+Vorschriften der Norm ISO 7027 <br>
+<br>
+<o:p></o:p></span></p>
+
+<p class='MsoNormal' style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal'><span style='font-size: 10.5pt; font-family: Arial, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;'>Messbetrieb / Unterhalt: <a href='https://www.bs.ch/wsu/aue' target='_blank'>Amt
+für Umwelt und Energie Basel-Stadt (AUE-BS)</a> <br>
+(siehe https://www.bs.ch/wsu/aue)<o:p></o:p></span></p></div><p></p><p></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100323)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +126,40 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100323`
+- **Title** `Rheintrübung kontinuierlich`
+- **Description** `<p class=""></p><div style="text-align: left;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Kontinuierlich gemessene Trübungsmesswerte der <a href="https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues" target="_blank"><span style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Rheinüberwachungsstation
+Weil am Rhein</span></a> (RUES, siehe
+https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues),
+jeweils gemittelt über eine Stunde. <br>
+ <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 10.5pt; font-family: Arial, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Erklärung zur Einheit: Die Trübung einer
+Flüssigkeit wird optisch ermittelt, jedoch mittels elektronischer Auswertung
+gemessen. Die Wellenlänge der Mess-Strahlung liegt üblicherweise im
+Infrarotbereich bei 860 nm (nach ISO 7027). <br>
+<br>
+FNU: Formazine Nephelometric Unit – Streulichtmessung (Winkel 90°) gemäß den
+Vorschriften der Norm ISO 7027 <br>
+<br>
+<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size: 10.5pt; font-family: Arial, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Messbetrieb / Unterhalt: <a href="https://www.bs.ch/wsu/aue" target="_blank">Amt
+für Umwelt und Energie Basel-Stadt (AUE-BS)</a> <br>
+(siehe https://www.bs.ch/wsu/aue)<o:p></o:p></span></p></div><p></p><p></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-11-23`
+- **Modified** `2025-09-16T09:00:41+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Temporal_coverage_start_date** `2023-10-17T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-14T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Rhein', 'Trübung', 'Lichtdurchlässigkeit', 'Baden']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +185,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100323/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

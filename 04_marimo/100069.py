@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100069 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100069.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100069"""
+TITLE = """Rheinüberwachungsstation: Umweltanalyse Wasserphase"""
+DESCRIPTION = """<p>Der Datensatz enthält die Analysedaten aus der binationalen Rheinüberwachungsstation (RÜS) in Weil am Rhein (Rhein-Kilometer 171,37) seit Bestehen der Station im Jahr 1993 aus der Matrix Wasser.</p><p>Der Rhein wird aktuell auf 670 Schadstoffe untersucht, 420 davon täglich. Der Unterhalt der Anlage und die Analytik werden durch das Amt für Umwelt und Energie des Kantons Basel-Stadt (AUE) geleistet. Auftraggeber sind die Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg (LUBW) und das schweizerische Bundesamt für Umwelt (BAFU).</p><p>Weitere Informationen: <a href='https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues' target='_blank'>https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues</a></p><p>Die Daten einzelner Jahre ab dem Jahr 1993 können heruntergeladen werden unter der URL mit dem Muster https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_[JAHR].csv, also zum Beispiel für das Jahr 2020 hier: <a href='https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_archive/gew_rhein_rues_wasser_2020.csv' target='_blank'>https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_archive/gew_rhein_rues_wasser_2020.csv</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100069)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100069`
+- **Title** `Rheinüberwachungsstation: Umweltanalyse Wasserphase`
+- **Description** `<p>Der Datensatz enthält die Analysedaten aus der binationalen Rheinüberwachungsstation (RÜS) in Weil am Rhein (Rhein-Kilometer 171,37) seit Bestehen der Station im Jahr 1993 aus der Matrix Wasser.</p><p>Der Rhein wird aktuell auf 670 Schadstoffe untersucht, 420 davon täglich. Der Unterhalt der Anlage und die Analytik werden durch das Amt für Umwelt und Energie des Kantons Basel-Stadt (AUE) geleistet. Auftraggeber sind die Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg (LUBW) und das schweizerische Bundesamt für Umwelt (BAFU).</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues" target="_blank">https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues</a></p><p>Die Daten einzelner Jahre ab dem Jahr 1993 können heruntergeladen werden unter der URL mit dem Muster https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_[JAHR].csv, also zum Beispiel für das Jahr 2020 hier: <a href="https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_archive/gew_rhein_rues_wasser_2020.csv" target="_blank">https://data-bs.ch/umweltlabor/gew_rhein_rues_wasser_archive/gew_rhein_rues_wasser_2020.csv</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-04-06`
+- **Modified** `2025-09-16T06:03:26+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1992-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Rhein', 'Messwert', 'Chemie', 'Wasserqualität', 'Fluss', 'Bach', 'Rüs', 'Wassertemperatur']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100069/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

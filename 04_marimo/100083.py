@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100083 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100083.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100083"""
+TITLE = """Umfrage «digitale Mitwirkung» 2020"""
+DESCRIPTION = """<p>Im Auftrag der Staatskanzlei Basel-Stadt wurden 1000 im Kanton Basel-Stadt wohnhafte Schweizer Staatsbürgerinnen und Staatsbürger ab 16 Jahren zum Thema «digitale Mitwirkung» befragt. Die Umfrage wurde Anfang des Jahres 2020 durchgeführt und fand in Form eines computergestützten Telefoninterviews statt.<br><br>Dieser Datensatz beinhaltet die Antworten der 1000 befragten Personen. Offene Fragen wurden kategorisiert. Aus Gründen des Datenschutzes werden das Alter und die höchste abgeschlossene Bildung der Befragten zu Gruppen zusammengefasst und auf die Bekanntgabe des Wohnquartiers verzichtet. Zudem wurden in der Variable «Parteibindung» nicht im Grossen Rat vertretene Parteien (Stand 6.5.2020) zusammengefasst.</p><p>Eine Abschrift des Interviews finden Sie hier: <a href='https://data-bs.ch/staatskanzlei/Umfrage-digitale-mitwirkung/2020/Fragebogen_digitale-Mitwirkung_OpenData.pdf' target='_blank'>https://data-bs.ch/staatskanzlei/Umfrage-digitale-mitwirkung/2020/Fragebogen_digitale-Mitwirkung_OpenData.pdf</a>.</p><p>Den Bericht von gfs Bern zur Umfrage können Sie hier herunterladen: <a href='https://www.bs.ch/mein-kanton-meine-meinung-digital/dam/jcr:96cfb1f0-96f8-4ec0-bbf1-3f566daa1247/2020-Bevoelkerungsbefragung-Digitalisierung-und-Politik-Kanton-Basel-Stadt.pdf'>https://www.bs.ch/mein-kanton-meine-meinung-digital/dam/jcr:96cfb1f0-96f8-4ec0-bbf1-3f566daa1247/2020-Bevoelkerungsbefragung-Digitalisierung-und-Politik-Kanton-Basel-Stadt.pdf</a></p><p>Weitere Informationen zur digitalen Mitwirkung in Basel-Stadt finden Sie hier: <a _blank'='' href='https://www.bs.ch/mein-kanton-meine-meinung-digital' target='_blank'>https://www.bs.ch/mein-kanton-meine-meinung-digital</a>.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100083)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100083`
+- **Title** `Umfrage «digitale Mitwirkung» 2020`
+- **Description** `<p>Im Auftrag der Staatskanzlei Basel-Stadt wurden 1000 im Kanton Basel-Stadt wohnhafte Schweizer Staatsbürgerinnen und Staatsbürger ab 16 Jahren zum Thema «digitale Mitwirkung» befragt. Die Umfrage wurde Anfang des Jahres 2020 durchgeführt und fand in Form eines computergestützten Telefoninterviews statt.<br><br>Dieser Datensatz beinhaltet die Antworten der 1000 befragten Personen. Offene Fragen wurden kategorisiert. Aus Gründen des Datenschutzes werden das Alter und die höchste abgeschlossene Bildung der Befragten zu Gruppen zusammengefasst und auf die Bekanntgabe des Wohnquartiers verzichtet. Zudem wurden in der Variable «Parteibindung» nicht im Grossen Rat vertretene Parteien (Stand 6.5.2020) zusammengefasst.</p><p>Eine Abschrift des Interviews finden Sie hier: <a href="https://data-bs.ch/staatskanzlei/Umfrage-digitale-mitwirkung/2020/Fragebogen_digitale-Mitwirkung_OpenData.pdf" target="_blank">https://data-bs.ch/staatskanzlei/Umfrage-digitale-mitwirkung/2020/Fragebogen_digitale-Mitwirkung_OpenData.pdf</a>.</p><p>Den Bericht von gfs Bern zur Umfrage können Sie hier herunterladen: <a href="https://www.bs.ch/mein-kanton-meine-meinung-digital/dam/jcr:96cfb1f0-96f8-4ec0-bbf1-3f566daa1247/2020-Bevoelkerungsbefragung-Digitalisierung-und-Politik-Kanton-Basel-Stadt.pdf">https://www.bs.ch/mein-kanton-meine-meinung-digital/dam/jcr:96cfb1f0-96f8-4ec0-bbf1-3f566daa1247/2020-Bevoelkerungsbefragung-Digitalisierung-und-Politik-Kanton-Basel-Stadt.pdf</a></p><p>Weitere Informationen zur digitalen Mitwirkung in Basel-Stadt finden Sie hier: <a _blank"="" href="https://www.bs.ch/mein-kanton-meine-meinung-digital" target="_blank">https://www.bs.ch/mein-kanton-meine-meinung-digital</a>.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-05-07`
+- **Modified** `2020-05-06T08:52:25+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik', 'Verwaltung', 'Gesetzgebung']`
+- **Keywords** `['Befragung', 'E-Voting', 'Abstimmung', 'Wahl', 'E-Collecting']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100083/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

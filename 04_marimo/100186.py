@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100186 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100186.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100186"""
+TITLE = """Grosser Rat: Live-Abstimmungsergebnisse"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt die Resultate der Abstimmungen des Grossen Rates Basel-Stadt, einzeln für jedes Ratsmitglied und jede Abstimmung. An Sitzungstagen werden die Daten in Echtzeit aktualisiert. </p><p>Abstimmungen an Sitzungen, welche während der Coronavirus-Ausnahmesituation 2020/2021 im Kongresscenter Basel abgehalten wurden, sind nun auch in diesem Datensatz vorhanden. </p><p>Die Daten können auch als Website und PDF Datei hier eingesehen werden: </p><ul><li>Aktuelle Sitzung: <a href='https://grosserrat.bs.ch/ratsbetrieb/tagesordnung/abstimmungsergebnisse' target='_blank'>https://grosserrat.bs.ch/ratsbetrieb/tagesordnung/abstimmungsergebnisse</a><a href='http://abstimmungen.grosserrat-basel.ch/index_aktuell.php' target='_blank'></a></li><li>Vergangene Sitzungen (Archiv): <a href='http://abstimmungen.grosserrat-basel.ch/index_archiv.php' target='_blank'>http://abstimmungen.grosserrat-basel.ch/index_archiv.php</a><a href='http://abstimmungen.grosserrat-basel.ch/index_archiv.php' target='_blank'></a></li></ul><p>Bitte beachten Sie, dass für das offizielle Abstimmungsergebnis das jeweilige Sitzungsprotokoll des Grossen Rates massgeblich ist (elektronische Fassung: <a href='https://ratsprotokolle.grosserrat.bs.ch/shareparl/' target='_blank'>https://ratsprotokolle.grosserrat.bs.ch/shareparl/</a>)</p><p>Änderungsprotokoll:<br>5. April 2024: Der Parlamentsdienst nutzt seit dem September 2023 ein neues Abstimmungssystem. Dies führt zu einigen Änderungen bei den Daten, die geliefert werden. Die Daten konnten mit folgenden Spalten ergänzt werden: Signatur Geschäft, Signatur Dokument, Erweiterte Abstimmungsnummer, Anrede der abstimmenden Person und Funktion der abstimmenden Person. Des Weiteren haben sich die Abstimmungstypen geändert.<br>Die Abstimmungstypen vor dem September 2023: Abstimmung, Schlussabstimmung, Antrag, offene Wahl, Rückweisung, Eventualabstimmung, Eintreten, Ordnungsantrag, ungültig<br>Die Abstimmungstypen nach dem September 2023: Anwesenheit, Ad Hoc einfaches Mehr, Ad Hoc 2/3 Mehr, Eventual Abstimmung, Schlussabstimmung, Quorum erfassen</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100186)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100186`
+- **Title** `Grosser Rat: Live-Abstimmungsergebnisse`
+- **Description** `<p>Dieser Datensatz zeigt die Resultate der Abstimmungen des Grossen Rates Basel-Stadt, einzeln für jedes Ratsmitglied und jede Abstimmung. An Sitzungstagen werden die Daten in Echtzeit aktualisiert. </p><p>Abstimmungen an Sitzungen, welche während der Coronavirus-Ausnahmesituation 2020/2021 im Kongresscenter Basel abgehalten wurden, sind nun auch in diesem Datensatz vorhanden. </p><p>Die Daten können auch als Website und PDF Datei hier eingesehen werden: </p><ul><li>Aktuelle Sitzung: <a href="https://grosserrat.bs.ch/ratsbetrieb/tagesordnung/abstimmungsergebnisse" target="_blank">https://grosserrat.bs.ch/ratsbetrieb/tagesordnung/abstimmungsergebnisse</a><a href="http://abstimmungen.grosserrat-basel.ch/index_aktuell.php" target="_blank"></a></li><li>Vergangene Sitzungen (Archiv): <a href="http://abstimmungen.grosserrat-basel.ch/index_archiv.php" target="_blank">http://abstimmungen.grosserrat-basel.ch/index_archiv.php</a><a href="http://abstimmungen.grosserrat-basel.ch/index_archiv.php" target="_blank"></a></li></ul><p>Bitte beachten Sie, dass für das offizielle Abstimmungsergebnis das jeweilige Sitzungsprotokoll des Grossen Rates massgeblich ist (elektronische Fassung: <a href="https://ratsprotokolle.grosserrat.bs.ch/shareparl/" target="_blank">https://ratsprotokolle.grosserrat.bs.ch/shareparl/</a>)</p><p>Änderungsprotokoll:<br>5. April 2024: Der Parlamentsdienst nutzt seit dem September 2023 ein neues Abstimmungssystem. Dies führt zu einigen Änderungen bei den Daten, die geliefert werden. Die Daten konnten mit folgenden Spalten ergänzt werden: Signatur Geschäft, Signatur Dokument, Erweiterte Abstimmungsnummer, Anrede der abstimmenden Person und Funktion der abstimmenden Person. Des Weiteren haben sich die Abstimmungstypen geändert.<br>Die Abstimmungstypen vor dem September 2023: Abstimmung, Schlussabstimmung, Antrag, offene Wahl, Rückweisung, Eventualabstimmung, Eintreten, Ordnungsantrag, ungültig<br>Die Abstimmungstypen nach dem September 2023: Anwesenheit, Ad Hoc einfaches Mehr, Ad Hoc 2/3 Mehr, Eventual Abstimmung, Schlussabstimmung, Quorum erfassen</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-11-09`
+- **Modified** `2025-09-11T07:44:46+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2012-06-05T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-09T22:00:00+00:00`
+- **Themes** `['Politik', 'Gesetzgebung', 'Verwaltung']`
+- **Keywords** `['Abstimmung', 'Demokratie']`
+- **Publisher** `Parlamentsdienst des Grossen Rates`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100186/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

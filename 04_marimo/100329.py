@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100329 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100329.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,16 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100329"""
+TITLE = """Parkflächen"""
+DESCRIPTION = """<p>In Basel stehen auf dem Stadtgebiet ungefähr 100'000 öffentliche und private Auto-Parkplätze zur Verfügung. Rund ein Viertel davon befindet sich auf Allmend. Ein Grossteil dieser Parkplätze befinden in der Blauen Zone und stehen hauptsächlich den Anwohnerinnen und Anwohner der Quartiere zur Verfügung. Daneben gibt es weitere Parkplatztypen: Gebührenpflichtige Parkplätze, Parkplätze für Velos und Motorräder, Parkplätze für Cars, usw.</p>
+
+<p>Die unterschiedlichen Bewirtschaftungsarten der Parkplätze haben zum Ziel, dass nebst der Anwohnerschaft auch Besucher, der Detailhandel sowie das Gewerbe von den Parkplätzen profitieren können und der Parksuchverkehr reduziert werden kann. Bei den gebührenpflichtigen Parkplätzen sind die Parkgebühren gebietsabhängig.</p>
+
+<p>Wegen Baustellen, Veranstaltungen oder aus anderen Gründe kann es sein, dass Parkplätze vorübergehend nicht zur Verfügung stehen. Auch ist es möglich, dass gewisse Parkplätze im Rahmen von Umbauprojekten bereits aufgehoben wurden, das Projekt aber noch nicht abgeschlossen und somit auch der Datensatz noch nicht nachgeführt ist.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100329)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +110,24 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100329`
+- **Title** `Parkflächen`
+- **Description** `<p>In Basel stehen auf dem Stadtgebiet ungefähr 100'000 öffentliche und private Auto-Parkplätze zur Verfügung. Rund ein Viertel davon befindet sich auf Allmend. Ein Grossteil dieser Parkplätze befinden in der Blauen Zone und stehen hauptsächlich den Anwohnerinnen und Anwohner der Quartiere zur Verfügung. Daneben gibt es weitere Parkplatztypen: Gebührenpflichtige Parkplätze, Parkplätze für Velos und Motorräder, Parkplätze für Cars, usw.</p>
+
+<p>Die unterschiedlichen Bewirtschaftungsarten der Parkplätze haben zum Ziel, dass nebst der Anwohnerschaft auch Besucher, der Detailhandel sowie das Gewerbe von den Parkplätzen profitieren können und der Parksuchverkehr reduziert werden kann. Bei den gebührenpflichtigen Parkplätzen sind die Parkgebühren gebietsabhängig.</p>
+
+<p>Wegen Baustellen, Veranstaltungen oder aus anderen Gründe kann es sein, dass Parkplätze vorübergehend nicht zur Verfügung stehen. Auch ist es möglich, dass gewisse Parkplätze im Rahmen von Umbauprojekten bereits aufgehoben wurden, das Projekt aber noch nicht abgeschlossen und somit auch der Datensatz noch nicht nachgeführt ist.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-07-10`
+- **Modified** `2025-09-12T00:02:04+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
+- **Keywords** `['Parkieren', 'Parkzone', 'Parkierung', 'Parkplatz', 'Parken', 'Auto', 'Velo', 'Fahrrad', 'Motorrad']`
+- **Publisher** `Amt für Mobilität`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +153,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100329/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

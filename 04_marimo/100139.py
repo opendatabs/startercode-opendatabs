@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100139 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100139.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100139"""
+TITLE = """Scheidungen nach Scheidungsdatum, Ehedauer sowie Alter und Staatsangehörigkeit der ehemaligen Ehepartner"""
+DESCRIPTION = """Dieser Datensatz zeigt die Scheidungen im Kanton Basel-Stadt nach Scheidungsdatum, Ehedauer sowie nach Alter und Staatsangehörigkeit der Frau bzw. des Mannes. Die Daten werden jährlich aktualisiert. Vor dem Jahr 1984 ist nur das Total der Scheidungen verfügbar. <br><br>Im Jahr 2000 trat ein neues Scheidungsrecht in Kraft. Im Jahr 2010 wurde dieses angepasst. <br><br>Bis zum Jahr 2006 wurde eine Scheidung in Basel-Stadt gezählt, wenn die klagende Partei in Basel-Stadt Wohnsitz hatte. Seit dem Jahr 2007 wird eine Scheidung in Basel-Stadt gezählt, wenn der Mann Wohnsitz in Basel-Stadt hat, oder wenn er im Ausland und die Frau in Basel-Stadt lebt. <br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Scheidungen im letzten noch nicht abgeschlossenen Jahr gezählt. In diesem Datensatz werden sie im Jahr des Scheidungsdatums gezählt..<br><br>Quelle: Statistik der natürlichen Bevölkerungsbewegung (BEVNAT) des Bundesamtes für Statistik (BFS)."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100139)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100139`
+- **Title** `Scheidungen nach Scheidungsdatum, Ehedauer sowie Alter und Staatsangehörigkeit der ehemaligen Ehepartner`
+- **Description** `Dieser Datensatz zeigt die Scheidungen im Kanton Basel-Stadt nach Scheidungsdatum, Ehedauer sowie nach Alter und Staatsangehörigkeit der Frau bzw. des Mannes. Die Daten werden jährlich aktualisiert. Vor dem Jahr 1984 ist nur das Total der Scheidungen verfügbar. <br><br>Im Jahr 2000 trat ein neues Scheidungsrecht in Kraft. Im Jahr 2010 wurde dieses angepasst. <br><br>Bis zum Jahr 2006 wurde eine Scheidung in Basel-Stadt gezählt, wenn die klagende Partei in Basel-Stadt Wohnsitz hatte. Seit dem Jahr 2007 wird eine Scheidung in Basel-Stadt gezählt, wenn der Mann Wohnsitz in Basel-Stadt hat, oder wenn er im Ausland und die Frau in Basel-Stadt lebt. <br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Scheidungen im letzten noch nicht abgeschlossenen Jahr gezählt. In diesem Datensatz werden sie im Jahr des Scheidungsdatums gezählt..<br><br>Quelle: Statistik der natürlichen Bevölkerungsbewegung (BEVNAT) des Bundesamtes für Statistik (BFS).`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-06-22`
+- **Modified** `2025-09-16T01:15:44+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bevölkerung']`
+- **Keywords** `['Demographie', 'Scheidungen']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100139/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -18,7 +18,7 @@ Auto generated R starter code for data set 100006.
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
 - **Modified** `2025-09-16T07:28:19+00:00`
-- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2022-12-30T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-08-05T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`

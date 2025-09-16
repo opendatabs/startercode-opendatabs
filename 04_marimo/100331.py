@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100331 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100331.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100331"""
+TITLE = """Veränderte Wahlzettel der Nationalratswahlen 22. Oktober 2023"""
+DESCRIPTION = """<p>Bei den Nationalratswahlen im Kanton Basel-Stadt am 22. Oktober 2023 kandidierten 122 Personen auf 32 Listen (<a href='https://data.bs.ch/explore/dataset/100316/' target='_blank'>verfügbar unter https://data.bs.ch/explore/dataset/100316/</a>) für insgesamt vier zu vergebende Sitze.</p><p> Es gingen insgesamt 56 235 gültigen Wahlzettel ein, von denen 29 637 Wahlzettel verändert wurden. Dieser Datensatz zeigt diese 29 637 Wahlzettel und jegliche Details dazu. </p><p>Die Wahlergebnisse sind in einem separaten Datensatz (<a href='https://data.bs.ch/explore/dataset/100281/' target='_blank'>https://data.bs.ch/explore/dataset/100281/</a><a href='https://data.bs.ch/explore/dataset/100281//' target='_blank'></a> und <a href='https://data.bs.ch/explore/dataset/100297/' target='_blank'>https://data.bs.ch/explore/dataset/100297/</a>) einsehbar, der die Verteilung der Stimmen und die gewählten Vertreter detailliert darstellt.</p><p>Das Statistische Amt hat zu diesem Datensatz einen Dossier-Artikel verfasst, der hier einsehbar ist: <a href='https://data-bs.ch/stata/wahlen_abstimmungen/wahlen/nr/wahlzettel_2023/6-wahlen.pdf' target='_blank'>https://data-bs.ch/stata/wahlen_abstimmungen/wahlen/nr/wahlzettel_2023/6-wahlen.pdf </a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100331)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100331`
+- **Title** `Veränderte Wahlzettel der Nationalratswahlen 22. Oktober 2023`
+- **Description** `<p>Bei den Nationalratswahlen im Kanton Basel-Stadt am 22. Oktober 2023 kandidierten 122 Personen auf 32 Listen (<a href="https://data.bs.ch/explore/dataset/100316/" target="_blank">verfügbar unter https://data.bs.ch/explore/dataset/100316/</a>) für insgesamt vier zu vergebende Sitze.</p><p> Es gingen insgesamt 56 235 gültigen Wahlzettel ein, von denen 29 637 Wahlzettel verändert wurden. Dieser Datensatz zeigt diese 29 637 Wahlzettel und jegliche Details dazu. </p><p>Die Wahlergebnisse sind in einem separaten Datensatz (<a href="https://data.bs.ch/explore/dataset/100281/" target="_blank">https://data.bs.ch/explore/dataset/100281/</a><a href="https://data.bs.ch/explore/dataset/100281//" target="_blank"></a> und <a href="https://data.bs.ch/explore/dataset/100297/" target="_blank">https://data.bs.ch/explore/dataset/100297/</a>) einsehbar, der die Verteilung der Stimmen und die gewählten Vertreter detailliert darstellt.</p><p>Das Statistische Amt hat zu diesem Datensatz einen Dossier-Artikel verfasst, der hier einsehbar ist: <a href="https://data-bs.ch/stata/wahlen_abstimmungen/wahlen/nr/wahlzettel_2023/6-wahlen.pdf" target="_blank">https://data-bs.ch/stata/wahlen_abstimmungen/wahlen/nr/wahlzettel_2023/6-wahlen.pdf </a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-02-27`
+- **Modified** `2025-04-28T07:48:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik', 'Bevölkerung']`
+- **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100331/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

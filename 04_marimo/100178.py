@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100178 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100178.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,13 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100178"""
+TITLE = """Smarte Strasse: Luftqualität Vergleichsmessungen"""
+DESCRIPTION = """<p>Das <a href='https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene' target='_blank'>Lufthygieneamt beider Basel</a> (LHA) testet im Projekt «Smarte Strasse» kosteneffiziente Mikrosensoren auf ihre Genauigkeit und Zuverlässigkeit. Der installierte Sensor vom Typ «Nubo» der Firma Sensirion AG ist in der Lage, die Konzentration verschiedener Schadstoffe in der Luft in Echtzeit zu ermitteln. Gemessen werden die Gehalte der Gase Stickstoffdioxid (NO2) und Ozon (O3), sowie die feinere Fraktion des Feinstaubs «PM2.5». Dieser Datensatz enthält die Daten von drei «Nubo»- Sensoren, welche an den permanenten Messstationen des LHA am St. Johanns-Platz, an der Feldbergstrasse und auf der Autobahn A2 in der Hard installiert und gegen die Referenzmessgeräte des LHA verglichen werden.</p><p>Genaue Standorte dieser Sensoren: </p><ul><li>Feldbergstrasse: 2611747 / 1268491, <a href='https://map.geo.admin.ch/?X=268491&amp;Y=611747&amp;zoom=9&amp;lang=de&amp;topic=ech&amp;bgLayer=ch.swisstopo.pixelkarte-farbe&amp;crosshair=bowl&amp;layers=ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege,ch.astra.wanderland-sperrungen_umleitungen&amp;layers_opacity=1,1,1,0.8,0.8&amp;layers_visibility=false,false,false,false,false&amp;layers_timestamp=18641231,,,,' target='_blank'>Kartenansicht</a></li><li>St. Johanns-Platz: 2610790 / 1268370, <a href='https://map.geo.admin.ch/?X=268370&amp;Y=610790&amp;zoom=9&amp;lang=de&amp;topic=ech&amp;bgLayer=ch.swisstopo.pixelkarte-farbe&amp;crosshair=bowl&amp;layers=ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege,ch.astra.wanderland-sperrungen_umleitungen&amp;layers_opacity=1,1,1,0.8,0.8&amp;layers_visibility=false,false,false,false,false&amp;layers_timestamp=18641231,,,,' target='_blank'>Kartenansicht</a></li><li>A2 Hard: 2615839 / 1265282, <a href='https://map.geo.admin.ch/?X=265282&amp;Y=615839&amp;zoom=9&amp;lang=de&amp;topic=ech&amp;bgLayer=ch.swisstopo.pixelkarte-farbe&amp;crosshair=bowl&amp;layers=ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege,ch.astra.wanderland-sperrungen_umleitungen&amp;layers_opacity=1,1,1,0.8,0.8&amp;layers_visibility=false,false,false,false,false&amp;layers_timestamp=18641231,,,,' target='_blank'>Kartenansicht</a></li></ul><p>Weitere Informationen zur Luftqualität in der Region Basel sind auf <a href='https://www.luftqualitaet.ch' target='_blank'>www.luftqualitaet.ch</a>
+ verfügbar. Hintergrundinformationen zu Ozon und Feinstaub auf den Webseiten <a href='https://ozon-info.ch/' target='_blank'>www.ozon-info.ch</a> und <a href='https://feinstaub.ch/' target='_blank'>www.feinstaub.ch</a>. Angaben zu den gesundheitlichen Auswirkungen der Luftverschmutzung auf der Webseite <a href='https://www.swisstph.ch/de/projects/ludok/healtheffects/' target='_blank'>https://www.swisstph.ch/de/projects/ludok/healtheffects/</a>.</p><p class=''>Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</p><ul><li>Die Luftqualitäts-Daten der Sensoren an der smarten Strasse finden Sie hier: <a href='https://data.bs.ch/explore/dataset/100093/' target='_blank'>https://data.bs.ch/explore/dataset/100093/</a> </li><li>Die Maximalwerte (O3) und Mittelwerte (NO2, PM 2.5) des Vortages sind zudem unter folgendem Datensatz zu finden: <a href='https://data.bs.ch/explore/dataset/100174/' target='_blank'>https://data.bs.ch/explore/dataset/100174/</a></li><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href='https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen' target='_blank'>https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen</a> </li><li>Genaue Standorte aller Sensoren: <a href='https://data.bs.ch/explore/dataset/100114/' target='_blank'>https://data.bs.ch/explore/dataset/100114/</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href='https://data.bs.ch/explore/?refine.tags=smarte+strasse' target='_blank'>https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><b>Hinweis: <br>Die Luft-Sensoren an der Gundeldingerstrasse wurden am 29.6.23 abmontiert. Seit Anfang/Mitte Juni wurden keine Daten mehr erhoben.</b><br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100178)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +107,21 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100178`
+- **Title** `Smarte Strasse: Luftqualität Vergleichsmessungen`
+- **Description** `<p>Das <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene" target="_blank">Lufthygieneamt beider Basel</a> (LHA) testet im Projekt «Smarte Strasse» kosteneffiziente Mikrosensoren auf ihre Genauigkeit und Zuverlässigkeit. Der installierte Sensor vom Typ «Nubo» der Firma Sensirion AG ist in der Lage, die Konzentration verschiedener Schadstoffe in der Luft in Echtzeit zu ermitteln. Gemessen werden die Gehalte der Gase Stickstoffdioxid (NO2) und Ozon (O3), sowie die feinere Fraktion des Feinstaubs «PM2.5». Dieser Datensatz enthält die Daten von drei «Nubo»- Sensoren, welche an den permanenten Messstationen des LHA am St. Johanns-Platz, an der Feldbergstrasse und auf der Autobahn A2 in der Hard installiert und gegen die Referenzmessgeräte des LHA verglichen werden.</p><p>Genaue Standorte dieser Sensoren: </p><ul><li>Feldbergstrasse: 2611747 / 1268491, <a href="https://map.geo.admin.ch/?X=268491&amp;Y=611747&amp;zoom=9&amp;lang=de&amp;topic=ech&amp;bgLayer=ch.swisstopo.pixelkarte-farbe&amp;crosshair=bowl&amp;layers=ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege,ch.astra.wanderland-sperrungen_umleitungen&amp;layers_opacity=1,1,1,0.8,0.8&amp;layers_visibility=false,false,false,false,false&amp;layers_timestamp=18641231,,,," target="_blank">Kartenansicht</a></li><li>St. Johanns-Platz: 2610790 / 1268370, <a href="https://map.geo.admin.ch/?X=268370&amp;Y=610790&amp;zoom=9&amp;lang=de&amp;topic=ech&amp;bgLayer=ch.swisstopo.pixelkarte-farbe&amp;crosshair=bowl&amp;layers=ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege,ch.astra.wanderland-sperrungen_umleitungen&amp;layers_opacity=1,1,1,0.8,0.8&amp;layers_visibility=false,false,false,false,false&amp;layers_timestamp=18641231,,,," target="_blank">Kartenansicht</a></li><li>A2 Hard: 2615839 / 1265282, <a href="https://map.geo.admin.ch/?X=265282&amp;Y=615839&amp;zoom=9&amp;lang=de&amp;topic=ech&amp;bgLayer=ch.swisstopo.pixelkarte-farbe&amp;crosshair=bowl&amp;layers=ch.swisstopo.zeitreihen,ch.bfs.gebaeude_wohnungs_register,ch.bav.haltestellen-oev,ch.swisstopo.swisstlm3d-wanderwege,ch.astra.wanderland-sperrungen_umleitungen&amp;layers_opacity=1,1,1,0.8,0.8&amp;layers_visibility=false,false,false,false,false&amp;layers_timestamp=18641231,,,," target="_blank">Kartenansicht</a></li></ul><p>Weitere Informationen zur Luftqualität in der Region Basel sind auf <a href="https://www.luftqualitaet.ch" target="_blank">www.luftqualitaet.ch</a>
+ verfügbar. Hintergrundinformationen zu Ozon und Feinstaub auf den Webseiten <a href="https://ozon-info.ch/" target="_blank">www.ozon-info.ch</a> und <a href="https://feinstaub.ch/" target="_blank">www.feinstaub.ch</a>. Angaben zu den gesundheitlichen Auswirkungen der Luftverschmutzung auf der Webseite <a href="https://www.swisstph.ch/de/projects/ludok/healtheffects/" target="_blank">https://www.swisstph.ch/de/projects/ludok/healtheffects/</a>.</p><p class="">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</p><ul><li>Die Luftqualitäts-Daten der Sensoren an der smarten Strasse finden Sie hier: <a href="https://data.bs.ch/explore/dataset/100093/" target="_blank">https://data.bs.ch/explore/dataset/100093/</a> </li><li>Die Maximalwerte (O3) und Mittelwerte (NO2, PM 2.5) des Vortages sind zudem unter folgendem Datensatz zu finden: <a href="https://data.bs.ch/explore/dataset/100174/" target="_blank">https://data.bs.ch/explore/dataset/100174/</a></li><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href="https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen" target="_blank">https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen</a> </li><li>Genaue Standorte aller Sensoren: <a href="https://data.bs.ch/explore/dataset/100114/" target="_blank">https://data.bs.ch/explore/dataset/100114/</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><b>Hinweis: <br>Die Luft-Sensoren an der Gundeldingerstrasse wurden am 29.6.23 abmontiert. Seit Anfang/Mitte Juni wurden keine Daten mehr erhoben.</b><br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-02-17`
+- **Modified** `2023-06-29T07:45:18+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2022-02-12T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-06-28T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Smarte Strasse', 'Luftqualität', 'Feinstaub', 'PM2.5', 'O3', 'NO2']`
+- **Publisher** `Lufthygieneamt beider Basel`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +147,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100178/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

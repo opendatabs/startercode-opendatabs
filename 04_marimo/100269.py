@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100269 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100269.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100269"""
+TITLE = """Temperatur Wiese"""
+DESCRIPTION = """<p>Der Datensatz zeigt die stündlichen Temperaturwerte der Wiese an.</p><p>Koordinaten: <a href='https://map.geo.bs.ch/?lang=de&amp;baselayer_ref=Grundkarte%20farbig&amp;map_x=2611543&amp;map_y=1270112&amp;map_zoom=8&amp;rl_features=Fp(fjytj-wy78T~n*Standort'c*%2523DB4436'a*0'o*0.2'm*false'b*false's*14'k*2)' target='_blank'>47.581638577259945, 7.59193858146811</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100269)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100269`
+- **Title** `Temperatur Wiese`
+- **Description** `<p>Der Datensatz zeigt die stündlichen Temperaturwerte der Wiese an.</p><p>Koordinaten: <a href="https://map.geo.bs.ch/?lang=de&amp;baselayer_ref=Grundkarte%20farbig&amp;map_x=2611543&amp;map_y=1270112&amp;map_zoom=8&amp;rl_features=Fp(fjytj-wy78T~n*Standort'c*%2523DB4436'a*0'o*0.2'm*false'b*false's*14'k*2)" target="_blank">47.581638577259945, 7.59193858146811</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-05-15`
+- **Modified** `2025-09-16T08:30:18+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2023-01-23T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-14T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Fluss']`
+- **Publisher** `Tiefbauamt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100269/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

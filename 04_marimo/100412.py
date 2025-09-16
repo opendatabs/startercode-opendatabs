@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100412 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100412.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100412"""
+TITLE = """Befragung 55plus (2023)"""
+DESCRIPTION = """Antworten der kantonalen Bevölkerunsgbefragung von Personen ab 55 Jahren, wird alle vier Jahre durchgeführt. <br><br> Dieser Datensatz enthält pro Zeile eine Antwort einer Person zu einer Frage der Befragung. Die Daten können in anderen Formaten als ZIP Datei hier heruntergeladen werden: <a href='https://data-bs.ch/stata/befragungen/55plus/2023.zip'>https://data-bs.ch/stata/befragungen/55plus/2023.zip</a> <br>Eine Vorschau der Daten, die pro Zeile alle Antworten einer Person enthält, sind hier zu finden: <a href='https://datatools.bs.ch/Befragung_55plus_2023'>https://datatools.bs.ch/Befragung_55plus_2023</a><br><br> Weitere Informationen zur Befragung sind im Statistikportal abgebildet:  <a href='https://statistik.bs.ch/suche?search={'query':'2023','filterTheme':'successor-50.4'}'>https://statistik.bs.ch/suche?search={'query':'2023','filterTheme':'successor-50.4'}</a>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100412)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100412`
+- **Title** `Befragung 55plus (2023)`
+- **Description** `Antworten der kantonalen Bevölkerunsgbefragung von Personen ab 55 Jahren, wird alle vier Jahre durchgeführt. <br><br> Dieser Datensatz enthält pro Zeile eine Antwort einer Person zu einer Frage der Befragung. Die Daten können in anderen Formaten als ZIP Datei hier heruntergeladen werden: <a href="https://data-bs.ch/stata/befragungen/55plus/2023.zip">https://data-bs.ch/stata/befragungen/55plus/2023.zip</a> <br>Eine Vorschau der Daten, die pro Zeile alle Antworten einer Person enthält, sind hier zu finden: <a href="https://datatools.bs.ch/Befragung_55plus_2023">https://datatools.bs.ch/Befragung_55plus_2023</a><br><br> Weitere Informationen zur Befragung sind im Statistikportal abgebildet:  <a href='https://statistik.bs.ch/suche?search={"query":"2023","filterTheme":"successor-50.4"}'>https://statistik.bs.ch/suche?search={"query":"2023","filterTheme":"successor-50.4"}</a>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-06-13`
+- **Modified** `2025-05-12T13:44:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2022-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
+- **Themes** `['Bevölkerung']`
+- **Keywords** `['Alter', 'Gemeinden', 'Wohnen', 'Demographie', 'Geschlecht', 'Lebensqualität', 'Einkommen', 'Befragungen']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100412/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100308 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100308.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100308"""
+TITLE = """Grosser Rat: Mitgliedschaften in Gremien"""
+DESCRIPTION = """<p style='font-family: sans-serif;'>Dieser Datensatz zeigt die Mitgliedschaften in Gremien der Ratsmitglieder des Grossen Rates des Kantons Basel-Stadt.</p><p style='font-family: sans-serif;'>Funktionen in Gremien werden als separate Mitgliedschaft eingetragen, damit gelesen werden kann in welchem Zeitraum eine Ratsmitglied einer besonderen Funktion nachging.</p><p style='font-family: sans-serif;'>Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href='https://grosserrat.bs.ch' target='_blank'>https://grosserrat.bs.ch</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100308)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100308`
+- **Title** `Grosser Rat: Mitgliedschaften in Gremien`
+- **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die Mitgliedschaften in Gremien der Ratsmitglieder des Grossen Rates des Kantons Basel-Stadt.</p><p style="font-family: sans-serif;">Funktionen in Gremien werden als separate Mitgliedschaft eingetragen, damit gelesen werden kann in welchem Zeitraum eine Ratsmitglied einer besonderen Funktion nachging.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-09-28`
+- **Modified** `2025-09-11T03:01:36+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik', 'Verwaltung']`
+- **Keywords** `['Regierungsrat', 'Grosser Rat', 'Gremien', 'Parlament']`
+- **Publisher** `Parlamentsdienst des Grossen Rates`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100308/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

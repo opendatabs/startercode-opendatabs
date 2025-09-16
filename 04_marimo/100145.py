@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100145 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100145.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100145"""
+TITLE = """Coronavirus (Covid-19): Massentests an Schulen der Primar- und Sekundarstufe I"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt die auf SARS-CoV-2 getesteten Klassen-Pools aus baselstädtischen Schulen der Primarstufe und der Sekundarstufe I. Es wird jeweils die Anzahl getesteter Pools sowie die Test-Positivitätsrate pro Woche angegeben. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href='https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co' target='_blank'>https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p><p>Dieser Datensatz wird seit Ende Februar 2022 nicht mehr aktualisiert. Seit Mitte März 2022 werden die Daten zu Tests in Basler Schulen in einem neuen Datensatz veröffentlich: <a href='https://data.bs.ch/explore/dataset/100183/' target='_blank'>https://data.bs.ch/explore/dataset/100183/</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100145)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100145`
+- **Title** `Coronavirus (Covid-19): Massentests an Schulen der Primar- und Sekundarstufe I`
+- **Description** `<p>Dieser Datensatz zeigt die auf SARS-CoV-2 getesteten Klassen-Pools aus baselstädtischen Schulen der Primarstufe und der Sekundarstufe I. Es wird jeweils die Anzahl getesteter Pools sowie die Test-Positivitätsrate pro Woche angegeben. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p><p>Dieser Datensatz wird seit Ende Februar 2022 nicht mehr aktualisiert. Seit Mitte März 2022 werden die Daten zu Tests in Basler Schulen in einem neuen Datensatz veröffentlich: <a href="https://data.bs.ch/explore/dataset/100183/" target="_blank">https://data.bs.ch/explore/dataset/100183/</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-06-10`
+- **Modified** `2025-04-28T07:46:05+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2021-05-16T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2022-02-27T23:00:00+00:00`
+- **Themes** `['Gesundheit']`
+- **Keywords** `['SARS-CoV-2', 'Virus', 'Corona', 'Coronavirus', 'COVID-19', 'Test', 'PCR', 'Schule', 'Schüler', 'Schülerin', 'Lehrer', 'Lehrerin']`
+- **Publisher** `Medizinische Dienste`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100145/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

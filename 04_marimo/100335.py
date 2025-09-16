@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100335 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100335.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,14 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100335"""
+TITLE = """Baustellen"""
+DESCRIPTION = """<p>Dieser Datensatz enthält umfassende Informationen zu aktuellen und bevorstehende Baustellen (Baubewilligung erteilt) auf öffentlichem Grund im Kanton Basel-Stadt. Er enthält Informationen wie z. B. an welcher Strasse sich die Baustelle befindet, die Beschreibung des Projektes, mögliche Zusatzinformationen, Links zum Projekt und zu Anwohnerinformationen. Die Fallnummer der Allmendbewilligung und der Link zum OGD-Datensatz mit den Allmendbewilligungen sind ebenfalls im Datensatz aufgeführt.</p><p>Dieser Datensatz ist maschinenlesbar und barrierefrei. </p><p>
+</p><p>
+Diese Daten werden vom Tiefbauamt des Kantons Basel-Stadt zur Verfügung gestellt. Die Baustellen finden Sie auch auf einer interaktiven Karte unter <a href='https://baustellen.bs.ch' target='_blank'>https://baustellen.bs.ch</a>. </p><p></p><p></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100335)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +108,22 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100335`
+- **Title** `Baustellen`
+- **Description** `<p>Dieser Datensatz enthält umfassende Informationen zu aktuellen und bevorstehende Baustellen (Baubewilligung erteilt) auf öffentlichem Grund im Kanton Basel-Stadt. Er enthält Informationen wie z. B. an welcher Strasse sich die Baustelle befindet, die Beschreibung des Projektes, mögliche Zusatzinformationen, Links zum Projekt und zu Anwohnerinformationen. Die Fallnummer der Allmendbewilligung und der Link zum OGD-Datensatz mit den Allmendbewilligungen sind ebenfalls im Datensatz aufgeführt.</p><p>Dieser Datensatz ist maschinenlesbar und barrierefrei. </p><p>
+</p><p>
+Diese Daten werden vom Tiefbauamt des Kantons Basel-Stadt zur Verfügung gestellt. Die Baustellen finden Sie auch auf einer interaktiven Karte unter <a href="https://baustellen.bs.ch" target="_blank">https://baustellen.bs.ch</a>. </p><p></p><p></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-07-04`
+- **Modified** `2025-09-13T00:01:24+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bau- und Wohnungswesen']`
+- **Keywords** `['Baustelle', 'bauen', 'Strasse', 'Allmendbewilligung', 'Baubeginn', 'Bauende']`
+- **Publisher** `Tiefbauamt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +149,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100335/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

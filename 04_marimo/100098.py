@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100098 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100098.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100098"""
+TITLE = """Wahllokale Kanton Basel-Stadt"""
+DESCRIPTION = """<p>In diesem Datensatz sind die Wahllokale des Kantons Basel-Stadt aufgeführt, zusammen mit Informationen zu den entsprechenden Wahllokal-IDs, Gemeinde-IDs und den zugehörigen Gemeinden.<br>Insgesamt enthält der Datensatz Informationen zu verschiedenen Wahllokalen im Kanton Basel-Stadt, einschließlich der Angaben zu brieflichen, elektronischen und persönlichen Stimmenden an den einzelnen Standorten.<br></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100098)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100098`
+- **Title** `Wahllokale Kanton Basel-Stadt`
+- **Description** `<p>In diesem Datensatz sind die Wahllokale des Kantons Basel-Stadt aufgeführt, zusammen mit Informationen zu den entsprechenden Wahllokal-IDs, Gemeinde-IDs und den zugehörigen Gemeinden.<br>Insgesamt enthält der Datensatz Informationen zu verschiedenen Wahllokalen im Kanton Basel-Stadt, einschließlich der Angaben zu brieflichen, elektronischen und persönlichen Stimmenden an den einzelnen Standorten.<br></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-07-26`
+- **Modified** `2025-09-12T08:30:50+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik']`
+- **Keywords** `['Abstimmung', 'Wahlen', 'Demokratie']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100098/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

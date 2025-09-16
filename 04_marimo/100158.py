@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100158 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100158.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,13 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100158"""
+TITLE = """Überwachung Luftqualität Sanierung Areal Walkeweg"""
+DESCRIPTION = """<div>Immobilien Basel-Stadt (IBS) erstellt auf dem Familiengarten Areal Walkeweg Nord in Basel eine Neubebauung mit Wohneigentum und Schule. Bereiche des Neubauprojektes sind im Kataster der belasteten Standorte des Kantons Basel-Stadt geführt. Es handelt sich dabei um eine ehemalige Kiesentnahmestelle (ab ca. 1892), welche in Etappen ab 1917 sukzessive wieder mit Abfall aufgefüllt wurde. Im Rahmen des Projekts ist eine Totalsanierung mit Bodenaustausch am Standort vorgesehen.</div><div>Neben behördlichen Auflagen und Schutzmassnahmen, welche während den baulichen Massnahmen im Untergrund eine Belastung der Umgebung (Schutz der Umwelt und Allgemeinbevölkerung) mindern sollen, sieht das Lufthygieneamt beider Basel (LHA) vor, während der relevanten baulichen Eingriffe die Immissionen mittels Messungen der Luft zu überwachen. Auf Basis der Ergebnisse der technischen Untersuchung des Areals wurde in erster Linie die Staubdeposition (mittels Bergerhoff-Methode) und flüchtige organische Stoffe (mittels Passivsammler) als zu überwachende Parameter ausgewählt. </div><div>Für die vorliegende Überwachung wurden Warn- und Interventionswerte festgelegt. Die Interventionswerte beruhen auf behördlichen Grenzwerten und toxikologischen Studien. Der Warnwert wurde bei jeweils 50 % des Interventionswertes festgelegt.</div><div><br></div><div>Änderungsprotokoll:<br>27.06.2023 - Aktualisierungsintervall von 'MONTHLY' auf 'NEVER' geändert.</div><div>
+</div>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100158)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +107,21 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100158`
+- **Title** `Überwachung Luftqualität Sanierung Areal Walkeweg`
+- **Description** `<div>Immobilien Basel-Stadt (IBS) erstellt auf dem Familiengarten Areal Walkeweg Nord in Basel eine Neubebauung mit Wohneigentum und Schule. Bereiche des Neubauprojektes sind im Kataster der belasteten Standorte des Kantons Basel-Stadt geführt. Es handelt sich dabei um eine ehemalige Kiesentnahmestelle (ab ca. 1892), welche in Etappen ab 1917 sukzessive wieder mit Abfall aufgefüllt wurde. Im Rahmen des Projekts ist eine Totalsanierung mit Bodenaustausch am Standort vorgesehen.</div><div>Neben behördlichen Auflagen und Schutzmassnahmen, welche während den baulichen Massnahmen im Untergrund eine Belastung der Umgebung (Schutz der Umwelt und Allgemeinbevölkerung) mindern sollen, sieht das Lufthygieneamt beider Basel (LHA) vor, während der relevanten baulichen Eingriffe die Immissionen mittels Messungen der Luft zu überwachen. Auf Basis der Ergebnisse der technischen Untersuchung des Areals wurde in erster Linie die Staubdeposition (mittels Bergerhoff-Methode) und flüchtige organische Stoffe (mittels Passivsammler) als zu überwachende Parameter ausgewählt. </div><div>Für die vorliegende Überwachung wurden Warn- und Interventionswerte festgelegt. Die Interventionswerte beruhen auf behördlichen Grenzwerten und toxikologischen Studien. Der Warnwert wurde bei jeweils 50 % des Interventionswertes festgelegt.</div><div><br></div><div>Änderungsprotokoll:<br>27.06.2023 - Aktualisierungsintervall von "MONTHLY" auf "NEVER" geändert.</div><div>
+</div>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2021-12-15`
+- **Modified** `2022-10-04T10:00:53+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2021-02-03T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2022-06-26T22:00:00+00:00`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Luftqualität']`
+- **Publisher** `Lufthygieneamt beider Basel`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +147,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100158/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

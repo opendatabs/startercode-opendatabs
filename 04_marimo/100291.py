@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100291 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100291.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100291"""
+TITLE = """Gewässerschutzkarte: Gewässerschutzbereiche"""
+DESCRIPTION = """Die Gewässerschutzkarte ist das zentrale planerische Instrument für den praktischen Vollzug des Grundwasserschutzes. Dargestellt sind die Gewässerschutzbereiche und die Grundwasserschutzzonen."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100291)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100291`
+- **Title** `Gewässerschutzkarte: Gewässerschutzbereiche`
+- **Description** `Die Gewässerschutzkarte ist das zentrale planerische Instrument für den praktischen Vollzug des Grundwasserschutzes. Dargestellt sind die Gewässerschutzbereiche und die Grundwasserschutzzonen.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-04-26`
+- **Modified** `2025-05-21T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Geographie', 'Raum und Umwelt']`
+- **Keywords** `['grundwasserschutz', 'gewasserschutz', 'grundwasser', 'trinkwasser', 'gewasserschutzrecht']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100291/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

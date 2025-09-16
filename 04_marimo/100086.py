@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100086 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100086.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100086"""
+TITLE = """Grosser Rat: Politische Vorstösse"""
+DESCRIPTION = """<p>Dieser Datensatz ermöglichte einen thematischen Überblick über die politischen Vorstösse des Grossen Rats des Kantons Basel-Stadt. Es sind darin Geschäfte zwischen Januar 2019 und März 2024 enthalten, welche überwiesen und manuell mit Thema kategorisiert worden sind. Die Zuteilung zu Themen erfolgte durch die Kantons- und Stadtentwicklung. Eine Datenvisualisierung war unter <a href='https://politmonitor.bs.ch' target='_blank'>politmonitor.bs.ch</a> auffindbar.</p><p>Wichtig: Seit März 2024 wird dieser Datensatz nicht mehr aktualisiert, und die Visualisierung ist nicht mehr einsehbar. Wir arbeiten daran, die politischen Vorstösse neu mittels KI zu kategorisieren, und die Visualisierung wieder zu publizieren, und hoffen, dies im Verlauf des Jahres 2025 abschliessen zu können. </p><p>Siehe auch Datensatz 'Grosser Rat: Geschäfte':  (<a href='https://data.bs.ch/explore/dataset/100311' target='_blank'>https://data.bs.ch/explore/dataset/100311</a>)</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100086)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100086`
+- **Title** `Grosser Rat: Politische Vorstösse`
+- **Description** `<p>Dieser Datensatz ermöglichte einen thematischen Überblick über die politischen Vorstösse des Grossen Rats des Kantons Basel-Stadt. Es sind darin Geschäfte zwischen Januar 2019 und März 2024 enthalten, welche überwiesen und manuell mit Thema kategorisiert worden sind. Die Zuteilung zu Themen erfolgte durch die Kantons- und Stadtentwicklung. Eine Datenvisualisierung war unter <a href="https://politmonitor.bs.ch" target="_blank">politmonitor.bs.ch</a> auffindbar.</p><p>Wichtig: Seit März 2024 wird dieser Datensatz nicht mehr aktualisiert, und die Visualisierung ist nicht mehr einsehbar. Wir arbeiten daran, die politischen Vorstösse neu mittels KI zu kategorisieren, und die Visualisierung wieder zu publizieren, und hoffen, dies im Verlauf des Jahres 2025 abschliessen zu können. </p><p>Siehe auch Datensatz "Grosser Rat: Geschäfte":  (<a href="https://data.bs.ch/explore/dataset/100311" target="_blank">https://data.bs.ch/explore/dataset/100311</a>)</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-06-29`
+- **Modified** `2025-09-16T02:00:09+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2019-01-08T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-03-05T23:00:00+00:00`
+- **Themes** `['Politik', 'Gesetzgebung']`
+- **Keywords** `['Parlament', 'Legislative', 'Geschäft', 'Grossrat', 'Politiker', 'Partei', 'Grossrätin']`
+- **Publisher** `Parlamentsdienst des Grossen Rates`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100086/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

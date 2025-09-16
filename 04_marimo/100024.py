@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100024 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100024.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100024"""
+TITLE = """Kinder- und Jugendangebote"""
+DESCRIPTION = """Die offene Kinder- und Jugendarbeit (OKJA) ist ein Freizeitangebot für Kindern ab 5 Jahren bis jungen Erwachsenen im Alter von bis 25 Jahren. Sie umfasst Angebote wie Jugendzentren, mobile Jugendarbeit, Abenteuerspielplätze oder Spielmobile. Spezifisches Charakteristikum ist, dass die Angebote offen, freiwillig und partizipativ organisiert sind."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100024)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100024`
+- **Title** `Kinder- und Jugendangebote`
+- **Description** `Die offene Kinder- und Jugendarbeit (OKJA) ist ein Freizeitangebot für Kindern ab 5 Jahren bis jungen Erwachsenen im Alter von bis 25 Jahren. Sie umfasst Angebote wie Jugendzentren, mobile Jugendarbeit, Abenteuerspielplätze oder Spielmobile. Spezifisches Charakteristikum ist, dass die Angebote offen, freiwillig und partizipativ organisiert sind.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2019-11-06`
+- **Modified** `2021-07-16T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Bevölkerung', 'Geographie', 'Tourismus']`
+- **Keywords** `['Sport', 'Turnen', 'Jugenarbeit', 'Freizeit', 'Treffpunkt']`
+- **Publisher** `Jugend, Familie und Sport`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100024/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

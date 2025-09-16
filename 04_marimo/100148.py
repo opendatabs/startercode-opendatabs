@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100148 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100148.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100148"""
+TITLE = """Sammlung Europa"""
+DESCRIPTION = """<div><font color='#404040' face='Helvetica, sans-serif'>Das Museum der Kulturen Basel (MKB) ist das grösste ethnologische Museum der Schweiz und eines der bedeutendsten seiner Art in Europa. Seine Sammlung geniesst Weltruf und zählt mehr als 340 000 Objekte. Rund 75 000 Objekte dieser Sammlung gehören zur Abteilung Europa. Sie wurden seit 1904 bis heute aus allen Teilen des Kontinents zusammengetragen.</font></div><div><font color='#404040' face='Helvetica, sans-serif'><br></font></div><div><font color='#404040' face='Helvetica, sans-serif'>Die publizierten Daten sind mehrheitlich unbereinigt. Sowohl bei der erstmaligen Katalogisierung der Objekte, wie auch bei der Abschrift in die Datenbank gab es Inkonsistenzen, Fehler und Auslassungen. Darin enthaltene Terminologien können inzwischen unzutreffend, veraltet oder rassistisch beleidigend sein. </font></div><div><font color='#404040' face='Helvetica, sans-serif'><br></font></div><div><font color='#404040' face='Helvetica, sans-serif'>Der Code zur Datenbereinigung ist hier (https://github.com/opendatabs/data-processing/blob/master/mkb_sammlung_europa/etl.py) zu finden. Gerne nehmen wir Ergänzungen dazu via Pull Request an. <br></font></div><div><br></div>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100148)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100148`
+- **Title** `Sammlung Europa`
+- **Description** `<div><font color="#404040" face="Helvetica, sans-serif">Das Museum der Kulturen Basel (MKB) ist das grösste ethnologische Museum der Schweiz und eines der bedeutendsten seiner Art in Europa. Seine Sammlung geniesst Weltruf und zählt mehr als 340 000 Objekte. Rund 75 000 Objekte dieser Sammlung gehören zur Abteilung Europa. Sie wurden seit 1904 bis heute aus allen Teilen des Kontinents zusammengetragen.</font></div><div><font color="#404040" face="Helvetica, sans-serif"><br></font></div><div><font color="#404040" face="Helvetica, sans-serif">Die publizierten Daten sind mehrheitlich unbereinigt. Sowohl bei der erstmaligen Katalogisierung der Objekte, wie auch bei der Abschrift in die Datenbank gab es Inkonsistenzen, Fehler und Auslassungen. Darin enthaltene Terminologien können inzwischen unzutreffend, veraltet oder rassistisch beleidigend sein. </font></div><div><font color="#404040" face="Helvetica, sans-serif"><br></font></div><div><font color="#404040" face="Helvetica, sans-serif">Der Code zur Datenbereinigung ist hier (https://github.com/opendatabs/data-processing/blob/master/mkb_sammlung_europa/etl.py) zu finden. Gerne nehmen wir Ergänzungen dazu via Pull Request an. <br></font></div><div><br></div>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-02-10`
+- **Modified** `2025-04-24T11:06:17+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport']`
+- **Keywords** `['Kultur', 'Kunstobjekte', 'Ethnologie']`
+- **Publisher** `Museum der Kulturen Basel`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100148/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

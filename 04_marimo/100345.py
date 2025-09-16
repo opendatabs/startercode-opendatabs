@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100345 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100345.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100345"""
+TITLE = """Abstimmungen Details"""
+DESCRIPTION = """<p>Dieser Datensatz zeigt die Resultate aller Volksabstimmungen seit dem 27. September 2020 für den Kanton Basel-Stadt auf Ebene Wahllokal.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href='https://www.kantonsblatt.ch/#!/search/publications' target='_blank'>Kantonsblatt</a> (<a href='https://www.kantonsblatt.ch/#!/search/publications' target='_blank'>https://www.kantonsblatt.ch/#!/search/publications</a>) des Kantons Basel-Stadt publiziert werden.</p><p>Die Gesamtresultate der Abstimmungen und die Resultate auf Gemeindeebene findet man im Datensatz <a href='https://data.bs.ch/explore/dataset/100346//' target='_blank'>'Abstimmungen Kennzahlen'</a> (<a href='https://data.bs.ch/explore/dataset/100346/' target='_blank'>https://data.bs.ch/explore/dataset/100346/</a>)</p><p>Eine Liste der Wahllokale findet man im Datensatz '<a href='https://data.bs.ch/explore/dataset/100098//' target='_blank'>Wahllokale Kanton Basel-Stadt</a>' (<a href='https://data.bs.ch/explore/dataset/100098/' target='_blank'>https://data.bs.ch/explore/dataset/100098/</a>)</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100345)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100345`
+- **Title** `Abstimmungen Details`
+- **Description** `<p>Dieser Datensatz zeigt die Resultate aller Volksabstimmungen seit dem 27. September 2020 für den Kanton Basel-Stadt auf Ebene Wahllokal.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">Kantonsblatt</a> (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">https://www.kantonsblatt.ch/#!/search/publications</a>) des Kantons Basel-Stadt publiziert werden.</p><p>Die Gesamtresultate der Abstimmungen und die Resultate auf Gemeindeebene findet man im Datensatz <a href="https://data.bs.ch/explore/dataset/100346//" target="_blank">"Abstimmungen Kennzahlen"</a> (<a href="https://data.bs.ch/explore/dataset/100346/" target="_blank">https://data.bs.ch/explore/dataset/100346/</a>)</p><p>Eine Liste der Wahllokale findet man im Datensatz "<a href="https://data.bs.ch/explore/dataset/100098//" target="_blank">Wahllokale Kanton Basel-Stadt</a>" (<a href="https://data.bs.ch/explore/dataset/100098/" target="_blank">https://data.bs.ch/explore/dataset/100098/</a>)</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-06-08`
+- **Modified** `2025-05-18T15:58:09+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2020-09-26T22:00:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik']`
+- **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100345/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

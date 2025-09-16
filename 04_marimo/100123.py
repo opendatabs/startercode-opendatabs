@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100123 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100123.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100123"""
+TITLE = """Lohntabelle des Kantons Basel-Stadt"""
+DESCRIPTION = """Jahreslohn (inkl. 13. Monatslohn), Monatslohn, Stundenlohn nach Lohnklassen, Lohnstufe und Jahr. Da es seit dem 01.07.2022 einen kantonalen Mindestlohn gibt, wurden im Jahr 2022 zwei Lohntabellen publiziert. Bei der Lohntabelle ab dem Gültigkeitsdatum 01.07.2022 wurden die Löhne nach dem Mindestlohngesetz angepasst."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100123)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100123`
+- **Title** `Lohntabelle des Kantons Basel-Stadt`
+- **Description** `Jahreslohn (inkl. 13. Monatslohn), Monatslohn, Stundenlohn nach Lohnklassen, Lohnstufe und Jahr. Da es seit dem 01.07.2022 einen kantonalen Mindestlohn gibt, wurden im Jahr 2022 zwei Lohntabellen publiziert. Bei der Lohntabelle ab dem Gültigkeitsdatum 01.07.2022 wurden die Löhne nach dem Mindestlohngesetz angepasst.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-10-17`
+- **Modified** `2025-09-16T07:16:46+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2008-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Verwaltung']`
+- **Keywords** `['Staatspersonal', 'Lohn', 'Gehalt']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100123/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

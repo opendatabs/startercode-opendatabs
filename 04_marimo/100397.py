@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100397 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100397.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,15 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100397"""
+TITLE = """Schulferien Kanton Basel-Stadt"""
+DESCRIPTION = """<p>Dieser Datensatz listet alle Schulferien der Schülerinnen und Schüler des Kantons Basel-Stadt auf. Einige weitere schulfreie Tage sind nicht enthalten. Die Schülerinnen und Schüler haben nämlich zusätzlich frei<br>
+</p><ul><li>an den gesetzlichen Feiertagen: <a href='https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt'>https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt</a> und<br></li><li>an der Jahresversammlung der Kantonalen Schulkonferenz 
+(obligatorische Veranstaltung für Lehr- und Fachpersonen).</li></ul>Daten zu Schulferien von vergangenen Jahren sind auf edudoc.ch (<a href='https://edudoc.ch/search?cc=idesferienliste&amp;ln=de&amp;c=idesferienliste' target='_blank'>https://edudoc.ch/search?cc=idesferienliste&amp;ln=de&amp;c=idesferienliste</a>) verfügbar. Interessierte können uns gerne eine Anfrage für diese Daten in maschinenlesbarem Format schicken.<p></p><p>Um den Kalender als iCal zu abonnieren, kopieren Sie bitte den folgenden Link und fügen ihn in Ihrem bevorzugten Kalenderprogramm unter der Funktion „Kalender abonnieren“ ein. WICHTIG: Verwenden Sie unbedingt die Abonnieren-Option, damit der Kalender automatisch mit den neuesten Daten aktualisiert wird: <a href='https://data-bs.ch/stata/ed/schulferien/SchulferienBS.ics' target='_blank'>https://data-bs.ch/stata/ed/schulferien/SchulferienBS.ics</a> .</p><p>Die Daten werden alle 4 Jahre um weitere 4 Schuljahre ergänzt.</p><p>Das zugehörige ETL-Skript ist auf Github (<a href='https://github.com/opendatabs/data-processing/tree/master/ed_schulferien' target='_blank'>https://github.com/opendatabs/data-processing/tree/master/ed_schulferien</a>) zu finden.
+</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100397)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +109,23 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100397`
+- **Title** `Schulferien Kanton Basel-Stadt`
+- **Description** `<p>Dieser Datensatz listet alle Schulferien der Schülerinnen und Schüler des Kantons Basel-Stadt auf. Einige weitere schulfreie Tage sind nicht enthalten. Die Schülerinnen und Schüler haben nämlich zusätzlich frei<br>
+</p><ul><li>an den gesetzlichen Feiertagen: <a href="https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt">https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt</a> und<br></li><li>an der Jahresversammlung der Kantonalen Schulkonferenz 
+(obligatorische Veranstaltung für Lehr- und Fachpersonen).</li></ul>Daten zu Schulferien von vergangenen Jahren sind auf edudoc.ch (<a href="https://edudoc.ch/search?cc=idesferienliste&amp;ln=de&amp;c=idesferienliste" target="_blank">https://edudoc.ch/search?cc=idesferienliste&amp;ln=de&amp;c=idesferienliste</a>) verfügbar. Interessierte können uns gerne eine Anfrage für diese Daten in maschinenlesbarem Format schicken.<p></p><p>Um den Kalender als iCal zu abonnieren, kopieren Sie bitte den folgenden Link und fügen ihn in Ihrem bevorzugten Kalenderprogramm unter der Funktion „Kalender abonnieren“ ein. WICHTIG: Verwenden Sie unbedingt die Abonnieren-Option, damit der Kalender automatisch mit den neuesten Daten aktualisiert wird: <a href="https://data-bs.ch/stata/ed/schulferien/SchulferienBS.ics" target="_blank">https://data-bs.ch/stata/ed/schulferien/SchulferienBS.ics</a> .</p><p>Die Daten werden alle 4 Jahre um weitere 4 Schuljahre ergänzt.</p><p>Das zugehörige ETL-Skript ist auf Github (<a href="https://github.com/opendatabs/data-processing/tree/master/ed_schulferien" target="_blank">https://github.com/opendatabs/data-processing/tree/master/ed_schulferien</a>) zu finden.
+</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-12-13`
+- **Modified** `2025-09-16T03:00:17+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2024-09-27T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2032-08-07T22:00:00+00:00`
+- **Themes** `['Bevölkerung', 'Bildung, Wissenschaft']`
+- **Keywords** `['Schule', 'Lernen', 'Schüler', 'Lehrer']`
+- **Publisher** `Generalsekretariat`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +151,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100397/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

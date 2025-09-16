@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100256 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100256.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100256"""
+TITLE = """Nutzungsplan - Zonenplan Riehen:  Überlagernde Festlegungen"""
+DESCRIPTION = """Der Zonenplan legt Ort, Art und Mass der Bodennutzung für ein bestimmtes Gebiet parzellenscharf und grundeigentümerverbindlich fest. Zonenplan Riehen gemäss Beschluss des Riehener Einwohnerrats vom 27.11.2014 + 24.09.2015 und Genehmigung des Regierungsrates Basel-Stadt vom 7. Dezember 2016. Der Datensatz enthält den Zonenplan sowie die Perimeter der Bebauungspläne, der Speziellen Nutzungsvorschriften und des Nutzungsplans Stettenfeld.<br>Weitere Daten zum Thema ?Nutzungsplanung?: <a href='https://data.bs.ch/explore/?refine.tags=Nutzungsplanung'>https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100256)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100256`
+- **Title** `Nutzungsplan - Zonenplan Riehen:  Überlagernde Festlegungen`
+- **Description** `Der Zonenplan legt Ort, Art und Mass der Bodennutzung für ein bestimmtes Gebiet parzellenscharf und grundeigentümerverbindlich fest. Zonenplan Riehen gemäss Beschluss des Riehener Einwohnerrats vom 27.11.2014 + 24.09.2015 und Genehmigung des Regierungsrates Basel-Stadt vom 7. Dezember 2016. Der Datensatz enthält den Zonenplan sowie die Perimeter der Bebauungspläne, der Speziellen Nutzungsvorschriften und des Nutzungsplans Stettenfeld.<br>Weitere Daten zum Thema ?Nutzungsplanung?: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2023-01-06`
+- **Modified** `2024-07-19T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `1930-10-22T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-05-31T22:00:00+00:00`
+- **Themes** `['Geographie', 'Raum und Umwelt']`
+- **Keywords** `['Flächennutzungsplan', 'Naturschutzzonen', 'Bebauungsplan', 'Nutzungsplan']`
+- **Publisher** `Gemeinde Riehen`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100256/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

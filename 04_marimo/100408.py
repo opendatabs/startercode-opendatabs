@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100408 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100408.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100408"""
+TITLE = """Veränderte Wahlzettel der Grossratswahlen 20. Oktober 2024"""
+DESCRIPTION = """<p>Bei den Grossratswahlen im Kanton Basel-Stadt am 20. Oktober 2024 kandidierten 870 Personen (verfügbar unter <a href='https://data.bs.ch/explore/dataset/100385/' target='_blank'>https://data.bs.ch/explore/dataset/100385/</a>) für insgesamt 100 zu vergebende Sitze.</p><p> Es gingen insgesamt 42 640 gültige Wahlzettel ein, von denen 20 733 verändert wurden. Der Datensatz zeigt diese 20 733 Wahlzettel und jegliche Details dazu. </p><p>Leere Felder bei der Stimme bedeuten, dass das Feld leer gelassen wurde. Felder mit NULL bei der Stimme bedeuten, dass in diesem Wahlkreis weniger Stimmen zur Verfügung standen.</p><p>Die Listennummer 00 bedeutet, dass ein Wahlzettel ohne Bezeichnung ausgefüllt wurde (insgesamt 3 326 Wahlzettel). In diesem Fall werden leere Stimmen nicht gezählt.</p><p>Es gibt zwei Arten wie man einen Wahlzettel verändern kann: <br>Panaschieren bedeutet, dass Kandidierende von anderen Listen auf die ausgewählte Liste übertragen wurden. <br>Kumulieren bezeichnet das Mehrfachnennen eines Kandidierenden, wodurch diese mehr als eine Stimme erhält. <br>Im Datensatz wird 'p' für panaschiert und 'k' für kumuliert verwendet. Wenn ein Wahlzettel sowohl panaschiert als auch kumuliert wurde, wird ebenfalls 'p' ausgewiesen. </p><p><span>Die Wahlergebnisse sind in einem separaten Datensatz (</span><a 255);'='' 255,='' background-color:='' href='https://data.bs.ch/explore/dataset/100399/' rgb(255,='' target='_blank'>https://data.bs.ch/explore/dataset/100399/</a><span>) einsehbar, der die Verteilung der Stimmen und die gewählten Vertreter detailliert darstellt.</span></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100408)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100408`
+- **Title** `Veränderte Wahlzettel der Grossratswahlen 20. Oktober 2024`
+- **Description** `<p>Bei den Grossratswahlen im Kanton Basel-Stadt am 20. Oktober 2024 kandidierten 870 Personen (verfügbar unter <a href="https://data.bs.ch/explore/dataset/100385/" target="_blank">https://data.bs.ch/explore/dataset/100385/</a>) für insgesamt 100 zu vergebende Sitze.</p><p> Es gingen insgesamt 42 640 gültige Wahlzettel ein, von denen 20 733 verändert wurden. Der Datensatz zeigt diese 20 733 Wahlzettel und jegliche Details dazu. </p><p>Leere Felder bei der Stimme bedeuten, dass das Feld leer gelassen wurde. Felder mit NULL bei der Stimme bedeuten, dass in diesem Wahlkreis weniger Stimmen zur Verfügung standen.</p><p>Die Listennummer 00 bedeutet, dass ein Wahlzettel ohne Bezeichnung ausgefüllt wurde (insgesamt 3 326 Wahlzettel). In diesem Fall werden leere Stimmen nicht gezählt.</p><p>Es gibt zwei Arten wie man einen Wahlzettel verändern kann: <br>Panaschieren bedeutet, dass Kandidierende von anderen Listen auf die ausgewählte Liste übertragen wurden. <br>Kumulieren bezeichnet das Mehrfachnennen eines Kandidierenden, wodurch diese mehr als eine Stimme erhält. <br>Im Datensatz wird "p" für panaschiert und "k" für kumuliert verwendet. Wenn ein Wahlzettel sowohl panaschiert als auch kumuliert wurde, wird ebenfalls "p" ausgewiesen. </p><p><span>Die Wahlergebnisse sind in einem separaten Datensatz (</span><a 255);"="" 255,="" background-color:="" href="https://data.bs.ch/explore/dataset/100399/" rgb(255,="" target="_blank">https://data.bs.ch/explore/dataset/100399/</a><span>) einsehbar, der die Verteilung der Stimmen und die gewählten Vertreter detailliert darstellt.</span></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-12-06`
+- **Modified** `2025-04-28T08:23:07+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik', 'Bevölkerung']`
+- **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe', 'Parlament', 'Grosser Rat', 'Grossrat', 'Grossrätin']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100408/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100096 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100096.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100096"""
+TITLE = """Abfuhrtermine"""
+DESCRIPTION = """<p>Abfuhrtermine der Stadtreinigung (Tiefbauamt) der Stadt Basel. Siehe auch <a href='https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfuhrplaene' target='_blank'>https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfuhrplaene</a>. Abfuhranmeldung unter <a href='https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfaelle-abholen-lassen' target='_blank'>https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfaelle-abholen-lassen</a></p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100096)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100096`
+- **Title** `Abfuhrtermine`
+- **Description** `<p>Abfuhrtermine der Stadtreinigung (Tiefbauamt) der Stadt Basel. Siehe auch <a href="https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfuhrplaene" target="_blank">https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfuhrplaene</a>. Abfuhranmeldung unter <a href="https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfaelle-abholen-lassen" target="_blank">https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfaelle-abholen-lassen</a></p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2020-08-27`
+- **Modified** `2025-04-28T08:35:40+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `2017-01-01T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-01-01T23:00:00+00:00`
+- **Themes** `['Raum und Umwelt', 'Öffentliche Ordnung und Sicherheit', 'Verwaltung']`
+- **Keywords** `['Abfall', 'Recycling', 'Grüngut']`
+- **Publisher** `Tiefbauamt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100096/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

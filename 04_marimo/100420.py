@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100420 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100420.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100420"""
+TITLE = """Wasserverbrauch im Kanton Basel-Stadt und in Binningen seit 1951"""
+DESCRIPTION = """Der Datensatz „Wasserverbrauch im Kanton Basel-Stadt und in Binningen“ enthält Informationen zum Wasserverbrauch in dieser Region. Er umfasst jährliche Verbrauchsdaten seit 1951 sowie monatliche Verbrauchsdaten seit 2005. Die Daten stammen von den Industriellen Werken Basel (IWB) und werden vom Statistischen Amt des Kantons Basel-Stadt veröffentlicht. Die Erhebung erfolgt durch öffentliche Organe, insbesondere die IWB, wobei die Daten jeweils zum Monats- und Jahresende erfasst werden. Der Datensatz enthält verschiedene Kategorien des Wasserverbrauchs, darunter Haushaltungen und Gewerbe, Grossbezüger wie Industriebetriebe, öffentliche Brunnen sowie weitere öffentliche Zwecke. Zudem sind der Eigenbedarf der IWB und die Wasserverluste im Versorgungsnetz erfasst. Neben diesen Gesamtverbräuchen gibt es auch Angaben zum mittleren und grössten Tagesverbrauch pro Kopf. Die Daten werden in Litern angegeben und auf Jahres- oder Monatsebene aggregiert. Sie basieren auf der Wasserabgabe im eigenen Versorgungsgebiet, das den Kanton Basel-Stadt und Binningen umfasst, ohne Berücksichtigung von Transitlieferungen an Gemeinden ausserhalb des Versorgungsgebiets. Bis 1985 wurden Haushaltungen ohne Gewerbe separat ausgewiesen, während Industrie und Gewerbe bis zu diesem Zeitpunkt gemeinsam erfasst wurden. Die Kategorie „Öffentliche Brunnen“ umfasst Brunnen im Stadtgebiet, die durch die IWB betrieben und unterhalten werden. Zudem wurden die Werte für die Jahre 2015 bis 2019 im Jahr 2021 revidiert."""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100420)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100420`
+- **Title** `Wasserverbrauch im Kanton Basel-Stadt und in Binningen seit 1951`
+- **Description** `Der Datensatz „Wasserverbrauch im Kanton Basel-Stadt und in Binningen“ enthält Informationen zum Wasserverbrauch in dieser Region. Er umfasst jährliche Verbrauchsdaten seit 1951 sowie monatliche Verbrauchsdaten seit 2005. Die Daten stammen von den Industriellen Werken Basel (IWB) und werden vom Statistischen Amt des Kantons Basel-Stadt veröffentlicht. Die Erhebung erfolgt durch öffentliche Organe, insbesondere die IWB, wobei die Daten jeweils zum Monats- und Jahresende erfasst werden. Der Datensatz enthält verschiedene Kategorien des Wasserverbrauchs, darunter Haushaltungen und Gewerbe, Grossbezüger wie Industriebetriebe, öffentliche Brunnen sowie weitere öffentliche Zwecke. Zudem sind der Eigenbedarf der IWB und die Wasserverluste im Versorgungsnetz erfasst. Neben diesen Gesamtverbräuchen gibt es auch Angaben zum mittleren und grössten Tagesverbrauch pro Kopf. Die Daten werden in Litern angegeben und auf Jahres- oder Monatsebene aggregiert. Sie basieren auf der Wasserabgabe im eigenen Versorgungsgebiet, das den Kanton Basel-Stadt und Binningen umfasst, ohne Berücksichtigung von Transitlieferungen an Gemeinden ausserhalb des Versorgungsgebiets. Bis 1985 wurden Haushaltungen ohne Gewerbe separat ausgewiesen, während Industrie und Gewerbe bis zu diesem Zeitpunkt gemeinsam erfasst wurden. Die Kategorie „Öffentliche Brunnen“ umfasst Brunnen im Stadtgebiet, die durch die IWB betrieben und unterhalten werden. Zudem wurden die Werte für die Jahre 2015 bis 2019 im Jahr 2021 revidiert.`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-02-17`
+- **Modified** `2025-08-04T08:45:59+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Raum und Umwelt']`
+- **Keywords** `['Wasser']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100420/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

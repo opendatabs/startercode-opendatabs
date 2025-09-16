@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100444 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100444.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100444"""
+TITLE = """Registrierte Hunde nach Postleitzahl und verschiedenen Merkmalen seit 2008"""
+DESCRIPTION = """Dieser Datensatz enthält Informationen zu registrierten Hunden in der Stadt Basel (Kanton Basel-Stadt) ab dem Jahr 2008. Er umfasst eine Auswahl an Merkmalen pro Tier, darunter Geschlecht, Geburtsjahr, Fellfarbe und Rasse. Die Daten stammen vom Kantonalen Veterinäramt Basel-Stadt und beruhen auf Angaben der Hundebesitzer. Einzelne Angaben sind nicht behördlich überprüft und können unvollständig oder fehlerhaft sein.<br>Eine Sammlung aller OGD-Datensätze über Hunde finden Sie hier: <a href='https://data.bs.ch/explore/?refine.tags=hund'>https://data.bs.ch/explore/?refine.tags=hund</a><br>Weitere Informationen zu Tierbeständen im Kanton Basel-Stadt findet man im Statistikportal:<a href='https://statistik.bs.ch/suche?search={'query':'','filterTheme':'successor-16.2'}'>href='https://statistik.bs.ch/suche?search={'query':'','filterTheme':'successor-16.2'}</a>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100444)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100444`
+- **Title** `Registrierte Hunde nach Postleitzahl und verschiedenen Merkmalen seit 2008`
+- **Description** `Dieser Datensatz enthält Informationen zu registrierten Hunden in der Stadt Basel (Kanton Basel-Stadt) ab dem Jahr 2008. Er umfasst eine Auswahl an Merkmalen pro Tier, darunter Geschlecht, Geburtsjahr, Fellfarbe und Rasse. Die Daten stammen vom Kantonalen Veterinäramt Basel-Stadt und beruhen auf Angaben der Hundebesitzer. Einzelne Angaben sind nicht behördlich überprüft und können unvollständig oder fehlerhaft sein.<br>Eine Sammlung aller OGD-Datensätze über Hunde finden Sie hier: <a href="https://data.bs.ch/explore/?refine.tags=hund">https://data.bs.ch/explore/?refine.tags=hund</a><br>Weitere Informationen zu Tierbeständen im Kanton Basel-Stadt findet man im Statistikportal:<a href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}'>href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}</a>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2025-05-27`
+- **Modified** `2025-09-15T15:01:39+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport']`
+- **Keywords** `['Alter', 'Geschlecht', 'Freizeit', 'Tiere', 'Hund']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100444/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

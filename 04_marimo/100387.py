@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100387 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100387.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100387"""
+TITLE = """Kandidierende der Regierungspräsidiumswahlen 20. Oktober 2024"""
+DESCRIPTION = """<p style='font-family: sans-serif;'>Für die Gesamterneuerungswahlen des Regierungspräsidiums vom 20. Oktober 2024 kandidieren drei Personen.</p><p style='font-family: sans-serif; margin-bottom: 1em;'>Dieser Datensatz zeigt die Kandidierenden des ersten Wahlgangs nach Geschlecht, Jahrgang und Beruf.</p>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100387)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100387`
+- **Title** `Kandidierende der Regierungspräsidiumswahlen 20. Oktober 2024`
+- **Description** `<p style="font-family: sans-serif;">Für die Gesamterneuerungswahlen des Regierungspräsidiums vom 20. Oktober 2024 kandidieren drei Personen.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden des ersten Wahlgangs nach Geschlecht, Jahrgang und Beruf.</p>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-08-26`
+- **Modified** `2024-08-30T07:08:39+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Politik', 'Gesetzgebung', 'Bevölkerung']`
+- **Keywords** `['Wahlen', 'Demokratie', 'Teilhabe', 'Erster Wahlgang', 'Gesamterneuerungswahl', 'Kandidatur', 'Mitbestimmung', 'Exekutive']`
+- **Publisher** `Staatskanzlei`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100387/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100382 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100382.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,31 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100382"""
+TITLE = """Solarkataster: Solarpotenzial"""
+DESCRIPTION = """Über den Solarkataster kann abgeschätzt werden, wie gut sich die Dach- und Fassadenflächen im Kantonsgebiet für die solare Nutzung eignen. Die ausgewiesenen Potenziale beruhen auf Modellrechnungen und stellen keine exakten Messwerte dar.
+<br> Sämtliche Datensätze zu dem Produkt 'Solarkataster': <a href='https://data.bs.ch/explore/?refine.tags=solarkataster' target='_blank'>https://data.bs.ch/explore/?refine.tags=solarkataster</a> 
+<br><strong>Zusätzliche Informationen</strong>
+<br>Die ausgewiesenen Potenziale beruhen auf Strahlungsmodellierungen der Firma Laserdata GmbH aus Innsbruck und stellen keine exakten Messwerte dar. Sie können lediglich eine grobe Abschätzung zur Eignung einer Dachfläche für eine solare Nutzung ermöglichen.
+Die Berechnung der solaren Globalstrahlung basiert auf dem 0.5m-Oberflächenmodell der Laserscan-Befliegung vom Frühjahr 2021 sowie der Fassaden des 3D Stadtmodells des Kantons Basel-Stadt. Die Gebäudeumrisse stammen aus der Ebene Bodenbedeckung der Amtlichen Vermessung vom 20.07.2021 und die Dachkanten vom 3D-Stadmodell Stand: 26.05.2021.
+
+<br>Die Berechnungsschritte umfassen im Einzelnen:
+<br>- Übernahme des digitalen Oberflächenmodells (DSM) sowie des 3D Stadtmodells vom Auftraggeber (z.B: des Kantons Basel-Stadt) in Softwaremodule der Firma Laserdata GmbH aus Innsbruck, Datenbankaufbau DSM, umliegendes Digitales Geländemodell (DGM), Indexierung, Tile-Generierung
+<br>
+- Strahlungsmodellierung der Dachflächen auf Rasterbasis DGM (Topographie) und DSM (Nahverschattung) über ein astronomisches Jahr hinweg,
+<br>
+- Strahlungsmodellierung der Gebäudefassaden über synthetisch erzeugte Fassadenpunkte mit Neigung und Ausrichtung auf Basis des 3D Stadtmodells, DGM (Topographie) und DSM (Nahverschattung) über ein astronomisches Jahr hinweg
+<br>
+- Berechnung von für verschiedene Zeiträume berechnete Globalstrahlungs-Rasterdatensätzen (insbesondere Sommer-, Winterhalbjahr, Jahressummenwert) des Solarpotenzials der Hausdächer. Einheit: Kilowattstunden pro m² und Bezugszeitraum
+<br>
+- Korrektur der unter clear sky Bedingungen modellierten Globalstrahlung anhand von meteorologischen Messwerten
+<br>
+- Einteilung der Eignung der Dachflächen zur solaren Nutzung in vom Auftraggeber bestimmte Klassen für Photovoltaik sowie Solarthermie unter Berücksichtigung von definierten Mindestflächen
+<br>
+- Zonalstatistik der Rasterinformationen des Solarpotenzials sowie der Fassadeneinstrahlung als Attributdaten zu einem Vektorlayer der Gebäudeumrisse des Auftraggebers des Kantons Basel-Stadt"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100382)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +125,39 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100382`
+- **Title** `Solarkataster: Solarpotenzial`
+- **Description** `Über den Solarkataster kann abgeschätzt werden, wie gut sich die Dach- und Fassadenflächen im Kantonsgebiet für die solare Nutzung eignen. Die ausgewiesenen Potenziale beruhen auf Modellrechnungen und stellen keine exakten Messwerte dar.
+<br> Sämtliche Datensätze zu dem Produkt "Solarkataster": <a href="https://data.bs.ch/explore/?refine.tags=solarkataster" target="_blank">https://data.bs.ch/explore/?refine.tags=solarkataster</a> 
+<br><strong>Zusätzliche Informationen</strong>
+<br>Die ausgewiesenen Potenziale beruhen auf Strahlungsmodellierungen der Firma Laserdata GmbH aus Innsbruck und stellen keine exakten Messwerte dar. Sie können lediglich eine grobe Abschätzung zur Eignung einer Dachfläche für eine solare Nutzung ermöglichen.
+Die Berechnung der solaren Globalstrahlung basiert auf dem 0.5m-Oberflächenmodell der Laserscan-Befliegung vom Frühjahr 2021 sowie der Fassaden des 3D Stadtmodells des Kantons Basel-Stadt. Die Gebäudeumrisse stammen aus der Ebene Bodenbedeckung der Amtlichen Vermessung vom 20.07.2021 und die Dachkanten vom 3D-Stadmodell Stand: 26.05.2021.
+
+<br>Die Berechnungsschritte umfassen im Einzelnen:
+<br>- Übernahme des digitalen Oberflächenmodells (DSM) sowie des 3D Stadtmodells vom Auftraggeber (z.B: des Kantons Basel-Stadt) in Softwaremodule der Firma Laserdata GmbH aus Innsbruck, Datenbankaufbau DSM, umliegendes Digitales Geländemodell (DGM), Indexierung, Tile-Generierung
+<br>
+- Strahlungsmodellierung der Dachflächen auf Rasterbasis DGM (Topographie) und DSM (Nahverschattung) über ein astronomisches Jahr hinweg,
+<br>
+- Strahlungsmodellierung der Gebäudefassaden über synthetisch erzeugte Fassadenpunkte mit Neigung und Ausrichtung auf Basis des 3D Stadtmodells, DGM (Topographie) und DSM (Nahverschattung) über ein astronomisches Jahr hinweg
+<br>
+- Berechnung von für verschiedene Zeiträume berechnete Globalstrahlungs-Rasterdatensätzen (insbesondere Sommer-, Winterhalbjahr, Jahressummenwert) des Solarpotenzials der Hausdächer. Einheit: Kilowattstunden pro m² und Bezugszeitraum
+<br>
+- Korrektur der unter clear sky Bedingungen modellierten Globalstrahlung anhand von meteorologischen Messwerten
+<br>
+- Einteilung der Eignung der Dachflächen zur solaren Nutzung in vom Auftraggeber bestimmte Klassen für Photovoltaik sowie Solarthermie unter Berücksichtigung von definierten Mindestflächen
+<br>
+- Zonalstatistik der Rasterinformationen des Solarpotenzials sowie der Fassadeneinstrahlung als Attributdaten zu einem Vektorlayer der Gebäudeumrisse des Auftraggebers des Kantons Basel-Stadt`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2024-08-15`
+- **Modified** `2022-12-14T00:00:00+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Energie']`
+- **Keywords** `['Solarenergie', 'Solarkollektor']`
+- **Publisher** `Amt für Umwelt und Energie`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +183,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100382/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."

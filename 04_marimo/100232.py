@@ -1,5 +1,5 @@
-# {{ DATASET_IDENTIFIER }} — marimo starter (Polars)
-# Run:  marimo run 04_marimo/{{ DATASET_IDENTIFIER }}.py   (or: marimo edit ...)
+# 100232 — marimo starter (Polars)
+# Run:  marimo run 04_marimo/100232.py   (or: marimo edit ...)
 
 # /// script
 # requires-python = ">=3.10"
@@ -22,12 +22,12 @@ import matplotlib.pyplot as plt
 
 app = mo.App()
 
-PROVIDER = """{{ PROVIDER }}"""
-IDENTIFIER = """{{ DATASET_IDENTIFIER }}"""
-TITLE = """{{ DATASET_TITLE }}"""
-DESCRIPTION = """{{ DATASET_DESCRIPTION }}"""
-CONTACT = """{{ CONTACT }}"""
-DATASHOP_MD_LINK = """{{ DATASHOP_LINK }}"""
+PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
+IDENTIFIER = """100232"""
+TITLE = """Wohnungen (Gebäude- und Wohnungsregister GWR)"""
+DESCRIPTION = """Wohnungen gemäss Gebäude- und Wohnungsregister (GWR). <br><br>Eine Wohnung ist eine Gesamtheit von Räumen, die für eine Wohnnutzung geeignet sind, eine bauliche Einheit bilden, einen Zugang entweder von aussen oder von einem gemeinsam mit anderen Wohnungen genutzten Bereich innerhalb des Gebäudes haben, über eine Kocheinrichtung (oder mindestens der technischen Installation für den Einbau einer Kocheinrichtung) verfügen und keine Fahrnis darstellen.<br><br>Einen Überblick über die im Register geführten Merkmal gibt folgendes Dokument: <a href='https://www.housing-stat.ch/files/881-2200.pdf' target='_blank'>https://www.housing-stat.ch/files/881-2200.pdf (Merkmalskatalog 4.2)</a> bzw. online unter <a href='https://www.housing-stat.ch/de/help/42.html' target='_blank'>https://www.housing-stat.ch/de/help/42.html (Online-Merkmalskatalog 4.2)</a><br><br>Die rechtliche Grundlage stellt die entsprechende eidgenössische Gesetzgebung dar: <a href='https://www.fedlex.admin.ch/eli/cc/2017/376/de' target='_blank'>https://www.fedlex.admin.ch/eli/cc/2017/376/de (Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR))</a><br><br>"""
+CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
+DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100232)"""
 
 def _ensure_data_dir():
     data_path = os.path.join(os.getcwd(), "..", "data")
@@ -106,7 +106,20 @@ def _():
 def _():
     mo.md(
         """## Metadata
-{{ DATASET_METADATA }}"""
+- **Dataset_identifier** `100232`
+- **Title** `Wohnungen (Gebäude- und Wohnungsregister GWR)`
+- **Description** `Wohnungen gemäss Gebäude- und Wohnungsregister (GWR). <br><br>Eine Wohnung ist eine Gesamtheit von Räumen, die für eine Wohnnutzung geeignet sind, eine bauliche Einheit bilden, einen Zugang entweder von aussen oder von einem gemeinsam mit anderen Wohnungen genutzten Bereich innerhalb des Gebäudes haben, über eine Kocheinrichtung (oder mindestens der technischen Installation für den Einbau einer Kocheinrichtung) verfügen und keine Fahrnis darstellen.<br><br>Einen Überblick über die im Register geführten Merkmal gibt folgendes Dokument: <a href="https://www.housing-stat.ch/files/881-2200.pdf" target="_blank">https://www.housing-stat.ch/files/881-2200.pdf (Merkmalskatalog 4.2)</a> bzw. online unter <a href="https://www.housing-stat.ch/de/help/42.html" target="_blank">https://www.housing-stat.ch/de/help/42.html (Online-Merkmalskatalog 4.2)</a><br><br>Die rechtliche Grundlage stellt die entsprechende eidgenössische Gesetzgebung dar: <a href="https://www.fedlex.admin.ch/eli/cc/2017/376/de" target="_blank">https://www.fedlex.admin.ch/eli/cc/2017/376/de (Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR))</a><br><br>`
+- **Contact_name** `Open Data Basel-Stadt`
+- **Issued** `2022-11-24`
+- **Modified** `2025-09-16T01:26:58+00:00`
+- **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Bau- und Wohnungswesen']`
+- **Keywords** `['Adresse', 'Wohnung', 'Gebäude', 'Wohnen', 'Wohnungsnummer', 'AWN', 'EWID']`
+- **Publisher** `Statistisches Amt`
+- **Reference** `None`
+"""
     )
     return
 
@@ -132,7 +145,7 @@ The dataset is read into a Polars DataFrame."""
 
 @app.cell
 def _():
-    {{LOAD_DATA}}
+    df = get_dataset('https://data.bs.ch/explore/dataset/100232/download?format=csv&timezone=Europe%2FZurich')
     df = drop_all_null_columns(df)
     mo.md(
         f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."
