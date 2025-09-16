@@ -1,5 +1,5 @@
 ---
-title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"
+title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
 date: "2025-09-16"
 output: html_document
 ---
@@ -148,4 +148,4 @@ df %>%
 
 # Questions about the data?
 
-Fachstelle für OGD Basel-Stadt | opendata@bs.ch
+Open Data Basel-Stadt | opendata@bs.ch

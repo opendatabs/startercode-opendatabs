@@ -1,112 +1,59 @@
-# 100244 — marimo starter (Polars)
-# Run:  marimo run 04_marimo/100244.py   (or: marimo edit ...)
-
 # /// script
-# requires-python = ">=3.10"
+# requires-python = ">=3.12"
 # dependencies = [
-#   "marimo>=0.8.0",
-#   "polars>=1.5.0",
-#   "pandas>=2.0.0",
-#   "matplotlib>=3.8.0",
-#   "requests>=2.31.0"
+#     "marimo",
+#     "matplotlib==3.10.6",
+#     "missingno==0.5.2",
+#     "pandas==2.3.2",
+#     "polars==1.32.3",
+#     "requests==2.32.5",
 # ]
 # ///
 
-import os
-import io
-import requests
-import polars as pl
-import pandas as pd
-import marimo as mo
-import matplotlib.pyplot as plt
+import marimo
 
-app = mo.App()
+__generated_with = "0.15.1"
+app = marimo.App(auto_download=["html"])
 
-PROVIDER = """Statistisches Amt des Kantons Basel-Stadt - Fachstelle OGD"""
-IDENTIFIER = """100244"""
-TITLE = """Gefahrenstufen für Hochwasser"""
-DESCRIPTION = """<p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: 'Frutiger Neue Regular', Arial, sans-serif;'><span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif; font-size: 15.4px;'>Entsprechend den Bestimmungen der Alarmierungsverordnung verwendet das BAFU für die Warnung vor Hochwasser eine fünfstufige Gefahrenskala. Die Gefahrenstufen geben Auskunft über die Intensität des Ereignisses, die möglichen Auswirkungen und Verhaltensempfehlungen.</span><br></p><p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: 'Frutiger Neue Regular', Arial, sans-serif;'>Die Schwellenwerte, die die Gefahrenstufen abgrenzen, werden ausgehend vom vorhandenen Wissen über das Verhalten des jeweiligen Fliessgewässers festgelegt (Pegel, ab dem das Gewässer über die Ufer tritt, ab dem erste Schäden eintreten usw.). Diese Schwellenwerte entsprechen in etwa der Jährlichkeit von Hochwasserereignissen, also einer Wiederkehrperiode von durchschnittlich 2, 10, 30 oder 100 Jahren.</p><ul style='line-height: 1.5; margin: 1.5em 0px 0px; padding: 0px 0px 0px 0.4em; list-style-type: square; color: rgb(69, 69, 69); font-family: 'Frutiger Neue Regular', Arial, sans-serif;'><li style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'>Die <span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif;'>Gefahrenstufe 1 </span>entspricht ungefähr einer Abflussmenge, die unter dem Wert liegt, der im Durchschnitt einmal in 2 Jahren erreicht wird.</li><li style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'>Die <span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif;'>Gefahrenstufe 2 </span>entspricht ungefähr einer Abflussmenge, die durchschnittlich einmal innerhalb von 2 bis 10 Jahren auftritt.</li><li style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'>Die <span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif;'>Gefahrenstufe 3 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 10 bis 30 Jahren auftritt.</li><li style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'>Die <span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif;'>Gefahrenstufe 4 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 30 bis 100 Jahren auftritt.</li><li style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'>Die <span style='font-family: 'Frutiger Neue Bold', Arial, sans-serif;'>Gefahrenstufe 5 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt höchstens einmal in 100 Jahren auftritt.</li></ul><p style='font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;'><br></p><p style='line-height: 1.5; margin-left: 0.8em;'><span style='font-size: 15.4px;'>Für weitere Informationen siehe </span><a href='https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser' target='_blank'>https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser</a><span style='font-size: 15.4px;'> </span><br></p>"""
-CONTACT = """Fachstelle für OGD Basel-Stadt | opendata@bs.ch"""
-DATASHOP_MD_LINK = """[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100244)"""
-
-def _ensure_data_dir():
-    data_path = os.path.join(os.getcwd(), "..", "data")
-    os.makedirs(data_path, exist_ok=True)
-    return data_path
-
-def get_dataset(url: str) -> pl.DataFrame:
-    _ensure_data_dir()
-    csv_path = os.path.join("..", "data", f"{IDENTIFIER}.csv")
-
-    try:
-        r = requests.get(
-            url,
-            params={"format": "csv", "timezone": "Europe%2FZurich"},
-            timeout=60,
-        )
-        r.raise_for_status()
-        with open(csv_path, "wb") as f:
-            f.write(r.content)
-        content = io.BytesIO(r.content)
-    except Exception:
-        content = csv_path if os.path.exists(csv_path) else None
-
-    if content is None:
-        raise RuntimeError("Could not download or locate dataset locally.")
-
-    for sep in (";", ",", "\t"):
-        try:
-            df = pl.read_csv(
-                content,
-                separator=sep,
-                ignore_errors=True,
-                infer_schema_length=2000,
-            )
-            if df.width > 1:
-                return df
-        except Exception:
-            if hasattr(content, "seek"):
-                content.seek(0)
-
-    return pl.read_csv(content, ignore_errors=True, infer_schema_length=2000)
-
-def drop_all_null_columns(df: pl.DataFrame) -> pl.DataFrame:
-    if df.height == 0:
-        return df
-    null_counts_row = df.null_count().row(0)
-    cols_keep = [c for c, n in zip(df.columns, null_counts_row) if n < df.height]
-    return df.select(cols_keep)
 
 @app.cell
 def _():
+    import marimo as mo
+    return (mo,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
     mo.md(
-        f"""## Open Government Data, provided by **{PROVIDER}**
-*Autogenerated Python (marimo) starter for dataset* **`{IDENTIFIER}`**"""
+        r"""
+    ## Open Government Data, provided by **Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center**
+    *Autogenerated Python starter code for dataset with identifier* **100244**
+    """
     )
     return
 
+
 @app.cell
-def _():
+def _(mo):
     mo.md(
-        f"""## Dataset
-# **{TITLE}**"""
+        r"""
+    ## Dataset
+    # **Gefahrenstufen für Hochwasser**
+    **Description**: <p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'><span style='font-family: "Frutiger Neue Bold", Arial, sans-serif; font-size: 15.4px;'>Entsprechend den Bestimmungen der Alarmierungsverordnung verwendet das BAFU für die Warnung vor Hochwasser eine fünfstufige Gefahrenskala. Die Gefahrenstufen geben Auskunft über die Intensität des Ereignisses, die möglichen Auswirkungen und Verhaltensempfehlungen.</span><br></p><p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'>Die Schwellenwerte, die die Gefahrenstufen abgrenzen, werden ausgehend vom vorhandenen Wissen über das Verhalten des jeweiligen Fliessgewässers festgelegt (Pegel, ab dem das Gewässer über die Ufer tritt, ab dem erste Schäden eintreten usw.). Diese Schwellenwerte entsprechen in etwa der Jährlichkeit von Hochwasserereignissen, also einer Wiederkehrperiode von durchschnittlich 2, 10, 30 oder 100 Jahren.</p><ul style='line-height: 1.5; margin: 1.5em 0px 0px; padding: 0px 0px 0px 0.4em; list-style-type: square; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 1 </span>entspricht ungefähr einer Abflussmenge, die unter dem Wert liegt, der im Durchschnitt einmal in 2 Jahren erreicht wird.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 2 </span>entspricht ungefähr einer Abflussmenge, die durchschnittlich einmal innerhalb von 2 bis 10 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 3 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 10 bis 30 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 4 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 30 bis 100 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 5 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt höchstens einmal in 100 Jahren auftritt.</li></ul><p style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;"><br></p><p style="line-height: 1.5; margin-left: 0.8em;"><span style="font-size: 15.4px;">Für weitere Informationen siehe </span><a href="https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser" target="_blank">https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser</a><span style="font-size: 15.4px;"> </span><br></p>
+
+    *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100244)*.
+    """
     )
     return
 
-@app.cell
-def _():
-    mo.md(
-        """## Data set links
 
-""" + DATASHOP_MD_LINK
-    )
-    return
-
-@app.cell
-def _():
+@app.cell(hide_code=True)
+def _(mo):
     mo.md(
-        """## Metadata
-- **Dataset_identifier** `100244`
+        r"""
+    /// details | Metadata
+
+    - **Dataset_identifier** `100244`
 - **Title** `Gefahrenstufen für Hochwasser`
 - **Description** `<p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'><span style='font-family: "Frutiger Neue Bold", Arial, sans-serif; font-size: 15.4px;'>Entsprechend den Bestimmungen der Alarmierungsverordnung verwendet das BAFU für die Warnung vor Hochwasser eine fünfstufige Gefahrenskala. Die Gefahrenstufen geben Auskunft über die Intensität des Ereignisses, die möglichen Auswirkungen und Verhaltensempfehlungen.</span><br></p><p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'>Die Schwellenwerte, die die Gefahrenstufen abgrenzen, werden ausgehend vom vorhandenen Wissen über das Verhalten des jeweiligen Fliessgewässers festgelegt (Pegel, ab dem das Gewässer über die Ufer tritt, ab dem erste Schäden eintreten usw.). Diese Schwellenwerte entsprechen in etwa der Jährlichkeit von Hochwasserereignissen, also einer Wiederkehrperiode von durchschnittlich 2, 10, 30 oder 100 Jahren.</p><ul style='line-height: 1.5; margin: 1.5em 0px 0px; padding: 0px 0px 0px 0.4em; list-style-type: square; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 1 </span>entspricht ungefähr einer Abflussmenge, die unter dem Wert liegt, der im Durchschnitt einmal in 2 Jahren erreicht wird.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 2 </span>entspricht ungefähr einer Abflussmenge, die durchschnittlich einmal innerhalb von 2 bis 10 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 3 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 10 bis 30 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 4 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 30 bis 100 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 5 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt höchstens einmal in 100 Jahren auftritt.</li></ul><p style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;"><br></p><p style="line-height: 1.5; margin-left: 0.8em;"><span style="font-size: 15.4px;">Für weitere Informationen siehe </span><a href="https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser" target="_blank">https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser</a><span style="font-size: 15.4px;"> </span><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -119,113 +66,115 @@ def _():
 - **Keywords** `['Rhein', 'Birs', 'Wiese', 'Pegel', 'Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser']`
 - **Publisher** `Bundesamt für Umwelt BAFU`
 - **Reference** `None`
-"""
+
+
+    ///
+    """
     )
     return
 
+
 @app.cell
 def _():
-    mo.md(
-        """## Imports and helper functions
-Using Polars for speed and memory efficiency."""
-    )
+    import os
+    import pandas as pd
+    import requests
+    import matplotlib.pyplot as plt
+    return os, pd, plt, requests
+
+
+@app.cell
+def _(plt):
+    plt.style.use("ggplot")
+
+    params = {
+        "text.color": (0.25, 0.25, 0.25),
+        "figure.figsize": [18, 6],
+    }
+
+    plt.rcParams.update(params)
     return
 
-@app.cell
-def _():
-    pass
 
 @app.cell
-def _():
-    mo.md(
-        """## Load data
-The dataset is read into a Polars DataFrame."""
-    )
+def _(os, pd, requests):
+    def get_dataset(dataset_id):
+        url=f"https://data.bs.ch/explore/dataset/{dataset_id}/download"
+        r = requests.get(
+            url, 
+            params={
+                "format": "csv", 
+                "timezone": "Europe%2FZurich"
+            }
+        )
+        data_path = os.path.join(os.getcwd(), "..", "data")
+        if not os.path.exists(data_path):
+            os.makedirs(data_path)
+        csv_path = os.path.join(data_path, f"{dataset_id}.csv")
+        with open(csv_path, "wb") as f:
+            f.write(r.content)
+        data = pd.read_csv(
+            url, sep=";", on_bad_lines="warn", encoding_errors="ignore", low_memory=False
+        )
+        # if dataframe only has one column or less the data is not ";" separated
+        if data.shape[1] <= 1:
+            print(
+                "The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code."
+            )
+        return data
+    return (get_dataset,)
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""## Load data""")
     return
 
+
 @app.cell
-def _():
-    df = get_dataset('https://data.bs.ch/explore/dataset/100244/download?format=csv&timezone=Europe%2FZurich')
-    df = drop_all_null_columns(df)
-    mo.md(
-        f"Loaded **{df.height:,}** rows × **{df.width:,}** columns after dropping all-null columns."
-    )
+def _(get_dataset):
+    # Read the dataset
+    df = get_dataset(dataset_id="100244")
     df
-    return df
+    return (df,)
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""## Analyze Data""")
+    return
+
 
 @app.cell
 def _(df):
-    mo.md("## Quick profile")
-    duplicates = int(df.is_duplicated().sum()) if df.height else 0
-    schema = "\n".join([f"- `{k}`: {v}" for k, v in df.schema.items()])
+    # check missing values with missingno
+    # https://github.com/ResidentMario/missingno
+    import missingno as msno
+
+    msno.matrix(df, labels=True, sort="descending")
+    return
+
+
+@app.cell
+def _(df):
+    df.info(memory_usage="deep", verbose=True)
+    return
+
+
+@app.cell
+def _(df, pd, plt):
+    # plot a histogram for each numerical feature
     try:
-        size_mb = f"{(df.estimated_size() or 0)/1_048_576:,.2f} MB"
-    except Exception:
-        size_mb = "n/a"
-    mo.md(
-        f"""- Approx. memory size: **{size_mb}**  
-- Exact duplicates (row-wise): **{duplicates:,}**  
-- Schema:
-{schema}"""
-    )
-    return
-
-@app.cell
-def _(df):
-    mo.md("### Head (first 5 rows)")
-    df.head(5)
-    return
-
-@app.cell
-def _(df):
-    mo.md("### Describe (numeric columns)")
-    try:
-        desc = df.describe()
-        desc
-    except Exception:
-        mo.md("_No numeric columns to describe._")
-    return
-
-@app.cell
-def _(df):
-    mo.md("### Missingness overview (first 1,000 rows, up to 40 columns)")
-    n = min(1000, df.height)
-    c = min(40, df.width)
-    if n == 0 or c == 0:
-        mo.md("_Dataset empty._")
-    else:
-        sub = df.select(df.columns[:c]).head(n)
-        miss = sub.to_pandas().isna().to_numpy()
-        plt.figure()
-        plt.imshow(miss, aspect="auto", interpolation="nearest")
-        plt.title("Missingness matrix (True=missing)")
-        plt.xlabel("columns")
-        plt.ylabel("rows")
+        df.hist(bins=25, rwidth=0.9)
         plt.tight_layout()
         plt.show()
+    except pd.errors.DataError:
+        print("No numerical data to plot.")
     return
 
 @app.cell
-def _(df):
-    mo.md("### Histograms (numeric)")
-    num_cols = [c for c, t in df.schema.items() if pl.datatypes.is_numeric(t)]
-    if not num_cols:
-        mo.md("_No numeric data to plot._")
-    else:
-        for c in num_cols[:24]:
-            s = df.select(c).drop_nulls()
-            if s.height == 0:
-                continue
-            plt.figure()
-            plt.hist(s.to_series().to_list(), bins=25)
-            plt.title(f"Histogram: {c}")
-            plt.tight_layout()
-            plt.show()
-    return
-
-@app.cell
-def _():
-    mo.md(f"""**Questions about the data?** {CONTACT}""")
+def _(mo):
+    mo.md(r"""**Questions about the data?** Open Data Basel-Stadt | opendata@bs.ch""")
     return
 
 if __name__ == "__main__":
