@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz bietet eine umfassende Übersicht über die Tagesordnungen und die zugehörigen Traktanden der Grossratssitzungen des Kantons Basel-Stadt.</p><p>Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch/ratsbetrieb/tagesordnung" target="_blank">https://grosserrat.bs.ch/ratsbetrieb/tagesordnung</a><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-05-10`
-- **Modified** `2025-09-18T03:01:50+00:00`
+- **Modified** `2025-09-18T13:15:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2013-01-24T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-08-26T22:00:00+00:00`
