@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-09-17"
+date: "2025-09-18"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100227.
 - **Modified** `2025-09-17T06:45:37+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1920-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-04-29T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-08-30T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Zeitreihe', 'Klima', 'Luft', 'Eistage', 'Frosttage', 'Sommertage', 'Hitzetage', 'Tage ohne Sonne', 'Schneefall', 'Schneedecke', 'Reif', 'Nebel', 'Gewitter', 'Hagel', 'Wind', 'Heizgradtage']`
 - **Publisher** `Statistisches Amt`
