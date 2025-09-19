@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz zeigt die Abfälle, welche an unerlaubten Orten, in nicht gebührenpflichtigen Säcken oder/und zur Unzeit deponiert wurden und durch die Stadtreinigung der Abfallkontrolle des Amts für Umwelt und Energie gemeldet wurden. <br><br>Die genauen geographischen Koordinaten werden einem 50x50 Meter Raster zugeteilt. Der süd-westliche Eckpunkt dieses Rasters wird jeweils als Geopunkt ausgewiesen, um die Anonymität zu garantieren.   </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-08-24`
-- **Modified** `2025-09-19T07:02:05+00:00`
+- **Modified** `2025-09-19T14:01:37+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-05-05T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-09-16T22:00:00+00:00`
