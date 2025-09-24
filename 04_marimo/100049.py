@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Standortbeschreibung: Die Messstation befindet sich in Basel auf dem St.Johannplatz, einem kleinen Park am Rande der Altstadt. Sie wird lokal beeinflusst durch eine mässig befahrene Strasse und Parkplatzsuchverkehr. 500m nördlich verläuft eine stark befahrene Strasse und in dieser Richtung liegt auch ein Teil der Chemischen Industrie. Die Station Basel St.Johannplatz gibt die Belastung wieder, wie sie als Hintergrund überall in der Stadt Basel anzutreffen ist.</p>Lage: Stadtzentrum in Park, offene Bebauung<p>Koordinaten: 2610790 / 1268370 bzw. N 47° 33.957 E 7° 34.921; 260 m ü. M.Geografische Lage: Juranordfuss</p><p>Siedlungsgrösse: 166'600 Einwohner</p><p>Verkehr, DTV (% LKW): &lt; 9'100 / 32'000 (8%)</p><p>Strassenabstand: 2 m / 500</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-09-24T07:16:27+00:00`
+- **Modified** `2025-09-24T18:16:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1999-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-09-22T22:00:00+00:00`

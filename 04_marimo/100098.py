@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>In diesem Datensatz sind die Wahllokale des Kantons Basel-Stadt aufgeführt, zusammen mit Informationen zu den entsprechenden Wahllokal-IDs, Gemeinde-IDs und den zugehörigen Gemeinden.<br>Insgesamt enthält der Datensatz Informationen zu verschiedenen Wahllokalen im Kanton Basel-Stadt, einschließlich der Angaben zu brieflichen, elektronischen und persönlichen Stimmenden an den einzelnen Standorten.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-07-26`
-- **Modified** `2025-09-12T08:30:50+00:00`
+- **Modified** `2025-09-24T10:12:24+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
