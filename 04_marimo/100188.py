@@ -63,7 +63,7 @@ def _(mo):
 - **Temporal_coverage_start_date** `2012-02-07T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2030-01-22T23:00:00+00:00`
 - **Themes** `['Politik', 'Gesetzgebung', 'Verwaltung']`
-- **Keywords** `['Demokratie', 'Abstimmung', 'Kalender']`
+- **Keywords** `['Demokratie', 'Abstimmung', 'Kalender', 'Parlament', 'Legislative']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
 

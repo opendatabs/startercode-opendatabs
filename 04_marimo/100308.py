@@ -58,12 +58,12 @@ def _(mo):
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die Mitgliedschaften in Gremien der Ratsmitglieder des Grossen Rates des Kantons Basel-Stadt.</p><p style="font-family: sans-serif;">Funktionen in Gremien werden als separate Mitgliedschaft eingetragen, damit gelesen werden kann in welchem Zeitraum eine Ratsmitglied einer besonderen Funktion nachging.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-09-28`
-- **Modified** `2025-09-11T03:01:36+00:00`
+- **Modified** `2025-09-24T03:01:33+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Verwaltung']`
-- **Keywords** `['Regierungsrat', 'Grosser Rat', 'Gremien', 'Parlament']`
+- **Keywords** `['Regierungsrat', 'Grosser Rat', 'Gremien', 'Parlament', 'Demokratie', 'Grossrat', 'Grossrätin', 'Legislative']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
 

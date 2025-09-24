@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die Scheidungen im Kanton Basel-Stadt nach Scheidungsdatum, Ehedauer sowie nach Alter und Staatsangehörigkeit der Frau bzw. des Mannes. Die Daten werden jährlich aktualisiert. Vor dem Jahr 1984 ist nur das Total der Scheidungen verfügbar. <br><br>Im Jahr 2000 trat ein neues Scheidungsrecht in Kraft. Im Jahr 2010 wurde dieses angepasst. <br><br>Bis zum Jahr 2006 wurde eine Scheidung in Basel-Stadt gezählt, wenn die klagende Partei in Basel-Stadt Wohnsitz hatte. Seit dem Jahr 2007 wird eine Scheidung in Basel-Stadt gezählt, wenn der Mann Wohnsitz in Basel-Stadt hat, oder wenn er im Ausland und die Frau in Basel-Stadt lebt. <br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Scheidungen im letzten noch nicht abgeschlossenen Jahr gezählt. In diesem Datensatz werden sie im Jahr des Scheidungsdatums gezählt..<br><br>Quelle: Statistik der natürlichen Bevölkerungsbewegung (BEVNAT) des Bundesamtes für Statistik (BFS).`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-06-22`
-- **Modified** `2025-09-23T01:15:48+00:00`
+- **Modified** `2025-09-24T01:15:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
