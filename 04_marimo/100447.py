@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Seit 2018 wird die Anzahl der registrierten Hundehalter im Kanton erfasst. Diese findet man in diesem Datensatz.<br>Eine Sammlung aller OGD-Datensätze über Hunde finden Sie hier: <a href="https://data.bs.ch/explore/?refine.tags=hund">https://data.bs.ch/explore/?refine.tags=hund</a><br>Weitere Informationen zu Tierbeständen im Kanton Basel-Stadt findet man im Statistikportal:<a href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}'>href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}</a>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-27`
-- **Modified** `2025-09-24T15:01:12+00:00`
+- **Modified** `2025-09-25T15:00:57+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

@@ -39,7 +39,9 @@ def _(mo):
         r"""
     ## Dataset
     # **Verkehrsberuhigte Zonen: Kernzone Verkehrskonzept Innenstadt**
-    **Description**: Dieser Datensatz beinhaltet das Verkehrskonzept Innenstadt (VKI): Kernzone mit eingeschränktem Motorfahrzeugverkehr.<br>Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.<br>Weitere Daten zu "Verkehrsberuhigte Zonen": <a href="https://data.bs.ch/explore/?sort=modified&amp;q=tags=Verkehrsberuhigte+Zonen">https://data.bs.ch/explore/?sort=modified&amp;q=tags=Verkehrsberuhigte+Zonen</a>
+    **Description**: Dieser Datensatz beinhaltet die signalisierten Fussgängerzonen.
+Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.
+Weitere Daten zu "Verkehrsberuhigte Zonen": https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100253)*.
     """
@@ -55,10 +57,12 @@ def _(mo):
 
     - **Dataset_identifier** `100253`
 - **Title** `Verkehrsberuhigte Zonen: Kernzone Verkehrskonzept Innenstadt`
-- **Description** `Dieser Datensatz beinhaltet das Verkehrskonzept Innenstadt (VKI): Kernzone mit eingeschränktem Motorfahrzeugverkehr.<br>Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.<br>Weitere Daten zu "Verkehrsberuhigte Zonen": <a href="https://data.bs.ch/explore/?sort=modified&amp;q=tags=Verkehrsberuhigte+Zonen">https://data.bs.ch/explore/?sort=modified&amp;q=tags=Verkehrsberuhigte+Zonen</a>`
+- **Description** `Dieser Datensatz beinhaltet die signalisierten Fussgängerzonen.
+Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.
+Weitere Daten zu "Verkehrsberuhigte Zonen": https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-12-30`
-- **Modified** `2025-06-25T07:04:47+00:00`
+- **Modified** `2025-07-18T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
