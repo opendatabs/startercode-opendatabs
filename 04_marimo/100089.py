@@ -60,10 +60,10 @@ def _(mo):
 <p>Der Pegel wird berechnet als [Wasserstand] - 240 m ü. M., siehe <a href="https://port-of-switzerland.ch/hafenservice/pegel/" target="_blank">https://port-of-switzerland.ch/hafenservice/pegel</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-29`
-- **Modified** `2025-09-24T19:55:07+00:00`
+- **Modified** `2025-09-25T08:00:12+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2020-06-21T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-09-23T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-24T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Rhein', 'Pegel', 'Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser', 'Tiefe']`
 - **Publisher** `Bundesamt für Umwelt BAFU`

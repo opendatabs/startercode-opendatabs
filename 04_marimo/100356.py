@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz enthält die Geschwindigkeitsklassen des motorisierten Individualverkehrs. Die Daten werden vor der Veröffentlichung nicht überprüft oder ergänzt. Daher können jederzeit Datenlücken oder falsche Messungen aufgrund technischer Probleme oder Verkehrsbehinderungen auftreten.</p><p>Aus Kostengründen sind nur die Werte des aktuellen Jahres und der letzten zwei Jahre als Tabelle / Visualisierung sichtbar bzw. via API abgreifbar. Die vollständigen Daten ab dem Jahr 2014 können hier heruntergeladen werden: <br><br>Leicht aufbereiteter Datensatz: <a href="https://data-bs.ch/mobilitaet/converted_MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/converted_MIV_Speed.csv </a><br>Rohdaten: <a href="https://data-bs.ch/mobilitaet/MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/MIV_Speed.csv</a><br><br>Die Daten einzelner Jahre ab dem Jahr 2014 können heruntergeladen werden unter der URL mit dem Muster https://data-bs.ch/mobilitaet/[JAHR]_MIV_Speed.csv, als zum Beispiel für das Jahr 2020 hier: <a href="https://data-bs.ch/mobilitaet/2020_MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/2020_MIV_Speed.csv.</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-03-26`
-- **Modified** `2025-09-24T07:14:36+00:00`
+- **Modified** `2025-09-25T07:16:58+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2022-12-30T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-08-05T22:00:00+00:00`
