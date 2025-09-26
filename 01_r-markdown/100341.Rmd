@@ -1,10 +1,10 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-09-25"
+date: "2025-09-26"
 output: html_document
 ---
 
-## Dataset: Kitas und Tagesheime
+## Dataset: Tagesheime und Kitas
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100341)
 
@@ -13,16 +13,16 @@ Auto generated R starter code for data set 100341.
 ## Metadata
 
 - **Dataset_identifier** `100341`
-- **Title** `Kitas und Tagesheime`
+- **Title** `Tagesheime und Kitas`
 - **Description** `«Kitas», «Kindertagesstätten» oder «Tagesheime» sind Einrichtungen, in denen Kinder regelmässig tagsüber durch qualifizierte Fachpersonen und in geeigneten Räumlichkeiten betreut werden.
 «Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2024-02-20`
+- **Issued** `2025-02-18`
 - **Modified** `2025-07-30T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Bevölkerung', 'Geographie', 'Bildung, Wissenschaft']`
+- **Themes** `['Bevölkerung', 'Geographie', 'Bildung', 'Wissenschaft']`
 - **Keywords** `['Kinder', 'Betreuung', 'Familie', 'Tagesstruktur', 'Horte', 'Mittagstische', 'Tagesfamilie']`
 - **Publisher** `Jugend, Familie und Sport`
 - **Reference** `None`

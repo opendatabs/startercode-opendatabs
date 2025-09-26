@@ -39,7 +39,8 @@ def _(mo):
         r"""
     ## Dataset
     # **Bio-Klappen**
-    **Description**: Bio-Klappen für organische Küchenabfälle im Kanton Basel-Stadt.
+    **Description**: Recyclingstationen für Glas, Weissblech, Aluminium und Batterien im Kanton Basel-Stadt.
+Bio-Klappen für organische Küchenabfälle im Kanton Basel-Stadt.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100028)*.
     """
@@ -55,10 +56,11 @@ def _(mo):
 
     - **Dataset_identifier** `100028`
 - **Title** `Bio-Klappen`
-- **Description** `Bio-Klappen für organische Küchenabfälle im Kanton Basel-Stadt.`
+- **Description** `Recyclingstationen für Glas, Weissblech, Aluminium und Batterien im Kanton Basel-Stadt.
+Bio-Klappen für organische Küchenabfälle im Kanton Basel-Stadt.`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2025-09-24T00:00:00+00:00`
+- **Issued** `2025-02-20`
+- **Modified** `2025-09-25T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

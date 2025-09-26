@@ -38,7 +38,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Kitas und Tagesheime**
+    # **Tagesheime und Kitas**
     **Description**: «Kitas», «Kindertagesstätten» oder «Tagesheime» sind Einrichtungen, in denen Kinder regelmässig tagsüber durch qualifizierte Fachpersonen und in geeigneten Räumlichkeiten betreut werden.
 «Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.
 
@@ -55,16 +55,16 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100341`
-- **Title** `Kitas und Tagesheime`
+- **Title** `Tagesheime und Kitas`
 - **Description** `«Kitas», «Kindertagesstätten» oder «Tagesheime» sind Einrichtungen, in denen Kinder regelmässig tagsüber durch qualifizierte Fachpersonen und in geeigneten Räumlichkeiten betreut werden.
 «Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2024-02-20`
+- **Issued** `2025-02-18`
 - **Modified** `2025-07-30T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Bevölkerung', 'Geographie', 'Bildung, Wissenschaft']`
+- **Themes** `['Bevölkerung', 'Geographie', 'Bildung', 'Wissenschaft']`
 - **Keywords** `['Kinder', 'Betreuung', 'Familie', 'Tagesstruktur', 'Horte', 'Mittagstische', 'Tagesfamilie']`
 - **Publisher** `Jugend, Familie und Sport`
 - **Reference** `None`
