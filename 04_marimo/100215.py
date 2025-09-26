@@ -40,8 +40,8 @@ def _(mo):
     ## Dataset
     # **Verkehrsberuhigte Zonen: Begegnungszone**
     **Description**: Dieser Datensatz beinhaltet die signalisierten Fussgängerzonen.
-Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.
-Weitere Daten zu "Verkehrsberuhigte Zonen": https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen
+Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.<br>
+Weitere Daten zu "Verkehrsberuhigte Zonen": <a href="https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen">https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen</a>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100215)*.
     """
@@ -58,8 +58,8 @@ def _(mo):
     - **Dataset_identifier** `100215`
 - **Title** `Verkehrsberuhigte Zonen: Begegnungszone`
 - **Description** `Dieser Datensatz beinhaltet die signalisierten Fussgängerzonen.
-Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.
-Weitere Daten zu "Verkehrsberuhigte Zonen": https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen`
+Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.<br>
+Weitere Daten zu "Verkehrsberuhigte Zonen": <a href="https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen">https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen</a>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-12-30`
 - **Modified** `2025-07-18T00:00:00+00:00`
