@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-09-29T15:10:52+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2009-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2021-12-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Fischerei', 'Fangstatistik', 'Fische', 'Rhein', 'Birs', 'Wiese']`
 - **Publisher** `Amt für Umwelt und Energie`

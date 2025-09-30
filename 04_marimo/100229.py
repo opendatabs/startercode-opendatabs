@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-09-29T07:01:03+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1875-04-18T23:30:14+00:00`
-- **Temporal_coverage_end_date** `2025-05-17T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-27T22:00:00+00:00`
 - **Themes** `['Politik']`
 - **Keywords** `['Abstimmung', 'Stimmbeteiligung', 'Volksinitiative', 'Referendum', 'Grossratsbeschluss', 'Abstimungsergebnis', 'Stichfrage', 'Gegenvorschlag', 'Brieflich Wählende', 'Stimmberechtigte', 'Stimmzettel', 'Gültige Stimmen']`
 - **Publisher** `Statistisches Amt`
