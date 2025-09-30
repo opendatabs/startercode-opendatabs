@@ -38,10 +38,10 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Entwicklungszusammenarbeit: Unterstützte Projekte**
+    # **Entwicklung und Zusammenarbeit: Unterstützte Projekte**
     **Description**: <p>Basel engagiert sich für die Verbesserung der Lebensumstände der Ärmsten dieser Welt. Für Projekte der ausländischen Entwicklungszusammenarbeit stellt der Kanton jährlich 2 Mio. Franken bereit. Mit den finanziellen Beiträgen sollen die Entwicklungschancen der Bevölkerung in den ärmsten Ländern der Welt oder in speziell benachteiligten Regionen nachhaltig verbessert werden. Die Entwicklungszusammenarbeit des Kantons Basel-Stadt engagiert sich ausschliesslich im Rahmen von Projekten im Ausland, wobei thematische Schwerpunkte im Fokus stehen (medizinische Versorgung, Landwirtschaft, Bildung, Gewerbeförderung etc.).</p>
 <p>Die <a href="https://www.bs.ch/pd/marketing/eza#kommission" target="_blank">Kommission für Entwicklungszusammenarbeit</a> (<a href="https://www.bs.ch/pd/marketing/eza#kommission" target="_blank">https://www.bs.ch/pd/marketing/eza#kommission</a>) trifft sich zwei Mal jährlich zur Auswahl von Projekten. Bei der Beurteilung von Projektanträgen orientiert sich die Kommission an einem Kriterienkatalog (Qualität, Relevanz, Effektivität, Wirkung, Nachhaltigkeit, Transparenz der Finanzierung, ethische Aspekte). Es wird darauf geachtet, dass bei der Vergabe der Mittel ein gewisser Turnus angewendet wird und Hilfswerke, welche in der Region domiziliert sind, besonders berücksichtigt werden.</p>
-<p>Die Regierungsratsbeschlüsse zur Auswahl der zu unterstützenden Projekte werden jeweils veröffentlicht unter: <a href="https://www.bs.ch/apps/regierungsratsbeschluesse" target="_blank">https://www.bs.ch/apps/regierungsratsbeschluesse</a> (Stichwort: Entwicklungszusammenarbeit)</p>
+<p>Die Regierungsratsbeschlüsse zur Auswahl der zu unterstützenden Projekte werden jeweils veröffentlicht unter: <a href="https://www.bs.ch/apps/regierungsratsbeschluesse" target="_blank">https://www.bs.ch/apps/regierungsratsbeschluesse</a> (Stichwort: Entwicklungszusammenarbeit)</p><p>Änderungsprotokoll:<br>30.9.25: Anpassung Titel und Beschreibung: neu "Entwicklung und Zusammenarbeit" anstelle von "Entwicklungszusammenarbeit"</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100380)*.
     """
@@ -56,10 +56,10 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100380`
-- **Title** `Entwicklungszusammenarbeit: Unterstützte Projekte`
+- **Title** `Entwicklung und Zusammenarbeit: Unterstützte Projekte`
 - **Description** `<p>Basel engagiert sich für die Verbesserung der Lebensumstände der Ärmsten dieser Welt. Für Projekte der ausländischen Entwicklungszusammenarbeit stellt der Kanton jährlich 2 Mio. Franken bereit. Mit den finanziellen Beiträgen sollen die Entwicklungschancen der Bevölkerung in den ärmsten Ländern der Welt oder in speziell benachteiligten Regionen nachhaltig verbessert werden. Die Entwicklungszusammenarbeit des Kantons Basel-Stadt engagiert sich ausschliesslich im Rahmen von Projekten im Ausland, wobei thematische Schwerpunkte im Fokus stehen (medizinische Versorgung, Landwirtschaft, Bildung, Gewerbeförderung etc.).</p>
 <p>Die <a href="https://www.bs.ch/pd/marketing/eza#kommission" target="_blank">Kommission für Entwicklungszusammenarbeit</a> (<a href="https://www.bs.ch/pd/marketing/eza#kommission" target="_blank">https://www.bs.ch/pd/marketing/eza#kommission</a>) trifft sich zwei Mal jährlich zur Auswahl von Projekten. Bei der Beurteilung von Projektanträgen orientiert sich die Kommission an einem Kriterienkatalog (Qualität, Relevanz, Effektivität, Wirkung, Nachhaltigkeit, Transparenz der Finanzierung, ethische Aspekte). Es wird darauf geachtet, dass bei der Vergabe der Mittel ein gewisser Turnus angewendet wird und Hilfswerke, welche in der Region domiziliert sind, besonders berücksichtigt werden.</p>
-<p>Die Regierungsratsbeschlüsse zur Auswahl der zu unterstützenden Projekte werden jeweils veröffentlicht unter: <a href="https://www.bs.ch/apps/regierungsratsbeschluesse" target="_blank">https://www.bs.ch/apps/regierungsratsbeschluesse</a> (Stichwort: Entwicklungszusammenarbeit)</p>`
+<p>Die Regierungsratsbeschlüsse zur Auswahl der zu unterstützenden Projekte werden jeweils veröffentlicht unter: <a href="https://www.bs.ch/apps/regierungsratsbeschluesse" target="_blank">https://www.bs.ch/apps/regierungsratsbeschluesse</a> (Stichwort: Entwicklungszusammenarbeit)</p><p>Änderungsprotokoll:<br>30.9.25: Anpassung Titel und Beschreibung: neu "Entwicklung und Zusammenarbeit" anstelle von "Entwicklungszusammenarbeit"</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-08-09`
 - **Modified** `2025-04-28T07:48:11+00:00`
