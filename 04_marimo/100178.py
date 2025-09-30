@@ -101,12 +101,12 @@ def _(plt):
 @app.cell
 def _(os, pd, requests):
     def get_dataset(dataset_id):
-        url=f"https://data.bs.ch/explore/dataset/{dataset_id}/download"
+        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv
         r = requests.get(
             url, 
             params={
-                "format": "csv", 
-                "timezone": "Europe%2FZurich"
+                "timezone": "Europe%2FZurich",
+                "use_labels": "true"
             }
         )
         data_path = os.path.join(os.getcwd(), "..", "data")
