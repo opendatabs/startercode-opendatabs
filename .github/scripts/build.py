@@ -41,8 +41,10 @@ def build_homepage(readme: Path = ROOT / "README.md", out: Path = SITE / "index.
     out.parent.mkdir(parents=True, exist_ok=True)
 
     css_url = "https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css"
+    favicon_href = "/favicon.png"
     extra_head = (
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
+        f'<link rel="icon" href="{favicon_href}" type="image/x-icon">'
         "<style>"
         "body { background:#0e1116; }"
         ".page { max-width: 1210px; margin: 2rem auto; padding: 2rem; background:#fff;"
@@ -63,9 +65,9 @@ def build_homepage(readme: Path = ROOT / "README.md", out: Path = SITE / "index.
         "-t", "html5",
         "-s", str(readme),
         "-o", str(out),
-        "--metadata", "title=Home",
+        "--metadata",
         "--css", css_url,
-        "-V", "pagetitle=Home",
+        "-V", "pagetitle=Starter Code — Open Data Basel-Stadt",
         "--include-in-header", head_path,   # <- use temp file instead of "-"
     ]
     try:
@@ -153,6 +155,9 @@ def main(
     readme: str = str(ROOT / "README.md"),
 ):
     SITE.mkdir(parents=True, exist_ok=True)
+    src_fav = ROOT / "favicon.png"
+    if src_fav.exists():
+        shutil.copyfile(src_fav, SITE / "favicon.png")
     touch_nojekyll(SITE)
     build_homepage(Path(readme), SITE / "index.html")
 
