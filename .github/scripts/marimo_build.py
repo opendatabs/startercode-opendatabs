@@ -42,7 +42,7 @@ def _export_html_wasm(py_path: Path, out_dir: Path) -> bool:
         return False
 
 
-def main(source: Union[str, Path] = "04_marimo", output_dir: Union[str, Path] = "_site"):
+def main(source: Union[str, Path] = "04_marimo", output_dir: Union[str, Path] = "_site/marimo"):
     source_dir = Path(source)
     out_dir = Path(output_dir)
 
