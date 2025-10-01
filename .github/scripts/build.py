@@ -41,12 +41,12 @@ def build_homepage(readme: Path = ROOT / "README.md", out: Path = SITE / "index.
     out.parent.mkdir(parents=True, exist_ok=True)
 
     css_url = "https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css"
-    favicon_href = "/favicon.png"
+    favicon_href = "favicon.png"  # relative: works on project pages
     extra_head = (
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
-        f'<link rel="icon" href="{favicon_href}" type="image/x-icon">'
+        f'<link rel="icon" href="{favicon_href}" type="image/png">'   # PNG mime type
         "<style>"
-        "body { background:#0e1116; }"
+        "body { background:#ddecde; }"
         ".page { max-width: 1210px; margin: 2rem auto; padding: 2rem; background:#fff;"
         "box-shadow: 0 2px 18px rgba(0,0,0,.1); border-radius: 12px; }"
         ".markdown-body { box-sizing: border-box; min-width: 200px; }"
@@ -65,17 +65,12 @@ def build_homepage(readme: Path = ROOT / "README.md", out: Path = SITE / "index.
         "-t", "html5",
         "-s", str(readme),
         "-o", str(out),
-        "--metadata",
         "--css", css_url,
         "-V", "pagetitle=Starter Code — Open Data Basel-Stadt",
-        "--include-in-header", head_path,   # <- use temp file instead of "-"
+        "--include-in-header", head_path,
     ]
-    try:
-        run(cmd)
-    except subprocess.CalledProcessError as e:
-        raise RuntimeError(f"pandoc failed with exit code {e.returncode}") from e
+    run(cmd)
 
-    # Wrap body content in a container for nicer look
     html_text = out.read_text(encoding="utf-8")
     html_text = html_text.replace("<body>", '<body><div class="page markdown-body">', 1)
     html_text = html_text.replace("</body>", "</div></body>", 1)
