@@ -45,8 +45,8 @@ def build_homepage(readme: Path = ROOT / "README.md", out: Path = SITE / "index.
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
         "<style>"
         "body { background:#0e1116; }"
-        ".page { max-width: 1040px; margin: 2rem auto; padding: 2rem; background:#fff;"
-        "box-shadow: 0 2px 18px rgba(255,255,255,.1); border-radius: 12px; }"
+        ".page { max-width: 1210px; margin: 2rem auto; padding: 2rem; background:#fff;"
+        "box-shadow: 0 2px 18px rgba(0,0,0,.1); border-radius: 12px; }"
         ".markdown-body { box-sizing: border-box; min-width: 200px; }"
         "</style>"
     )
@@ -123,9 +123,9 @@ def build_marimo_index(out_dir: Path, apps: List[Path]) -> None:
 <title>marimo apps</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css">
 <style>
-body {{ background:#0e1116; }}
-.page {{ max-width: 1040px; margin: 2rem auto; padding: 2rem; background:#fff;
-         box-shadow: 0 2px 18px rgba(255,255,255,.1); border-radius: 12px; }}
+body {{ background:#ffffff; }}
+.page {{ max-width: 1210px; margin: 2rem auto; padding: 2rem; background:#fff;
+         box-shadow: 0 2px 18px rgba(0,0,0,.1); border-radius: 12px; }}
 </style>
 <body>
   <div class="page markdown-body">
