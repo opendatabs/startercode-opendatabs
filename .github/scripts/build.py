@@ -2,7 +2,7 @@
 Build GitHub Pages site:
 - Homepage from README.md (GFM) to _site/index.html
 - Marimo notebooks from 04_marimo/*.py to _site/marimo/*.html
-  and also clean-URL copies at _site/marimo/<name>/index.html
+  and clean-URL copies at _site/marimo/<name>/index.html
 - Create _site/.nojekyll and a simple marimo index
 Usage:
     uv run .github/scripts/build.py
@@ -19,12 +19,12 @@ Usage:
 import html
 import shutil
 import subprocess
+import tempfile
 from pathlib import Path
 from typing import Iterable, List, Tuple
 
 import fire
 from loguru import logger
-
 
 ROOT = Path.cwd()
 SITE = ROOT / "_site"
@@ -39,17 +39,23 @@ def run(cmd: List[str]) -> None:
 
 def build_homepage(readme: Path = ROOT / "README.md", out: Path = SITE / "index.html") -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
-    # GitHub-like CSS + centered content container
+
     css_url = "https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css"
     extra_head = (
-        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+        '<meta name="viewport" content="width=device-width, initial-scale=1">'
         "<style>"
         "body { background:#0e1116; }"
-        ".page { max-width: 900px; margin: 2rem auto; padding: 2rem; background:#fff; "
+        ".page { max-width: 900px; margin: 2rem auto; padding: 2rem; background:#fff;"
         "box-shadow: 0 2px 18px rgba(0,0,0,.1); border-radius: 12px; }"
         ".markdown-body { box-sizing: border-box; min-width: 200px; }"
         "</style>"
     )
+
+    logger.info("Building homepage from {}", readme)
+    with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False, encoding="utf-8") as headf:
+        headf.write(extra_head)
+        headf.flush()
+        head_path = headf.name
 
     cmd = [
         "pandoc",
@@ -60,22 +66,17 @@ def build_homepage(readme: Path = ROOT / "README.md", out: Path = SITE / "index.
         "--metadata", "title=Home",
         "--css", css_url,
         "-V", "pagetitle=Home",
-        "--include-in-header", "-",
+        "--include-in-header", head_path,   # <- use temp file instead of "-"
     ]
-
-    logger.info("Building homepage from {}", readme)
-    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    assert proc.stdin is not None
-    proc.stdin.write(extra_head.encode("utf-8"))
-    proc.stdin.close()
-    ret = proc.wait()
-    if ret != 0:
-        raise RuntimeError(f"pandoc failed with exit code {ret}")
+    try:
+        run(cmd)
+    except subprocess.CalledProcessError as e:
+        raise RuntimeError(f"pandoc failed with exit code {e.returncode}") from e
 
     # Wrap body content in a container for nicer look
     html_text = out.read_text(encoding="utf-8")
-    html_text = html_text.replace('<body>', '<body><div class="page markdown-body">', 1)
-    html_text = html_text.replace('</body>', '</div></body>', 1)
+    html_text = html_text.replace("<body>", '<body><div class="page markdown-body">', 1)
+    html_text = html_text.replace("</body>", "</div></body>", 1)
     out.write_text(html_text, encoding="utf-8")
     logger.success("Homepage → {}", out)
 
@@ -93,7 +94,7 @@ def export_marimo(py_path: Path, out_dir: Path) -> Tuple[Path, Path]:
     run(cmd)
     logger.info("Exported marimo {} → {}", py_path.name, out_html.name)
 
-    # Create clean-URL directory copy: marimo/<name>/index.html
+    # Clean URL: marimo/<name>/index.html
     clean_dir = out_dir / py_path.stem
     clean_dir.mkdir(parents=True, exist_ok=True)
     clean_index = clean_dir / "index.html"
@@ -112,12 +113,12 @@ def build_marimo_index(out_dir: Path, apps: List[Path]) -> None:
     items = []
     for p in apps:
         name = p.stem
-        # link to clean URL; .html also exists
-        items.append(f'<li><a href="./{html.escape(name)}/">{html.escape(name)}</a> '
-                     f'(<a href="./{html.escape(name)}.html">.html</a>)</li>')
+        items.append(
+            f'<li><a href="./{html.escape(name)}/">{html.escape(name)}</a> '
+            f'(<a href="./{html.escape(name)}.html">.html</a>)</li>'
+        )
     html_doc = f"""<!doctype html>
-<html lang="en">
-<meta charset="utf-8"/>
+<html lang="en"><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>marimo apps</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css">
@@ -129,7 +130,6 @@ body {{ background:#0e1116; }}
 <body>
   <div class="page markdown-body">
     <h1>marimo apps</h1>
-    <p>Pick an app:</p>
     <ul>
       {''.join(items) if items else '<li><em>No apps found.</em></li>'}
     </ul>
@@ -166,7 +166,7 @@ def main(
     exported: List[Path] = []
     for app in apps:
         try:
-            html_path, clean_index = export_marimo(app, out_dir)
+            html_path, _ = export_marimo(app, out_dir)
             exported.append(html_path)
         except subprocess.CalledProcessError as e:
             logger.error("Export failed for {}:\n{}", app.name, e)
