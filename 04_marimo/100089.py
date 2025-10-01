@@ -60,7 +60,7 @@ def _(mo):
 <p>Der Pegel wird berechnet als [Wasserstand] - 240 m ü. M., siehe <a href="https://port-of-switzerland.ch/hafenservice/pegel/" target="_blank">https://port-of-switzerland.ch/hafenservice/pegel</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-29`
-- **Modified** `2025-10-01T07:55:09+00:00`
+- **Modified** `2025-10-01T08:55:08+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2020-06-21T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-09-30T22:00:00+00:00`
@@ -101,7 +101,7 @@ def _(plt):
 @app.cell
 def _(os, pd, requests):
     def get_dataset(dataset_id):
-        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv
+        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv"
         r = requests.get(
             url, 
             params={

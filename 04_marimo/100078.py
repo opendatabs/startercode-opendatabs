@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Der Datensatz zeigt die Flugbewegungen sowie Angaben zur Anzahl Passagiere und zur beförderten Fracht auf dem EuroAirport Basel Mulhouse Freiburg für jeden Tag ab 1. Januar 2019.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-05-14`
-- **Modified** `2025-10-01T07:45:59+00:00`
+- **Modified** `2025-10-01T08:45:47+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -99,7 +99,7 @@ def _(plt):
 @app.cell
 def _(os, pd, requests):
     def get_dataset(dataset_id):
-        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv
+        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv"
         r = requests.get(
             url, 
             params={

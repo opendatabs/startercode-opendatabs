@@ -62,7 +62,7 @@ def _(mo):
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2025-10-01T07:51:28+00:00`
+- **Modified** `2025-10-01T08:51:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2025-09-30T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-09-30T22:00:00+00:00`
@@ -103,7 +103,7 @@ def _(plt):
 @app.cell
 def _(os, pd, requests):
     def get_dataset(dataset_id):
-        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv
+        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv"
         r = requests.get(
             url, 
             params={

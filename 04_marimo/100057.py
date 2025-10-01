@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Metadaten zu den im vorliegenden Datenportal publizierten OGD Datensätzen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-10-01T07:03:16+00:00`
+- **Modified** `2025-10-01T08:03:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `1097-03-15T23:25:52+00:00`
 - **Temporal_coverage_end_date** `5025-04-28T22:00:00+00:00`
@@ -99,7 +99,7 @@ def _(plt):
 @app.cell
 def _(os, pd, requests):
     def get_dataset(dataset_id):
-        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv
+        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv"
         r = requests.get(
             url, 
             params={

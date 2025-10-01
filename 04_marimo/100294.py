@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Die Wetterstation wurde im Rahmen der «Transformation <a href="https://rosentalmitte.ch/" target="_blank">Rosental Mitte</a>» installiert. Das Areal soll dabei etappenweise für die Öffentlichkeit zugänglich gemacht und zu einem vollwertigen Stadtteil entwickelt werden. </p><p>Bedingt durch die frühere Nutzung des Rosental Areals – auch bekannt als die Wiege der Basler Chemie - ist der Untergrund mit Schadstoffen belastet. Während der Tiefbauarbeiten überwacht das <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene" target="_blank">Lufthygieneamt beider Basel (LHA)</a> die Immissionen mittels Messungen der Luft. Die Wetterstation zeichnet während der Überwachung u.a. Windrichtungen und Windgeschwindigkeiten auf, die bei der Interpretation der Immissionsmessungen hilfreich sind.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-11`
-- **Modified** `2025-10-01T07:45:12+00:00`
+- **Modified** `2025-10-01T08:45:12+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-04-29T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-09-30T22:00:00+00:00`
@@ -99,7 +99,7 @@ def _(plt):
 @app.cell
 def _(os, pd, requests):
     def get_dataset(dataset_id):
-        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv
+        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv"
         r = requests.get(
             url, 
             params={
