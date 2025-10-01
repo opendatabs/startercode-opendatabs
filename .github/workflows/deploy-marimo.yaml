@@ -22,7 +22,7 @@ jobs:
         run: |
           uv run .github/scripts/marimo_build.py \
             --source 04_marimo \
-            --output-dir _site
+            --output-dir _site/marimo
           tree _site || true
 
       - name: 🏠 Build homepage from README.md
