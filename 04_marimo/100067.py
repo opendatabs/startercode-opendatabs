@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p style='font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.495px;'>Der Datensatz enthält die Analysedaten der Grundwasser-Beprobungs-Kampagnen des Kantons Basel-Stadt seit dem Jahr 1993.  Es werden Konzentrationsangaben zu verschiedenen Inhalts- resp. Schadstoffen mit Bezug auf den Brunnennamen sowie der geographischen Koordinaten gemacht.</p><p style='font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.495px;'><span style="font-size: 12.495px;">Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei" target="_blank">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei</a></span><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-04-06`
-- **Modified** `2025-09-30T06:12:23+00:00`
+- **Modified** `2025-10-01T06:13:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1993-07-18T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`

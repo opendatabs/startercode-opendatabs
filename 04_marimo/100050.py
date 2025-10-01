@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-09-30T11:16:35+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1999-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-09-28T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-29T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Gesundheit', 'Tourismus']`
 - **Keywords** `['Luft', 'Feinstaub', 'Stickstoffdioxid', 'Stickoxid', 'NO2', 'NOX', 'Motorräder', 'Echtzeit', 'Realtime']`
 - **Publisher** `Lufthygieneamt beider Basel`
