@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Entwicklung des Basler Index der Konsumentenpreise BIK (Basis Dezember 2020 = 100) nach Hauptgruppe seit 1939.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-09-04T06:54:02+00:00`
+- **Modified** `2025-10-02T07:14:56+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1939-07-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-08-30T22:00:00+00:00`

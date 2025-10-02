@@ -60,8 +60,8 @@ def _(mo):
 - **Issued** `2025-10-01`
 - **Modified** `2025-08-26T13:07:40+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2013-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Abfall']`
 - **Publisher** `Statistisches Amt`
