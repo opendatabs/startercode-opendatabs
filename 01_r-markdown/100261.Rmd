@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100261.
 
 - **Dataset_identifier** `100261`
 - **Title** `Gewässernetz: Gewässerachsen`
-- **Description** `Gewässerachsen und Eindolungen im Kanton Basel-Stadt.`
+- **Description** `Dieser Datensatz enthält die zentralen Gewässerachsen (Linienobjekte) im Kanton Basel-Stadt. Jede Achse beschreibt den Verlauf eines Fliess- oder Stillgewässers (z. B. Rhein, Birs, Birsig, Bäche, Teiche).`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-09-30`
 - **Modified** `2019-06-24T00:00:00+00:00`

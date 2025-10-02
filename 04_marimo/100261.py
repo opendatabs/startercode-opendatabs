@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Gewässernetz: Gewässerachsen**
-    **Description**: Gewässerachsen und Eindolungen im Kanton Basel-Stadt.
+    **Description**: Dieser Datensatz enthält die zentralen Gewässerachsen (Linienobjekte) im Kanton Basel-Stadt. Jede Achse beschreibt den Verlauf eines Fliess- oder Stillgewässers (z. B. Rhein, Birs, Birsig, Bäche, Teiche).
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100261)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100261`
 - **Title** `Gewässernetz: Gewässerachsen`
-- **Description** `Gewässerachsen und Eindolungen im Kanton Basel-Stadt.`
+- **Description** `Dieser Datensatz enthält die zentralen Gewässerachsen (Linienobjekte) im Kanton Basel-Stadt. Jede Achse beschreibt den Verlauf eines Fliess- oder Stillgewässers (z. B. Rhein, Birs, Birsig, Bäche, Teiche).`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-09-30`
 - **Modified** `2019-06-24T00:00:00+00:00`

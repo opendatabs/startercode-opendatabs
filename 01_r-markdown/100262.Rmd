@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100262.
 
 - **Dataset_identifier** `100262`
 - **Title** `Gewässernetz: Eindolungen`
-- **Description** `Gewässerachsen und Eindolungen im Kanton Basel-Stadt.`
+- **Description** `Der Datensatz dokumentiert die Eindolungen von Gewässerabschnitten in Basel-Stadt, d. h. Abschnitte, in denen Bäche und Teiche überdeckt oder in Röhren verlegt sind.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-09-30`
 - **Modified** `2019-06-24T00:00:00+00:00`

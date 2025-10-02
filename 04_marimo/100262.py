@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Gewässernetz: Eindolungen**
-    **Description**: Gewässerachsen und Eindolungen im Kanton Basel-Stadt.
+    **Description**: Der Datensatz dokumentiert die Eindolungen von Gewässerabschnitten in Basel-Stadt, d. h. Abschnitte, in denen Bäche und Teiche überdeckt oder in Röhren verlegt sind.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100262)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100262`
 - **Title** `Gewässernetz: Eindolungen`
-- **Description** `Gewässerachsen und Eindolungen im Kanton Basel-Stadt.`
+- **Description** `Der Datensatz dokumentiert die Eindolungen von Gewässerabschnitten in Basel-Stadt, d. h. Abschnitte, in denen Bäche und Teiche überdeckt oder in Röhren verlegt sind.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-09-30`
 - **Modified** `2019-06-24T00:00:00+00:00`
