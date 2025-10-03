@@ -41,17 +41,28 @@ def build_homepage(readme: Path = ROOT / "README.md", out: Path = SITE / "index.
     out.parent.mkdir(parents=True, exist_ok=True)
 
     css_url = "https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css"
-    favicon_href = "favicon.png"  # relative: works on project pages
+    favicon_href = "favicon.png"
     extra_head = (
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
-        f'<link rel="icon" href="{favicon_href}" type="image/png">'   # PNG mime type
+        '<meta name="color-scheme" content="light">'          # force light mode hints
+        f'<link rel="icon" href="{favicon_href}" type="image/png">'
         "<style>"
-        "body { background:#ddecde; }"
+        "html { color-scheme: light; }"                        # browsers: use light palette
+        "body { background:#f6f8fa; }"                         # GH-like margin
         ".page { max-width: 1210px; margin: 2rem auto; padding: 2rem; background:#fff;"
-        "box-shadow: 0 2px 18px rgba(0,0,0,.1); border-radius: 12px; }"
-        ".markdown-body { box-sizing: border-box; min-width: 200px; }"
+        "        box-shadow: 0 2px 18px rgba(0,0,0,.1); border-radius: 12px; }"
+        ".markdown-body { color:#1D1F21; }"                    # base text color
+        ".markdown-body h1, .markdown-body h2 { color:#32834A; }"
+        ".markdown-body h3 { color:#2A9749; }"
+        "@media (prefers-color-scheme: dark) {"
+        "  html, body { background:#f6f8fa !important; }"
+        "  .page { background:#ffffff !important; }"
+        "  .markdown-body { color:#1D1F21 !important; }"
+        "  img { filter:none !important; }"
+        "}"
         "</style>"
     )
+
 
     logger.info("Building homepage from {}", readme)
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False, encoding="utf-8") as headf:
