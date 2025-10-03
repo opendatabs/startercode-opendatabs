@@ -4,26 +4,26 @@ date: "2025-10-03"
 output: html_document
 ---
 
-## Dataset: Wetterstation Rosental Mitte
+## Dataset: Bodenbedeckungen
 
-[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100294)
+[Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100477)
 
-Auto generated R starter code for data set 100294.
+Auto generated R starter code for data set 100477.
 
 ## Metadata
 
-- **Dataset_identifier** `100294`
-- **Title** `Wetterstation Rosental Mitte`
-- **Description** `<p>Die Wetterstation wurde im Rahmen der «Transformation <a href="https://rosentalmitte.ch/" target="_blank">Rosental Mitte</a>» installiert. Das Areal soll dabei etappenweise für die Öffentlichkeit zugänglich gemacht und zu einem vollwertigen Stadtteil entwickelt werden. </p><p>Bedingt durch die frühere Nutzung des Rosental Areals – auch bekannt als die Wiege der Basler Chemie - ist der Untergrund mit Schadstoffen belastet. Während der Tiefbauarbeiten überwacht das <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene" target="_blank">Lufthygieneamt beider Basel (LHA)</a> die Immissionen mittels Messungen der Luft. Die Wetterstation zeichnet während der Überwachung u.a. Windrichtungen und Windgeschwindigkeiten auf, die bei der Interpretation der Immissionsmessungen hilfreich sind.</p>`
+- **Dataset_identifier** `100477`
+- **Title** `Bodenbedeckungen`
+- **Description** `Der Datensatz enthält eine flächendeckende Erfassung der Bodenbedeckung im Kanton Basel-Stadt. Jede Fläche ist einer Bodenbedeckungskategorie zugeordnet (z. B. Gebäude, Gewässer, befestigt, bestockt, humusiert) und wird durch Polygone repräsentiert.`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2023-05-11`
-- **Modified** `2025-10-03T18:45:09+00:00`
+- **Issued** `2025-10-03`
+- **Modified** `2025-10-03T18:38:48+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2023-04-29T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-10-02T22:00:00+00:00`
-- **Themes** `['Raum und Umwelt']`
-- **Keywords** `['Wetter', 'Luftfeuchtigkeit', 'Strahlung', 'Niederschlag', 'Wind', 'Temperatur', 'Regen']`
-- **Publisher** `Lufthygieneamt beider Basel`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
+- **Themes** `['Geographie', 'Raum und Umwelt']`
+- **Keywords** `['Landnutzung', 'Flächennutzung', 'Raumplanung', 'Stadtplanung', 'Umwelt', 'Gewässer', 'humusiert', 'befestigt', 'bestockt', 'Natur', 'Gebäude', 'Strassen', 'Trottoir', 'Gartenanlagen', 'Wald', 'Vegetation', 'Landwirtschaft', 'Verkehrsflächen', 'Infrastruktur', 'Versiegelung']`
+- **Publisher** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
 
 
@@ -46,7 +46,7 @@ get_dataset <- function(url) {
     dir.create(data_path, recursive = TRUE)
   }
   # Download the CSV file
-  csv_path <- file.path(data_path , '100294.csv')
+  csv_path <- file.path(data_path , '100477.csv')
   download.file(url, csv_path, mode = "wb")
 
   # Read the CSV file
@@ -65,7 +65,7 @@ get_dataset <- function(url) {
 
 ```{r}
 
-df <- get_dataset('https://data.bs.ch/explore/dataset/100294/download?format=csv&timezone=Europe%2FZurich')
+df <- get_dataset('https://data.bs.ch/explore/dataset/100477/download?format=csv&timezone=Europe%2FZurich')
 
 ```
 
