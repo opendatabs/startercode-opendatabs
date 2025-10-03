@@ -46,22 +46,41 @@ def build_homepage(readme: Path = ROOT / "README.md", out: Path = SITE / "index.
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
         '<meta name="color-scheme" content="light">'          # force light mode hints
         f'<link rel="icon" href="{favicon_href}" type="image/png">'
-        "<style>"
-        "html { color-scheme: light; }"                        # browsers: use light palette
-        "body { background:#f6f8fa; }"                         # GH-like margin
-        ".page { max-width: 1210px; margin: 2rem auto; padding: 2rem; background:#fff;"
-        "        box-shadow: 0 2px 18px rgba(0,0,0,.1); border-radius: 12px; }"
-        ".markdown-body { color:#1D1F21; }"                    # base text color
-        ".markdown-body h1, .markdown-body h2 { color:#32834A; }"
-        ".markdown-body h3 { color:#2A9749; }"
-        ".markdown-body th { color:#2A9749; }"
-        "@media (prefers-color-scheme: dark) {"
-        "  html, body { background:#f6f8fa !important; }"
-        "  .page { background:#ffffff !important; }"
-        "  .markdown-body { color:#1D1F21 !important; }"
-        "  img { filter:none !important; }"
-        "}"
-        "</style>"
+extra_head = (
+    '<meta name="viewport" content="width=device-width, initial-scale=1">'
+    '<meta name="color-scheme" content="light">'
+    '<link rel="icon" href="favicon.png" type="image/png">'
+    "<style>"
+    "html { color-scheme: light; }"
+    "body { background:#ddecde; }"
+    ".page { max-width: 1210px; margin: 2rem auto; padding: 2rem; background:#fff;"
+    "        box-shadow: 0 2px 18px rgba(0,0,0,.1); border-radius: 12px; }"
+    ".markdown-body { color:#1D1F21; }"
+    ".markdown-body h1, .markdown-body h2 { color:#32834A; }"
+    ".markdown-body h3 { color:#2A9749; }"
+    ".markdown-body table { background:#ffffff !important; border-color:#e1e4e8 !important; }"
+    ".markdown-body table tr { background:#ffffff !important; }"
+    ".markdown-body table tr:nth-child(2n) { background:#ffffff !important; }"
+    ".markdown-body table td, .markdown-body table th {"
+    "  background:#ffffff !important; border-color:#e1e4e8 !important;"
+    "}"
+    ".markdown-body table th { color:#2A9749 !important; }"
+    "@media (prefers-color-scheme: dark) {"
+    "  html, body { background:#f6f8fa !important; }"
+    "  .page { background:#ffffff !important; }"
+    "  .markdown-body { color:#1D1F21 !important; }"
+    "  .markdown-body table,"
+    "  .markdown-body table tr,"
+    "  .markdown-body table tr:nth-child(2n),"
+    "  .markdown-body table td,"
+    "  .markdown-body table th {"
+    "    background:#ffffff !important; border-color:#e1e4e8 !important; color:inherit;"
+    "  }"
+    "  .markdown-body table th { color:#2A9749 !important; }"
+    "}"
+    "</style>"
+)
+
     )
 
 
