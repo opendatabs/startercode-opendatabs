@@ -62,7 +62,7 @@ def build_homepage(readme: Path = ROOT / "README.md", out: Path = SITE / "index.
         "}"
         ".markdown-body table th { color:#2A9749 !important; }"
         "@media (prefers-color-scheme: dark) {"
-        "  html, body { background:#f6f8fa !important; }"
+        "  html, body { background:#ddecde !important; }"
         "  .page { background:#ffffff !important; }"
         "  .markdown-body { color:#1D1F21 !important; }"
         "  .markdown-body table,"
