@@ -58,10 +58,10 @@ def _(mo):
 - **Description** `<p>Der Datensatz enthält die Grundwasserstände in m ü. M. des kantonalen Grundwassermessnetzes. Es weist zur Zeit um die 80 Messstationen auf. Bei den Stationen, die mit einer Datenfernübertragung ausgerüstet sind, liegen tagesaktuelle Stundenwerte vor.</p><p>Jede Messstation ist mit der Katasternummer gemäss Bohrkataster des Kantons Basel-Stadt versehen (<a href="https://data.bs.ch/explore/dataset/100182/" target="_blank">https://data.bs.ch/explore/dataset/100182/</a>). Die Bohrungen sind auch auf MapBS unter dem Thema Geologie abrufbar (<a href="http://www.geo.bs.ch/bohrkataster" target="_blank">www.geo.bs.ch/bohrkataster</a>).</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser" target="_blank">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser</a></p><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-07-11`
-- **Modified** `2025-10-02T05:25:39+00:00`
+- **Modified** `2025-10-03T05:25:36+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1976-03-28T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-09-29T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-30T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Pegel', 'Wasserstand', 'Wasser', 'Trinkwasser']`
 - **Publisher** `Amt für Umwelt und Energie`
