@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-10-03"
+date: "2025-10-04"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100348.
 - **Modified** `2025-10-03T03:01:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2013-01-24T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-08-26T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-10-01T22:00:00+00:00`
 - **Themes** `['Politik', 'Verwaltung']`
 - **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Parlamentarische Vorstösse', 'Demokratie', 'Legislative']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`
