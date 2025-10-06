@@ -33,7 +33,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(
         r"""
@@ -153,7 +153,7 @@ def _(get_dataset):
     return (df,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""## Analyze Data""")
     return
@@ -186,7 +186,7 @@ def _(df, pd, plt):
         print("No numerical data to plot.")
     return
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""**Questions about the data?** Open Data Basel-Stadt | opendata@bs.ch""")
     return
