@@ -174,7 +174,7 @@ def _(df, pd, plt):
         df.hist(bins=25, rwidth=0.9)
         plt.tight_layout()
         plt.show()
-    except pd.errors.DataError:
+    except ValueError:
         print("No numerical data to plot.")
     return
 

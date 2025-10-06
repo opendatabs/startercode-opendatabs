@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Metadaten zu den im vorliegenden Datenportal publizierten OGD Datensätzen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-10-06T07:03:12+00:00`
+- **Modified** `2025-10-06T08:03:12+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `1097-03-10T23:25:52+00:00`
 - **Temporal_coverage_end_date** `5025-04-28T22:00:00+00:00`
@@ -168,7 +168,7 @@ def _(df, pd, plt):
         df.hist(bins=25, rwidth=0.9)
         plt.tight_layout()
         plt.show()
-    except pd.errors.DataError:
+    except ValueError:
         print("No numerical data to plot.")
     return
 
