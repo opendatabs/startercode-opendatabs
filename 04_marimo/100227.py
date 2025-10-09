@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt für die Messstation Basel-Binningen am Observatorium St. Margarethen für jeden Monat die in Bezug auf Temperatur, Niederschlag und Bewölkung registrierten Witterungserscheinungen seit 1921.Methodischer Hinweis:Daten von 1921 bis 1940 stammen von der astronomisch-meteorologischen Anstalt im Bernoullianum.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-17`
-- **Modified** `2025-09-17T06:45:37+00:00`
+- **Modified** `2025-10-09T11:15:35+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1920-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-08-30T22:00:00+00:00`
