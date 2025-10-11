@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-10-10T06:31:06+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1990-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2020-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2021-12-31T23:00:00+00:00`
 - **Themes** `['Finanzen']`
 - **Keywords** `['Gemeinden', 'Zeitreihe', 'Steuern', 'Einkommen', 'Wohnviertel']`
 - **Publisher** `Statistisches Amt`
