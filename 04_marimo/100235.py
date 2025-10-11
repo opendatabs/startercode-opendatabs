@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz zeigt den Wasserstand und die Abflussmenge der Wiese in Basel etwa auf Höhe der Brücke bei der Wiesenstrasse über die Wiese. Es liegen aktuelle Werte alle 5 Minuten vor. Die Messungen werden im Auftrag des Bundesamts für Umwelt durchgeführt (siehe <a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2199" target="_blank">https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2199</a>).</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-10`
-- **Modified** `2025-10-11T07:00:14+00:00`
+- **Modified** `2025-10-11T20:00:17+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2022-10-28T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-10-10T22:00:00+00:00`
