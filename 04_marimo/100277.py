@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Die Statistik der Smiley-Geschwindigkeitsanzeigen fasst die Daten über die verschiedenen Phasen zusammen (Vormessung, Betrieb, Nachmessung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
-- **Modified** `2025-08-05T15:41:42+00:00`
+- **Modified** `2025-10-15T05:10:26+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-02-08T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-01-30T23:00:00+00:00`
