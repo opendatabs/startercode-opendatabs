@@ -98,10 +98,10 @@ für Umwelt und Energie Basel-Stadt (AUE-BS)</a> <br>
 (siehe https://www.bs.ch/wsu/aue)<o:p></o:p></span></p></div><p></p><p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-11-23`
-- **Modified** `2025-10-15T18:50:43+00:00`
+- **Modified** `2025-10-16T06:50:22+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2023-10-17T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-10-13T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-10-14T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Rhein', 'Trübung', 'Lichtdurchlässigkeit', 'Baden']`
 - **Publisher** `Amt für Umwelt und Energie`

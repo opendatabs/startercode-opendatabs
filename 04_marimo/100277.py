@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-10-15T05:10:26+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-02-08T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-01-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-07-17T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Öffentliche Ordnung und Sicherheit']`
 - **Keywords** `['Smiley', 'Tempolimit', 'Verkehr', 'Tagesverkehr', 'Tempo', 'Vormessung', 'Nachmessung']`
 - **Publisher** `Kantonspolizei`
