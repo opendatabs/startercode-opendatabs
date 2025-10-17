@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Ausgewählte statistische Kennzahlen der 19 Wohnviertel der Stadt Basel sowie der zwei Gemeinden Riehen und Bettingen seit 2015. Aufgrund einer veränderten Datenlage können die Indikatoren 3 (Religionszugehörigkeit) und 18 (Arbeitslosenquote) ab der Ausgabe 2020 nicht mehr dargestellt werden. Die Berechnungsmethode für die Sozialhilfequote wurde 2022 für die Jahre ab 2017 rückwirkend angepasst. Zur Definition: <a href="https://statistik.bs.ch/files/faltblatt/Erlaeuterungen-Quartierradar.pdf" target="_blank">https://statistik.bs.ch/files/faltblatt/Erlaeuterungen-Quartierradar.pdf</a>. Informationen zum jeweiligen Datenjahr finden Sie im folgenden Datensatz: <a href="https://data.bs.ch/explore/dataset/100226/" target="_blank">https://data.bs.ch/explore/dataset/100226/</a>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-04-28T07:45:49+00:00`
+- **Modified** `2025-10-17T08:15:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
