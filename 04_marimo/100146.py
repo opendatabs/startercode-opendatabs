@@ -38,7 +38,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Coronavirus (Covid-19): Massentests in Betrieben**
+    # **Coronavirus (COVID-19): Massentests in Betrieben**
     **Description**: <p>Dieser Datensatz zeigt die SARS-CoV-2-Tests, welche an Angestellten von baselstädtischen Betrieben durchgeführt wurden. Es werden die Anzahl durchgeführter Tests sowie die Test-Positivitätsrate pro Woche aufgeführt. Weitere Informationen zum Coronavirus in Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100146)*.
@@ -54,7 +54,7 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100146`
-- **Title** `Coronavirus (Covid-19): Massentests in Betrieben`
+- **Title** `Coronavirus (COVID-19): Massentests in Betrieben`
 - **Description** `<p>Dieser Datensatz zeigt die SARS-CoV-2-Tests, welche an Angestellten von baselstädtischen Betrieben durchgeführt wurden. Es werden die Anzahl durchgeführter Tests sowie die Test-Positivitätsrate pro Woche aufgeführt. Weitere Informationen zum Coronavirus in Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-06-10`

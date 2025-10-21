@@ -38,7 +38,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Coronavirus (Covid-19): Massentests an Schulen**
+    # **Coronavirus (COVID-19): Massentests an Schulen**
     **Description**: <p>Dieser Datensatz zeigt die SARS-CoV-2-Tests, welche ab Mitte März 2022 an Schülerinnen und Schülern (SuS) sowie Lehrpersonen an baselstädtischen Schulen durchgeführt wurden. Es werden die Anzahl durchgeführter Tests sowie die Test-Positivitätsrate pro Woche aufgeführt. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a><a href="https://www.coronavirus.bs.ch/testen/testen-in-schulen.html" target="_blank"></a></p><p>Daten zu Massentests an Schulen vor Mitte März 2022, sowie in Betrieben im Kanton Basel-Stadt sind hier zu finden: <a href="https://data.bs.ch/explore/?sort=modified&amp;q=massentests" target="_blank">https://data.bs.ch/explore/?sort=modified&amp;q=massentests</a></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100183)*.
@@ -54,7 +54,7 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100183`
-- **Title** `Coronavirus (Covid-19): Massentests an Schulen`
+- **Title** `Coronavirus (COVID-19): Massentests an Schulen`
 - **Description** `<p>Dieser Datensatz zeigt die SARS-CoV-2-Tests, welche ab Mitte März 2022 an Schülerinnen und Schülern (SuS) sowie Lehrpersonen an baselstädtischen Schulen durchgeführt wurden. Es werden die Anzahl durchgeführter Tests sowie die Test-Positivitätsrate pro Woche aufgeführt. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a><a href="https://www.coronavirus.bs.ch/testen/testen-in-schulen.html" target="_blank"></a></p><p>Daten zu Massentests an Schulen vor Mitte März 2022, sowie in Betrieben im Kanton Basel-Stadt sind hier zu finden: <a href="https://data.bs.ch/explore/?sort=modified&amp;q=massentests" target="_blank">https://data.bs.ch/explore/?sort=modified&amp;q=massentests</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-06-22`

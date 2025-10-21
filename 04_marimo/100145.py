@@ -38,7 +38,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Coronavirus (Covid-19): Massentests an Schulen der Primar- und Sekundarstufe I**
+    # **Coronavirus (COVID-19): Massentests an Schulen der Primar- und Sekundarstufe I**
     **Description**: <p>Dieser Datensatz zeigt die auf SARS-CoV-2 getesteten Klassen-Pools aus baselstädtischen Schulen der Primarstufe und der Sekundarstufe I. Es wird jeweils die Anzahl getesteter Pools sowie die Test-Positivitätsrate pro Woche angegeben. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p><p>Dieser Datensatz wird seit Ende Februar 2022 nicht mehr aktualisiert. Seit Mitte März 2022 werden die Daten zu Tests in Basler Schulen in einem neuen Datensatz veröffentlich: <a href="https://data.bs.ch/explore/dataset/100183/" target="_blank">https://data.bs.ch/explore/dataset/100183/</a></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100145)*.
@@ -54,7 +54,7 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100145`
-- **Title** `Coronavirus (Covid-19): Massentests an Schulen der Primar- und Sekundarstufe I`
+- **Title** `Coronavirus (COVID-19): Massentests an Schulen der Primar- und Sekundarstufe I`
 - **Description** `<p>Dieser Datensatz zeigt die auf SARS-CoV-2 getesteten Klassen-Pools aus baselstädtischen Schulen der Primarstufe und der Sekundarstufe I. Es wird jeweils die Anzahl getesteter Pools sowie die Test-Positivitätsrate pro Woche angegeben. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p><p>Dieser Datensatz wird seit Ende Februar 2022 nicht mehr aktualisiert. Seit Mitte März 2022 werden die Daten zu Tests in Basler Schulen in einem neuen Datensatz veröffentlich: <a href="https://data.bs.ch/explore/dataset/100183/" target="_blank">https://data.bs.ch/explore/dataset/100183/</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-06-10`

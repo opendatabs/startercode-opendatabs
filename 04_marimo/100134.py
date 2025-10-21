@@ -38,7 +38,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Coronavirus (Covid-19): Teststellen**
+    # **Coronavirus (COVID-19): Teststellen**
     **Description**: <p>Eine Übersicht der Standorte, an welchen sich die Bevölkerung während der Corona-Pandemie auf SARS-CoV-2 testen lassen konnte. Für Kinder werden von gewissen Teststellen zusätzlich zum Abstrich im Rachenbereich alternative Testmethoden angeboten. </p><p><b>Der Datensatz wurde vom Gesundheitsdepartement aktuell gehalten. Dieser wird seit 8. März 2023 nicht mehr aktualisiert. Man kann sich weiterhin bei einzelnen Arztpraxen und Institutionen testen lassen.</b></p><p>Weitere Informationen zum Coronavirus in Basel-Stadt sind hier zu finden: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100134)*.
@@ -54,7 +54,7 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100134`
-- **Title** `Coronavirus (Covid-19): Teststellen`
+- **Title** `Coronavirus (COVID-19): Teststellen`
 - **Description** `<p>Eine Übersicht der Standorte, an welchen sich die Bevölkerung während der Corona-Pandemie auf SARS-CoV-2 testen lassen konnte. Für Kinder werden von gewissen Teststellen zusätzlich zum Abstrich im Rachenbereich alternative Testmethoden angeboten. </p><p><b>Der Datensatz wurde vom Gesundheitsdepartement aktuell gehalten. Dieser wird seit 8. März 2023 nicht mehr aktualisiert. Man kann sich weiterhin bei einzelnen Arztpraxen und Institutionen testen lassen.</b></p><p>Weitere Informationen zum Coronavirus in Basel-Stadt sind hier zu finden: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-06-06`

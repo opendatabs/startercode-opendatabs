@@ -38,7 +38,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Coronavirus (Covid-19): Massentests an Schulen der Sekundarstufe II**
+    # **Coronavirus (COVID-19): Massentests an Schulen der Sekundarstufe II**
     **Description**: <p>Dieser Datensatz zeigt die Resultate der SARS-CoV-2-Tests, welche an Schüler:innen und Lehrpersonen in baselstädtischen Schulen der Sekundarstufe II durchgeführt wurden. An dieser Schulstufe werden Einzeltests durchgeführt. Weitere Informationen zum Coronavirus in Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p><p>Dieser Datensatz wird seit Ende Februar 2022 nicht mehr aktualisiert. Seit Mitte März 2022 werden die Daten zu Tests in Basler Schulen in einem neuen Datensatz veröffentlich: <a href="https://data.bs.ch/explore/dataset/100183/" target="_blank">https://data.bs.ch/explore/dataset/100183/</a></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100153)*.
@@ -54,7 +54,7 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100153`
-- **Title** `Coronavirus (Covid-19): Massentests an Schulen der Sekundarstufe II`
+- **Title** `Coronavirus (COVID-19): Massentests an Schulen der Sekundarstufe II`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der SARS-CoV-2-Tests, welche an Schüler:innen und Lehrpersonen in baselstädtischen Schulen der Sekundarstufe II durchgeführt wurden. An dieser Schulstufe werden Einzeltests durchgeführt. Weitere Informationen zum Coronavirus in Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p><p>Dieser Datensatz wird seit Ende Februar 2022 nicht mehr aktualisiert. Seit Mitte März 2022 werden die Daten zu Tests in Basler Schulen in einem neuen Datensatz veröffentlich: <a href="https://data.bs.ch/explore/dataset/100183/" target="_blank">https://data.bs.ch/explore/dataset/100183/</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-09-19`

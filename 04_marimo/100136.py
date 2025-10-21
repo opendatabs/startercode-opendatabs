@@ -38,7 +38,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Coronavirus (Covid-19): Für Impfung angemeldete Personen nach Altersklasse**
+    # **Coronavirus (COVID-19): Für Impfung angemeldete Personen nach Altersklasse**
     **Description**: <p>Dieser Datensatz zeigt die Anzahl Personen, welche sich im Kanton Basel-Stadt für eine Impfung gegen SARS-CoV-2 angemeldet, aber noch keine Impfung erhalten haben nach Altersklasse («Warteliste»). Zudem wird angegeben, ob die Person bereits einen Termin für die Impfung hat oder noch nicht. </p><p>Ab dem 25. Juni können sich auch Personen im Alter zwischen 12 und 15 Jahren für die Impfung anmelden. Entsprechend wird diese Altersklasse im Datensatz auch geführt. </p><p><br></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100136)*.
@@ -54,7 +54,7 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100136`
-- **Title** `Coronavirus (Covid-19): Für Impfung angemeldete Personen nach Altersklasse`
+- **Title** `Coronavirus (COVID-19): Für Impfung angemeldete Personen nach Altersklasse`
 - **Description** `<p>Dieser Datensatz zeigt die Anzahl Personen, welche sich im Kanton Basel-Stadt für eine Impfung gegen SARS-CoV-2 angemeldet, aber noch keine Impfung erhalten haben nach Altersklasse («Warteliste»). Zudem wird angegeben, ob die Person bereits einen Termin für die Impfung hat oder noch nicht. </p><p>Ab dem 25. Juni können sich auch Personen im Alter zwischen 12 und 15 Jahren für die Impfung anmelden. Entsprechend wird diese Altersklasse im Datensatz auch geführt. </p><p><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-06-11`
