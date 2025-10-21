@@ -64,7 +64,7 @@ Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr un
 </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-09-21`
-- **Modified** `2025-10-14T04:02:58+00:00`
+- **Modified** `2025-10-21T04:03:05+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-10-12T22:00:00+00:00`
