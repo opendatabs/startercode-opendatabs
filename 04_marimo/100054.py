@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Der Baumkataster umfasst den durch die Stadtgärtnerei Basel (Gebiet Stadt Basel) und die Gemeinde Riehen (Gebiet Riehen) gepflegten Baumbestand. Bäume sind im Kanton Basel-Stadt gemäss Baumschutzgesetz (BSchG) geschützt. Die Fäll- und Baumersatzliste enthält diejenigen geschützten Bäume, welche innerhalb der nächsten 6 Monate gefällt, ersetzt und neu gepflanzt werden müssen. Fällungen werden jeweils im Winterhalbjahr vorgenommen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-10-21T00:00:00+00:00`
+- **Modified** `2025-10-22T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

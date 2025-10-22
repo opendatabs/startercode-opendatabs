@@ -58,10 +58,10 @@ def _(mo):
 - **Description** `<p>Stündlich aktualisierte Belegungsdaten der öffentlichen Parkhäuser der Stadt Basel, bezogen über das Parkleitsystem Basel (<a href="https://www.parkleitsystem-basel.ch" target="_blank">https://www.parkleitsystem-basel.ch</a>).</p><p>Historische Daten mit kleinerer zeitlicher Auflösung können auch über das API von ParkenDD bezogen werden, wie hier am Beispiel der Parkhäuser der Stadt Zürich beschrieben: <a href="https://opendatazurich.github.io/parkendd-api//" target="_blank">https://opendatazurich.github.io/parkendd-api//</a> (die Parkhäuser von Basel sind über diese URL abrufbar: <a href="https://api.parkendd.de/Basel" target="_blank">https://api.parkendd.de/Basel</a>). </p><p>Die Standorte der Parkhäuser sind in diesem Datensatz ersichtlich: <a href="https://data.bs.ch/explore/dataset/100044/" target="_blank">https://data.bs.ch/explore/dataset/100044/</a>.<a href="https://data.bs.ch/explore/dataset/100044/" target="_blank"></a></p><p>Änderungsprotokoll:</p><p>14.08.2023 - Neue Spalte "auslastungen" wurde hinzugefügt.</p><p>28.11.2024 - Es gibt eine Lücke vom 21. Oktober 2024 bis zum 28. November 2024.</p><p>28.11.2024 - Centralbahnparking wurde zu Centralbahn umbenannt in den Spalten id, id2, name, title.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2025-10-21T19:06:38+00:00`
+- **Modified** `2025-10-22T07:07:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-02-06T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-10-20T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-10-21T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Parkplatz', 'Parkhaus', 'Autos', 'Elektroautos', 'Frei', 'Echtzeit', 'Realtime']`
 - **Publisher** `Parkhäuser Basel-Stadt`
