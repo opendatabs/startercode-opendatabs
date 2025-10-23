@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Seit 2013 ist der Artikel 6a des Strassenverkehrsgesetz (SVG) in Kraft. Alle Strasseneigentümer werden darin unter anderem zur gebührenden Berücksichtigung der Verkehrssicherheitsaspekte bei Planung, Bau, Unterhalt und Betrieb von Strassen sowie zur Analyse des Strassennetzes auf Unfallschwerpunkte (USP) verpflichtet. Die Analyse der USP erfolgt gemäss der Schweizer Norm SN 641 724 des Schweizerischen Verbandes der Strassen- und Verkehrsfachleute (VSS). Für das gewählte Jahr werden USP für jeweils das angegebene und die zwei vorherigen Jahre dargestellt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-12-09`
-- **Modified** `2025-10-22T00:00:00+00:00`
+- **Modified** `2025-10-23T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2022-12-30T23:00:00+00:00`
