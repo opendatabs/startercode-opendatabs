@@ -66,7 +66,7 @@ def _(mo):
 <p>Wegen Baustellen, Veranstaltungen oder aus anderen Gründe kann es sein, dass Parkplätze vorübergehend nicht zur Verfügung stehen. Auch ist es möglich, dass gewisse Parkplätze im Rahmen von Umbauprojekten bereits aufgehoben wurden, das Projekt aber noch nicht abgeschlossen und somit auch der Datensatz noch nicht nachgeführt ist.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-07-10`
-- **Modified** `2025-10-23T00:01:35+00:00`
+- **Modified** `2025-10-24T00:02:04+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
