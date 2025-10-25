@@ -62,7 +62,7 @@ def _(mo):
 <p>Historische Daten sind im folgenden Datensatz vorhanden: <a href="https://data.bs.ch/explore/dataset/100014/" target="_blank">https://data.bs.ch/explore/dataset/100014/</a>. <br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2025-10-25T08:00:20+00:00`
+- **Modified** `2025-10-25T19:59:04+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2025-10-24T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-10-24T22:00:00+00:00`
