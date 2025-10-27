@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Der Datensatz enthält die absoluten extremalen Messwerte (kleinster Wert „10YMin“ bzw. grösster Wert „10YMax“) und den Mittelwert aller Messwerte („Mean“) der Grundwassertemperaturen in °C des kantonalen Grundwassermessnetzes und in der angegebenen Periode (startStatist bis endStatist, d.h. i. d. R. 10 Jahre).</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-07-11`
-- **Modified** `2025-10-26T05:25:19+00:00`
+- **Modified** `2025-10-27T05:34:06+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1982-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`
