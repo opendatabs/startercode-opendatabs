@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100274.
 - **Description** `<p>Bedingt durch die frühere Nutzung des Rosental Areals – auch bekannt als die Wiege der Basler Chemie - ist der Untergrund mit Schadstoffen belastet. Während der Tiefbauarbeiten im Rahmen der «Transformation <a href="https://rosentalmitte.ch/" target="_blank">Rosental Mitte</a>» überwacht das <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene" target="_blank">Lufthygieneamt beider Basel (LHA)</a> die Immissionen mittels Messungen der Luft <a href="https://data.bs.ch/pages/rosental-dashboard/" target="_blank">(Dashboard)</a>. </p><p>Änderungsprotokoll:<br>23.4.2024: Die Messstation ROSEN 3 wurde verschoben. Alte geografische Breiten- und Längengrade 47.567827676637364, 7.603804744961502. Neue Breiten- und Lägengrade 47.567997530870265, 7.60479830196066.<br></p><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-10-09`
-- **Modified** `2025-10-03T07:45:25+00:00`
+- **Modified** `2025-10-27T10:45:19+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-10-08T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
