@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-10-27"
+date: "2025-10-28"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100187.
 - **Modified** `2025-10-27T14:01:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-06-30T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-10-23T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-10-29T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['COVID-19', 'Coronavirus', 'Corona', 'Abwasser', 'Kanalisation', 'Krankheit', 'Kläranlage']`
 - **Publisher** `Kantonales Laboratorium`

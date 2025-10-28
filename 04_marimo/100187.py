@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-10-27T14:01:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-06-30T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-10-23T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-10-29T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['COVID-19', 'Coronavirus', 'Corona', 'Abwasser', 'Kanalisation', 'Krankheit', 'Kläranlage']`
 - **Publisher** `Kantonales Laboratorium`

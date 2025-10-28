@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-10-27T14:45:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2014-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-07-30T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-29T22:00:00+00:00`
 - **Themes** `['Tourismus']`
 - **Keywords** `['Event', 'Übernachtungen', 'Hotels', 'Ausland']`
 - **Publisher** `Statistisches Amt`
