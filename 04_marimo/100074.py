@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz zeigt ausgewählte Veranstaltungen und Veranstaltungsreihen. Der Datensatz ist ursprünglich aufgebaut worden, um das Verkehrsaufkommen bei kantonalen Fahrrad-Zählstellen – welches unter anderem auch durch Veranstaltungen beeinflusst wird – besser interpretieren zu können. Aus diesem Grund sind nicht alle Veranstaltungen auf dem Kantonsgebiet im Datensatz enthalten, sondern nur diejenigen, von denen man sich einen potentiellen Einfluss auf die Anzahl an Zählstellen gezählten Velos erwartet. Der Datensatz wird durch das Statistische Amt Basel-Stadt nach bestem Wissen und Gewissen gepflegt und aktualisiert. Es besteht kein Anspruch auf Richtigkeit oder Vollständigkeit der gemachten Angaben. </p><p>Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-03-31`
-- **Modified** `2025-10-30T17:31:03+00:00`
+- **Modified** `2025-10-31T17:31:01+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz beinhaltet die Summe der elektrischen Energie, die im Kanton Basel-Stadt innert 15-Minuten Intervallen aus dem Netz bezogen wird, inklusive <a href="https://de.wikipedia.org/wiki/Übertragungsverlust" target="_blank">Netzverluste</a>. </p><p>Lokal direkt am Ort der Produktion verbrauchte elektrische Energie (z.B. aus Photovoltaikanlagen), welche nicht ins öffentliche Netz eingespiesen wird, ist in den vorliegenden Daten nicht enthalten. Seit 1. September 2020 liegen auch Daten zum Verbrauch der Kunden in der Grundversorgung vs. dem freien Markt vor. </p><p>Die Daten umfassen den an allen im Netz installierten fernausgelesenen Zählern gemessenen Verbrauch sowie ergänzend, da nicht 100 % der Zähler fernauslesbar sind, Daten aus den ins Netz eingespeisten Strommengen. </p><p>Hinweis: Die Werte der folgenden Messstartzeiten sind interpoliert: 01.01.2014 00:00, 01.11.2015 00:00 und 01.10.2019 00:00.</p><p>Änderungsprotokoll: <br>10.10.23: Aktualisierungsintervall von "WEEKLY" auf "DAILY" geändert.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-22`
-- **Modified** `2025-10-30T09:06:49+00:00`
+- **Modified** `2025-10-31T09:06:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2011-12-30T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-10-25T22:00:00+00:00`
