@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die Anzahl Personen, die in den Kanton Basel-Stadt zuwanderten (Zuzug), aus dem Kanton Basel-Stadt abwanderten (Wegzug) oder innerhalb des Kantons umzogen (Umzug) nach Datum, Staatsangehörigkeit, Geschlecht, Alter und Detailangaben zum Zuzugs- und Wegzugsort.<br>Die Wanderungsbewegungen sind seit 1985 verfügbar. Detailangaben der Zuzugs- und Wegzugsorte (Gemeinde, Kanton, Land) sind seit 2006 verfügbar.<br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Wanderungsereignisse während vier Monaten gesammelt, danach gelten die Zahlen als definitiv. Später eintreffende Meldungen werden im letzten noch nicht abgeschlossenen Monat gezählt. In diesem Datensatz werden sie im Monat des Wanderungsereignisses gezählt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-01-27`
-- **Modified** `2025-10-30T02:41:21+00:00`
+- **Modified** `2025-10-31T02:41:45+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
