@@ -68,7 +68,7 @@ Elektrofachgeschäfte umfassen. Bei einigen Standorten sind zusätzliche
 Informationen wie Telefonnummern und Links zu ihren Internetseiten verfügbar.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-04-09`
-- **Modified** `2025-10-27T00:00:00+00:00`
+- **Modified** `2025-10-30T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

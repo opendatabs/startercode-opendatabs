@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Recyclingstationen für Glas, Weissblech, Aluminium und Batterien im Kanton Basel-Stadt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-10-29T00:00:00+00:00`
+- **Modified** `2025-10-30T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
