@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-11-01"
+date: "2025-11-02"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100080.
 - **Description** `<p>Dieser Datensatz enthält eine Übersicht der von Nutzern gemeldeten Weiterverwendungen von Datensätzen aus dem Datenportal, einschliesslich Anwendungen, Visualisierungen und Projekte, die auf bestehenden Datensätzen basieren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-10-09`
-- **Modified** `2025-11-01T19:10:43+00:00`
+- **Modified** `2025-11-02T07:10:59+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-10-17T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-09-16T22:00:00+00:00`
