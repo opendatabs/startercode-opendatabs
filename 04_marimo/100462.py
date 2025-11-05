@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Der Datensatz bietet eine Übersicht über die öffentlichen Spielplätze im Kanton Basel-Stadt. Er enthält Informationen zu Lage, Ausstattung und Rahmenbedingungen der Spielplätze und ermöglicht so eine transparente Einsicht in die vorhandenen Freizeitangebote.</p><p>Ein ergänzender Datensatz mit detaillierten Angaben zu den einzelnen Spielgeräten ist unter folgendem Link verfügbar: <a href="https://data.bs.ch/explore/dataset/100463" target="_blank">https://data.bs.ch/explore/dataset/100463</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-10-15`
-- **Modified** `2025-10-21T08:01:29+00:00`
+- **Modified** `2025-11-05T13:00:50+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

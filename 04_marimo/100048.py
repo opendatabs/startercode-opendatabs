@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Standortbeschreibung: Die Messstation befindet sich auf halber Höhe des Chrischonaturms. Dieser liegt auf einer Anhöhe östlich der Stadt Basel. In der Nähe der Station Chrischona befinden sich keine Abgasquellen. Sie gibt die Luftsituation wieder im ländlichen Umland der Stadt Basel, auf einer Höhenlage von 640m über Meer. In diesem Höhenbereich liegt oft auch die Inversion in der Nordwestschweiz.</p><p>Lage: Ländlich unterhalb 1000 m ü.M., keine Bebauung</p><p>Koordinaten: 2618695 / 1269030 bzw. N 47° 34.302 E 7° 41.225; 636 m ü. M.</p><p>Geografische Lage: Schwarzwaldrand</p><p>Siedlungsgrösse: ausserhalb</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-11-05T07:16:30+00:00`
+- **Modified** `2025-11-05T18:16:08+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1999-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-11-04T23:00:00+00:00`
