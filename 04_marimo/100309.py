@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die aktiven Interessensbindungen von Grossratsmitgliedern während ihrer Mitgliedschaft im Grossen Rat des Kantons Basel-Stadt.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-09-28`
-- **Modified** `2025-11-05T04:01:28+00:00`
+- **Modified** `2025-11-06T04:01:32+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

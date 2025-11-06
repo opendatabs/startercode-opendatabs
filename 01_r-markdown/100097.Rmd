@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-11-05"
+date: "2025-11-06"
 output: html_document
 ---
 
@@ -35,7 +35,7 @@ Manipulationen an Geräten können zu fehlerhaften Messungen führen.<o:p></o:p>
 </p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="Arial, sans-serif">Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href="https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring" target="_blank">https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face="Arial, sans-serif"> aufrufbar.</font></p>Aus Kostengründen sind nur die Werte des aktuellen Jahres und des letzten Jahres als Tabelle / Visualisierung sichtbar.<p></p><p>Eine Vorschau aller Daten ist hier zu finden: <a href="https://datatools.bs.ch/Geschwindigkeitsmonitoring" target="_blank">https://datatools.bs.ch/Geschwindigkeitsmonitoring</a>.<br>Aufgrund der grossen Datenmenge kann es vorkommen, dass der Datensatz nicht vollständig heruntergeladen werden kann. Falls dieses Problem auftritt, kann man den vollständigen Datensatz und die Einzelmessungen der Messstationen hier herunterladen:</p><p></p><p></p><ul><li>vollständiger Datensatz (Achtung grösser als 10 GB): <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/all_data/geschwindigkeitsmonitoring_data.csv</a></li><li>Einzelmessungen der Messstationen: <a href="https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/">https://data-bs.ch/stata/kapo/geschwindigkeitsmonitoring/data/</a></li></ul><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href="https://www.geo.bs.ch/geschwindigkeitsmonitoring" target="_blank">https://www.geo.bs.ch/geschwindigkeitsmonitoring</a></p><p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-02-02`
-- **Modified** `2025-10-14T03:10:31+00:00`
+- **Modified** `2025-11-06T02:52:56+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-01-14T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-10-12T22:00:00+00:00`

@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Der Datensatz enthält die Analysedaten der Beprobungen der Oberflächengewässer des Kantons Basel-Stadt seit dem Jahr 1993. Die Daten des Rheins sind hiervon ausgenommen. Es werden Konzentrationsangaben zu verschiedenen Inhalts- resp. Schadstoffen mit Bezug auf die einzelnen Fliessgewässer, sowie der geographischen Koordinaten gemacht.</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei" target="_blank">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-04-06`
-- **Modified** `2025-11-05T06:08:21+00:00`
+- **Modified** `2025-11-06T06:08:18+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1993-08-23T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
