@@ -67,7 +67,7 @@ Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr un
 - **Modified** `2025-11-06T04:01:45+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-10-12T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-10-29T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Verkehrszählung', 'Verkehr', 'Statistik', 'Durchschnitt', 'Tagesverkehr', 'Belästigung', 'Auslastung', 'DTV']`
 - **Publisher** `Amt für Mobilität`
