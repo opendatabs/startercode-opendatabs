@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Wohnungen gemäss Gebäude- und Wohnungsregister (GWR). <br><br>Eine Wohnung ist eine Gesamtheit von Räumen, die für eine Wohnnutzung geeignet sind, eine bauliche Einheit bilden, einen Zugang entweder von aussen oder von einem gemeinsam mit anderen Wohnungen genutzten Bereich innerhalb des Gebäudes haben, über eine Kocheinrichtung (oder mindestens der technischen Installation für den Einbau einer Kocheinrichtung) verfügen und keine Fahrnis darstellen.<br><br>Einen Überblick über die im Register geführten Merkmal gibt folgendes Dokument: <a href="https://www.housing-stat.ch/files/881-2200.pdf" target="_blank">https://www.housing-stat.ch/files/881-2200.pdf (Merkmalskatalog 4.2)</a> bzw. online unter <a href="https://www.housing-stat.ch/de/help/42.html" target="_blank">https://www.housing-stat.ch/de/help/42.html (Online-Merkmalskatalog 4.2)</a><br><br>Die rechtliche Grundlage stellt die entsprechende eidgenössische Gesetzgebung dar: <a href="https://www.fedlex.admin.ch/eli/cc/2017/376/de" target="_blank">https://www.fedlex.admin.ch/eli/cc/2017/376/de (Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR))</a><br><br>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-24`
-- **Modified** `2025-11-09T02:26:44+00:00`
+- **Modified** `2025-11-10T02:26:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
