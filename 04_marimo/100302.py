@@ -74,7 +74,7 @@ wurden keine Abwasserproben auf Influenza und RSV untersucht.</span><br></p><p><
 </div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
-- **Modified** `2025-11-03T16:01:11+00:00`
+- **Modified** `2025-11-10T18:01:02+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-08-13T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
