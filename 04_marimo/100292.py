@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-11-07T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1986-06-30T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2023-07-03T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-10-31T23:00:00+00:00`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
 - **Keywords** `['grundwasserschutz', 'gewasserschutz', 'grundwasser', 'trinkwasser', 'gewasserschutzrecht']`
 - **Publisher** `Amt für Umwelt und Energie`
