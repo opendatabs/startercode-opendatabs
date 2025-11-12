@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<div>Die Daten umfassen die wöchentlichen Fahrgastzahlen der Basler Verkehrsbetriebe (BVB) von 2020 bis 2023. Ab 2024 werden monatliche Werte erfasst. Sie beruhen auf Messungen mit dem automatischen Fahrgastzählsystem und anschliessender Hochrechnung, und zwar für das gesamte Liniennetz der BVB. Tramlinien: 1, 2, 3, 6, 8, 14, 15, 16, 21; Buslinien: 30, 31, 32, 33, 34, 35, 36, 38, 42, 45, 46, 48, 50, Tramersatzverkehr.</div><div><br></div><div>Nicht enthalten sind hingegen die Fahrgastzahlen der SBB, BLT oder ausländischer Transportunternehmen.</div><div><br>Die Daten werden jeweils am 10. jeden Monats resp. am darauffolgenden Werktag aktualisiert.</div><div><br>In Ausnahmefällen kann es aus technischen Gründen zu Verzögerungen im Prozess der Bereitstellung und Auswertung von Zähldaten kommen. Nachträglich verfügbare Messdaten werden in der hier vorliegenden Auswertung berücksichtigt, was in diesem Fall zu rückwirkenden Korrekturen führen kann.</div><div><br></div><div>Änderungsprotokoll: </div><div>02.02.2024: Die Auswertungen auf Wochenbasis werden eingestellt und nur noch die Zeitreihe der Monatswerte werden fortgeführt.<br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-05-16`
-- **Modified** `2025-09-10T15:00:30+00:00`
+- **Modified** `2025-11-12T08:13:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-02-02T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-07-31T22:00:00+00:00`

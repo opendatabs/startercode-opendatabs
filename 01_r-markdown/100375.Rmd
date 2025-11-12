@@ -14,7 +14,7 @@ Auto generated R starter code for data set 100375.
 
 - **Dataset_identifier** `100375`
 - **Title** `Zivilschutzkataster Quartier`
-- **Description** `Einteilung und Gliederung der Zivilschutzorganisation in Basel-Stadt und Ausdehnung der einzelnen Zivilschutz-Blockpläne auf Blockebene.`
+- **Description** `Einteilung und Gliederung der Zivilschutzorganisation in Basel-Stadt und Ausdehnung der einzelnen Zivilschutz-Blockpläne auf Quartierebene.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-10-22`
 - **Modified** `2023-09-05T00:00:00+00:00`

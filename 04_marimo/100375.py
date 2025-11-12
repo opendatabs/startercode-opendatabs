@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Zivilschutzkataster Quartier**
-    **Description**: Einteilung und Gliederung der Zivilschutzorganisation in Basel-Stadt und Ausdehnung der einzelnen Zivilschutz-Blockpläne auf Blockebene.
+    **Description**: Einteilung und Gliederung der Zivilschutzorganisation in Basel-Stadt und Ausdehnung der einzelnen Zivilschutz-Blockpläne auf Quartierebene.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100375)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100375`
 - **Title** `Zivilschutzkataster Quartier`
-- **Description** `Einteilung und Gliederung der Zivilschutzorganisation in Basel-Stadt und Ausdehnung der einzelnen Zivilschutz-Blockpläne auf Blockebene.`
+- **Description** `Einteilung und Gliederung der Zivilschutzorganisation in Basel-Stadt und Ausdehnung der einzelnen Zivilschutz-Blockpläne auf Quartierebene.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-10-22`
 - **Modified** `2023-09-05T00:00:00+00:00`
