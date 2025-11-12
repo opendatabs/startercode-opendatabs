@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-11-11"
+date: "2025-11-12"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100443.
 - **Description** `<div>Im Online-FAQ (<a href="https://www.bs.ch/schwerpunkte/daten/databs/schwerpunkte/kuenstliche-intelligenz/ki-faq" target="_blank">https://www.bs.ch/schwerpunkte/daten/databs/schwerpunkte/kuenstliche-intelligenz/ki-faq</a>) - befüllt durch diesen Datensatz - des DCC Data Competence Center  finden Sie eine hilfreiche und informative Auflistung der häufigsten Fragen und Antworten im Zusammenhang mit der Nutzung von künstlicher Intelligenz in der Verwaltung.</div><div>Die Richtlinie von Online-Tools der künstlichen Intelligenz (KI-Nutzung) in der Verwaltung (KI-Richtlinie) regelt den Umgang mit online verfügbaren, kantonsexternen Instrumenten der künstlichen Intelligenz und dient unter anderem den Mitarbeitenden der kantonalen Verwaltung im Arbeitsalltag.</div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-11-05`
-- **Modified** `2025-11-05T10:05:31+00:00`
+- **Modified** `2025-11-12T07:25:30+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2025-11-03T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-11-03T23:00:00+00:00`
