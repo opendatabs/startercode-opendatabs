@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-11-17"
+date: "2025-11-18"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100106.
 - **Modified** `2025-11-17T12:31:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2014-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-09-29T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-10-30T23:00:00+00:00`
 - **Themes** `['Tourismus']`
 - **Keywords** `['Event', 'Übernachtungen', 'Hotels', 'Ausland']`
 - **Publisher** `Statistisches Amt`
