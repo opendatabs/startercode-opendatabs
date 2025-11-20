@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-11-19T15:56:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2012-06-05T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-11-11T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-11-18T23:00:00+00:00`
 - **Themes** `['Politik', 'Gesetzgebung', 'Verwaltung']`
 - **Keywords** `['Abstimmung', 'Demokratie', 'Parlament', 'Grosser Rat', 'Legislative']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`
