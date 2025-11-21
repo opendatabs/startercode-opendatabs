@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p style="">Dieser Datensatz beinhaltet die Summe des Gasverbrauchs, die innert Stunden-Intervallen aus dem Netz bezogen wird. Neben dem Kanton Basel-Stadt versorgt IWB auch weitere 29 Gemeinden in den Kantonen Basel-Landschaft, Solothurn und Aargau mit Gas. Diese sind auch im Datensatz enthalten.</p><p style="">Die Gemeinden, die im Versorgungsgebiet enthalten sind, sind:<br>Aesch BL, Allschwil, Arlesheim, Augst, Basel, Bettingen, Binningen, Birsfelden, Bottmingen, Dornach, Eiken, Ettingen, Frenkendorf, Frick, Füllinsdorf, Gipf-Oberfrick, Lausen, Liestal, Möhlin, Münchenstein, Muttenz, Oberwil, Oeschgen, Pfeffingen, Pratteln, Reinach BL, Rheinfelden, Riehen, Schönenbuch, Therwil, Wallbach<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-01-19`
-- **Modified** `2025-11-20T13:01:48+00:00`
+- **Modified** `2025-11-21T13:01:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-08-31T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-11-19T23:00:00+00:00`
