@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Im Rahmen der Sonderausstellung ERDE AM LIMIT (20.11.2020 bis 3.7.2022) wurden mit Hilfe eines Mikrosensors Feinstaub (PM2.5) vom Dach des <a href="https://www.nmbs.ch/" target="_blank">Naturhistorischen Museums Basel</a> gemessen. Hier werden die unvalidierten Daten von Feinstaub PM2.5 zur Verfügung gestellt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-11-20`
-- **Modified** `2025-11-20T23:30:26+00:00`
+- **Modified** `2025-11-21T23:30:26+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-10-01T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2022-07-05T22:00:00+00:00`
