@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p><span style="font-weight: bolder;">Figur<br></span><span>Der Datensatz zeigt den 7-Tage-Median der RNA-Kopien des angegebenen Virus jeweils pro Tag und 100‘000 Personen im Abwasser der Abwasserreinigungs-Anlage (ARA) Basel sowie den 7-Tage-Median der entsprechenden Fallzahlen. Der Datensatz wird i.d.R. jeweils dienstags mit den Daten bis vorangegangenem Sonntag aktualisiert. In einzelnen Wochen kann es zu Verschiebungen kommen.</span></p><p style=""><span style="font-family: sans-serif; font-weight: bolder;">Messung<br></span>Die ProRheno AG (Betreiber der ARA Basel) entnimmt jeweils eine 24h-Probe des Rohabwassers, welche durch das Kantonale Laboratorium Basel-Stadt (KL BS) auf RNA der angegebenen Viren untersucht wird. Die Messmethodik wurde dabei seit Beginn des Monitorings nicht verändert: siehe Publikation <a href="https://smw.ch/index.php/smw/article/view/3226" style="font-family: sans-serif;" target="_blank">https://smw.ch/index.php/smw/article/view/3226</a>. Die Plausibilität der Werte wird laufend anhand interner Qualitätsparameter überprüft. Das Untersuchungsgebiet umfasst das Einzugsgebiet der ARA Basel, welches sich hauptsächlich aus dem Kanton Basel-Stadt sowie den Gemeinden Allschwil, Binningen, Birsfelden, Bottmingen, Oberwil und Schönenbuch (alle Kanton Baselland) zusammensetzt. Bis Ende Juni 2023 wurden die Messwerte des KL BS auch auf dem Abwasser-Dashboard des BAG <a href="https://www.covid19.admin.ch/de/epidemiologic/waste-water?wasteWaterFacility=270101" style="font-family: sans-serif;" target="_blank">Covid-⁠19 Schweiz | Coronavirus | Dashboard (https://www.covid19.admin.ch/de/epidemiologic/waste-water?wasteWaterFacility=270101)</a> dargestellt. Ab Juli 2023 werden auf dieser Seite die Messwerte der EAWAG <a href="https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/" style="font-family: sans-serif;" target="_blank">SARS-CoV2 im Abwasser - Eawag</a> (<a href="https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/" style="font-family: sans-serif;" target="_blank">https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/</a>) publiziert, welche ebenfalls das Rohabwasser der ARA Basel untersucht. Die vom KL BS und der EAWAG verwendeten Untersuchungsmethoden sind sehr ähnlich aber nicht identisch. Aus diesem Grund kann es zu Abweichungen kommen. Die Messungen werden unabhängig von der EAWAG durch das KL BS weitergeführt, um zeitnähere Messwerte, mit zusätzlichen Normierungsfaktoren und die Flexibilität zur Integration weiterer Analyte zu erhalten.</p><p style="">Hinweis: Die ursprünglich dargestellten Werte vom 22.03. bis 01.10.2023 mussten aufgrund einer falschen Einstellung in der Messgerätesoftware, die Einfluss auf die RNA-Quantifizierung hat, nach unten korrigiert werden und sind nun korrekt dargestellt.</p><div><br></div><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Fallzahlen<br></span>Die Fallzahlen entsprechen der Anzahl der bestätigten und dem Kanton gemeldeten Fälle der dargestellten Infektionen im Einzugsgebiet der ARA Basel.<br></p><p style="font-family: sans-serif; margin-bottom: 0px;"><span style="font-weight: bolder;">Interpretation der Kurven<br></span><span>Beim Monitoring von Viren im Abwasser geht es in erster Linie darum, Trends zu erkennen (insbesondere natürlich die Zunahme eines zirkulierenden Virus). Es ist nicht möglich, daraus eine bestimmte Fallzahl oder den Schweregrad einer Infektion abzuleiten. Ein Vergleich des Kurvenausschlags (Höhe der Peaks) zu verschiedenen Zeitpunkten ist kaum möglich, da z.B. unterschiedliche Virusvarianten zu unterschiedlichen Virusmengen pro Fall führen. Unterschiedliche Virusvarianten können auch die Symptomatik beeinflussen, so dass z.B. Infektionen bei Menschen spurlos verlaufen, aber dennoch Viren ins Abwasser abgegeben werden.</span></p><p class="MsoNormal"><span style='font-family:"Arial","sans-serif"'><o:p></o:p></span></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-03-25`
-- **Modified** `2025-11-17T16:01:09+00:00`
+- **Modified** `2025-11-23T09:01:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-06-30T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-11-20T23:00:00+00:00`
@@ -77,10 +77,11 @@ def _(mo):
 @app.cell
 def _():
     import os
+    import io
     import pandas as pd
     import requests
     import matplotlib.pyplot as plt
-    return os, pd, plt, requests
+    return os, io, pd, plt, requests
 
 
 @app.cell
@@ -97,33 +98,176 @@ def _(plt):
 
 
 @app.cell
-def _(os, pd, requests):
-    def get_dataset(dataset_id):
-        url = f"https://data.bs.ch/api/explore/v2.1/catalog/datasets/{dataset_id}/exports/csv"
-        r = requests.get(
-            url, 
-            params={
-                "timezone": "Europe%2FZurich",
-                "use_labels": "true"
-            }
-        )
+def _(os):
+    def ensure_data_dir() -> str:
         data_path = os.path.join(os.getcwd(), "..", "data")
-        if not os.path.exists(data_path):
-            os.makedirs(data_path)
-        csv_path = os.path.join(data_path, f"{dataset_id}.csv")
-        with open(csv_path, "wb") as f:
-            f.write(r.content)
-        data = pd.read_csv(
-            url, sep=";", on_bad_lines="warn", encoding_errors="ignore", low_memory=False
-        )
-        # if dataframe only has one column or less the data is not ";" separated
-        if data.shape[1] <= 1:
-            print(
-                "The data wasn't imported properly. Very likely the correct separator couldn't be found.\nPlease check the dataset manually and adjust the code."
-            )
-        return data
-    return (get_dataset,)
+        os.makedirs(data_path, exist_ok=True)
+        return data_path
+    return (ensure_data_dir,)
 
+
+@app.cell
+def _(io, pd, requests):
+    def download_csv_chunk(
+        session: requests.Session,
+        dataset_id: str,
+        extra_params: dict | None = None,
+    ) -> pd.DataFrame:
+        base_url = "https://data.bs.ch/api/explore/v2.1"
+        url = f"{base_url}/catalog/datasets/{dataset_id}/exports/csv"
+
+        params = {
+            "timezone": "Europe/Zurich",
+            "use_labels": "false",
+        }
+        if extra_params:
+            params.update(extra_params)
+
+        r = session.get(url, params=params)
+        r.raise_for_status()
+
+        buf = io.BytesIO(r.content)
+
+        df = pd.read_csv(
+            buf,
+            sep=";",
+            on_bad_lines="warn",
+            encoding_errors="ignore",
+            low_memory=False,
+        )
+
+        return df
+    return (download_csv_chunk,)
+
+
+@app.cell
+def _():
+    def pick_best_facet(facets_json: dict, max_rows_per_chunk: int) -> tuple[str | None, list[str]]:
+        """
+        Choose a facet column where each bucket has <= max_rows_per_chunk rows.
+        Among all such columns, pick the one with the smallest worst-case bucket.
+        Returns (facet_name, list_of_values) or (None, []) if nothing suitable.
+        """
+        best_name = None
+        best_values: list[str] = []
+        best_max_bucket = None
+
+        for facet in facets_json.get("facets", []):
+            facet_name = facet.get("name")
+            value_list = facet.get("facets", [])
+            if not facet_name or not value_list:
+                continue
+
+            counts = [v.get("count", 0) for v in value_list]
+            if not counts:
+                continue
+
+            max_bucket = max(counts)
+            if max_bucket > max_rows_per_chunk:
+                # this facet would still exceed the chunk limit for some values
+                continue
+
+            if best_max_bucket is None or max_bucket < best_max_bucket:
+                best_max_bucket = max_bucket
+                best_name = facet_name
+                best_values = [v.get("value") for v in value_list if v.get("value") is not None]
+
+        return best_name, best_values
+
+
+@app.cell
+def _(download_csv_chunk, ensure_data_dir, mo, os, pd, requests):
+    def get_dataset(dataset_id: str, max_rows_per_chunk: int = 50_000) -> pd.DataFrame:
+        """
+        Download a dataset from data.bs.ch.
+
+        - For small datasets (<= max_rows_per_chunk): single CSV export.
+        - For large datasets:
+            * Inspect /facets to find a good splitting column.
+            * Download one CSV per facet value via refine.<col>=<value>.
+            * Additionally download rows where that column is NULL via q=#null(<col>).
+
+        The combined result is written to ../data/{dataset_id}.csv and returned as a DataFrame.
+        """
+        base_url = "https://data.bs.ch/api/explore/v2.1"
+        records_url = f"{base_url}/catalog/datasets/{dataset_id}/records"
+        facets_url = f"{base_url}/catalog/datasets/{dataset_id}/facets"
+
+        session = requests.Session()
+        common_params = {
+            "timezone": "Europe/Zurich",
+            "use_labels": "false",
+        }
+
+        # 1) Get total_count via /records
+        r = session.get(records_url, params={**common_params, "limit": 1})
+        r.raise_for_status()
+        meta = r.json()
+        total_count = meta.get("total_count", 0)
+
+        if not isinstance(total_count, int):
+            # fall back to simple export if we can't read total_count
+            total_count = 0
+
+        # 2) Small dataset: single CSV export
+        if total_count == 0 or total_count <= max_rows_per_chunk:
+            df = download_csv_chunk(session, dataset_id, extra_params={})
+            data_path = ensure_data_dir()
+            csv_path = os.path.join(data_path, f"{dataset_id}.csv")
+            df.to_csv(csv_path, index=False)
+            return df
+
+        # 3) Large dataset: inspect /facets to decide how to split
+        r = session.get(facets_url, params=common_params)
+        r.raise_for_status()
+        facets_json = r.json()
+
+        facet_name, facet_values = pick_best_facet(facets_json, max_rows_per_chunk=max_rows_per_chunk)
+
+        if facet_name is None or not facet_values:
+            raise RuntimeError(
+                f"Could not find a facet column to split dataset {dataset_id} into "
+                f"chunks of <= {max_rows_per_chunk} rows. Please handle this dataset manually."
+            )
+
+        dfs: list[pd.DataFrame] = []
+
+        # 4) Download each facet value (refine.<facet_name>=value)
+        n_parts = len(facet_values) + 1  # +1 for NULLs
+
+        with mo.status.progress_bar(
+            total=n_parts,
+            title=f"Lade Datensatz {dataset_id}",
+            subtitle=f"Split nach '{facet_name}'…",
+        ) as bar:
+            # NULLs
+            bar.update(subtitle=f"{facet_name} = NULL")
+            null_query = {"qv1": f"#null({facet_name})"}
+            try:
+                df_null = download_csv_chunk(session, dataset_id, extra_params=null_query)
+                if not df_null.empty:
+                    dfs.append(df_null)
+            except requests.HTTPError as e:
+                print(f"Warning: NULL download for {facet_name} failed: {e}")
+            # non-NULL values
+            for v in facet_values:
+                bar.update(subtitle=f"{facet_name} = {v!r}")
+                params = {"refine": f'{facet_name}:"{v}"'}
+                df_chunk = download_csv_chunk(session, dataset_id, extra_params=params)
+                dfs.append(df_chunk)
+
+        # 5) Combine all parts, save to a single CSV, return DataFrame
+        if dfs:
+            full_df = pd.concat(dfs, ignore_index=True)
+        else:
+            full_df = pd.DataFrame()
+
+        data_path = ensure_data_dir()
+        csv_path = os.path.join(data_path, f"{dataset_id}.csv")
+        full_df.to_csv(csv_path, index=False)
+
+        return full_df
+    return (get_dataset,)
 
 @app.cell(hide_code=True)
 def _(mo):
