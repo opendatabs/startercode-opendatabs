@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Wohnbevölkerung nach Staatsangehörigkeit und Wohnviertel**
-    **Description**: Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Wohnviertel. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB).
+    **Description**: Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Wohnviertel. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100060)*.
     """
@@ -55,10 +55,10 @@ def _(mo):
 
     - **Dataset_identifier** `100060`
 - **Title** `Wohnbevölkerung nach Staatsangehörigkeit und Wohnviertel`
-- **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Wohnviertel. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB).`
+- **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Wohnviertel. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-03-12`
-- **Modified** `2025-11-24T00:00:46+00:00`
+- **Modified** `2025-11-24T19:50:59+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

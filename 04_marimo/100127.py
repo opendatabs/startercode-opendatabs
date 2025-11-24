@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Nachnamen der baselstädtischen Bevölkerung**
-    **Description**: Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Nachnamen. Die Daten werden jährlich aktualisiert. Bei mehreren Nachnamen wird nur der erste berücksichtigt, unabhängig davon, ob die Nachnamen mit einem Bindestrich verbunden sind oder nicht. <br>Die hier veröffentlichten Werte des Jahres 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 2011 auf Auswertungen aus dem Einwohnerregister.
+    **Description**: Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Nachnamen. Die Daten werden jährlich aktualisiert. Bei mehreren Nachnamen wird nur der erste berücksichtigt, unabhängig davon, ob die Nachnamen mit einem Bindestrich verbunden sind oder nicht. <br>Die hier veröffentlichten Werte des Jahres 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 2011 auf Auswertungen aus dem Einwohnerregister. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100127)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100127`
 - **Title** `Nachnamen der baselstädtischen Bevölkerung`
-- **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Nachnamen. Die Daten werden jährlich aktualisiert. Bei mehreren Nachnamen wird nur der erste berücksichtigt, unabhängig davon, ob die Nachnamen mit einem Bindestrich verbunden sind oder nicht. <br>Die hier veröffentlichten Werte des Jahres 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 2011 auf Auswertungen aus dem Einwohnerregister.`
+- **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Nachnamen. Die Daten werden jährlich aktualisiert. Bei mehreren Nachnamen wird nur der erste berücksichtigt, unabhängig davon, ob die Nachnamen mit einem Bindestrich verbunden sind oder nicht. <br>Die hier veröffentlichten Werte des Jahres 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 2011 auf Auswertungen aus dem Einwohnerregister. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-03-25`
 - **Modified** `2025-10-01T01:21:35+00:00`

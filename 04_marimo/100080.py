@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz enthält eine Übersicht der von Nutzern gemeldeten Weiterverwendungen von Datensätzen aus dem Datenportal, einschliesslich Anwendungen, Visualisierungen und Projekte, die auf bestehenden Datensätzen basieren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-10-09`
-- **Modified** `2025-11-24T07:10:56+00:00`
+- **Modified** `2025-11-24T19:10:38+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-10-17T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-11-22T23:00:00+00:00`
