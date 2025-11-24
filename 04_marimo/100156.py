@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt alle Eheschliessungen in Basel-Stadt nach Trauungsdatum. Berücksichtigt werden alle Eheschliessungen, bei welchen der Ehemann zum Zeitpunkt der Trauung in Basel-Stadt wohnhaft war. <br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Eheschliessungen im letzten noch nicht abgeschlossenen Jahr gezählt. In diesem Datensatz werden sie nachträglich im Jahr des Trauungsdatums gezählt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-10-28`
-- **Modified** `2025-11-21T02:16:17+00:00`
+- **Modified** `2025-11-24T02:16:16+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

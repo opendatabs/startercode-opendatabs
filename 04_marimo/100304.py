@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-11-23T13:01:39+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-08-31T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-11-21T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-11-22T23:00:00+00:00`
 - **Themes** `['Energie']`
 - **Keywords** `['Stadtlast', 'Netzlast', 'Strom', 'Elektrizität', 'Elektro', 'Watt', 'Kilowattstunden', 'Stromverbrauch', 'Gas']`
 - **Publisher** `Industrielle Werke Basel`

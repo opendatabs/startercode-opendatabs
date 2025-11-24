@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-11-23T15:00:17+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1863-12-31T23:30:14+00:00`
-- **Temporal_coverage_end_date** `2025-11-20T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-11-21T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Niederschlag', 'Strahlung', 'Druck', 'Luftdruck', 'Sonne', 'Klimatologie', 'Klima', 'Temperatur', 'Lufttemperatur', 'Sonnenschein', 'Sonnenscheindauer', 'Wetter', 'Luftfeuchtigkeit', 'Atmosphäre']`
 - **Publisher** `MeteoSchweiz`
