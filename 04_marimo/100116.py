@@ -38,7 +38,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Coronavirus (Covid-19): Tests nach Nachweismethode**
+    # **Coronavirus (COVID-19): Tests nach Nachweismethode**
     **Description**: <p>Dieser Datensatz zeigt die Anzahl Tests auf SARS-CoV-2 für jeden Kanton, die gesamte Schweiz und das Fürstentum Liechtenstein sowie die entsprechenden Testresultate (positiv/negativ) auf täglicher Basis. Die Angaben werden täglich durch das Bundesamt für Gesundheit (BAG) zur Verfügung gestellt im <a href="https://www.covid19.admin.ch/" target="_blank">Covid-19 Situationsbericht </a>bzw. über dessen <a href="https://stcovidappstorageprodchn.blob.core.windows.net/covid/context" target="_blank">API</a>.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100116)*.
@@ -54,7 +54,7 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100116`
-- **Title** `Coronavirus (Covid-19): Tests nach Nachweismethode`
+- **Title** `Coronavirus (COVID-19): Tests nach Nachweismethode`
 - **Description** `<p>Dieser Datensatz zeigt die Anzahl Tests auf SARS-CoV-2 für jeden Kanton, die gesamte Schweiz und das Fürstentum Liechtenstein sowie die entsprechenden Testresultate (positiv/negativ) auf täglicher Basis. Die Angaben werden täglich durch das Bundesamt für Gesundheit (BAG) zur Verfügung gestellt im <a href="https://www.covid19.admin.ch/" target="_blank">Covid-19 Situationsbericht </a>bzw. über dessen <a href="https://stcovidappstorageprodchn.blob.core.windows.net/covid/context" target="_blank">API</a>.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-03-11`
