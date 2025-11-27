@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Lebendgeborene seit 1901**
-    **Description**: Dieser Datensatz zeigt die jährliche Anzahl Lebendgeburten nach demografischen Merkmalen des Kindes und der Mutter und nach Geschlecht des Kindes seit 1901.
+    **Description**: Dieser Datensatz zeigt die jährliche Anzahl Lebendgeburten nach demografischen Merkmalen des Kindes und der Mutter und nach Geschlecht des Kindes seit 1901. Quelle: Statistisches Amt Basel-Stadt, <a href="https://statistik.bs.ch/thema/bev%C3%B6lkerung">Bevölkerungsstatistik</a>.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100326)*.
     """
@@ -55,10 +55,10 @@ def _(mo):
 
     - **Dataset_identifier** `100326`
 - **Title** `Lebendgeborene seit 1901`
-- **Description** `Dieser Datensatz zeigt die jährliche Anzahl Lebendgeburten nach demografischen Merkmalen des Kindes und der Mutter und nach Geschlecht des Kindes seit 1901.`
+- **Description** `Dieser Datensatz zeigt die jährliche Anzahl Lebendgeburten nach demografischen Merkmalen des Kindes und der Mutter und nach Geschlecht des Kindes seit 1901. Quelle: Statistisches Amt Basel-Stadt, <a href="https://statistik.bs.ch/thema/bev%C3%B6lkerung">Bevölkerungsstatistik</a>.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-01-03`
-- **Modified** `2025-04-28T07:47:34+00:00`
+- **Modified** `2025-11-27T15:30:52+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
