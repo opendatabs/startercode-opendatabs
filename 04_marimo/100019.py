@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Defibrillatoren**
-    **Description**: Sämtliche Standorte öffentlich zugänglicher Defibrillatoren in Basel-Stadt sind im Geoportal und in der First Responder App einsehbar. Die entsprechenden Standorte sind mit einem grünen Herz-Symbol signalisiert. Finden Sie den nächsten Defibrillator in Ihrer Nähe.
+    **Description**: Der Datensatz zeigt sämtliche Standorte öffentlich zugänglicher Defibrillatoren in Basel-Stadt. Diese sind so auch in der First Responder App einsehbar. Die entsprechenden Standorte sind in der Kartenanwendung mit einem grünen Herz-Symbol signalisiert und mit Beschreibungen zu Standort und Erreichbarkeit angereichert.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100019)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100019`
 - **Title** `Defibrillatoren`
-- **Description** `Sämtliche Standorte öffentlich zugänglicher Defibrillatoren in Basel-Stadt sind im Geoportal und in der First Responder App einsehbar. Die entsprechenden Standorte sind mit einem grünen Herz-Symbol signalisiert. Finden Sie den nächsten Defibrillator in Ihrer Nähe.`
+- **Description** `Der Datensatz zeigt sämtliche Standorte öffentlich zugänglicher Defibrillatoren in Basel-Stadt. Diese sind so auch in der First Responder App einsehbar. Die entsprechenden Standorte sind in der Kartenanwendung mit einem grünen Herz-Symbol signalisiert und mit Beschreibungen zu Standort und Erreichbarkeit angereichert.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
 - **Modified** `2025-02-04T00:00:00+00:00`

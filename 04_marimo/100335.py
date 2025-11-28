@@ -62,7 +62,7 @@ def _(mo):
 Diese Daten werden vom Tiefbauamt des Kantons Basel-Stadt zur Verfügung gestellt. Die Baustellen finden Sie auch auf einer interaktiven Karte unter <a href="https://baustellen.bs.ch" target="_blank">https://baustellen.bs.ch</a>. </p><p></p><p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-07-04`
-- **Modified** `2025-11-27T08:04:00+00:00`
+- **Modified** `2025-11-28T00:01:22+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

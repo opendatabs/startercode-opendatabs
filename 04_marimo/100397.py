@@ -64,7 +64,7 @@ def _(mo):
 </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-12-13`
-- **Modified** `2025-11-27T03:00:20+00:00`
+- **Modified** `2025-11-28T03:00:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-09-27T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2032-08-07T22:00:00+00:00`
