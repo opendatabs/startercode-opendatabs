@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-11-29"
+date: "2025-11-30"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100188.
 - **Description** `<p>Dieser Datensatz zeigt die Termine der Sitzungen des Grossen Rates Basel-Stadt. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-09`
-- **Modified** `2025-11-29T10:01:27+00:00`
+- **Modified** `2025-11-29T22:02:10+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2012-02-07T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2030-01-22T23:00:00+00:00`
