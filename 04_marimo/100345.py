@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz zeigt die Resultate aller Volksabstimmungen seit dem 8. März 2015 für den Kanton Basel-Stadt auf Ebene Wahllokal.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">Kantonsblatt</a> (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">https://www.kantonsblatt.ch/#!/search/publications</a>) des Kantons Basel-Stadt publiziert werden.</p><p>Die Gesamtresultate der Abstimmungen und die Resultate auf Gemeindeebene findet man im Datensatz <a href="https://data.bs.ch/explore/dataset/100346//" target="_blank">"Abstimmungen Kennzahlen"</a> (<a href="https://data.bs.ch/explore/dataset/100346/" target="_blank">https://data.bs.ch/explore/dataset/100346/</a>)</p><p>Eine Liste der Wahllokale findet man im Datensatz "<a href="https://data.bs.ch/explore/dataset/100098//" target="_blank">Wahllokale Kanton Basel-Stadt</a>" (<a href="https://data.bs.ch/explore/dataset/100098/" target="_blank">https://data.bs.ch/explore/dataset/100098/</a>)</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-06-08`
-- **Modified** `2025-10-07T09:48:39+00:00`
+- **Modified** `2025-11-30T16:58:09+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-09-26T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
