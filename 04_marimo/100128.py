@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Geschlecht, Alter und Staatsangehörigkeit (Schweiz/Ausland) auf der Ebene Wohnviertel. Die Daten werden jährlich aktualisiert. <br>Die hier veröffentlichten Werte der Jahre 1979 bis 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 1979 auf Auswertungen aus dem Einwohnerregister.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-03-25`
-- **Modified** `2025-10-01T01:19:57+00:00`
+- **Modified** `2025-12-01T02:20:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

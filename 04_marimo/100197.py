@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt am Jahresende auf Ebene der Postleitzahlen-Gebiete ab dem Jahr 1979. Diese Gebiete orientieren sich nicht an den statistischen Raumeinheiten (Wohnviertel, Bezirk, Block,…), sondern wurden von der Schweizerischen Post vergeben.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-06-02`
-- **Modified** `2025-10-01T01:15:41+00:00`
+- **Modified** `2025-12-01T02:15:44+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

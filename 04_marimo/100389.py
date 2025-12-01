@@ -58,10 +58,10 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz enthält Informationen über Sprayereien im Kanton Basel-Stadt, die sowohl öffentliche Anlagen (SprayEx) als auch private Gebäude (SprayOut) betreffen und von den zuständigen Stellen erfasst wurden. Daten von Sprayereien an privaten Gebäuden werden seit dem 31. Oktober 2023 ausgewiesen.</p><p>Die Daten beziehen sich ausschliesslich auf abgeschlossene Fälle, das heisst Sprayereien, die bereits entfernt worden sind.</p><p>Die genauen geografischen Koordinaten der Vorfälle werden einem 50x50-Meter-Raster zugeordnet. Der südwestliche Eckpunkt dieses Rasters wird als Geopunkt ausgewiesen, um die Anonymität der betroffenen Objekte zu gewährleisten.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-01-08`
-- **Modified** `2025-11-30T19:01:17+00:00`
+- **Modified** `2025-12-01T07:01:59+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-07-02T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-11-28T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-11-29T23:00:00+00:00`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Raum und Umwelt']`
 - **Keywords** `['Graffiti', 'Street Art', 'Wandkunst', 'öffentliche Kunst', 'Kultur', 'Wandbilder']`
 - **Publisher** `Stadtreinigung`
