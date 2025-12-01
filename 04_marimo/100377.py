@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz enthält Kennzahlen zu den Tagesgästen von Tages- und Nachtpflegeeinrichtungen (TNP) im Kanton Basel-Stadt. Er umfasst Daten zur Anzahl der Gäste, aufgeschlüsselt nach Geschlecht, sowie Informationen zum Durchschnittsalter der Gäste.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-12-20`
-- **Modified** `2025-04-28T07:47:50+00:00`
+- **Modified** `2025-12-01T16:30:56+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
