@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-12-01T16:30:56+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Alter', 'Pflege']`
 - **Publisher** `Statistisches Amt`

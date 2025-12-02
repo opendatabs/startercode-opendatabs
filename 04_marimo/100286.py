@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Die Smiley-Geschwindigkeitsanzeigen dienen der Kantonspolizei Basel-Stadt zur Erhöhung der Verkehrssicherheit an der betreffenden Örtlichkeit. Die Wechselanzeige von der aktuell gefahrenen Geschwindigkeit und Smiley-Symbol (Lob oder Tadel) ohne Repression weist auf freundliche Weise auf ein allfälliges Fahrverhalten hin. Durch diese Selbstkontrolle soll das Fahrverhalten positiv beeinflusst, die vorgeschriebene Geschwindigkeit besser eingehalten und die Aufmerksamkeit der Verkehrsteilnehmenden erhöht werden. Mit den Geräten können zudem Verkehrsdaten anonym erfasst werden. Die Geschwindigkeitsanzeigen stehen nicht in einem Zusammenhang mit Ordnungsbussen oder einer strafrechtlichen Verfolgung.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-04-06`
-- **Modified** `2025-11-03T00:00:00+00:00`
+- **Modified** `2025-12-01T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
