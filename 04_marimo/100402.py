@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Die Karte zeigt eine repräsentative Auswahl an Projektstandorten laufender und abgeschlossener Hochbauprojekte des Kantons Basel-Stadt. Die Projektstandorte sind mit Projektinformationen und teilweise auch Projektdokumentationen hinterlegt, welche mittels Link abgerufen werden können.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-11-14`
-- **Modified** `2025-09-26T00:00:00+00:00`
+- **Modified** `2025-11-27T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1991-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2031-12-30T23:00:00+00:00`
