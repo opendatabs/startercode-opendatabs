@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-12-06"
+date: "2025-12-07"
 output: html_document
 ---
 
@@ -17,10 +17,10 @@ Auto generated R starter code for data set 100179.
 - **Description** `<p>Der Datensatz enthält die Grundwassertemparturen in °C des kantonalen Grundwassermessnetzes. Es weist zur Zeit um die 80 Messstationen auf. Bei den Stationen, die mit einer Datenfernübertragung ausgerüstet sind, liegen tagesaktuelle Stundenwerte vor.</p><p>Jede Messstation ist mit der Katasternummer gemäss Bohrkataster des Kantons Basel-Stadt versehen (<a href="https://data.bs.ch/explore/dataset/100182/" target="_blank">https://data.bs.ch/explore/dataset/100182/</a>). Die Bohrungen sind auch auf MapBS unter dem Thema Geologie abrufbar (<a href="http://www.geo.bs.ch/bohrkataster" target="_blank">www.geo.bs.ch/bohrkataster</a>).</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser" target="_blank">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-07-11`
-- **Modified** `2025-12-06T05:25:57+00:00`
+- **Modified** `2025-12-07T05:26:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1982-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-12-03T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-04T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Wasser', 'Temperatur', 'Grundwasser', 'Wassertemperatur']`
 - **Publisher** `Amt für Umwelt und Energie`
