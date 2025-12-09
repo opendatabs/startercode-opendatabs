@@ -60,8 +60,8 @@ def _(mo):
 - **Issued** `2023-03-06`
 - **Modified** `2025-12-08T09:01:56+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
-- **Temporal_coverage_start_date** `2025-12-05T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-12-16T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2025-12-06T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-17T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Vorhersage', 'Gewässer', 'Fliessgewässer', 'Hydrologie']`
 - **Publisher** `Bundesamt für Umwelt BAFU`
