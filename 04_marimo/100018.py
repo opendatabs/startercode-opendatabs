@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Allmendbewilligungen beinhaltet sämtliche Nutzungen, welche im öffentlichen Raum (Allmend) stattfinden. Die dargestellten genutzten Flächen sind nicht verbindlich.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-12-06T00:00:00+00:00`
+- **Modified** `2025-12-09T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1927-03-23T23:00:00+00:00`
 - **Temporal_coverage_end_date** `5025-04-29T22:00:00+00:00`
