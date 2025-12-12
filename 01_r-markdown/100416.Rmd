@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2025-12-11"
+date: "2025-12-12"
 output: html_document
 ---
 
@@ -29,7 +29,7 @@ Messungen pro Tag für die Berechnung des Durchschnitts.</p>
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p><p><b>Hinweis:</b></p><p>Die Daten enthalten eine Lücke zwischen dem 2. und 22. April 2025, da es einen Unterbruch im Extrahieren der Daten gab.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2025-12-11T04:02:00+00:00`
+- **Modified** `2025-12-12T04:02:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
