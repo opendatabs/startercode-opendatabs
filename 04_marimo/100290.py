@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz enthält Informationen, welche noch in keinem anderen kantonalen System geführt werden, aber für die BachApp benötigt werden. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
-- **Modified** `2025-05-06T07:36:15+00:00`
+- **Modified** `2025-12-16T07:47:33+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

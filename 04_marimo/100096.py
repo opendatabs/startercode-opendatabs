@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Abfuhrtermine der Stadtreinigung (Tiefbauamt) der Stadt Basel. Siehe auch <a href="https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfuhrplaene" target="_blank">https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfuhrplaene</a>. Abfuhranmeldung unter <a href="https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfaelle-abholen-lassen" target="_blank">https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfaelle-abholen-lassen</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-08-27`
-- **Modified** `2025-12-11T10:26:19+00:00`
+- **Modified** `2025-12-17T09:12:05+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2017-01-01T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-12-30T23:00:00+00:00`

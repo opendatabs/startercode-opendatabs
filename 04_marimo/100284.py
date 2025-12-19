@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Der Datensatz zeigt die Koordinaten gewässernaher Grillstellen in Basel-Stadt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
-- **Modified** `2025-05-06T07:36:12+00:00`
+- **Modified** `2025-12-16T07:47:33+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-01-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-12-31T23:00:00+00:00`

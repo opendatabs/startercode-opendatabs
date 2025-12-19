@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Der Datensatz enthält Informationen zu Anlässen u.ä. in Gewässernähe, welche z.B. in der BachApp publiziert werden. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
-- **Modified** `2025-05-06T07:36:10+00:00`
+- **Modified** `2025-12-16T07:47:31+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Der Datensatz zeigt die Teilhaltestellen (Haltebereich des Busses oder des Trams je Fahrtrichtung) des öffentlichen Verkehrs im Kanton Basel-Stadt sowie teilweise in der trinationalen Agglomeration. Es wird nach Liniennummer, Transportunternehmen, Art und Typ der Haltestelle unterschieden.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-01-29`
-- **Modified** `2025-04-28T00:00:00+00:00`
+- **Modified** `2025-12-12T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
