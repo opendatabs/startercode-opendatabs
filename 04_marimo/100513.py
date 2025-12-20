@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Anschauungsbeispiel: Vom Kanton in Auftrag gegebene Gutachten**
-    **Description**: <p>Dieser Datensatz zeigt die vom Kanton in Auftrag gegebene Gutachten. Neben Metadaten wird eine URL zur Datei selber gezeigt.</p>
+    **Description**: <p>Dieser Datensatz ist ein Anschauungsbeispiel und zeigt die Struktur des Datensatzes für die vom Kanton in Auftrag gegebene Gutachten. Neben Metadaten wird eine URL zur Datei selber gezeigt.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100513)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100513`
 - **Title** `Anschauungsbeispiel: Vom Kanton in Auftrag gegebene Gutachten`
-- **Description** `<p>Dieser Datensatz zeigt die vom Kanton in Auftrag gegebene Gutachten. Neben Metadaten wird eine URL zur Datei selber gezeigt.</p>`
+- **Description** `<p>Dieser Datensatz ist ein Anschauungsbeispiel und zeigt die Struktur des Datensatzes für die vom Kanton in Auftrag gegebene Gutachten. Neben Metadaten wird eine URL zur Datei selber gezeigt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-12-17`
 - **Modified** `2025-12-17T13:37:07+00:00`
