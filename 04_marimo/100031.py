@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Öffentliche sanitäre Anlagen der Gemeinden Basel, Riehen und Bettingen: WC Anlage, WC Anlage rollstuhlgängig, nur Pissoir, Dusche, Anlage geschlossen (in Sanierung oder geschlossen).`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-12-17T00:00:00+00:00`
+- **Modified** `2025-12-18T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

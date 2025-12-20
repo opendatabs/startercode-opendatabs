@@ -74,10 +74,10 @@ Pilotprojekt den Einsatz von kosteneffizienten Sensoren zur Erfassung des
 Schallpegeldaten (Leq) zur Verfügung gestellt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-25`
-- **Modified** `2025-12-19T20:00:22+00:00`
+- **Modified** `2025-12-20T08:00:17+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-06-23T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-12-18T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-19T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Schall', 'Lärm', 'Pegel', 'Lautstärke', 'Belästigung']`
 - **Publisher** `Amt für Umwelt und Energie`
