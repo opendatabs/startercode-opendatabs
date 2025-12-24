@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2025-12-23T14:01:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2013-01-24T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-11-26T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-22T23:00:00+00:00`
 - **Themes** `['Politik', 'Verwaltung']`
 - **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Parlamentarische Vorstösse', 'Demokratie', 'Legislative']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`
