@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Der Datensatz zeigt die Standorte der Messstationen für den Datensatz <a href="https://data.bs.ch/explore/dataset/100009/" target="_blank">«Luftklima Smart Regio Basel» (https://data.bs.ch/explore/dataset/100009/)</a>.</p><p><b>Änderungsprotokoll:</b></p><p><b>18.04.2024:</b> Die Koordinaten werden automatisch plausibilisiert. Es werde nur Koordinaten angezeigt, die in einem bestimmten Umkreis von Basel sind. Der Code dazu ist hier verfügbar: <a href="https://github.com/opendatabs/data-processing/blob/master/meteoblue_wolf/etl.py" target="_blank">https://github.com/opendatabs/data-processing/blob/master/meteoblue_wolf/etl.py</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-05-12`
-- **Modified** `2025-12-26T07:10:45+00:00`
+- **Modified** `2025-12-26T19:10:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1999-12-30T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-12-25T23:00:00+00:00`

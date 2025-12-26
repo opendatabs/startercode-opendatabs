@@ -98,7 +98,7 @@ für Umwelt und Energie Basel-Stadt (AUE-BS)</a> <br>
 (siehe https://www.bs.ch/wsu/aue)<o:p></o:p></span></p></div><p></p><p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-11-23`
-- **Modified** `2025-12-26T07:50:24+00:00`
+- **Modified** `2025-12-26T18:50:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2023-10-17T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-12-25T23:00:00+00:00`
