@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Die im Kanton Basel-Stadt am häufigsten vorkommenden invasiven Neophyten (nicht heimische, problematische Pflanzenarten) wurden kartiert und die Fundorte je nach Pflanzenart als Flächen oder Punkte aufgenommen. Die Kartierung wurde bisher in den Jahren 2006, 2009 und 2013 durchgeführt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-12-21T00:00:00+00:00`
+- **Modified** `2025-12-28T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2005-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
