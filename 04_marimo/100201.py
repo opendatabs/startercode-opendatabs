@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Der Datensatz beinhaltet alle Liegenschaften des Kantons. Es wird zwischen Liegenschaft und Allmendparzelle unterschieden.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-10-03`
-- **Modified** `2025-12-29T00:00:00+00:00`
+- **Modified** `2025-12-30T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

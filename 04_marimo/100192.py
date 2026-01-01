@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die Vornamen der Neugeborenen im Kanton Basel-Stadt seit 2006. Als im Kanton Basel-Stadt Neugeborene gelten Kinder, welche ihren Wohnsitz ab Geburt im Kanton Basel-Stadt haben. Die Daten werden jährlich aktualisiert.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-05-03`
-- **Modified** `2025-12-01T02:15:55+00:00`
+- **Modified** `2026-01-01T02:31:06+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
