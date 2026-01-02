@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-01-01T07:25:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2022-12-30T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-12-28T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-29T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Auto', 'Motorrad', 'Bus', 'Lieferwagen', 'Lastwagen', 'Anhänger', 'Verkehr', 'Geschwindigkeit', 'km/h']`
 - **Publisher** `Amt für Mobilität`
