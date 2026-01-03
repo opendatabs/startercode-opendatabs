@@ -58,10 +58,10 @@ def _(mo):
 - **Description** `<p>Standorte der öffentlichen Parkhäuser Basel, wie sie in <a href="https://parkendd.de/map.html#Basel" target="_blank">ParkenDD</a> verwendet werden.</p><p><br></p><p>Änderungsprotokoll:</p><p>- 28.11.2024: Centralbahnparking heisst neu Centralbahn.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-01-02T19:01:07+00:00`
+- **Modified** `2026-01-03T07:01:28+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
-- **Temporal_coverage_start_date** `2026-01-01T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-01-01T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2026-01-02T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-01-02T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Geographie', 'Tourismus']`
 - **Keywords** `['Parkhaus', 'Standort', 'Parken', 'Auto', 'Parkieren', 'Elektroautos', 'Basel']`
 - **Publisher** `Parkhäuser Basel-Stadt`
