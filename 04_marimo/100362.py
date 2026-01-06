@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-01-05T10:40:54+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-09-29T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Raum und Umwelt', 'Bevölkerung']`
 - **Keywords** `['Sauberkeit', 'Kehrricht', 'Abfall', 'Reinigung', 'Stadtreinigung', 'Strassennetz', 'Stadthygiene', 'Verschmutzung', 'Müll']`
 - **Publisher** `Stadtreinigung`

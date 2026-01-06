@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-01-05T09:15:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2011-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-09-30T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-10-31T23:00:00+00:00`
 - **Themes** `['Bevölkerung', 'Statistische Grundlagen']`
 - **Keywords** `['Alter', 'Altersstruktur', 'Bevölkerungsbestand', 'Demographie', 'Geschlecht', 'Todesfälle', 'Einwohnerzahl', 'Bevölkerungsstruktur', 'Tod', 'Verstorben', 'Sterberate']`
 - **Publisher** `Statistisches Amt`
