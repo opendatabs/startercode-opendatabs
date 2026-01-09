@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Quartiertreffpunkte**
-    **Description**: Quartiertreffpunkte sind wichtige Begegnungsorte für junge Familien ebenso wie für ältere Menschen, für Alteingesessene wie auch Neuankömmlinge. Sie bieten ein breitgefächertes Angebot wie Beratung und Unterstützung im Alltag, offene Treffpunkte, Mittagstische und weitere kulinarische Angebote, Spielabende, Filmvorführungen,kulturelle Veranstaltungen und vieles mehr.
+    **Description**: Quartierangebote (Quartiertreffpunkte, -räume und -anlaufstellen) sind wichtige Begegnungsorte für junge Familien ebenso wie für ältere Menschen, für Alteingesessene wie auch Neuankömmlinge. Sie bieten ein breitgefächertes Angebot wie Beratung und Unterstützung im Alltag, offene Treffpunkte, Mittagstische und weitere kulinarische Angebote, Spielabende, Filmvorführungen, kulturelle Veranstaltungen und vieles mehr.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100026)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100026`
 - **Title** `Quartiertreffpunkte`
-- **Description** `Quartiertreffpunkte sind wichtige Begegnungsorte für junge Familien ebenso wie für ältere Menschen, für Alteingesessene wie auch Neuankömmlinge. Sie bieten ein breitgefächertes Angebot wie Beratung und Unterstützung im Alltag, offene Treffpunkte, Mittagstische und weitere kulinarische Angebote, Spielabende, Filmvorführungen,kulturelle Veranstaltungen und vieles mehr.`
+- **Description** `Quartierangebote (Quartiertreffpunkte, -räume und -anlaufstellen) sind wichtige Begegnungsorte für junge Familien ebenso wie für ältere Menschen, für Alteingesessene wie auch Neuankömmlinge. Sie bieten ein breitgefächertes Angebot wie Beratung und Unterstützung im Alltag, offene Treffpunkte, Mittagstische und weitere kulinarische Angebote, Spielabende, Filmvorführungen, kulturelle Veranstaltungen und vieles mehr.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
 - **Modified** `2025-03-10T00:00:00+00:00`
