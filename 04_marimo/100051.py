@@ -58,10 +58,10 @@ def _(mo):
 - **Description** `<p>Stündliche Messungen der <a href="https://www.meteoschweiz.admin.ch/home/messwerte.html?param=messnetz-automatisch&amp;station=BAS" target="_blank">automatischen Wetterstation Basel-Binningen</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-01-09T19:20:51+00:00`
+- **Modified** `2026-01-10T07:21:01+00:00`
 - **Rights** `None`
 - **Temporal_coverage_start_date** `2018-05-31T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-01-08T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-01-09T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Gesundheit', 'Tourismus']`
 - **Keywords** `['Luft', 'Ozon', 'Stickstoffdioxid', 'Stickoxid', 'NO2', 'NOX', 'Feinstaub', 'Kohlenmonoxid', 'CO', 'Partikelzahlkonzentraion', 'Russ', 'Temperatur', 'Niederschlag', 'Globalstrahlung']`
 - **Publisher** `MeteoSchweiz`
