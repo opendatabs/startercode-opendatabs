@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Gebäudeadressen aller im kantonalen Datenmarkt geführten Gebäude (siehe <a href="https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310</a>).`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-13`
-- **Modified** `2026-01-09T00:00:00+00:00`
+- **Modified** `2026-01-10T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
