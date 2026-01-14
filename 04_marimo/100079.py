@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die verstorbenen Personen im Kanton Basel-Stadt nach Altersklasse (0-64, 65+), Geschlecht und Sterbedatum. Die Daten werden täglich aktualisiert, wobei nur Todesfälle berücksichtigt werden, die mindestens 15 Tage zurück liegen. Aufgrund von später gemeldeten Todesfällen kann es jederzeit zu Veränderungen bei bereits veröffentlichten Werten kommen.<br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Todesfälle während vier Monaten gesammelt, danach gelten die Zahlen als definitiv. Später eintreffende Meldungen werden im letzten noch nicht abgeschlossenen Monat gezählt. In diesem Datensatz werden sie im Monat des Sterbedatums gezählt. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-04-22`
-- **Modified** `2026-01-13T02:01:32+00:00`
+- **Modified** `2026-01-14T02:15:44+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
