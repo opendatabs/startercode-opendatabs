@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-01-14"
+date: "2026-01-15"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100018.
 - **Description** `Allmendbewilligungen beinhaltet sämtliche Nutzungen, welche im öffentlichen Raum (Allmend) stattfinden. Die dargestellten genutzten Flächen sind nicht verbindlich.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-01-13T00:00:00+00:00`
+- **Modified** `2026-01-14T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1927-03-23T23:00:00+00:00`
 - **Temporal_coverage_end_date** `5025-04-29T22:00:00+00:00`

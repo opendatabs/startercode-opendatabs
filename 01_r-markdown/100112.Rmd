@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-01-14"
+date: "2026-01-15"
 output: html_document
 ---
 
@@ -31,7 +31,7 @@ Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben.
 Manipulationen an Geräten können zu fehlerhaften Messungen führen.</span></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="Arial, sans-serif">Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href="https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring" style="background-color: rgb(255, 255, 255); font-family: sans-serif; font-size: 14px; font-weight: 400;" target="_blank">https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face="Arial, sans-serif"> aufrufbar.</font></p><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href="https://www.geo.bs.ch/geschwindigkeitsmonitoring" target="_blank">https://www.geo.bs.ch/geschwindigkeitsmonitoring</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-02-02`
-- **Modified** `2026-01-14T02:01:52+00:00`
+- **Modified** `2026-01-15T02:01:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
