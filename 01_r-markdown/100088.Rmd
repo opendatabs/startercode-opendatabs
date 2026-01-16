@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-01-15"
+date: "2026-01-16"
 output: html_document
 ---
 
@@ -19,10 +19,10 @@ Auto generated R starter code for data set 100088.
 <p>Historische Daten sind im folgenden Datensatz vorhanden: <a href="https://data.bs.ch/explore/dataset/100014/" target="_blank">https://data.bs.ch/explore/dataset/100014/</a>. <br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2026-01-15T19:59:06+00:00`
+- **Modified** `2026-01-16T07:59:05+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2026-01-14T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-01-14T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2026-01-15T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-01-15T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Parkplatz', 'Parkhaus', 'Autos', 'Elektroautos', 'Frei', 'Echtzeit', 'Realtime']`
 - **Publisher** `Parkhäuser Basel-Stadt`
