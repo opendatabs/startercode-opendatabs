@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p style="font-family: sans-serif;">Der Datensatz beschreibt  die in der zeitlichen Abfolge der Publikation oder des Inkrafttretens nachgeführte Gesetzessammlung (Chronologische Gesetzessammlung) des kantonalen und kommunalen Rechts im Kanton Basel-Stadt: <a href="https://www.gesetzessammlung.bs.ch/app/de/chronology/change_documents" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/chronology/change_documents</a></p><p style="font-family: sans-serif;">Die Erlasstexte in systematischer Form (Systematische Gesetzessammlung) können unter gesetzessammlung.bs.ch (<a href="https://www.gesetzessammlung.bs.ch/app/de/systematic/texts_of_law" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/systematic/texts_of_law</a>) oder auch in diesem Datensatz gefunden werden: <a href="https://data.bs.ch/explore/dataset/100354/" target="_blank">https://data.bs.ch/explore/dataset/100354/</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `None`
-- **Modified** `2026-01-15T08:31:09+00:00`
+- **Modified** `2026-01-16T08:31:08+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
