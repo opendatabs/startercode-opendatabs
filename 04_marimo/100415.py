@@ -62,10 +62,10 @@ def _(mo):
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2026-01-16T19:52:02+00:00`
+- **Modified** `2026-01-17T07:52:04+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2026-01-15T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-01-15T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2026-01-16T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-01-16T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'E-Mobility', 'Shared', 'Veloverleih', 'Verkehr', 'Mobility']`
 - **Publisher** `Amt für Mobilität`
