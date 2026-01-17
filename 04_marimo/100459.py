@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Die Notfalltreffpunkte Basel-Stadt sind Standorte, an denen Sie im Notfall jederzeit einen Notruf absetzen können. Sollte die übliche Informations- und Kommunikationstechnologie (IKT) – wie Festnetztelefon, Mobiltelefon oder Fernseher – infolge eines Ereignisses über längere Zeit ausfallen, erhalten Sie dort Informationen und Unterstützung durch die Behörden.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-04-28`
-- **Modified** `2026-01-17T06:41:27+00:00`
+- **Modified** `2026-01-17T18:41:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
