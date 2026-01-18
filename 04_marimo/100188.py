@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz zeigt die Termine der Sitzungen des Grossen Rates Basel-Stadt. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-09`
-- **Modified** `2026-01-17T22:28:09+00:00`
+- **Modified** `2026-01-18T10:30:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2012-02-07T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2030-01-22T23:00:00+00:00`
