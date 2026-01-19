@@ -58,10 +58,10 @@ def _(mo):
 - **Description** `<p>Standortbeschreibung: Die Messstation befindet sich in Basel direkt an der Kreuzung Feldbergstrasse / Hammerstrasse. Sie liegt in einer schlecht durchlüfteten Strassenschlucht mit hohem Verkehrsaufkommen und oft stehendem Kolonnenverkehr. Die Station Basel Feldbergstrasse ist ein Ort mit sehr hoher lokaler Belastung innerhalb der Stadt Basel.</p><p>Lage: Stadtzentrum an Strasse, geschlossene Bebauung</p><p>Koordinaten: 2611747 / 1268491 bzw. N 47° 34.021 E 7° 35.684; 255 m ü. M.</p><p>Geografische Lage: Juranordfuss</p><p>Siedlungsgrösse: 166'600 Einwohner</p><p>Verkehr, DTV (% LKW): 21'900 (3%)</p><p>Strassenabstand: 2 m</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-01-18T19:16:33+00:00`
+- **Modified** `2026-01-19T07:16:44+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1999-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-01-16T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-01-17T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Gesundheit', 'Tourismus']`
 - **Keywords** `['Luft', 'Feinstaub', 'Stickstoffdioxid', 'Stickoxid', 'NO2', 'NOX', 'Motorräder', 'Echtzeit', 'Realtime']`
 - **Publisher** `Lufthygieneamt beider Basel`

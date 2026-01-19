@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-01-18"
+date: "2026-01-19"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100397.
 </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-12-13`
-- **Modified** `2026-01-18T03:00:39+00:00`
+- **Modified** `2026-01-19T03:00:36+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-09-27T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2032-08-07T22:00:00+00:00`

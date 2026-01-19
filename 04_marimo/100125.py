@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt auf Ebene Bezirk. Die Daten werden monatlich aktualisiert. Bis zum Jahr 2011 sind nur die Jahresendbestände verfügbar.<br>Die hier veröffentlichten Werte der Jahre 1979 bis 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 1979 auf Auswertungen aus dem Einwohnerregister. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-03-25`
-- **Modified** `2026-01-16T02:17:55+00:00`
+- **Modified** `2026-01-19T02:17:45+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
