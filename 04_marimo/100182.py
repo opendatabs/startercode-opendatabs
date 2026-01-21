@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Diese Karte zeigt alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen. Sie gibt Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-04-12`
-- **Modified** `2025-10-14T00:00:00+00:00`
+- **Modified** `2026-01-20T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
