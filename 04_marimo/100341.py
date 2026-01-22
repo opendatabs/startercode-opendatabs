@@ -60,7 +60,7 @@ def _(mo):
 «Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-02-18`
-- **Modified** `2026-01-21T18:30:12+00:00`
+- **Modified** `2026-01-22T06:33:59+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-01-21T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1769-02-28T23:25:52+00:00`
-- **Temporal_coverage_end_date** `2025-12-03T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-01-25T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Geographie']`
 - **Keywords** `['Baum', 'Baumbestand', 'Stadtbaum', 'Baumschutz', 'Unterhalt', 'Pflege', 'Kataster']`
 - **Publisher** `Stadtgärtnerei`
