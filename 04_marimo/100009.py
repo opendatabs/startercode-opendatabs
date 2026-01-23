@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Der Datensatz zeigt stündlich aktualisierte Angaben zu Lufttemperatur und Niederschlag, welche über Sensoren von meteoblue gemessen werden. </p><p>Es handelt sich um Rohdaten, welche nicht plausibilisiert oder korrigiert sind.</p><p>Die geografischen Koordinaten der Sensoren sind im Datensatz <a href="https://data.bs.ch/explore/dataset/100082/" target="_blank">«Standorte der Mess-Stationen Luftklima Smart Regio Basel»</a> verfügbar.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-05-13`
-- **Modified** `2026-01-23T07:11:42+00:00`
+- **Modified** `2026-01-23T19:11:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2017-03-31T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-01-22T23:00:00+00:00`
