@@ -60,8 +60,8 @@ def _(mo):
 - **Issued** `2022-04-12`
 - **Modified** `2026-01-20T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `1876-12-31T23:30:14+00:00`
+- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
 - **Keywords** `['Grundwasser', 'Erdwärme', 'Hydrogeologie']`
 - **Publisher** `Amt für Umwelt und Energie`
