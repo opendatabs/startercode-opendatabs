@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Das Kantonsblatt ist das offizielle Publikationsorgan des Kantons Basel-Stadt. Darin werden Meldungen (Gesetze, Verordnungen, Staatsverträge usw.) des Grossen Rats, des Regierungsrats und der Verwaltung veröffentlicht. Im vorliegenden Datensatz sind die aktuellen über das offizielle API des Kantonsblatts beziehbaren Meldungen in Tabellenform enthalten. </p><p>Bitte beachten Sie auch die Datenschutzerklärung des Kantonsblattes und die Hinweise zur Rechtsgültigkeit der Meldungen unter <a href="https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy" target="_blank">https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-05-31`
-- **Modified** `2026-01-23T00:34:25+00:00`
+- **Modified** `2026-01-24T00:34:24+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-01-02T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2031-01-22T23:00:00+00:00`
