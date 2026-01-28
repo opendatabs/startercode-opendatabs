@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2023-06-26T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Smarte Strasse', 'Luftqualität', 'Feinstaub', 'PM2.5', 'O3', 'NO2']`
-- **Publisher** `Lufthygieneamt beider Basel`
+- **Publisher** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 

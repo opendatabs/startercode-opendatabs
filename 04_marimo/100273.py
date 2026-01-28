@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Luftqualität']`
-- **Publisher** `Lufthygieneamt beider Basel`
+- **Publisher** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 
