@@ -77,7 +77,7 @@ Schallpegeldaten (Leq) zur Verfügung gestellt.</p>`
 - **Modified** `2026-01-28T14:59:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-06-23T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-01-27T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-24T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Schall', 'Lärm', 'Pegel', 'Lautstärke', 'Belästigung']`
 - **Publisher** `Amt für Umwelt und Energie`
