@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-02-01"
+date: "2026-02-02"
 output: html_document
 ---
 
@@ -21,7 +21,7 @@ Auto generated R starter code for data set 100329.
 <p>Wegen Baustellen, Veranstaltungen oder aus anderen Gründe kann es sein, dass Parkplätze vorübergehend nicht zur Verfügung stehen. Auch ist es möglich, dass gewisse Parkplätze im Rahmen von Umbauprojekten bereits aufgehoben wurden, das Projekt aber noch nicht abgeschlossen und somit auch der Datensatz noch nicht nachgeführt ist.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-07-10`
-- **Modified** `2026-01-29T00:01:37+00:00`
+- **Modified** `2026-02-02T00:01:32+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

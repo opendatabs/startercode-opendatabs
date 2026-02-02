@@ -77,7 +77,7 @@ die alle 10 Minuten aktualisiert werden. </p><p>Für die Bezirke wird folgender
 - **Modified** `2026-02-01T04:28:39+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2025-01-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-01-30T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'Shared', 'E-Mobility', 'Mobility', 'Veloverleih', 'Verkehr']`
 - **Publisher** `Statistisches Amt`
