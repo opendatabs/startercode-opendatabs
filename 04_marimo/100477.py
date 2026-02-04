@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Der Datensatz enthält eine flächendeckende Erfassung der Bodenbedeckung im Kanton Basel-Stadt. Jede Fläche ist einer Bodenbedeckungskategorie zugeordnet (z. B. Gebäude, Gewässer, befestigt, bestockt, humusiert) und wird durch Polygone repräsentiert.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-10-03`
-- **Modified** `2026-02-03T18:31:45+00:00`
+- **Modified** `2026-02-04T06:32:45+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
