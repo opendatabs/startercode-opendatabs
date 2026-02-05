@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-02-04"
+date: "2026-02-05"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100429.
 - **Description** `<p>Dieser Datensatz enthält eine Liste von Anreiseempfehlungen abhängig von Verkehrsmittel, ob der Verkehr gesperrt und ob es zusätzliche Parkplätze gibt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-12-04`
-- **Modified** `2026-01-27T14:55:26+00:00`
+- **Modified** `2026-02-05T07:10:58+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
