@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz enthält eine Liste von Anreiseempfehlungen abhängig von Verkehrsmittel, ob der Verkehr gesperrt und ob es zusätzliche Parkplätze gibt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-12-04`
-- **Modified** `2026-02-05T07:10:58+00:00`
+- **Modified** `2026-02-05T14:10:25+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
