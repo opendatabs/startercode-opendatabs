@@ -64,7 +64,7 @@ die damit erfasst werden, vor Ort mit Piktogrammen und QR-Codes leicht verständ
 gemacht.<br>Der vorliegende Datensatz zeigt die Anzahl der Seitenaufrufe der Microsites, die über die QR-Codes auf der Infotafel zugänglich sind. Jeder Seitenaufruf über den QR-Code generiert eine Datenabfrage. Mit der Anzahl an Datenabfragen kann man bestimmen, wie oft eine Seite aufgerufen worden ist.</p><p class="" style="font-family: sans-serif;"><span style="font-weight: bolder;">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</span></p><ul><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href="https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen" target="_blank">https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-07-03`
-- **Modified** `2023-07-13T12:54:42+00:00`
+- **Modified** `2026-02-07T10:38:09+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2022-02-10T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2023-06-29T22:00:00+00:00`

@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Der Datensatz zeigt die Standorte der Mess-Stationen für den Datensatz <a href="https://data.bs.ch/explore/dataset/100087/" target="_blank">«Smart Climate Schallpegelmessungen»</a>.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-25`
-- **Modified** `2025-08-22T13:25:34+00:00`
+- **Modified** `2026-02-07T10:33:55+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
