@@ -63,7 +63,7 @@ def _(mo):
 - **Temporal_coverage_start_date** `1929-03-28T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2001-10-19T22:00:00+00:00`
 - **Themes** `['Politik', 'Verwaltung']`
-- **Keywords** `['Grosser Rat', 'Parlament', 'Demokratie', 'Grossrat', 'Grossrätin', 'Legislative']`
+- **Keywords** `['Grosser Rat', 'Parlament', 'Grossrat', 'Grossrätin', 'Legislative', 'Interessensbindungen']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
 

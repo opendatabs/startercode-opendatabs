@@ -63,7 +63,7 @@ def _(mo):
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Verwaltung']`
-- **Keywords** `['Regierungsrat', 'Grosser Rat', 'Gremien', 'Parlament', 'Demokratie', 'Legislative']`
+- **Keywords** `['Grosser Rat', 'Gremien', 'Parlament', 'Legislative']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
 

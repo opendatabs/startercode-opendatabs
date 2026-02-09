@@ -22,7 +22,7 @@ Auto generated R starter code for data set 100311.
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Verwaltung']`
-- **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Parlamentarische Vorstösse', 'Demokratie', 'Legislative']`
+- **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Parlamentarische Vorstösse', 'Legislative', 'Geschäft', 'Abstimmung']`
 - **Publisher** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
 
