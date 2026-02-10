@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Basel Info ist das Fussgängerorientierungssystem für Basel-Stadt. Die detailreich gestalteten Karten ermöglichen den Nutzern, die Stadt selbstständig zu Fuss oder mit dem öV zu entdecken. Zusätzlich bieten 38 Gruppen von Points of Interest, unterteilt in 8 Klassen, nützliche Informationen für Touristen und Anwohner gleichermassen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-02-07T00:00:00+00:00`
+- **Modified** `2026-02-09T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
