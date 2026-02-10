@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Der Datensatz zeigt die stündlichen Temperaturwerte der Wiese an.</p><p>Koordinaten: <a href="https://map.geo.bs.ch/?lang=de&amp;baselayer_ref=Grundkarte%20farbig&amp;map_x=2611543&amp;map_y=1270112&amp;map_zoom=8&amp;rl_features=Fp(fjytj-wy78T~n*Standort'c*%2523DB4436'a*0'o*0.2'm*false'b*false's*14'k*2)" target="_blank">47.581638577259945, 7.59193858146811</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
-- **Modified** `2026-02-10T07:30:11+00:00`
+- **Modified** `2026-02-10T19:30:09+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-01-23T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-02-08T23:00:00+00:00`
