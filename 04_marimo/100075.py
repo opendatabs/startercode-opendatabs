@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-02-12T07:31:58+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-02-02T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-10-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-31T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Tram', 'Bus', 'Haltestelle', 'Einsteiger', 'Fahrgäste', 'Passagier']`
 - **Publisher** `Basler Verkehrs-Betriebe`
