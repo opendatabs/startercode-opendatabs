@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Bauvorhaben, die eine wesentliche Aussenwirkung haben und Rechte Anderer betreffen können, wie etwa Neubauten, grosse Umbauten, Baumfällungen, Mobilfunkantennen oder Restaurationsbetriebe mit Nachtöffnungszeiten, werden im Kantonsblatt (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">https://www.kantonsblatt.ch/#!/search/publications</a>) publiziert. </p><p>Für diesen Datensatz wird der bestehende Datensatz des Kantonsblatt nach der Unterrubrik "Baupublikationen" gefiltert (<a href="https://data.bs.ch/explore/dataset/100352/table/?refine.subrubric_de=Baupublikationen" target="_blank">https://data.bs.ch/explore/dataset/100352/table/?refine.subrubric_de=Baupublikationen</a>) und dessen Inhalt wird aus der "XML-Datei" herausgelesen.</p><p>Dieser Datensatz bildet die Bauherrschaft, die Projektverfasser und den Standort des Bauvorhabens als Projektadresse und Parzelle ab. Die Koordinaten der Parzelle werden mit der GeoBS API Basel-Stadt ergänzt (<a href="https://api.geo.bs.ch/" target="_blank">https://api.geo.bs.ch/</a>).</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-11-13`
-- **Modified** `2026-02-13T01:05:38+00:00`
+- **Modified** `2026-02-14T01:05:36+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

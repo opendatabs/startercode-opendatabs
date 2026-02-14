@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-02-13"
+date: "2026-02-14"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100095.
 - **Description** `Abfuhrzonen der Stadtreinigung (Tiefbauamt) für die Stadt Basel. Beinhaltet die Flächen der Abfuhrzonen (A bis H) der Stadt Basel.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-08-24`
-- **Modified** `2026-02-12T04:29:53+00:00`
+- **Modified** `2026-02-14T06:28:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
