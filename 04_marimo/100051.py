@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Stündliche Messungen der <a href="https://www.meteoschweiz.admin.ch/home/messwerte.html?param=messnetz-automatisch&amp;station=BAS" target="_blank">automatischen Wetterstation Basel-Binningen</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-02-14T07:21:12+00:00`
+- **Modified** `2026-02-14T19:20:44+00:00`
 - **Rights** `None`
 - **Temporal_coverage_start_date** `2018-05-31T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-02-13T23:00:00+00:00`
