@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-02-14"
+date: "2026-02-15"
 output: html_document
 ---
 
