@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Abfuhrzonen der Stadtreinigung (Tiefbauamt) für die Stadt Basel. Beinhaltet die Flächen der Abfuhrzonen (A bis H) der Stadt Basel.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-08-24`
-- **Modified** `2026-02-15T18:28:51+00:00`
+- **Modified** `2026-02-16T06:33:31+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

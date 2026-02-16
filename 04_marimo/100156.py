@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die Heiraten im Kanton Basel-Stadt nach Trauungsdatum, Alter, Staatsangehörigkeit und Namenswahl der Ehepartner. Seit dem Jahr 2022 enthält der Datensatz auch Heiraten zwischen gleichgeschlechtlichen Personen. Die Daten werden monatlich aktualisiert. <br><br>Eine Heirat wird in Basel-Stadt gezählt, wenn die Referenzperson (bei Heiraten zwischen verschiedengeschlechtlichen Personen in der Regel der Mann, bei Heiraten zwischen gleichgeschlechtlichen Personen in der Regel die ältere Person) in Basel-Stadt wohnt. <br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Heiraten im letzten noch nicht abgeschlossenen Jahr gezählt. In diesem Datensatz werden sie im Jahr des Trauungsdatums gezählt. <br><br>Quelle: Statistisches Amt des Kantons Basel-Stadt, Auswertungen zu den natürlichen Bevölkerungsbewegungen (Bundesamt für Statistik).`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-10-28`
-- **Modified** `2026-02-13T02:16:12+00:00`
+- **Modified** `2026-02-16T02:16:16+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
