@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz zeigt den Wasserstand des Rheins in Basel auf der Grossbasler Seite auf Höhe der Klingentalfähre. Es liegen aktuelle Werte alle 5 Minuten vor. Die Messungen werden im Auftrag des Bundesamts für Umwelt durchgeführt (siehe <a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2615" target="_blank">https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2615</a>).</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-01-24`
-- **Modified** `2026-02-17T07:00:17+00:00`
+- **Modified** `2026-02-17T19:55:08+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2022-12-02T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-02-16T23:00:00+00:00`
