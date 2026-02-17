@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Der Velostadtplan zeigt dir passende Routen zu deinem Ziel und liefert Ideen, wohin du mit deinem Velo besonders gut fahren kannst. Er ist die elektronische Version der faltbaren Papierkarte, die im Buchhandel, bei Basel Tourismus, Pro Velo und Veloplus erhältlich ist.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-03-03`
-- **Modified** `2026-02-16T18:28:32+00:00`
+- **Modified** `2026-02-17T06:35:31+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
