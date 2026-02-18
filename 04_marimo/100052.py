@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Der Baumkataster umfasst den durch die Stadtgärtnerei Basel (Gebiet Stadt Basel) und die Gemeinde Riehen (Gebiet Riehen) gepflegten Baumbestand.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-28`
-- **Modified** `2026-02-17T00:00:00+00:00`
+- **Modified** `2026-02-18T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
