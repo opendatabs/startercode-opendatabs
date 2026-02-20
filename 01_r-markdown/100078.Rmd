@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-02-19"
+date: "2026-02-20"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100078.
 - **Description** `<p>Der Datensatz zeigt die Flugbewegungen sowie Angaben zur Anzahl Passagiere und zur beförderten Fracht auf dem EuroAirport Basel Mulhouse Freiburg für jeden Tag ab 1. Januar 2019.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-05-14`
-- **Modified** `2026-02-19T08:45:55+00:00`
+- **Modified** `2026-02-20T05:03:13+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`

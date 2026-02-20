@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-02-19T05:25:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1976-03-28T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-02-16T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-02-17T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Pegel', 'Wasserstand', 'Wasser', 'Trinkwasser']`
 - **Publisher** `Amt für Umwelt und Energie`

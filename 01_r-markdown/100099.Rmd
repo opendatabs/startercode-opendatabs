@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-02-19"
+date: "2026-02-20"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100099.
 - **Description** `Dieser Datensatz zeigt die Geborenen im Kanton Basel-Stadt nach Geschlecht, Staatsangehörigkeit und Geburtsmonat sowie nach Alter, Staatsangehörigkeit und Zivilstand der Eltern. Die Daten werden monatlich aktualisiert, wobei die Zahlen eines Monats jeweils am 16. Tag des nächsten Monats publiziert werden. Aufgrund von Nachmeldungen kann es jederzeit zu Änderungen bei bereits veröffentlichten Werten kommen. In den Daten des laufenden Jahres und bis ca. Juli auch in jenen des zurückliegenden Jahres sind ausser den Lebendgeborenen auch die Totgeborenen berücksichtigt, weil die Angabe zur Lebensfähigkeit jeweils erst im Juli des Folgejahres verfügbar ist. In weiter zurückliegenden Jahren sind nur die Lebendgeborenen berücksichtigt. Auch die Angaben zur Geburtenfolge und zum Zivilstand der Eltern sind jeweils erst im Juli des Folgejahres verfügbar.Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik <a href="https://statistik.bs.ch/unterthema/3" target="_blank">(https://statistik.bs.ch/unterthema/3)</a> abweichen: In Letzterer werden nachträglich gemeldete Geburten während vier Monaten gesammelt, danach gelten die Zahlen als definitiv. Später eintreffende Meldungen werden im letzten noch nicht abgeschlossenen Monat gezählt. In diesem Datensatz werden sie im Monat des Geburtsdatums gezählt.Aus Gründen des Persönlichkeitsschutzes können im Datensatz mit dem Geburtsdatum <a href="https://data.bs.ch/explore/dataset/100092/" target="_blank">(https://data.bs.ch/explore/dataset/100092/)</a> weniger Attribute veröffentlicht werden als im vorliegenden Datensatz. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-01-19`
-- **Modified** `2026-02-19T02:16:26+00:00`
+- **Modified** `2026-02-20T02:02:20+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
