@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz enthält Informationen zu registrierten Hunden in der Stadt Basel (Kanton Basel-Stadt) ab dem Jahr 2008. Er umfasst eine Auswahl an Merkmalen pro Tier, darunter Geschlecht, Geburtsjahr, Fellfarbe und Rasse. Die Daten stammen vom Kantonalen Veterinäramt Basel-Stadt und beruhen auf Angaben der Hundebesitzer. Einzelne Angaben sind nicht behördlich überprüft und können unvollständig oder fehlerhaft sein.<br>Eine Sammlung aller OGD-Datensätze über Hunde finden Sie hier: <a href="https://data.bs.ch/explore/?refine.tags=hund">https://data.bs.ch/explore/?refine.tags=hund</a><br>Weitere Informationen zu Tierbeständen im Kanton Basel-Stadt findet man im Statistikportal:<a href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}'>href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}</a>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-27`
-- **Modified** `2026-02-19T15:01:21+00:00`
+- **Modified** `2026-02-20T15:01:17+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
