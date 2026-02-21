@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Zum Kanton Basel-Stadt zählen die Stadt Basel und die Gemeinden Riehen und Bettingen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-02-18T00:00:00+00:00`
+- **Modified** `2026-02-19T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2008-01-03T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2008-01-03T23:00:00+00:00`
