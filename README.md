@@ -22,7 +22,7 @@ For all data licenses please refer to each data set's link or the metadata API e
 
 🌻 Also many thanks to the Open Government Team of the City of Munich for providing the code to the generator: [https://github.com/it-at-m/startercode-generator-munich](https://github.com/it-at-m/startercode-generator-munich)
 
-<sub>Latest update: **2026-02-26 20:24:33**<sub>
+<sub>Latest update: **2026-02-27 08:29:00**<sub>
 
 ### Renku: [![launch - renku](https://renkulab.io/renku-badge.svg)](https://renkulab.io/p/dcc-bs/startercode-opendatabs)
 ### Jupyter Lab: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/opendatabs/startercode-opendatabs/main?urlpath=lab)

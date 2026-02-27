@@ -60,7 +60,7 @@ def _(mo):
 - **Issued** `2020-05-16`
 - **Modified** `2026-02-26T12:46:37+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
-- **Temporal_coverage_start_date** `2020-02-02T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2019-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-12-31T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Tram', 'Bus', 'Haltestelle', 'Einsteiger', 'Fahrgäste', 'Passagier']`
