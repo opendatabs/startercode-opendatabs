@@ -65,7 +65,7 @@ Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für di
 - **Modified** `2026-03-01T07:01:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-02-06T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-01-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-02-27T23:00:00+00:00`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Raum und Umwelt', 'Bevölkerung']`
 - **Keywords** `['Sauberkeit', 'Kehrricht', 'Abfall', 'Reinigung', 'Stadtreinigung', 'Strassennetz', 'Stadthygiene', 'Verschmutzung', 'Müll']`
 - **Publisher** `Stadtreinigung`
