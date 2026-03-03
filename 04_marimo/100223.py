@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-03-02T09:30:13+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2020-01-19T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-02-24T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-03-01T23:00:00+00:00`
 - **Themes** `['Politik']`
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie']`
 - **Publisher** `Staatskanzlei`
