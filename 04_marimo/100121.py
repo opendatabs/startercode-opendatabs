@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Das Statistische Amt erstellt kleinräumige Prognosen zu den Schülerzahlen in den öffentlichen Schulen der Stadt Basel. Die Schülerzahlen werden für die ersten 8 Schulstufen (Kindergarten und Primarschule), 25 Schulperimeter und 5 Schuljahre in die Zukunft prognostiziert. Die Perimeter dienen als Planungsgrundlage und nicht als effektive Einzugsgebiete. Die Prognosen werden im Auftrag des Erziehungsdepartements Basel-Stadt erstellt und jährlich aktualisiert. Die Prognosezahlen berücksichtigen keine Schülerinnen und Schüler, die aufgrund von künftigen Arealentwicklungen in die Schulen eintreten werden. Die Schülerinnen und Schüler mit dem Schutzstatus S werden in diesem Datensatz nicht ausgewiesen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-03-23`
-- **Modified** `2025-05-08T07:02:58+00:00`
+- **Modified** `2026-03-04T13:30:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
