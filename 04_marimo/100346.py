@@ -60,7 +60,7 @@ def _(mo):
 - **Issued** `2024-06-08`
 - **Modified** `2026-03-08T11:21:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2015-03-07T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2020-09-26T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2025-11-29T23:00:00+00:00`
 - **Themes** `['Politik']`
 - **Keywords** `['Abstimmung', 'Wahlen', 'Demokratie', 'Teilhabe']`
