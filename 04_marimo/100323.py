@@ -44,7 +44,6 @@ Weil am Rhein</span></a> (RUES, siehe
 https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues),
 jeweils gemittelt über eine Stunde. <br>
  <o:p></o:p></span></p>
-
 <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal"><span style="font-size: 10.5pt; font-family: Arial, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Erklärung zur Einheit: Die Trübung einer
 Flüssigkeit wird optisch ermittelt, jedoch mittels elektronischer Auswertung
@@ -55,7 +54,6 @@ FNU: Formazine Nephelometric Unit – Streulichtmessung (Winkel 90°) gemäß de
 Vorschriften der Norm ISO 7027 <br>
 <br>
 <o:p></o:p></span></p>
-
 <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal"><span style="font-size: 10.5pt; font-family: Arial, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Messbetrieb / Unterhalt: <a href="https://www.bs.ch/wsu/aue" target="_blank">Amt
 für Umwelt und Energie Basel-Stadt (AUE-BS)</a> <br>
@@ -80,7 +78,6 @@ Weil am Rhein</span></a> (RUES, siehe
 https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues),
 jeweils gemittelt über eine Stunde. <br>
  <o:p></o:p></span></p>
-
 <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal"><span style="font-size: 10.5pt; font-family: Arial, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Erklärung zur Einheit: Die Trübung einer
 Flüssigkeit wird optisch ermittelt, jedoch mittels elektronischer Auswertung
@@ -91,17 +88,16 @@ FNU: Formazine Nephelometric Unit – Streulichtmessung (Winkel 90°) gemäß de
 Vorschriften der Norm ISO 7027 <br>
 <br>
 <o:p></o:p></span></p>
-
 <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal"><span style="font-size: 10.5pt; font-family: Arial, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Messbetrieb / Unterhalt: <a href="https://www.bs.ch/wsu/aue" target="_blank">Amt
 für Umwelt und Energie Basel-Stadt (AUE-BS)</a> <br>
 (siehe https://www.bs.ch/wsu/aue)<o:p></o:p></span></p></div><p></p><p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-11-23`
-- **Modified** `2026-03-12T18:50:40+00:00`
+- **Modified** `2026-03-13T07:50:21+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2023-10-17T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-03-11T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-03-12T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Rhein', 'Trübung', 'Lichtdurchlässigkeit', 'Baden']`
 - **Publisher** `Amt für Umwelt und Energie`

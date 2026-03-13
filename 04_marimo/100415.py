@@ -40,7 +40,6 @@ def _(mo):
     ## Dataset
     # **Geteilte Mikromobilität: Aktuelle Verfügbarkeit**
     **Description**: <p>Der Datensatz beschreibt die aktuelle Verfügbarkeit von geteilten Mikromobilitätsangeboten.</p>
-
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100415)*.
@@ -58,14 +57,13 @@ def _(mo):
     - **Dataset_identifier** `100415`
 - **Title** `Geteilte Mikromobilität: Aktuelle Verfügbarkeit`
 - **Description** `<p>Der Datensatz beschreibt die aktuelle Verfügbarkeit von geteilten Mikromobilitätsangeboten.</p>
-
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2026-03-12T19:51:36+00:00`
+- **Modified** `2026-03-13T07:51:35+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2026-03-11T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-03-11T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2026-03-12T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-03-12T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'E-Mobility', 'Shared', 'Veloverleih', 'Verkehr', 'Mobility']`
 - **Publisher** `Amt für Mobilität`

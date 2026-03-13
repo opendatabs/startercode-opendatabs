@@ -40,7 +40,6 @@ def _(mo):
     ## Dataset
     # **Aktuelle Belegung der öffentlichen Parkhäuser Basel**
     **Description**: <p>Minütlich aktualisierte Anzahl freie Parkplätze der öffentlich zugänglichen Parkhäuser der Stadt Basel, bezogen  über das Parkleitsystem Basel (<a href="https://www.parkleitsystem-basel.ch" target="_blank">https://www.parkleitsystem-basel.ch</a>).<br></p>
-
 <p>Historische Daten sind im folgenden Datensatz vorhanden: <a href="https://data.bs.ch/explore/dataset/100014/" target="_blank">https://data.bs.ch/explore/dataset/100014/</a>. <br></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100088)*.
@@ -58,14 +57,13 @@ def _(mo):
     - **Dataset_identifier** `100088`
 - **Title** `Aktuelle Belegung der öffentlichen Parkhäuser Basel`
 - **Description** `<p>Minütlich aktualisierte Anzahl freie Parkplätze der öffentlich zugänglichen Parkhäuser der Stadt Basel, bezogen  über das Parkleitsystem Basel (<a href="https://www.parkleitsystem-basel.ch" target="_blank">https://www.parkleitsystem-basel.ch</a>).<br></p>
-
 <p>Historische Daten sind im folgenden Datensatz vorhanden: <a href="https://data.bs.ch/explore/dataset/100014/" target="_blank">https://data.bs.ch/explore/dataset/100014/</a>. <br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2026-03-12T20:00:10+00:00`
+- **Modified** `2026-03-13T07:59:04+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2026-03-11T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-03-11T23:00:00+00:00`
+- **Temporal_coverage_start_date** `2026-03-12T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-03-12T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Parkplatz', 'Parkhaus', 'Autos', 'Elektroautos', 'Frei', 'Echtzeit', 'Realtime']`
 - **Publisher** `Parkhäuser Basel-Stadt`
