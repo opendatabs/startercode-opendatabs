@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-03-13T10:01:44+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-07-02T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-03-11T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-03-12T23:00:00+00:00`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Raum und Umwelt']`
 - **Keywords** `['Graffiti', 'Street Art', 'Wandkunst', 'öffentliche Kunst', 'Kultur', 'Wandbilder']`
 - **Publisher** `Stadtreinigung`
