@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die Anzahl Ankünfte, Logiernächte, verfügbare und belegte Zimmer sowie die Zimmerauslastung in baselstädtischen Hotels nach Kategorie auf täglicher Basis.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-02-06`
-- **Modified** `2026-03-12T09:01:25+00:00`
+- **Modified** `2026-03-16T11:16:17+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

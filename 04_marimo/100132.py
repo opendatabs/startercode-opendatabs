@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz zeigt die Resultate des 1. Wahlgangs der Wahl eines Mitglieds des Gerichts für fürsorgerische Unterbringung vom 9. Mai 2021. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-05-10`
-- **Modified** `2025-04-28T07:45:46+00:00`
+- **Modified** `2026-03-16T11:15:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
