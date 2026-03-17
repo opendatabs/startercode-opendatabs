@@ -60,8 +60,8 @@ def _(mo):
 - **Issued** `2026-03-16`
 - **Modified** `2026-03-16T16:16:14+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2005-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Arbeit, Erwerb']`
 - **Keywords** `['Arbeitszeitbewilligungen', 'Feiertagsarbeit', 'Nachtarbeit', 'Bewilligungspflicht']`
 - **Publisher** `Arbeitsinspektorat`
