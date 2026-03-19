@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-03-18"
+date: "2026-03-19"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100221.
 - **Description** `<p>Der Datensatz „Swisslos-Sportfonds Basel-Stadt“ dokumentiert die Vergabe von Fördermitteln aus dem Swisslos-Sportfonds im Kanton Basel-Stadt. Die Mittel dienen der Unterstützung des Breitensports, der Förderung von Sportvereinen und -verbänden sowie der Realisierung von Projekten im Leistungssport.</p><p>Der Datensatz enthält Informationen zu den begünstigten Sportvereinen und Organisationen, den geförderten Projekten sowie den jeweiligen Förderbeträgen. Die Unterstützung reicht von Beiträgen für Vereinsaktivitäten über die Anschaffung von Sportmaterial bis hin zur Durchführung von Veranstaltungen und Investitionen in Sportanlagen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-02-10`
-- **Modified** `2026-03-16T12:21:11+00:00`
+- **Modified** `2026-03-19T02:01:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2016-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
