@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz enthält Bio-Klappen für organische Küchenabfälle im Kanton Basel-Stadt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-02-20`
-- **Modified** `2026-03-10T00:00:00+00:00`
+- **Modified** `2026-03-20T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
