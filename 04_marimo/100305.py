@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Tigermückenbekämpfung: Bekämpfungszone**
-    **Description**: Das Monitoring der Tigermücken basiert auf 3 Standpfeilern: a) Aktives Monitoring mittels Fallennetzwerk und regelmässigen Kontrollen der Fallen b) Passives Monitoring aufgrund von Meldungen aus der Bevölkerung c) Nachuntersuchungen bei Bedarf
+    **Description**: Die kantonale Strategie zur Bekämpfung der Tigermücke beruht auf den vier Pfeilern «Überwachung» (Monitoring), «Prävention», «Bekämpfung» und «Koordination». Das kantonale Laboratorium koordiniert mit betroffenen kantonalen Dienststellen und den Gemeinden die Massnahmen im öffentlichen Bereich. Dazu gehört die Überwachung und die Bekämpfung im öffentlichen Raum. Der Kanton sensibilisiert zudem die Öffentlichkeit und stellt umfangreiches Informationsmaterial und ein biologisches Bekämpfungsmittel der Bevölkerung kostenlos zur Verfügung. In der Bekämpfungszone besteht eine Pflicht Präventions-/Bekämpfungsmassnahmen durchzuführen. Im privaten Bereich sind die Privaten für die Umsetzung der Massnahmen zuständig.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100305)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100305`
 - **Title** `Tigermückenbekämpfung: Bekämpfungszone`
-- **Description** `Das Monitoring der Tigermücken basiert auf 3 Standpfeilern: a) Aktives Monitoring mittels Fallennetzwerk und regelmässigen Kontrollen der Fallen b) Passives Monitoring aufgrund von Meldungen aus der Bevölkerung c) Nachuntersuchungen bei Bedarf`
+- **Description** `Die kantonale Strategie zur Bekämpfung der Tigermücke beruht auf den vier Pfeilern «Überwachung» (Monitoring), «Prävention», «Bekämpfung» und «Koordination». Das kantonale Laboratorium koordiniert mit betroffenen kantonalen Dienststellen und den Gemeinden die Massnahmen im öffentlichen Bereich. Dazu gehört die Überwachung und die Bekämpfung im öffentlichen Raum. Der Kanton sensibilisiert zudem die Öffentlichkeit und stellt umfangreiches Informationsmaterial und ein biologisches Bekämpfungsmittel der Bevölkerung kostenlos zur Verfügung. In der Bekämpfungszone besteht eine Pflicht Präventions-/Bekämpfungsmassnahmen durchzuführen. Im privaten Bereich sind die Privaten für die Umsetzung der Massnahmen zuständig.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-08-04`
 - **Modified** `2025-11-03T00:00:00+00:00`
