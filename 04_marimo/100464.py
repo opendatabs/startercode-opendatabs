@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p class="MsoNormal">Der Datensatz enthält aktuelle Informationen zu Verkehr, Bauarbeiten und infrastrukturellen Massnahmen im Raum St. Jakob in Basel. Er umfasst Hinweise zu temporären Änderungen im öffentlichen Verkehr, Baustellen, Umleitungen sowie Ersatzangeboten. Die Angaben werden regelmässig aktualisiert, soweit sie von den zuständigen Stellen bereitgestellt werden.<o:p></o:p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-12-04`
-- **Modified** `2025-09-02T07:12:13+00:00`
+- **Modified** `2026-03-25T08:40:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
