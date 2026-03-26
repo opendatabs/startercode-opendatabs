@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Antworten der kantonalen Bevölkerunsgbefragung von Personen ab 55 Jahren, wird alle vier Jahre durchgeführt. <br><br> Dieser Datensatz enthält pro Zeile eine Antwort einer Person zu einer Frage der Befragung. Alle Daten können hier heruntergeladen werden: <a href="https://data-bs.ch/stata/befragungen/55plus/55plus.zip">https://data-bs.ch/stata/befragungen/55plus/55plus.zip</a> <br><br> Weitere Informationen zur Befragung sind im Statistikportal abgebildet:  <a href='https://statistik.bs.ch/suche?search={"filterTheme":"successor-50.4"}'>https://statistik.bs.ch/suche?search={"filterTheme":"successor-50.4"}</a>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-12-01`
-- **Modified** `2025-11-19T14:22:47+00:00`
+- **Modified** `2026-03-26T12:42:47+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

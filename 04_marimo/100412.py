@@ -58,14 +58,14 @@ def _(mo):
 - **Description** `Antworten der kantonalen Bevölkerunsgbefragung von Personen ab 55 Jahren, wird alle vier Jahre durchgeführt. <br><br> Dieser Datensatz enthält pro Zeile eine Antwort einer Person zu einer Frage der Befragung. Die Daten können in anderen Formaten als ZIP Datei hier heruntergeladen werden: <a href="https://data-bs.ch/stata/befragungen/55plus/2023.zip">https://data-bs.ch/stata/befragungen/55plus/2023.zip</a> <br>Eine Vorschau der Daten, die pro Zeile alle Antworten einer Person enthält, sind hier zu finden: <a href="https://datatools.bs.ch/Befragung_55plus_2023">https://datatools.bs.ch/Befragung_55plus_2023</a><br><br> Weitere Informationen zur Befragung sind im Statistikportal abgebildet:  <a href='https://statistik.bs.ch/suche?search={"query":"2023","filterTheme":"successor-50.4"}'>https://statistik.bs.ch/suche?search={"query":"2023","filterTheme":"successor-50.4"}</a>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-06-13`
-- **Modified** `2025-05-12T13:44:00+00:00`
+- **Modified** `2026-03-26T12:39:23+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2022-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
 - **Themes** `['Bevölkerung']`
 - **Keywords** `['Alter', 'Gemeinden', 'Wohnen', 'Demographie', 'Geschlecht', 'Lebensqualität', 'Einkommen', 'Befragungen']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `None`
+- **Reference** `https://statistik.bs.ch/hintergrund/befragungen`
 
 
     ///
