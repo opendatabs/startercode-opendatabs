@@ -60,8 +60,8 @@ def _(mo):
 - **Issued** `2026-03-24`
 - **Modified** `2026-03-24T10:04:13+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2008-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Kriminalität, Strafrecht', 'Öffentliche Ordnung und Sicherheit']`
 - **Keywords** `['Zeitreihe']`
 - **Publisher** `Statistisches Amt`

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-03-26"
+date: "2026-03-27"
 output: html_document
 ---
 
@@ -19,8 +19,8 @@ Auto generated R starter code for data set 100449.
 - **Issued** `2026-03-24`
 - **Modified** `2026-03-23T15:45:36+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2008-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Kriminalität, Strafrecht', 'Öffentliche Ordnung und Sicherheit']`
 - **Keywords** `['PKS', 'Kriminalstatistik', 'Betäubungsmittel', 'Polizei']`
 - **Publisher** `Statistisches Amt`
