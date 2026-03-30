@@ -38,7 +38,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Straftaten nach Betäubungsmittelgesetz (BetmG)**
+    # **Angezeigte Straftaten nach Betäubungsmittelgesetz (BetmG)**
     **Description**: <div>Der Datensatz enthält jährlich aggregierte Angaben zu polizeilich registrierten Anzeigen, die unter das Betäubungsmittelgesetz (BetmG) fallen und im Kanton Basel-Stadt erfasst wurden. Für ausgewählte Straftaten werden pro Jahr die Anzahl der registrierten Delikte sowie Angaben zu den beschuldigten Personen ausgewiesen. Dabei werden Merkmale der betroffenen Personen wie Geschlecht, Nationalität und Altersgruppe ausgewiesen. Die Daten sind nach Jahr, Gemeinde (Basel, Riehen, Bettingen und Gesamtkanton) sowie Straftat gegliedert und ermöglichen einen detaillierten Überblick über die strafrechtliche Entwicklung im Kanton Basel-Stadt seit 2009.</div><div>Der Datensatz enthält einzelne Straftaten sowie Zwischentotale und Gesamttotale pro Jahr und Gemeinde. </div><div>Von mehreren Tätern gemeinsam begangene Straftaten werden als ein Ereignis gezählt. Bei der Auflistung einzelner Straftatbestände werden Personen, die verschiedener Straftaten beschuldigt werden, pro Straftatbestand je einmal ausgewiesen. Im jeweiligen Gesamttotal der Gesetze und allfälligen Zwischentotalen wird eine beschuldigte Person jedoch, unabhängig davon, wie viele Straftaten ihr zur Last gelegt werden, nur einmal gezählt.</div>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100449)*.
@@ -54,7 +54,7 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100449`
-- **Title** `Straftaten nach Betäubungsmittelgesetz (BetmG)`
+- **Title** `Angezeigte Straftaten nach Betäubungsmittelgesetz (BetmG)`
 - **Description** `<div>Der Datensatz enthält jährlich aggregierte Angaben zu polizeilich registrierten Anzeigen, die unter das Betäubungsmittelgesetz (BetmG) fallen und im Kanton Basel-Stadt erfasst wurden. Für ausgewählte Straftaten werden pro Jahr die Anzahl der registrierten Delikte sowie Angaben zu den beschuldigten Personen ausgewiesen. Dabei werden Merkmale der betroffenen Personen wie Geschlecht, Nationalität und Altersgruppe ausgewiesen. Die Daten sind nach Jahr, Gemeinde (Basel, Riehen, Bettingen und Gesamtkanton) sowie Straftat gegliedert und ermöglichen einen detaillierten Überblick über die strafrechtliche Entwicklung im Kanton Basel-Stadt seit 2009.</div><div>Der Datensatz enthält einzelne Straftaten sowie Zwischentotale und Gesamttotale pro Jahr und Gemeinde. </div><div>Von mehreren Tätern gemeinsam begangene Straftaten werden als ein Ereignis gezählt. Bei der Auflistung einzelner Straftatbestände werden Personen, die verschiedener Straftaten beschuldigt werden, pro Straftatbestand je einmal ausgewiesen. Im jeweiligen Gesamttotal der Gesetze und allfälligen Zwischentotalen wird eine beschuldigte Person jedoch, unabhängig davon, wie viele Straftaten ihr zur Last gelegt werden, nur einmal gezählt.</div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2026-03-24`
