@@ -40,13 +40,10 @@ def _(mo):
     ## Dataset
     # **Geteilte Mikromobilität nach Bezirk, Wochentagesabschnitt und Monat**
     **Description**: <p>Der Datensatz zeigt die Verteilung von Fahrzeugen der Mikromobilitätsanbieter in Basel-Stadt, gegliedert nach Bezirk, Tagesabschnitten von drei Stunden jedes Wochentags und Monats. </p>
-
 <p>Die Daten berücksichtigen Merkmale wie Fahrzeugtyp, Bauweise, Antriebsart und Reichweite des Fahrzeugs bei vollem Akku.</p>
-
 <p>Die Berechnung des Datensatzes basiert auf den Daten zur aktuellen Verfügbarkeit 
 <a href="https://data.bs.ch/explore/dataset/100415/" target="_blank">https://data.bs.ch/explore/dataset/100415/</a>, 
 die alle 10 Minuten aktualisiert werden. </p><p>Für die Bezirke wird folgender Datensatz verwendet:  <a href="https://data.bs.ch/explore/dataset/100039/" target="_blank">https://data.bs.ch/explore/dataset/100039/</a></p>
-
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Hinweis:</span></p><p style="font-family: sans-serif;">Die Daten enthalten eine Lücke zwischen dem 2. und 22. April 2025, da es einen Unterbruch im Extrahieren der Daten gab.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100428)*.
@@ -64,20 +61,17 @@ def _(mo):
     - **Dataset_identifier** `100428`
 - **Title** `Geteilte Mikromobilität nach Bezirk, Wochentagesabschnitt und Monat`
 - **Description** `<p>Der Datensatz zeigt die Verteilung von Fahrzeugen der Mikromobilitätsanbieter in Basel-Stadt, gegliedert nach Bezirk, Tagesabschnitten von drei Stunden jedes Wochentags und Monats. </p>
-
 <p>Die Daten berücksichtigen Merkmale wie Fahrzeugtyp, Bauweise, Antriebsart und Reichweite des Fahrzeugs bei vollem Akku.</p>
-
 <p>Die Berechnung des Datensatzes basiert auf den Daten zur aktuellen Verfügbarkeit 
 <a href="https://data.bs.ch/explore/dataset/100415/" target="_blank">https://data.bs.ch/explore/dataset/100415/</a>, 
 die alle 10 Minuten aktualisiert werden. </p><p>Für die Bezirke wird folgender Datensatz verwendet:  <a href="https://data.bs.ch/explore/dataset/100039/" target="_blank">https://data.bs.ch/explore/dataset/100039/</a></p>
-
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Hinweis:</span></p><p style="font-family: sans-serif;">Die Daten enthalten eine Lücke zwischen dem 2. und 22. April 2025, da es einen Unterbruch im Extrahieren der Daten gab.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
 - **Modified** `2026-04-01T04:19:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2025-01-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-02-27T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-03-30T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'Shared', 'E-Mobility', 'Mobility', 'Veloverleih', 'Verkehr']`
 - **Publisher** `Statistisches Amt`
