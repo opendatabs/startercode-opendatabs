@@ -62,7 +62,7 @@ Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für di
 </p><p></p><p></p><p></p><p class="">Der Datensatz wird monatlich mit den Daten des Vormonats aktualisiert.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-07-15`
-- **Modified** `2026-03-01T07:01:51+00:00`
+- **Modified** `2026-04-01T07:02:28+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-02-06T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-02-27T23:00:00+00:00`
