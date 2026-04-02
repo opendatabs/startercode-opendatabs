@@ -93,7 +93,7 @@ Manipulationen an Geräten können zu fehlerhaften Messungen führen.<o:p></o:p>
 - **Modified** `2026-04-01T09:17:36+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-01-14T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-08-10T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-03-11T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Geschwindigkeit', 'Verkehr', 'Auto', 'PW', 'PKW', 'LW', 'LKW', 'Messwert', 'Einzelmessung', 'Messung']`
 - **Publisher** `Kantonspolizei`
