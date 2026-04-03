@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-04-02T06:38:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1939-07-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-02-27T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-03-30T22:00:00+00:00`
 - **Themes** `['Preise']`
 - **Keywords** `['Preise', 'Teuerung', 'Index', 'Warenkorb', 'Konsum']`
 - **Publisher** `Statistisches Amt`
