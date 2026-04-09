@@ -65,7 +65,7 @@ def _(mo):
 - **Themes** `['Preise']`
 - **Keywords** `['Preise', 'Teuerung', 'Index', 'Warenkorb', 'Konsum']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `None`
+- **Reference** `https://statistik.bs.ch/unterthema/9#Preise`
 
 
     ///
