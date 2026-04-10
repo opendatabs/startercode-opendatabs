@@ -62,7 +62,7 @@ def _(mo):
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Bevölkerung', 'Gesellschaft', 'Kultur']`
+- **Themes** `['Bevölkerung', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Partizipation', 'Quartierentwicklung', 'Projekte']`
 - **Publisher** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
