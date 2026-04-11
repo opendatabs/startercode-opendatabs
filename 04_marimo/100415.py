@@ -60,7 +60,7 @@ def _(mo):
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2026-04-11T07:51:30+00:00`
+- **Modified** `2026-04-11T19:51:31+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2026-04-10T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-04-10T22:00:00+00:00`
