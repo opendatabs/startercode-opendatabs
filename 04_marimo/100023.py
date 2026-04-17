@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Der Plan zeigt Örtlichkeiten, an welchen eine Leinenpflicht oder ein Hundeverbot gilt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-01-01T00:00:00+00:00`
+- **Modified** `2026-04-01T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
