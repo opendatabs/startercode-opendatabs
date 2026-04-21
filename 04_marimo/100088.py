@@ -60,10 +60,10 @@ def _(mo):
 <p>Historische Daten sind im folgenden Datensatz vorhanden: <a href="https://data.bs.ch/explore/dataset/100014/" target="_blank">https://data.bs.ch/explore/dataset/100014/</a>. <br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2026-04-20T20:00:12+00:00`
+- **Modified** `2026-04-21T09:00:17+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2026-04-19T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-04-19T22:00:00+00:00`
+- **Temporal_coverage_start_date** `2026-04-20T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-04-20T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Parkplatz', 'Parkhaus', 'Autos', 'Elektroautos', 'Frei', 'Echtzeit', 'Realtime']`
 - **Publisher** `Parkhäuser Basel-Stadt`
