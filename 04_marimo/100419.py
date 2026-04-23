@@ -68,7 +68,7 @@ und Verkehrsmassnahmen enthalten. Der Datensatz ist eine wichtige
 Datengrundlage für die Planungsstellen in den Kantonen BS und BL.<o:p></o:p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-12-04`
-- **Modified** `2026-04-21T11:05:27+00:00`
+- **Modified** `2026-04-23T06:21:25+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
