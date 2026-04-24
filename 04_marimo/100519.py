@@ -60,8 +60,8 @@ def _(mo):
 - **Issued** `2026-04-23`
 - **Modified** `2026-04-07T15:01:17+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `2019-12-31T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-03-30T22:00:00+00:00`
 - **Themes** `['Bau- und Wohnungswesen', 'Raum und Umwelt']`
 - **Keywords** `['Gebäude', 'Heizung']`
 - **Publisher** `Statistisches Amt`
