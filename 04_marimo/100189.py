@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Strassennamen**
-    **Description**: <p>Der Datensatz beinhaltet die Namen aller Strassen im Kanton Basel-Stadt sowie kurze Erläuterungen zur Bedeutung der Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer.</p><p>Der Datensatz darf für Open Street Map verwendet werden.<br></p>
+    **Description**: Der Datensatz beinhaltet die Namen aller Strassen im Kanton Basel-Stadt sowie kurze Erläuterungen zur Bedeutung der Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100189)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100189`
 - **Title** `Strassennamen`
-- **Description** `<p>Der Datensatz beinhaltet die Namen aller Strassen im Kanton Basel-Stadt sowie kurze Erläuterungen zur Bedeutung der Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer.</p><p>Der Datensatz darf für Open Street Map verwendet werden.<br></p>`
+- **Description** `Der Datensatz beinhaltet die Namen aller Strassen im Kanton Basel-Stadt sowie kurze Erläuterungen zur Bedeutung der Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-04-11`
 - **Modified** `2025-08-09T00:00:00+00:00`
