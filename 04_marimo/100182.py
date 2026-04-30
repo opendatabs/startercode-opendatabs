@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Bohrkataster**
-    **Description**: Diese Karte zeigt alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen. Sie gibt Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.
+    **Description**: Diese Daten zeigen alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen und ausserhalb der Grundwasserschutzzonen S2 und S1 liegen. Sie geben Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100182)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100182`
 - **Title** `Bohrkataster`
-- **Description** `Diese Karte zeigt alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen. Sie gibt Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.`
+- **Description** `Diese Daten zeigen alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen und ausserhalb der Grundwasserschutzzonen S2 und S1 liegen. Sie geben Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-04-12`
 - **Modified** `2026-01-20T00:00:00+00:00`
