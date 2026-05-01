@@ -58,10 +58,10 @@ def _(mo):
 - **Description** `Metadaten zu den im vorliegenden Datenportal publizierten OGD Datensätzen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-04-30T19:03:10+00:00`
+- **Modified** `2026-05-01T08:03:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
-- **Temporal_coverage_start_date** `2005-12-30T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2099-12-29T23:00:00+00:00`
+- **Temporal_coverage_start_date** `1097-12-30T23:25:52+00:00`
+- **Temporal_coverage_end_date** `5025-04-28T22:00:00+00:00`
 - **Themes** `['Verwaltung']`
 - **Keywords** `['Datensatz', 'OGD', 'Metadaten']`
 - **Publisher** `Open Data Basel-Stadt`
