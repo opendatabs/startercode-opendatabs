@@ -60,7 +60,7 @@ def _(mo):
 - **Issued** `2019-11-06`
 - **Modified** `2026-05-02T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `1950-08-08T23:00:00+00:00`
+- **Temporal_coverage_start_date** `1927-03-23T23:00:00+00:00`
 - **Temporal_coverage_end_date** `5025-04-29T22:00:00+00:00`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Bau- und Wohnungswesen', 'Geographie']`
 - **Keywords** `['Baustelle', 'Plakat', 'Anlass', 'Fest', 'Party', 'Umleitung']`
