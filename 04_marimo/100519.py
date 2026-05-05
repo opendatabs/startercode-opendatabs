@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die monatliche Entwicklung der Anzahl Gebäude im Kanton Basel-Stadt, die als primäres Heizsystem (Variante: Hauptheizsystem) eine Wärmepumpe nutzen. Die Daten basieren auf dem kantonalen Gebäude- und Wohnungsregister (GWR) und umfassen ausschliesslich fertiggestellte Gebäude. Gezählt wird nicht die Anzahl der installierten Wärmepumpenanlagen, sondern die Anzahl der damit beheizten Gebäude. Genauso wie eine Wärmepumpe mehrere Gebäude beheizen kann, kann ein Gebäude von mehreren Anlagen versorgt werden. Entsprechend weichen die Zahlen von jenen des Amtes für Umwelt und Energie Basel-Stadt (AUE) ab. Diese sind unter <a href="https://www.bs.ch/wsu/aue/umweltdaten#heizungen">https://www.bs.ch/wsu/aue/umweltdaten#heizungen</a> abrufbar und zeigen die Anzahl Anlagen. Sprünge oder unerwartete Veränderungen in der Zeitreihe können zwei Ursachen haben: Einerseits werden laufend Nacherfassungen vorgenommen, andererseits können technische Anpassungen bei der Datenverearbeitung zu Verschiebungen führen. Datensprünge sind daher nicht zwingend als reale Veränderungen wie beispielweise den Heizungsersatz zurückfzuführen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2026-04-23`
-- **Modified** `2026-04-07T15:01:17+00:00`
+- **Modified** `2026-05-05T05:15:38+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-03-30T22:00:00+00:00`
