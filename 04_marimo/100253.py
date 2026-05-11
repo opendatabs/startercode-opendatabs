@@ -68,7 +68,7 @@ Weitere Daten zu "Verkehrsberuhigte Zonen": <a href="https://data.bs.ch/explore/
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Mobilität und Verkehr']`
 - **Keywords** `['Geschwindigkeitsbeschränkun', 'Fussgänger', 'Fussgängerzonen']`
-- **Publisher** `Amt für Mobilität`
+- **Publisher** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
 
 

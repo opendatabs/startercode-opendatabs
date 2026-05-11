@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die Anzahl Ankünfte und Logiernächte in baselstädtischen Hotels nach Herkunftsland auf monatlicher Basis.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-02-03`
-- **Modified** `2026-04-10T07:00:41+00:00`
+- **Modified** `2026-05-08T13:52:10+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2014-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-03-30T22:00:00+00:00`

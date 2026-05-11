@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Geographie']`
 - **Keywords** `['Recycling', 'Wiederverwertung', 'Abfall', 'Müll', 'Entsorgen']`
-- **Publisher** `Tiefbauamt`
+- **Publisher** `Amt für Mobilität`
 - **Reference** `None`
 
 
