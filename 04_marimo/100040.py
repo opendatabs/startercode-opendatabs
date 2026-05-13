@@ -75,7 +75,7 @@ Die Nummerierung der Blöcke setzt sich zusammen aus der zweistelligen Wohnviert
 - **Themes** `['Geographie', 'Statistische Grundlagen']`
 - **Keywords** `['Statistik', 'Einteilung', 'Wohnblock']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `None`
+- **Reference** `www.geo.bs.ch/statistischeraumeinheiten; https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/be8ce164-33ef-4794-822c-774d17c87239`
 
 
     ///

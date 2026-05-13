@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Strassennamen**
-    **Description**: Der Datensatz beinhaltet die Namen aller Strassen im Kanton Basel-Stadt sowie kurze Erläuterungen zur Bedeutung der Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer.
+    **Description**: <p>Der Datensatz umfasst Strassen und Plätze, welche durch eine Achse lokalisiert werden.<br>Die Achsen enthalten eine kurze Erläuterung zur Bedeutung der Strassennamen. Die Kurzerklärungen gibt es nur für Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100189)*.
     """
@@ -55,16 +55,16 @@ def _(mo):
 
     - **Dataset_identifier** `100189`
 - **Title** `Strassennamen`
-- **Description** `Der Datensatz beinhaltet die Namen aller Strassen im Kanton Basel-Stadt sowie kurze Erläuterungen zur Bedeutung der Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer.`
+- **Description** `<p>Der Datensatz umfasst Strassen und Plätze, welche durch eine Achse lokalisiert werden.<br>Die Achsen enthalten eine kurze Erläuterung zur Bedeutung der Strassennamen. Die Kurzerklärungen gibt es nur für Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-04-11`
-- **Modified** `2025-08-09T00:00:00+00:00`
+- **Modified** `2022-04-11T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
-- **Keywords** `['Nomenklatur', 'Name', 'Strasse']`
-- **Publisher** `Nomenklaturkommission`
+- **Keywords** `['Nomenklatur', 'Strasse', 'Strassennetz']`
+- **Publisher** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
 
 

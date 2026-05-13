@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Politische Wahlkreise**
-    **Description**: Enthält die politischen Wahlkreise des Kantons Basel-Stadt.
+    **Description**: <p>Weist die politischen Wahlkreise des Kantons Basel-Stadt aus.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100025)*.
     """
@@ -55,15 +55,15 @@ def _(mo):
 
     - **Dataset_identifier** `100025`
 - **Title** `Politische Wahlkreise`
-- **Description** `Enthält die politischen Wahlkreise des Kantons Basel-Stadt.`
+- **Description** `<p>Weist die politischen Wahlkreise des Kantons Basel-Stadt aus.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2019-11-06`
+- **Issued** `2013-02-07`
 - **Modified** `2013-02-07T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Geographie']`
-- **Keywords** `['Abstimmung', 'Wahl', 'Stimmberechtigt']`
+- **Keywords** `['Abstimmung', 'Kreise', 'Politik', 'Stimmberechtigt', 'Wahl']`
 - **Publisher** `Staatskanzlei`
 - **Reference** `None`
 

@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Abfuhrzonen (Gemeinde Basel)**
-    **Description**: Abfuhrzonen der Stadtreinigung (Tiefbauamt) für die Stadt Basel. Beinhaltet die Flächen der Abfuhrzonen (A bis H) der Stadt Basel.
+    **Description**: <p>Abfuhrzonen der Stadtreinigung (Tiefbauamt) für die Stadt Basel. Beinhaltet die Flächen der Abfuhrzonen (A bis H und GUF) der Stadt Basel.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100095)*.
     """
@@ -55,10 +55,10 @@ def _(mo):
 
     - **Dataset_identifier** `100095`
 - **Title** `Abfuhrzonen (Gemeinde Basel)`
-- **Description** `Abfuhrzonen der Stadtreinigung (Tiefbauamt) für die Stadt Basel. Beinhaltet die Flächen der Abfuhrzonen (A bis H) der Stadt Basel.`
+- **Description** `<p>Abfuhrzonen der Stadtreinigung (Tiefbauamt) für die Stadt Basel. Beinhaltet die Flächen der Abfuhrzonen (A bis H und GUF) der Stadt Basel.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2020-08-24`
-- **Modified** `2026-05-06T08:01:09+00:00`
+- **Issued** `2013-11-05`
+- **Modified** `2013-11-05T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

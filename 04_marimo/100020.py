@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Elternberatung**
-    **Description**: Elternberatung ist ein niederschwelliges Beratungsangebot für Eltern mit kleinen Kindern ab Geburt bis zum Eintritt in den Kindergarten. Zentrale Aufgabe ist die Prävention und Gesundheitsförderung im Frühbereich.
+    **Description**: <p>Elternberatung ist ein niederschwelliges Beratungsangebot für Eltern mit kleinen Kindern ab Geburt bis zum Eintritt in den Kindergarten. Zentrale Aufgabe ist die Prävention und Gesundheitsförderung im Frühbereich. Dieser Datensatz zeigt die Standorte der Elternberatung im Kanton Basel-Stadt.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100020)*.
     """
@@ -55,15 +55,15 @@ def _(mo):
 
     - **Dataset_identifier** `100020`
 - **Title** `Elternberatung`
-- **Description** `Elternberatung ist ein niederschwelliges Beratungsangebot für Eltern mit kleinen Kindern ab Geburt bis zum Eintritt in den Kindergarten. Zentrale Aufgabe ist die Prävention und Gesundheitsförderung im Frühbereich.`
+- **Description** `<p>Elternberatung ist ein niederschwelliges Beratungsangebot für Eltern mit kleinen Kindern ab Geburt bis zum Eintritt in den Kindergarten. Zentrale Aufgabe ist die Prävention und Gesundheitsförderung im Frühbereich. Dieser Datensatz zeigt die Standorte der Elternberatung im Kanton Basel-Stadt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2025-03-17T00:00:00+00:00`
+- **Issued** `2017-12-19`
+- **Modified** `2017-12-19T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Gesundheit', 'Bevölkerung', 'Geographie']`
-- **Keywords** `['Kind', 'Baby', 'Mutter', 'Vater', 'Krankheit', 'Gesundheit']`
+- **Keywords** `['Angebot', 'Bildung', 'Eltern', 'Förderung', 'Frühbereich', 'Kinder', 'Vorbereitung', 'Baby', 'Mutter', 'Vater', 'Krankheit', 'Gesundheit']`
 - **Publisher** `Jugend, Familie und Sport`
 - **Reference** `None`
 

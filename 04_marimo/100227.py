@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-05-12T10:45:31+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1920-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-10-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-04-29T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Zeitreihe', 'Klima', 'Luft', 'Eistage', 'Frosttage', 'Sommertage', 'Hitzetage', 'Tage ohne Sonne', 'Schneefall', 'Schneedecke', 'Reif', 'Nebel', 'Gewitter', 'Hagel', 'Wind', 'Heizgradtage']`
 - **Publisher** `Statistisches Amt`

@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Sport- und Bewegungsanlagen**
-    **Description**: Der Datensatz bildet vom Kanton Basel-Stadt betriebenen Sport- und Bewegungsanlagen ab sowie auch alle kantonalen Sportanlagen ausserhalb der Kantons- und Landesgrenzen. Im Datensatz sind zusätzlich kantonale Räumlichkeiten aufgeführt, welche für den Sportbetrieb genutzt und gemietet werden.
+    **Description**: <p>Der Datensatz bildet alle wichtigen Sport- und Bewegungsanlagen im Perimeter Kanton Basel-Stadt sowie alle kantonalen Sportanlagen ausserhalb der Kantons- und Landesgrenzen ab.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100151)*.
     """
@@ -55,15 +55,15 @@ def _(mo):
 
     - **Dataset_identifier** `100151`
 - **Title** `Sport- und Bewegungsanlagen`
-- **Description** `Der Datensatz bildet vom Kanton Basel-Stadt betriebenen Sport- und Bewegungsanlagen ab sowie auch alle kantonalen Sportanlagen ausserhalb der Kantons- und Landesgrenzen. Im Datensatz sind zusätzlich kantonale Räumlichkeiten aufgeführt, welche für den Sportbetrieb genutzt und gemietet werden.`
+- **Description** `<p>Der Datensatz bildet alle wichtigen Sport- und Bewegungsanlagen im Perimeter Kanton Basel-Stadt sowie alle kantonalen Sportanlagen ausserhalb der Kantons- und Landesgrenzen ab.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2021-07-23`
-- **Modified** `2024-05-28T00:00:00+00:00`
+- **Issued** `2019-03-05`
+- **Modified** `2026-04-29T14:23:33+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Geographie', 'Tourismus']`
-- **Keywords** `['Sport', 'Sportanlagen', 'OpenSportData', 'BoxUp']`
+- **Keywords** `['Anlage', 'Bäder', 'Badi', 'Gartenbad', 'Hallenbad', 'Platz', 'Schwimmbad', 'Spielwiese', 'Training', 'Zentrum', 'Sport', 'Sportanlagen', 'OpenSportData']`
 - **Publisher** `Jugend, Familie und Sport`
 - **Reference** `None`
 

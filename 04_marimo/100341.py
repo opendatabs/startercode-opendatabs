@@ -39,8 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Tagesheime und Kitas**
-    **Description**: «Kitas», «Kindertagesstätten» oder «Tagesheime» sind Einrichtungen, in denen Kinder regelmässig tagsüber durch qualifizierte Fachpersonen und in geeigneten Räumlichkeiten betreut werden.
-«Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.
+    **Description**: <p>«Kitas», «Kindertagesstätten» oder «Tagesheime» sind Einrichtungen, in denen Kinder regelmässig tagsüber durch qualifizierte Fachpersonen und in geeigneten Räumlichkeiten betreut werden. «Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100341)*.
     """
@@ -56,16 +55,15 @@ def _(mo):
 
     - **Dataset_identifier** `100341`
 - **Title** `Tagesheime und Kitas`
-- **Description** `«Kitas», «Kindertagesstätten» oder «Tagesheime» sind Einrichtungen, in denen Kinder regelmässig tagsüber durch qualifizierte Fachpersonen und in geeigneten Räumlichkeiten betreut werden.
-«Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.`
+- **Description** `<p>«Kitas», «Kindertagesstätten» oder «Tagesheime» sind Einrichtungen, in denen Kinder regelmässig tagsüber durch qualifizierte Fachpersonen und in geeigneten Räumlichkeiten betreut werden. «Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2025-02-18`
-- **Modified** `2026-05-06T08:01:01+00:00`
+- **Issued** `2022-07-26`
+- **Modified** `2022-07-26T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Bevölkerung', 'Geographie', 'Bildung, Wissenschaft']`
-- **Keywords** `['Kinder', 'Betreuung', 'Familie', 'Tagesstruktur', 'Horte', 'Mittagstische', 'Tagesfamilie']`
+- **Themes** `['Bevölkerung']`
+- **Keywords** `['Betreuung', 'Kinder', 'Kindertagesstätten', 'Tagesfamilie', 'Familie', 'Tagesstruktur', 'Horte', 'Mittagstische']`
 - **Publisher** `Jugend, Familie und Sport`
 - **Reference** `None`
 
