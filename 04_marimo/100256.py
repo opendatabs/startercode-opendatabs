@@ -38,8 +38,8 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Nutzungsplan - Zonenplan Riehen:  Überlagernde Festlegungen**
-    **Description**: Der Zonenplan legt Ort, Art und Mass der Bodennutzung für ein bestimmtes Gebiet parzellenscharf und grundeigentümerverbindlich fest. Zonenplan Riehen gemäss Beschluss des Riehener Einwohnerrats vom 27.11.2014 + 24.09.2015 und Genehmigung des Regierungsrates Basel-Stadt vom 7. Dezember 2016. Der Datensatz enthält den Zonenplan sowie die Perimeter der Bebauungspläne, der Speziellen Nutzungsvorschriften und des Nutzungsplans Stettenfeld.<br>Weitere Daten zum Thema ?Nutzungsplanung?: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a>
+    # **Nutzungsplan - Zonenplan Riehen: Überlagernde Festlegungen**
+    **Description**: <p>Der Datensatz beinhaltet die rechtskräftigen überlagernden Festlegungen gemäss dem Zonenplan. Diese Festlegungen können die Grundnutzung ergänzen, aber auch überstimmen (z.B. Bebauungspläne, Schutzzwecke von Natur- und Landschaftsschutzzonen)</p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100256)*.
     """
@@ -54,17 +54,17 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100256`
-- **Title** `Nutzungsplan - Zonenplan Riehen:  Überlagernde Festlegungen`
-- **Description** `Der Zonenplan legt Ort, Art und Mass der Bodennutzung für ein bestimmtes Gebiet parzellenscharf und grundeigentümerverbindlich fest. Zonenplan Riehen gemäss Beschluss des Riehener Einwohnerrats vom 27.11.2014 + 24.09.2015 und Genehmigung des Regierungsrates Basel-Stadt vom 7. Dezember 2016. Der Datensatz enthält den Zonenplan sowie die Perimeter der Bebauungspläne, der Speziellen Nutzungsvorschriften und des Nutzungsplans Stettenfeld.<br>Weitere Daten zum Thema ?Nutzungsplanung?: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a>`
+- **Title** `Nutzungsplan - Zonenplan Riehen: Überlagernde Festlegungen`
+- **Description** `<p>Der Datensatz beinhaltet die rechtskräftigen überlagernden Festlegungen gemäss dem Zonenplan. Diese Festlegungen können die Grundnutzung ergänzen, aber auch überstimmen (z.B. Bebauungspläne, Schutzzwecke von Natur- und Landschaftsschutzzonen)</p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2023-01-06`
-- **Modified** `2024-07-19T00:00:00+00:00`
+- **Issued** `2018-04-30`
+- **Modified** `2026-05-01T01:12:20+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `1930-10-22T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2024-05-31T22:00:00+00:00`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
-- **Keywords** `['Flächennutzungsplan', 'Naturschutzzonen', 'Bebauungsplan', 'Nutzungsplan']`
-- **Publisher** `Gemeinde Riehen`
+- **Keywords** `['kantonaler Nutzungsplan', 'Landnutzung', 'Nutzungsplan', 'Nutzungsplanung', 'Flächennutzungsplan', 'Naturschutzzonen', 'Bebauungsplan']`
+- **Publisher** `Einwohnergemeinde Riehen`
 - **Reference** `None`
 
 

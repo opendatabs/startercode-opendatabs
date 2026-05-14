@@ -4,7 +4,7 @@ date: "2026-05-14"
 output: html_document
 ---
 
-## Dataset: Gewässerschutzkarte: Grundwasserschutzzonen: GWSZonen
+## Dataset: Gewässerschutzkarte: Grundwasserschutzzonen
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100292)
 
@@ -13,14 +13,14 @@ Auto generated R starter code for data set 100292.
 ## Metadata
 
 - **Dataset_identifier** `100292`
-- **Title** `Gewässerschutzkarte: Grundwasserschutzzonen: GWSZonen`
-- **Description** `Die Grundwasserschutzzonen S1-S3 sind das wichtigste Instrument, Fassungs-, Anreicherungsanlagen und das Grundwasser unmittelbar vor seiner Nutzung als Trinkwasser vor Beeinträchtigungen zu schützen.`
+- **Title** `Gewässerschutzkarte: Grundwasserschutzzonen`
+- **Description** `<p>Die Grundwasserschutzzonen sind das wichtigste Instrument, Fassungs-, Anreicherungsanlagen und das Grundwasser unmittelbar vor seiner Nutzung als Trinkwasser vor Beeinträchtigungen zu schützen. Schutzzonen werden eindeutig definiert und überlagern sich innerhalb der Erfassungstoleranzen nicht.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2023-04-26`
-- **Modified** `2025-11-10T00:00:00+00:00`
+- **Issued** `2018-04-27`
+- **Modified** `2018-04-27T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `1986-06-30T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2025-10-31T23:00:00+00:00`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
 - **Keywords** `['grundwasserschutz', 'gewasserschutz', 'grundwasser', 'trinkwasser', 'gewasserschutzrecht']`
 - **Publisher** `Amt für Umwelt und Energie`

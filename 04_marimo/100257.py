@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Nutzungsplan - Zonenplan Bettingen:  Überlagernde Festlegungen**
-    **Description**: Zonenplan der Gemeinde Bettingen gemäss Beschluss der Einwohnergemeindeversammlung vom 2. Dezember 2008 und der Genehmigung des Bau- und Verkehrsdepartements vom 1.7.2009. Der Datensatz enthält den Zonenplan und die Bebauungspläne ist ein Teil des Geodatenmodelles des Kantons Basel-Stadt zum Thema ?Nutzungsplanung?.<br>Weitere Daten zum Thema ?Nutzungsplanung?: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a>
+    **Description**: <p>Der Datensatz beinhaltet die rechtskräftigen überlagernden Festlegungen gemäss dem Zonenplan. Diese Festlegungen können die Grundnutzung ergänzen, aber auch überstimmen (z.B. Bebauungspläne, Schutzzwecke von Natur- und Landschaftsschutzzonen).</p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a></p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a> </p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100257)*.
     """
@@ -55,16 +55,16 @@ def _(mo):
 
     - **Dataset_identifier** `100257`
 - **Title** `Nutzungsplan - Zonenplan Bettingen:  Überlagernde Festlegungen`
-- **Description** `Zonenplan der Gemeinde Bettingen gemäss Beschluss der Einwohnergemeindeversammlung vom 2. Dezember 2008 und der Genehmigung des Bau- und Verkehrsdepartements vom 1.7.2009. Der Datensatz enthält den Zonenplan und die Bebauungspläne ist ein Teil des Geodatenmodelles des Kantons Basel-Stadt zum Thema ?Nutzungsplanung?.<br>Weitere Daten zum Thema ?Nutzungsplanung?: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a>`
+- **Description** `<p>Der Datensatz beinhaltet die rechtskräftigen überlagernden Festlegungen gemäss dem Zonenplan. Diese Festlegungen können die Grundnutzung ergänzen, aber auch überstimmen (z.B. Bebauungspläne, Schutzzwecke von Natur- und Landschaftsschutzzonen).</p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a></p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2023-01-06`
-- **Modified** `2024-07-01T00:00:00+00:00`
+- **Issued** `2025-09-09`
+- **Modified** `2026-05-01T01:12:01+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2008-12-01T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2009-11-30T23:00:00+00:00`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
-- **Keywords** `['Flächennutzungsplan', 'Naturschutzzonen', 'Bebauungsplan', 'Nutzungsplan']`
-- **Publisher** `Gemeinde Bettingen`
+- **Keywords** `['kantonaler Nutzungsplan', 'Landnutzung', 'Nutzungsplan', 'Nutzungsplanung', 'Flächennutzungsplan', 'Naturschutzzonen', 'Bebauungsplan']`
+- **Publisher** `Einwohnergemeinde Bettingen`
 - **Reference** `None`
 
 

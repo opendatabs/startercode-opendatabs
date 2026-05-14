@@ -39,13 +39,8 @@ def _(mo):
         r"""
     ## Dataset
     # **Statistische Raumeinheiten: Wohnviertel**
-    **Description**: Zum Kanton Basel-Stadt zählen die Stadt Basel und die Gemeinden Riehen und Bettingen. Die Stadt Basel ist in 19 statistische Wohnviertel gegliedert. Diese statistische Raumeinteilungen existiert seit über 100 Jahren unverändert und erlaubt somit kleinräumige Längsschnittanalysen des Kantons Basel-Stadt.
-
-Statistische Nummerierung:
-Im Gegensatz zum amtlichen Gemeindeverzeichnis der Schweiz wird für räumliche Auswertungen auf Gemeinde-Ebene auf die Nummerierung der Wohnviertel zurückgegriffen:
-- Die Stadt Basel (BFS-Code 2701) hat keine eigene Identifikationsnummer. Auswertungen beruhen auf einem Zusammenzug der 19 Wohnviertel, die von 01 bis 19 nummeriert sind.
-- Die Gemeinde Bettingen (BFS-Code 2702) hat die Wohnviertel-Nr. 20.
-- Die Gemeinde Riehen (BFS-Code 2703) hat die Wohnviertel-Nr. 30.
+    **Description**: <p>Zum Kanton Basel-Stadt zählen die Stadt Basel und die Gemeinden Riehen und Bettingen. Die Stadt Basel ist in 19 statistische Wohnviertel gegliedert. Diese statistische Raumeinteilungen existiert seit über 100 Jahren unverändert und erlaubt somit kleinräumige Längsschnittanalysen des Kantons Basel-Stadt.</p>
+<p>Statistische Nummerierung:<br>Im Gegensatz zum amtlichen Gemeindeverzeichnis der Schweiz wird für räumliche Auswertungen auf Gemeinde-Ebene auf die Nummerierung der Wohnviertel zurückgegriffen:<br>- Die Stadt Basel (BFS-Code 2701) hat keine eigene Identifikationsnummer. Auswertungen beruhen auf einem Zusammenzug der 19 Wohnviertel, die von 01 bis 19 nummeriert sind.<br>- Die Gemeinde Bettingen (BFS-Code 2702) hat die Wohnviertel-Nr. 20.<br>- Die Gemeinde Riehen (BFS-Code 2703) hat die Wohnviertel-Nr. 30.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100042)*.
     """
@@ -61,21 +56,16 @@ def _(mo):
 
     - **Dataset_identifier** `100042`
 - **Title** `Statistische Raumeinheiten: Wohnviertel`
-- **Description** `Zum Kanton Basel-Stadt zählen die Stadt Basel und die Gemeinden Riehen und Bettingen. Die Stadt Basel ist in 19 statistische Wohnviertel gegliedert. Diese statistische Raumeinteilungen existiert seit über 100 Jahren unverändert und erlaubt somit kleinräumige Längsschnittanalysen des Kantons Basel-Stadt.
-
-Statistische Nummerierung:
-Im Gegensatz zum amtlichen Gemeindeverzeichnis der Schweiz wird für räumliche Auswertungen auf Gemeinde-Ebene auf die Nummerierung der Wohnviertel zurückgegriffen:
-- Die Stadt Basel (BFS-Code 2701) hat keine eigene Identifikationsnummer. Auswertungen beruhen auf einem Zusammenzug der 19 Wohnviertel, die von 01 bis 19 nummeriert sind.
-- Die Gemeinde Bettingen (BFS-Code 2702) hat die Wohnviertel-Nr. 20.
-- Die Gemeinde Riehen (BFS-Code 2703) hat die Wohnviertel-Nr. 30.`
+- **Description** `<p>Zum Kanton Basel-Stadt zählen die Stadt Basel und die Gemeinden Riehen und Bettingen. Die Stadt Basel ist in 19 statistische Wohnviertel gegliedert. Diese statistische Raumeinteilungen existiert seit über 100 Jahren unverändert und erlaubt somit kleinräumige Längsschnittanalysen des Kantons Basel-Stadt.</p>
+<p>Statistische Nummerierung:<br>Im Gegensatz zum amtlichen Gemeindeverzeichnis der Schweiz wird für räumliche Auswertungen auf Gemeinde-Ebene auf die Nummerierung der Wohnviertel zurückgegriffen:<br>- Die Stadt Basel (BFS-Code 2701) hat keine eigene Identifikationsnummer. Auswertungen beruhen auf einem Zusammenzug der 19 Wohnviertel, die von 01 bis 19 nummeriert sind.<br>- Die Gemeinde Bettingen (BFS-Code 2702) hat die Wohnviertel-Nr. 20.<br>- Die Gemeinde Riehen (BFS-Code 2703) hat die Wohnviertel-Nr. 30.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2023-05-02T00:00:00+00:00`
+- **Issued** `2011-02-17`
+- **Modified** `2011-02-17T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Geographie', 'Statistische Grundlagen']`
-- **Keywords** `['Statistik', 'Einteilung', 'Wohnviertel', 'Quartier']`
+- **Themes** `['Geographie']`
+- **Keywords** `['Wohnbezirk', 'Wohnblock', 'Wohnblockseite', 'Wohnviertel', 'Statistik', 'Einteilung', 'Quartier']`
 - **Publisher** `Statistisches Amt`
 - **Reference** `None`
 

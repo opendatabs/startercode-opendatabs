@@ -14,15 +14,15 @@ Auto generated R starter code for data set 100291.
 
 - **Dataset_identifier** `100291`
 - **Title** `Gewässerschutzkarte: Gewässerschutzbereiche`
-- **Description** `Die Gewässerschutzkarte ist das zentrale planerische Instrument für den praktischen Vollzug des Grundwasserschutzes. Dargestellt sind die Gewässerschutzbereiche und die Grundwasserschutzzonen.`
+- **Description** `<p>Gewässerschutzbereiche dienen dem qualitativen und quantitativen Schutz der ober- und unterirdischer Gewässer, denen im Kontext der Trinkwassergewinnung eine besondere Bedeutung zukommt. Die Gewässerschutzbereiche sind eindeutig definiert und unterlagern Grundwasserschutzzonen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2023-04-26`
-- **Modified** `2025-11-10T00:00:00+00:00`
+- **Issued** `2018-04-27`
+- **Modified** `2018-04-27T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
-- **Keywords** `['grundwasserschutz', 'gewasserschutz', 'grundwasser', 'trinkwasser', 'gewasserschutzrecht']`
+- **Keywords** `['grundwasserschutz', 'grundwasser', 'gewasserschutz', 'gewasserschutzrecht', 'trinkwasser']`
 - **Publisher** `Amt für Umwelt und Energie`
 - **Reference** `None`
 

@@ -39,14 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Statistische Raumeinheiten: Blockseiten**
-    **Description**: Die Blockseite ist die dem angrenzenden Strassenraum zugeordnete Seite eines Blocks.
-
-Statistische Nummerierung:
-Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr
-(im Label jeweils durch Punkte getrennt), gefolgt von der vierstelligen Block-Nr
-(sowohl im Label als auch in der ID durch einen Unterstrich verbunden):
-- Blockseiten haben wie die Blöcke keine Namensbezeichnung und werden lediglich über die Nummer referenziert.
-- Beispiel Blockseite mit der Clarakirche: BLS_ID 121014_1741, die Bezeichnung (BLS_Label) lautet 12.1.014_1741
+    **Description**: <p>Die statistische Blockseite ist die dem angrenzenden Strassenraum zugeordnete Seite eines statistischen Blocks. Blockseiten haben wie die Blöcke keine Namensbezeichnung und werden lediglich über die Nummer referenziert. Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr., gefolgt von einem vierstelligen Strassencode.<br>Code: Der erste Codeteil besteht aus Wohnviertel-, Bezirks- und Blocknummerierung (nicht punktgetrennt); dann folgt mit einem Unterstrich verbunden der zweite Codeteil, der Strassencode. Z. B. Blockseite 172005_1723</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100041)*.
     """
@@ -62,22 +55,15 @@ def _(mo):
 
     - **Dataset_identifier** `100041`
 - **Title** `Statistische Raumeinheiten: Blockseiten`
-- **Description** `Die Blockseite ist die dem angrenzenden Strassenraum zugeordnete Seite eines Blocks.
-
-Statistische Nummerierung:
-Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr
-(im Label jeweils durch Punkte getrennt), gefolgt von der vierstelligen Block-Nr
-(sowohl im Label als auch in der ID durch einen Unterstrich verbunden):
-- Blockseiten haben wie die Blöcke keine Namensbezeichnung und werden lediglich über die Nummer referenziert.
-- Beispiel Blockseite mit der Clarakirche: BLS_ID 121014_1741, die Bezeichnung (BLS_Label) lautet 12.1.014_1741`
+- **Description** `<p>Die statistische Blockseite ist die dem angrenzenden Strassenraum zugeordnete Seite eines statistischen Blocks. Blockseiten haben wie die Blöcke keine Namensbezeichnung und werden lediglich über die Nummer referenziert. Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr., gefolgt von einem vierstelligen Strassencode.<br>Code: Der erste Codeteil besteht aus Wohnviertel-, Bezirks- und Blocknummerierung (nicht punktgetrennt); dann folgt mit einem Unterstrich verbunden der zweite Codeteil, der Strassencode. Z. B. Blockseite 172005_1723</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2025-07-08T05:03:50+00:00`
+- **Issued** `2011-02-17`
+- **Modified** `2011-02-17T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Statistische Grundlagen']`
-- **Keywords** `['Statistik', 'Einteilung', 'Wohnblockseite']`
+- **Keywords** `['Wohnbezirk', 'Wohnblock', 'Wohnblockseite', 'Wohnviertel', 'Einteilung', 'Statistik']`
 - **Publisher** `Statistisches Amt`
 - **Reference** `None`
 
