@@ -58,14 +58,14 @@ def _(mo):
 - **Description** `Als Leerwohnung gilt eine Wohnung, welche am Stichtag (1. Juni) unbesetzt, aber bewohnbar ist und zur dauernden Miete von mindestens drei Monaten oder zum Verkauf angeboten wird. Folgende Wohnungen gelten nicht als Leerwohnungen: a) unbesetzt, aber bereits vermietet oder verkauft; b) unbesetzt, aber nicht zur Miete oder zum Verkauf angeboten; c) nicht mehr als Wohnung (Arztpraxen etc.) angeboten; d) einem beschränkten Personenkreis vorbehalten (z.B. Dienstwohnung); e) aus bau-, sanitätspolizeilichen oder richterlichen Gründen gesperrt; f) für weniger als drei Monate angeboten.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-08-27`
-- **Modified** `2025-08-22T08:01:35+00:00`
+- **Modified** `2026-05-18T07:09:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Bau- und Wohnungswesen']`
 - **Keywords** `['Wohnung', 'Einfamilienhaus', 'Leerstand', 'Miete']`
 - **Publisher** `Statistisches Amt`
-- **Reference** `None`
+- **Reference** `https://statistik.bs.ch/unterthema/12#Leerstand`
 
 
     ///
