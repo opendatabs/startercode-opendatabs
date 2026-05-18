@@ -39,8 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Strassen und Wege: Durchgangsstrassen**
-    **Description**: Dieser Datensatz ist Teil des kantonalen Geodatenmodells des Kantons Basel-Stadt "Strassen und Wege" und stellt die Durchgangsstrassen dar. <br>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege">https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege</a><br>
-Die Durchgangsstrassen zeigen die Durchgangsstrassen gemäss Durchgangsverordnung unterteilt nach Hauptstrassen, Nationalstrassen (A) und Europastrassen (E).
+    **Description**: <p>Der Datensatz beinhaltet die Durchgangsstrassen gemäss eidgenössischer Durchgangsstrassenverordung (741.272).</p><p>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?refine.tags=STWE" target="_blank">https://data.bs.ch/explore/?refine.tags=STWE</a></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100242)*.
     """
@@ -56,16 +55,15 @@ def _(mo):
 
     - **Dataset_identifier** `100242`
 - **Title** `Strassen und Wege: Durchgangsstrassen`
-- **Description** `Dieser Datensatz ist Teil des kantonalen Geodatenmodells des Kantons Basel-Stadt "Strassen und Wege" und stellt die Durchgangsstrassen dar. <br>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege">https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege</a><br>
-Die Durchgangsstrassen zeigen die Durchgangsstrassen gemäss Durchgangsverordnung unterteilt nach Hauptstrassen, Nationalstrassen (A) und Europastrassen (E).`
+- **Description** `<p>Der Datensatz beinhaltet die Durchgangsstrassen gemäss eidgenössischer Durchgangsstrassenverordung (741.272).</p><p>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?refine.tags=STWE" target="_blank">https://data.bs.ch/explore/?refine.tags=STWE</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2022-12-23`
-- **Modified** `2024-10-31T00:00:00+00:00`
+- **Issued** `2019-03-05`
+- **Modified** `2026-05-01T01:17:43+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Geographie', 'Mobilität und Verkehr']`
-- **Keywords** `['Weg', 'Mobilität', 'Strassennetz', 'Strasse', 'Wegnetz']`
+- **Themes** `['Mobilität und Verkehr', 'Geographie']`
+- **Keywords** `['Durchgangsstrassen', 'Erschliessungsstrasse', 'Europastrasse', 'Feldweg', 'Gasse', 'Geschwindigkeit', 'Hauptstrasse', 'Hierarchie', 'HLS', 'Hochleistungsstrasse', 'HSS', 'HVS', 'Kantonsstrassen', 'Mobilität', 'Mobilitätsnetz', 'Nationalstrasse', 'Netz', 'Parkanlage', 'Promenade', 'QSS', 'Quartiersammelstrasse', 'Strassennetzhierarchie', 'Temporegime', 'Verkehrsorientierte', 'Waldweg', 'Weg', 'Strassennetz', 'Wegnetz']`
 - **Publisher** `Amt für Mobilität`
 - **Reference** `None`
 

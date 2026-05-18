@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Quartiertreffpunkte**
-    **Description**: Quartierangebote (Quartiertreffpunkte, -räume und -anlaufstellen) sind wichtige Begegnungsorte für junge Familien ebenso wie für ältere Menschen, für Alteingesessene wie auch Neuankömmlinge. Sie bieten ein breitgefächertes Angebot wie Beratung und Unterstützung im Alltag, offene Treffpunkte, Mittagstische und weitere kulinarische Angebote, Spielabende, Filmvorführungen, kulturelle Veranstaltungen und vieles mehr.
+    **Description**: <p>Quartierangebote (Quartiertreffpunkte, -räume und -anlaufstellen) sind wichtige Begegnungsorte für junge Familien ebenso wie für ältere Menschen, für Alteingesessene wie auch Neuankömmlinge. Sie bieten ein breitgefächertes Angebot wie Beratung und Unterstützung im Alltag, offene Treffpunkte, Mittagstische und weitere kulinarische Angebote, Spielabende, Filmvorführungen, kulturelle Veranstaltungen und vieles mehr.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100026)*.
     """
@@ -55,15 +55,15 @@ def _(mo):
 
     - **Dataset_identifier** `100026`
 - **Title** `Quartiertreffpunkte`
-- **Description** `Quartierangebote (Quartiertreffpunkte, -räume und -anlaufstellen) sind wichtige Begegnungsorte für junge Familien ebenso wie für ältere Menschen, für Alteingesessene wie auch Neuankömmlinge. Sie bieten ein breitgefächertes Angebot wie Beratung und Unterstützung im Alltag, offene Treffpunkte, Mittagstische und weitere kulinarische Angebote, Spielabende, Filmvorführungen, kulturelle Veranstaltungen und vieles mehr.`
+- **Description** `<p>Quartierangebote (Quartiertreffpunkte, -räume und -anlaufstellen) sind wichtige Begegnungsorte für junge Familien ebenso wie für ältere Menschen, für Alteingesessene wie auch Neuankömmlinge. Sie bieten ein breitgefächertes Angebot wie Beratung und Unterstützung im Alltag, offene Treffpunkte, Mittagstische und weitere kulinarische Angebote, Spielabende, Filmvorführungen, kulturelle Veranstaltungen und vieles mehr.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2025-03-10T00:00:00+00:00`
+- **Issued** `2017-09-05`
+- **Modified** `2026-05-01T01:13:01+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Bevölkerung', 'Geographie']`
-- **Keywords** `['Raum', 'Anlass', 'Party', 'Fest', 'Treffpunkt', 'Niederschwellig']`
+- **Keywords** `['Begegnungsort', 'Erziehung', 'Familie', 'Treffpunkt', 'Versammlung', 'Raum', 'Anlass', 'Party', 'Fest', 'Niederschwellig']`
 - **Publisher** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
 

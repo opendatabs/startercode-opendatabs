@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Bohrkataster**
-    **Description**: Diese Daten zeigen alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen und ausserhalb der Grundwasserschutzzonen S2 und S1 liegen. Sie geben Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.
+    **Description**: <p>Diese Daten zeigen alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen und ausserhalb der Grundwasserschutzzonen S2 und S1 liegen. Sie geben Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100182)*.
     """
@@ -55,13 +55,13 @@ def _(mo):
 
     - **Dataset_identifier** `100182`
 - **Title** `Bohrkataster`
-- **Description** `Diese Daten zeigen alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen und ausserhalb der Grundwasserschutzzonen S2 und S1 liegen. Sie geben Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.`
+- **Description** `<p>Diese Daten zeigen alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen und ausserhalb der Grundwasserschutzzonen S2 und S1 liegen. Sie geben Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2022-04-12`
-- **Modified** `2026-01-20T00:00:00+00:00`
+- **Issued** `2009-05-14`
+- **Modified** `2000-01-01T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `1876-12-31T23:30:14+00:00`
-- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
 - **Keywords** `['Grundwasser', 'Erdwärme', 'Hydrogeologie']`
 - **Publisher** `Amt für Umwelt und Energie`

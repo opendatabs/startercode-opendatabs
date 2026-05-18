@@ -39,7 +39,9 @@ def _(mo):
         r"""
     ## Dataset
     # **Notfalltreffpunkte**
-    **Description**: Die Notfalltreffpunkte Basel-Stadt sind Standorte, an denen Sie im Notfall jederzeit einen Notruf absetzen können. Sollte die übliche Informations- und Kommunikationstechnologie (IKT) – wie Festnetztelefon, Mobiltelefon oder Fernseher – infolge eines Ereignisses über längere Zeit ausfallen, erhalten Sie dort Informationen und Unterstützung durch die Behörden.
+    **Description**: <p>Die Notfalltreffpunkte Basel-Stadt sind Standorte, an denen Sie im Notfall jederzeit einen Notruf absetzen können. Sollte die übliche Informations- und Kommunikationstechnologie (IKT) – wie Festnetztelefon, Mobiltelefon oder Fernseher – infolge eines Ereignisses über längere Zeit ausfallen, erhalten Sie dort Informationen und Unterstützung durch die Behörden.</p>
+<p>Weitere Informationen:</p>
+<p>Weiterführende Informationen zu den Notfalltreffpunkten: <a href="https://www.bs.ch/themen/sicherheit-und-demokratie/im-notfall/notfalltreffpunkte" target="_blank">https://www.bs.ch/themen/sicherheit-und-demokratie/im-notfall/notfalltreffpunkte</a></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100459)*.
     """
@@ -55,15 +57,17 @@ def _(mo):
 
     - **Dataset_identifier** `100459`
 - **Title** `Notfalltreffpunkte`
-- **Description** `Die Notfalltreffpunkte Basel-Stadt sind Standorte, an denen Sie im Notfall jederzeit einen Notruf absetzen können. Sollte die übliche Informations- und Kommunikationstechnologie (IKT) – wie Festnetztelefon, Mobiltelefon oder Fernseher – infolge eines Ereignisses über längere Zeit ausfallen, erhalten Sie dort Informationen und Unterstützung durch die Behörden.`
+- **Description** `<p>Die Notfalltreffpunkte Basel-Stadt sind Standorte, an denen Sie im Notfall jederzeit einen Notruf absetzen können. Sollte die übliche Informations- und Kommunikationstechnologie (IKT) – wie Festnetztelefon, Mobiltelefon oder Fernseher – infolge eines Ereignisses über längere Zeit ausfallen, erhalten Sie dort Informationen und Unterstützung durch die Behörden.</p>
+<p>Weitere Informationen:</p>
+<p>Weiterführende Informationen zu den Notfalltreffpunkten: <a href="https://www.bs.ch/themen/sicherheit-und-demokratie/im-notfall/notfalltreffpunkte" target="_blank">https://www.bs.ch/themen/sicherheit-und-demokratie/im-notfall/notfalltreffpunkte</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2025-04-28`
-- **Modified** `2026-05-06T08:01:06+00:00`
+- **Issued** `2025-08-12`
+- **Modified** `2026-05-01T01:11:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Geographie']`
-- **Keywords** `['Notunterkunft', 'Polizei']`
+- **Keywords** `['Bevölkerungsschutz', 'Blackout', 'Bundesamt für Bevölkerungsschutz (BABS)', 'Erdbeben', 'Ereignisfall', 'Evakuierungspunkt', 'Hilfe', 'Informationsstelle Katastrophe', 'Katastrophenschutz', 'Krisenmanagement Gemeinde', 'Notfall', 'Notfallhilfe', 'Notfallkommunikation', 'Notfalltreffpunkt', 'Notfallversorgung', 'Notunterkunft Schweiz', 'Schutzmassnahmen', 'Schutz & Rettung', 'Sicherheit', 'Stromausfall', 'Versorgungsstützpunkt', 'Notunterkunft', 'Polizei']`
 - **Publisher** `Kantonspolizei`
 - **Reference** `None`
 
