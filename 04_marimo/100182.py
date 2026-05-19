@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `<p>Diese Daten zeigen alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen und ausserhalb der Grundwasserschutzzonen S2 und S1 liegen. Sie geben Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2009-05-14`
-- **Modified** `2000-01-01T00:00:00+00:00`
+- **Modified** `2026-05-19T19:12:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Geographie', 'Raum und Umwelt']`
+- **Themes** `['Geographie', 'Raum und Umwelt', 'Bau- und Wohnungswesen']`
 - **Keywords** `['Grundwasser', 'Erdwärme', 'Hydrogeologie']`
-- **Publisher** `Amt für Umwelt und Energie`
+- **Publisher** `Amt für Umwelt und Energie (AUE)`
 - **Reference** `None`
 
 
