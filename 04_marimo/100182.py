@@ -60,8 +60,8 @@ def _(mo):
 - **Issued** `2009-05-14`
 - **Modified** `2026-05-19T19:12:51+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `None`
-- **Temporal_coverage_end_date** `None`
+- **Temporal_coverage_start_date** `1876-12-31T23:30:14+00:00`
+- **Temporal_coverage_end_date** `2026-12-30T23:00:00+00:00`
 - **Themes** `['Geographie', 'Raum und Umwelt', 'Bau- und Wohnungswesen']`
 - **Keywords** `['Grundwasser', 'Erdwärme', 'Hydrogeologie']`
 - **Publisher** `Amt für Umwelt und Energie (AUE)`
