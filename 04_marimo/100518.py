@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Zeitreihe aller kantonalen Volksabstimmungen in Basel-Stadt seit 1875. Der Datensatz stammt vom politisch unabhängigen Verein Baselvotes <a href="https://baselvotes.ch" target="_blank">(Abstimmungsportal </a><a href="https://baselvotes.ch)" target="_blank">https://baselvotes.ch)</a> und wird vor und nach Abstimmungssonntagen laufend ergänzt. Auf Baselvotes findet sich auch zu jeder Abstimmung ein Kurzbeschrieb sowie Bildmaterial (u.a. Plakate, Inserate). </p><p>Kurztitel, Politikbereiche und statistische Kerndaten basieren im Wesentlichen auf Open Government Data des Statistischen Amtes Basel-Stadt. Urheberschaft und Parolen sowie die Positionen von Regierungsrat und Grossem Rat wurden von Baselvotes recherchiert und sind nicht in jedem Fall vollständig. Baselvotes unterscheidet bei der Rechtsform nicht zwischen «obligatorischem» und «angeordnetem» Referendum,  da die Klassifizierungen über die Zeit nicht einheitlich gehandhabt wurden.</p><p><b>Quellenangabe</b>: Bei Nutzung der Rubriken Urheberschaft und Parolen: Abstimmungsportal Baselvotes. Andere verlinkte Quellen (Grosser Rat, Staatskanzlei, Staatsarchiv usw.) sind mit dem jeweiligen Quellennachweis zu versehen.</p><p><b>Hinweis zur Lizenz:</b> Die Lizenz bezieht sich nicht auf verlinkte Inhalte. Hierfür müssen die die Nutzungsbestimmungen der Dritten beachtet werden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2026-02-28`
-- **Modified** `2026-09-27T18:15:59+00:00`
+- **Modified** `2026-10-01T18:15:37+00:00`
 - **Rights** `None`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
