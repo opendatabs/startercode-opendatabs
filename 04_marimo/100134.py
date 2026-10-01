@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Corona', 'COVID-19', 'Spital', 'Krankheit', 'Coronavirus', 'Virus', 'Pandemie', 'Test', 'Lungenentzündung']`
-- **Publisher** `Medizinische Dienste`
+- **Creator** `Medizinische Dienste`
 - **Reference** `None`
 
 

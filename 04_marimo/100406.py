@@ -60,13 +60,13 @@ def _(mo):
 Open Data Basel-Stadt erstellt und pflegt diese Dashboards, um öffentlich relevante Daten benutzerfreundlich und transparent zu präsentieren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-11-14`
-- **Modified** `2026-03-16T11:16:00+00:00`
+- **Modified** `2026-08-04T09:30:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Verwaltung']`
 - **Keywords** `['Dashboard', 'Weiterverwendung', 'Datensätze', 'Datenportal', 'Nutzeranwendungen', 'Visualisierungen', 'Projekte', 'Datenanwendung', 'Datennutzung', 'Datenanalyse']`
-- **Publisher** `Open Data Basel-Stadt`
+- **Creator** `Open Data Basel-Stadt`
 - **Reference** `None`
 
 

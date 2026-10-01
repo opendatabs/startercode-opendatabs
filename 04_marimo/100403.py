@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Pflege', 'Spital']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

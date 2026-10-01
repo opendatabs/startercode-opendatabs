@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Verkehr', 'Ampeln', 'Kreuzung', 'LSA', 'Lichtzeichenanlage', 'LZA']`
-- **Publisher** `Amt für Mobilität`
+- **Creator** `Amt für Mobilität`
 - **Reference** `None`
 
 

@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Gesetzgebung']`
 - **Keywords** `['Richterin', 'Richter', 'Wahlen', 'Gericht']`
-- **Publisher** `Staatskanzlei`
+- **Creator** `Staatskanzlei`
 - **Reference** `None`
 
 

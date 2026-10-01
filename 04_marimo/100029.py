@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `Die Karte zeigt die Schulstandorte (Kindergärten, Primar-, Sekundarschule, Gymnasium, Zentrum für Brückenangebote, Allgemeine Gewerbeschule, Fachmaturitätsschule, Spezialangebote sowie Tagesstrukturen, Sportplätze, Turnhallen ausserhalb von Schulstandorten und Schwimmhallen) der Gemeinde Basel.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-10-15`
-- **Modified** `2025-07-01T00:00:00+00:00`
+- **Modified** `2026-06-30T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Bildung, Wissenschaft', 'Bevölkerung', 'Geographie']`
 - **Keywords** `['Schule', 'Lernen', 'Schüler', 'Schülerinnen', 'Lehrer', 'Lehrerinnen']`
-- **Publisher** `Zentrale Dienste`
+- **Creator** `Zentrale Dienste`
 - **Reference** `None`
 
 

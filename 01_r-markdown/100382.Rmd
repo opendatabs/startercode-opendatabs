@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-05-21"
+date: "2026-10-01"
 output: html_document
 ---
 
@@ -42,7 +42,7 @@ Die Berechnung der solaren Globalstrahlung basiert auf dem 0.5m-Oberflächenmode
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Energie']`
 - **Keywords** `['Solarenergie', 'Solarkollektor']`
-- **Publisher** `Amt für Umwelt und Energie`
+- **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 

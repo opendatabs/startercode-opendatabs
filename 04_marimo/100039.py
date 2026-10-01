@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `<p>Die Bezirke sind Untereinheiten der Wohnviertel. Jedes Wohnviertel mit Ausnahme von Klybeck und Kleinhüningen ist in 2 bis 8 Bezirke unterteilt. Insgesamt werden auf dem gesamten Kantonsgebiet 69 Bezirke unterschieden.<br>Code: Besteht aus Wohnviertel- und Bezirksnummerierung, z. B. Bezirk 2.4</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2011-02-17`
-- **Modified** `2011-02-17T00:00:00+00:00`
+- **Modified** `2026-05-06T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Statistische Grundlagen']`
 - **Keywords** `['Wohnbezirk', 'Wohnblock', 'Wohnblockseite', 'Wohnviertel', 'Statistik', 'Einteilung']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

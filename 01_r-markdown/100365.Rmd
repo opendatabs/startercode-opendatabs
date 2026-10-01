@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-05-21"
+date: "2026-10-01"
 output: html_document
 ---
 
@@ -32,7 +32,7 @@ Online-Archivkatalog, Verpacken, Etikettieren und Magazinieren.</p>`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Verwaltung', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Archiv', 'Akten', 'Erschliessung', 'Unterlagen', 'Archivgesetz', 'Dokumente', 'Informationen', 'Geschichte', 'Sammlung', 'Privatarchiv', 'Hauptarchiv']`
-- **Publisher** `Staatsarchiv Basel-Stadt`
+- **Creator** `Staatsarchiv Basel-Stadt`
 - **Reference** `None`
 
 

@@ -38,8 +38,8 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Velostadtplan**
-    **Description**: Der Velostadtplan zeigt dir passende Routen zu deinem Ziel und liefert Ideen, wohin du mit deinem Velo besonders gut fahren kannst. Er ist die elektronische Version der faltbaren Papierkarte, die im Buchhandel, bei Basel Tourismus, Pro Velo und Veloplus erhältlich ist.
+    # **Velostadtplan: Hinweise**
+    **Description**: <p>Der Datensatz liefert weiterführende Informationen zur Velotauglichkeit des Strassennetzes und weist auf Gefahrenstellen, Einbahnstrassen und Steigungen verschiedener Intensitätsgrade hin.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100404)*.
     """
@@ -54,17 +54,17 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100404`
-- **Title** `Velostadtplan`
-- **Description** `Der Velostadtplan zeigt dir passende Routen zu deinem Ziel und liefert Ideen, wohin du mit deinem Velo besonders gut fahren kannst. Er ist die elektronische Version der faltbaren Papierkarte, die im Buchhandel, bei Basel Tourismus, Pro Velo und Veloplus erhältlich ist.`
+- **Title** `Velostadtplan: Hinweise`
+- **Description** `<p>Der Datensatz liefert weiterführende Informationen zur Velotauglichkeit des Strassennetzes und weist auf Gefahrenstellen, Einbahnstrassen und Steigungen verschiedener Intensitätsgrade hin.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2025-03-03`
-- **Modified** `2026-05-21T08:01:50+00:00`
+- **Issued** `2017-01-31`
+- **Modified** `2026-08-18T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Mobilität und Verkehr', 'Geographie', 'Tourismus']`
-- **Keywords** `['Velo', 'Fahrrad', 'Veloweg', 'E-Bike', 'Pedelec']`
-- **Publisher** `Amt für Mobilität`
+- **Keywords** `['Fahrrad', 'Velo', 'Veloroutennetz']`
+- **Creator** `Amt für Mobilität`
 - **Reference** `None`
 
 

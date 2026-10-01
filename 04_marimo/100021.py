@@ -57,14 +57,14 @@ def _(mo):
 - **Title** `Entsorgungsstellen`
 - **Description** `Der Bevölkerung werden die verschiedenen Entsorgungsstellen für ihre Abfälle und Wertstoffe angezeigt. Sie erhalten zudem die Informationen, was, wann und wie sie diese entsorgen können.`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2026-04-30T00:00:00+00:00`
+- **Issued** `2026-08-10`
+- **Modified** `2026-10-01T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Geographie']`
 - **Keywords** `['Recycling', 'Wiederverwertung', 'Abfall', 'Müll', 'Entsorgen']`
-- **Publisher** `Amt für Umwelt und Energie`
+- **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 

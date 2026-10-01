@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2023-01-15T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Coronavirus', 'COVID-19', 'PCR', 'Corona', 'Krankheit', 'Lungenentzündung', 'Test']`
-- **Publisher** `Bundesamt für Gesundheit BAG`
+- **Creator** `Bundesamt für Gesundheit BAG`
 - **Reference** `None`
 
 

@@ -38,8 +38,8 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Tigermückenbekämpfung: Bekämpfungszone**
-    **Description**: Die kantonale Strategie zur Bekämpfung der Tigermücke beruht auf den vier Pfeilern «Überwachung» (Monitoring), «Prävention», «Bekämpfung» und «Koordination». Das kantonale Laboratorium koordiniert mit betroffenen kantonalen Dienststellen und den Gemeinden die Massnahmen im öffentlichen Bereich. Dazu gehört die Überwachung und die Bekämpfung im öffentlichen Raum. Der Kanton sensibilisiert zudem die Öffentlichkeit und stellt umfangreiches Informationsmaterial und ein biologisches Bekämpfungsmittel der Bevölkerung kostenlos zur Verfügung. In der Bekämpfungszone besteht eine Pflicht Präventions-/Bekämpfungsmassnahmen durchzuführen. Im privaten Bereich sind die Privaten für die Umsetzung der Massnahmen zuständig.
+    # **Tigermückenbekämpfungsgebiet**
+    **Description**: <p>Die kantonale Strategie zur Bekämpfung der Tigermücke beruht auf den vier Pfeilern «Überwachung» (Monitoring), «Prävention», «Bekämpfung» und «Koordination». Das kantonale Laboratorium koordiniert mit betroffenen kantonalen Dienststellen und den Gemeinden die Massnahmen im öffentlichen Bereich. Dazu gehört die Überwachung und die Bekämpfung im öffentlichen Raum. Der Kanton sensibilisiert zudem die Öffentlichkeit und stellt umfangreiches Informationsmaterial und ein biologisches Bekämpfungsmittel der Bevölkerung kostenlos zur Verfügung. In der Bekämpfungszone besteht eine Pflicht Präventions-/Bekämpfungsmassnahmen durchzuführen. Im privaten Bereich sind die Privaten für die Umsetzung der Massnahmen zuständig.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100305)*.
     """
@@ -54,17 +54,17 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100305`
-- **Title** `Tigermückenbekämpfung: Bekämpfungszone`
-- **Description** `Die kantonale Strategie zur Bekämpfung der Tigermücke beruht auf den vier Pfeilern «Überwachung» (Monitoring), «Prävention», «Bekämpfung» und «Koordination». Das kantonale Laboratorium koordiniert mit betroffenen kantonalen Dienststellen und den Gemeinden die Massnahmen im öffentlichen Bereich. Dazu gehört die Überwachung und die Bekämpfung im öffentlichen Raum. Der Kanton sensibilisiert zudem die Öffentlichkeit und stellt umfangreiches Informationsmaterial und ein biologisches Bekämpfungsmittel der Bevölkerung kostenlos zur Verfügung. In der Bekämpfungszone besteht eine Pflicht Präventions-/Bekämpfungsmassnahmen durchzuführen. Im privaten Bereich sind die Privaten für die Umsetzung der Massnahmen zuständig.`
+- **Title** `Tigermückenbekämpfungsgebiet`
+- **Description** `<p>Die kantonale Strategie zur Bekämpfung der Tigermücke beruht auf den vier Pfeilern «Überwachung» (Monitoring), «Prävention», «Bekämpfung» und «Koordination». Das kantonale Laboratorium koordiniert mit betroffenen kantonalen Dienststellen und den Gemeinden die Massnahmen im öffentlichen Bereich. Dazu gehört die Überwachung und die Bekämpfung im öffentlichen Raum. Der Kanton sensibilisiert zudem die Öffentlichkeit und stellt umfangreiches Informationsmaterial und ein biologisches Bekämpfungsmittel der Bevölkerung kostenlos zur Verfügung. In der Bekämpfungszone besteht eine Pflicht Präventions-/Bekämpfungsmassnahmen durchzuführen. Im privaten Bereich sind die Privaten für die Umsetzung der Massnahmen zuständig.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2023-08-04`
-- **Modified** `2025-11-03T00:00:00+00:00`
+- **Issued** `2021-08-03`
+- **Modified** `2026-08-18T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt']`
-- **Keywords** `['Umweltschutz', 'Krankheit', 'Prävention']`
-- **Publisher** `Kantonales Laboratorium`
+- **Keywords** `None`
+- **Creator** `Kantonales Laboratorium`
 - **Reference** `None`
 
 

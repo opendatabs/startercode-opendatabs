@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-05-21"
+date: "2026-10-01"
 output: html_document
 ---
 
@@ -15,27 +15,24 @@ Auto generated R starter code for data set 100416.
 - **Dataset_identifier** `100416`
 - **Title** `Geteilte Mikromobilität nach Bezirk und Tag`
 - **Description** `<p>Der Datensatz zeigt die Verteilung von Fahrzeugen verschiedener Mikromobilitätsanbieter in Basel-Stadt, gegliedert nach Bezirk und Tag. Er enthält verschiedene statistische Kennzahlen zur Anzahl der Fahrzeuge pro Bezirk.</p>
-
 <p>Die Daten berücksichtigen Merkmale wie Fahrzeugtyp, Bauweise, Antriebsart und Reichweite des Fahrzeugs bei vollem Akku.</p>
-
 <p>Die Berechnung des Datensatzes basiert auf den Daten zur aktuellen Verfügbarkeit 
 <a href="https://data.bs.ch/explore/dataset/100415/" target="_blank">https://data.bs.ch/explore/dataset/100415/</a>, 
 die alle 10 Minuten aktualisiert werden. Das heisst, es gibt maximal 
 <span style="font-weight: bold;">24 × 6 = 144</span> 
 Messungen pro Tag für die Berechnung des Durchschnitts.</p>
-
 <p>Für die Bezirke wird folgender Datensatz verwendet: 
 <a href="https://data.bs.ch/explore/dataset/100039/" target="_blank">https://data.bs.ch/explore/dataset/100039/</a><a href="https://data.bs.ch/explore/dataset/100039/" target="_blank"></a></p>
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p><p><b>Hinweis:</b></p><p>Die Daten enthalten eine Lücke zwischen dem 2. und 22. April 2025, da es einen Unterbruch im Extrahieren der Daten gab.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2026-05-21T04:03:14+00:00`
+- **Modified** `2026-10-01T04:19:25+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'Shared', 'E-Mobility', 'Mobility', 'Veloverleih', 'Verkehr', 'Statistik']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

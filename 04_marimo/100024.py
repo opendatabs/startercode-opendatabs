@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Bevölkerung', 'Geographie', 'Tourismus']`
 - **Keywords** `['Sport', 'Turnen', 'Jugenarbeit', 'Freizeit', 'Treffpunkt']`
-- **Publisher** `Jugend, Familie und Sport`
+- **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
 
 

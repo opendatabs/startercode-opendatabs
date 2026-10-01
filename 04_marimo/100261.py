@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
 - **Keywords** `['Gewässernetz', 'Gewässer']`
-- **Publisher** `Tiefbauamt`
+- **Creator** `Tiefbauamt`
 - **Reference** `None`
 
 

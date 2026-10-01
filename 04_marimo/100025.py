@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `<p>Weist die politischen Wahlkreise des Kantons Basel-Stadt aus.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2013-02-07`
-- **Modified** `2013-02-07T00:00:00+00:00`
+- **Modified** `2026-05-06T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Geographie']`
 - **Keywords** `['Abstimmung', 'Kreise', 'Politik', 'Stimmberechtigt', 'Wahl']`
-- **Publisher** `Staatskanzlei`
+- **Creator** `Staatskanzlei`
 - **Reference** `None`
 
 

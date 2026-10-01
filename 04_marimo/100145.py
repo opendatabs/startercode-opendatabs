@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2022-02-27T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['SARS-CoV-2', 'Virus', 'Corona', 'Coronavirus', 'COVID-19', 'Test', 'PCR', 'Schule', 'Schüler', 'Schülerin', 'Lehrer', 'Lehrerin']`
-- **Publisher** `Medizinische Dienste`
+- **Creator** `Medizinische Dienste`
 - **Reference** `None`
 
 

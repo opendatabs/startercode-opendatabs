@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2023-12-05T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Luftqualität', 'Feinstaub', 'PM25', 'PM2.5']`
-- **Publisher** `Amt für Umwelt und Energie`
+- **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 

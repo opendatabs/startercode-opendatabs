@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Hundesignalisation: Orte mit Leinenpflicht oder Hundeverbot**
-    **Description**: Der Plan zeigt Örtlichkeiten, an welchen eine Leinenpflicht oder ein Hundeverbot gilt.
+    **Description**: <p><span style='font-family: Inter, "Inter Fallback", "Helvetica Neue", Helvetica, Arial, sans-serif; background-color: rgb(248, 248, 248);'>Der Plan zeigt Örtlichkeiten, an welchen eine Leinenpflicht oder ein Hundeverbot gilt.</span></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100023)*.
     """
@@ -55,7 +55,7 @@ def _(mo):
 
     - **Dataset_identifier** `100023`
 - **Title** `Hundesignalisation: Orte mit Leinenpflicht oder Hundeverbot`
-- **Description** `Der Plan zeigt Örtlichkeiten, an welchen eine Leinenpflicht oder ein Hundeverbot gilt.`
+- **Description** `<p><span style='font-family: Inter, "Inter Fallback", "Helvetica Neue", Helvetica, Arial, sans-serif; background-color: rgb(248, 248, 248);'>Der Plan zeigt Örtlichkeiten, an welchen eine Leinenpflicht oder ein Hundeverbot gilt.</span></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
 - **Modified** `2026-04-01T00:00:00+00:00`
@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Geographie']`
 - **Keywords** `['Hund', 'Verbot', 'Leine', 'Leinenpflicht']`
-- **Publisher** `Bereich Gesundheitsschutz`
+- **Creator** `Kantonales Veterinäramt`
 - **Reference** `None`
 
 

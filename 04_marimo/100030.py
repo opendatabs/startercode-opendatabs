@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `Schulstandorte der Primarstufe (Gemeinden Riehen und Bettingen)`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-05-06T00:00:00+00:00`
+- **Modified** `2026-09-30T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Bildung, Wissenschaft', 'Bevölkerung', 'Geographie']`
 - **Keywords** `['Schule', 'Lernen', 'Schüler', 'Schülerinnen', 'Lehrer', 'Lehrerinnen']`
-- **Publisher** `Gemeinde Riehen`
+- **Creator** `Gemeinde Riehen`
 - **Reference** `None`
 
 

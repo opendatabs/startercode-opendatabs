@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Velopumpen**
-    **Description**: <p></p><p>Dieser Datensatz zeigt die von Velohändlern für die Öffentlichkeit verfügbaren Velopumpen.</p>
+    **Description**: <p>Dieser Datensatz zeigt die öffentlich verfügbaren Velopumpen.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100213)*.
     """
@@ -55,16 +55,16 @@ def _(mo):
 
     - **Dataset_identifier** `100213`
 - **Title** `Velopumpen`
-- **Description** `<p></p><p>Dieser Datensatz zeigt die von Velohändlern für die Öffentlichkeit verfügbaren Velopumpen.</p>`
+- **Description** `<p>Dieser Datensatz zeigt die öffentlich verfügbaren Velopumpen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2022-12-04`
-- **Modified** `2025-07-16T00:00:00+00:00`
+- **Issued** `2019-09-03`
+- **Modified** `2026-08-18T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Mobilität und Verkehr']`
-- **Keywords** `['Fahrrad', 'Velo', 'Mobilität', 'Pumpe']`
-- **Publisher** `Amt für Mobilität`
+- **Keywords** `['Auffüllen', 'Fahrrad', 'Pumpen']`
+- **Creator** `Amt für Mobilität`
 - **Reference** `None`
 
 

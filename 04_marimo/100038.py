@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `Standorte der Dauerzählstellen für den motorisierten Individualverkehr (MIV) mit eigens für die Zählung installierten Induktionsschleifen und an den Induktionsschleifen von Lichtsignalanlagen (LSA). Zusätzlich die Standorte der Fussgänger- und Velozählstellen sowie der Kurzzeitzählstellen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2025-04-10T00:00:00+00:00`
+- **Modified** `2026-09-04T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1973-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2024-06-30T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-09-22T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Geographie']`
 - **Keywords** `['Auto', 'Velo', 'Fussgänger', 'Lastwagen', 'LKW', 'Anhänger']`
-- **Publisher** `Amt für Mobilität`
+- **Creator** `Amt für Mobilität`
 - **Reference** `None`
 
 

@@ -62,13 +62,13 @@ Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen u
 Weitere Daten zu "Verkehrsberuhigte Zonen":<a href="https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen">https://data.bs.ch/explore/?refine.tags=Verkehrsberuhigte+Zonen</a>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-12-30`
-- **Modified** `2026-03-06T00:00:00+00:00`
+- **Modified** `2026-09-07T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Mobilität und Verkehr']`
 - **Keywords** `['Geschwindigkeitsbeschränkun', 'Fussgänger', 'Fussgängerzonen']`
-- **Publisher** `Amt für Mobilität`
+- **Creator** `Amt für Mobilität`
 - **Reference** `None`
 
 

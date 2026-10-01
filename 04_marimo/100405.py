@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Gesetzgebung', 'Bevölkerung']`
 - **Keywords** `['Wahlen', 'Demokratie', 'Teilhabe', 'Gesamterneuerungswahl', 'Zweiter Wahlgang', 'Mitbestimmung', 'Exekutive', 'Kandidatur']`
-- **Publisher** `Staatskanzlei`
+- **Creator** `Staatskanzlei`
 - **Reference** `None`
 
 

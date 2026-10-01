@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2023-07-04T22:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Todesfälle', 'Lungenentzündung', 'Pandemie', 'Alter', 'Geschlecht', 'Corona']`
-- **Publisher** `Open Data Basel-Stadt`
+- **Creator** `Open Data Basel-Stadt`
 - **Reference** `None`
 
 

@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Bevölkerung', 'Gesetzgebung']`
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Teilhabe', 'Demokratie', 'Parlament', 'Grosser Rat', 'Grossrat', 'Grossrätin']`
-- **Publisher** `Staatskanzlei`
+- **Creator** `Staatskanzlei`
 - **Reference** `None`
 
 

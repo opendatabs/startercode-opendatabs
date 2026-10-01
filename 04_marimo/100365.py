@@ -82,7 +82,7 @@ Online-Archivkatalog, Verpacken, Etikettieren und Magazinieren.</p>`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Verwaltung', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Archiv', 'Akten', 'Erschliessung', 'Unterlagen', 'Archivgesetz', 'Dokumente', 'Informationen', 'Geschichte', 'Sammlung', 'Privatarchiv', 'Hauptarchiv']`
-- **Publisher** `Staatsarchiv Basel-Stadt`
+- **Creator** `Staatsarchiv Basel-Stadt`
 - **Reference** `None`
 
 

@@ -39,12 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Secondhand-Angebote / Wiederverwendungsstellen**
-    **Description**: Dieser Datensatz enthält die Standorte verschiedener
-Secondhand-Waren in der Region Basel, die entweder verkauft oder kostenlos
-weitergegeben werden. Diese Standorte können Secondhand-Läden, Brockenhäuser,
-Buchhandlungen, Bücherschränke, Lebensmittelverteilschränke oder
-Elektrofachgeschäfte umfassen. Bei einigen Standorten sind zusätzliche
-Informationen wie Telefonnummern und Links zu ihren Internetseiten verfügbar.
+    **Description**: Dieser Datensatz enthält die Standorte verschiedener Secondhand-Waren in der Region Basel, die entweder verkauft oder kostenlos weitergegeben werden. Diese Standorte können Secondhand-Läden, Brockenhäuser, Buchhandlungen, Bücherschränke, Lebensmittelverteilschränke oder Elektrofachgeschäfte umfassen. Bei einigen Standorten sind zusätzliche Informationen wie Telefonnummern und Links zu ihren Internetseiten verfügbar.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100363)*.
     """
@@ -60,21 +55,16 @@ def _(mo):
 
     - **Dataset_identifier** `100363`
 - **Title** `Secondhand-Angebote / Wiederverwendungsstellen`
-- **Description** `Dieser Datensatz enthält die Standorte verschiedener
-Secondhand-Waren in der Region Basel, die entweder verkauft oder kostenlos
-weitergegeben werden. Diese Standorte können Secondhand-Läden, Brockenhäuser,
-Buchhandlungen, Bücherschränke, Lebensmittelverteilschränke oder
-Elektrofachgeschäfte umfassen. Bei einigen Standorten sind zusätzliche
-Informationen wie Telefonnummern und Links zu ihren Internetseiten verfügbar.`
+- **Description** `Dieser Datensatz enthält die Standorte verschiedener Secondhand-Waren in der Region Basel, die entweder verkauft oder kostenlos weitergegeben werden. Diese Standorte können Secondhand-Läden, Brockenhäuser, Buchhandlungen, Bücherschränke, Lebensmittelverteilschränke oder Elektrofachgeschäfte umfassen. Bei einigen Standorten sind zusätzliche Informationen wie Telefonnummern und Links zu ihren Internetseiten verfügbar.`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2024-04-09`
-- **Modified** `2026-04-30T00:00:00+00:00`
+- **Issued** `2026-08-10`
+- **Modified** `2026-10-01T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Handel', 'Geographie', 'Raum und Umwelt']`
 - **Keywords** `['Recycling', 'Entsorgung', 'Brauchbares', 'Secondhand-Shop', 'Brockenhaus', 'Bücher', 'Flohmarkt', 'Textilien', 'Elektrogeräte', 'Lebensmittel', 'Kleidung', 'Kleider', 'Antiquitäten']`
-- **Publisher** `Amt für Umwelt und Energie`
+- **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 

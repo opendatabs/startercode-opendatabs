@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `<p>Geschätzte tägliche effektive Reproduktionszahl für die Schweiz, die Schweizer Grossregionen sowie die Schweizer Kantone. Die effektive Reproduktionszahl ist ein Mass dafür, wie viele Personen eine infizierte Person durchschnittlich ansteckt. Die Werte wurden täglich von der ETH Zürich berechnet. Die Originaldaten sind auf <a href="https://github.com/covid-19-Re/dailyRe-Data" target="_blank">https://github.com/covid-19-Re/dailyRe-Data</a> sowie <a href="https://github.com/covid-19-Re/dailyRe-Data/blob/master/CHE-estimates.csv" target="_blank">https://github.com/covid-19-Re/dailyRe-Data/blob/master/CHE-estimates.csv</a> verfügbar.</p><p>Die geschätzte effektive Reproduktionszahl bildet aufgrund der Infektionsdynamik (Inkubationszeit, Meldeverzug, etc.) schweizweit das Infektionsgeschehen erst mit einer zeitlichen Verzögerung von 10-13 Tagen ab. Auf kantonaler Ebene beträgt die zeitliche Verzögerung 14-17 Tage. </p><p>Weitere Informationen zur Interpretation der effektiven Reproduktionszahl finden sich bei der Swiss National COVID-19 Task Force: <a href="https://sciencetaskforce.ch/reproduktionszahl/" target="_blank">https://sciencetaskforce.ch/reproduktionszahl/</a> </p><p>Details und Quellenangaben zur verwendeten Methodik finden sich auf dem COVID-19-Dashboard der ETH Zürich: <a href="https://ibz-shiny.ethz.ch/covid-19-re-international/" target="_blank">https://ibz-shiny.ethz.ch/covid-19-re-international/</a> </p><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-12-23`
-- **Modified** `2023-01-31T16:03:40+00:00`
+- **Modified** `2026-06-08T08:32:54+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2020-05-23T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2022-12-15T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Coronavirus', 'Reproduktionszahl', 'Re', 'R-Wert', 'Re-Wert', 'COVID-19', 'Corona', 'Krankheit', 'Lungenentzündung']`
-- **Publisher** `ETH Zurich, Department of Biosystems Science and Engineering`
+- **Creator** `ETH Zurich, Department of Biosystems Science and Engineering`
 - **Reference** `None`
 
 

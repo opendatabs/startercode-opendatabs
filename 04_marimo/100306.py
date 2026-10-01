@@ -70,7 +70,7 @@ gemacht.<br>Der vorliegende Datensatz zeigt die Anzahl der Seitenaufrufe der Mic
 - **Temporal_coverage_end_date** `2023-06-29T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['QR-Codes', 'Tracking', 'Seitenaufrufe']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

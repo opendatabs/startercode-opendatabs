@@ -61,10 +61,10 @@ def _(mo):
 - **Modified** `2025-05-08T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2010-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Öffentliche Ordnung und Sicherheit', 'Raum und Umwelt']`
 - **Keywords** `['Verkehrsunfall', 'Fussgänger', 'Schaden', 'Gefährdung', 'Velo', 'Auto', 'Motorräder', 'Unfall', 'Verkehrsunfälle']`
-- **Publisher** `Kantonspolizei`
+- **Creator** `Kantonspolizei`
 - **Reference** `None`
 
 

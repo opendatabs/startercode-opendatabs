@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `<p>Die Grundwasserschutzzonen sind das wichtigste Instrument, Fassungs-, Anreicherungsanlagen und das Grundwasser unmittelbar vor seiner Nutzung als Trinkwasser vor Beeinträchtigungen zu schützen. Schutzzonen werden eindeutig definiert und überlagern sich innerhalb der Erfassungstoleranzen nicht.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2018-04-27`
-- **Modified** `2018-04-27T00:00:00+00:00`
+- **Modified** `2026-05-06T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
 - **Keywords** `['grundwasserschutz', 'gewasserschutz', 'grundwasser', 'trinkwasser', 'gewasserschutzrecht']`
-- **Publisher** `Amt für Umwelt und Energie`
+- **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 

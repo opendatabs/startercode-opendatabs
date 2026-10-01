@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Geographie']`
 - **Keywords** `['Militär', 'Sicherheit']`
-- **Publisher** `Rettung`
+- **Creator** `Rettung`
 - **Reference** `None`
 
 

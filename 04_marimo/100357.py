@@ -72,7 +72,7 @@ Man kann die LiDAR-Daten im PNG- und PGW-Format in der Tabellenansicht herunterl
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt', 'Geographie']`
 - **Keywords** `['Baum', 'Baumbestand', 'Baumkrone', 'Kronenbedeckung', 'Vegetation', 'LiDAR']`
-- **Publisher** `Stadtgärtnerei`
+- **Creator** `Stadtgärtnerei`
 - **Reference** `None`
 
 

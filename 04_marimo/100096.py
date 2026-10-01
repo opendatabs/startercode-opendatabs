@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2026-12-30T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Öffentliche Ordnung und Sicherheit', 'Verwaltung']`
 - **Keywords** `['Abfall', 'Recycling', 'Grüngut']`
-- **Publisher** `Tiefbauamt`
+- **Creator** `Tiefbauamt`
 - **Reference** `None`
 
 

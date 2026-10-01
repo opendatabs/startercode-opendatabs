@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt', 'Mobilität und Verkehr', 'Energie']`
 - **Keywords** `['Parkplatz', 'Ladestationen', 'Luftqualität', 'Verkehrslärm']`
-- **Publisher** `Kantons- und Stadtentwicklung`
+- **Creator** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
 
 

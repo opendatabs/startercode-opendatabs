@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Kriminalität, Strafrecht', 'Öffentliche Ordnung und Sicherheit']`
 - **Keywords** `['Ausländer', 'Männer', 'Frauen', 'Schweizer', 'PKS', 'Kriminalstatistik', 'Beschuldigte', 'Alter', 'Straftaten', 'Polizei']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/unterthema/sicherheit`
 
 

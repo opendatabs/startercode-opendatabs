@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2025-07-06T22:00:00+00:00`
 - **Themes** `['Verwaltung', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Social Media', 'Mastodon', 'HTML', 'Emojis', 'Facebook', 'X', 'Twitter', 'WhatsApp', 'LinkedIn', 'Soziale Medien', 'Instagram', 'Threads']`
-- **Publisher** `Open Data Basel-Stadt`
+- **Creator** `Open Data Basel-Stadt`
 - **Reference** `https://swiss.social/@opendatabs.rss`
 
 

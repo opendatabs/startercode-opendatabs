@@ -66,7 +66,7 @@ Das Staatsarchiv des Kantons Basel-Stadt fungiert als Gedächtnis von Staat und 
 - **Temporal_coverage_end_date** `2023-10-04T22:00:00+00:00`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Bildung, Wissenschaft', 'Verwaltung']`
 - **Keywords** `['Archiv', 'Archivkatalog', 'Geschichte Basels', 'LOD', 'LD', 'Linked Data', 'Linked Open Data', 'Linked', 'SPARQL']`
-- **Publisher** `Staatsarchiv Basel-Stadt`
+- **Creator** `Staatsarchiv Basel-Stadt`
 - **Reference** `None`
 
 

@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Veloabstellplätze**
-    **Description**: Der Datensatz beinhaltet alle Veloabstellplätze auf öffentlichem Grund, die grossen Abstellanlagen bei den Bahnhöfen, Velostationen, Bike+Ride-Anlagen und Cargovelo-Plätze. Die Punkte befinden sich in der Mitte der Parkfelder.
+    **Description**: <p>Der Datensatz beinhaltet alle Veloabstellplätze auf öffentlichem Grund, die grossen Abstellanlagen bei den Bahnhöfen, Velostationen, Bike+Ride-Anlagen und Cargovelo-Plätze. Die Punkte befinden sich in der Mitte der Parkfelder.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100241)*.
     """
@@ -55,16 +55,16 @@ def _(mo):
 
     - **Dataset_identifier** `100241`
 - **Title** `Veloabstellplätze`
-- **Description** `Der Datensatz beinhaltet alle Veloabstellplätze auf öffentlichem Grund, die grossen Abstellanlagen bei den Bahnhöfen, Velostationen, Bike+Ride-Anlagen und Cargovelo-Plätze. Die Punkte befinden sich in der Mitte der Parkfelder.`
+- **Description** `<p>Der Datensatz beinhaltet alle Veloabstellplätze auf öffentlichem Grund, die grossen Abstellanlagen bei den Bahnhöfen, Velostationen, Bike+Ride-Anlagen und Cargovelo-Plätze. Die Punkte befinden sich in der Mitte der Parkfelder.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2022-12-06`
-- **Modified** `2025-07-28T00:00:00+00:00`
+- **Issued** `2023-12-05`
+- **Modified** `2026-08-20T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Geographie', 'Mobilität und Verkehr']`
-- **Keywords** `['Fahrrad', 'Mobilität', 'Pumpe', 'Velo', 'Parkierung', 'Veloabstellanlagen']`
-- **Publisher** `Amt für Mobilität`
+- **Themes** `['Mobilität und Verkehr', 'Geographie']`
+- **Keywords** `['Abstellplatz', 'Fahrrad', 'Fahrradabstellplatz', 'Velo']`
+- **Creator** `Amt für Mobilität`
 - **Reference** `None`
 
 

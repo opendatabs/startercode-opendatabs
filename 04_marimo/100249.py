@@ -66,7 +66,7 @@ Die Kantonsstrassen Riehen und Bettingen zeigen die Kantonsstrassen in Riehen un
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Mobilität und Verkehr']`
 - **Keywords** `['Weg', 'Mobilität', 'Strassennetz', 'Strasse', 'Wegnetz']`
-- **Publisher** `Amt für Mobilität`
+- **Creator** `Amt für Mobilität`
 - **Reference** `None`
 
 

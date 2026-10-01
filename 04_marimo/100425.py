@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Arbeit, Erwerb']`
 - **Keywords** `['Arbeitszeitbewilligungen', 'Feiertagsarbeit', 'Nachtarbeit', 'Bewilligungspflicht']`
-- **Publisher** `Arbeitsinspektorat`
+- **Creator** `Arbeitsinspektorat`
 - **Reference** `None`
 
 

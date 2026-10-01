@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-05-21"
+date: "2026-10-01"
 output: html_document
 ---
 
@@ -27,7 +27,7 @@ Weitere Informationen zum Projekt Atmo-VISION sind in der <a href="https://www.b
 - **Temporal_coverage_end_date** `2020-03-23T23:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Mobilität und Verkehr']`
 - **Keywords** `['Luftqualität', 'Feinstaub', 'PM10', 'PM2.5', 'BVB']`
-- **Publisher** `Amt für Umwelt und Energie`
+- **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 

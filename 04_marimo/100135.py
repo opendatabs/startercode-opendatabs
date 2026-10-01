@@ -66,7 +66,7 @@ Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial 
 - **Temporal_coverage_end_date** `2023-06-30T22:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Impfung', 'SARS-CoV-2', 'Coronavirus', 'Corona', 'Vaccination', 'impfen', 'geimpft']`
-- **Publisher** `Medizinische Dienste`
+- **Creator** `Medizinische Dienste`
 - **Reference** `None`
 
 

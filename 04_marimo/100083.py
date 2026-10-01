@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Verwaltung', 'Gesetzgebung']`
 - **Keywords** `['Befragung', 'E-Voting', 'Abstimmung', 'Wahl', 'E-Collecting']`
-- **Publisher** `Staatskanzlei`
+- **Creator** `Staatskanzlei`
 - **Reference** `None`
 
 

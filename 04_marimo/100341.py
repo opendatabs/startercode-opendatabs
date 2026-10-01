@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `<p>«Kitas», «Kindertagesstätten» oder «Tagesheime» sind Einrichtungen, in denen Kinder regelmässig tagsüber durch qualifizierte Fachpersonen und in geeigneten Räumlichkeiten betreut werden. «Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-07-26`
-- **Modified** `2022-07-26T00:00:00+00:00`
+- **Modified** `2026-05-05T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Bevölkerung']`
 - **Keywords** `['Betreuung', 'Kinder', 'Kindertagesstätten', 'Tagesfamilie', 'Familie', 'Tagesstruktur', 'Horte', 'Mittagstische']`
-- **Publisher** `Jugend, Familie und Sport`
+- **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
 
 

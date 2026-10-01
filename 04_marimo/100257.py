@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `<p>Der Datensatz beinhaltet die rechtskräftigen überlagernden Festlegungen gemäss dem Zonenplan. Diese Festlegungen können die Grundnutzung ergänzen, aber auch überstimmen (z.B. Bebauungspläne, Schutzzwecke von Natur- und Landschaftsschutzzonen).</p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a></p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-09-09`
-- **Modified** `2026-05-01T01:12:01+00:00`
+- **Modified** `2026-05-06T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
 - **Keywords** `['kantonaler Nutzungsplan', 'Landnutzung', 'Nutzungsplan', 'Nutzungsplanung', 'Flächennutzungsplan', 'Naturschutzzonen', 'Bebauungsplan']`
-- **Publisher** `Einwohnergemeinde Bettingen`
+- **Creator** `Einwohnergemeinde Bettingen`
 - **Reference** `None`
 
 

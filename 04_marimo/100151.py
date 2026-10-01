@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `<p>Der Datensatz bildet alle wichtigen Sport- und Bewegungsanlagen im Perimeter Kanton Basel-Stadt sowie alle kantonalen Sportanlagen ausserhalb der Kantons- und Landesgrenzen ab.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-03-05`
-- **Modified** `2026-04-29T14:23:33+00:00`
+- **Modified** `2026-05-05T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Geographie', 'Tourismus']`
 - **Keywords** `['Anlage', 'Bäder', 'Badi', 'Gartenbad', 'Hallenbad', 'Platz', 'Schwimmbad', 'Spielwiese', 'Training', 'Zentrum', 'Sport', 'Sportanlagen', 'OpenSportData']`
-- **Publisher** `Jugend, Familie und Sport`
+- **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
 
 

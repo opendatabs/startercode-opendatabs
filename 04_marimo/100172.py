@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2023-06-26T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Smarte Strasse', 'Auto', 'Verkehr', 'Verkehrszählung', 'Stau']`
-- **Publisher** `Amt für Umwelt und Energie`
+- **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 

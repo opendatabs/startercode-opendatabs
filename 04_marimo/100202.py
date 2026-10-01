@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Bau- und Wohnungswesen']`
 - **Keywords** `['Administrative Einheit', 'Bezirk', 'Grundeigentum', 'Liegenschaft', 'Wohnviertel', 'Block']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

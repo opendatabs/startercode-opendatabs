@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Tourismus']`
 - **Keywords** `['Rhein', 'Fluss', 'Sport', 'Bachab', 'Schwimmen', 'Schwimmzone', 'BachApp', 'Schifffahrt', 'Schiff', 'Boot', 'Paddeln', 'SUP', 'Stand-Up-Paddeln', 'Treiben', 'Baden']`
-- **Publisher** `Kantonspolizei`
+- **Creator** `Kantonspolizei`
 - **Reference** `None`
 
 

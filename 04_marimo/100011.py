@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Arbeit, Erwerb', 'Bau- und Wohnungswesen', 'Bevölkerung', 'Raum und Umwelt', 'Finanzen', 'Industrie, Dienstleistungen', 'Soziale Sicherheit', 'Volkswirtschaft']`
 - **Keywords** `['Wohnen', 'Bevölkerungsbestand', 'Grünraum', 'Erwerbstätige', 'Arbeitslosigkeit', 'Bevölkerungsstruktur']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

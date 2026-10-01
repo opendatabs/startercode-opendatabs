@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Sport', 'Förderung', 'Swisslos']`
-- **Publisher** `Jugend, Familie und Sport`
+- **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
 
 

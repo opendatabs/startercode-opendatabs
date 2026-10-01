@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-05-21"
+date: "2026-10-01"
 output: html_document
 ---
 
@@ -23,7 +23,7 @@ Auto generated R starter code for data set 100150.
 - **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Verwaltung']`
 - **Keywords** `['Jahresbericht']`
-- **Publisher** `DCC Data Competence Center`
+- **Creator** `Statistisches Amt`
 - **Reference** `https://data.bs.ch/pages/jahresbericht_ogd/`
 
 

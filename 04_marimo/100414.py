@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `Dieser Datensatz zeigt die Anzahl Ankünfte und Logiernächte in baselstädtischen Hotels nach Herkunftsland und Kategorie auf täglicher Basis.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-02-06`
-- **Modified** `2026-05-13T09:03:25+00:00`
+- **Modified** `2026-09-15T07:04:06+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Tourismus']`
 - **Keywords** `['Herkunft', 'Event', 'Übernachtungen', 'Hotels', 'Ausland', 'Herkunftsland']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

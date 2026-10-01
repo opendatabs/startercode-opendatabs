@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Mobilität und Verkehr', 'Geographie', 'Tourismus']`
 - **Keywords** `['Velo', 'Fahrrad', 'Veloweg', 'E-Bike', 'Pedelec']`
-- **Publisher** `Amt für Mobilität`
+- **Creator** `Amt für Mobilität`
 - **Reference** `None`
 
 

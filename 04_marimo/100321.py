@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Bevölkerung']`
 - **Keywords** `['Nationalität', 'Bevölkerungsbestand', 'Demographie', 'Ausländer', 'Einwohnerzahl', 'Einbürgerung']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

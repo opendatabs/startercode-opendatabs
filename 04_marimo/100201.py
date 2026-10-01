@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Liegenschaften: Parzellen**
-    **Description**: Der Datensatz beinhaltet alle Liegenschaften des Kantons. Es wird zwischen Liegenschaft und Allmendparzelle unterschieden.
+    **Description**: <p>Die Liegenschaften sind eine Informationsebene der amtlichen Vermessung, die alle Liegenschaften, flächenmässig ausgeschieden selbständigen und dauernen Rechte und Grenzpunkte enthält. Im kantonalen Modell von Basel-Stadt wird zwischen Liegenschaft und Allmendparzelle unterschieden. Zudem gibt es zusätzlich zum Baurecht auch Unterbaurechte.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100201)*.
     """
@@ -55,16 +55,16 @@ def _(mo):
 
     - **Dataset_identifier** `100201`
 - **Title** `Liegenschaften: Parzellen`
-- **Description** `Der Datensatz beinhaltet alle Liegenschaften des Kantons. Es wird zwischen Liegenschaft und Allmendparzelle unterschieden.`
+- **Description** `<p>Die Liegenschaften sind eine Informationsebene der amtlichen Vermessung, die alle Liegenschaften, flächenmässig ausgeschieden selbständigen und dauernen Rechte und Grenzpunkte enthält. Im kantonalen Modell von Basel-Stadt wird zwischen Liegenschaft und Allmendparzelle unterschieden. Zudem gibt es zusätzlich zum Baurecht auch Unterbaurechte.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2022-10-03`
-- **Modified** `2026-05-06T00:00:00+00:00`
+- **Issued** `2026-08-18`
+- **Modified** `2026-08-20T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
-- **Keywords** `['amtliche-vermessung-av', 'grundbuch']`
-- **Publisher** `Grundbuch- und Vermessungsamt`
+- **Keywords** `None`
+- **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
 
 

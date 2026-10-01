@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt', 'Bevölkerung']`
 - **Keywords** `['Balancieren', 'Ballspiel', 'Karussell', 'Klettern', 'Rutsche', 'Skaten', 'Spielhaus', 'Spieltier', 'Tischfussball', 'Trampolin', 'Freizeit', 'Aktivitäten', 'Bewegungen', 'Fantasie', 'Geschicklichkeit', 'Sand', 'Kinder', 'Jugendliche', 'Kindergarten', 'Kleinkind', 'Schulkind', 'Schaukeln', 'Wippen']`
-- **Publisher** `Stadtgärtnerei`
+- **Creator** `Stadtgärtnerei`
 - **Reference** `None`
 
 

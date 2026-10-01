@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-05-21"
+date: "2026-10-01"
 output: html_document
 ---
 
@@ -23,7 +23,7 @@ Auto generated R starter code for data set 100399.
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Bevölkerung', 'Gesetzgebung']`
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Teilhabe', 'Demokratie', 'Parlament', 'Grosser Rat', 'Grossrat', 'Grossrätin']`
-- **Publisher** `Staatskanzlei`
+- **Creator** `Staatskanzlei`
 - **Reference** `None`
 
 

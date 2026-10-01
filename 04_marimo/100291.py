@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `<p>Gewässerschutzbereiche dienen dem qualitativen und quantitativen Schutz der ober- und unterirdischer Gewässer, denen im Kontext der Trinkwassergewinnung eine besondere Bedeutung zukommt. Die Gewässerschutzbereiche sind eindeutig definiert und unterlagern Grundwasserschutzzonen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2018-04-27`
-- **Modified** `2018-04-27T00:00:00+00:00`
+- **Modified** `2026-05-06T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
 - **Keywords** `['grundwasserschutz', 'grundwasser', 'gewasserschutz', 'gewasserschutzrecht', 'trinkwasser']`
-- **Publisher** `Amt für Umwelt und Energie`
+- **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 

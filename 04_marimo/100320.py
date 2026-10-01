@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `Wichtige Kennzahlen der baselstädtischen Spitäler. Dieser Datensatz fliesst in den Bericht des Bereiches Gesundheitsversorgung (GSV) des Gesundheitsdepartements, vor allem in Form eines Dashboards.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-15`
-- **Modified** `2025-04-28T07:47:32+00:00`
+- **Modified** `2026-07-16T15:00:50+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `None`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

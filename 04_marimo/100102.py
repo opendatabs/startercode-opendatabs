@@ -70,7 +70,7 @@ Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.<o:p>
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Gesetzgebung', 'Bevölkerung']`
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Präsident', 'Demokratie', 'Teilhabe', 'Gesamterneuerungswahl', 'Erster Wahlgang', 'Zweiter Wahlgang', 'Exekutive']`
-- **Publisher** `Staatskanzlei`
+- **Creator** `Staatskanzlei`
 - **Reference** `None`
 
 

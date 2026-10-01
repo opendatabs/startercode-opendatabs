@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Tourismus']`
 - **Keywords** `['Musik', 'Fragen', 'ESC']`
-- **Publisher** `Aussenbeziehungen und Standortmarketing`
+- **Creator** `Aussenbeziehungen und Standortmarketing`
 - **Reference** `None`
 
 

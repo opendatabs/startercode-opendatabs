@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Mobilität und Verkehr', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['St. Jakob', 'Gartenbad', 'Arena', 'Parken', 'St. Jakobshalle', 'St. Jakob-Park', 'St. Jakob-Arena', 'Sportanlage', 'Sperrung', 'Parkplätze', 'Verkehrsplanung']`
-- **Publisher** `Kantonspolizei`
+- **Creator** `Kantonspolizei`
 - **Reference** `None`
 
 

@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Energie']`
 - **Keywords** `['Strom', 'Stadtlast', 'Netzlast', 'Elektrizität', 'Gas', 'Wärme', 'Watt', 'Kilowattstunden', 'Gigawattstunden', 'Gasverbrauch', 'IWB']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

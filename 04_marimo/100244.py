@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Rhein', 'Birs', 'Wiese', 'Pegel', 'Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser']`
-- **Publisher** `Bundesamt für Umwelt BAFU`
+- **Creator** `Bundesamt für Umwelt BAFU`
 - **Reference** `None`
 
 

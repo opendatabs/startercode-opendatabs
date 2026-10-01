@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Arbeit, Erwerb']`
 - **Keywords** `['Bewilligungen', 'Öffnungszeiten', 'Ausnahmegenehmigungen']`
-- **Publisher** `Arbeitsinspektorat`
+- **Creator** `Arbeitsinspektorat`
 - **Reference** `None`
 
 

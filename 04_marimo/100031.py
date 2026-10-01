@@ -39,7 +39,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Sanitäre Anlagen**
-    **Description**: Öffentliche sanitäre Anlagen der Gemeinden Basel, Riehen und Bettingen: WC Anlage, WC Anlage rollstuhlgängig, nur Pissoir, Dusche, Anlage geschlossen (in Sanierung oder geschlossen).
+    **Description**: <p>Öffentliche sanitäre Anlagen und Nette Toiletten der Gemeinden Basel, Riehen und Bettingen.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100031)*.
     """
@@ -55,16 +55,16 @@ def _(mo):
 
     - **Dataset_identifier** `100031`
 - **Title** `Sanitäre Anlagen`
-- **Description** `Öffentliche sanitäre Anlagen der Gemeinden Basel, Riehen und Bettingen: WC Anlage, WC Anlage rollstuhlgängig, nur Pissoir, Dusche, Anlage geschlossen (in Sanierung oder geschlossen).`
+- **Description** `<p>Öffentliche sanitäre Anlagen und Nette Toiletten der Gemeinden Basel, Riehen und Bettingen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2026-05-06T00:00:00+00:00`
+- **Issued** `2017-02-07`
+- **Modified** `2026-08-10T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Geographie']`
-- **Keywords** `['WC', 'Toilette', 'Abort']`
-- **Publisher** `Tiefbauamt`
+- **Keywords** `['Dusche', 'Sanitär', 'Toilette', 'WC']`
+- **Creator** `Tiefbauamt`
 - **Reference** `None`
 
 

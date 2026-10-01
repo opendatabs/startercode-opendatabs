@@ -38,8 +38,8 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Hochbauprojekte Kanton Basel-Stadt**
-    **Description**: Die Karte zeigt eine repräsentative Auswahl an Projektstandorten laufender und abgeschlossener Hochbauprojekte des Kantons Basel-Stadt. Die Projektstandorte sind mit Projektinformationen und teilweise auch Projektdokumentationen hinterlegt, welche mittels Link abgerufen werden können.
+    # **Hochbauprojekte aus Verwaltungs- und Finanzvermögen**
+    **Description**: <p>Die Hochbauprojekte zeigen eine repräsentative Auswahl an Projektstandorten laufender und abgeschlossener Hochbauprojekte des Kantons Basel-Stadt. Die Projektstandorte sind mit Projektinformationen und teilweise auch Projektdokumentationen hinterlegt, welche mittels Link abgerufen werden können.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100402)*.
     """
@@ -54,17 +54,17 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100402`
-- **Title** `Hochbauprojekte Kanton Basel-Stadt`
-- **Description** `Die Karte zeigt eine repräsentative Auswahl an Projektstandorten laufender und abgeschlossener Hochbauprojekte des Kantons Basel-Stadt. Die Projektstandorte sind mit Projektinformationen und teilweise auch Projektdokumentationen hinterlegt, welche mittels Link abgerufen werden können.`
+- **Title** `Hochbauprojekte aus Verwaltungs- und Finanzvermögen`
+- **Description** `<p>Die Hochbauprojekte zeigen eine repräsentative Auswahl an Projektstandorten laufender und abgeschlossener Hochbauprojekte des Kantons Basel-Stadt. Die Projektstandorte sind mit Projektinformationen und teilweise auch Projektdokumentationen hinterlegt, welche mittels Link abgerufen werden können.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2024-11-14`
-- **Modified** `2026-02-27T00:00:00+00:00`
+- **Issued** `2024-09-03`
+- **Modified** `2026-06-30T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `1991-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2031-12-30T23:00:00+00:00`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
 - **Themes** `['Gebäude']`
-- **Keywords** `['Neubau', 'Umbau', 'Bauprojekte', 'Stadtentwicklung']`
-- **Publisher** `Städtebau & Architektur`
+- **Keywords** `['Hochbauprojekte', 'Projekte', 'Projektstandorte', 'Standorte']`
+- **Creator** `Städtebau & Architektur`
 - **Reference** `None`
 
 

@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Verwaltung']`
 - **Keywords** `['Jahresbericht']`
-- **Publisher** `DCC Data Competence Center`
+- **Creator** `Statistisches Amt`
 - **Reference** `https://data.bs.ch/pages/jahresbericht_ogd/`
 
 

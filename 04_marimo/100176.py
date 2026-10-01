@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2022-10-03T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Smarte Strasse', 'Parkplatz']`
-- **Publisher** `Amt für Mobilität`
+- **Creator** `Amt für Mobilität`
 - **Reference** `None`
 
 

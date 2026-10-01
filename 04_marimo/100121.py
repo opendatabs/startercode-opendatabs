@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Bildung, Wissenschaft']`
 - **Keywords** `['Zeitreihe', 'Prognose', 'Bildung', 'Schule', 'Schüler']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt', 'Geographie']`
 - **Keywords** `['Baum', 'Stadtbaum', 'Unterhalt', 'Pflege', 'Ersatz', 'Fällung', 'Kataster']`
-- **Publisher** `Stadtgärtnerei`
+- **Creator** `Stadtgärtnerei`
 - **Reference** `None`
 
 

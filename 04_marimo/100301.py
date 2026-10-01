@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Bevölkerung', 'Gesetzgebung']`
 - **Keywords** `['Wahlen', 'Bürgergemeinderat']`
-- **Publisher** `Bürgergemeinde der Stadt Basel`
+- **Creator** `Bürgergemeinde der Stadt Basel`
 - **Reference** `None`
 
 

@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Politik', 'Bevölkerung']`
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Parlament', 'Ständerat', 'Kleine Kammer', 'Bundeshaus']`
-- **Publisher** `Staatskanzlei`
+- **Creator** `Staatskanzlei`
 - **Reference** `None`
 
 

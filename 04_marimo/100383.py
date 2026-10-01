@@ -70,7 +70,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Energie']`
 - **Keywords** `['Solarenergie', 'Solarkollektor']`
-- **Publisher** `Amt für Umwelt und Energie`
+- **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-05-21"
+date: "2026-10-01"
 output: html_document
 ---
 
@@ -26,7 +26,7 @@ Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial 
 - **Temporal_coverage_end_date** `2023-06-29T22:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Corona', 'impfen', 'Prophylaxe', 'Vakzin', 'COVID-19', 'Coronavirus', 'Krankheit', 'Lungenentzündung']`
-- **Publisher** `Medizinische Dienste`
+- **Creator** `Medizinische Dienste`
 - **Reference** `None`
 
 

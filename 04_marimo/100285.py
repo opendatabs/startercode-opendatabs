@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Raum und Umwelt', 'Tourismus']`
 - **Keywords** `['Rhein', 'Treppen']`
-- **Publisher** `Tiefbauamt`
+- **Creator** `Tiefbauamt`
 - **Reference** `None`
 
 

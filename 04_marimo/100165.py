@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2021-12-31T23:00:00+00:00`
 - **Themes** `['Finanzen']`
 - **Keywords** `['Gemeinden', 'Zeitreihe', 'Steuern', 'Einkommen', 'Wohnviertel']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

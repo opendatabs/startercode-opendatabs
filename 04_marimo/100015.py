@@ -38,8 +38,8 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Basel Info: Interessante Orte (POI)**
-    **Description**: Basel Info ist das Fussgängerorientierungssystem für Basel-Stadt. Die detailreich gestalteten Karten ermöglichen den Nutzern, die Stadt selbstständig zu Fuss oder mit dem öV zu entdecken. Zusätzlich bieten 38 Gruppen von Points of Interest, unterteilt in 8 Klassen, nützliche Informationen für Touristen und Anwohner gleichermassen.
+    # **Basel Info Points of Interest**
+    **Description**: <p>Basel Info ist das Fussgängerorientierungssystem für Basel-Stadt. Die detailreich gestalteten Karten ermöglichen den Nutzern, die Stadt selbstständig zu Fuss oder mit dem öV zu entdecken. Zusätzlich bieten 38 Gruppen von Points of Interest, unterteilt in 8 Klassen, nützliche Informationen für Touristen und Anwohner gleichermassen.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100015)*.
     """
@@ -54,17 +54,17 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100015`
-- **Title** `Basel Info: Interessante Orte (POI)`
-- **Description** `Basel Info ist das Fussgängerorientierungssystem für Basel-Stadt. Die detailreich gestalteten Karten ermöglichen den Nutzern, die Stadt selbstständig zu Fuss oder mit dem öV zu entdecken. Zusätzlich bieten 38 Gruppen von Points of Interest, unterteilt in 8 Klassen, nützliche Informationen für Touristen und Anwohner gleichermassen.`
+- **Title** `Basel Info Points of Interest`
+- **Description** `<p>Basel Info ist das Fussgängerorientierungssystem für Basel-Stadt. Die detailreich gestalteten Karten ermöglichen den Nutzern, die Stadt selbstständig zu Fuss oder mit dem öV zu entdecken. Zusätzlich bieten 38 Gruppen von Points of Interest, unterteilt in 8 Klassen, nützliche Informationen für Touristen und Anwohner gleichermassen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2026-05-04T00:00:00+00:00`
+- **Issued** `2017-05-29`
+- **Modified** `2026-08-18T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Tourismus', 'Geographie', 'Kultur, Medien, Informationsgesellschaft, Sport']`
-- **Keywords** `['Fussgänger', 'Sehenswürdigkeit', 'Museum', 'Kultureinrichtungen', 'POI', 'Points of Interest']`
-- **Publisher** `Kantons- und Stadtentwicklung`
+- **Keywords** `['Basel Info', 'Fussgängerorientierung', 'POI', 'Tourismus']`
+- **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
 
 

@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Kultur', 'Kunstobjekte', 'Ethnologie']`
-- **Publisher** `Museum der Kulturen Basel`
+- **Creator** `Museum der Kulturen Basel`
 - **Reference** `None`
 
 

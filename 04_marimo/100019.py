@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `<p>Der Datensatz zeigt sämtliche Standorte öffentlich zugänglicher Defibrillatoren in Basel-Stadt. Diese sind so auch in der First Responder App einsehbar. <br>Die entsprechenden Standorte sind in der Kartenanwendung mit einem grünen Herz-Symbol signalisiert und mit Beschreibungen zu Standort und Erreichbarkeit angereichert.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2018-08-07`
-- **Modified** `2018-08-07T00:00:00+00:00`
+- **Modified** `2026-05-05T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Gesundheit', 'Geographie']`
 - **Keywords** `['DEFI', 'Gesundheit', 'Herz-Kreislauf-Stillstand', 'Impulsgeber', 'Medizinisches Material', 'Notfall', 'Schockgeber', 'Herz', 'CPR', 'Lunge', 'Standort', 'Wiederbelebung']`
-- **Publisher** `Rettung`
+- **Creator** `Rettung`
 - **Reference** `None`
 
 

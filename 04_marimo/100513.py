@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Verwaltung']`
 - **Keywords** `['Gutachten', 'Befund', 'Bewertung', 'Analyse', 'Schlussfolgerung', 'Empfehlung', 'Akademie', 'Universitäten']`
-- **Publisher** `Staatskanzlei`
+- **Creator** `Staatskanzlei`
 - **Reference** `None`
 
 

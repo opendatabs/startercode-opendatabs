@@ -74,13 +74,13 @@ wurden keine Abwasserproben auf Influenza und RSV untersucht.</span><br></p><p><
 </div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
-- **Modified** `2026-05-19T15:01:11+00:00`
+- **Modified** `2026-09-28T23:01:16+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-08-13T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Abwasser', 'Influenza', 'RSV', 'Kanalisation', 'Krankheit', 'Kläranlage', 'Grippe']`
-- **Publisher** `Kantonales Laboratorium`
+- **Creator** `Kantonales Laboratorium`
 - **Reference** `None`
 
 

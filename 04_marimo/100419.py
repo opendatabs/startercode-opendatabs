@@ -68,13 +68,13 @@ und Verkehrsmassnahmen enthalten. Der Datensatz ist eine wichtige
 Datengrundlage für die Planungsstellen in den Kantonen BS und BL.<o:p></o:p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-12-04`
-- **Modified** `2026-05-13T05:50:26+00:00`
+- **Modified** `2026-10-01T05:50:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Mobilität und Verkehr', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['St. Jakob', 'Gartenbad', 'Arena', 'Parken', 'St. Jakobshalle', 'St. Jakob-Park', 'St. Jakob-Arena', 'Sportanlage', 'Sperrung', 'Parkplätze', 'Verkehrsplanung']`
-- **Publisher** `Kantonspolizei`
+- **Creator** `Kantonspolizei`
 - **Reference** `None`
 
 

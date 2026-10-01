@@ -60,13 +60,13 @@ def _(mo):
 <p>Statistische Nummerierung:<br>Im Gegensatz zum amtlichen Gemeindeverzeichnis der Schweiz wird für räumliche Auswertungen auf Gemeinde-Ebene auf die Nummerierung der Wohnviertel zurückgegriffen:<br>- Die Stadt Basel (BFS-Code 2701) hat keine eigene Identifikationsnummer. Auswertungen beruhen auf einem Zusammenzug der 19 Wohnviertel, die von 01 bis 19 nummeriert sind.<br>- Die Gemeinde Bettingen (BFS-Code 2702) hat die Wohnviertel-Nr. 20.<br>- Die Gemeinde Riehen (BFS-Code 2703) hat die Wohnviertel-Nr. 30.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2011-02-17`
-- **Modified** `2011-02-17T00:00:00+00:00`
+- **Modified** `2026-05-06T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie']`
 - **Keywords** `['Wohnbezirk', 'Wohnblock', 'Wohnblockseite', 'Wohnviertel', 'Statistik', 'Einteilung', 'Quartier']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

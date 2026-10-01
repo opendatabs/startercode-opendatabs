@@ -1,10 +1,10 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-05-21"
+date: "2026-10-01"
 output: html_document
 ---
 
-## Dataset: Bodenbedeckungen
+## Dataset: Bodenbedeckung
 
 [Direct data shop link for dataset](https://data.bs.ch/explore/dataset/100477)
 
@@ -13,17 +13,17 @@ Auto generated R starter code for data set 100477.
 ## Metadata
 
 - **Dataset_identifier** `100477`
-- **Title** `Bodenbedeckungen`
-- **Description** `Der Datensatz enthält eine flächendeckende Erfassung der Bodenbedeckung im Kanton Basel-Stadt. Jede Fläche ist einer Bodenbedeckungskategorie zugeordnet (z. B. Gebäude, Gewässer, befestigt, bestockt, humusiert) und wird durch Polygone repräsentiert.`
+- **Title** `Bodenbedeckung`
+- **Description** `<p>Die Bodenbedeckung ist eine Informationsebene der amtlichen Vermessung, in der Objekte wie Gebäude, befestigte Flächen, humusierte Flächen, Wasserflächen, bestockte Flächen und vegetationslose Flächen zusammengefasst sind.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2025-10-03`
-- **Modified** `2026-05-21T08:01:49+00:00`
+- **Issued** `2026-08-18`
+- **Modified** `2026-08-20T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
-- **Keywords** `['Landnutzung', 'Flächennutzung', 'Raumplanung', 'Stadtplanung', 'Umwelt', 'Gewässer', 'humusiert', 'befestigt', 'bestockt', 'Natur', 'Gebäude', 'Strassen', 'Trottoir', 'Gartenanlagen', 'Wald', 'Vegetation', 'Landwirtschaft', 'Verkehrsflächen', 'Infrastruktur', 'Versiegelung']`
-- **Publisher** `Grundbuch- und Vermessungsamt`
+- **Keywords** `None`
+- **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
 
 

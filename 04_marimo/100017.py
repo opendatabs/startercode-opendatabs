@@ -38,8 +38,8 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Gemeinden**
-    **Description**: Zum Kanton Basel-Stadt zählen die Stadt Basel und die Gemeinden Riehen und Bettingen.
+    # **Gemeinde**
+    **Description**: <p>Die Gemeindegrenzen sind Bestandteil der Informationsebene Hoheitsgrenzen der amtlichen Vermessung und bilden die Gemeindegrenzen inklusive Hoheitsgrenzpunkte des Kantons Basel-Stadt ab. Der Kanton Basel-Stadt beinhaltet die Gemeinden Basel, Bettingen und Riehen.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100017)*.
     """
@@ -54,17 +54,17 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100017`
-- **Title** `Gemeinden`
-- **Description** `Zum Kanton Basel-Stadt zählen die Stadt Basel und die Gemeinden Riehen und Bettingen.`
+- **Title** `Gemeinde`
+- **Description** `<p>Die Gemeindegrenzen sind Bestandteil der Informationsebene Hoheitsgrenzen der amtlichen Vermessung und bilden die Gemeindegrenzen inklusive Hoheitsgrenzpunkte des Kantons Basel-Stadt ab. Der Kanton Basel-Stadt beinhaltet die Gemeinden Basel, Bettingen und Riehen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2019-11-06`
-- **Modified** `2026-05-06T00:00:00+00:00`
+- **Issued** `2026-08-18`
+- **Modified** `2026-08-20T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2008-01-03T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2008-01-03T23:00:00+00:00`
+- **Temporal_coverage_start_date** `None`
+- **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Verwaltung', 'Statistische Grundlagen']`
-- **Keywords** `['Post', 'Postleitzahl', 'Brief', 'Paket']`
-- **Publisher** `Grundbuch- und Vermessungsamt`
+- **Keywords** `None`
+- **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
 
 

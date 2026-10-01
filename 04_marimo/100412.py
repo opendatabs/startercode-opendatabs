@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2023-12-30T23:00:00+00:00`
 - **Themes** `['Bevölkerung']`
 - **Keywords** `['Alter', 'Gemeinden', 'Wohnen', 'Demographie', 'Geschlecht', 'Lebensqualität', 'Einkommen', 'Befragungen']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/hintergrund/befragungen`
 
 

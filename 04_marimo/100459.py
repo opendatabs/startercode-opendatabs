@@ -62,13 +62,13 @@ def _(mo):
 <p>Weiterführende Informationen zu den Notfalltreffpunkten: <a href="https://www.bs.ch/themen/sicherheit-und-demokratie/im-notfall/notfalltreffpunkte" target="_blank">https://www.bs.ch/themen/sicherheit-und-demokratie/im-notfall/notfalltreffpunkte</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-08-12`
-- **Modified** `2026-05-01T01:11:15+00:00`
+- **Modified** `2026-05-05T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Geographie']`
 - **Keywords** `['Bevölkerungsschutz', 'Blackout', 'Bundesamt für Bevölkerungsschutz (BABS)', 'Erdbeben', 'Ereignisfall', 'Evakuierungspunkt', 'Hilfe', 'Informationsstelle Katastrophe', 'Katastrophenschutz', 'Krisenmanagement Gemeinde', 'Notfall', 'Notfallhilfe', 'Notfallkommunikation', 'Notfalltreffpunkt', 'Notfallversorgung', 'Notunterkunft Schweiz', 'Schutzmassnahmen', 'Schutz & Rettung', 'Sicherheit', 'Stromausfall', 'Versorgungsstützpunkt', 'Notunterkunft', 'Polizei']`
-- **Publisher** `Kantonspolizei`
+- **Creator** `Kantonspolizei`
 - **Reference** `None`
 
 

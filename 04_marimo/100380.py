@@ -68,7 +68,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Politik']`
 - **Keywords** `['Entwicklung', 'Entwicklungszusammenarbeit', 'Projekte', 'Engagement', 'Ausland', 'international', 'Medizin', 'Bildung', 'Landwirtschaft', 'Gewerbeförderung', 'Hilfswerk']`
-- **Publisher** `Aussenbeziehungen und Standortmarketing`
+- **Creator** `Aussenbeziehungen und Standortmarketing`
 - **Reference** `None`
 
 

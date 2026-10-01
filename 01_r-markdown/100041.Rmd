@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-05-21"
+date: "2026-10-01"
 output: html_document
 ---
 
@@ -17,13 +17,13 @@ Auto generated R starter code for data set 100041.
 - **Description** `<p>Die statistische Blockseite ist die dem angrenzenden Strassenraum zugeordnete Seite eines statistischen Blocks. Blockseiten haben wie die Blöcke keine Namensbezeichnung und werden lediglich über die Nummer referenziert. Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr., gefolgt von einem vierstelligen Strassencode.<br>Code: Der erste Codeteil besteht aus Wohnviertel-, Bezirks- und Blocknummerierung (nicht punktgetrennt); dann folgt mit einem Unterstrich verbunden der zweite Codeteil, der Strassencode. Z. B. Blockseite 172005_1723</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2011-02-17`
-- **Modified** `2011-02-17T00:00:00+00:00`
+- **Modified** `2026-05-06T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Statistische Grundlagen']`
 - **Keywords** `['Wohnbezirk', 'Wohnblock', 'Wohnblockseite', 'Wohnviertel', 'Einteilung', 'Statistik']`
-- **Publisher** `Statistisches Amt`
+- **Creator** `Statistisches Amt`
 - **Reference** `None`
 
 

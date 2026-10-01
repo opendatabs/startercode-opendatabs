@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2023-05-01T22:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Corona', 'COVID-19', 'Spital', 'USB', 'Intensivstation', 'ICU', 'Beatmet', 'Coronavirus', 'Krankheit', 'Lungenentzündung']`
-- **Publisher** `Bereich Gesundheitsversorgung`
+- **Creator** `Bereich Gesundheitsversorgung`
 - **Reference** `None`
 
 

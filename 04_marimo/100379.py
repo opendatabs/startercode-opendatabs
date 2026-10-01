@@ -38,7 +38,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Kandidaturen der Gerichtspräsidienwahlen**
+    # **Kandidierende der Gerichtspräsidienwahlen seit 2024**
     **Description**: <p>Dieser Datensatz enthält Informationen zu den Kandidaturen für alle Gerichtspräsidienwahlen seit 2024<br></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100379)*.
@@ -54,17 +54,17 @@ def _(mo):
     /// details | Metadata
 
     - **Dataset_identifier** `100379`
-- **Title** `Kandidaturen der Gerichtspräsidienwahlen`
+- **Title** `Kandidierende der Gerichtspräsidienwahlen seit 2024`
 - **Description** `<p>Dieser Datensatz enthält Informationen zu den Kandidaturen für alle Gerichtspräsidienwahlen seit 2024<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-06-25`
-- **Modified** `2026-03-16T11:15:57+00:00`
+- **Modified** `2026-08-06T08:45:32+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Politik']`
+- **Themes** `['Politik', 'Gesetzgebung', 'Bevölkerung']`
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Strafgericht', 'Gericht', 'Demokratie']`
-- **Publisher** `Staatskanzlei`
+- **Creator** `Staatskanzlei`
 - **Reference** `None`
 
 

@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2025-09-29T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Energie', 'Industrie, Dienstleistungen']`
 - **Keywords** `['Elektroautos', 'Elektromobilität', 'Ladestationen', 'IWB', 'Tankstellen', 'Elektroladestation', 'Echtzeit', 'Realtime']`
-- **Publisher** `Industrielle Werke Basel`
+- **Creator** `Industrielle Werke Basel`
 - **Reference** `None`
 
 

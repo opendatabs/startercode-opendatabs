@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['covid19', 'pandemic', 'pandémie', 'Suisse', 'CH', 'Switzerland', 'coronavirus']`
-- **Publisher** `OpenZH`
+- **Creator** `OpenZH`
 - **Reference** `None`
 
 

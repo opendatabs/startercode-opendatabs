@@ -58,13 +58,13 @@ def _(mo):
 - **Description** `Der Datensatz enthält allgemeine Infotexte und Links, welche in der BachApp publiziert werden.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-05-15`
-- **Modified** `2026-04-30T10:45:29+00:00`
+- **Modified** `2026-09-02T11:15:37+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2022-11-20T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2099-12-30T23:00:00+00:00`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Tourismus']`
 - **Keywords** `['Informationen', 'Angebote']`
-- **Publisher** `Kantons- und Stadtentwicklung`
+- **Creator** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
 
 

@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Öffentliche Ordnung und Sicherheit', 'Mobilität und Verkehr']`
 - **Keywords** `['Schulweg', 'Sicherheit', 'Kindergarten', 'Primarschule', 'Sekundarschule', 'Schüler', 'Schülerin', 'Unfall', 'Prävention', 'Fussweg', 'Strasse', 'Trottoir', 'Gehsteig', 'Querung', 'überqueren', 'Fussgängerstreifen']`
-- **Publisher** `Kantonspolizei`
+- **Creator** `Kantonspolizei`
 - **Reference** `None`
 
 

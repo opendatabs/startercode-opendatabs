@@ -64,7 +64,7 @@ def _(mo):
 - **Temporal_coverage_end_date** `2021-12-15T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `['Impfung', 'Corona', 'Coronavirus', 'SARS-CoV-2', 'geimpft', 'Warteliste', 'Impftermin', 'Vaccination', 'COVID-19']`
-- **Publisher** `Medizinische Dienste`
+- **Creator** `Medizinische Dienste`
 - **Reference** `None`
 
 
