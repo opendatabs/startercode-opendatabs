@@ -68,10 +68,10 @@ die alle 10 Minuten aktualisiert werden. </p><p>Für die Bezirke wird folgender
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Hinweis:</span></p><p style="font-family: sans-serif;">Die Daten enthalten eine Lücke zwischen dem 2. und 22. April 2025, da es einen Unterbruch im Extrahieren der Daten gab.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2026-10-01T04:19:41+00:00`
+- **Modified** `2026-10-02T04:04:01+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2026-06-30T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-08-30T22:00:00+00:00`
+- **Temporal_coverage_start_date** `2026-07-31T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-09-29T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'Shared', 'E-Mobility', 'Mobility', 'Veloverleih', 'Verkehr']`
 - **Creator** `Statistisches Amt`
