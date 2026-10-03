@@ -61,7 +61,7 @@ def _(mo):
 - **Modified** `2026-10-02T03:01:33+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2013-01-24T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-08-27T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-01T22:00:00+00:00`
 - **Themes** `['Politik', 'Verwaltung']`
 - **Keywords** `['Grosser Rat', 'Parlament', 'Legislative', 'Abstimmung', 'Geschäft', 'Kalender']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
