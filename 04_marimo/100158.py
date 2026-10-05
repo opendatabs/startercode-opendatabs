@@ -82,18 +82,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `messbeginn` | date | Beginn der Messung |
-| `messende` | date | Ende der Messung |
-| `standort` | text | Name des Standorts |
-| `parameter` | text | Gemessener Stoff |
-| `messwert` | double | Gemessener Wert |
-| `interventionswert` | double | Interventionswert |
-| `warnwert` | double | Warnwert |
-| `einheit` | text | Einheit, in welcher der Wert gemessen wird |
-| `messmethode` | text | Messmethode |
-| `geo_point_2d` | geo_point_2d | Koordinaten des Standorts |
+_No field information available._
 
 
     ///

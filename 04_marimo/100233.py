@@ -80,20 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `timestamp_interval_start` | datetime | Startzeitpunkt der Messperiode |
-| `timestamp_interval_start_text` | text | — |
-| `stromverbrauch_kwh` | double | Stromverbrauch innerhalb des Viertelstundenintervalls |
-| `grundversorgte_kunden_kwh` | double | Stromverbrauch durch Kunden in der Grundversorgung |
-| `freie_kunden_kwh` | double | Stromverbrauch durch Kunden, welche Strom im freien Markt beziehen |
-| `year` | text | Jahr als Text |
-| `month` | int | Monat (1 = Januar, etc.) |
-| `day` | int | Tag |
-| `weekday` | int | Wochentag als Zahl (0 = Montag, 1 = Dienstag, etc.) |
-| `dayofyear` | int | Tag innerhalb des Jahres (1. Januar = 1, etc.) |
-| `quarter` | int | Quartal des Jahres (1, 2, 3, 4) |
-| `weekofyear` | int | Woche (1, 2, 3, etc.) |
+_No field information available._
 
 
     ///

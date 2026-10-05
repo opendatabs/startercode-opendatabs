@@ -80,20 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `messbeginn` | date | Beginn der Messung |
-| `messende` | date | Ende der Messung |
-| `standort` | text | Name des Standorts |
-| `parameter` | text | Gemessener Stoff |
-| `messwert` | double | Gemessener Wert |
-| `messwert_3_dezimalstellen` | double | Messwert 3 Dezimalstellen |
-| `interventionswert` | double | Interventionswert |
-| `interventionswert_3_dez` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
-| `warnwert` | double | Warnwert |
-| `warnwert_3_dez` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
-| `einheit` | text | Einheit, in welcher der Wert gemessen wird |
-| `messmethode` | text | Messmethode |
+_No field information available._
 
 
     ///

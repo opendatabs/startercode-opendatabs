@@ -84,16 +84,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `jahr` | date | Das Jahr, in dem das Projekt finanziell unterstützt wird. |
-| `projekt_titel` | text | Der Name des geförderten Entwicklungsprojekts. |
-| `staat` | text | Das Land, in dem das Projekt durchgeführt wird. |
-| `organisation` | text | Die Hilfsorganisation oder Institution, die das Projekt durchführt und um finanzielle Unterstützung bittet. |
-| `betrag_entscheid` | text | Der finanzielle Beitrag, der von der Kommission für das Projekt genehmigt wurde. |
-| `projektbeschrieb` | text | Eine kurze Zusammenfassung der Ziele und Aktivitäten des Projekts. |
-| `region` | text | Die spezifische Region innerhalb des Staates, in der das Projekt stattfindet. |
-| `sachgebiet` | text | Das Hauptthema oder der Schwerpunkt des Projekts (z.B. medizinische Versorgung, Bildung). |
+_No field information available._
 
 
     ///

@@ -80,27 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `egid` | int | Eidgenössischer Gebäudeidentifikator |
-| `ewid` | int | Eidgenössischer Wohnungsidentifikator |
-| `edid` | int | Eidgenössischer Eingangsidentifikator |
-| `whgnr` | int | Administrative Wohnungsnummer |
-| `weinr` | text | Physische Wohnungsnummer |
-| `wstwk` | int | Stockwerk Code |
-| `wstwk_decoded` | text | Stockwerk Bezeichnung |
-| `wbez` | text | Lage auf dem Stockwerk |
-| `wmehrg` | int | Mehrgeschossige Wohnung Code |
-| `wmehrg_decoded` | text | Mehrgeschossige Wohnung Bezeichnung |
-| `wbauj` | text | Baujahr der Wohnung |
-| `wabbj` | text | Abbruchjahr der Wohnung |
-| `wstat` | int | Wohnungsstatus Code |
-| `wstat_decoded` | text | Wohnungsstatus Bezeichnung |
-| `warea` | int | Wohnungsfläche (in m2) |
-| `wazim` | int | Anzahl Zimmer |
-| `wkche` | int | Kocheinrichtung Code |
-| `wkche_decoded` | text | Kocheinrichtung Bezeichnung |
-| `wexpdat` | date | Exportdatum |
+_No field information available._
 
 
     ///

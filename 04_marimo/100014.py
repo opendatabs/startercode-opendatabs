@@ -58,7 +58,7 @@ def _(mo):
 - **Description** `<p>Stündlich aktualisierte Belegungsdaten der öffentlichen Parkhäuser der Stadt Basel, bezogen über das Parkleitsystem Basel (<a href="https://www.parkleitsystem-basel.ch" target="_blank">https://www.parkleitsystem-basel.ch</a>).</p><p>Historische Daten mit kleinerer zeitlicher Auflösung können auch über das API von ParkenDD bezogen werden, wie hier am Beispiel der Parkhäuser der Stadt Zürich beschrieben: <a href="https://opendatazurich.github.io/parkendd-api//" target="_blank">https://opendatazurich.github.io/parkendd-api//</a> (die Parkhäuser von Basel sind über diese URL abrufbar: <a href="https://api.parkendd.de/Basel" target="_blank">https://api.parkendd.de/Basel</a>). </p><p>Die Standorte der Parkhäuser sind in diesem Datensatz ersichtlich: <a href="https://data.bs.ch/explore/dataset/100044/" target="_blank">https://data.bs.ch/explore/dataset/100044/</a>.<a href="https://data.bs.ch/explore/dataset/100044/" target="_blank"></a></p><p>Änderungsprotokoll:</p><p>14.08.2023 - Neue Spalte "auslastungen" wurde hinzugefügt.</p><p>28.11.2024 - Es gibt eine Lücke vom 21. Oktober 2024 bis zum 28. November 2024.</p><p>28.11.2024 - Centralbahnparking wurde zu Centralbahn umbenannt in den Spalten id, id2, name, title.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2026-10-05T12:05:30+00:00`
+- **Modified** `2026-10-05T15:05:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-02-06T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-10-04T22:00:00+00:00`
@@ -80,20 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `published` | datetime | Datum und Uhrzeit der Publikation des Wertes |
-| `free` | int | Anzahl freie Parkplätze |
-| `total` | int | Anzahl Plätze insgesamt |
-| `auslastungen` | double | Anteil belegter Parkplätze in Prozent |
-| `id` | text | Eindeutige ID des Parkhauses |
-| `id2` | text | Eindeutige ID des Parkhauses weltweit |
-| `title` | text | Name des Parkhauses |
-| `name` | text | Name des Parkhauses ohne den Text "Parkhaus" |
-| `address` | text | — |
-| `link` | text | Link zu den Detailinformationen des jeweiligen Parkhauses |
-| `geo_point_2d` | geo_point_2d | Standort des Parkhauses |
-| `description` | text | Text, der die Anzahl freier Parkplätze enthält |
+_No field information available._
 
 
     ///
