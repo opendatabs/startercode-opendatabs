@@ -29,7 +29,31 @@ Auto generated R starter code for data set 100013.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `zst_nr` | text | Zählstellennummer als Text |
+| `zst_id` | int | Zählstellennummer in numerischer Form |
+| `sitecode` | text | Zählstellencode |
+| `sitename` | text | Zählstellenname |
+| `datetimefrom` | datetime | Datum und Uhrzeit Messbeginn (in UTC) |
+| `datetimeto` | datetime | Datum und Uhrzeit Messende (in UTC) |
+| `directionname` | text | Richtung/Strassenseite |
+| `lanecode` | int | Spurnummer |
+| `lanename` | text | Spurname |
+| `valuesapproved` | int | Daten validiert (1 ja, 0 nein) [Validierte Verkehrszahlen sind kontrollierte und ergänzte Rohdaten. Fehlwerte werden dann ergänzt, wenn sie aufgrund von technischen Problemen entstanden sind.] |
+| `valuesedited` | int | Ersatzwerte (1 ja, 0 nein) [Fehlwerte werden dann ergänzt, wenn sie aufgrund von technischen Problemen entstanden sind.] |
+| `traffictype` | text | Verkehrsmittel (MIV = motorisierter Individualverkehr) |
+| `total` | int | Anzahl Fahrzeuge |
+| `year` | text | Jahr |
+| `month` | int | Monat (1=Januar, 12=Dezember) |
+| `day` | int | Tag |
+| `weekday` | int | Wochentag (0=Montag, 6=Sonntag) |
+| `hourfrom` | int | Stunde des Messbeginns |
+| `date` | text | Datum der Messung als Text |
+| `timefrom` | text | Zeit Messbeginn als Text |
+| `timeto` | text | Zeit Messende als Text |
+| `dayofyear` | int | Nummer des Tages innerhalb des aktuellen Jahres |
+| `geo_point_2d` | geo_point_2d | — |
 
 
 # Load packages

@@ -80,7 +80,14 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Fläche des Postleitzahlkreises |
+| `id` | int | Eindeutiger Indentifikator |
+| `postleitzahl` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `postleitzahlenzusatz` | int | 2 Positionen gemäss offiziellem PLZ-Verzeichnis der schweizerischen Post. Im Kanton Basel-Stadt ist diese bisher in der Regel “00”. |
+| `status` | text | Status de Postleitzahl |
 
 
     ///

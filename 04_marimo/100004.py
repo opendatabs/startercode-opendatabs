@@ -80,7 +80,16 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `addresse` | text | — |
+| `power` | text | — |
+| `location` | text | — |
+| `geo_point_2d` | geo_point_2d | — |
+| `parkingfield` | int | — |
+| `totalparkings` | int | — |
+| `status` | text | — |
+| `timestamp` | datetime | — |
 
 
     ///

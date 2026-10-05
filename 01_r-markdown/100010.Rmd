@@ -29,7 +29,55 @@ Auto generated R starter code for data set 100010.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
+| `wov_id` | text | ID des Wohnviertels |
+| `wov_name` | text | Name des Wohnviertels |
+| `wohnbezirk_id` | text | ID des Wohnbezirks |
+| `bez_label` | text | Label des Bezirks |
+| `bez_name` | text | Name des Wohnbezirks |
+| `total` | int | Gesamtzahl leerstehender Wohnungen nach Bezirk und Zimmerzahl |
+| `zimmerzahl_ganzzahlig` | int | Zimmerzahl der Wohnung: Halbe Zimmer werden nicht ausgewiesen |
+| `wfl_min_30m2` | int | Wohnfläche beträgt bis 30 Quadratmeter |
+| `wfl_31m2_50m2` | int | Wohnfläche beträgt 31 bis 50 Quadratmeter |
+| `wfl_51m2_70m2` | int | Wohnfläche beträgt 51 bis 70 Quadratmeter |
+| `wfl_71m2_90m2` | int | Wohnfläche beträgt 71 bis 90 Quadratmeter |
+| `wfl_91m2_110m2` | int | Wohnfläche beträgt 91 bis 110 Quadratmeter |
+| `wfl_111m2_130m2` | int | Wohnfläche beträgt 111 bis 130 Quadratmeter |
+| `wfl_131m2_max` | int | Wohnfläche beträgt ab 131 Quadratmeter |
+| `wfl_unbekannt` | int | Wohnfläche der Wohnung ist unbekannt |
+| `gb_efh` | int | Gebäudetyp Einfamilienhaus |
+| `gb_mfh` | int | Gebäudetyp Mehrfamilienhaus |
+| `gb_gemischte_nutzung` | int | Gebäudetyp gemischte Nutzung: Gewerbe- und Wohnnutzung im gleichen Gebäude |
+| `gb_andere` | int | Anderer Gebäudetyp: Mehrfamilienhaus oder gemischte Nutzung |
+| `pd_min_1920` | int | Bauperiode des Gebäudes bis 1920 |
+| `pd_1921_1950` | int | Bauperiode des Gebäudes von 1921 bis 1950 |
+| `pd_1951_1980` | int | Bauperiode des Gebäudes von 1951 bis 1980 |
+| `pd_1981_2010` | int | Bauperiode des Gebäudes von 1981 bis 2010 |
+| `pd_2011_max` | int | Bauperiode des Gebäudes ab 2011 |
+| `rn_renoviert` | int | Wohnung wurde renoviert, umgebaut oder totalsaniert in den letzten 2 Jahren |
+| `rn_nicht_renoviert` | int | Wohnung wurde nicht renoviert in den letzten 2 Jahren |
+| `rn_neu_gebaut` | int | Wohnung wurde neu gebaut in den letzten 2 Jahren |
+| `ang_miete` | int | Wohnung wird nur zur Miete angeboten |
+| `ang_kauf` | int | Wohnung wird nur zum Kauf angeboten |
+| `ang_miete_kauf` | int | Wohnung wird zum Kauf und zur Miete angeboten |
+| `p_min_1000` | int | Nettomiete CHF bis 1000 |
+| `p_1001_1250` | int | Nettomiete CHF 1001 bis 1250 |
+| `p_1251_1500` | int | Nettomiete CHF 1251 bis 1500 |
+| `p_1501_1750` | int | Nettomiete CHF 1501 bis 1750 |
+| `p_1751_2000` | int | Nettomiete CHF 1751 bis 2000 |
+| `p_2001_2250` | int | Nettomiete CHF 2001 bis 2250 |
+| `p_2251_2500` | int | Nettomiete CHF 2251 bis 2500 |
+| `p_2501_2750` | int | Nettomiete CHF 2501 bis 2750 |
+| `p_2751_3000` | int | Nettomiete CHF 2751 bis 3000 |
+| `p_3001_3250` | int | Nettomiete CHF 3001 bis 3250 |
+| `p_3251_3500` | int | Nettomiete CHF 3251 bis 3500 |
+| `p_unbekannt` | int | Nettomiete ist unbekannt |
+| `p_3501_max` | int | Nettomiete CHF ab 3501 |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
+| `geo_point_2d` | geo_point_2d | — |
 
 
 # Load packages
