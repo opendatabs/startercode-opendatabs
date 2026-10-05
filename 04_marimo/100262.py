@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100262`
+- **Dataset_identifier** `100262`
 - **Title** `Gewässernetz: Eindolungen`
 - **Description** `Der Datensatz dokumentiert die Eindolungen von Gewässerabschnitten in Basel-Stadt, d. h. Abschnitte, in denen Bäche und Teiche überdeckt oder in Röhren verlegt sind.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Gewässernetz', 'Gewässer']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | int | — |
+| `gz_gewaesserachseid` | int | Eindeutiger Identifikater der Gewässerachse |
+| `gz_gewaessername` | text | Gewässername |
+| `gz_abschnitt` | int | Eindolungabschnittsnummer |
 
 
     ///

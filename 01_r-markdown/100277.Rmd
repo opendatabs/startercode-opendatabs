@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,25 @@ Auto generated R starter code for data set 100277.
 - **Keywords** `['Smiley', 'Tempolimit', 'Verkehr', 'Tagesverkehr', 'Tempo', 'Vormessung', 'Nachmessung']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `zyklus` | int | Messzyklus (1, 2 oder 3) |
+| `phase` | text | Phase der Messung (Vormessung, Betrieb, Nachmessung oder Gesamt) |
+| `idstandort` | int | Eindeutige Standortkennung |
+| `strassenname` | text | Strassenname |
+| `messbeginn_phase` | datetime | Beginn der jeweiligen Phase |
+| `v_50` | double | Geschwindigkeit, bei welcher die Hälfte der Fahrzeuge schneller und die andere Hälfte langsamer fährt. |
+| `v_85` | double | Geschwindigkeitswert, unter dem 85% der Fahrzeuge fahren. Dieser wird oft genutzt zur Bestimmung von Sicherheitsgrenzen. |
+| `geschwindigkeit` | double | Maximale erlaubte Geschwindigkeit |
+| `anzahl_messungen` | int | Gesamtanzahl der durchgeführten Geschwindigkeitsmessungen. |
+| `messdauer_h` | double | Die Gesamtdauer der Geschwindigkeitsmessung, angegeben in Stunden. |
+| `dtv` | double | Durchschnittliche Anzahl Fahrzeuge, die täglich den Messbereich passieren. |
+| `link_einzelmessungen` | text | URL zu detaillierten Einzeldaten der Geschwindigkeitsmessungen |
+| `geo_point_2d` | geo_point_2d | Geografische Koordinaten der Smiley-Geschwindigkeitsanzeige |
 
 
 # Load packages

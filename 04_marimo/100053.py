@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100053`
+- **Dataset_identifier** `100053`
 - **Title** `Schulwegsicherheit: Strassenquerungen`
 - **Description** `Die Daten zur Schulwegsicherheit zeigen auf, wo Strassenübergänge für Kinder im Kindergarten- und Schulalter übersichtlich und einfach sind, bzw. wo erhöhte Anforderungen an das Überqueren der Strasse gestellt werden. Der Datensatz enthält die Daten zu den Strassenübergängen (Querungen), also alle Verbindungen der Fusswegachsen. Es werden nicht nur die geeigneten Querungen erfasst, sondern alle. Erfasst wird immer die am schlechtesten bewertete Richtung, da jede Querung von zwei Seiten begehbar ist. Die Digitalisierungsrichtung entspricht demnach der schlechter bewerteten Richtung. Start und Ende müssen auf einer Fusswegachse liegen. Jede Strassenquerung wird systematisch von einem Schulwegsinstruktor bewertet. Die Daten wurden in Basel, Bettingen und Riehen erhoben.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,21 @@ def _(mo):
 - **Keywords** `['Schulweg', 'Sicherheit', 'Kindergarten', 'Primarschule', 'Sekundarschule', 'Schüler', 'Schülerin', 'Unfall', 'Prävention', 'Fussweg', 'Strasse', 'Trottoir', 'Gehsteig', 'Querung', 'überqueren', 'Fussgängerstreifen']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+_No field information available._
 
 
     ///

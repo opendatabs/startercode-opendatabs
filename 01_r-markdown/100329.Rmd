@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -29,6 +29,29 @@ Auto generated R starter code for data set 100329.
 - **Keywords** `['Parkieren', 'Parkzone', 'Parkierung', 'Parkplatz', 'Parken', 'Auto', 'Velo', 'Fahrrad', 'Motorrad']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | text | Identifikationsnummer |
+| `strasse` | text | Name der Strasse, in der sich die Parkfläche befindet. |
+| `anzahl_parkfelder` | int | Anzahl der Parkplätze, die in dieser Parkfläche zur Verfügung stehen. |
+| `id_typ` | int | ID der Kategorie der Parkfläche, z.B. Blaue Zone, Weisse Zone, etc. |
+| `typ` | text | Kategorie der Parkfläche, z.B. Blaue Zone, Weisse Zone, etc. |
+| `tarif_gebiet` | text | Vier verschiedene Kategorien (-, A, B, C) |
+| `sopfg_geb` | int | Hängt von Tarif Gebiet ab. |
+| `tarif_id` | int | Eindeutige Kennung für den spezifischen Tarif. |
+| `tarif_code` | text | Weitere Unterteilung von Tarif Gebiet |
+| `gebpflicht` | text | Hängt von Tarif-Subzone ab |
+| `maxparkz` | int | Hängt von Tarif-Subzone ab |
+| `keinl` | text | Hängt von Tarif-Subzone ab |
+| `plz` | text | Postleitzahl |
+| `wov_id` | text | Eindeutige Kennung für das Wohnviertel, in dem die Parkfläche liegt. |
+| `wov_name` | text | Name des Wohnviertels, in dem sich die Parkfläche befindet. |
+| `bez_id` | text | Eindeutige Kennung für den Bezirk, in dem sich die Parkfläche befindet. |
+| `bez_name` | text | Name des Bezirks, in dem sich die Parkfläche befindet. |
 
 
 # Load packages

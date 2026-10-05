@@ -56,7 +56,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100397`
+- **Dataset_identifier** `100397`
 - **Title** `Schulferien Kanton Basel-Stadt`
 - **Description** `<p>Dieser Datensatz listet alle Schulferien der Schülerinnen und Schüler des Kantons Basel-Stadt auf. Einige weitere schulfreie Tage sind nicht enthalten. Die Schülerinnen und Schüler haben nämlich zusätzlich frei<br>
 </p><ul><li>an den gesetzlichen Feiertagen: <a href="https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt">https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt</a> und<br></li><li>an der Jahresversammlung der Kantonalen Schulkonferenz 
@@ -64,7 +64,7 @@ def _(mo):
 </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-12-13`
-- **Modified** `2026-10-04T03:00:21+00:00`
+- **Modified** `2026-10-05T03:00:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-09-27T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2032-08-07T22:00:00+00:00`
@@ -72,6 +72,27 @@ def _(mo):
 - **Keywords** `['Schule', 'Lernen', 'Schüler', 'Lehrer']`
 - **Creator** `Generalsekretariat`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `year` | date | Jahr, in dem der Ferienzeitraum oder schulfreie Tag liegt. Dieses Attribut gibt den allgemeinen Zeitrahmen des Eintrags an. |
+| `name` | text | Name des Ferienzeitraums oder des schulfreien Tages. Der Name beschreibt die Art des schulfreien Tages (z. B. Sommerferien oder Basler Fasnacht). |
+| `start_date` | date | Datum, an dem der Ferienzeitraum oder schulfreie Tag beginnt. |
+| `end_date` | date | Datum, an dem der Ferienzeitraum oder schulfreie Tag endet. Bei eintägigen Ereignissen ist das Startdatum identisch mit dem Enddatum. |
+| `name_short` | text | Für die 5 Schulferien ist dies ein Kurzname (z.B. Sommer), für alle anderen Einträge der Name. Wird gebraucht für die Tabellen auf bs.ch. |
 
 
     ///

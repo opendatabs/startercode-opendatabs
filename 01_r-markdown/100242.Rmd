@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,19 @@ Auto generated R starter code for data set 100242.
 - **Keywords** `['Durchgangsstrassen', 'Erschliessungsstrasse', 'Europastrasse', 'Feldweg', 'Gasse', 'Geschwindigkeit', 'Hauptstrasse', 'Hierarchie', 'HLS', 'Hochleistungsstrasse', 'HSS', 'HVS', 'Kantonsstrassen', 'Mobilität', 'Mobilitätsnetz', 'Nationalstrasse', 'Netz', 'Parkanlage', 'Promenade', 'QSS', 'Quartiersammelstrasse', 'Strassennetzhierarchie', 'Temporegime', 'Verkehrsorientierte', 'Waldweg', 'Weg', 'Strassennetz', 'Wegnetz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_durchgangsstrasse` | int | Eindeutiger Identifikator der Strasse |
+| `durchgangsstrassennummer` | text | Nummer der Durchgangsstrasse |
+| `durchgangsstrassentyp` | text | Typ der Durchgangsstrasse |
+| `strecke` | text | Routenverlauf der gesamten Durchgangsstrasse |
+| `bemerkungen` | text | Routenverlauf der Durchgangsstrasse in Basel-Stadt |
 
 
 # Load packages

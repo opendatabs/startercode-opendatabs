@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100326`
+- **Dataset_identifier** `100326`
 - **Title** `Lebendgeborene seit 1901`
 - **Description** `Dieser Datensatz zeigt die jährliche Anzahl Lebendgeburten nach demografischen Merkmalen des Kindes und der Mutter und nach Geschlecht des Kindes seit 1901. Quelle: Statistisches Amt Basel-Stadt, <a href="https://statistik.bs.ch/thema/bev%C3%B6lkerung">Bevölkerungsstatistik</a>.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Zeitreihe', 'Geburtsort', 'Geschlecht', 'Herkunft', 'Geburten', 'Neugeboren']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr der Erhebung |
+| `total` | int | Total der Lebendgeborenen |
+| `knaben` | int | Anzahl Knaben |
+| `madchen` | int | Anzahl Mädchen |
+| `mutter_verheiratet` | int | Anzahl der Mütter, die verheiratet sind |
+| `mutter_unverheiratet` | int | Anzahl der Mütter, die unverheiratet sind |
+| `kantonsburger` | int | Anzahl der Lebendgeborenen, die Bürgerinnen und Bürger des Kantons Basel-Stadt sind |
+| `ubrige_schweiz` | int | Anzahl der Lebendgeborenen, die Bürgerinnen und Bürger anderer Schweizer Kantone sind |
+| `schweiz` | int | Anzahl der Lebendgeborenen mit Schweizer Staatsangehörigkeit |
+| `ausland` | int | Anzahl der Lebendgeborenen mit ausländischer Staatsangehörigkeit |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,21 @@ Auto generated R starter code for data set 100148.
 - **Keywords** `['Kultur', 'Kunstobjekte', 'Ethnologie']`
 - **Creator** `Museum der Kulturen Basel`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `inventarnummer` | text | Die Inventarnummer besteht aus einem Präfix und einer Laufnummer. Unterschiedliche Präfixe deuten auf unterschiedliche Unter-Sammlungen hin. Standard ist VI, weil Europa die sechste Abteilung des Museums ist. |
+| `einlaufnummer` | text | Die Einlaufnummer besteht aus Suffix-Underline-Laufnummer. Sie nummeriert jeweils die Gruppe von Objekten, die zusammen ins Museum gekommen sind. |
+| `kurzbezeichnung` | text | Kurzbezeichnung ist die möglichst allgemeine Bezeichnung des Objekts. |
+| `titel` | text | Der Titel ist eine präzisere Bezeichnung, eine einheimische Bezeichnung oder der Werktitel (kann fehlen). |
+| `datierung` | text | Das geschätzte oder dokumentierte Jahr der Herstellung des Objekts (in der Regel sehr ungenau, fehlt häufig) |
+| `material_technik` | text | Angaben dazu, wie und/oder aus welchem Material das Objekt geschaffen wurde. |
+| `herkunft` | text | Geografische Herkunft des Objekts (nur eine von möglicherweise mehrfachen Herkunftsangaben) |
+| `einlauf_info` | text | Der/die Einlieferer*in brachte die Objekte ins Museum bzw. bezahlte dafür. Erwerbungsart ist in der Regel Kauf (dann bezahlte das Museum und als Einlieferer erscheint der aktuelle Kurator) oder Geschenk, teils auch Legat oder Tausch. Leider teilweise auch «unbekannt, alter Bestand». |
+| `masse` | text | Masse des Objekts |
 
 
 # Load packages

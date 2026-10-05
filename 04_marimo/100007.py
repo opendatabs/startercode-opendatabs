@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100007`
+- **Dataset_identifier** `100007`
 - **Title** `Bevölkerungsszenarien Basel-Stadt 2026-2050`
 - **Description** `Die Bevölkerungsszenarien liefern kleinräumige Ergebnisse auf der Ebene Wahlkreise der Stadt Basel sowie gemeinsam für die Gemeinden Riehen und Bettingen. Neben der absoluten Bevölkerungsentwicklung stellen die Szenarien auch die Entwicklung der Bevölkerungsstruktur bis 2050 dar: Die Bevölkerung wird nach Alter, Geschlecht und Staatsangehörigkeit (Schweiz und Ausland) ausgewiesen. Auch stehen verschiedene demografische Komponenten wie Geburten und Sterbefälle, Einbürgerungen oder Wanderungsbewegungen zur Verfügung. Aufgrund von Meldeverzögerungen werden die Nulljährigen in Datenjahren der Vergangenheit geringfügig unterschätzt.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,87 @@ def _(mo):
 - **Keywords** `['Prognose', 'Sesshaftigkeit', 'Entwicklung', 'Einwohnerzahl', 'Szenarien']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `alter` | int | Für das Jahr 2019 Alter 0= Geburtsjahrgang 2019, usw. |
+| `geo` | text | Die Stadt Basel hat 3 Wahlkreise, die Landgemeinden bilden eigene Wahlkreise |
+| `geschlecht` | text | Geschlecht (Mann oder Frau) |
+| `herkunft` | text | Schweiz oder Ausland; Doppelbürger unter Schweiz erfasst |
+| `jahr` | text | Datenjahr |
+| `bestand_hist` | int | Anzahl Personen im angegebenen Datenjahr |
+| `bestand_hoch` | double | Anzahl Personen im hohen Szenario |
+| `bestand_mittel` | double | Anzahl Personen im mittleren Szenario |
+| `bestand_tief` | double | Anzahl Personen im tiefen Szenario |
+| `geb_hist` | int | Anzahl Geburten im angegebenen Datenjahr |
+| `geb_hoch` | double | Anzahl Geburten im hohen Szenario |
+| `geb_mittel` | double | Anzahl Geburten im mittleren Szenario |
+| `geb_tief` | double | Anzahl Geburten im tiefen Szenario |
+| `tod_hist` | int | Anzahl Gestorbene im angegebenen Datenjahr |
+| `tod_hoch` | double | Anzahl Gestorbene im hohen Szenario |
+| `tod_mittel` | double | Anzahl Gestorbene im mittleren Szenario |
+| `tod_tief` | double | Anzahl Gestorbene im tiefen Szenario |
+| `s_geb_tod_hist` | int | Differenz |
+| `s_geb_tod_hoch` | double | Geburtensaldo hohes Szenario |
+| `s_geb_tod_mittel` | double | Geburtensaldo mittleres Szenario |
+| `s_geb_tod_tief` | double | Geburtensaldo tiefes Szenario |
+| `zuz_hist` | int | Zuzüge interkantonal historisch |
+| `zuz_hoch` | double | Zuzüge interkantonal hohes Szenario |
+| `zuz_mittel` | double | Zuzüge interkantonal mittleres Szenario |
+| `zuz_tief` | double | Zuzüge interkantonal tiefes Szenario |
+| `wegz_hist` | int | Wegzüge interkantonal historisch |
+| `wegz_hoch` | double | Wegzüge interkantonal hohes Szenario |
+| `wegz_mittel` | double | Wegzüge interkantonal mittleres Szenario |
+| `wegz_tief` | double | Wegzüge interkantonal tiefes Szenario |
+| `s_ink_hist` | int | Saldo interkantonale Wanderung historisch |
+| `s_ink_hoch` | double | Saldo interkantonale Wanderung hohes Szenario |
+| `s_ink_mittel` | double | Saldo interkantonale Wanderung mittleres Szenario |
+| `s_ink_tief` | double | Saldo interkantonale Wanderung tiefes Szenario |
+| `einw_hist` | int | Einwanderung international historisch |
+| `einw_hoch` | double | Einwanderung international hohes Szenario |
+| `einw_mittel` | double | Einwanderung international mittleres Szenario |
+| `einw_tief` | double | Einwanderung international tiefes Szenario |
+| `ausw_hist` | int | Auswanderung international historisch |
+| `ausw_hoch` | double | Auswanderung international hohes Szenario |
+| `ausw_mittel` | double | Auswanderung international mittleres Szenario |
+| `ausw_tief` | double | Auswanderung international tiefes Szenario |
+| `s_int_hist` | int | Saldo internationale Wanderung historisch |
+| `s_int_hoch` | double | Saldo internationale Wanderung hohes Szenario |
+| `s_int_mittel` | double | Saldo internationale Wanderung mittleres Szenario |
+| `s_int_tief` | double | Saldo internationale Wanderung tiefes Szenario |
+| `s_wtotal_hist` | int | Saldo Wanderung total historisch |
+| `s_wtotal_hoch` | double | Saldo Wanderung total hohes Szenario |
+| `s_wtotal_mittel` | double | Saldo Wanderung total mittleres Szenario |
+| `s_wtotal_tief` | double | Saldo Wanderung total tiefes Szenario |
+| `uhin_hist` | int | Umzüge intrakantonal hin historisch |
+| `uhin_hoch` | double | Umzüge intrakantonal hin hohes Szenario |
+| `uhin_mittel` | double | Umzüge intrakantonal hin mittleres Szenario |
+| `uhin_tief` | double | Umzüge intrakantonal hin tiefes Szenario |
+| `uweg_hist` | int | Umzüge intrakantonal weg historisch |
+| `uweg_hoch` | double | Umzüge intrakantonal weg hohes Szenario |
+| `uweg_mittel` | double | Umzüge intrakantonal weg mittleres Szenario |
+| `uweg_tief` | double | Umzüge intrakantonal weg tiefes Szenario |
+| `s_umz_hist` | int | Saldo Umzüge intrakantonal historisch |
+| `s_umz_hoch` | double | Saldo Umzüge intrakantonal hohes Szenario |
+| `s_umz_mittel` | double | Saldo Umzüge intrakantonal mittleres Szenario |
+| `s_umz_tief` | double | Saldo Umzüge intrakantonal tiefes Szenario |
+| `einb_hist` | int | Einbürgerungen historisch |
+| `einb_hoch` | double | Einbürgerungen hohes Szenario |
+| `einb_mittel` | double | Einbürgerungen mittleres Szenario |
+| `einb_tief` | double | Einbürgerungen tiefes Szenario |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100227`
+- **Dataset_identifier** `100227`
 - **Title** `Witterung`
 - **Description** `Dieser Datensatz zeigt für die Messstation Basel-Binningen am Observatorium St. Margarethen für jeden Monat die in Bezug auf Temperatur, Niederschlag und Bewölkung registrierten Witterungserscheinungen seit 1921.Methodischer Hinweis:Daten von 1921 bis 1940 stammen von der astronomisch-meteorologischen Anstalt im Bernoullianum.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,45 @@ def _(mo):
 - **Keywords** `['Zeitreihe', 'Klima', 'Luft', 'Eistage', 'Frosttage', 'Sommertage', 'Hitzetage', 'Tage ohne Sonne', 'Schneefall', 'Schneedecke', 'Reif', 'Nebel', 'Gewitter', 'Hagel', 'Wind', 'Heizgradtage']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Monat und Jahr, in dem der Wert registriert wurde |
+| `jahr` | text | Jahreszahl |
+| `monat` | text | Monatsname |
+| `frosttag` | int | Anzahl Tage mit Minimaltemperatur unter 0° Celsius |
+| `eistag` | int | Anzahl Tage mit Maximaltemperatur unter 0° Celsius |
+| `sommertag` | int | Anzahl Tage mit Maximaltemperatur über 25° Celsius |
+| `hitzetag` | int | Anzahl Tage mit Maximaltemperatur über 30° Celsius |
+| `sonnenlos` | int | Anzahl Tage mit 0 Sonnenstunden |
+| `regen1` | int | Anzahl Tage mit mindestens 0,1 mm Niederschlag |
+| `regen2` | int | Anzahl Tage mit mindestens 0,3 mm Niederschlag |
+| `regen3` | int | Anzahl Tage mit mindestens 1,0 mm Niederschlag |
+| `schneefall` | int | Anzahl Tage mit Schneefall |
+| `schneedecke` | int | Anzahl Tage mit geschlossener Schneedecke |
+| `reif` | int | Anzahl Tage mit Reif |
+| `nebel` | int | Anzahl Tage mit Nebel |
+| `gewitter1` | int | Anzahl Tage mit Nah- oder Ferngewitter |
+| `gewitter2` | double | Anzahl Tage mit Nahgewitter (<15 km Entfernung) |
+| `hagel` | int | Anzahl Tage mit Hagel |
+| `hell` | int | Anzahl Tage mit höchstens 20% Bewölkung |
+| `trueb` | int | Anzahl Tage mit mindestens 80% Bewölkung |
+| `wind1` | int | Anzahl Tage mit Windgeschwindigkeiten über 15 m/sec |
+| `wind2` | int | Anzahl Tage mit Windgeschwindigkeiten über 26 m/sec |
+| `heiztage` | double | Anzahl Tage, an denen die Heizgrenze von 12 °C unterschritten wird. |
 
 
     ///

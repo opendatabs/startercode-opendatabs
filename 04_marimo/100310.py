@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100310`
+- **Dataset_identifier** `100310`
 - **Title** `Grosser Rat: Gremien`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt Gremien im Grossen Rat des Kantons Basel-Stadt.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,30 @@ def _(mo):
 - **Keywords** `['Grosser Rat', 'Gremien', 'Parlament', 'Legislative']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `ist_aktuelles_gremium` | text | Aktives durch den Grossen Rat gewähltes Gremium |
+| `kurzname` | text | Kurzname des Gremiums |
+| `name` | text | Name des Gremiums |
+| `gremientyp` | text | Typ des Gremiums (Kommission, Fraktion, Parlament) |
+| `uni_nr` | text | Individuelle Identifikationsnummer des Gremiums innerhalb der Datenbank des Grossen Rates. |
+| `url_mitgliedschaften` | text | Link zum Datensatz "Grosser Rat: Mitgliedschaften in Gremien". Gefiltert nach aktuellem Gremium. |
+| `url_urheber` | text | Link zum Datensatz "Grosser Rat: Geschäfte". Gefiltert nach Geschäften, bei denen das aktuelle Gremium als Urheber gilt. |
+| `url_zugew_geschaefte` | text | Link zum Datensatz "Grosser Rat: Zuweisungen". Gefiltert nach Zuweisungen, die an das aktuelle Gremium gemacht wurden. |
 
 
     ///

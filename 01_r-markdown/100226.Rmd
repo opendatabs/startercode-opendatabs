@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,21 @@ Auto generated R starter code for data set 100226.
 - **Keywords** `['Wohnen', 'Bevölkerungsbestand', 'Grünraum', 'Erwerbstätige', 'Arbeitslosigkeit', 'Bevölkerungsstruktur']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `publikationsjahr` | text | Jahr, in dem der Wert publiziert wurde |
+| `indikator_nr` | int | — |
+| `datenjahr` | text | Jahr, aus dem die Daten stammen |
+| `wert` | double | Wert des Indikators |
+| `indikator_label` | text | Definition des Indikators, Berechnungsgrundlage |
+| `indikator_name` | text | Kurzform des Indikators |
+| `wohnviertel_id` | int | Nummer des Wohnviertels (1-19) bzw. der Landgemeinde (20 und 30) |
+| `wohnviertel` | text | Offizielle Bezeichnungen der 19 Basler Wohnviertel und 2 Landgemeinden |
+| `rang` | int | — |
 
 
 # Load packages

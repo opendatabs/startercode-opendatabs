@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100026`
+- **Dataset_identifier** `100026`
 - **Title** `Quartiertreffpunkte`
 - **Description** `<p>Quartierangebote (Quartiertreffpunkte, -räume und -anlaufstellen) sind wichtige Begegnungsorte für junge Familien ebenso wie für ältere Menschen, für Alteingesessene wie auch Neuankömmlinge. Sie bieten ein breitgefächertes Angebot wie Beratung und Unterstützung im Alltag, offene Treffpunkte, Mittagstische und weitere kulinarische Angebote, Spielabende, Filmvorführungen, kulturelle Veranstaltungen und vieles mehr.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Begegnungsort', 'Erziehung', 'Familie', 'Treffpunkt', 'Versammlung', 'Raum', 'Anlass', 'Party', 'Fest', 'Niederschwellig']`
 - **Creator** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktkoordinaten |
+| `geo_shape` | geo_shape | — |
+| `id_quartierangebot` | int | Eindeutiger Identifikator des Quartiertreffpunkts. |
+| `name` | text | Bezeichnung des Standorts. |
+| `typ` | text | Verschiedene Arten von Quartierangeboten. |
+| `strasse` | text | Strasse und Hausnummer des Standorts. |
+| `postleitzahl` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Bezeichnung der Ortschaft. |
+| `telefon` | text | Telefonnummer für den Kontakt mit dem Quartiertreffpunkt. |
+| `link` | text | Link auf die Webseite des Quartiertreffpunkts. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100318`
+- **Dataset_identifier** `100318`
 - **Title** `Gesundheitsversorgung (GSV): Pflegeheime`
 - **Description** `Im vorliegenden Datensatz sind Einträge mit dem Attribut "Heimname" zu finden, bei denen der Wert "Alle Pflegeheime" verwendet wird. Diese Bezeichnung dient dazu, Daten zu aggregieren, die die Gesamtheit aller Pflegeheime repräsentieren. Nutzer sollten beachten, dass der Eintrag "Alle Pflegeheime" unter "Heimname" eine kollektive Perspektive auf die Daten darstellt.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Jahr der Erhebung |
+| `id` | int | Identifikationsnummer des Pflegeheims |
+| `name` | text | Name des Pflegeheims |
+| `anzahl_pflegeplaetze` | int | Anzahl der Pflegeplätze des Pflegeheims |
+| `anzahl_pensions_pflegetage` | int | Anzahl der Pensions- und Pflegetage des Pflegeheims |
+| `auslastung` | double | Prozentuale Auslastung des jeweiligens Pflegeheims |
+| `pflegestufe` | double | Durchschnittliche Pflegestufe des Pflegeheims |
+| `kosten_pension_betreuung` | double | Total der Kosten für Pension und Betreuung |
+| `kvg_pflegekosten` | double | Total der Kosten, die über das Krankenversicherungsgesetz (KVG) abgerechnet wurden. |
+| `ertraege_taxeinnahmen` | double | Erträge der Taxeinnahmen |
+| `geopunkte` | geo_point_2d | — |
 
 
     ///

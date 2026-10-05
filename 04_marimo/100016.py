@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100016`
+- **Dataset_identifier** `100016`
 - **Title** `Postleitzahl`
 - **Description** `<p>Die Postleitzahlen sind eine Informationsebene der amtlichen Vermessung, welche die Postleitzahlengebiete gemäss dem amtlichen Ortschaftsverzeichnis von Swisstopo enthält</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,21 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+_No field information available._
 
 
     ///

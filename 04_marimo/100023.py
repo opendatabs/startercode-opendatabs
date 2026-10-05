@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100023`
+- **Dataset_identifier** `100023`
 - **Title** `Hundesignalisation: Orte mit Leinenpflicht oder Hundeverbot`
 - **Description** `<p><span style='font-family: Inter, "Inter Fallback", "Helvetica Neue", Helvetica, Arial, sans-serif; background-color: rgb(248, 248, 248);'>Der Plan zeigt Örtlichkeiten, an welchen eine Leinenpflicht oder ein Hundeverbot gilt.</span></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Hund', 'Verbot', 'Leine', 'Leinenpflicht']`
 - **Creator** `Kantonales Veterinäramt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `hs_id` | text | Eindeutiger Identifikator der Hundesignalisation |
+| `hs_beschreibung` | text | Beschreibung der Einschränkung |
+| `hs_beschraenkung` | text | Zeitraum der Beschränkung |
+| `hs_bemerkung` | text | Bemerkung zur Fläsche der Hundesignalisation |
 
 
     ///

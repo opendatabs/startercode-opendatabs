@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100173`
+- **Dataset_identifier** `100173`
 - **Title** `Monatliche Sterberaten nach Geschlecht und Altersgruppe`
 - **Description** `Rohe und standardisierte Sterberaten des Kantons Basel-Stadt nach Geschlecht und Altersgruppen seit 2012. Die Sterberaten werden monatlich aktualisiert. Aufgrund von verzögerten Ereignis-Meldungen können sich die Werte der Vormonate (Anzahl Todesfälle, Sterbeziffer/-rate) nach einer Aktualisierung leicht ändern. Die standardisierte Sterberate bezieht sich auf die mittlere Bevölkerung des Monats Januar 2012 des Kantons Basel-Stadt. Durch die Standardisierung erhält man so in der Altersgruppe "Alle" eine altersstandardisierte Sterberate für das jeweilige Geschlecht.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Alter', 'Altersstruktur', 'Bevölkerungsbestand', 'Demographie', 'Geschlecht', 'Todesfälle', 'Einwohnerzahl', 'Bevölkerungsstruktur', 'Tod', 'Verstorben', 'Sterberate']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr des Todes |
+| `monat` | int | Monat des Todes |
+| `jahr_monat` | date | Jahr und Monat des Todes in einer Spalte |
+| `geschlecht` | text | — |
+| `altersgruppen` | text | Altersgruppe des Verstorbenen. |
+| `beobachtet_tote` | int | Gemeldete Anzahl Verstorbene im jeweiligen Jahr, Monat, Geschlecht und Altersgruppe. Quelle: Kantonale Bevölkerungsstatistik |
+| `mittlere_bev` | int | Mittlere Bevölkerung zum jeweiligen Zeitpunkt des Monats und Jahres für die entsprechende Altersgruppe und Geschlecht. Quelle: Kantonale Bevölkerungsstatistik |
+| `sterberate_1000_roh` | double | Anzahl Verstorbene pro 1000 Einwohner des jeweiligen Monats und Jahres für die entsprechende Altersgruppe und Geschlecht. Die Kennzahl berechnet sich aus der Anzahl Todesfälle geteilt durch die mittlere Bevölkerung mal 1000. |
+| `erwartet_tote` | int | Anhand der rohen Sterbeziffer und der entsprechenden Referenzbevölkerung wird die Anzahl zu erwartender Todesfälle für die jeweilige Gruppe berechnet, unter der Annahme, dass die Bevölkerungsstruktur über die Zeit konstant geblieben wäre. |
+| `mittlere_bev_referenz` | int | Die mittlere Bevölkerung des Monats Januar des Jahres 2012 dient als Referenzbevölkerung. Diese Zahl ist für die jeweilige Altersgruppe und Geschlecht konstant und dient dazu die standardisierten Sterberaten zu berechnen, um Vergleiche über die Zeit zu ermöglichen. |
+| `smr_1000` | double | Durch Division der erwarteten Todesfälle durch die Referenzbevölkerung lässt sich eine standardisierte Sterberate berechnen. Diese Zahl ermöglicht einen Vergleich über die Zeit unter der Annahme, dass sich die Bevölkerungsstruktur nicht verändert. Für die Altersgruppe Alle" ergibt das eine altersbereinigte Sterberate für das jeweilige Geschlecht." |
 
 
     ///

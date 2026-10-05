@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100079`
+- **Dataset_identifier** `100079`
 - **Title** `Gestorbene nach Altersklasse, Geschlecht und Sterbedatum`
 - **Description** `Dieser Datensatz zeigt die verstorbenen Personen im Kanton Basel-Stadt nach Altersklasse (0-64, 65+), Geschlecht und Sterbedatum. Die Daten werden täglich aktualisiert, wobei nur Todesfälle berücksichtigt werden, die mindestens 15 Tage zurück liegen. Aufgrund von später gemeldeten Todesfällen kann es jederzeit zu Veränderungen bei bereits veröffentlichten Werten kommen.<br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Todesfälle während vier Monaten gesammelt, danach gelten die Zahlen als definitiv. Später eintreffende Meldungen werden im letzten noch nicht abgeschlossenen Monat gezählt. In diesem Datensatz werden sie im Monat des Sterbedatums gezählt. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-04-22`
-- **Modified** `2026-10-02T01:15:43+00:00`
+- **Modified** `2026-10-05T01:15:47+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Alter', 'Altersstruktur', 'Bevölkerungsbestand', 'Demographie', 'Todesfälle', 'Einwohnerzahl', 'Tod', 'Verstorben', 'Sterberate']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr des Todesfalls |
+| `monat` | int | Monat des Todesfalls |
+| `woche_in_jahr` | int | Laufnummer der Woche innerhalb eines Jahres |
+| `datum_wochenstart_sterbedatum` | date | Datum des Montags der Woche |
+| `tag_in_jahr` | int | Laufnummer des Tages innerhalb eines Jahres |
+| `wochentag` | text | Wochentag |
+| `sterbedatum` | date | Datum des Todesfalls |
+| `anz_maenner_0_64` | int | Gestorbene Männer im Alter zwischen 0 und 64 Jahren |
+| `anz_maenner_65_plus` | int | Gestorbene Männer im Alter von 65 und mehr Jahren |
+| `anz_frauen_0_64` | int | Gestorbene Frauen im Alter zwischen 0 und 64 Jahren |
+| `anz_frauen_65_plus` | int | Gestorbene Frauen im Alter von 65 und mehr Jahren |
+| `anz_total` | int | Total gestorbene Personen an einem Tag |
 
 
     ///

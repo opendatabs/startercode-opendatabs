@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,27 @@ Auto generated R starter code for data set 100225.
 - **Keywords** `['Alter', 'Bevölkerungsbestand', 'Staatsangehörigkeit', 'Schutzsuchende']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `laufnummer` | int | Personenbezogene Laufnummer |
+| `jahr` | text | Jahr des Bevölkerungsbestand |
+| `monat` | int | Monat des Bevölkerungsbestand |
+| `schutzstatus` | text | Schutzstatus |
+| `geschlecht` | text | Geschlecht der Schutzsuchenden (W: Weiblich, M: Männlich) |
+| `altersgruppen` | text | Schutzsuchende nach Altersgruppen |
+| `weggezogen` | int | 0: Schutzsuchende sind noch im Bevölkerungsbestand, 1: Schutzsuchende sind nicht mehr im Bevölkerungsbestand (entweder aufgrund von Wegzug, Wechsel des Status, Todesfall, Registerbereinigung etc.) |
+| `wegzugsjahr` | text | Jahr des Wegzugs (entweder aufgrund von Wegzug, Wechsel des Status, Todesfall, Registerbereinigung etc.) |
+| `wegzugsmonat` | int | Monat des Wegzugs (entweder aufgrund von Wegzug, Wechsel des Status, Todesfall, Registerbereinigung etc.) |
+| `zuzugsjahr` | text | Jahr des Zuzugs (aufgrund von Zuzug oder Wechsel des Status) |
+| `zuzugsmonat` | int | Monat des Zuzugs (aufgrund von Zuzug oder Wechsel des Status) |
+| `value_gender_bfs` | int | Value_gender_BFS |
+| `name_gender_bfs` | text | Name_gender_BFS |
+| `monat_und_jahr` | text | — |
+| `staatsangehoerigkeit` | text | Staatsangehörigkeit der Schutzsuchenden |
 
 
 # Load packages

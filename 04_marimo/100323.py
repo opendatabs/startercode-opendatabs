@@ -71,7 +71,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100323`
+- **Dataset_identifier** `100323`
 - **Title** `Rheintrübung kontinuierlich`
 - **Description** `<p class=""></p><div style="text-align: left;"><p class="MsoNormal" style="margin-bottom: 0.0001pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Kontinuierlich gemessene Trübungsmesswerte der <a href="https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues" target="_blank"><span style="background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Rheinüberwachungsstation
 Weil am Rhein</span></a> (RUES, siehe
@@ -94,14 +94,33 @@ für Umwelt und Energie Basel-Stadt (AUE-BS)</a> <br>
 (siehe https://www.bs.ch/wsu/aue)<o:p></o:p></span></p></div><p></p><p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-11-23`
-- **Modified** `2026-10-04T20:50:48+00:00`
+- **Modified** `2026-10-05T11:50:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2023-10-17T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-03T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-04T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Rhein', 'Trübung', 'Lichtdurchlässigkeit', 'Baden']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `startzeitpunkt` | datetime | Start der Messung |
+| `endezeitpunkt` | datetime | Ende der Messung |
+| `rus_w_o_ms_tr` | double | Stundenmittelwert der Trübung gemessen in FNU ("Formazin Nephelometric Unit", was auf Deutsch "Nephelometrische Formazin-Einheit" bedeutet) |
 
 
     ///

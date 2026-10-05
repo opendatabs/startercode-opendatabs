@@ -67,7 +67,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100112`
+- **Dataset_identifier** `100112`
 - **Title** `Geschwindigkeitsmonitoring: Kennzahlen pro Mess-Standort`
 - **Description** `<p>In diesem Datensatz werden zu jeder Messung (ein Messgerät an einem Standort) die Kennzahlen V50, V85, Anzahl Fahrzeuge und Übertretungsquote pro Richtung angegeben. Die einzelnen Fahrten finden Sie im Datensatz Einzelmessungen (<a href="https://data.bs.ch/explore/dataset/100097//" target="_blank">https://data.bs.ch/explore/dataset/100097/</a>)</p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Bei den dargestellten
 Daten handelt es sich ausschliesslich um statistische Erhebungen. Diese stehen
@@ -86,7 +86,7 @@ Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben.
 Manipulationen an Geräten können zu fehlerhaften Messungen führen.</span></p><p class="MsoNormal" style="margin-bottom: 12pt; line-height: normal; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><font face="Arial, sans-serif">Eine Übersicht aller Datensätze auf dem kantonalen Datenportal zum Geschwindigkeitsmonitoring sind unter </font><a href="https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring" style="background-color: rgb(255, 255, 255); font-family: sans-serif; font-size: 14px; font-weight: 400;" target="_blank">https://data.bs.ch/explore/?refine.tags=Geschwindigkeitsmonitoring</a><font face="Arial, sans-serif"> aufrufbar.</font></p><p>Die Mess-Standorte werden auch auf dem Geoportal Basel-Stadt publiziert: <a href="https://www.geo.bs.ch/geschwindigkeitsmonitoring" target="_blank">https://www.geo.bs.ch/geschwindigkeitsmonitoring</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-02-02`
-- **Modified** `2026-10-04T02:01:34+00:00`
+- **Modified** `2026-10-05T02:01:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -94,6 +94,43 @@ Manipulationen an Geräten können zu fehlerhaften Messungen führen.</span></p>
 - **Keywords** `['Messung', 'Messwert', 'Standort', 'Mess-Stelle', 'Messstelle', 'Geschwindigkeit', 'Verkehr', 'Auto', 'PKW', 'PW', 'LKW', 'LW', 'Radar']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | int | Laufnummer der Messung; eine Messung beinhaltet alle Fahrten eines Messgeräts an einem Standort |
+| `messbeginn` | date | Datum, an welchem ein Messgerät an einem Standort ausgebracht wurde |
+| `messende` | date | Datum, bis zu welchem ein Messgerät an einem Standort im Einsatz war |
+| `strasse` | text | Name der Strasse, an welcher ein Messgerät ausgebracht wurde |
+| `strasse_nr` | text | Hausnummer, bei welcher ein Messgerät ausgebracht wurde |
+| `ort` | text | Gemeinde am Standort einer Messung |
+| `zone` | int | geltende Höchstgeschwindigkeit am Standort der Messung |
+| `richtung_1` | text | Fahrtrichtung 1 |
+| `fzg_1` | double | Anzahl gemessene Fahrzeuge in Richtung 1 während einer Messung |
+| `v50_1` | double | Höchstgeschwindigkeit in Richtung 1, welche von 50% der Fahrzeuge nicht überschritten wird |
+| `v85_1` | double | Höchstgeschwindigkeit in Richtung 1, welche von 85% der Fahrzeuge nicht überschritten wird |
+| `ue_quote_1` | double | Anteil der Fahrzeuge, welche die geltende Höchstgeschwindigkeit in Richtung 1 überschritten haben |
+| `richtung_2` | text | Fahrtrichtung 2 |
+| `fzg_2` | double | Anzahl gemessene Fahrzeuge in Richtung 2 während einer Messung |
+| `v50_2` | double | Höchstgeschwindigkeit in Richtung 2, welche von 50% der Fahrzeuge nicht überschritten wird |
+| `v85_2` | double | Höchstgeschwindigkeit in Richtung 1, welche von 85% der Fahrzeuge nicht überschritten wird |
+| `ue_quote_2` | double | Anteil der Fahrzeuge, welche die geltende Höchstgeschwindigkeit in Richtung 2 überschritten haben |
+| `the_geom` | geo_shape | — |
+| `link_zu_einzelmessungen` | text | Link zum Datensatz "Geschwindigkeitsmonitoring: Einzelmessungen" |
+| `messbeginn_jahr` | text | Jahr des Messbeginns |
+| `geo_point_2d` | geo_point_2d | geographische Koordinaten |
 
 
     ///

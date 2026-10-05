@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100418`
+- **Dataset_identifier** `100418`
 - **Title** `Erwartete Besucherzahl im Raum St. Jakob`
 - **Description** `<p>Dieser Datensatz enthält die aggregierten erwarteten Besucherzahlen von Events nach Tag im Raum St. Jakob. Er erfasst für Tage mit Events das Datum und die Kategorie der Besucherzahl.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `None`
-- **Modified** `2026-09-29T10:10:29+00:00`
+- **Modified** `2026-10-05T08:10:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,24 @@ def _(mo):
 - **Keywords** `['St. Jakob', 'Gartenbad', 'Arena', 'St. Jakobshalle', 'St. Jakob-Park', 'St. Jakob-Arena', 'Sportanlage', 'Verkehrsplanung']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Datum |
+| `kategorie` | text | — |
 
 
     ///

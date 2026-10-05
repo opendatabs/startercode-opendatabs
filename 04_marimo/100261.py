@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100261`
+- **Dataset_identifier** `100261`
 - **Title** `Gewässernetz: Gewässerachsen`
 - **Description** `Dieser Datensatz enthält die zentralen Gewässerachsen (Linienobjekte) im Kanton Basel-Stadt. Jede Achse beschreibt den Verlauf eines Fliess- oder Stillgewässers (z. B. Rhein, Birs, Birsig, Bäche, Teiche).`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Gewässernetz', 'Gewässer']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gz_id_gewaesserachse` | int | Eindeutiger Identifikater der Gewässerachse |
+| `gz_gewaessername` | text | Gewässername |
 
 
     ///

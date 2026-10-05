@@ -53,19 +53,55 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100164`
+- **Dataset_identifier** `100164`
 - **Title** `Wasserstand Grundwasser`
 - **Description** `<p>Der Datensatz enthält die Grundwasserstände in m ü. M. des kantonalen Grundwassermessnetzes. Es weist zur Zeit um die 80 Messstationen auf. Bei den Stationen, die mit einer Datenfernübertragung ausgerüstet sind, liegen tagesaktuelle Stundenwerte vor.</p><p>Jede Messstation ist mit der Katasternummer gemäss Bohrkataster des Kantons Basel-Stadt versehen (<a href="https://data.bs.ch/explore/dataset/100182/" target="_blank">https://data.bs.ch/explore/dataset/100182/</a>). Die Bohrungen sind auch auf MapBS unter dem Thema Geologie abrufbar (<a href="http://www.geo.bs.ch/bohrkataster" target="_blank">www.geo.bs.ch/bohrkataster</a>).</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser" target="_blank">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#grundwasser</a></p><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-07-11`
-- **Modified** `2026-10-04T05:25:35+00:00`
+- **Modified** `2026-10-05T05:25:33+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1976-03-28T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-01T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-02T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Pegel', 'Wasserstand', 'Wasser', 'Trinkwasser']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Zeitstempel der Messung in lokaler Zeit (Basel) |
+| `stationnr` | text | Katasternummer gemäss Bohrkataster, 10-stellig, prefixed mit 0 |
+| `stationname` | text | Name der Messtation inkl. Stationsnummer in Klammern |
+| `sensornr` | int | Nummer der Messgrösse, siehe auch Spalte "SensName" |
+| `sensname` | text | Messgrösse |
+| `value` | double | Messwert: Grundwasserstand [m ü. M] |
+| `geo_point_2d` | geo_point_2d | Standort der Messung |
+| `xcoord` | int | X-Koordinate im Koordinatensystem LV95 (EPSG:2056) |
+| `ycoord` | int | Y-Koordinate im Koordinatensystem LV95 (EPSG:2056) |
+| `topterrain` | double | Terrainhöhe [m ü. M.] bei der Messstelle |
+| `refpoint` | double | Abstichkote (= Pegelbezugspunkt) in m ü. M. |
+| `status` | text | Rohadaten/ungeprüfte Daten (raw); bereinigte/geprüfte Daten (cleansed) |
+| `on_offline` | text | — |
+| `date` | text | Datum in mitteleuropäischer Winterzeit (UTC+1) |
+| `time` | text | Zeit in mitteleuropäischer Winterzeit (UTC+1) |
+| `timestamp_text` | text | Zeitstempel in mitteleuropäischer Winterzeit (UTC+1) |
+| `stationid` | text | Katasternummer gemäss Bohrkataster |
+| `lat` | double | Koordinate im Format WGS84 |
+| `lon` | double | Koordinate im Format WGS84 |
+| `bohrkataster_link` | text | — |
 
 
     ///

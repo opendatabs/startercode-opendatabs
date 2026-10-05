@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100011`
+- **Dataset_identifier** `100011`
 - **Title** `Kennzahlen zu den Basler Wohnvierteln und Landgemeinden`
 - **Description** `Ausgewählte statistische Kennzahlen der 19 Wohnviertel der Stadt Basel sowie der zwei Gemeinden Riehen und Bettingen seit 2015. Aufgrund einer veränderten Datenlage können die Indikatoren 3 (Religionszugehörigkeit) und 18 (Arbeitslosenquote) ab der Ausgabe 2020 nicht mehr dargestellt werden. Die Berechnungsmethode für die Sozialhilfequote wurde 2022 für die Jahre ab 2017 rückwirkend angepasst. Zur Definition: <a href="https://statistik.bs.ch/files/faltblatt/Erlaeuterungen-Quartierradar.pdf" target="_blank">https://statistik.bs.ch/files/faltblatt/Erlaeuterungen-Quartierradar.pdf</a>. Informationen zum jeweiligen Datenjahr finden Sie im folgenden Datensatz: <a href="https://data.bs.ch/explore/dataset/100226/" target="_blank">https://data.bs.ch/explore/dataset/100226/</a>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,43 @@ def _(mo):
 - **Keywords** `['Wohnen', 'Bevölkerungsbestand', 'Grünraum', 'Erwerbstätige', 'Arbeitslosigkeit', 'Bevölkerungsstruktur']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `publikationsjahr` | text | Jahr, in dem der Wert publiziert wurde |
+| `wohnviertel_id` | int | Nummer des Wohnviertels (1-19) bzw. der Landgemeinde (20 und 30) |
+| `wohnviertel_name` | text | Name des Wohnviertels bzw. der Landgemeinde |
+| `altersquotient` | double | Verhältnis der Anzahl über 64-Jähriger zur Anzahl 20- bis 64-Jähriger (Personen im erwerbsfähigen Alter). Quelle: Kantonale Bevölkerungsstatistik |
+| `jugendquotient` | double | Verhältnis der Anzahl unter 20-Jähriger zur Anzahl 20- bis 64-Jähriger (Personen im erwerbsfähigen Alter). Quelle: Kantonale Bevölkerungsstatistik |
+| `anteil_personen_ohne_religionszugehoerigkeit` | double | Anteil Personen ohne Religionszugehörigkeit an der gesamten Wohnbevölkerung des Wohnviertels. Quelle: Kantonale Bevölkerungsstatistik |
+| `anteil_personen_in_einpersonenhaushalten` | double | Anteil der Personen in Einpersonenhaushalten an der Wohnbevölkerung in Privathaushalten des Wohnviertels. Quelle: Kantonale Bevölkerungsstatistik |
+| `anteil_sesshafte` | double | Anteil der seit mindestens 10 Jahren am gleichen Wohnsitz wohnenden Personen des Wohnviertels. Quelle: Kantonale Bevölkerungsstatistik |
+| `baujahr_der_wohngebaeude` | double | Mittleres Baujahr der Wohngebäude des Wohnviertels (ungewichtetes arithmetisches Mittel). Quelle: Kantonale Baustatistik |
+| `anteil_einfamilienhaeuser` | double | Anteil der Einfamilienhäuser an allen bewohnbaren Gebäuden des Wohnviertels. Quelle: Kantonale Baustatistik |
+| `gymnasialquote` | double | Anteil der Schülerinnen und Schüler der öffentlichen Sekundarschule Basel-Stadt im Leistungszug P mit hohen Anforderungen («Progymnasium») an allen Sek-Lernenden der 10. und 11. Schulstufe. Quelle: Kantonale Bildungsstatistik |
+| `anteil_sozialhilfeempfaenger` | double | Anteil der im Jahresverlauf unterstützten Sozialhilfeempfänger an der Wohnbevölkerung des Wohnviertels. Quelle: Kantonale Sozialhilfestatistik |
+| `anteil_auslaender` | double | Anteil der ausländischen Wohnbevölkerung an der gesamten Wohnbevölkerung des Wohnviertels. Quelle: Kantonale Bevölkerungsstatistik |
+| `anteil_gruenflaechen` | double | Anteil der Grünfläche an der gesamten Fläche des Wohnviertels. Quelle: Grundbuch- und Vermessungsamt Basel-Stadt |
+| `flaeche_pro_wohnung` | double | Mittlere Fläche der Wohnungen im Wohnviertel (ungewichtetes arithmetisches Mittel) in m². Quelle: Kantonale Baustatistik |
+| `wohnflaeche_pro_person` | double | Mittlere verfügbare Wohnfläche pro Einwohner im Wohnviertel (ungewichtetes arithmetisches Mittel) in m². Quelle: Kantonale Bau- und Bevölkerungsstatistik |
+| `vermoegenssteuer_pro_veranlagung` | double | Mittlere Vermögenssteuer der steuerpflichtigen Personen im Wohnviertel (ungewichtetes arithmetisches Mittel der ordentlichen Steuerveranlagungen) in Fr. Quelle: Steuerstatistik Basel-Stadt |
+| `einkommenssteuer_pro_veranlagung` | double | Mittlere Einkommenssteuer der steuerpflichtigen Personen im Wohnviertel (ungewichtetes arithmetisches Mittel der ordentlichen Steuerveranlagungen) in Fr. Quelle: Steuerstatistik Basel-Stadt |
+| `erwerbstaetigenquote` | double | Anteil der erwerbstätigen Wohnbevölkerung an der gesamten erwerbsfähigen Wohnbevölkerung (16 bis 64 Jahre). Quelle: Bundesamt für Statistik, Strukturerhebung. Hochrechnungen auf Basis einer Stichprobe von rund 5 000 Personen im Jahr. Aufgrund der Grösse wird Bettingen zusammen mit Riehen ausgewertet, was zum gleichen Rangwert der beiden Gemeinden führt. |
+| `arbeitsplaetze_pro_einwohner` | double | Anzahl Arbeitsplätze (Beschäftigtenzahl in Vollzeitäquivalenten) an der gesamten Wohnbevölkerung des Wohnviertels. Quelle: Bundesamt für Statistik, STATENT |
+| `arbeitslosenquote` | double | Anteil als arbeitslos gemeldeter Personen am Total der Erwerbspersonen. Quelle: SECO (Anzahl Arbeitslose) und Bundesamt für Statistik, Strukturerhebung (Erwerbspersonen aus den Jahren 2010-2014, Hochrechnungen auf Basis einer Stichprobe von rund 5 000 Personen im Jahr). Aufgrund der Grösse wird Bettingen zusammen mit Riehen ausgewertet, was zum gleichen Rangwert der beiden Gemeinden führt. |
 
 
     ///

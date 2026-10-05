@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100250`
+- **Dataset_identifier** `100250`
 - **Title** `Strassen und Wege: Strassentypen und Wege`
 - **Description** `<p>Der Datensatz beinhaltet das Mobilitätsnetz Basel-Stadt sowie die Strassennetzhierarchie des Kantons Basel-Stadt.</p><p>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?refine.tags=STWE" target="_blank">https://data.bs.ch/explore/?refine.tags=STWE </a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,38 @@ def _(mo):
 - **Keywords** `['Durchgangsstrassen', 'Erschliessungsstrasse', 'Europastrasse', 'Feldweg', 'Gasse', 'Geschwindigkeit', 'Hauptstrasse', 'Hierarchie', 'HLS', 'Hochleistungsstrasse', 'HSS', 'HVS', 'Kantonsstrassen', 'Mobilität', 'Mobilitätsnetz', 'Nationalstrasse', 'Netz', 'Parkanlage', 'Promenade', 'QSS', 'Quartiersammelstrasse', 'Strassennetzhierarchie', 'Temporegime', 'Verkehrsorientierte', 'Waldweg', 'Weg', 'Strassennetz', 'Wegnetz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_strasse_weg` | int | Eindeutiger Identifikator der Strasse |
+| `strassennummer` | int | Strassennummer |
+| `strassenname` | text | Strassenname |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
+| `strassennetzhierarchie_code` | text | Abkürzung der Strassennetzhierarchie |
+| `strassennetzhierarchie_text` | text | Strassennetzhierarchie |
+| `strassenkategorie` | text | verkehrsorientierte oder siedlungsorientierte Strasssen |
+| `wegkategorie` | text | Wegkategorie |
+| `geschwindigkeit` | int | permanent signalisierte Geschwindigkeit (Höchstgeschwindigkeit; ohne temporäre Signalisation durch Baustellen oder ähnliches) |
+| `regime` | text | permanent signalisiertes Temporegime (mit Höchstgeschwindigkeitsangabe) |
+| `strassenlaenge` | double | Gesamtlänge der Strasse |
+| `strassenabschnittslaenge` | double | Länge des Geometriesegments einer Strasse |
+| `zulassung_velo` | boolean | Angabe ob Velo zugelassen ist |
+| `eigentuemer` | text | Eigentümer der Strasse |
 
 
     ///

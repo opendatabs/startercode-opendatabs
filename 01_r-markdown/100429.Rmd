@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,20 @@ Auto generated R starter code for data set 100429.
 - **Keywords** `['St. Jakob', 'Gartenbad', 'Arena', 'Parken', 'St. Jakobshalle', 'St. Jakob-Park', 'St. Jakob-Arena', 'Sportanlage', 'Sperrung', 'Parkplätze', 'Verkehrsplanung']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `verkehrsmittel` | text | Betroffenes Verkehrsmittel betreffend Anreiseempfehlung |
+| `sperrung` | boolean | Ist eine Sperrung nötig? |
+| `zusatzpp` | boolean | Werden zusätzliche Parkplätze angeboten? |
+| `text_html` | text | Anreiseempfehlung als HTML |
+| `alt_texte` | text | Alternativtext für angezeigte Bilder |
+| `bildquellen` | text | Quelle des Bildes |
+| `link_anzeigetexte` | text | Anzeigetext für Knopf mit weiterführenden Links |
+| `links` | text | weiterführende Links |
 
 
 # Load packages

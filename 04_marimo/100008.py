@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100008`
+- **Dataset_identifier** `100008`
 - **Title** `Bade-, Trinkwasser- und Zierbrunnen in Basel`
 - **Description** `<p>In der Stadt Basel betreibt IWB über 200 öffentliche Brunnen. Sie sind Kulturgut und «Visitenkarte» der Stadt: <a href="https://www.iwb.ch/klimadreh/ratgeber/sauberes-trinkwasser/die-geschichte-der-basler-brunnen" target="_blank">https://www.iwb.ch/klimadreh/ratgeber/sauberes-trinkwasser/die-geschichte-der-basler-brunnen</a><a href="https://www.iwb.ch/klimadreh/ratgeber/sauberes-trinkwasser/die-geschichte-der-basler-brunnen" target="_blank"></a> <a href="https://www.iwb.ch/klimadreh/ratgeber/sauberes-trinkwasser/die-geschichte-der-basler-brunnen" target="_blank"></a><br>Wenn Sie Fragen oder Anliegen rund um die Basler Brunnen haben, empfehlen wir Ihnen, sich direkt an die Industriellen Werke Basel (IWB) zu wenden, die für diese Angelegenheiten zuständig sind. Für weitere Informationen und Kontaktdetails besuchen Sie bitte die offizielle Webseite der IWB: <a href="https://www.iwb.ch/servicecenter/kontakt" target="_blank">https://www.iwb.ch/servicecenter/kontakt</a> <br></p><p>In einigen Brunnen ist auch Baden möglich und vom Eigentümer, dem Kanton Basel-Stadt, toleriert, jedoch auf eigene Verantwortung und Gefahr. Wir bitten darum, die Brunnen sauber zu hinterlassen und auf Anwohner Rücksicht zu nehmen. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-10-03T22:03:25+00:00`
+- **Modified** `2026-10-04T22:03:32+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Brunnen', 'Wasser', 'Trinkwasser', 'Baden']`
 - **Creator** `Industrielle Werke Basel`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `name` | text | — |
+| `desc` | text | — |
+| `gx_media_links` | file | — |
+| `picture_link` | text | — |
+| `geometry` | geo_shape | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
     ///

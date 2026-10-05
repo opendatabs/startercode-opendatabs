@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100276`
+- **Dataset_identifier** `100276`
 - **Title** `Feuerstellen in Gewässernähe`
 - **Description** `<p>Gewässernahe Feuerstellen. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['grillen', 'grillieren', 'Feuer']`
 - **Creator** `Stadtgärtnerei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `bezeichnung` | text | Bezeichnung |
 
 
     ///

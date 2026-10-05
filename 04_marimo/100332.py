@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100332`
+- **Dataset_identifier** `100332`
 - **Title** `Verbotszonen geteilte Mikromobilität: Sperr- und Parkverbotszonen`
 - **Description** `Der Datensatz zeigt jene Zonen, die das Amt für Mobilität für die Sharing-Anbieter der Mikromobilität (z. B. Velo, E-Scooter etc.) in Basel definiert. Es sind dies Zonen, in denen die Fahrzeuge nicht abgemeldet werden dürfen (Parkverbotszonen) und Zonen, in denen die Fahrzeuge nicht durchfahren dürfen (Sperrzonen). Die Anbieter sind frei, selber zusätzliche Parkverbots- und Sperrzonen zu definieren.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Verbot', 'Zone', 'Sperrzone', 'Parkzone', 'Sharing', 'Veloverleih', 'Verkehr']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_verbot` | int | Eindeutiger Identifikator der Verbotszone |
+| `name` | text | Bezeichnung der Verbotszone |
+| `regart` | text | Art der Verbotszone |
 
 
     ///

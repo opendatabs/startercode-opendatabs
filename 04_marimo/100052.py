@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100052`
+- **Dataset_identifier** `100052`
 - **Title** `Baumkataster: Baumbestand`
 - **Description** `Der Baumkataster umfasst den durch die Stadtgärtnerei Basel (Gebiet Stadt Basel) und die Gemeinde Riehen (Gebiet Riehen) gepflegten Baumbestand.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,38 @@ def _(mo):
 - **Keywords** `['Baum', 'Baumbestand', 'Stadtbaum', 'Baumschutz', 'Unterhalt', 'Pflege', 'Kataster']`
 - **Creator** `Stadtgärtnerei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | text | Laufnummer |
+| `ba_baumnr` | text | Eindeutige Nummer des Baumes |
+| `ba_art` | text | Botanische und deutsche Bezeichnung der Baumart |
+| `baumart_lateinisch` | text | Botanische Bezeichnung der Baumart |
+| `baumart_deutsch` | text | Deutsche Bezeichnung der Baumart |
+| `timeposition` | date | Datum der Baumpflanzung am aktuellen Ort, wenn bekannt. In der Regel werden Bäume in einem Alter von ca. 10 Jahren gepflanzt. |
+| `ba_baumalter` | int | Alter des Baumes bei Publikation des Datensatzes. Entspricht in der Regel der Spalte «Standjahr» plus ca. 10 Jahre. |
+| `ba_standjahr` | int | Anzahl Jahre, während derer der Baum am aktuellen Ort steht. Entspricht der Anzahl Jahre, welche zwischen dem Pflanzdatum und der Publikation der Datensatzes liegt. |
+| `ba_schutzstatus` | text | Beschreibung des Schutzstatus: "Geschützt (Umfang)": Geschützt wegen gemessenem Baumumfang. "Gemäss Baumschutzgesetz (BSchG)": Baumumfang wurde nicht unbedingt aktuell gemessen, Baum wurde trotzdem konservativ als geschützt eingeteilt. "Geschützt (Ersatzpflanzung)": Aktueller Baum ist geschützt, da er einen vormalig geschützten Baum ersetzt. |
+| `ba_strasse` | text | Strasse des Baumstandortes |
+| `ba_kreis` | text | Gebietseinteilung durch die Stadtgärtnerei |
+| `ba_gruppe` | text | Beschreibung der Gruppe |
+| `ba_gemeinde` | text | Gemeinde des Baumstandorts |
+| `map_links` | text | — |
 
 
     ///

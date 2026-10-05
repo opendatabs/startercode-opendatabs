@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,18 @@ Auto generated R starter code for data set 100245.
 - **Keywords** `['Strom', 'Stadtlast', 'Netzlast', 'Elektrizität', 'Elektro', 'Watt', 'Kilowattstunden', 'Stromverbrauch']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `time` | date | Datum |
+| `stromverbrauch` | double | Tägliche Summe des viertelstündlichen Stromverbrauchs |
+| `forecast` | double | Prognostizierter Wert, abhängig von Kalendertag (z.B. Ferien oder Wochentag) und Witterung |
+| `vgl_real_minus_forecast` | double | Differenz Stromverbrauch effektiv abzüglich Stromverbrauch |
+| `forecast_lowfi` | double | Untere Grenze des 95%-Prognoseintervalls für täglich erwarteten Stromverbrauch |
+| `forecast_highfi` | double | Obere Grenze des 95%-Prognoseintervalls für täglich erwarteten Stromverbrauch |
 
 
 # Load packages

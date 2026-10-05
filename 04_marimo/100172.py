@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100172`
+- **Dataset_identifier** `100172`
 - **Title** `Smarte Strasse: Fahrzeugdurchfahrten`
 - **Description** `<p>Der Datensatz zeigt alle Durchfahrten von Fahrzeugen mit der dazugehörigen Zeitangabe.</p><p class="" style="font-family: sans-serif;"><span style="font-weight: bolder;">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</span></p><ul><li>Informationen zum Projekt «Smarte Strasse»: <a href="https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen" target="_blank">https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen</a> </li><li>Genaue Standorte aller Sensoren (inkl. dem Schallsensor, der die Fahrzeugdurchfahrten zählt): <a href="https://data.bs.ch/explore/dataset/100114/" target="_blank">https://data.bs.ch/explore/dataset/100114/</a> </li><li>Weitere Datensätze aus dem Projekt «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><b>Hinweis: Die Sensoren an der Gundeldingerstrasse wurden am 29.6.23 abmontiert. Es werden keine Daten mehr erhoben.</b><br></p><p>Änderungsprotokoll: <br>29.06.2023 - Aktualisierungsintervall von "CONT" auf "NEVER" geändert.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Smarte Strasse', 'Auto', 'Verkehr', 'Verkehrszählung', 'Stau']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `localdatetime` | datetime | Datum und Uhrzeit bei Durchfahrt |
+| `classification` | text | Klassifizierung des Fahrzeugs bei Durchfahrt |
+| `timestamp_text` | text | — |
+| `classificationindex` | int | Index für die Fahrzeuge |
 
 
     ///

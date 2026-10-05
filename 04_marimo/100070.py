@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100070`
+- **Dataset_identifier** `100070`
 - **Title** `Wilde Abfall-Deponien`
 - **Description** `<p>Dieser Datensatz zeigt die Abfälle, welche an unerlaubten Orten, in nicht gebührenpflichtigen Säcken oder/und zur Unzeit deponiert wurden und durch die Stadtreinigung der Abfallkontrolle des Amts für Umwelt und Energie gemeldet wurden. <br><br>Die genauen geographischen Koordinaten werden einem 50x50 Meter Raster zugeteilt. Der süd-westliche Eckpunkt dieses Rasters wird jeweils als Geopunkt ausgewiesen, um die Anonymität zu garantieren.   </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-08-24`
-- **Modified** `2026-10-02T14:01:47+00:00`
+- **Modified** `2026-10-05T07:02:30+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-05-05T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-10-01T22:00:00+00:00`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Müll', 'Bebbisagg', 'illegal']`
 - **Creator** `Stadtreinigung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | text | Laufnummer |
+| `bearbeitungszeit_meldung` | datetime | — |
+| `abfallkategorie` | text | Kategorisierung; AUE steht für das Amt für Umwelt und Energie. |
+| `geo_point_2d` | geo_point_2d | — |
+| `wov_name` | text | Einzelne Einträge können keinem Bezirk resp. Wohnviertel zugeordnet werden. |
+| `bez_name` | text | Einzelne Einträge können keinem Bezirk resp. Wohnviertel zugeordnet werden. |
+| `wov_id_bez` | text | Einzelne Einträge können keinem Bezirk resp. Wohnviertel zugeordnet werden. |
+| `bez_id` | text | Einzelne Einträge können keinem Bezirk resp. Wohnviertel zugeordnet werden. |
+| `bez_label` | text | Einzelne Einträge können keinem Bezirk resp. Wohnviertel zugeordnet werden. |
+| `gemeinde_name` | text | — |
 
 
     ///

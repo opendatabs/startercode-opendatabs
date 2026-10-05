@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100448`
+- **Dataset_identifier** `100448`
 - **Title** `Arbeitsfreie Tage für Mitarbeitende der kantonalen Verwaltung Basel-Stadt`
 - **Description** `<p>Dieser Datensatz enthält die jährlich gültigen arbeitsfreien Frei- und Feiertage für die Mitarbeitenden der kantonalen Verwaltung des Kantons Basel-Stadt. Die Grundlage bildet der Regierungsratsbeschluss zur Regelung der arbeitsfreien Tage im kantonalen Verwaltungsdienst.</p><p>Berücksichtigt werden:</p><ul><li>Gesetzliche Feiertage gemäss § 2 Abs. 1 lit. a und b des Gesetzes über öffentliche Ruhetage und Ladenöffnung (RLG), sofern diese nicht auf einen Samstag oder Sonntag fallen,</li><li>sowie zusätzliche arbeitsfreie Halbtage (z. B. Fasnachtsmontag, Heiligabend, Silvester) gemäss kantonaler Regelung.</li></ul><p><b>Wichtiger Hinweis:</b></p><p>Der Datensatz gilt ausschliesslich für Mitarbeitende der kantonalen Verwaltung Basel-Stadt. Arbeitnehmende, die nicht explizit beim Kanton Basel-Stadt angestellt sind, sollen sich doch bitte bei ihrem Arbeitgeber informieren. Für gesetzlich festgelegte Feiertage, die für die allgemeine Bevölkerung und die Privatwirtschaft im Kanton Basel-Stadt relevant sind, verweisen wir auf die offizielle Übersicht:</p><p><a href="https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt" target="_blank">https://www.bs.ch/themen/arbeit-und-steuern/feiertage-im-kanton-basel-stadt</a></p><p>Der Datensatz wird jährlich aktualisiert und steht in maschinenlesbarem Format zur Verfügung.</p><p><br></p><p><b>iCal-Integration:</b></p><p>Um den Kalender direkt in Ihr bevorzugtes Kalenderprogramm zu integrieren, können Sie den folgenden Link über die Funktion „Kalender abonnieren“ einfügen:</p><p><a href="https://data-bs.ch/stata/frei-und-feiertage/FreiUndFeiertage.ics" target="_blank">https://data-bs.ch/stata/frei-und-feiertage/FreiUndFeiertage.ics</a></p><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Feiertage', 'Freizeit', 'Frei', 'Ferienregelung']`
 - **Creator** `Human Resources Basel-Stadt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wochentag` | text | Wochentag |
+| `datum` | date | Datum |
+| `bezeichnung` | text | Bezeichnung |
+| `anzahl_tage` | text | Anzahl Tage |
 
 
     ///

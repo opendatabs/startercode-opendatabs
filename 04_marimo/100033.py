@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100033`
+- **Dataset_identifier** `100033`
 - **Title** `Touristische Velorouten`
 - **Description** `Die touristischen Velorouten zeigen in Basel-Stadt und in der näheren Umgebung die signalisierten Velorouten von EuroVelo und SchweizMobil sowie die signalisierten regionalen Velorouten wie der Südschwarzwald-Radweg und der Dreiland-Radweg.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Velo', 'Fahrrad', 'Veloweg', 'E-Bike', 'Pedelec']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `objid` | text | — |
+| `objectid` | int | — |
+| `informatio` | text | — |
+| `kategorie` | text | — |
+| `routenbez` | text | — |
+| `rbeschreib` | text | — |
+| `richtung` | text | — |
+| `shape_leng` | double | — |
 
 
     ///

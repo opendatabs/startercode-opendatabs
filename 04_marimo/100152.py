@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100152`
+- **Dataset_identifier** `100152`
 - **Title** `Coronavirus (COVID-19): Positiv getestete Minderjährige in 3-Jahresklassen`
 - **Description** `<p>Dieser Datensatz zeigt die minderjährigen Personen, welche positiv auf SARS-CoV-2 getestet wurden in 3-Jahresklassen. Die erste Klasse (0 bis 3 Jahre) enthält 4 Jahre. Es werden ausschliesslich Personen mit Wohnsitz im Kanton Basel-Stadt gezeigt. Als «Datum Testresultat» gilt das Datum, an welchem das Testresultat vorlag.</p><p>Weitere Datensätze zu COVID-19:</p><p>Fallzahlen Basel-Stadt: <a href="https://data.bs.ch/explore/dataset/100073/" target="_blank">https://data.bs.ch/explore/dataset/100073/</a></p><p>Tests Basel-Stadt:<a href="https://data.bs.ch/explore/dataset/100094/" target="_blank">https://data.bs.ch/explore/dataset/100094/</a></p><p>Todesfälle Basel-Stadt nach Alter und Geschlecht: <a href="https://data.bs.ch/explore/dataset/100076/" target="_blank">https://data.bs.ch/explore/dataset/100076/</a></p><p>COVID-19 Dashboard: <a href="https://data.bs.ch/pages/covid-19-dashboard/" target="_blank">https://data.bs.ch/pages/covid-19-dashboard/</a><a href="https://data.bs.ch/pages/covid-19-dashboard//" target="_blank"></a></p><p><span style="font-weight: bolder;">Änderungsprotokoll:</span></p><ul><li>Die Erhebung der Werte wurde per 19. Juni 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "DAILY" auf "NEVER" geändert.</li></ul><p><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['Coronavirus', 'COVID-19', 'Virus', 'Lungenentzündung', 'Krankheit', 'Spital']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `test_datum` | date | Datum, an dem das Testresultat vorlag |
+| `pers_alter` | text | 3-Jahresklassen der Minderjährigen, wobei die erste Klasse (0 bis 3 Jahre) 4 Jahre umfasst |
+| `anzahl` | int | Anzahl Personen in der jeweiligen Subgruppe |
 
 
     ///

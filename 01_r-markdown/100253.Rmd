@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -27,6 +27,19 @@ Weitere Daten zu "Verkehrsberuhigte Zonen": <a href="https://data.bs.ch/explore/
 - **Keywords** `['Geschwindigkeitsbeschränkun', 'Fussgänger', 'Fussgängerzonen']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `objectid` | int | Identifikationsnummer (für kantonsinterne Zwecke verwendet) |
+| `vr_name` | text | Name |
+| `mapbs_vr_infos` | text | Infos |
+| `mapbs_vr_zufahrt` | text | Zufahrt |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
 # Load packages

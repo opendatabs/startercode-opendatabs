@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100078`
+- **Dataset_identifier** `100078`
 - **Title** `EuroAirport: Tägliche Flugbewegungen, Passagiere und Fracht`
 - **Description** `<p>Der Datensatz zeigt die Flugbewegungen sowie Angaben zur Anzahl Passagiere und zur beförderten Fracht auf dem EuroAirport Basel Mulhouse Freiburg für jeden Tag ab 1. Januar 2019.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-05-14`
-- **Modified** `2026-10-04T08:45:43+00:00`
+- **Modified** `2026-10-05T08:45:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Flugzeug', 'Landung', 'Start', 'Fluglärm', 'Flüge', 'EAP', 'Airport', 'Flughafen']`
 - **Creator** `Flughafen Basel-Mulhouse EuroAirport`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | — |
+| `kategorie` | text | Andere Kategorien = allgemeiner und anderer nicht-gewerblicher Verkehr |
+| `pax` | int | Anzahl Passagiere |
+| `fret` | double | in Tonnen |
+| `mvt` | int | Starts und Landungen |
 
 
     ///

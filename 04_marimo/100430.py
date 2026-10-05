@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100430`
+- **Dataset_identifier** `100430`
 - **Title** `Lichtsignalanlagen`
 - **Description** `Der Datensatz Lichtsignalanlagen umfasst alle Standorte von Lichtsignalanalgen Basel-Stadt, welche durch die Abteilung Verkehrssteuerung vom Amt für Mobilität projektiert, gebaut und betrieben werden.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Verkehr', 'Ampeln', 'Kreuzung', 'LSA', 'Lichtzeichenanlage', 'LZA']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | text | — |
+| `lg_lsaname` | text | Name der Lichtsignalanlage |
+| `lg_lsanummer` | int | Nummer der Lichtsignalanlage |
+| `map_links` | text | — |
 
 
     ///

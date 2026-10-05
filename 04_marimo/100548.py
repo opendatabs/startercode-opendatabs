@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100548`
+- **Dataset_identifier** `100548`
 - **Title** `Staatsquote`
 - **Description** `Die Staatsquote entspricht den «konsolidierten Gesamtausgaben» in Prozent des kantonalen Bruttoinlandprodukts (BIP). Die «konsolidierten Gesamtausgaben» umfassen die Ausgaben (Aufwand ohne Abschreibungen, Einlagen in Bestandeskonti von Fonds im Eigen- und Fremdkapital, durchlaufende Beiträge und interne Verrechnungen) plus Bruttoinvestitionen. Die konsolidierten Gesamtausgaben werden durch die Eidgenössischen Finanzverwaltung (EFV) berechnet. Das BIP des Kantons Basel-Stadt wird vom Bundesamt für Statistik (BFS) berechnet. Beide Wirtschaftsindikatoren werden mit einer zeitlichen Verzögerung von zwei Jahren veröffentlicht. Vorliegend wird die Staatsquote des Kantons ohne Gemeinden ausgewiesen.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Verwaltung']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/indikatorenportal/22540`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr |
+| `raumeinheit` | text | Raumeinheit |
+| `gesamtausgaben_in_fr` | int | — |
+| `bruttoinlandprodukt_in_fr` | int | Kantonales Bruttoinlandprodukt in Franken |
+| `staatsquote` | double | Die Staatsquote entspricht den «konsolidierten Gesamtausgaben» in Prozent des kantonalen Bruttoinlandprodukts (BIP) |
 
 
     ///

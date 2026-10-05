@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100336`
+- **Dataset_identifier** `100336`
 - **Title** `Einzugsgebiet der ARA Basel`
 - **Description** `<p>Das Untersuchungsgebiet des Abwassermonitoring umfasst das Einzugsgebiet der ARA Basel, welches sich hauptsächlich aus dem Kanton Basel-Stadt sowie den Gemeinden Allschwil, Binningen, Birsfelden, Bottmingen, Oberwil und Schönenbuch (alle Kanton Baselland) zusammensetzt.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['Einzugsgebiet', 'ARA', 'ARA Basel']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `name` | text | — |
 
 
     ///

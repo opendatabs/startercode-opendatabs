@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100025`
+- **Dataset_identifier** `100025`
 - **Title** `Politische Wahlkreise`
 - **Description** `<p>Weist die politischen Wahlkreise des Kantons Basel-Stadt aus.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Abstimmung', 'Kreise', 'Politik', 'Stimmberechtigt', 'Wahl']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächengeometrie der politischen Wahlkreise |
+| `id_wahlkreis` | int | Eindeutiger Identifikator der politischen Wahlkreise. |
+| `wahlkreis` | text | Bezeichnung des politischen Wahlkreises |
+| `kuerzel` | text | Kürzel des politischen Wahlkreises |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100399`
+- **Dataset_identifier** `100399`
 - **Title** `Resultate der Grossratswahlen 20. Oktober 2024`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Wahl der 100 Mitglieder des Grossen Rates vom 20. Oktober 2024. </p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,90 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Teilhabe', 'Demokratie', 'Parlament', 'Grosser Rat', 'Grossrat', 'Grossrätin']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahlbezeichnung` | text | Titel der Wahl |
+| `amtsdauer` | text | Anzahl Jahre, für die die Mitglieder gewählt werden |
+| `wahltermin` | date | Datum der Wahl |
+| `anzahl_sitze` | int | Anzahl Sitze, die für einen Wahlkreis zur Verfügung stehen |
+| `wahlkreis_nr` | text | Nummer des Wahlkreises |
+| `wahlkreis_code` | text | Code des Wahlkreises |
+| `wahlkreisbezeichnung` | text | Name des Wahlkreises |
+| `stimmberechtigte_manner` | int | Anzahl in einem Wahlkreis stimmberechtigter Männer |
+| `stimmberechtigte_frauen` | int | Anzahl in einem Wahlkreis stimmberechtigter Frauen |
+| `stimmberechtigte` | int | Anzahl Stimmberechtigte in einem Wahlkreis |
+| `stimmberechtigte_auslandschweizer` | int | Anzahl stimmberechtigter Auslandschweizer |
+| `wahlzettel` | int | Anzahl Wahlzettel |
+| `briefliche_stimmabgaben` | int | Anzahl brieflich eingelegter Wahlzettel |
+| `ungultige_wahlzettel` | int | Anzahl ungültiger Wahlzettel |
+| `leere_wahlzettel` | int | Anzahl leer eingelegter Wahlzettel |
+| `unveranderte_wahlzettel` | int | Anzahl unveränderter Wahlzettel |
+| `veranderte_wahlzettel_mit_bezeichnung` | int | Anzahl veränderter Wahlzettel mit Listenbezeichnung (leere Linien zählen als Parteistimmen) |
+| `veranderte_wahlzettel_ohne_bezeichnung` | int | Anzahl veränderter Wahlzettel ohne Listenbezeichnung (leere Linien werden nicht gezählt) |
+| `leere_stimmen` | int | Anzahl leerer Stimmen |
+| `listen_nr` | text | Nummer der Liste |
+| `partei_id` | text | ID der Partei |
+| `parteikurzbezeichnung` | text | Parteikurzbezeichnung |
+| `parteibezeichnung` | text | Name der Partei |
+| `anzahl_sitze_liste` | int | Anzahl Sitze einer Liste in einem Wahlkreis |
+| `unveranderte_wahlzettel_liste` | int | Anzahl unveränderte Wahlzettel einer Liste in einem Wahlkreis |
+| `veranderte_wahlzettel_liste` | int | Anzahl veränderte Wahlzettel einer Liste in einem Wahlkreis |
+| `kandidatenstimmen_unveranderte_wahlzettel` | int | Anzahl Stimmen aller Kandidierenden einer Liste aus unveränderten Wahlzetteln |
+| `zusatzstimmen_unveranderte_wahlzettel` | int | Anzahl Zusatzstimmen aller Kandidierenden einer Liste aus unveränderten Wahlzetteln |
+| `kandidatenstimmen_veranderte_wahlzettel` | int | Anzahl Stimmen aller Kandidierenden einer Liste aus veränderten Wahlzetteln |
+| `zusatzstimmen_veranderte_wahlzettel` | int | Anzahl Zusatzstimmen aller Kandidierenden einer Liste aus veränderten Wahlzetteln |
+| `kandidaten_nr` | text | Kandidaten-Nr |
+| `personen_id` | text | Laufnummer einer Person |
+| `kumulation` | text | Angabe, ob eine kandidierende Person auf einem unveränderten Wahlzettel mehrfach aufgeführt ist |
+| `bisher` | text | Angabe, ob eine kandidierende Person in der abgelaufenen Legislatur im Parlament vertreten war oder nicht |
+| `gewahlt` | text | Angabe, ob eine kandidierende Person gewählt ist |
+| `ganzer_name` | text | Nachname und Vorname, mit Komma getrennt |
+| `name` | text | Nachname |
+| `vorname` | text | Vorname |
+| `geschlecht` | text | Geschlecht |
+| `jahrgang` | text | Jahrgang |
+| `anrede` | text | Anrede |
+| `beruf` | text | Beruf gemäss Wahlzettel |
+| `stimmen_unveranderte_wahlzettel` | int | Anzahl Stimmen aus unveränderten Wahlzetteln |
+| `stimmen_veranderte_wahlzettel` | int | Anzahl Stimmen aus veränderten Wahlzetteln |
+| `stimmen_total_aus_wahlzettel` | int | Anzahl Stimmen total für eine kandidierende Person. Die Summe dieser Stimmen über eine Partei ergibt nicht das Total der Parteistimmen, weil so die leeren Linien auf Parteilisten nicht mitgezählt werden. |
+| `01_fdp` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der FDP |
+| `03_ldp` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der LDP |
+| `04_evp` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der EVP |
+| `05_sp` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der SP |
+| `07_mitte` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der Mitte |
+| `09_edu` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der EDU |
+| `10_glp` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der GLP |
+| `11_pda` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der PdA |
+| `12_svp` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der SVP |
+| `14_va` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der VA |
+| `16_ab` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der AB |
+| `28_pbkw` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der PBkW |
+| `43_grune` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der GRÜNE |
+| `45_basta` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der BastA |
+| `46_fssk` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der FSSK |
+| `47_kuss` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste der KUSS |
+| `00_ohne` | int | Anzahl Stimmen für eine kandidierende Person aus einer veränderten Liste ohne Bezeichnung |
+| `rangfolge` | int | Rangfolge innerhalb einer Liste gemäss Anzahl Stimmen (bei Stimmengleichheit entscheidet das Los). |
+| `total_der_gultigen_wahlzettel` | int | — |
+| `anteil_brieflich_wahlende` | text | Anteil der brieflich eingelegten Wahlzettel am Total der eingelegten Wahlzettel |
+| `stimmbeteiligung` | text | Anteil der eingelegten Wahlzettel am Total der Stimmberechtigten |
+| `alter` | int | Alter des Kandidierenden Ende 2024 |
+| `partei_ganzer_name` | text | — |
 
 
     ///

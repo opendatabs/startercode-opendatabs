@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100403`
+- **Dataset_identifier** `100403`
 - **Title** `Gesundheitsversorgung (GSV): Patientenkennzahlen`
 - **Description** `Dieser Datensatz enthält Kennzahlen zur stationären Gesundheitsversorgung von Patienten aus Basel-Stadt sowie von ausserkantonalen Patienten, die in baselstädtischen Spitälern behandelt werden. Er zeigt, in welche Kantone baselstädtische Patienten zur stationären Behandlung gehen und aus welchen Kantonen die Patienten stammen, die in baselstädtischen Spitälern behandelt werden. Der Datensatz beschreibt Behandlungsfälle, Pflegetage und die Verteilung nach Fachbereichen, Geschlechtern, Altersgruppen und Diagnosen. Erfasst werden sowohl Fälle aus der Akutsomatik als auch aus der Psychiatrie und Rehabilitation. Der Fokus liegt auf Patienten mit Wohnsitz im Kanton Basel-Stadt.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,108 @@ def _(mo):
 - **Keywords** `['Pflege', 'Spital']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datenjahr` | date | Das statistische Datenjahr |
+| `pat_wohnkanton` | text | Der Wohnkanton des Patienten. |
+| `staendige_wohnbev` | int | Die ständige Wohnbevölkerung des jeweiligen Wohnkantons |
+| `anz_pats` | int | Anzahl der eindeutigen Patienten, welche aus dem Wohnkanton im Kanton des Spitals behandelt wurden |
+| `anz_faelle` | int | Anzahl der Behandlungsfälle, welche aus dem Wohnkanton im Kanton des Spitals behandelt wurden. Ein Patient kann mehrmals behandelt werden. |
+| `spital_kanton` | text | Der Kanton, in dem das behandelnde Krankenhaus liegt |
+| `faelle_akutsomatik` | int | Anzahl der akutsomatischen Behandlungsfälle |
+| `cmi_akutsomatik` | double | Case Mix Index für Akutsomatik |
+| `pflegetage_akutsomatik` | int | Anzahl der Aufenthaltstage der Akutsomatikfälle |
+| `maennlich_akutsomatik` | int | Anzahl männlicher Fälle in der Akutsomatik. |
+| `weiblich_akutsomatik` | int | Anzahl weiblicher Fälle in der Akutsomatik. |
+| `jahre_0_20_akutsomatik` | int | Anzahl der akutsomatischen Fälle im Alter von 0 bis 20 Jahre |
+| `jahre_21_40_akutsomatik` | int | Anzahl der akutsomatischen Fälle im Alter von 21 bis 40 Jahre |
+| `jahre_41_60_akutsomatik` | int | Anzahl der akutsomatischen Fälle im Alter von 41 bis 60 Jahre |
+| `jahre_61_80_akutsomatik` | int | Anzahl der akutsomatischen Fälle im Alter von 61 bis 80 Jahre |
+| `jahre_ueber80_akutsomatik` | int | Anzahl der akutsomatischen Fälle im Alter von über 80 Jahren |
+| `faelle_basispaket` | int | Anzahl der Fälle im Basispaket Chirurgie und innere Medizin |
+| `cmi_basispaket` | double | Case Mix Index im Basispaket Chirurgie und innere Medizin |
+| `faelle_gastroenterologie` | int | Anzahl der Fälle des Leistungsbereich Gastroenterologie |
+| `cmi_gastroenterologie` | double | Case Mix des Leistungsbereich Gastroenterologie |
+| `faelle_geburtshilfe` | int | Anzahl der Fälle des Leistungsbereich Geburtshilfe |
+| `cmi_geburtshilfe` | double | Case Mix des Leistungsbereich Geburtshilfe |
+| `faelle_gefaesse` | int | Anzahl der Fälle des Leistungsbereich Gefässe |
+| `cmi_gefaesse` | double | Case Mix des Leistungsbereich Gefässe |
+| `faelle_gynaekologie` | int | Anzahl der Fälle des Leistungsbereich Gynäkologie |
+| `cmi_gynaekologie` | double | Case Mix des Leistungsbereich Gynäkologie |
+| `faelle_hno` | int | Anzahl der Fälle des Leistungsbereich Hals-Nasen-Ohren |
+| `cmi_hno` | double | Case Mix des Leistungsbereich Hals-Nasen-Ohren |
+| `faelle_haematologie` | int | Anzahl der Fälle des Leistungsbereich Hämatologie |
+| `cmi_haematologie` | double | Case Mix des Leistungsbereich Hämatologie |
+| `faelle_herz` | int | Anzahl der Fälle des Leistungsbereich Herz |
+| `cmi_herz` | double | Case Mix des Leistungsbereich Herz |
+| `faelle_neugeborene` | int | Anzahl der Fälle des Leistungsbereich Neugeborene |
+| `cmi_neugeborene` | double | Case Mix des Leistungsbereich Neugeborene |
+| `faelle_neurologie` | int | Anzahl der Fälle des Leistungsbereich Neurologie |
+| `cmi_neurologie` | double | Case Mix des Leistungsbereich Neurologie |
+| `faelle_orthopaedie` | int | Anzahl der Fälle des Leistungsbereich Orthopädie |
+| `cmi_orthopaedie` | double | Case Mix des Leistungsbereich Orthopädie |
+| `faelle_radio_onkologie` | int | Anzahl der Fälle des Leistungsbereich (Radio-) Onkologie |
+| `cmi_radio_onkologie` | double | Case Mix des Leistungsbereich (Radio-) Onkologie |
+| `faelle_pneumologie` | int | Anzahl der Fälle des Leistungsbereich Pneumologie |
+| `cmi_pneumologie` | double | Case Mix des Leistungsbereich Pneumologie |
+| `faelle_urologie` | int | Anzahl der Fälle des Leistungsbereich Urologie |
+| `cmi_urologie` | double | Case Mix des Leistungsbereich Urologie |
+| `faelle_viszeralchirurgie` | int | Anzahl der Fälle des Leistungsbereich Viszeralchirurgie |
+| `cmi_viszeralchirurgie` | double | Case Mix des Leistungsbereich Viszeralchirurgie |
+| `faelle_uebrige` | int | Anzahl der Fälle der übrigen Leistungsbereiche |
+| `cmi_uebrige` | double | Case Mix der übrigen Leistungsbereiche |
+| `total_psych` | int | Anzahl psychiatrischer Fälle aus dem Wohnkanton im Behandlungskanton |
+| `pflegetage_psych` | int | Anzahl der Pflegetage in der Psychiatrie |
+| `maennlich_psych` | int | Anzahl der männlichen Fälle in der Psychiatrie |
+| `weiblich_psych` | int | Anzahl der weiblichen Fälle in der Psychiatrie |
+| `jahre_0_20_psych` | int | Anzahl der psychiatrischen Fälle im Alter von 0 bis 20 Jahre |
+| `jahre_21_40_psych` | int | Anzahl der psychiatrischen Fälle im Alter 21 bis 40 Jahre |
+| `jahre_41_60_psych` | int | Anzahl der psychiatrischen Fälle im Alter 41 bis 60 Jahre |
+| `jahre_61_80_psych` | int | Anzahl der psychiatrischen Fälle im Alter 61 bis 80 Jahre |
+| `jahre_ueber80_psych` | int | Anzahl der psychiatrischen Fälle im Alter von über 80 Jahren |
+| `psych_affektiv` | int | Anzahl der psychiatrischen Fälle mit einer Diagnose aus der IDC10-Gruppe Affektive Störungen"" |
+| `psych_neurotisch` | int | Anzahl der psychiatrischen Fälle mit einer Diagnose aus der IDC10-Gruppe Neurotische, Belastungs- und somatoforme Störungen"" |
+| `psych_organisch` | int | Anzahl der psychiatrischen Fälle mit einer Diagnose aus der IDC10-Gruppe Organische, einschließlich symptomatischer psychischer Störungen"" |
+| `psych_psychisch` | int | Anzahl der psychiatrischen Fälle mit einer Diagnose aus der IDC10-Gruppe Psychische und Verhaltensstörungen durch psychotrope Substanzen"" |
+| `psych_schizophren` | int | Anzahl der psychiatrischen Fälle mit einer Diagnose aus der IDC10-Gruppe Schizophrenie, schizotype und wahnhafte Störungen"" |
+| `psych_uebrige` | int | Anzahl der psychiatrischen Fälle der übrigen ICD10-Gruppen aus dem Kapitel Psychische und Verhaltensstörungen"" |
+| `total_reha` | int | Anzahl der Rehabilitationsfälle des Wohnkantons im Behandlungskanton |
+| `pflegetage_reha` | int | Anzahl der Pflegetage der Fälle während ihres stationären Aufenthalts in der Rehabilitation. |
+| `maennlich_reha` | int | Anzahl männlicher Fälle in der Rehabilitation. |
+| `weiblich_reha` | int | Anzahl weiblicher Fälle in der Rehabilitation. |
+| `jahre_0_20_reha` | int | Anzahl der Rehabilitationsfälle im Alter von 0 bis 20 Jahre |
+| `jahre_21_40_reha` | int | Anzahl der Rehabilitationsfälle im Alter von 21 bis 40 Jahre |
+| `jahre_41_60_reha` | int | Anzahl der Rehabilitationsfälle im Alter von 41 bis 60 Jahre |
+| `jahre_61_80_reha` | int | Anzahl der Rehabilitationsfälle im Alter von 61 bis 80 Jahre |
+| `jahre_ueber80_reha` | int | Anzahl der Rehabilitationsfälle im Alter von über 80 Jahren |
+| `reha_muskelskelett` | int | Anzahl der stationären Rehabilitationsfälle mit einer Diagnose aus dem ICD10-Kapitel Muskel-Skelett-System und des Bindegewebe"" |
+| `reha_verletzung` | int | Anzahl der stationären Rehabilitationsfälle mit einer Diagnose aus dem ICD10-Kapitel Verletzungen, Vergiftungen und bestimmte andere Folgen äußerer Ursachen"" |
+| `reha_kreislauf` | int | Anzahl der stationären Rehabilitationsfälle mit einer Diagnose aus dem ICD10-Kapitel Kreislaufsystem"" |
+| `reha_labor` | int | Anzahl der stationären Rehabilitationsfällemit einer Diagnose aus dem ICD10-Kapitel Symptome und abnorme klinische und Laborbefunde"" |
+| `reha_neubildungen` | int | Anzahl der stationären Rehabilitationsfällemit einer Diagnose aus dem ICD10-Kapitel Neubildungen"" |
+| `reha_uebrige` | int | Anzahl der stationären Rehabilitationsfälle mit einer Diagnose aus den übrigen ICD10-Kapiteln |
+| `faelle_kar1` | int | Anzahl der Fälle der Leistungsgruppe Kardiologie und Devices" (Kar1)" |
+| `cmi_kar1` | double | Case-Mix-Index der Fälle der Leistungsgruppe Kardiologie und Devices" (Kar1)" |
+| `faelle_bew71` | int | Anzahl der Fälle der Leistungsgruppe Erstprothesen Hüfte" (BEW 7.1)" |
+| `cmi_bew71` | double | Case-Mix-Index der Fälle der Leistungsgruppe Erstprothesen Hüfte" (BEW 7.1)" |
+| `faelle_uro111` | int | Anzahl der Fälle der Leistungsgruppe Radikale Prostatektomie" (URO1.1.1)" |
+| `cmi_uro111` | double | Case-Mix-Index der Fälle der Leistungsgruppe Radikale Prostatektomie" (URO1.1.1)" |
+| `faelle_geb1` | int | Anzahl der Fälle der Leistungsgruppe Grundversorgung Geburtshilfe (ab 34. SSW und >= 2000g)" (GEB1)" |
+| `cmi_geb1` | double | Case-Mix-Index der Fälle der Leistungsgruppe Grundversorgung Geburtshilfe (ab 34. SSW und >= 2000g)" (GEB1)" |
 
 
     ///

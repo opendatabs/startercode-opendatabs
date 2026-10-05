@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100292`
+- **Dataset_identifier** `100292`
 - **Title** `Gewässerschutzkarte: Grundwasserschutzzonen`
 - **Description** `<p>Die Grundwasserschutzzonen sind das wichtigste Instrument, Fassungs-, Anreicherungsanlagen und das Grundwasser unmittelbar vor seiner Nutzung als Trinkwasser vor Beeinträchtigungen zu schützen. Schutzzonen werden eindeutig definiert und überlagern sich innerhalb der Erfassungstoleranzen nicht.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['grundwasserschutz', 'gewasserschutz', 'grundwasser', 'trinkwasser', 'gewasserschutzrecht']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Die 2D Polygongeometrie kann aus Geraden bestehen. Multigeometrien werden nicht unterstützt. |
+| `idgwszone` | text | Eindeutiger Identifikator der Grundwasserschutzzone |
+| `typ` | text | Die Grundwasserschutzzonen S1-S3 sind das wichtigste Instrument, Fassungs-, Anreicherungsanlagen und das Grundwasser unmittelbar vor seiner Nutzung als Trinkwasser vor Beeinträchtigungen zu schützen. |
+| `kantypbez` | text | Bezeichnung des Schutzzonentyps gemäss kantonalen Standard. |
+| `bemerkung` | text | Bemerkung zur Grundwasserschutzzone |
+| `altrecht` | boolean | Angabe aus dem Bundesmodell, dass informiert ob rechtsgültige Objekte nicht mehr den heutigen gesetzl. Anforderungen entsprechen. Solche Objekte besitzten die Ausprägung JA, TRUE (oder ggf. 1). |
+| `geschaebez` | text | Die Geschäftsbezeichung kann sich je nach ÖREB-Thema unterscheiden. Z.T. wird eine systematische Nummern/Buchstabenkombinationen (z.B. Bau- und Strassenlinien der Stadt Basel) benutzt, meist haben die Geschäftsbezeichnungen aber eine Ortspezifische Bezieichnung. Abkürzungen am Anfang der Bezeichnung weisen auf die Verbunden ÖREB Themen. Die Abkürzung TA steht für Technische Aenderung. |
+| `geschaesta` | text | Der Geschäftsstatus unterscheidet ob das politische Geschäft bereits in Kraft ist, oder ob es sich noch um eine laufende Änderung handelt. Bei laufende Änderungen wird zwischen Auflage- und Beschlussphase differenziert. Letztere werden durch unterschiedliche Rekurs- bzw. Referendumfristen vorgegeben. |
+| `datumstat` | date | Das Attribut bezeichnet den Start des aktuellen Geschäftsstatus. |
+| `geolink` | text | Enthält den Link zu allen Rechtsdokumenten auf ÖREBlex https://oereblex.bs.ch/, die das jeweilige Geschäft betreffen. Die Links werden als XML gespeichert und werden durch Austausch der Endung (".html") besser lesbar. |
+| `bemerkung_geschaeft` | text | Bemerkungen zum Geschäft |
+| `idgeschaef` | text | Eindeutiger Identifikator des Geschäfts. |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100277`
+- **Dataset_identifier** `100277`
 - **Title** `Statistiken der Smiley-Geschwindigkeitsanzeigen`
 - **Description** `<p>Die Statistik der Smiley-Geschwindigkeitsanzeigen fasst die Daten über die verschiedenen Phasen zusammen (Vormessung, Betrieb, Nachmessung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['Smiley', 'Tempolimit', 'Verkehr', 'Tagesverkehr', 'Tempo', 'Vormessung', 'Nachmessung']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `zyklus` | int | Messzyklus (1, 2 oder 3) |
+| `phase` | text | Phase der Messung (Vormessung, Betrieb, Nachmessung oder Gesamt) |
+| `idstandort` | int | Eindeutige Standortkennung |
+| `strassenname` | text | Strassenname |
+| `messbeginn_phase` | datetime | Beginn der jeweiligen Phase |
+| `v_50` | double | Geschwindigkeit, bei welcher die Hälfte der Fahrzeuge schneller und die andere Hälfte langsamer fährt. |
+| `v_85` | double | Geschwindigkeitswert, unter dem 85% der Fahrzeuge fahren. Dieser wird oft genutzt zur Bestimmung von Sicherheitsgrenzen. |
+| `geschwindigkeit` | double | Maximale erlaubte Geschwindigkeit |
+| `anzahl_messungen` | int | Gesamtanzahl der durchgeführten Geschwindigkeitsmessungen. |
+| `messdauer_h` | double | Die Gesamtdauer der Geschwindigkeitsmessung, angegeben in Stunden. |
+| `dtv` | double | Durchschnittliche Anzahl Fahrzeuge, die täglich den Messbereich passieren. |
+| `link_einzelmessungen` | text | URL zu detaillierten Einzeldaten der Geschwindigkeitsmessungen |
+| `geo_point_2d` | geo_point_2d | Geografische Koordinaten der Smiley-Geschwindigkeitsanzeige |
 
 
     ///

@@ -61,7 +61,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100268`
+- **Dataset_identifier** `100268`
 - **Title** `Einzelmessungen der Smiley-Geschwindigkeitsanzeigen`
 - **Description** `<p>Einzelmessungen der Smiley-Geschwindigkeitsanzeigen der Kantonspolizei Basel-Stadt ab 2023 (Zeitpunkt des Beginns der Messung). Die Smiley-Geschwindigkeitsanzeigen sind nicht geeicht und entsprechend können die Werte von der tatsächlich gefahrenen Geschwindigkeit abweichen. Hinweis: Die Messungen sind nicht repräsentativ für das ganze Jahr und müssen im Kontext des Erhebungsdatums betrachtet werden. Darüber hinaus wurden gewisse Messungen während einer ausserordentlichen Verkehrsführung (z.B. Umleitungsverkehr infolge von Baustellentätigkeiten etc.) erhoben. Manipulationen an Geräten können zu fehlerhaften Messungen führen.</p><p class="MsoNormal"><span class="ui-provider">Die Geschwindigkeitsmessungen
 durchlaufen vier Phasen: <b>Vormessung</b>, <b>Betrieb</b>, <b>Nachmessung</b> und <b>nach Ende</b>. In der
@@ -82,6 +82,42 @@ ausserhalb des im Projekt definierten Zeitraums vorfallen. </span></p><p class=
 - **Keywords** `['Smiley', 'Tempolimit', 'Verkehr', 'Tagesverkehr', 'Tempo', 'Vormessung', 'Nachmessung']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `zyklus` | text | Messzyklus |
+| `phase` | text | Phase der Messung (Vormessung, Betrieb, Nachmessung oder nach Ende) |
+| `id_standort` | int | Eindeutige Standortkennung |
+| `strassenname` | text | Strassenname |
+| `ort` | text | Ortsname |
+| `ort_abkuerzung` | text | Ort Abkürzung |
+| `messung_timestamp` | datetime | Zeitpunkt der Messung |
+| `messung_datum` | date | Datum der Messung |
+| `messung_zeit` | text | Zeit der Messung |
+| `v_einfahrt` | int | Geschwindigkeit bei Einfahrt |
+| `v_ausfahrt` | int | Geschwindigkeit bei Ausfahrt |
+| `v_delta` | int | Geschwindigkeitsdifferenz (Einfahrt minus Ausfahrt) |
+| `geschwindigkeit` | int | Maximale erlaubte Geschwindigkeit |
+| `halterung` | text | Art der Befestigung (permanent oder mobil) |
+| `start_vormessung` | datetime | Beginn der Vormessung (mit ausgeschalteter Anzeige) |
+| `start_betrieb` | datetime | Beginn des aktiven Betriebs |
+| `start_nachmessung` | datetime | Beginn der Nachmessung (mit ausgeschalteter Anzeige) |
+| `ende` | datetime | Ende des Messzyklus am Standort |
+| `messung_jahr` | text | Jahr der Messung |
+| `geo_point_2d` | geo_point_2d | Geografische Koordinaten der Smiley-Geschwindigkeitsanzeige |
 
 
     ///

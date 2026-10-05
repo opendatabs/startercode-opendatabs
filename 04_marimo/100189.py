@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100189`
+- **Dataset_identifier** `100189`
 - **Title** `Strassennamen`
 - **Description** `<p>Der Datensatz umfasst Strassen und Plätze, welche durch eine Achse lokalisiert werden.<br>Die Achsen enthalten eine kurze Erläuterung zur Bedeutung der Strassennamen. Die Kurzerklärungen gibt es nur für Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Nomenklatur', 'Strasse', 'Strassennetz', 'Name']`
 - **Creator** `Nomenklaturkommission`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Liniengeometrie der Strassenachse. Plätze werden als Umrisslinie dargestellt. |
+| `id_strasse` | int | Unter der amtlichen Strassennummer ist die Strassennummer gemäss eines amtlichen Verwaltungsregisters (z.B. amtliche Vermessung) zu verstehen. Im Kanton Basel-Stadt auch Strassen ID genannt. |
+| `strassenname` | text | Mit diesem Merkmal wird die Strassenbezeichnung in offizieller Schreibweise der Gemeinde erfasst.; Gemäss der Verordnung über die geografischen Namen fällt die Benennung der Strassen in den Zuständigkeitsbereich der Gemeinden.; Die Strassennamen müssen grundsätzlich den Empfehlungen "Gebäudeadressierung und Schreibweise von Strassennamen für die deutschsprachige Schweiz", herausgegeben vom Bundesamt für Landestopographie, folgen.; Bei einigen allein stehenden Gebäuden (landwirtschaftliche Gebäude, Berghütten usw.) kann die Gebäudeadresse nicht mit einer Strasse in Verbindung gebracht werden.; In diesem Fall kann der Strassenname durch den Namen eines benannten Gebiets ersetzt werden. |
+| `strassenname_kurz` | text | Da der Platz für die Adressen beschränkt ist, wird für jede Strassenbezeichnung auch eine Kurzschreibweise definiert. Die übergeordneten Regeln zur harmonisierten Schreibweise der Strassenbezeichnungen gelten mit Ausnahme der Abkürzungen sinngemäss auch für die Kurzschreibweise. |
+| `strassenindex` | text | Index bestehend aus den drei ersten Zeichen der Strassenbezeichnung. |
+| `gemeindename` | text | Offizielle Bezeichnung der Gemeinde |
+| `erklaerung_erste_zeile` | text | Erste Zeile der Erklärung für die Strassenbezeichnung, welche sich auf dem Strassenschild befindet. Die Kurzerklärungen gibt es nur für Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer. |
+| `erklaerung_zweite_zeile` | text | Zweite Zeile der Erklärung für die Strassenbezeichnung, welche sich auf dem Strassenschild befindet. Die Kurzerklärungen gibt es nur für Strassennamen der Stadt Basel. Die Felder zu den Erklärungen sind ausserhalb des Stadtgebietes leer. |
+| `amtliche_benennung` | text | Datum, an welchem die Strasse amtlich benannt wurde. |
+| `erstmalige_erwaehnung` | text | Das Datum, an welchem die Strasse zum ersten Mal erwähnt wurde. |
 
 
     ///

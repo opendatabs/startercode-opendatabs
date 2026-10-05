@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100067`
+- **Dataset_identifier** `100067`
 - **Title** `Umweltanalyse Grundwasser`
 - **Description** `<p style='font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.495px;'>Der Datensatz enthält die Analysedaten der Grundwasser-Beprobungs-Kampagnen des Kantons Basel-Stadt seit dem Jahr 1993.  Es werden Konzentrationsangaben zu verschiedenen Inhalts- resp. Schadstoffen mit Bezug auf den Brunnennamen sowie der geographischen Koordinaten gemacht.</p><p style='font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.495px;'><span style="font-size: 12.495px;">Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei" target="_blank">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei</a></span><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,46 @@ def _(mo):
 - **Keywords** `['Wasserqualität', 'Fluss', 'Reserve', 'Chemie', 'Rüs', 'Messwert', 'Wassertemperatur']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `probentyp` | text | Unterscheidet zwischen Matrix Wasser und Feststoff (Schwebstoff) |
+| `probenahmestelle` | text | Ort, an dem die Probe entnommen wurde. |
+| `geo_point_2d` | geo_point_2d | Koordinaten der Probeentnahmestelle. |
+| `x_coord` | text | X-Koordinate der Probeentnahmestelle in EPSG:2056. |
+| `y_coord` | text | Y-Koordinate der Probeentnahmestelle in EPSG:2056. |
+| `probenahmedatum` | text | Datum, an welchem die Probe entnommen wurde. |
+| `entnahmezeit` | text | Uhrzeit, zu der die Probe entnommen wurde. |
+| `probenahmedauer` | text | Dauer der Probenahme. |
+| `reihenfolge` | text | Sortierfolge für Auswertungen. |
+| `gruppe` | text | Gruppe der gemessenen Stoffe. |
+| `parameter` | text | Gemessener Stoff. |
+| `bg` | double | Minimal bestimmbare Konzentration des gemessenen Stoffes. |
+| `wert` | text | Gemessener Wert. |
+| `wert_num` | double | Gemessener Wert als Dezimalzahl. Werte, die unterhalb der Bestimmungsgrenze liegen (z. B. <0,25) werden nicht angegeben. |
+| `einheit` | text | Einheit, in welcher der Wert gemessen wird. |
+| `auftragnr` | text | Nummer des Auftrags. |
+| `probennr` | text | Nummer der Probe. |
+| `resultatnummer` | text | Nummer des Resultats. |
+| `automatische_auswertung` | text | Angabe, ob eine automatische Auswertung erfolgte oder nicht. |
+| `cas_bezeichnung` | text | ID des chemischen Stoffs, siehe https://de.wikipedia.org/wiki/CAS-Nummer. |
+| `bafu_bezeichnung` | text | Bezeichnung gemäss Bundesamt für Umwelt BAFU. |
+| `allgemeine_parametergruppe` | text | Gruppe der Parameter. |
+| `probenahmedatum_date` | date | Datum der Probenahme. |
+| `probenahmejahr` | text | Jahr der Probeentnahme. |
 
 
     ///

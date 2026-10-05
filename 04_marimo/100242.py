@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100242`
+- **Dataset_identifier** `100242`
 - **Title** `Strassen und Wege: Durchgangsstrassen`
 - **Description** `<p>Der Datensatz beinhaltet die Durchgangsstrassen gemäss eidgenössischer Durchgangsstrassenverordung (741.272).</p><p>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?refine.tags=STWE" target="_blank">https://data.bs.ch/explore/?refine.tags=STWE</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,29 @@ def _(mo):
 - **Keywords** `['Durchgangsstrassen', 'Erschliessungsstrasse', 'Europastrasse', 'Feldweg', 'Gasse', 'Geschwindigkeit', 'Hauptstrasse', 'Hierarchie', 'HLS', 'Hochleistungsstrasse', 'HSS', 'HVS', 'Kantonsstrassen', 'Mobilität', 'Mobilitätsnetz', 'Nationalstrasse', 'Netz', 'Parkanlage', 'Promenade', 'QSS', 'Quartiersammelstrasse', 'Strassennetzhierarchie', 'Temporegime', 'Verkehrsorientierte', 'Waldweg', 'Weg', 'Strassennetz', 'Wegnetz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_durchgangsstrasse` | int | Eindeutiger Identifikator der Strasse |
+| `durchgangsstrassennummer` | text | Nummer der Durchgangsstrasse |
+| `durchgangsstrassentyp` | text | Typ der Durchgangsstrasse |
+| `strecke` | text | Routenverlauf der gesamten Durchgangsstrasse |
+| `bemerkungen` | text | Routenverlauf der Durchgangsstrasse in Basel-Stadt |
 
 
     ///

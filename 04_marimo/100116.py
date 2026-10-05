@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100116`
+- **Dataset_identifier** `100116`
 - **Title** `Coronavirus (COVID-19): Tests nach Nachweismethode`
 - **Description** `<p>Dieser Datensatz zeigt die Anzahl Tests auf SARS-CoV-2 für jeden Kanton, die gesamte Schweiz und das Fürstentum Liechtenstein sowie die entsprechenden Testresultate (positiv/negativ) auf täglicher Basis. Die Angaben werden täglich durch das Bundesamt für Gesundheit (BAG) zur Verfügung gestellt im <a href="https://www.covid19.admin.ch/" target="_blank">Covid-19 Situationsbericht </a>bzw. über dessen <a href="https://stcovidappstorageprodchn.blob.core.windows.net/covid/context" target="_blank">API</a>.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,37 @@ def _(mo):
 - **Keywords** `['Coronavirus', 'Corona', 'COVID-19', 'PCR', 'Antigen', 'Krankheit', 'Lungenentzündung', 'Test', 'Pandemie']`
 - **Creator** `Bundesamt für Gesundheit BAG`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Falldatum, entspricht in der Regel dem Datum der Probeentnahme |
+| `georegion` | text | Wohnkanton, falls unbekannt: Kanton des Testcenters. Zusätzlich sind die aggregierten Einheiten CH, FL und CHFL vorhanden. |
+| `entries` | int | Anzahl durchgeführte Tests. Eine Person kann mehrfach getestet werden. |
+| `pop` | int | Anzahl EinwohnerInnen der vorliegenden Region, wie sie vom BAG zur Inzidenzberechnung verwendet wird. |
+| `dayofweek` | int | ID des Wochentags. 0 = Montag, 1 = Dienstag, etc. |
+| `wochentag` | text | Wochentag auf Deutsch |
+| `week` | int | — |
+| `offset_last7d` | int | — |
+| `offset_last14d` | int | — |
+| `offset_last28d` | int | — |
+| `sumdelta7d` | double | — |
+| `inzdelta7d` | double | — |
+| `type_variant` | text | — |
+| `entries_letzter_stand` | int | — |
+| `entries_neu_gemeldet` | int | — |
 
 
     ///

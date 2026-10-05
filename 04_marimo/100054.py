@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100054`
+- **Dataset_identifier** `100054`
 - **Title** `Baumkataster: Fäll- und Baumersatzliste`
 - **Description** `Der Baumkataster umfasst den durch die Stadtgärtnerei Basel (Gebiet Stadt Basel) und die Gemeinde Riehen (Gebiet Riehen) gepflegten Baumbestand. Bäume sind im Kanton Basel-Stadt gemäss Baumschutzgesetz (BSchG) geschützt. Die Fäll- und Baumersatzliste enthält diejenigen geschützten Bäume, welche innerhalb der nächsten 6 Monate gefällt, ersetzt und neu gepflanzt werden müssen. Fällungen werden jeweils im Winterhalbjahr vorgenommen.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['Baum', 'Stadtbaum', 'Unterhalt', 'Pflege', 'Ersatz', 'Fällung', 'Kataster']`
 - **Creator** `Stadtgärtnerei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | text | Laufnummer |
+| `ba_art` | text | Botanische und deutsche Bezeichnung der Baumart |
+| `baumart_lateinisch` | text | — |
+| `baumart_deutsch` | text | — |
+| `mapbs_ba_baumnr` | text | Eindeutige Nummer des Baums |
+| `ba_schutzstatus` | text | Beschreibung des Schutzstatus: "Geschützt (Umfang)": Geschützt wegen gemessenem Baumumfang. "Gemäss Baumschutzgesetz (BSchG)": Baumumfang wurde nicht unbedingt aktuell gemessen, Baum wurde trotzdem konservativ als geschützt eingeteilt. "Geschützt (Ersatzpflanzung)": Aktueller Baum ist geschützt, da er einen vormalig geschützten Baum ersetzt. |
+| `ba_stammumfang` | int | Stammumfang in cm |
+| `ba_strasse` | text | Strasse des Baumstandortes |
+| `ba_faellgrund` | text | Grund für die Fällung des Baums. |
+| `ba_faellgrund_bemerkung` | text | Weitergehende Informationen zur Fällung des Baums |
+| `map_links` | text | — |
 
 
     ///

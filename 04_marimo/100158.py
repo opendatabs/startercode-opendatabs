@@ -54,7 +54,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100158`
+- **Dataset_identifier** `100158`
 - **Title** `Überwachung Luftqualität Sanierung Areal Walkeweg`
 - **Description** `<div>Immobilien Basel-Stadt (IBS) erstellt auf dem Familiengarten Areal Walkeweg Nord in Basel eine Neubebauung mit Wohneigentum und Schule. Bereiche des Neubauprojektes sind im Kataster der belasteten Standorte des Kantons Basel-Stadt geführt. Es handelt sich dabei um eine ehemalige Kiesentnahmestelle (ab ca. 1892), welche in Etappen ab 1917 sukzessive wieder mit Abfall aufgefüllt wurde. Im Rahmen des Projekts ist eine Totalsanierung mit Bodenaustausch am Standort vorgesehen.</div><div>Neben behördlichen Auflagen und Schutzmassnahmen, welche während den baulichen Massnahmen im Untergrund eine Belastung der Umgebung (Schutz der Umwelt und Allgemeinbevölkerung) mindern sollen, sieht das Lufthygieneamt beider Basel (LHA) vor, während der relevanten baulichen Eingriffe die Immissionen mittels Messungen der Luft zu überwachen. Auf Basis der Ergebnisse der technischen Untersuchung des Areals wurde in erster Linie die Staubdeposition (mittels Bergerhoff-Methode) und flüchtige organische Stoffe (mittels Passivsammler) als zu überwachende Parameter ausgewählt. </div><div>Für die vorliegende Überwachung wurden Warn- und Interventionswerte festgelegt. Die Interventionswerte beruhen auf behördlichen Grenzwerten und toxikologischen Studien. Der Warnwert wurde bei jeweils 50 % des Interventionswertes festgelegt.</div><div><br></div><div>Änderungsprotokoll:<br>27.06.2023 - Aktualisierungsintervall von "MONTHLY" auf "NEVER" geändert.</div><div>
 </div>`
@@ -68,6 +68,32 @@ def _(mo):
 - **Keywords** `['Luftqualität']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `messbeginn` | date | Beginn der Messung |
+| `messende` | date | Ende der Messung |
+| `standort` | text | Name des Standorts |
+| `parameter` | text | Gemessener Stoff |
+| `messwert` | double | Gemessener Wert |
+| `interventionswert` | double | Interventionswert |
+| `warnwert` | double | Warnwert |
+| `einheit` | text | Einheit, in welcher der Wert gemessen wird |
+| `messmethode` | text | Messmethode |
+| `geo_point_2d` | geo_point_2d | Koordinaten des Standorts |
 
 
     ///

@@ -53,19 +53,38 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100235`
+- **Dataset_identifier** `100235`
 - **Title** `Wiese Wasserstand und Abfluss`
 - **Description** `<p>Dieser Datensatz zeigt den Wasserstand und die Abflussmenge der Wiese in Basel etwa auf Höhe der Brücke bei der Wiesenstrasse über die Wiese. Es liegen aktuelle Werte alle 5 Minuten vor. Die Messungen werden im Auftrag des Bundesamts für Umwelt durchgeführt (siehe <a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2199" target="_blank">https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2199</a>).</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-10`
-- **Modified** `2026-10-04T21:55:08+00:00`
+- **Modified** `2026-10-05T11:55:09+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2022-10-28T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-03T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-04T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser', 'Tiefe', 'Wiese']`
 - **Creator** `Bundesamt für Umwelt BAFU`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Datum und Uhrzeit |
+| `abfluss` | double | Abfliessende Wassermenge in Kubikmetern pro Sekunde |
+| `pegel` | double | Pegelstand in Metern über Meer |
 
 
     ///

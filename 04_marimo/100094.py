@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100094`
+- **Dataset_identifier** `100094`
 - **Title** `Coronavirus (COVID-19): Tests Basel-Stadt`
 - **Description** `<p>Dieser Datensatz zeigt die Anzahl Tests auf SARS-CoV-2, welche an Personen mit Wohnsitz im Kanton Basel-Stadt durchgeführt wurden sowie die entsprechenden Testresultate (positiv/negativ) und separiert nach PCR Test bzw. Antigen Schnelltest auf täglicher Basis. Die Angaben wurden täglich durch das Bundesamt für Gesundheit (BAG) zur Verfügung gestellt im <a href="https://www.covid19.admin.ch" target="_blank">Covid-19 Situationsbericht</a> bzw. über dessen <a href="https://stcovidappstorageprodchn.blob.core.windows.net/covid/context" target="_blank">API</a>. </p><p>Die Zahlen von Freitag, Samstag und Sonntag wurden durch das BAG jeweils am Montag aktualisiert.</p><p><b>Die Erhebung der Anzahl Tests auf SARS-CoV-2 wurde per 16. Januar 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert.</b><br></p><p>Die Zahlen für alle Kantone sowie für die gesamte Schweiz und das Fürstentum Liechtenstein sind in diesem Datensatz zu finden: <a href="https://data.bs.ch/explore/dataset/100116/" target="_blank">https://data.bs.ch/explore/dataset/100116/</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,41 @@ def _(mo):
 - **Keywords** `['Coronavirus', 'COVID-19', 'PCR', 'Corona', 'Krankheit', 'Lungenentzündung', 'Test']`
 - **Creator** `Bundesamt für Gesundheit BAG`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Falldatum, entspricht in der Regel dem Datum der Probeentnahme |
+| `negative_tests` | int | Anzahl negative Tests. Eine Person kann mehrfach negativ getestet werden. |
+| `positive_tests` | int | Anzahl positive Tests. Eine Person kann mehrfach positiv getestet werden. |
+| `total_tests` | int | Anzahl durchgeführte Tests total. Eine Person kann mehrfach getestet werden. |
+| `positivity_rate_percent` | double | Anteil Tests mit einem positiven Ergebnis am Total der Tests in Prozent. |
+| `positivity_rate` | double | Anteil Tests mit einem positiven Ergebnis am Total der Tests. |
+| `dayofweek` | int | Wochentag des Falldatums. Mo=1, Di=2, Mi=3, Do=4, Fr = 5, Sa = 6, So = 7 |
+| `weekday_nr` | int | Nummer des Wochentags (Montag=0, Sonntag=6) |
+| `woche` | int | Wochennummer |
+| `entries_antigen_schnelltest` | int | Anzahl durchgeführte Antigen Schnelltests total. Eine Person kann mehrfach getestet werden. |
+| `entries_pcr` | int | Anzahl durchgeführte PCR Tests total. Eine Person kann mehrfach getestet werden. |
+| `entries_neg_antigen_schnelltest` | int | Anzahl negative Antigen Schnelltests. Eine Person kann mehrfach negativ getestet werden. |
+| `entries_neg_pcr` | int | Anzahl negative PCR Tests. Eine Person kann mehrfach negativ getestet werden. |
+| `entries_pos_antigen_schnelltest` | int | Anzahl positive Antigen Schnelltests. Eine Person kann mehrfach negativ getestet werden. |
+| `entries_pos_pcr` | int | Anzahl positive PCR Tests. Eine Person kann mehrfach negativ getestet werden. |
+| `positivity_rate_antigen_schnelltest` | double | Anteil Antigen Schnelltests mit einem positiven Ergebnis am Total der Antigen Schnelltests. |
+| `positivity_rate_pcr` | double | Anteil PCR Tests mit einem positiven Ergebnis am Total der PCR Tests. |
+| `positivity_rate_percent_antigen_schnelltest` | double | Anteil Antigen Schnelltests mit einem positiven Ergebnis am Total der Antigen Schnelltests. |
+| `positivity_rate_percent_pcr` | double | Anteil PCR Tests mit einem positiven Ergebnis am Total der PCR Tests. |
 
 
     ///

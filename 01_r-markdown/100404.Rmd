@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,22 @@ Auto generated R starter code for data set 100404.
 - **Keywords** `['Fahrrad', 'Velo', 'Veloroutennetz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktkoordinaten |
+| `geo_shape` | geo_shape | — |
+| `typ` | text | Definiert, ob es sich bei einem Punkt um eine Gefahrenstelle, eine Einbahnstrasse, oder eine Steigung handelt. |
+| `strasse` | text | Strassenname |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
+| `einbahn` | text | — |
+| `gefahrenstelle` | text | Name oder Beschreibung des Ortes, an welchem sich die Gefahrenstelle befindet. |
+| `gefahrenart` | text | Erklärt, weshalb ein Ort als gefährlich eingestuft wird. |
+| `steigung` | text | Intesitätsgrad der Steigung. |
+| `darstellungswinkel` | double | Rotation in Grad für die Ausrichtung von Punktsymbolen. |
 
 
 # Load packages

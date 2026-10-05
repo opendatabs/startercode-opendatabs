@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,19 @@ Auto generated R starter code for data set 100096.
 - **Keywords** `['Abfall', 'Recycling', 'Grüngut']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `termin` | date | Datum der Abfuhr |
+| `art` | text | Art der Abfuhr |
+| `wochentag` | text | Wochentag des Abfuhrtermins |
+| `dayofweek` | int | Wochentag als Zahl (1=Montag, 2=Dienstag, etc.) |
+| `zone` | text | Abfuhrzone |
+| `geo_shape` | geo_shape | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
 # Load packages

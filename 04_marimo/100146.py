@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100146`
+- **Dataset_identifier** `100146`
 - **Title** `Coronavirus (COVID-19): Massentests in Betrieben`
 - **Description** `<p>Dieser Datensatz zeigt die SARS-CoV-2-Tests, welche an Angestellten von baselstädtischen Betrieben durchgeführt wurden. Es werden die Anzahl durchgeführter Tests sowie die Test-Positivitätsrate pro Woche aufgeführt. Weitere Informationen zum Coronavirus in Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['SARS-CoV-2', 'COVID-19', 'Corona', 'Coronavirus', 'Test', 'PCR', 'Firma']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `firstdayofweek` | date | Datum des Montags der Woche |
+| `weekofyear` | int | Nr. der Woche im Jahr |
+| `result` | text | Zeigt an, ob eine SARS-CoV-2-Test positiv oder negativ ausgefallen ist |
+| `count` | int | Anzahl positiv resp. negativ getesteter Mitarbeiter pro Woche |
+| `counttotal` | int | Anzahl getesteter Mitarbeiter pro Woche |
+| `positivityratepercent` | double | Zeigt den Prozentsatz der Tests, die positiv auf SARS-CoV-2 getestet wurden |
 
 
     ///

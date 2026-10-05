@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,20 @@ Auto generated R starter code for data set 100325.
 - **Keywords** `['eGovernment', 'Kosten', 'Preise', 'Dienstleistungen', 'Produkte', 'kantonale Aufgaben']`
 - **Creator** `IT BS`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `departement` | text | Departement |
+| `diensstelle` | text | Dienststelle |
+| `gegenstand_der_gebuhr` | text | Gegenstand/Name der Gebühr |
+| `rechtliche_grundlage` | text | Referenz auf die Rechtsgrundlagen der Gebühr. |
+| `hohe_der_gebuhr_en_chf` | text | Höhe der Einzelgebühr(en) in Franken oder Referenz zu Gebührenkatalog. |
+| `benchmark` | text | Benchmark, derselben Gebühr in anderen Kantonen |
+| `leistung` | text | Zugehörige Leistung |
+| `weiteregliederungoe` | text | Wenn vorhanden, weitere Aufteilung der Organisationseinheit |
 
 
 # Load packages

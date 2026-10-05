@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100188`
+- **Dataset_identifier** `100188`
 - **Title** `Grosser Rat: Sitzungskalender`
 - **Description** `<p>Dieser Datensatz zeigt die Termine der Sitzungen des Grossen Rates Basel-Stadt. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-09`
-- **Modified** `2026-10-04T14:54:10+00:00`
+- **Modified** `2026-10-05T02:56:08+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2012-02-07T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2030-01-22T23:00:00+00:00`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['Abstimmung', 'Kalender', 'Parlament', 'Legislative', 'Grosser Rat']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `summary` | text | Beschreibung der Sitzung |
+| `dtstart` | datetime | Datum und Uhrzeit, zu der die Sitzung beginnt |
+| `dtend` | datetime | Datum und Uhrzeit, zu der die Sitzung endet |
 
 
     ///

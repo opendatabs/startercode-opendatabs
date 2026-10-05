@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,20 @@ Auto generated R starter code for data set 100106.
 - **Keywords** `['Event', 'Übernachtungen', 'Hotels', 'Ausland']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | — |
+| `hotelkategorie` | text | Hotelkategorie; 1- und 2-Sterne, 3-Sterne, 4- und 5-Sterne, Übrige. Die Kategorie Übrige umfasst: Hotels, die (noch) nicht kategorisiert wurden sowie B&Bs und Jugendherbergen. |
+| `anzlogiernaechte` | int | Anzahl Übernachtungen an einem bestimmten Tag in baselstädtischen Hotels |
+| `anzzimmerverfuegbarundgeoeffnet` | int | Anzahl Zimmer, welche an einem bestimmten Tag in einem baselstädtischen Hotel zur Verfügung stehen |
+| `anzzimmerbelegungen` | int | Anzahl an einem bestimmten Tag belegte Zimmer in einem baselstädtischen Hotel |
+| `jahr` | date | Jahr |
+| `monat` | int | Monat |
+| `tag` | int | Tag |
 
 
 # Load packages

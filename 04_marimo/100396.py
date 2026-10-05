@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100396`
+- **Dataset_identifier** `100396`
 - **Title** `U-Abos nach Alter und Wohnsitz`
 - **Description** `Der Datensatz enthält Informationen zu Umweltschutz-Abonnements (U-Abos) im Tarifverbund Nordwestschweiz (TNW). Er zeigt die Anzahl der U-Abos sowie den Bevölkerungsanteil mit U-Abo nach Wohnsitz, Kategorie, Altersgruppe und Jahr. Der Bevölkerungsanteil mit U-Abo wurde berechnet auf Basis der ständigen Wohnbevölkerung laut Bundesamt für Statistik (BFS).<br>Erhebungsmethode:<br>Die Daten werden jährlich vom Tarifverbund Nordwestschweiz (TNW) bereitgestellt. Sie basieren auf den Verkaufszahlen der Abonnements.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Abos', 'Abonnement', 'Fahrkarte', 'ÖV']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Datenjahr |
+| `bfs_nr` | text | Falls Gemeinde, Nummer der Gemeinde nach Amtlichen Gemeindeverzeichnis |
+| `gemeinde` | text | Wohnsitz |
+| `kategorie` | text | Unterscheidet zwischen Jugendliche, Erwachsene, Senioren und Total |
+| `alter` | text | Alter der U-Abo beziehenden Person |
+| `abos` | int | Monatsäquivalente = Anzahl Abos (ein Monatsabo wird als ein Abo und ein Jahresabo als 12 Abos gewertet) |
+| `abos_umlauf` | int | Anzahl U-Abos im Jahresdurchschnitt (U-Abo-Monatsäquivalente geteilt durch 12) |
+| `bevoelkerung_bfs` | int | Ständige Wohnbevölkerung nach Altersgruppe |
+| `bevoelkerung_abomonate_relativ_bfs` | double | Anteil der Bevölkerung mit U-Abo (Verhältnis von U-Abos im Umlauf zu Einwohner nach Altersgruppe) |
 
 
     ///

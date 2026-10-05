@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100414`
+- **Dataset_identifier** `100414`
 - **Title** `Tägliche Ankünfte und Logiernächte nach Herkunftsland`
 - **Description** `Dieser Datensatz zeigt die Anzahl Ankünfte und Logiernächte in baselstädtischen Hotels nach Herkunftsland und Kategorie auf täglicher Basis.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Herkunft', 'Event', 'Übernachtungen', 'Hotels', 'Ausland', 'Herkunftsland']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Vollständiges Datum im Format JJJJ-MM-TT. |
+| `datum_jahr` | text | Jahr der Erfassung (vierstellig, z. B. 2023). |
+| `datum_monat` | text | Monatsname (z. B. Januar, Februar). |
+| `monat` | int | Monat als Zahl (1 = Januar, 2 = Februar usw.). |
+| `datum_tag` | int | Tag des Monats als Zahl. |
+| `datum_monat_tag` | text | Kombination aus Tag und Monat. |
+| `hotelkategorie` | text | Klassifizierung der Hotels (z. B. „1- und 2-Stern“, „3-Stern“, „4- und 5-Stern“, „Keine Kategorie“, „Total“). |
+| `herkunftsland` | text | Herkunftsland der Gäste. |
+| `anzahl_ankunfte` | int | Anzahl der Gäste, die an diesem Tag in den Hotels angekommen sind. |
+| `anzahl_logiernachte` | int | Gesamtanzahl der Übernachtungen, die von Gästen mit dieser Nationalität gebucht wurden. |
 
 
     ///

@@ -55,7 +55,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100137`
+- **Dataset_identifier** `100137`
 - **Title** `Coronavirus (COVID-19): Erweiterte Daten zu Impfungen nach Altersgruppe`
 - **Description** `<p>Dieser Datensatz zeigt die SARS-CoV-2-Impfungen, welche an Personen mit Wohnsitz im Kanton Basel-Stadt verabreicht wurden nach Altersklasse. </p><p>Anmerkung: Die geimpften Personen wohnen im Kanton Basel-Stadt, müssen aber nicht zwingend auch im Kanton Basel-Stadt geimpft worden sein. Aus diesem Grund unterscheiden sich die hier publizierten Zahlen auch von jenen im <a href="https://data.bs.ch/explore/dataset/100111/" target="_blank">Datensatz mit den im Kanton Basel-Stadt verabreichten Impfungen</a>. </p><p>Dieser Datensatz wurde mit verschiedenen Variablen aus diesem Datensatz (<a href="https://data.bs.ch/explore/dataset/100128/" target="_blank">https://data.bs.ch/explore/dataset/100128/</a>) ergänzt, um die Anteile der geimpften Personen nach Altersklasse für die Visualisierungen berechnen zu können. Die rohen Werte zu den geimpften Personen nach Altersklasse finden Sie in diesem Datensatz: <a href="https://data.bs.ch/explore/dataset/100135/" target="_blank">https://data.bs.ch/explore/dataset/100135/</a><a href="https://data.bs.ch/explore/dataset/100135//" target="_blank"></a></p><p>Ab 2. Juli 2021 werden auch geimpfte Personen in der Altersklasse von 12 bis 15 Jahren gezeigt. 12- bis 15-Jährige konnten sich ab 28. Juni 2021 impfen lassen. Die impfberechtigte Bevölkerung wurde entsprechend ab dem 28. Juni um die 12- bis 15-jährigen Personen ergänzt. </p><p>
 Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial sind ausschliesslich immundefiziente Personen oder Personen mit Stammzellentransplantation zu einer dritten Impfung berechtigt.</p><p>Die Meldepflicht der COVID-Impfungen via VMDL Plattform des Bundes wurde per 1. Juli 2023 aufgehoben. Nach diesem Datum wurden Impfungen deshalb nicht mehr systematisch erfasst. Der vorliegende Datensatz zeigt deshalb Impfungen nur bis 1. Juli 2023.<br></p><p> 
@@ -70,6 +70,30 @@ Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial 
 - **Keywords** `['Impfung', 'SARS-CoV-2', 'Coronavirus', 'Corona', 'Vaccination', 'impfen', 'geimpft']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `vacc_day` | date | Datum der Impfung |
+| `age_group` | text | Altersgruppe in Jahren. Impfberechtigte Bevölkerung: Personen ab 16 Jahre. |
+| `vacc_count` | int | 1: Erste Impfung; 2: Zweite Impfung einer Person; -1: Anzahl ausschliesslich mit erster Dosis geimpfter Personen |
+| `vacc_count_description` | text | Beschreibung des Impftyps in Klartext |
+| `count` | int | Anzahl Impfungen pro Tag, Altersgruppe und Impftyp |
+| `count_cum` | int | Kumulierte Anzahl Impfungen pro Altersgruppe und Impftyp seit Beginn der Impfkampagne |
+| `total_pop` | int | Anzahl Personen wohnhaft in BS der angegebenen Altersgruppe per Ende 2020 |
+| `count_cum_percentage_of_total_pop` | double | Quotient der kumulierten Anzahl Impfungen durch die Anzahl EinwohnerInnen der angegebenen Altersgruppe in % |
 
 
     ///

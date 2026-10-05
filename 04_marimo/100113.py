@@ -57,7 +57,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100113`
+- **Dataset_identifier** `100113`
 - **Title** `Feinstaubmessungen auf BVB-Trams`
 - **Description** `<p>Der Datensatz zeigt die Feinstaubmessungen (PM2.5 und PM10) vom Dach der BVB-Trams, auf denen Mikrosensoren installiert worden sind. Ein Sensor war jeweils auf einem Tram des Typs "Flexity lang" montiert, ausser die Sensoren 236 und 240, die zu Qualitätssicherungszwecken stationär an den Luftmessstationen "Feldbergstrasse" und "St. Johann-Platz" installiert waren.</p><p>
 
@@ -74,6 +74,29 @@ Weitere Informationen zum Projekt Atmo-VISION sind in der <a href="https://www.b
 - **Keywords** `['Luftqualität', 'Feinstaub', 'PM10', 'PM2.5', 'BVB']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `time` | datetime | Datum und Zeit in UTC |
+| `sensornr` | int | Identitätsnummer des Feinstaubsensors; Sensoren 236 und 240 sind stationär aufgestellt.; Sensoren 227, 228, 234, 235 und 237 sind auf den Trams montiert. |
+| `pm25` | double | Feinstaub mit Partikelgrösse < 2.5 tausendstel Millimeter |
+| `pm10` | double | Feinstaub mit Partikelgrösse < 10 tausendstel Millimeter |
+| `column_7` | geo_point_2d | Standort der Messung |
+| `longitude` | double | Längengrad |
+| `latitude` | double | Breitengrad |
 
 
     ///

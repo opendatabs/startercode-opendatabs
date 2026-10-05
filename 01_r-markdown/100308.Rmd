@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,28 @@ Auto generated R starter code for data set 100308.
 - **Keywords** `['Grosser Rat', 'Gremien', 'Parlament', 'Grossrat', 'Grossrätin', 'Legislative']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `kurzname_gre` | text | Kurzname des zugehörigen Gremiums |
+| `name_gre` | text | Name des zugehörigen Gremiums |
+| `gremientyp` | text | Typ des Gremiums (Kommission, Fraktion, Parlament) |
+| `uni_nr_gre` | text | Individuelle Identifikationsnummer des Gremiums innerhalb der Datenbank des Grossen Rates. |
+| `url_gremium` | text | Link zum Datensatz "Grosser Rat: Gremien". Gefiltert nach aktuellem Gremium. |
+| `beginn_mit` | date | Startdatum der Mitgliedschaft im Gremium |
+| `ende_mit` | date | Enddatum der Mitgliedschaft im Gremium |
+| `funktion_adr` | text | Funktion des Gremiumsmitglieds |
+| `anrede` | text | Anrede des Gremiumsmitglieds nach amtlichem Geschlecht |
+| `name_adr` | text | Nachname des Gremiumsmitglieds |
+| `vorname_adr` | text | Vorname des Gremiumsmitglieds |
+| `name_vorname` | text | Name und Vorname des Gremiumsmitglieds |
+| `partei_kname` | text | Abkürzung der Parteizugehörigkeit des Gremiumsmitglieds (nur vorhanden, falls aktuelles Grossratsmitglied) |
+| `url_adr` | text | Link zum Gremiumsmitglied auf der Webseite des Grossen Rates |
+| `uni_nr_adr` | text | Individuelle Identifikationsnummer des Gremiumsmitglieds innerhalb der Datenbank des Grossen Rates. |
+| `url_ratsmitgliedschaften` | text | Link zum Datensatz "Grosser Rat: Ratsmitgliedschaften". Gefiltert nach aktuellem Gremiumsmitglied. |
 
 
 # Load packages

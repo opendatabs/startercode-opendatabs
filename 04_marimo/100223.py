@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100223`
+- **Dataset_identifier** `100223`
 - **Title** `Briefliche Stimmbeteiligung`
 - **Description** `<div>Dieser Datensatz zeigt die briefliche Stimmbeteiligung der Urnengänge für die Stadt Basel. Vor Urnengängen informiert die Staatskanzlei regelmässig über den Stand der Stimmbeteiligung per brieflicher Abgabe.</div><div><br></div><div>Die effektive Stimm-/Wahlbeteiligung inkl. persönlicher Stimmabgabe an der Urne steht erst nach der Auszählung am Abstimmungssontag fest und wird ebenfalls auf diesem Datenportal zur Verfügung gestellt (<a href="https://data.bs.ch/explore/?sort=modified&amp;refine.publisher=Staatskanzlei&amp;q=%22Kennzahlen+der+Abstimmung%22+OR+%22Wahl+der+100%22+OR+%22Wahlgangs%22" target="_blank">Kennzahlen Wahlen/Abstimmungen https://data.bs.ch/explore/?sort=modified&amp;refine.publisher=Staatskanzlei&amp;q=%22Kennzahlen+der+Abstimmung%22+OR+%22Wahl+der+100%22+OR+%22Wahlgangs%22</a>). </div><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `tag` | text | Wochentag an dem die Stimmbeteiligung erhoben wurde |
+| `datum` | date | Datum an dem die Stimmbeteiligung erhoben wurde. |
+| `eingang_pro_tag` | int | Erhaltene Briefeingänge an diesem Tag |
+| `eingang_kumuliert` | int | Total erhaltene Briefeingänge bis zu diesem Datum |
+| `stimmbeteiligung` | double | Prozentualer Anteil der von Stimmberechtigten bereits abgegebenen Stimmzettel |
+| `datum_urnengang` | date | Datum des Urnengangs |
+| `tage_bis_urnengang` | int | Verbleibende Tage bis zum Urnengang |
+| `abstimmungen` | text | Ja: Urnengang mit Abstimmung; Nein: Urnengang ohne Abstimmung |
+| `wahlen` | text | Ja: Urnengang mit Wahlen; Nein: Urnengang ohne Wahlen |
+| `wahlen_typ` | text | Art der Wahl(-en) |
+| `datum_urnengang_text` | text | Datum des Urnengangs in YYYY-MM-DD-Format |
 
 
     ///

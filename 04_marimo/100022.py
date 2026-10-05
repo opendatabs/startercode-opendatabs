@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100022`
+- **Dataset_identifier** `100022`
 - **Title** `Güteklassen öffentlicher Verkehr`
 - **Description** `Die Güteklassen zeigen auf, wie gut ein Gebiet mit dem öffentlichen Verkehr erschlossen ist. Die Klasse ist abhängig von dem Transportmittel (Kleinbus, Bus, Tram, S-Bahn, Fernverkehrszug), dem jeweiligen Takt und der Distanz zur Haltestelle. Die Klasse zeigt die beste Erschliessung auf.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Abdeckung', 'Tram', 'Bus', 'Distanz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `objectid` | int | — |
+| `oevgkl` | text | — |
 
 
     ///

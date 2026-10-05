@@ -55,7 +55,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100459`
+- **Dataset_identifier** `100459`
 - **Title** `Notfalltreffpunkte`
 - **Description** `<p>Die Notfalltreffpunkte Basel-Stadt sind Standorte, an denen Sie im Notfall jederzeit einen Notruf absetzen können. Sollte die übliche Informations- und Kommunikationstechnologie (IKT) – wie Festnetztelefon, Mobiltelefon oder Fernseher – infolge eines Ereignisses über längere Zeit ausfallen, erhalten Sie dort Informationen und Unterstützung durch die Behörden.</p>
 <p>Weitere Informationen:</p>
@@ -70,6 +70,36 @@ def _(mo):
 - **Keywords** `['Bevölkerungsschutz', 'Blackout', 'Bundesamt für Bevölkerungsschutz (BABS)', 'Erdbeben', 'Ereignisfall', 'Evakuierungspunkt', 'Hilfe', 'Informationsstelle Katastrophe', 'Katastrophenschutz', 'Krisenmanagement Gemeinde', 'Notfall', 'Notfallhilfe', 'Notfallkommunikation', 'Notfalltreffpunkt', 'Notfallversorgung', 'Notunterkunft Schweiz', 'Schutzmassnahmen', 'Schutz & Rettung', 'Sicherheit', 'Stromausfall', 'Versorgungsstützpunkt', 'Notunterkunft', 'Polizei']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktkoordinaten des jeweiligen Notfalltreffpunkt-Standorts. |
+| `geo_shape` | geo_shape | — |
+| `id_notfalltreffpunkt` | text | Eindeutiger Identifikator der Notfalltreffpunkte. |
+| `gebaeudebezeichnung` | text | Bezeichnung des Gebäudes, bei dem sich der Notfalltreffpunkt befindet. |
+| `strasse` | text | Strassenname sowie eine genauere Angabe einer sekundären Strasse und deren räumliche Beziehung (Einmündung, Verzweigung, Zugang oder Höhe) an dem sich der Notfalltreffpunkt befindet. |
+| `hausnummer` | text | Hausnummer (als Ganzzahl mit Buchstabe oder Text der genauen Hausnummer) des Gebäudes. |
+| `postleitzahl` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Bezeichnung der Ortschaft. |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
+| `kanton` | text | Name des Kantons, in welchem sich der Notfalltreffpunkt befindet. |
+| `bemerkungen` | text | Bemerkungen zum jeweiligen Notfalltreffpunkt. |
+| `datenstand` | date | Datenstand Kanton im Datumsformat DD.MM.YYYY des jeweiligen Notfalltreffpunkts. |
+| `link` | text | Webseiten-Link mit weiterführenden Informationen zum jeweiligen Notfalltreffpunkt. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

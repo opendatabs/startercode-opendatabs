@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,19 @@ Auto generated R starter code for data set 100122.
 - **Keywords** `['Gemeinden', 'Zeitreihe', 'Prognose', 'Bildung', 'Schule', 'Schüler']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `schuljahr` | text | Schuljahr August - Juli, Stichtag jeweils zu Schuljahresbeginn im September. |
+| `perimeter` | text | Einteilung der beiden Gemeinden in 13 Planungsperimeter. Die Schülerinnen und Schüler werden nach ihrer Wohnadresse den Perimetern zugeordnet. |
+| `schulstufe` | int | Einteilung gemäss HarmoS-Schulstufen. Schulstufen 1 und 2 bezeichnen die beiden Jahre im Kindergarten, die Schulstufen 3-6 die umgangssprachlich als Primarschuljahre 1-6 bezeichneten Schulstufen. |
+| `sus` | int | Schülerinnen und Schüler in öffentlichen Schulen von Riehen oder Bettingen, die in einem der Perimeter in Riehen oder Bettingen wohnhaft sind. Prognosejahre erkennt man am beistehenden Prognoseintervall. In den Prognosen nicht berücksichtigt sind künftige Arealentwicklungen. |
+| `unteres_prognoseintervall` | text | Das Prognoseintervall beschreibt die geschätzte Bandbreite, in welcher die tatsächliche Schülerzahl mit einer Wahrscheinlichkeit von 95% zu liegen kommen sollte. Das untere Prognoseintervall bezeichnet die untere Grenze dieser Bandbreite. |
+| `oberes_prognoseintervall` | text | Das Prognoseintervall beschreibt die geschätzte Bandbreite, in welcher die tatsächliche Schülerzahl mit einer Wahrscheinlichkeit von 95% zu liegen kommen sollte. Das obere Prognoseintervall bezeichnet die obere Grenze dieser Bandbreite. |
+| `typ` | text | Ist-Wert oder Resultat der Prognose |
 
 
 # Load packages

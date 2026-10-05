@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,21 @@ Auto generated R starter code for data set 100444.
 - **Keywords** `['Alter', 'Geschlecht', 'Freizeit', 'Tiere', 'Hund']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | text | — |
+| `jahr` | text | Jahr der Erfassung |
+| `postleitzahl` | text | Postleitzahl |
+| `gemeinde_name` | text | Gemeindename des Hundes |
+| `hund_geschlecht` | text | Geschlecht des Hundes |
+| `hund_geburtsjahr` | text | Geburtsjahr des Hundes |
+| `hund_alter` | int | Das Alter, das der Hund im Jahr erreichen wird oder bereits erreicht hat |
+| `hund_rasse` | text | Rasse des Hundes |
+| `hund_farbe` | text | Fellfarbe des Hundes |
 
 
 # Load packages

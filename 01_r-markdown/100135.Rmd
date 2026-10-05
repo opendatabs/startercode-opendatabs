@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -26,6 +26,16 @@ Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial 
 - **Keywords** `['Impfung', 'SARS-CoV-2', 'Coronavirus', 'Corona', 'Vaccination', 'impfen', 'geimpft']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `vacc_day` | date | Datum der Impfung |
+| `age_group` | text | — |
+| `vacc_count` | int | 1: Erste Impfung; 2: Zweite Impfung einer Person |
+| `count` | int | Anzahl Impfungen pro Tag, Altersgruppe und Impftyp |
 
 
 # Load packages

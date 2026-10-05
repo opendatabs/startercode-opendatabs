@@ -60,7 +60,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100105`
+- **Dataset_identifier** `100105`
 - **Title** `Coronavirus (COVID-19): Positiv getestete Personen nach Alter und Geschlecht`
 - **Description** `<p>Dieser Datensatz zeigt die Personen, welche positiv auf SARS-CoV-2 getestet wurden nach Geschlecht und Altersklasse. Es werden ausschliesslich Personen mit Wohnsitz im Kanton Basel-Stadt gezeigt. Als «Datum Testresultat» gilt das Datum, an welchem das Testresultat vorlag.</p>
 <p>Weitere Datensätze zu
@@ -80,6 +80,26 @@ COVID-19:</p>
 - **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Lungenentzündung', 'Pandemie', 'Corona']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `test_datum` | date | Datum, an dem das Testresultat vorlag |
+| `pers_alter` | text | 10-Jahresklassen, wobei die letzte Altersklasse gegen oben offen ist |
+| `geschlecht` | text | F = weiblich, M = männlich |
+| `anzahl` | int | Anzahl Personen in der jeweilige Subgruppe |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,24 @@ Auto generated R starter code for data set 100244.
 - **Keywords** `['Rhein', 'Birs', 'Wiese', 'Pegel', 'Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser']`
 - **Creator** `Bundesamt für Umwelt BAFU`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `station_id` | text | — |
+| `station_name` | text | — |
+| `gefahrenstufe_1` | text | Gefahrenstufe 1 (m3/s) |
+| `gefahrenstufe_2` | text | Gefahrenstufe 2 (m3/s) |
+| `gefahrenstufe_3` | text | Gefahrenstufe 3 (m3/s) |
+| `gefahrenstufe_4` | text | Gefahrenstufe 4 (m3/s) |
+| `gefahrenstufe_5` | text | Gefahrenstufe 5 (m3/s) |
+| `wl1` | int | Obergrenze der Gefahrenstufe 1 |
+| `wl2` | int | Obergrenze der Gefahrenstufe 2 |
+| `wl3` | int | Obergrenze der Gefahrenstufe 3 |
+| `wl4` | int | Obergrenze der Gefahrenstufe 4 |
+| `link` | text | — |
 
 
 # Load packages

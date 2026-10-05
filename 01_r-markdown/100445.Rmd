@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,17 @@ Auto generated R starter code for data set 100445.
 - **Keywords** `['Freizeit', 'Tiere', 'Hund']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr der Erfassung |
+| `wohnviertel_aktuell` | text | Wohnviertelidentifikator (verfügbar ab 2008) |
+| `wov_name` | text | Wohnviertel Name |
+| `gemeinde_name` | text | Gemeinde |
+| `anzahl_hunde` | int | Anzahl Hunde in Gemeinde oder Wohnviertel |
 
 
 # Load packages

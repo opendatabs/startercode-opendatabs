@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,28 @@ Auto generated R starter code for data set 100065.
 - **Keywords** `['Tram', 'Bus', 'Zug', 'Haltestelle', 'Baustelle', 'Umleitung', 'ÖV']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `thst_nr` | text | Eindeutiger Identifikator der Teilhaltestellen |
+| `hst_nr` | text | Nummer der Haltestelle nach BAV |
+| `haltestl` | text | Name der Haltestelle |
+| `kt` | text | Gebiet. Wertebereich: Aargau (AG), Basel-Landschaft (BL), Basel-Stadt (BS), Deutschland (D), Frankreich (F), Jura (JU), Solothurn (SO). |
+| `richtung` | text | Fahrtrichtung |
+| `art` | text | Art der Haltestelle |
+| `typ` | text | Typ der Haltestelle |
+| `tramlinien` | text | Tramlinien, welche eine Teilhaltestelle bedienen |
+| `buslinien` | text | Buslinien, welche eine Teilhaltestelle bedienen |
+| `fahrplan` | text | Link zum Fahrplan |
+| `nachtlin` | text | Nachtlinien, welche eine Teilhaltestelle bedienen |
+| `tramzugang` | text | Zugangsmöglichkeit für Elektrorollstühle bei Tramhaltestellen; ja = hohe Kante (27 cm) |
+| `buszugang` | text | Zugangsmöglichkeit für Elektrorollstühle bei Bushaltestellen; ja = hohe Kante (22 cm) |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
 # Load packages

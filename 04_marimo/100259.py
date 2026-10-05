@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100259`
+- **Dataset_identifier** `100259`
 - **Title** `Gebäudeadressen und -informationen`
 - **Description** `Gebäudeadressen aller im kantonalen Datenmarkt geführten Gebäude (siehe <a href="https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/153.310</a>).`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,38 @@ def _(mo):
 - **Keywords** `['Adresse', 'Wohnung', 'Gebäude', 'Wohnen', 'Abfuhrzone']`
 - **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `objid` | text | — |
+| `gebadrlauf` | text | Gebäudeadresselaufnummer |
+| `geblaufnr` | text | Gebäudelaufnummer |
+| `str_code` | text | Strassenkennzahl |
+| `str_id` | text | Strassenidentifikator |
+| `str_name` | text | — |
+| `hausnr` | text | — |
+| `hausnr_zus` | text | Kleinbuchstaben (a-z) werden als Zusatz zur Hausnummer verwendet (z.B. 18a, 18b). |
+| `hausnr_idx` | text | Die zu einem Hauptgebäude gehörenden Nebengebäude werden mit der Hausnummer des Hauptgebäudes, einem Punkt und einem fortlaufenden Index nummeriert (z.B. 19.1, 19.2). |
+| `plz` | text | Postleitzahl |
+| `ort` | text | — |
+| `eidgident` | int | Eidgenössischer Adressidentifikator, siehe auch https://www.housing-stat.ch/de/help/faq/id.html |
+| `abfuhrzone` | text | Der Adresse zugewiesene Abfuhrzonen (siehe auch Datensatz https://data.bs.ch/explore/dataset/100095) |
+| `gebstatus` | text | Bestehende (1004), abgebrochene (1007), projektierte (1001) bzw. sich im Bau befindende (1003) Gebäude sind verschiedene Gebäudestati. |
 
 
     ///

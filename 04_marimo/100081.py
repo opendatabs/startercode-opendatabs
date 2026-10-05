@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100081`
+- **Dataset_identifier** `100081`
 - **Title** `Smart Climate Feinstaubmessungen`
 - **Description** `<p>Im Rahmen des Projektes <a href="https://smartregiobasel.ch/de/projekte/smart-climate-plug-and-sense" target="_blank">«Smart Climate» von Smart Regio Basel (https://smartregiobasel.ch/de/projekte/smart-climate-plug-and-sense)</a> wurden in der ersten Projektphase an zehn Standorten in der Region Basel Luftdaten mit Mikrosensoren gemessen. Das Lufthygieneamt beider Basel, das Amt für Umwelt und Energie des Kantons Basel-Stadt, der Basler Wetterdienstleister meteoblue AG, die IWB sowie die Sensirion AG schlossen sich zusammen, um in diesem Pilotprojekt den Einsatz von kosteneffizienten Sensoren zur Erfassung des «regionalen Mikroklimas» zu testen. Hier werden die unvalidierten Daten von Feinstaub PM2.5 zur Verfügung gestellt. Die erste Projektphase wurde Ende 2021 ausgewertet und basierend auf den Ergebnissen das Messnetz verkleinert. Ab Frühling 2022 werden die Messstationen «Erlenparkweg 55», «Feldbergstrasse», «NABEL Binningen», «St. Johanns-Platz» und «Zürcherstrasse 148 (Breite) weiter betrieben. Die Stationen «Goldbachweg», «Grenzacherstrasse», «Laufenstrasse», «Rennweg 89» und «TS Hochbergerstrasse 162» wurden sukzessive ausser Betrieb genommen. Die Daten aus der ersten Projektphase stehen hier nach wie vor zur Verfügung. </p><p>Informationen zu den Standorten der Sensoren sind im Datensatz «Standorte Feinstaub Mess-Stationen Smart Climate Luftqualität» ersichtlich: <a href="https://data.bs.ch/explore/dataset/100084/" target="_blank">https://data.bs.ch/explore/dataset/100084/</a>  </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Luftqualität', 'Feinstaub', 'PM25', 'PM2.5']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `zeitstempel` | datetime | — |
+| `pm_2_5` | double | Feinstaub mit Partikelgrösse < 2.5 tausendstel Millimeter |
+| `name` | text | — |
+| `geo_point_2d` | geo_point_2d | — |
+| `id` | text | — |
+| `station` | text | — |
 
 
     ///

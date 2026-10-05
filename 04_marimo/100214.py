@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100214`
+- **Dataset_identifier** `100214`
 - **Title** `Kunst im öffentlichen Raum`
 - **Description** `Überblick über die öffentlichen Kunstwerke im Eigentum des Kantons Basel-Stadt. Es wird unterschieden zwischen Kunst im öffentlichen Raum (KiöR), die sich auf der Allmend befindet, und Kunst und Bau (KuB), die in Gebäuden oder auf den Parzellen von öffentlichen Gebäuden zu finden sind.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['Kunst', 'Kunsthandwerk', 'Öffentlichkeit', 'Raum', 'Architektur', 'Städtebau']`
 - **Creator** `Städtebau & Architektur`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_invnr` | text | Eindeutiger Identifikator, Inventar-Nummer |
+| `gruppe` | text | Gruppe zur Unterteilung in Kunst und Bau (KuB) und Kunst im öffentlichen Raum (KiöR) |
+| `fotonummer` | text | Dateiname des Fotos |
+| `ku_name` | text | Name der Kunstschaffende |
+| `werktitel` | text | Titel des Kunstwerks |
+| `datierung` | text | Datierung des Kunstwerks |
+| `standort` | text | Adresse und genauer Standortbeschrieb des Kunstwerks |
+| `pdf` | text | Dateiname des PDFs |
+| `rueckbau` | text | ist das Werk zurückgebaut |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
+| `foto_downloadlink` | file | Downloadlink |
 
 
     ///

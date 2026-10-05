@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100320`
+- **Dataset_identifier** `100320`
 - **Title** `Gesundheitsversorgung (GSV): Spitalkennzahlen`
 - **Description** `Wichtige Kennzahlen der baselstädtischen Spitäler. Dieser Datensatz fliesst in den Bericht des Bereiches Gesundheitsversorgung (GSV) des Gesundheitsdepartements, vor allem in Form eines Dashboards.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,95 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Jahr der Erhebung |
+| `spital` | text | Name des Spitals oder Klinik |
+| `angebot_akutsomatik` | text | Klinik bietet akutsomatische Behandlungen an. |
+| `angebot_psychiatrie` | text | Klinik bietet psychiatrische Behandlungen an. |
+| `angebot_rehabilitation` | text | Klinik bietet Rehabilitationsbehandlungen an. |
+| `total_betriebsertrag` | double | Totaler Betriebsertrag des jeweiligen Spitals eines Jahres. Angabe in Millionen CHF. |
+| `total_betriebsertrag_1000` | int | Totaler Betriebsertrag des jeweiligen Spitals eines Jahres. Angabe in 1'000 CHF. |
+| `total_ertrag_leistung` | int | Totaler Ertrag aus Leistungenerstellug des jeweiligen Spitals. Angabe in 1'000 CHF. |
+| `ertrag_leistungserstellung_in_mio_chf` | double | — |
+| `ubriger_betriebsertrag_in_mio_chf` | double | — |
+| `total_betriebsaufwand` | int | Totaler Betriebsaufwand des jeweiligen Spitals. Angabe in 1'000 CHF. |
+| `betriebsaufwand_in_mio_chf` | double | — |
+| `total_kosten_personal` | int | Totaler Aufwand für Personalkosten des jeweiligen Spitals. Angabe in 1'000 CHF. |
+| `personalkosten_in_mio_chf` | double | — |
+| `total_bedarf_medizinisch` | int | Totaler Aufwand für medizinischen Bedarf des jeweiligen Spitals. Angabe in 1'000 CHF. |
+| `medizinischer_bedarf_in_mio_chf` | double | — |
+| `ubriger_aufwand_in_mio_chf` | double | — |
+| `fte` | int | Anzahl der Mitarbeitenden in Vollzeitäquivalenten, bzw. in 100%-Stellen im Jahresdurchschnitt. |
+| `anz_ma` | int | Anzahl der Mitarbeitenden in Personen im Jahrestotal. |
+| `bettenbetriebstage` | int | Anzahl der Bettenbetriebstage. Ein Tag, an welchem ein Spitalbett zur Bewirtschaftung zur Verfügung steht, entspricht einem Bettenbetriebstag. |
+| `case_mix` | int | Der Case-Mix (CM) beschreibt in der Akutsomatik den (ökonomischen) Schweregrad eines abgerechneten Falles. |
+| `anz_faelle_alle` | int | Totale Anzahl aller Fälle des jeweiligen Spitals |
+| `pflegetage` | int | Total der effektiven Pflegetage, bzw. Dauer des tatsächlichen Aufenthaltes in Tagen. |
+| `anz_lzpf` | int | Anzahl der Langzeitpflegefälle. Langzeitpflege bezeichnet die Pflege und Betreuung von Menschen mit Unterstützungsbedarf über einen längeren Zeitraum. |
+| `anz_allgemein` | int | Anzahl der Fälle, die auf der allgemeinen Abteilung behandelt wurden. |
+| `anz_kvg_allgklasse` | int | Anzahl der Fälle, welche nach dem Krankenversicherungsgesetz (KVG) abgerechnet und auf der allgemeinen Abteilung behandelt wurden. |
+| `drg_faelle` | int | Anzahl der Fälle, welche mit SwissDRG-Fallpauschalen abgegolten wurden. |
+| `anz_kvg_faelle` | int | Anzahl der Fälle, welche nach dem Krankenversicherungsgesetz (KVG) abgerechnet wurden. |
+| `anz_uvg_iv_faelle` | int | Anzahl der Fälle, welche über die Unfall-, Invaliden- oder Militärversicherung abgerechnet wurden. |
+| `bs` | int | Anzahl der Fälle, welche im Kanton Basel-Stadt wohnen. |
+| `bl` | int | Anzahl der Fälle, welche im Kanton Baselland wohnen. |
+| `ag_so` | int | Anzahl der Fälle, welche im Kanton Aargau oder Solothurn wohnen. |
+| `restschweiz` | int | Anzahl der Fälle in einem anderen Kanton als BS, BL, AG oder SO wohnen. |
+| `ausland` | int | Anzahl der Fälle, welche im Ausland wohnen. |
+| `maennlich` | int | Anzahl der männlichen Fälle |
+| `weiblich` | int | Anzahl der weiblichen Fälle |
+| `jahre_0_20` | int | Anzahl der Fälle zwischen 0 und 20 Jahren |
+| `jahre_21_40` | int | Anzahl der Fälle zwischen 21 und 40 Jahren |
+| `jahre_41_60` | int | Anzahl der Fälle zwischen 41 und 60 Jahren |
+| `jahre_61_80` | int | Anzahl der Fälle zwischen 61 und 80 Jahren |
+| `jahre_ueber80` | int | Anzahl der Fälle über 80 Jahren |
+| `total_akutsomatik` | int | Gesamtzahl der stationär behandelten Fälle in der Akutsomatik |
+| `basispaket` | int | Anzahl der Fälle im Leistungsbereich Basispaket Chirurgie und innere Medizin oder Basispaket elektiv |
+| `gastroenterologie` | int | Anzahl der Fälle des Leistungsbereichs Gastroenterologie |
+| `geburtshilfe` | int | Anzahl der Fälle des Leistungsbereichs Geburtshilfe |
+| `gefaesse` | int | Anzahl der Fälle des Leistungsbereichs Gefässe |
+| `gynaekologie` | int | Anzahl der Fälle des Leistungsbereichs Gynäkologie |
+| `hno` | int | Anzahl der Fälle des Leistungsbereichs Hals-Nasen-Ohren |
+| `haematologie` | int | Anzahl der Fälle des Leistungsbereichs Hämatologie |
+| `herz` | int | Anzahl der Fälle des Leistungsbereichs Herz |
+| `neugeborene` | int | Anzahl der Fälle des Leistungsbereichs Neugeborene |
+| `neurologie` | int | Anzahl der Fälle des Leistungsbereichs Neurologie |
+| `orthopaedie` | int | Anzahl der Fälle des Leistungsbereichs Orthopädie |
+| `radio_onkologie` | int | Anzahl der Fälle des Leistungsbereichs (Radio-) Onkologie |
+| `pneumologie` | int | Anzahl der Fälle des Leistungsbereichs Pneumologie |
+| `urologie` | int | Anzahl der Fälle des Leistungsbereichs Urologie |
+| `viszeralchirurgie` | int | Anzahl der Fälle des Leistungsbereichs Viszeralchirurgie |
+| `uebrige` | int | Anzahl der Fälle der übrigen Leistungsbereiche der Akutsomatik |
+| `total_psych` | int | Gesamtzahl der stationär behandelten psychiatrischen Fälle |
+| `psych_affektiv` | int | Anzahl der Psychiatrie-Fälle mit einer affektiven Störung als Hauptdiagnose |
+| `psych_neurotisch` | int | Anzahl der Psychiatrie-Fälle mit neurotischer, Belastungs- oder somatoformer Störung als Hauptdiagnose |
+| `psych_organisch` | int | Anzahl der Psychiatrie-Fälle mit organischer oder symptomatischer psychischer Störung als Hauptdiagnose |
+| `psych_psychisch` | int | Anzahl der Psychiatrie-Fälle mit psychischer oder Verhaltensstörung durch psychotrope Substanzen als Hauptdiagnose |
+| `psych_schizophren` | int | Anzahl der Psychiatrie-Fälle mit Schizophrenie, schizotyper oder wahnhafter Störung als Hauptdiagnose |
+| `psych_uebrige` | int | Anzahl der Psychiatrie-Fälle mit einer anderen psychiatrischen Diagnose |
+| `total_reha` | int | Gesamtzahl der stationär durchgeführten Rehabilitationsbehandlungen |
+| `reha_muskelskelett` | int | Anzahl der Reha-Fälle bei Krankheiten des Muskel-Skelett-Systems und des Bindegewebes |
+| `reha_verletzung` | int | Anzahl der Reha-Fälle nach Verletzung, Vergiftung oder bestimmten anderen Folgen äusserer Ursachen |
+| `reha_kreislauf` | int | Anzahl der Reha-Fälle bei Krankheit des Herz-Kreislaufsystems |
+| `reha_labor` | int | Anzahl der Reha-Fälle bei anderen Symptomen oder abnormen klinischen (Labor-)Befunden (wie neurologische) |
+| `reha_neubildungen` | int | Anzahl der onkologisch-internistischen Reha-Fälle |
+| `reha_uebrige` | int | Anzahl der Reha-Fälle aus anderen Gründen |
+| `geopunkt` | geo_point_2d | Standort des Spitals |
 
 
     ///

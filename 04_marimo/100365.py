@@ -62,7 +62,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100365`
+- **Dataset_identifier** `100365`
 - **Title** `Staatsarchiv: Neuzugänge im öffentlichen Archivkatalog`
 - **Description** `<p>Dieser Datensatz enthält die jährlich neu im Archivkatalog
 verzeichneten und öffentlich zugänglich gemachten Unterlagen (Akten, Pläne,
@@ -84,6 +84,33 @@ Online-Archivkatalog, Verpacken, Etikettieren und Magazinieren.</p>`
 - **Keywords** `['Archiv', 'Akten', 'Erschliessung', 'Unterlagen', 'Archivgesetz', 'Dokumente', 'Informationen', 'Geschichte', 'Sammlung', 'Privatarchiv', 'Hauptarchiv']`
 - **Creator** `Staatsarchiv Basel-Stadt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr, in dem die Aktenerschliessung stattgefunden hat. |
+| `abteilung` | text | Oberste Ebene (Abteilung) im Archivplan, unter welcher die Unterlagen eingeordnet sind |
+| `unterabteilung_subtyp` | text | Für Unterabteilung zweite Ebene im Archivplan, unter welcher die Unterlagen zu finden sind. Subtypen («Zuwachs zu bestehenden Privatarchiven» und «Neue Privatarchive») zeigen für Privatarchive einen neuen oder bestehenden Bestand an. |
+| `signatur` | text | Signatur, unter welcher die Neuzugänge im Archivkatalog zu finden sind. |
+| `abliefernde_stelle` | text | Stelle, welche die Unterlagen abgeliefert und in der Regel auch erstellt hat. Kann ein kantonales Amt, eine öffentlich-rechtliche oder private Organisation oder auch eine Privatperson oder Familie sein. |
+| `betreff_beschreibung` | text | Eine stichwortartige Beschreibung des Inhalts der Unterlagen |
+| `zeitraum` | text | Der Zeitraum, in dem die Unterlagen erstellt worden sind. |
+| `umfang_lfm` | double | Umfang der verzeichneten Unterlagen in Laufmeter. Standardeinheit für physische Unterlagen (primär Papier) |
+| `umfang_band` | double | Umfang in Bänden. Selten bei Büchern verwendet |
+| `umfang_stuck` | double | Umfang in Stück. Selten bei unterschiedlichen Objekten verwendet |
+| `umfang_mb` | double | Umfang der verzeichneten Unterlagen in Megabyte. Bei digitalen Unterlagen verwendet |
 
 
     ///

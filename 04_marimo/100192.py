@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100192`
+- **Dataset_identifier** `100192`
 - **Title** `Vornamen der Neugeborenen nach Geschlecht`
 - **Description** `Dieser Datensatz zeigt die Vornamen der Neugeborenen im Kanton Basel-Stadt seit 2006. Als im Kanton Basel-Stadt Neugeborene gelten Kinder, welche ihren Wohnsitz ab Geburt im Kanton Basel-Stadt haben. Die Daten werden jährlich aktualisiert.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Alter', 'Geburtsort', 'Geschlecht', 'Familie', 'Geburten', 'Einwohnerzahl', 'Population', 'Neugeboren', 'Vorname', 'Name']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Geburtsjahr, in dem das Kind den Vornamen erhalten hat |
+| `geschlecht` | text | Geschlecht des Kindes (m oder w) |
+| `vorname` | text | Erster Vorname des Kindes |
+| `anzahl` | int | Anzahl Kinder, die diesen spezifischen Vornamen in einem bestimmten Jahr tragen |
 
 
     ///

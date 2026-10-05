@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100107`
+- **Dataset_identifier** `100107`
 - **Title** `Monatliche Ankünfte und Logiernächte`
 - **Description** `Dieser Datensatz zeigt die Anzahl Ankünfte und Logiernächte in baselstädtischen Hotels nach Herkunftsland auf monatlicher Basis.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Nationalität', 'Event', 'Übernachtungen', 'Hotels', 'Ausland']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | — |
+| `herkunftsland` | text | Herkunftsland des Gastes |
+| `anzankuenfte` | int | Anzahl in baselstädtischen Hotels angekommene Gäste |
+| `anzlogiernaechte` | int | Anzahl Übernachtungen in baselstädtischen Hotels |
+| `jahr` | text | Jahr |
+| `monat` | int | Monat |
 
 
     ///

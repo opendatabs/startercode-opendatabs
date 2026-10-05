@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,22 @@ Auto generated R starter code for data set 100041.
 - **Keywords** `['Wohnbezirk', 'Wohnblock', 'Wohnblockseite', 'Wohnviertel', 'Einteilung', 'Statistik']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
+| `bls_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `bls_label` | text | Nummerierung (Label) der statistischen Raumeinheit |
+| `bls_name` | text | Name der Blockseite |
+| `str_code` | int | Code der Strasse |
+| `bez_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `blo_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
+| `wov_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
 
 
 # Load packages

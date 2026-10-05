@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,21 @@ Auto generated R starter code for data set 100175.
 - **Keywords** `['Smarte Strasse', 'Tempo', 'Lärm', 'Lautstärke', 'Auto']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `localdatetime_interval_start` | datetime | Startzeit des Messintervalls |
+| `localdatetime_interval_end` | datetime | Stoppzeit des Messintervalls |
+| `speed` | double | Geschwindigkeit bei Durchfahrt in km/h |
+| `level` | double | Schalldruckpegel bei Durchfahrt in dB(A) |
+| `vehicle_rand_number` | int | Zufällig nummerierte Reihenfolge |
+| `interval_length_string` | text | Dauer des Messintervalls in Textform |
+| `interval_length_seconds` | double | Dauer des Messintervalls in Sekunden |
+| `localdatetime_interval_start_text` | text | — |
+| `localdatetime_interval_end_text` | text | — |
 
 
 # Load packages

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100353`
+- **Dataset_identifier** `100353`
 - **Title** `Effektiver und erwarteter täglicher Gasverbrauch`
 - **Description** `Dieser Datensatz beinhaltet den täglichen Gasverbrauch sowie den mittels eines Modells berechneten, anhand des Kalendertages und der Witterung zu erwartenden Gasverbrauch.<br>Der tägliche Gasverbrauch ergibt sich als Summe des stündlich ausgewiesenen Gasverbrauchs im OGD-Datensatz "Gasverbrauch im Versorgungsgebiet der IWB" (<a href="https://data.bs.ch/explore/dataset/100304/">https://data.bs.ch/explore/dataset/100304/</a>). <br><br> Für die Modellevaluierung wurde der Datensatz in drei Teile unterteilt. Der Trainingsdatensatz dient zum Trainieren des Modells, der Tesdatensatz zur Bewertung der Modellleistung. Der Prognosedatensatz enthält neue, unbekannte Daten zur Vorhersage durch das mit Training- und Testdaten trainierte Modell.<br><br>Mehr Informationen zu den gewonnenen Kentnissen findet man im Webartikel: <a href="https://charts.basleratlas.ch/energie/webartikel_gasverbrauch.html">https://charts.basleratlas.ch/energie/webartikel_gasverbrauch.html</a><br><br>Der Code des Modells kann selber ausgeführt und weiterentwickelt werden. Hierfür wird Renku verwendet. Renku ist eine Plattform, die verschiedene Werkzeuge für reproduzierbare und kollaborative Datenanalyseprojekte bündelt: <a href="https://renkulab.io/p/statabs/erwarteter-gasverbrauch-basel-stadt">https://renkulab.io/p/statabs/erwarteter-gasverbrauch-basel-stadt</a>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Strom', 'Stadtlast', 'Netzlast', 'Elektrizität', 'Gas', 'Wärme', 'Watt', 'Kilowattstunden', 'Gigawattstunden', 'Gasverbrauch', 'IWB']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `time` | date | Datum |
+| `gasverbrauch` | double | Tägliche Summe des stündlichen Stromverbrauchs |
+| `forecast` | double | Prognostizierter Wert, abhängig von Kalendertag (z.B. Ferien oder Wochentag) und Witterung |
+| `vgl_real_minus_forecast` | double | Differenz Gasverbrauch effektiv abzüglich erwartet |
+| `forecast_lowfi` | double | Untere Grenze des 95%-Prognoseintervalls für täglich erwarteten Gasverbrauch |
+| `forecast_highfi` | double | Obere Grenze des 95%-Prognoseintervalls für täglich erwarteten Gasverbrauch |
 
 
     ///

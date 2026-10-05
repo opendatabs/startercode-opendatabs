@@ -62,7 +62,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100416`
+- **Dataset_identifier** `100416`
 - **Title** `Geteilte Mikromobilität nach Bezirk und Tag`
 - **Description** `<p>Der Datensatz zeigt die Verteilung von Fahrzeugen verschiedener Mikromobilitätsanbieter in Basel-Stadt, gegliedert nach Bezirk und Tag. Er enthält verschiedene statistische Kennzahlen zur Anzahl der Fahrzeuge pro Bezirk.</p>
 <p>Die Daten berücksichtigen Merkmale wie Fahrzeugtyp, Bauweise, Antriebsart und Reichweite des Fahrzeugs bei vollem Akku.</p>
@@ -76,7 +76,7 @@ Messungen pro Tag für die Berechnung des Durchschnitts.</p>
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p><p><b>Hinweis:</b></p><p>Die Daten enthalten eine Lücke zwischen dem 2. und 22. April 2025, da es einen Unterbruch im Extrahieren der Daten gab.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2026-10-04T04:03:56+00:00`
+- **Modified** `2026-10-05T04:03:49+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -84,6 +84,37 @@ Messungen pro Tag für die Berechnung des Durchschnitts.</p>
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'Shared', 'E-Mobility', 'Mobility', 'Veloverleih', 'Verkehr', 'Statistik']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | Datum |
+| `gemeinde_na` | text | Name der Gemeinde |
+| `wov_id` | text | Eindeutiger Identifikator des Wohnviertels |
+| `wov_name` | text | Name des Wohnviertels |
+| `bez_id` | text | Eindeutiger Identifikator des Bezirks |
+| `bez_name` | text | Name des Bezirks |
+| `xs_provider_name` | text | Dienstleister, der die Mikromobilitätslösung zur Verfügung stellt |
+| `xs_vehicle_type_name` | text | Typ des angebotenen Fahrzeugs |
+| `xs_form_factor` | text | Bauweise oder das Layout des Fahrzeugs |
+| `xs_propulsion_type` | text | Art des Antriebs; "human" bedeutet manuelle Antriebskraft |
+| `xs_max_range_meters` | int | Reichweite des Fahrzeugs bei vollem Akku |
+| `num_measures` | int | Anzahl Messungen an diesem Tag; maximal 144 |
+| `mean` | double | Durchschnittliche Anzahl an Fahrzeugen, die an diesem Tag in diesem Bezirk verfügbar waren |
+| `min` | double | Geringste Anzahl an Fahrzeugen, die an diesem Tag in diesem Bezirk verfügbar waren |
+| `max` | double | Höchste Anzahl an Fahrzeugen, die an diesem Tag in diesem Bezirk verfügbar waren |
 
 
     ///

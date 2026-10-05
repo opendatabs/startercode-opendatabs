@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,26 @@ Auto generated R starter code for data set 100063.
 - **Keywords** `['Tram', 'Bus', 'Zug', 'Haltestelle', 'Baustelle', 'Umleitung', 'ÖV']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `hst_nr` | text | Eindeutiger Identifikator der Haltestellen nach BAV |
+| `name` | text | Haltestellenname nach BAV |
+| `angezname` | text | Angezeigter Name der Haltestelle |
+| `tu_nr` | text | Nummer des Transportunternehmens nach BAV |
+| `tu` | text | Name des Transportunternehmens |
+| `gde_nr` | int | Gemeindenummer nach BFS |
+| `gde` | text | Gemeinde |
+| `kt` | text | Gebiet. Wertebereich: Aargau (AG), Basel-Landschaft (BL), Basel-Stadt (BS), Deutschland (D), Frankreich (F), Jura (JU), Solothurn (SO). |
+| `hoehe` | int | Höhe in m ü. M. (Angabe nach BAV) |
+| `hstart` | text | Art der Haltestelle |
+| `art` | text | Typ der Haltestelle |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
 # Load packages

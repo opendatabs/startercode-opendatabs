@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100308`
+- **Dataset_identifier** `100308`
 - **Title** `Grosser Rat: Mitgliedschaften in Gremien`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die Mitgliedschaften in Gremien der Ratsmitglieder des Grossen Rates des Kantons Basel-Stadt.</p><p style="font-family: sans-serif;">Funktionen in Gremien werden als separate Mitgliedschaft eingetragen, damit gelesen werden kann in welchem Zeitraum eine Ratsmitglied einer besonderen Funktion nachging.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,38 @@ def _(mo):
 - **Keywords** `['Grosser Rat', 'Gremien', 'Parlament', 'Grossrat', 'Grossrätin', 'Legislative']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `kurzname_gre` | text | Kurzname des zugehörigen Gremiums |
+| `name_gre` | text | Name des zugehörigen Gremiums |
+| `gremientyp` | text | Typ des Gremiums (Kommission, Fraktion, Parlament) |
+| `uni_nr_gre` | text | Individuelle Identifikationsnummer des Gremiums innerhalb der Datenbank des Grossen Rates. |
+| `url_gremium` | text | Link zum Datensatz "Grosser Rat: Gremien". Gefiltert nach aktuellem Gremium. |
+| `beginn_mit` | date | Startdatum der Mitgliedschaft im Gremium |
+| `ende_mit` | date | Enddatum der Mitgliedschaft im Gremium |
+| `funktion_adr` | text | Funktion des Gremiumsmitglieds |
+| `anrede` | text | Anrede des Gremiumsmitglieds nach amtlichem Geschlecht |
+| `name_adr` | text | Nachname des Gremiumsmitglieds |
+| `vorname_adr` | text | Vorname des Gremiumsmitglieds |
+| `name_vorname` | text | Name und Vorname des Gremiumsmitglieds |
+| `partei_kname` | text | Abkürzung der Parteizugehörigkeit des Gremiumsmitglieds (nur vorhanden, falls aktuelles Grossratsmitglied) |
+| `url_adr` | text | Link zum Gremiumsmitglied auf der Webseite des Grossen Rates |
+| `uni_nr_adr` | text | Individuelle Identifikationsnummer des Gremiumsmitglieds innerhalb der Datenbank des Grossen Rates. |
+| `url_ratsmitgliedschaften` | text | Link zum Datensatz "Grosser Rat: Ratsmitgliedschaften". Gefiltert nach aktuellem Gremiumsmitglied. |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100020`
+- **Dataset_identifier** `100020`
 - **Title** `Elternberatung`
 - **Description** `<p>Elternberatung ist ein niederschwelliges Beratungsangebot für Eltern mit kleinen Kindern ab Geburt bis zum Eintritt in den Kindergarten. Zentrale Aufgabe ist die Prävention und Gesundheitsförderung im Frühbereich. Dieser Datensatz zeigt die Standorte der Elternberatung im Kanton Basel-Stadt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Angebot', 'Bildung', 'Eltern', 'Förderung', 'Frühbereich', 'Kinder', 'Vorbereitung', 'Baby', 'Mutter', 'Vater', 'Krankheit', 'Gesundheit']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | Punktgeometrie des Elternberatung Standort. |
+| `geo_shape` | geo_shape | — |
+| `id` | int | Eindeutiger Identifikator der Elternberatung. |
+| `name` | text | Bezeichnung des Standortes der jeweiligen Elternberatung. |
+| `adresse` | text | Strassenname und Hausnummer des jeweiligen Standortes der Elternberatung. |
+| `plz` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Offizielle Bezeichnung der Gemeinde |
+| `kanton` | text | Name des Kantons in dem der Standort der Elternberatung liegt. |
+| `telefon` | text | Telefonnummer für den Elternberatungs Standort. |
+| `homepage` | text | Internetadresse zur Homepage der Elternberatung. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

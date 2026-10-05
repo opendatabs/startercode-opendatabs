@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100108`
+- **Dataset_identifier** `100108`
 - **Title** `Coronavirus (COVID-19): Fallzahlen und Inzidenzen Basel-Stadt`
 - **Description** `<p>Dieser Datensatz zeigt die Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz im Kanton Basel-Stadt sowie die kumulierten Werte über die letzten 7 resp. 14 Tage, die jeweiligen Mittelwerte und die Inzidenzen pro 100 000 EinwohnerInnen gemäss <a href="https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/erhebungen/statpop.html" target="_blank">STATPOP</a>. </p><p>Die Zahlen werden gemäss dem Datum des Test-Resultats ausgewiesen, also gemäss jenem Datum, an dem ein Testresultat vorliegt. Dies geschieht in aller Regel innerhalb von 24 Stunden nach einem erfolgten Test. Bei nachträglich eintreffenden Meldungen werden die Zahlen der Vortage entsprechend korrigiert.</p><p></p><ul style="box-sizing: border-box; color: rgb(0, 0, 0); font-family: sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></ul><p></p><p><b style="box-sizing: border-box; font-weight: bolder;">Änderungsprotokoll:</b></p><ul><li>Die Erhebung der Werte wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "WEEKLY" auf "NEVER" geändert.</li></ul><p><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,46 @@ def _(mo):
 - **Keywords** `['Krankheit', 'Gesundheit', 'Coronavirus', 'Corona', 'COVID-19', 'Test', 'Inzidenz', 'Fallzahlen', 'Lungenentzündung']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `test_datum` | date | Datum, an welchem das Testresultat vorliegt. In der Regel liegt ein Testresultat innerhalb von 24 Stunden nach dem erfolgten Test vor. |
+| `faelle_bs` | int | Anzahl positiv auf SARS-CoV-2 getesteter Personen am Datum Test-Resultat mit Wohnsitz im Kanton Basel-Stadt |
+| `faelle_bs_kum` | int | Kumulierte Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz im Kanton Basel-Stadt |
+| `faelle_basel` | int | Anzahl positiv auf SARS-CoV-2 getesteter Personen am Datum Test-Resultat mit Wohnsitz in der Stadt Basel |
+| `faelle_basel_kum` | int | Kumulierte Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz in der Stadt Basel |
+| `faelle_riehen` | int | Anzahl positiv auf SARS-CoV-2 getesteter Personen am Datum Test-Resultat mit Wohnsitz in der Gemeinde Riehen |
+| `faelle_riehen_kum` | int | Kumulierte Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz in der Gemeinde Riehen |
+| `faelle_bettingen` | int | Anzahl positiv auf SARS-CoV-2 getesteter Personen am Datum Test-Resultat mit Wohnsitz in der Gemeinde Bettingen |
+| `faelle_bettingen_kum` | int | Kumulierte Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz in der Gemeinde Bettingen |
+| `inzidenz07_bs` | double | 7-Tage-Inzidenz Basel-Stadt; berechnet nach der Formel: (("Kumulierte Fälle BS" heute) minus ("Kumulierte Fälle BS" heute-7 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz14_bs` | double | 14-Tage-Inzidenz Basel-Stadt; berechnet nach der Formel: (("Kumulierte Fälle BS" heute) minus ("Kumulierte Fälle BS" heute-14 Tage) durch (Einwohnerzahl durch 100 000 Personen))); Einwohnerzahl gemäss STATPOP. |
+| `summe_07_tage_bs` | int | Summe der Anzahl positiv auf SARS-CoV-2 getesteten Personen mit Wohnsitz in Basel-Stadt der letzten 7 Tage |
+| `summe_14_tage_bs` | int | Summe der Anzahl positiv auf SARS-Cov-2 getesteten Personen mit Wohnsitz in Basel-Stadt der letzten 14 Tage |
+| `mittel_07_tage_bs` | double | Mittel der Anzahl positiv auf SARS-CoV-2 getesteten Personen mit Wohnsitz in Basel-Stadt pro Tag über die letzten 7 Tage |
+| `mittel_14_tage_bs` | double | Mittel der Anzahl positiv auf SARS-CoV-2 getesteten Personen mit Wohnsitz in Basel-Stadt pro Tag über die letzten 14 Tage |
+| `inzidenz_basel_07` | double | 7-Tage-Inzidenz Basel; berechnet nach der Formel: (("Kumulierte Fälle Basel" heute) minus ("Kumulierte Fälle Basel" heute-7 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz_basel_14` | double | 14-Tage-Inzidenz Basel; berechnet nach der Formel: (("Kumulierte Fälle Basel" heute) minus ("Kumulierte Fälle Basel" heute-14 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz_riehen_07` | double | 7-Tage-Inzidenz Riehen; berechnet nach der Formel: (("Kumulierte Fälle Riehen" heute) minus ("Kumulierte Fälle Riehen" heute-7 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz_riehen_14` | double | 14-Tage-Inzidenz Riehen; berechnet nach der Formel: (("Kumulierte Fälle Riehen" heute) minus ("Kumulierte Fälle Riehen" heute-14 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz_bettingen_07` | double | 7-Tage-Inzidenz Bettingen; berechnet nach der Formel: (("Kumulierte Fälle Bettingen" heute) minus ("Kumulierte Fälle Bettingen" heute-7 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz_bettingen_14` | double | 14-Tage-Inzidenz Bettingen; berechnet nach der Formel: (("Kumulierte Fälle Bettingen" heute) minus ("Kumulierte Fälle Bettingen" heute-14 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `weekday_nr` | int | Nummer des Wochentags (Montag=0, Sonntag=6) |
+| `weekday` | text | Name des Wochentags auf Englisch |
+| `wochentag` | text | Name des Wochentags auf Deutsch |
 
 
     ///

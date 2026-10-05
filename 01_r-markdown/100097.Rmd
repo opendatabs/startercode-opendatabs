@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -41,6 +41,34 @@ Manipulationen an Geräten können zu fehlerhaften Messungen führen.<o:p></o:p>
 - **Keywords** `['Geschwindigkeit', 'Verkehr', 'Auto', 'PW', 'PKW', 'LW', 'LKW', 'Messwert', 'Einzelmessung', 'Messung']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Datum und Uhrzeit |
+| `messung_id` | text | Laufnummer der Messung; eine Messung beinhaltet alle Fahrten eines Messgeräts an einem Standort |
+| `richtung_id` | text | ID der Richtung; In einer Messung werden i.d.R. Fahrten in zwei Richtungen gemessen. |
+| `geschwindigkeit` | double | Geschwindigkeit in km/h |
+| `zeit` | text | Uhrzeit (hh:mm:ss) einer gemessenen Fahrt |
+| `datum` | text | Datum |
+| `datum_zeit` | text | Datum und Uhrzeit als Text formatiert |
+| `messbeginn` | date | Datum, an welchem ein Messgerät an einem Standort ausgebracht wurde |
+| `messende` | date | Datum, bis zu welchem ein Messgerät an einem Standort im Einsatz war |
+| `zone` | double | geltende Höchstgeschwindigkeit am Standort der Messung |
+| `ort` | text | Gemeinde am Standort einer Messung |
+| `richtung` | text | Fahrtrichtung |
+| `the_geom` | geo_shape | — |
+| `ue_quote` | double | Anteil der Fahrzeuge, welche die geltende Höchstgeschwindigkeit überschritten haben |
+| `v50` | double | Höchstgeschwindigkeit, welche von 50% der Fahrzeuge nicht überschritten wird |
+| `v85` | double | Höchstgeschwindigkeit, welche von 85% der Fahrzeuge nicht überschritten wird |
+| `strasse` | text | Name der Strasse, an welcher ein Messgerät ausgebracht wurde |
+| `strasse_nr` | text | Hausnummer, bei welcher ein Messgerät ausgebracht wurde |
+| `fzg` | int | Anzahl gemessene Fahrzeuge während einer Messung |
+| `fahrzeuglange` | double | Vom Radar gemessene Fahrzeuglänge |
+| `link_zu_messung` | text | Link zum nach der aktuellen Messung gefilterten Datensatz "Kennzahlen pro Mess-Standort" |
+| `geo_point_2d` | geo_point_2d | geographische Koordinaten |
 
 
 # Load packages

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,18 @@ Auto generated R starter code for data set 100023.
 - **Keywords** `['Hund', 'Verbot', 'Leine', 'Leinenpflicht']`
 - **Creator** `Kantonales Veterinäramt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `hs_id` | text | Eindeutiger Identifikator der Hundesignalisation |
+| `hs_beschreibung` | text | Beschreibung der Einschränkung |
+| `hs_beschraenkung` | text | Zeitraum der Beschränkung |
+| `hs_bemerkung` | text | Bemerkung zur Fläsche der Hundesignalisation |
 
 
 # Load packages

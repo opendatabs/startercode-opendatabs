@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,31 @@ Auto generated R starter code for data set 100094.
 - **Keywords** `['Coronavirus', 'COVID-19', 'PCR', 'Corona', 'Krankheit', 'Lungenentzündung', 'Test']`
 - **Creator** `Bundesamt für Gesundheit BAG`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Falldatum, entspricht in der Regel dem Datum der Probeentnahme |
+| `negative_tests` | int | Anzahl negative Tests. Eine Person kann mehrfach negativ getestet werden. |
+| `positive_tests` | int | Anzahl positive Tests. Eine Person kann mehrfach positiv getestet werden. |
+| `total_tests` | int | Anzahl durchgeführte Tests total. Eine Person kann mehrfach getestet werden. |
+| `positivity_rate_percent` | double | Anteil Tests mit einem positiven Ergebnis am Total der Tests in Prozent. |
+| `positivity_rate` | double | Anteil Tests mit einem positiven Ergebnis am Total der Tests. |
+| `dayofweek` | int | Wochentag des Falldatums. Mo=1, Di=2, Mi=3, Do=4, Fr = 5, Sa = 6, So = 7 |
+| `weekday_nr` | int | Nummer des Wochentags (Montag=0, Sonntag=6) |
+| `woche` | int | Wochennummer |
+| `entries_antigen_schnelltest` | int | Anzahl durchgeführte Antigen Schnelltests total. Eine Person kann mehrfach getestet werden. |
+| `entries_pcr` | int | Anzahl durchgeführte PCR Tests total. Eine Person kann mehrfach getestet werden. |
+| `entries_neg_antigen_schnelltest` | int | Anzahl negative Antigen Schnelltests. Eine Person kann mehrfach negativ getestet werden. |
+| `entries_neg_pcr` | int | Anzahl negative PCR Tests. Eine Person kann mehrfach negativ getestet werden. |
+| `entries_pos_antigen_schnelltest` | int | Anzahl positive Antigen Schnelltests. Eine Person kann mehrfach negativ getestet werden. |
+| `entries_pos_pcr` | int | Anzahl positive PCR Tests. Eine Person kann mehrfach negativ getestet werden. |
+| `positivity_rate_antigen_schnelltest` | double | Anteil Antigen Schnelltests mit einem positiven Ergebnis am Total der Antigen Schnelltests. |
+| `positivity_rate_pcr` | double | Anteil PCR Tests mit einem positiven Ergebnis am Total der PCR Tests. |
+| `positivity_rate_percent_antigen_schnelltest` | double | Anteil Antigen Schnelltests mit einem positiven Ergebnis am Total der Antigen Schnelltests. |
+| `positivity_rate_percent_pcr` | double | Anteil PCR Tests mit einem positiven Ergebnis am Total der PCR Tests. |
 
 
 # Load packages

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,24 @@ Auto generated R starter code for data set 100443.
 - **Keywords** `['Künstliche Intelligenz', 'Artificial Intelligence', 'AI', 'Richtlinien', 'öffentliche Verwaltung', 'LLM', 'KI-Agenten', 'KI-Anwendung', 'Datenschutz', 'Datensicherheit']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `order` | double | — |
+| `frage` | text | — |
+| `antwort` | text | — |
+| `sprache` | text | — |
+| `verantwortung` | text | — |
+| `kontakt` | text | — |
+| `link_anzeigetext` | text | — |
+| `zuletzt_aktualisiert` | datetime | — |
+| `thema` | text | — |
+| `keywords` | text | — |
+| `link` | text | — |
+| `antwort_html` | text | — |
 
 
 # Load packages

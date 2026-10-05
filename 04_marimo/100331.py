@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100331`
+- **Dataset_identifier** `100331`
 - **Title** `Veränderte Wahlzettel der Nationalratswahlen 22. Oktober 2023`
 - **Description** `<p>Bei den Nationalratswahlen im Kanton Basel-Stadt am 22. Oktober 2023 kandidierten 122 Personen auf 32 Listen (<a href="https://data.bs.ch/explore/dataset/100316/" target="_blank">verfügbar unter https://data.bs.ch/explore/dataset/100316/</a>) für insgesamt vier zu vergebende Sitze.</p><p> Es gingen insgesamt 56 235 gültigen Wahlzettel ein, von denen 29 637 Wahlzettel verändert wurden. Dieser Datensatz zeigt diese 29 637 Wahlzettel und jegliche Details dazu. </p><p>Die Wahlergebnisse sind in einem separaten Datensatz (<a href="https://data.bs.ch/explore/dataset/100281/" target="_blank">https://data.bs.ch/explore/dataset/100281/</a><a href="https://data.bs.ch/explore/dataset/100281//" target="_blank"></a> und <a href="https://data.bs.ch/explore/dataset/100297/" target="_blank">https://data.bs.ch/explore/dataset/100297/</a>) einsehbar, der die Verteilung der Stimmen und die gewählten Vertreter detailliert darstellt.</p><p>Das Statistische Amt hat zu diesem Datensatz einen Dossier-Artikel verfasst, der hier einsehbar ist: <a href="https://data-bs.ch/stata/wahlen_abstimmungen/wahlen/nr/wahlzettel_2023/6-wahlen.pdf" target="_blank">https://data-bs.ch/stata/wahlen_abstimmungen/wahlen/nr/wahlzettel_2023/6-wahlen.pdf </a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,40 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `column_1` | int | — |
+| `wahljahr` | text | — |
+| `wahlkreis` | text | — |
+| `wahlzettel_type` | text | Beschreibt, ob der Wahlzettel in physischer oder elektronischer Form abgegeben wurde. |
+| `listen_nr` | text | — |
+| `parteikurzbezeichnung` | text | — |
+| `parteibezeichnung` | text | — |
+| `kandidat_1` | text | Kandidierenden Nr. der ersten Stimme |
+| `kandidat_1_name` | text | Ganzer Name der ersten Stimme |
+| `kandidat_2` | text | Kandidierenden Nr. der zweiten Stimme (NULL bedeutet keine Stimme) |
+| `kandidat_2_name` | text | Ganzer Name der zweiten Stimme (NULL bedeutet keine Stimme) |
+| `kandidat_3` | text | Kandidierenden Nr. der dritten Stimme (NULL bedeutet keine Stimme) |
+| `kandidat_3_name` | text | Ganzer Name der dritten Stimme (NULL bedeutet keine Stimme) |
+| `kandidat_4` | text | Kandidierenden Nr. der vierten Stimme (NULL bedeutet keine Stimme) |
+| `kandidat_4_name` | text | Ganzer Name der vierten Stimme (NULL bedeutet keine Stimme) |
+| `wahlzettel_typ` | text | p = panaschiert; k = kumuliert |
+| `listenverbindungen` | text | — |
+| `unterlistenverbindungen` | text | — |
 
 
     ///

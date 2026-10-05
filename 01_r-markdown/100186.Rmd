@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,44 @@ Auto generated R starter code for data set 100186.
 - **Keywords** `['Abstimmung', 'Parlament', 'Grosser Rat', 'Legislative', 'Geschäft', 'Grossrat', 'Grossrätin', 'Kalender']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Datum |
+| `zeit` | text | Uhrzeit |
+| `traktandum` | int | Nummer des Traktandums, falls vorhanden, gemäss Tagesordnung (Traktandenliste) |
+| `subtraktandum` | int | Nummer des Subtraktandums, falls vorhanden, gemäss Tagesordnung (Traktandenliste) |
+| `geschaeft` | text | Titel des Geschäfts |
+| `signatur_ges` | text | Signatur des Geschäfts |
+| `url_ges` | text | Link zum Geschäft auf der Webseite des Grossen Rates |
+| `url_geschaeft_ods` | text | Link zum Datensatz "Grosser Rat: Geschäfte". Gefiltert nach dem Geschäft. |
+| `signatur_dok` | text | Signatur des Dokuments |
+| `abst_nr` | text | Laufende Nummerierung der Abstimmungen an einem Sitzungstag |
+| `typ` | text | Abstimmungstyp (ab September 2023 gibt es neue Typen) |
+| `anz_j` | int | Anzahl Grossratsmitglieder, welche mit "Ja" abgestimmt haben |
+| `anz_n` | int | Anzahl Grossratsmitglieder, welche mit "Nein" abgestimmt haben |
+| `anz_e` | int | Anzahl Grossratsmitglieder, welche sich der Stimme enthalten haben |
+| `anz_a` | int | Anzahl Grossratsmitglieder, welche bei der Abstimmung nicht anwesend waren |
+| `anz_p` | int | Anzahl Stimmen der Ratspräsidentin oder des Ratspräsidenten (= maximal 1) |
+| `sitz_nr` | int | Nummer des Sitzes des Grossratsmitglieds |
+| `mitglied_anrede` | text | Anrede des Grossratsmitglieds |
+| `mitglied_nachname` | text | Nachname des Grossratsmitglieds |
+| `mitglied_vorname` | text | Vorname des Grossratsmitglieds |
+| `mitglied_name` | text | Vor- und Nachname des Grossratsmitglieds |
+| `fraktion` | text | Fraktion des Grossratsmitglieds |
+| `mitglied_name_fraktion` | text | Name und Fraktionszugehörigkeit des Grossratsmitglieds |
+| `mitglied_funktion` | text | Funktion des Grossratsmitglieds (Mitglied, Präsident/in, Statthalter/in) |
+| `entscheid_mitglied` | text | Stimmverhalten des Grossratsmitglieds (Ja, Nein, Enthaltung, Abwesend, Präsidium) |
+| `gr_uni_nr` | text | Individuelle Identifikationsnummer des Grossratsmitglied innerhalb der Datenbank des Grossen Rates. |
+| `gr_url` | text | Link zum Grossratsmitglied auf der Webseite des Grossen Rates |
+| `gr_url_ods` | text | Link zum Datensatz "Grosser Rat: Ratsmitgliedschaften". Gefiltert nach Grossratsmitglied. |
+| `zeitstempel_text` | datetime | Datum und Uhrzeit |
+| `datenstand_text` | datetime | Datum und Uhrzeit des Datenexports |
+| `anr` | text | Besteht aus [Abstimmungsnummer]-[Datum]-[Uhrzeit] |
+| `url_abstimmung_dok` | text | Link zum Dokument der Abstimmung auf der Webseite des Grossen Rates |
 
 
 # Load packages

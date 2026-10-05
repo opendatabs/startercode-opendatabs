@@ -59,7 +59,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100149`
+- **Dataset_identifier** `100149`
 - **Title** `Rohdaten-Zeitreihe der Belegung der Elektroauto-Ladestationen der IWB`
 - **Description** `<p>IWB baut im Kanton Basel-Stadt ein Netz leistungsfähiger öffentlich zugänglicher Ladestationen auf, um der umweltfreundlichen und gerade für Ballungsgebiete idealen Elektromobilität entscheidende Impulse zu geben. </p>
 
@@ -78,6 +78,29 @@ def _(mo):
 - **Keywords** `['Elektroautos', 'Elektromobilität', 'Ladestationen', 'IWB', 'Tankstellen', 'Elektroladestation', 'Echtzeit', 'Realtime']`
 - **Creator** `Industrielle Werke Basel`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `addresse` | text | Strasse und Hausnummer |
+| `power` | text | Ladeleistung |
+| `location` | text | — |
+| `parkingfield` | int | Eine Ladestation kann mehrere Parkfelder haben |
+| `totalparkings` | int | Anzahl Parkfelder einer Ladestation |
+| `status` | text | Available / Occupied entspricht frei / belegt |
+| `timestamp` | datetime | Datum und Uhrzeit |
 
 
     ///

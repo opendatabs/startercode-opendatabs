@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -29,6 +29,19 @@ Auto generated R starter code for data set 100005.
 - **Keywords** `['Ladestationen', 'Elektroautos', 'Elektromobilität', 'Elektroladestation']`
 - **Creator** `Industrielle Werke Basel`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `name` | text | — |
+| `description` | text | — |
+| `geometry` | geo_shape | — |
+| `beschreibung` | text | — |
+| `art` | text | — |
+| `ort` | text | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
 # Load packages

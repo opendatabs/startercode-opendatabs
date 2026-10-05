@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,16 @@ Auto generated R starter code for data set 100519.
 - **Keywords** `['Gebäude', 'Heizung']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr_monat` | date | Jahr und Monat, an dem die Wärmepumpen erfasst wurden |
+| `jahr` | text | Jahr, an dem die Wärmepumpen erfasst wurden |
+| `monat` | int | Monat an dem die Wärmepumpen erfasst wurden |
+| `mit_warmepumpe_beheizte_gebaude` | double | — |
 
 
 # Load packages

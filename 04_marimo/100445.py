@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100445`
+- **Dataset_identifier** `100445`
 - **Title** `Hundebestand im Kanton Basel-Stadt seit 1970`
 - **Description** `Dieser Datensatz zeigt die Anzahl der registrierten Hunde im Kanton Basel-Stadt seit 1970, aufgeschlüsselt nach den Gemeinden Basel, Riehen und Bettingen. Ab dem Jahr 2008 ist zusätzlich eine Aufschlüsselung nach den Wohnvierteln in Basel verfügbar. Hunde, die keinem Wohnviertel zugeordnet werden können, sind als unbekannt markiert.<br>Eine Sammlung aller OGD-Datensätze über Hunde finden Sie hier: <a href="https://data.bs.ch/explore/?refine.tags=hund">https://data.bs.ch/explore/?refine.tags=hund</a><br>Weitere Informationen zu Tierbeständen im Kanton Basel-Stadt findet man im Statistikportal: <a href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}'>href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}</a>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Freizeit', 'Tiere', 'Hund']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr der Erfassung |
+| `wohnviertel_aktuell` | text | Wohnviertelidentifikator (verfügbar ab 2008) |
+| `wov_name` | text | Wohnviertel Name |
+| `gemeinde_name` | text | Gemeinde |
+| `anzahl_hunde` | int | Anzahl Hunde in Gemeinde oder Wohnviertel |
 
 
     ///

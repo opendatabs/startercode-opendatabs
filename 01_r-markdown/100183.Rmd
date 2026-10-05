@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,18 @@ Auto generated R starter code for data set 100183.
 - **Keywords** `['SARS-CoV-2', 'COVID-19', 'Corona', 'Coronavirus', 'Test', 'PCR']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `firstdayofweek` | date | Datum des Montags der Woche |
+| `weekofyear` | int | Nr. der Woche im Jahr |
+| `result` | text | Resultat der Tests (negativ oder positiv) |
+| `count` | int | Anzahl positiv resp. negativ getesteter Personen pro Woche |
+| `counttotal` | int | Anzahl total getesteter Schülerinnen, Schüler oder Lehrpersonen pro Woche |
+| `positivityratepercent` | double | Anteil der positiven Tests an der Gesamtzahl der Tests der betreffenden Woche |
 
 
 # Load packages

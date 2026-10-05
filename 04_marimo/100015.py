@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100015`
+- **Dataset_identifier** `100015`
 - **Title** `Basel Info Points of Interest`
 - **Description** `<p>Basel Info ist das Fussgängerorientierungssystem für Basel-Stadt. Die detailreich gestalteten Karten ermöglichen den Nutzern, die Stadt selbstständig zu Fuss oder mit dem öV zu entdecken. Zusätzlich bieten 38 Gruppen von Points of Interest, unterteilt in 8 Klassen, nützliche Informationen für Touristen und Anwohner gleichermassen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Basel Info', 'Fussgängerorientierung', 'POI', 'Tourismus']`
 - **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktgeometrie des interessanten Ortes. |
+| `geo_shape` | geo_shape | — |
+| `name` | text | Name des interessanten Ortes. |
+| `kategorie` | text | Einteilung der Orte in übergeordnete Themenbereiche. |
+| `subkategorie` | text | Weitere Einteilung der Orte innerhalb einer Kategorie in spezifischere Subkategorien. |
+| `beschreibung` | text | Weitere Informationen zum Ort wie z.B. Ausstattung und Rollstuhlgängigkeit. |
+| `art` | text | Genauere Spezifikation der Subkategorie. |
+| `strasse` | text | Strassenname und Hausnummer (sofern vorhanden) des interessanten Ortes. |
+| `ort` | text | Postleitzahl und Name der Ortschaft, in welchem sich der Ort befindet. |
+| `telefon` | text | Telefonnummer, unter welcher die zuständige Stelle für den Ort erreichbar ist. |
+| `link` | text | Link auf eine Webseite mit weiterführenden Informationen zu dem Ort. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

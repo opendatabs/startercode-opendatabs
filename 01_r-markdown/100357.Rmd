@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -29,6 +29,16 @@ Man kann die LiDAR-Daten im PNG- und PGW-Format in der Tabellenansicht herunterl
 - **Keywords** `['Baum', 'Baumbestand', 'Baumkrone', 'Kronenbedeckung', 'Vegetation', 'LiDAR']`
 - **Creator** `Stadtgärtnerei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr |
+| `url_png` | text | Downloadlink zum Bild der Baumkronenbedeckung im PNG-Format. |
+| `url_pgw` | text | Downloadlink zur Weltdatei im PNG-Format. Eine Weltdatei enthält Georeferenzierungsdaten für ein zugehöriges Bild (hier im PNG-Format), um dessen genaue Positionierung auf einer Karte zu ermöglichen. |
+| `url_tif` | text | Downloadlink zum Bild der Baumkronenbedeckung im TIF/TIFF-Format. |
 
 
 # Load packages

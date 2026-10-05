@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,16 @@ Auto generated R starter code for data set 100448.
 - **Keywords** `['Feiertage', 'Freizeit', 'Frei', 'Ferienregelung']`
 - **Creator** `Human Resources Basel-Stadt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wochentag` | text | Wochentag |
+| `datum` | date | Datum |
+| `bezeichnung` | text | Bezeichnung |
+| `anzahl_tage` | text | Anzahl Tage |
 
 
 # Load packages

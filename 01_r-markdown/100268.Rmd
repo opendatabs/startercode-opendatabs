@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -33,6 +33,32 @@ ausserhalb des im Projekt definierten Zeitraums vorfallen. </span></p><p class=
 - **Keywords** `['Smiley', 'Tempolimit', 'Verkehr', 'Tagesverkehr', 'Tempo', 'Vormessung', 'Nachmessung']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `zyklus` | text | Messzyklus |
+| `phase` | text | Phase der Messung (Vormessung, Betrieb, Nachmessung oder nach Ende) |
+| `id_standort` | int | Eindeutige Standortkennung |
+| `strassenname` | text | Strassenname |
+| `ort` | text | Ortsname |
+| `ort_abkuerzung` | text | Ort Abkürzung |
+| `messung_timestamp` | datetime | Zeitpunkt der Messung |
+| `messung_datum` | date | Datum der Messung |
+| `messung_zeit` | text | Zeit der Messung |
+| `v_einfahrt` | int | Geschwindigkeit bei Einfahrt |
+| `v_ausfahrt` | int | Geschwindigkeit bei Ausfahrt |
+| `v_delta` | int | Geschwindigkeitsdifferenz (Einfahrt minus Ausfahrt) |
+| `geschwindigkeit` | int | Maximale erlaubte Geschwindigkeit |
+| `halterung` | text | Art der Befestigung (permanent oder mobil) |
+| `start_vormessung` | datetime | Beginn der Vormessung (mit ausgeschalteter Anzeige) |
+| `start_betrieb` | datetime | Beginn des aktiven Betriebs |
+| `start_nachmessung` | datetime | Beginn der Nachmessung (mit ausgeschalteter Anzeige) |
+| `ende` | datetime | Ende des Messzyklus am Standort |
+| `messung_jahr` | text | Jahr der Messung |
+| `geo_point_2d` | geo_point_2d | Geografische Koordinaten der Smiley-Geschwindigkeitsanzeige |
 
 
 # Load packages

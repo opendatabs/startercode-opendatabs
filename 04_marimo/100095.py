@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100095`
+- **Dataset_identifier** `100095`
 - **Title** `Abfuhrzonen (Gemeinde Basel)`
 - **Description** `<p>Abfuhrzonen der Stadtreinigung (Tiefbauamt) für die Stadt Basel. Beinhaltet die Flächen der Abfuhrzonen (A bis H und GUF) der Stadt Basel.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['Abfall', 'Recycling', 'Grüngut']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Geometrie der Abfuhrzone. |
+| `zone` | text | Weisst den Zonenidentifikator (A-H oder GUF) des Gebiets aus. |
 
 
     ///

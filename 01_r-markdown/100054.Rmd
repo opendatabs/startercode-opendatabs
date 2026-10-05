@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,25 @@ Auto generated R starter code for data set 100054.
 - **Keywords** `['Baum', 'Stadtbaum', 'Unterhalt', 'Pflege', 'Ersatz', 'Fällung', 'Kataster']`
 - **Creator** `Stadtgärtnerei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | text | Laufnummer |
+| `ba_art` | text | Botanische und deutsche Bezeichnung der Baumart |
+| `baumart_lateinisch` | text | — |
+| `baumart_deutsch` | text | — |
+| `mapbs_ba_baumnr` | text | Eindeutige Nummer des Baums |
+| `ba_schutzstatus` | text | Beschreibung des Schutzstatus: "Geschützt (Umfang)": Geschützt wegen gemessenem Baumumfang. "Gemäss Baumschutzgesetz (BSchG)": Baumumfang wurde nicht unbedingt aktuell gemessen, Baum wurde trotzdem konservativ als geschützt eingeteilt. "Geschützt (Ersatzpflanzung)": Aktueller Baum ist geschützt, da er einen vormalig geschützten Baum ersetzt. |
+| `ba_stammumfang` | int | Stammumfang in cm |
+| `ba_strasse` | text | Strasse des Baumstandortes |
+| `ba_faellgrund` | text | Grund für die Fällung des Baums. |
+| `ba_faellgrund_bemerkung` | text | Weitergehende Informationen zur Fällung des Baums |
+| `map_links` | text | — |
 
 
 # Load packages

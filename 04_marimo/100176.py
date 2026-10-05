@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100176`
+- **Dataset_identifier** `100176`
 - **Title** `Smarte Strasse: Parkplatz-Zonen`
 - **Description** `<p style="font-family: sans-serif;">Der Datensatz zeigt die Standorte der Parkplätze, die im Rahmen des Projekts «Smarte Strasse» für die Testung der Sensoren einbezogen werden.<br>Zusätzlich relevante Datensätze für die Parkplatzbelegung:</p><ul><li style=""><a href="https://data.bs.ch/explore/dataset/100171/" target="_blank">Zu- und Wegfahrten, Parkplatzauslastung</a></li><li style=""><a href="https://data.bs.ch/explore/dataset/100160/" target="_blank">Parkplatzbelegung</a><br></li></ul><p class="" style="font-family: sans-serif;">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</p><ul><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href="https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen" target="_blank">https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen</a> </li><li>Genaue Standorte aller Sensoren: <a href="https://data.bs.ch/explore/dataset/100114/" target="_blank">https://data.bs.ch/explore/dataset/100114/</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><b>Hinweis:<br>Die Parkplatz-Kamera an der Gundeldingerstrasse wurde am Dienstag 4.10.2022 abmontiert. Es werden keine Daten mehr erhoben.</b><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Smarte Strasse', 'Parkplatz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | double | Identifikationsnummer |
+| `lat` | double | Breitengrad |
+| `lon` | double | Längengrad |
+| `coord` | geo_point_2d | Koordinaten |
+| `adresse` | text | Adresse |
+| `typ` | text | Parkplatztyp |
 
 
     ///

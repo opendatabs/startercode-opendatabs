@@ -53,19 +53,48 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100051`
+- **Dataset_identifier** `100051`
 - **Title** `Luftqualität Station Basel-Binningen`
 - **Description** `<p>Stündliche Messungen der <a href="https://www.meteoschweiz.admin.ch/home/messwerte.html?param=messnetz-automatisch&amp;station=BAS" target="_blank">automatischen Wetterstation Basel-Binningen</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-10-04T21:20:50+00:00`
+- **Modified** `2026-10-05T11:20:39+00:00`
 - **Rights** `None`
 - **Temporal_coverage_start_date** `2018-05-31T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-03T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-04T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Gesundheit', 'Tourismus']`
 - **Keywords** `['Luft', 'Ozon', 'Stickstoffdioxid', 'Stickoxid', 'NO2', 'NOX', 'Feinstaub', 'Kohlenmonoxid', 'CO', 'Partikelzahlkonzentraion', 'Russ', 'Temperatur', 'Niederschlag', 'Globalstrahlung']`
 - **Creator** `MeteoSchweiz`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum_zeit` | datetime | Zeitstempel in UTC |
+| `timestamp_text` | text | Zeitstempel als Text in Mitteleuropäischer Zeit ("Winterzeit") |
+| `o3_ug_m3` | double | Ozon |
+| `no2_ug_m3` | double | Stickstoffdioxid |
+| `pm10_ug_m3` | double | Feinstaub mit Partikelgrösse < 10 tausendstel Millimeter |
+| `pm2_5_ug_m3` | double | Feinstaub mit Partikelgrösse < 2.5 tausendstel Millimeter |
+| `cpc_1_cm3` | double | Partikelanzahlkonzentration |
+| `ec_ug_m3` | double | Russ (EC in PM2.5) |
+| `prec_mm` | double | Niederschlag |
+| `rad_w_m2` | double | Globalstrahlung |
+| `so2_ug_m3` | double | Schwefeldioxid |
+| `nox_ug_m3_eq_no2` | double | — |
+| `temp_c` | double | — |
 
 
     ///

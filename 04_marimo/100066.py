@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100066`
+- **Dataset_identifier** `100066`
 - **Title** `Umweltanalyse Oberflächengewässer`
 - **Description** `<p>Der Datensatz enthält die Analysedaten der Beprobungen der Oberflächengewässer des Kantons Basel-Stadt seit dem Jahr 1993. Die Daten des Rheins sind hiervon ausgenommen. Es werden Konzentrationsangaben zu verschiedenen Inhalts- resp. Schadstoffen mit Bezug auf die einzelnen Fliessgewässer, sowie der geographischen Koordinaten gemacht.</p><p>Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei" target="_blank">https://www.bs.ch/wsu/aue/abteilung-gewaesser-und-boden#oberflaechengewaesser-und-fischerei</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-04-06`
-- **Modified** `2026-10-04T06:05:58+00:00`
+- **Modified** `2026-10-05T06:05:48+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1993-08-23T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,46 @@ def _(mo):
 - **Keywords** `['Rhein', 'Messwert', 'Wasserqualität', 'Fluss', 'Chemie', 'Rüs', 'Wassertemperatur']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `probentyp` | text | Unterscheidet zwischen Matrix Wasser und Feststoff (Schwebstoff) |
+| `probenahmestelle` | text | Ort, an dem die Probe entnommen wurde. |
+| `geo_point_2d` | geo_point_2d | Koordinaten der Probeentnahmestelle. |
+| `x_coord` | text | X-Koordinate der Probeentnahmestelle in EPSG:2056. |
+| `y_coord` | text | Y-Koordinate der Probeentnahmestelle in EPSG:2056. |
+| `probenahmedatum` | text | Datum, an welchem die Probe entnommen wurde. |
+| `entnahmezeit` | text | Uhrzeit, zu der die Probe entnommen wurde. |
+| `probenahmedauer` | text | Dauer der Probenahme. Dauer codiert nach Konvention der Internationalen Kommission zum Schutz des Rheins (IKSR) 1M =24h; 14M=336h; 28M=672; 1M14 24h Mischprobe alle 14Tage; Sammelprobe=Dauer variabel abhängig von Schwebstoffanteil. MS steht für Mischung Stahl, MK für Mischung Kunststoff. E steht für Einzelmessung, M für Mischprobenentnahme. |
+| `reihenfolge` | text | Sortierfolge für Auswertungen. |
+| `gruppe` | text | Gruppe der gemessenen Stoffe. |
+| `parameter` | text | Gemessener Stoff. |
+| `bg` | double | Minimal bestimmbare Konzentration des gemessenen Stoffes. |
+| `wert` | text | Gemessener Wert. |
+| `wert_num` | double | Gemessener Wert als Dezimalzahl. Werte, die unterhalb der Bestimmungsgrenze liegen (z. B. <0,25) werden nicht angegeben. |
+| `einheit` | text | Einheit, in welcher der Wert gemessen wird. |
+| `auftragnr` | text | Nummer des Auftrags. |
+| `probennr` | text | Nummer der Probe. |
+| `resultatnummer` | text | Nummer des Resultats. |
+| `automatische_auswertung` | text | Angabe, ob eine automatische Auswertung erfolgte oder nicht. |
+| `cas_bezeichnung` | text | ID des chemischen Stoffs, siehe https://de.wikipedia.org/wiki/CAS-Nummer. |
+| `bafu_bezeichnung` | text | Bezeichnung gemäss Bundesamt für Umwelt BAFU. |
+| `allgemeine_parametergruppe` | text | Gruppe der Parameter. |
+| `probenahmedatum_date` | date | Datum der Probenahme. |
+| `probenahmejahr` | text | Jahr der Probeentnahme. |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100284`
+- **Dataset_identifier** `100284`
 - **Title** `Grillstellen in Gewässernähe`
 - **Description** `<p>Der Datensatz zeigt die Koordinaten gewässernaher Grillstellen in Basel-Stadt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['grillieren', 'grillen']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | int | — |
+| `status` | text | — |
+| `sichtbar_von` | date | — |
+| `sichtbar_bis` | date | — |
+| `name` | text | Name der Grillstelle |
+| `shape` | text | — |
 
 
     ///

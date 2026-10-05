@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100391`
+- **Dataset_identifier** `100391`
 - **Title** `Kandidierende der Grossratswahlen nach Geschlecht seit 1968`
 - **Description** `<p style="">Dieser Datensatz zeigt die Kandidierenden der Grossratswahlen nach amtlichen Geschlecht seit 1968</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe', 'Gesamterneuerungswahl']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahljahr` | text | — |
+| `total` | double | Total Kandidierende |
+| `frauen` | double | Anzahl weibliche Kandidierende |
+| `manner` | double | Anzahl männliche Kandidierende |
+| `frauenanteil_kand` | double | Anzahl Kandidatinnen / Total Kandidierende |
+| `frauenanteil_gew` | double | Anzahl weibliche Gewählte / Anzahl Sitze im Grossen Rat (aktuell 100) |
 
 
     ///

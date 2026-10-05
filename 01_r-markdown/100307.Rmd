@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,36 @@ Auto generated R starter code for data set 100307.
 - **Keywords** `['Grosser Rat', 'Parlament', 'Grossrat', 'Grossrätin', 'Legislative', 'Interessensbindungen']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `ist_aktuell_grossrat` | text | Mitgliedschaft in momentan laufender Legislaturperiode |
+| `anrede` | text | Die Anrede nach amtlichem Geschlecht |
+| `titel` | text | Akademischer Titel des (ehemaligen) Grossratsmitglieds |
+| `name` | text | Nachname des (ehemaligen) Grossratsmitglieds |
+| `vorname` | text | Vorname des (ehemaligen) Grossratsmitglieds |
+| `name_vorname` | text | Name und Vorname des (ehemaligen) Grossratsmitglieds |
+| `gebdatum` | date | Geburtsdatum des (ehemaligen) Grossratsmitglieds |
+| `gr_sitzplatz` | int | Nummer des Sitzes des Grossratsmitglieds (nur vorhanden, falls aktuelles Grossratsmitglied) |
+| `gr_wahlkreis` | text | Wahlkreis des (ehemaligen) Grossratsmitglieds |
+| `partei` | text | Parteizugehörigkeit des Grossratsmitglieds (nur vorhanden, falls aktuelles Grossratsmitglied) |
+| `partei_kname` | text | Abkürzung der Parteizugehörigkeit des Grossratsmitglieds (nur vorhanden, falls aktuelles Grossratsmitglied) |
+| `gr_beginn` | date | Startdatum der Mitgliedschaft im Grossen Rat |
+| `gr_ende` | date | Enddatum der Mitgliedschaft im Grossen Rat |
+| `url` | text | Link zum (ehemaligen) Grossratsmitglied auf der Webseite des Grossen Rates |
+| `uni_nr` | text | Individuelle Identifikationsnummer des (ehemaligen) Grossratsmitglied innerhalb der Datenbank des Grossen Rates |
+| `strasse` | text | Strasse an der das Grossratsmitglied wohnhaft ist. |
+| `plz` | text | Postleitzahl an der das Grossratsmitglied wohnhaft ist. |
+| `ort` | text | Ortschaft in der das Grossratsmitglied wohnhaft ist. |
+| `gr_beruf` | text | Berufliche Tätigkeit des Grossratsmitglieds (nur vorhanden, falls aktuelles Grossratsmitglied) |
+| `gr_arbeitgeber` | text | Arbeitgeber des Grossratsmitglieds (nur vorhanden, falls aktuelles Grossratsmitglied) |
+| `homepage` | text | Homepage des Grossratsmitglieds (nur vorhanden, falls aktuelles Grossratsmitglied) |
+| `url_gremiumsmitgliedschaften` | text | Link zum Datensatz "Grosser Rat: Mitgliedschaften in Gremien". Gefiltert nach aktuellem Grossratsmitglied. |
+| `url_interessensbindungen` | text | Link zum Datensatz "Grosser Rat: Interessensbindungen Ratsmitglieder". Gefiltert nach aktuellem Grossratsmitglied. |
+| `url_urheber` | text | Link zum Datensatz "Grosser Rat: Geschäfte". Gefiltert nach Geschäften, denen das aktuelle Grossratsmitglied als Urheber dient. |
 
 
 # Load packages

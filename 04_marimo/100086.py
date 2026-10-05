@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100086`
+- **Dataset_identifier** `100086`
 - **Title** `Grosser Rat: Politische Vorstösse`
 - **Description** `<p>Dieser Datensatz ermöglichte einen thematischen Überblick über die politischen Vorstösse des Grossen Rats des Kantons Basel-Stadt. Es sind darin Geschäfte zwischen Januar 2019 und März 2024 enthalten, welche überwiesen und manuell mit Thema kategorisiert worden sind. Die Zuteilung zu Themen erfolgte durch die Kantons- und Stadtentwicklung. Eine Datenvisualisierung war unter <a href="https://politmonitor.bs.ch" target="_blank">politmonitor.bs.ch</a> auffindbar.</p><p>Wichtig: Seit März 2024 wird dieser Datensatz nicht mehr aktualisiert, und die Visualisierung ist nicht mehr einsehbar. Wir arbeiten daran, die politischen Vorstösse neu mittels KI zu kategorisieren, und die Visualisierung wieder zu publizieren, und hoffen, dies im Verlauf des Jahres 2025 abschliessen zu können. </p><p>Siehe auch Datensatz "Grosser Rat: Geschäfte":  (<a href="https://data.bs.ch/explore/dataset/100311" target="_blank">https://data.bs.ch/explore/dataset/100311</a>)</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-29`
-- **Modified** `2026-10-04T02:00:57+00:00`
+- **Modified** `2026-10-05T02:01:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-01-08T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-03-05T23:00:00+00:00`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Parlament', 'Legislative', 'Geschäft', 'Grossrat', 'Grossrätin', 'Parlamentarische Vorstösse', 'Grosser Rat']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `signatur` | text | Laufnummer eines Vorstosses |
+| `geschaftstyp` | text | Art des Vorstosses |
+| `partei` | text | Partei, welcher der Urheber oder die Urheberin eines politischen Vorstosses aktuell angehört. |
+| `urheber` | text | Urheberin oder Urheber des politischen Vorstosses |
+| `titel` | text | Titel des Vorstosses |
+| `beginn_datum` | date | Datum, an welchem ein Vorstoss an den Regierungsrat überwiesen wurde. |
+| `ende` | date | Datum, an welchem ein Geschäft den Status abgeschlossen erhält. |
+| `thema_1` | text | Unterthema des Themenbereichs 1 |
+| `thema_2` | text | Unterthema des Themenbereichs 2 |
+| `schwerpunkt` | text | Thematischer Schwerpunkt aus Sicht der Kantons- und Stadtentwicklung |
+| `geschaft` | text | Link zum Geschäft auf der Webseite des Grossen Rates |
+| `status` | text | A = Abgeschlossen; B = in Bearbeitung |
 
 
     ///

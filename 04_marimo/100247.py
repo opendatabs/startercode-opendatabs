@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100247`
+- **Dataset_identifier** `100247`
 - **Title** `Events in Gewässernähe`
 - **Description** `<p>Der Datensatz enthält Informationen zu Anlässen u.ä. in Gewässernähe, welche z.B. in der BachApp publiziert werden. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,36 @@ def _(mo):
 - **Keywords** `['Veranstaltungen', 'Event']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `idunique` | text | ID |
+| `sichtbar_von` | date | Sichtbar ab |
+| `sichtbar_bis` | date | Sichtbar bis |
+| `status` | text | Status |
+| `datum_von` | date | Beginn des Events |
+| `datum_bis` | date | Ende des Events |
+| `titel` | text | Name des Events |
+| `untertitel` | text | Motto des Events |
+| `text` | text | Beschreibung des Events |
+| `image` | text | — |
+| `shape` | text | — |
+| `titel_en` | text | — |
+| `untertitel_en` | text | — |
+| `text_en` | text | — |
 
 
     ///

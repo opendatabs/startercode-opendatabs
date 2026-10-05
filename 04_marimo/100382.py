@@ -72,7 +72,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100382`
+- **Dataset_identifier** `100382`
 - **Title** `Solarkataster: Solarpotenzial`
 - **Description** `Über den Solarkataster kann abgeschätzt werden, wie gut sich die Dach- und Fassadenflächen im Kantonsgebiet für die solare Nutzung eignen. Die ausgewiesenen Potenziale beruhen auf Modellrechnungen und stellen keine exakten Messwerte dar.
 <br> Sämtliche Datensätze zu dem Produkt "Solarkataster": <a href="https://data.bs.ch/explore/?refine.tags=solarkataster" target="_blank">https://data.bs.ch/explore/?refine.tags=solarkataster</a>
@@ -104,6 +104,41 @@ Die Berechnung der solaren Globalstrahlung basiert auf dem 0.5m-Oberflächenmode
 - **Keywords** `['Solarenergie', 'Solarkollektor']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `idgebaeude` | int | Identifikator der Dachfläche (einzigartig für diesen Datensatz) |
+| `gebaeudenr` | int | EGID des Gebäudes |
+| `gebnr` | int | Gebäudenummer |
+| `pv_best_ei` | double | Dachfläche mit bester Eignung für Photovoltaik in m2 (> 1100 kWh/m2a und 10m2 Mindestfläche) |
+| `pv_gute_ei` | double | Dachfläche mit guter Eignung für Photovoltaik in m2 (800 bis 1100 kWh/m2a und 10m2 Mindestfläche) |
+| `f_gute_ei` | double | Fassadenfläche mit guter Eignung für Photovoltaik in m2 (>600kWh/m2a) |
+| `st_best_ei` | double | Dachfläche mit bester Eignung für Solarthermie in m2 (> 1100 kWh/m2a und 5m2 Mindestfläche) |
+| `st_gute_ei` | double | Dachfläche mit guter Eignung für Solarthermie in m2 (800 bis 1100 kWh/m2a und 5m2 Mindestfläche) |
+| `pv_ertrg_j` | int | Möglicher Stromertrag pro Jahr für Dachflächen mit Photovoltaik in kWh |
+| `pv_ertrg_w` | int | Möglicher Stromertrag pro Winterhalbjahr für Dachflächen mit Photovoltaik in kWh |
+| `pv_ertrg_s` | int | Möglicher Stromertrag pro Sommerhalbjahr für Dachflächen mit Photovoltaik in kWh |
+| `f_ertrg_j` | int | Möglicher Stromertrag pro Jahr für Fassadenflächen mit Photovoltaik in kWh |
+| `f_ertrg_w` | int | Möglicher Stromertrag pro Winterhalbjahr für Fassadenflächen mit Photovoltaik in kWh |
+| `f_ertrg_s` | int | Möglicher Stromertrag pro Sommerhalbjahr für Fassadenflächen mit Photovoltaik in kWh |
+| `st_ertrg_j` | int | Möglicher Wärmeertrag pro Jahr für Dachflächen mit Solarthermie in kWh |
+| `st_ertrg_w` | int | Möglicher Wärmeertrag pro Winterhalbjahr für Dachflächen mit Solarthermie in kWh |
+| `st_ertrg_s` | int | Möglicher Wärmeertrag pro Sommerhalbjahr für Dachflächen mit Solarthermie in kWh |
 
 
     ///

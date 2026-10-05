@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100128`
+- **Dataset_identifier** `100128`
 - **Title** `Wohnbevölkerung nach Geschlecht, Alter, Staatsangehörigkeit und Wohnviertel`
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Geschlecht, Alter und Staatsangehörigkeit (Schweiz/Ausland) auf der Ebene Wohnviertel. Die Daten werden jährlich aktualisiert. <br>Die hier veröffentlichten Werte der Jahre 1979 bis 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 1979 auf Auswertungen aus dem Einwohnerregister. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['Alter', 'Bevölkerungsbestand', 'Geschlecht', 'Entwicklung', 'Einwohnerzahl', 'Bevölkerungsstruktur', 'Wohnviertel', 'Staatsangehörigkeit']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | — |
+| `jahr` | text | — |
+| `wohnviertel` | text | — |
+| `wohnviertel_id` | text | — |
+| `gemeinde` | text | — |
+| `geschlecht` | text | M=Männlich, W=Weiblich |
+| `person_alter` | int | Die Angabe des Alters beruht auf dem Geburtsjahr. |
+| `staatsangehoerigkeit` | text | CH=Schweiz, A=Ausland |
+| `value_gender_bfs` | int | — |
+| `name_gender_bfs` | text | — |
+| `value_citizenship_bfs` | int | — |
+| `name_citizenship_bfs` | text | — |
+| `anzahl` | int | Anzahl Personen |
 
 
     ///

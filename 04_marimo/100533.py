@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100533`
+- **Dataset_identifier** `100533`
 - **Title** `Bevölkerungsbefragung (2011): Befragung zu Lebenslage und Zufriedenheit`
 - **Description** `<p>Antworten der kantonalen Bevölkerungsbefragung zu Lebenslage und Zufriedenheit im Kanton Basel-Stadt, wird alle vier Jahre durchgeführt. Dieser Datensatz enthält pro Zeile eine Antwort einer Person zu einer Frage der Befragung. Die Befragung umfasst Themen wie Wohnsituation, Sicherheit, Mobilität, Erwerbs- und finanzielle Lage, Bildung, Zusammenleben, Politik, Digitalisierung sowie Gesundheit.</p><p>  Die Daten können in anderen Formaten als ZIP-Datei hier heruntergeladen werden: <a href="https://data-bs.ch/stata/befragungen/bevoelkerung/2011.zip" target='"_blank"'>https://data-bs.ch/stata/befragungen/bevoelkerung/2011.zip</a></p><p>  Eine Vorschau der Daten, die pro Zeile alle Antworten einer Person enthält, sind hier zu finden: <a href="https://datatools.bs.ch/Bevoelkerungsbefragung_2011" target='"_blank"'>https://datatools.bs.ch/Bevoelkerungsbefragung_2011</a></p><p>  Weitere Informationen zur Befragung sind im Statistikportal abgebildet: <a href='https://statistik.bs.ch/suche?search={"query":"2011","filterTheme":"successor-50.1","filterType":[],"filterDateFrom":null,"filterDateTo":null,"sort":"Relevanz","selectedResult":null}' target='"_blank"'>https://statistik.bs.ch/suche?search={"query":"2011","filterTheme":"successor-50.1","filterType":[],"filterDateFrom":null,"filterDateTo":null,"sort":"Relevanz","selectedResult":null}</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Alter', 'Gemeinden', 'Wohnen', 'Demographie', 'Geschlecht', 'Lebensqualität', 'Einkommen']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/hintergrund/befragungen`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr der Befragung |
+| `id` | int | ID der befragten Person |
+| `fragename` | text | Die Nummer der Frage auf dem Fragebogen |
+| `fragelabel` | text | Gestellte Frage |
+| `fragelabel_fortsetzung` | text | Fortsetzung zur Frage |
+| `fragelabel_anmerkung` | text | Anmerkung zur Frage |
+| `antwort` | text | Gegebene Antwort |
+| `fragespaltenreihenfolge` | int | Reihenfolge der Fragespalten |
+| `antwortreihenfolge` | int | Reihenfolge der Antworten |
 
 
     ///

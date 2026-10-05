@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,21 @@ Auto generated R starter code for data set 100109.
 - **Keywords** `['Corona', 'COVID-19', 'Spital', 'USB', 'Intensivstation', 'ICU', 'Beatmet', 'Coronavirus', 'Krankheit', 'Lungenentzündung']`
 - **Creator** `Bereich Gesundheitsversorgung`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | Datum |
+| `current_hosp` | int | Anzahl in baselstädtischen Spitälern hospitalisierte Personen mit positivem Testresultat auf SARS-CoV-2. |
+| `current_hosp_resident` | int | Anzahl in baselstädtischen Spitälern hospitalisierte Personen mit Wohnsitz im Kanton Basel-Stadt und positivem Testresultat auf SARS-CoV-2. |
+| `current_hosp_non_resident` | int | Anzahl in baselstädtischen Spitälern hospitalisierte Personen mit ausserkantonalem oder internationalem Wohnsitz und positivem Testresultat auf SARS-CoV-2. |
+| `current_icu` | int | Anzahl auf Intensivpflegestationen in baselstädtischen Spitälern hospitalisierten Personen mit positivem Testresultat auf SARS-CoV-2. |
+| `imcu` | double | Anzahl auf intermediate care-Stationen in baselstädtischen Spitälern hospitalisierte Personen mit positivem Testresultat auf SARS-CoV-2. |
+| `normalstation` | double | Anzahl auf Normalstationen in baselstädtischen Spitälern hospitalisierte Personen mit positivem Testresultat auf SARS-CoV-2. |
+| `data_from_all_hosp` | text | True: Daten aller Spitäler sind für den entsprechenden Tag erfasst. False: Daten mindestens eines Spitals fehlen für den entsprechenden Tag. |
+| `data_plausible` | text | True: Analyse der Daten hat keine Auffälligkeiten ergeben. False: Daten auffällig, sollten genau kontrolliert werden vor dem Gebrauch. |
 
 
 # Load packages

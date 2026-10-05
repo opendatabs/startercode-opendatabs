@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100274`
+- **Dataset_identifier** `100274`
 - **Title** `Überwachung Luftqualität Transformation Areal Rosental: Staubgebundene Schadstoffe`
 - **Description** `<p>Bedingt durch die frühere Nutzung des Rosental Areals – auch bekannt als die Wiege der Basler Chemie - ist der Untergrund mit Schadstoffen belastet. Während der Tiefbauarbeiten im Rahmen der «Transformation <a href="https://rosentalmitte.ch/" target="_blank">Rosental Mitte</a>» überwacht das <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene" target="_blank">Lufthygieneamt beider Basel (LHA)</a> die Immissionen mittels Messungen der Luft <a href="https://data.bs.ch/pages/rosental-dashboard/" target="_blank">(Dashboard)</a>. </p><p>Änderungsprotokoll:<br>23.4.2024: Die Messstation ROSEN 3 wurde verschoben. Alte geografische Breiten- und Längengrade 47.567827676637364, 7.603804744961502. Neue Breiten- und Lägengrade 47.567997530870265, 7.60479830196066.<br></p><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,37 @@ def _(mo):
 - **Keywords** `['Luftqualität']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `messbeginn` | date | Beginn der Messung |
+| `messende` | date | Ende der Messung |
+| `standort` | text | Name des Standorts |
+| `parameter` | text | Gemessener Stoff |
+| `messwert` | text | Gemessener Wert |
+| `messwert_zahlenformat` | double | Gemessener Wert bis auf 3 Dezimalstellen |
+| `3_dezimalstellen_messwert` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
+| `4_dezimalstellen_messwert` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
+| `5_dezimalstellen_messwert` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
+| `interventionswert` | double | Interventionswert |
+| `interventionswert_3_dez` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
+| `warnwert` | double | Warnwert |
+| `warnwert_3_dez` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
+| `einheit` | text | Einheit, in welcher der Wert gemessen wird |
+| `messmethode` | text | Messmethode |
 
 
     ///

@@ -54,7 +54,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100042`
+- **Dataset_identifier** `100042`
 - **Title** `Statistische Raumeinheiten: Wohnviertel`
 - **Description** `<p>Zum Kanton Basel-Stadt zählen die Stadt Basel und die Gemeinden Riehen und Bettingen. Die Stadt Basel ist in 19 statistische Wohnviertel gegliedert. Diese statistische Raumeinteilungen existiert seit über 100 Jahren unverändert und erlaubt somit kleinräumige Längsschnittanalysen des Kantons Basel-Stadt.</p>
 <p>Statistische Nummerierung:<br>Im Gegensatz zum amtlichen Gemeindeverzeichnis der Schweiz wird für räumliche Auswertungen auf Gemeinde-Ebene auf die Nummerierung der Wohnviertel zurückgegriffen:<br>- Die Stadt Basel (BFS-Code 2701) hat keine eigene Identifikationsnummer. Auswertungen beruhen auf einem Zusammenzug der 19 Wohnviertel, die von 01 bis 19 nummeriert sind.<br>- Die Gemeinde Bettingen (BFS-Code 2702) hat die Wohnviertel-Nr. 20.<br>- Die Gemeinde Riehen (BFS-Code 2703) hat die Wohnviertel-Nr. 30.</p>`
@@ -68,6 +68,28 @@ def _(mo):
 - **Keywords** `['Wohnbezirk', 'Wohnblock', 'Wohnblockseite', 'Wohnviertel', 'Statistik', 'Einteilung', 'Quartier']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
+| `wov_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `wov_label` | text | Nummerierung (Label) der statistischen Raumeinheit |
+| `wov_name` | text | Name des Wohnviertels |
+| `gemeinde_name` | text | Offizielle Bezeichnung der Gemeinde |
 
 
     ///

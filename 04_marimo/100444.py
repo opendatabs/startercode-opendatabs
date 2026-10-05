@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100444`
+- **Dataset_identifier** `100444`
 - **Title** `Registrierte Hunde nach Postleitzahl und verschiedenen Merkmalen seit 2008`
 - **Description** `Dieser Datensatz enthält Informationen zu registrierten Hunden in der Stadt Basel (Kanton Basel-Stadt) ab dem Jahr 2008. Er umfasst eine Auswahl an Merkmalen pro Tier, darunter Geschlecht, Geburtsjahr, Fellfarbe und Rasse. Die Daten stammen vom Kantonalen Veterinäramt Basel-Stadt und beruhen auf Angaben der Hundebesitzer. Einzelne Angaben sind nicht behördlich überprüft und können unvollständig oder fehlerhaft sein.<br>Eine Sammlung aller OGD-Datensätze über Hunde finden Sie hier: <a href="https://data.bs.ch/explore/?refine.tags=hund">https://data.bs.ch/explore/?refine.tags=hund</a><br>Weitere Informationen zu Tierbeständen im Kanton Basel-Stadt findet man im Statistikportal:<a href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}'>href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}</a>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Alter', 'Geschlecht', 'Freizeit', 'Tiere', 'Hund']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | text | — |
+| `jahr` | text | Jahr der Erfassung |
+| `postleitzahl` | text | Postleitzahl |
+| `gemeinde_name` | text | Gemeindename des Hundes |
+| `hund_geschlecht` | text | Geschlecht des Hundes |
+| `hund_geburtsjahr` | text | Geburtsjahr des Hundes |
+| `hund_alter` | int | Das Alter, das der Hund im Jahr erreichen wird oder bereits erreicht hat |
+| `hund_rasse` | text | Rasse des Hundes |
+| `hund_farbe` | text | Fellfarbe des Hundes |
 
 
     ///

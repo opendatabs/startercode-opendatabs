@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100006`
+- **Dataset_identifier** `100006`
 - **Title** `Verkehrszähldaten motorisierter Individualverkehr`
 - **Description** `<p>Resultate der Messungen der Dauerzählstellen und Kurzzeitzählstellen für den Motorisierten Individualverkehr. </p><p>Aus Kostengründen sind nur die Werte des aktuellen Jahres und der letzten zwei Jahre als Tabelle / Visualisierung sichtbar bzw. via API abgreifbar. </p><p>Die Zählstellen, die zwischen allen Fahrzeugklassen unterscheiden können, ab dem Jahr 2014 können hier heruntergeladen werden: </p><ul><li><a href="https://data-bs.ch/mobilitaet/converted_MIV_Class_10_1.csv">Leicht aufbereiteter Datensatz: https://data-bs.ch/mobilitaet/converted_MIV_Class_10_1.csv</a> </li><li><a href="https://data-bs.ch/mobilitaet/MIV_Class_10_1.csv">Rohdaten: https://data-bs.ch/mobilitaet/MIV_Class_10_1.csv</a></li></ul><p>Die vollständigen Daten der Zählstellen, die mit FLIR (Forward Looking Infrared) messen und zwischen sechs Fahrzeugklassen unterscheiden können, können hier heruntergeladen werden:</p><ul><li><a href="https://data-bs.ch/mobilitaet/converted_FLIR_KtBS_MIV6.csv">Leicht aufbereiteter Datensatz: https://data-bs.ch/mobilitaet/converted_FLIR_KtBS_MIV6.csv</a></li><li><a href="https://data-bs.ch/mobilitaet/FLIR_KtBS_MIV6.csv">Rohdaten: https://data-bs.ch/mobilitaet/FLIR_KtBS_MIV6.csv</a></li></ul><p>Für die Lichtsignalanlagen (LSA) können die vollständigen Daten hier heruntergeladen werden:</p><ul><li><a href="https://data-bs.ch/mobilitaet/converted_MIV_LSA_Count.csv">Leicht aufbereiteter Datensatz: https://data-bs.ch/mobilitaet/converted_MIV_LSA_Count.csv</a></li><li><a href="https://data-bs.ch/mobilitaet/MIV_LSA_Count.csv">Rohdaten: https://data-bs.ch/mobilitaet/MIV_LSA_Count.csv</a></li></ul><p>Die Daten einzelner Jahre ab dem Jahr 2014 können unter der URL mit dem Muster https://data-bs.ch/mobilitaet/[JAHR]_MIV_Class_10_1.csv heruntergeladen werden, also zum Beispiel für das Jahr 2020 hier: https://data-bs.ch/mobilitaet/2020_MIV_Class_10_1.csv.<br>Für FLIR-Zähldaten muss folgendes Muster verwendet werden: https://data-bs.ch/mobilitaet/[JAHR]_FLIR_KtBS_MIV6.csv. <br>Für LSA-Zähldaten muss folgendes Muster verwendet werden: https://data-bs.ch/mobilitaet/[JAHR]_MIV_LSA_Count.csv.</p><p>Die Zählstellen sind auf MET eingestellt (Spalten TimeFrom und TimeTo), d.h. die Zeitumstellung wird wie in Mitteleuropa ausgeführt. Bei der Umstellung von Winter- auf Sommerzeit fehlt die Stunde der Umstellung, dieser Tag hat dann 23 Stunden. Bei der Umstellung von Sommer- auf Winterzeit ist eine Stunde zu viel enthalten (der Tag hat dann 25 Stunden), die Stunde der Umstellung ist dann doppelt, aber mit unterschiedlichen Verkehrsdaten (da die gleiche Stunde zweimal durchlaufen wird).</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2026-10-03T02:01:00+00:00`
+- **Modified** `2026-10-05T07:43:48+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-12-30T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-09-29T22:00:00+00:00`
@@ -66,6 +66,56 @@ def _(mo):
 - **Keywords** `['Autos', 'Motorräder', 'Busse', 'Lieferwagen', 'Lastwagen', 'Anhänger', 'Verkehr', 'Verkehrszählung', 'Erhebung']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `zst_nr` | int | Zählstellennummer als Text |
+| `zst_id` | int | Zählstellennummer in numerischer Form |
+| `sitecode` | text | Zählstellencode |
+| `sitename` | text | Zählstellenname |
+| `datetimefrom` | datetime | Datum und Uhrzeit Messbeginn (in UTC) |
+| `datetimeto` | datetime | Datum und Uhrzeit Messende (in UTC) |
+| `directionname` | text | Richtung/Strassenseite |
+| `lanecode` | int | Spurnummer |
+| `lanename` | text | Spurname |
+| `valuesapproved` | int | Daten validiert (1 ja, 0 nein) [Validierte Verkehrszahlen sind kontrollierte und ergänzte Rohdaten. Fehlwerte werden dann ergänzt, wenn sie aufgrund von technischen Problemen entstanden sind.] |
+| `valuesedited` | int | Ersatzwerte (1 ja, 0 nein) [Fehlwerte werden dann ergänzt, wenn sie aufgrund von technischen Problemen entstanden sind.] |
+| `traffictype` | text | Verkehrsmittel (MIV = motorisierter Individualverkehr) |
+| `total` | int | Anzahl Fahrzeuge |
+| `mr` | int | Motorrad |
+| `pw` | int | Personenwagen |
+| `pw0` | int | Personenwagen mit Anhänger |
+| `lief` | int | Lieferwagen |
+| `lief0` | int | Lieferwagen mit Anhänger |
+| `lief_aufl` | int | Lieferwagen mit Auflieger |
+| `lw` | int | Lastwagen |
+| `lw0` | int | Lastwagen mit Anhänger |
+| `sattelzug` | int | — |
+| `bus` | int | — |
+| `andere` | int | nicht klassifizierbare Fahrzeuge |
+| `year` | text | Jahr |
+| `month` | int | Monat (1=Januar, 12=Dezember) |
+| `day` | int | Tag |
+| `weekday` | int | Wochentag (0=Montag, 6=Sonntag) |
+| `hourfrom` | int | Stunde des Messbeginns |
+| `date` | text | Datum der Messung als Text |
+| `timefrom` | text | Zeit Messbeginn als Text |
+| `timeto` | text | Zeit Messende als Text |
+| `dayofyear` | int | Nummer des Tages innerhalb des aktuellen Jahres |
+| `geo_point_2d` | geo_point_2d | Standort der Zählstelle |
 
 
     ///

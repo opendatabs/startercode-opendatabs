@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -32,6 +32,16 @@ COVID-19:</p>
 - **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Lungenentzündung', 'Pandemie', 'Corona']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `test_datum` | date | Datum, an dem das Testresultat vorlag |
+| `pers_alter` | text | 10-Jahresklassen, wobei die letzte Altersklasse gegen oben offen ist |
+| `geschlecht` | text | F = weiblich, M = männlich |
+| `anzahl` | int | Anzahl Personen in der jeweilige Subgruppe |
 
 
 # Load packages

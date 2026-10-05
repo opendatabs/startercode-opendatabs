@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100241`
+- **Dataset_identifier** `100241`
 - **Title** `Veloabstellplätze`
 - **Description** `<p>Der Datensatz beinhaltet alle Veloabstellplätze auf öffentlichem Grund, die grossen Abstellanlagen bei den Bahnhöfen, Velostationen, Bike+Ride-Anlagen und Cargovelo-Plätze. Die Punkte befinden sich in der Mitte der Parkfelder.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,37 @@ def _(mo):
 - **Keywords** `['Abstellplatz', 'Fahrrad', 'Fahrradabstellplatz', 'Velo']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktkoordinaten des jeweiligen Veloabstellplatzes in LV95 (Punkte sind in der Mitte der Parkfelder platziert). |
+| `geo_shape` | geo_shape | — |
+| `id_veloabstellplatz` | int | Eindeutige Identifikationsnummer des Veloabstellplatzes. |
+| `stationstyp` | text | Art des Veloabstellplatzes bzw. der Abstellanlage. |
+| `strasse` | text | Mit diesem Merkmal wird die Strassenbezeichnung in offizieller Schreibweise der Gemeinde erfasst.; Gemäss der Verordnung über die geografischen Namen fällt die Benennung der Strassen in den Zuständigkeitsbereich der Gemeinden.; Die Strassennamen müssen grundsätzlich den Empfehlungen "Gebäudeadressierung und Schreibweise von Strassennamen für die deutschsprachige Schweiz", herausgegeben vom Bundesamt für Landestopographie, folgen.; Bei einigen allein stehenden Gebäuden (landwirtschaftliche Gebäude, Berghütten usw.) kann die Gebäudeadresse nicht mit einer Strasse in Verbindung gebracht werden.; In diesem Fall kann der Strassenname durch den Namen eines benannten Gebiets ersetzt werden. |
+| `tarif` | text | Tarif für die Benutzung des Abstellplatzes. |
+| `anzahl_velos` | int | Anzahl Stellplätze für Velos/Motorräder. |
+| `anschliessbar` | text | Gibt an, ob Velos am Abstellplatz angeschlossen werden können bzw. ob eine Vorrichtung für die Anschliessung vorhanden ist. |
+| `gedeckt` | text | Gibt an, ob der Abstellplatz überdacht ist. (ja, nein oder k.A.) |
+| `zugaenglichkeit` | text | Beschreibt die Zugänglichkeit des Veloabstellplatzes. |
+| `infos` | text | Zusätzliche Informationen oder Hinweise zum Abstellplatz. |
+| `platz_cargovelos` | text | Gibt an, ob Stellplätze für Cargovelos vorhanden sind. (ja, nein oder k.A.) |
+| `bike_ride` | boolean | Kennzeichnet die Zugehörigkeit zu einer Bike-&-Ride-Anlage. |
+| `ort` | text | Bezeichnung der Ortschaft. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

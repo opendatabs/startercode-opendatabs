@@ -58,7 +58,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100419`
+- **Dataset_identifier** `100419`
 - **Title** `Veranstaltungen im Raum St. Jakob`
 - **Description** `<p class="MsoNormal">Dieser Datensatz enthält Veranstaltungen im Raum St. Jakob
 mit höherer Besucherfrequenz. Er erfasst Events wie Sportveranstaltungen,
@@ -68,7 +68,7 @@ und Verkehrsmassnahmen enthalten. Der Datensatz ist eine wichtige
 Datengrundlage für die Planungsstellen in den Kantonen BS und BL.<o:p></o:p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-12-04`
-- **Modified** `2026-10-01T05:50:27+00:00`
+- **Modified** `2026-10-05T08:40:28+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -76,6 +76,34 @@ Datengrundlage für die Planungsstellen in den Kantonen BS und BL.<o:p></o:p></p
 - **Keywords** `['St. Jakob', 'Gartenbad', 'Arena', 'Parken', 'St. Jakobshalle', 'St. Jakob-Park', 'St. Jakob-Arena', 'Sportanlage', 'Sperrung', 'Parkplätze', 'Verkehrsplanung']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | text | Eindeutiger Identifikator des Events |
+| `name` | text | Name des Events |
+| `link` | text | — |
+| `ort` | text | Gebäude des Events |
+| `datum` | date | Datum |
+| `start` | text | Start Uhrzeit |
+| `ende` | text | Ende Uhrzeit |
+| `sperrung` | text | Ist eine Sperrung nötig? |
+| `zusatzpp` | boolean | Werden zusätzliche Parkplätze angeboten? |
+| `ticketintegration` | boolean | — |
+| `bemerkung` | text | — |
+| `info_text_html` | text | Informationstext als HTML |
 
 
     ///

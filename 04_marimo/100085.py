@@ -54,7 +54,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100085`
+- **Dataset_identifier** `100085`
 - **Title** `Coronavirus (COVID-19): Ergänzte Fallzahlen ganze Schweiz`
 - **Description** `<p>Dieser Datensatz bildet die Grundlage des Covid-19 Dashboards (<a href="https://data.bs.ch/pages/covid-19-dashboard/" target="_blank">https://data.bs.ch/pages/covid-19-dashboard/</a>). Bitte verwenden Sie für Ihre Analysen nicht den vorliegenden Datensatz, sondern diesen: <a href="https://data.bs.ch/explore/dataset/100077/" target="_blank">https://data.bs.ch/explore/dataset/100077/</a>.</p>
 <p>Zum Zweck der einfachen Visualisierung wurden Tage ohne gemeldete Fallzahlen mit den letzten gemeldeten Fallzahlen des entsprechenden Kantons aufgefüllt.</p><p><b>Hinweis:<br></b>Da seit dem 6. Mai 2024 keine Fallzahlen mehr von den Kantonen geliefert werden, wird dieser Datensatz nicht mehr aktualisiert.</p>`
@@ -68,6 +68,35 @@ def _(mo):
 - **Keywords** `['COVID-19', 'Coronavirus', 'Corona', 'Krankheit', 'Lungenentzündung']`
 - **Creator** `Open Data Basel-Stadt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | — |
+| `abbreviation_canton_and_fl` | text | — |
+| `ncumul_conf` | int | Anzahl bestätigte Infektionen mit dem SARS-CoV-2 Virus |
+| `current_hosp` | int | Anzahl Personen mit COVID-19 Erkrankung, welche in einem Spital behandelt werden |
+| `current_icu` | int | Anzahl Personen mit COVID-19 Erkrankung, welche in der Intensivstation eines Spitals behandelt werden |
+| `ncumul_released` | int | Anzahl Personen, die eine COVID-19-Erkrankung überstanden haben insgesamt (kumuliert) |
+| `ncumul_deceased` | int | Anzahl mit SARS-CoV-2 infizierte Verstorbene |
+| `current_isolated` | int | Mit dem neuen Coronavirus infizierte Personen, welche ausserhalb des Spitals isoliert sind |
+| `current_quarantined` | int | Personen, welche in engem Kontakt zu einem Infizierten Fall waren und sich deshalb in Quarantäne befinden |
+| `current_quarantined_riskareatravel` | int | — |
+| `ndiff_conf` | int | Neu gemeldete Fälle gegenüber der letzten Meldung (i.d.R. gegenüber dem Vortag) |
+| `ndiff_released` | int | Neu gemeldete Genesene gegenüber der letzten Meldung (i.d.R. gegenüber dem Vortag) |
+| `ndiff_deceased` | int | Neu gemeldete Gestorbene gegenüber der letzten Meldung (i.d.R. gegenüber dem Vortag) |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr un
 </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-09-21`
-- **Modified** `2026-10-04T04:02:09+00:00`
+- **Modified** `2026-10-05T04:02:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-01-01T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-09-20T22:00:00+00:00`
@@ -28,6 +28,35 @@ Hinweis: Die Messungen sind nicht zwingend repräsentativ für das ganze Jahr un
 - **Keywords** `['Verkehrszählung', 'Verkehr', 'Statistik', 'Durchschnitt', 'Tagesverkehr', 'Belästigung', 'Auslastung', 'DTV']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `messung_id` | int | Laufnummer der Messung; eine Messung beinhaltet alle Fahrten eines Messgeräts an einem Standort |
+| `strasse` | text | Name der Strasse, an welcher ein Messgerät ausgebracht wurde |
+| `strasse_nr` | text | Hausnummer, bei welcher ein Messgerät ausgebracht wurde |
+| `ort` | text | Gemeinde am Standort einer Messung |
+| `the_geom` | geo_shape | Koordinaten |
+| `extraordinary_traffic_routing` | text | Messung während ausserordentlicher Verkehrsführung |
+| `min_timestamp` | datetime | Anfangszeit der Messung |
+| `max_timestamp` | datetime | Endzeit der Messung |
+| `messdauer_h` | double | Messdauer in Stunden |
+| `richtung_id` | int | ID der Richtung; In einer Messung werden i.d.R. Fahrten in zwei Richtungen gemessen. |
+| `richtung` | text | Fahrtrichtung |
+| `count` | int | Anzahl gemessene Fahrzeuge |
+| `count_lt_3_5m` | int | Anzahl Fahrzeuge der Längenklasse bis 3.5 m |
+| `count_3_5_to_lt_8m` | int | Anzahl Fahrzeuge der Längenklasse zwischen 3.5 m und 8 m |
+| `count_gte_8m` | int | Anzahl Fahrzeuge der Längenklasse 8 m oder grösser |
+| `dtv` | double | Durchschnittlicher Tagesverkehr im Erhebungszeitraum |
+| `dtv_lt_3_5m` | double | Durchschnittlicher Tagesverkehr im Erhebungszeitraum der Fahrzeuge der Längenklasse bis 3.5 m |
+| `dtv_3_5_to_lt_8m` | double | Durchschnittlicher Tagesverkehr im Erhebungszeitraum der Fahrzeuge der Längenklasse zwischen 3.5 m und 8 m |
+| `dtv_gte_8m` | double | Durchschnittlicher Tagesverkehr im Erhebungszeitraum der Fahrzeuge der Längenklasse über 8 m |
+| `link_zu_einzelmessungen` | text | Link zu den Einzelmessungen |
+| `min_timestamp_text` | text | Anfangszeit der Messung im Textformat |
+| `max_timestamp_text` | text | Endzeit der Messung im Textformat |
+| `geo_point_2d` | geo_point_2d | geographische Koordinaten |
 
 
 # Load packages

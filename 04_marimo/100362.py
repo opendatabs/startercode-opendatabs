@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100362`
+- **Dataset_identifier** `100362`
 - **Title** `Sauberkeitsindex pro Quartal und Wohnviertel`
 - **Description** `<p>Dieser Datensatz enthält den Sauberkeitsindex für alle Wohnviertel in der Stadt Basel. Zur Berechnung des Sauberkeitsindex wird wie folgt vorgegangen:</p><p>Auf den Kehrrichtfahrzeugen sind Kameras installiert, die während der Einsätze Videoaufnahmen der Strassen machen. Ein Computer durchsucht anschliessend diese Videoaufnahmen nach Abfällen. Dieser sortiert die Abfälle in verschiedene Abfallkategorien (Zigarettenstummel, Papier, PET-Flaschen etc.) und zählt die Anzahl der gefundenen Abfälle jeder Kategorie. Zusätzlich wird für jede Abfallkategorie der Verschmutzungsgrad und der Störfaktor bestimmt. Daraus wird der Sauberkeitsindex berechnet. Danach werden die Videoaufnahmen aus Datenschutzgründen umgehend gelöscht.</p><p>Der Sauberkeitsindex wird auf einer Skala von 0 bis 5 angegeben, wobei die Werte folgendermassen beurteilt werden:<br>Kleiner als 3: schlecht<br>Zwischen 3 und 4: mittel<br>Grösser als 4: gut<br>Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für die gesamte Stadt von mindestens 4.5.</p><p>Der Datensatz wird quartalsweise mit den Daten des Vorquartals aktualisiert.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Sauberkeit', 'Kehrricht', 'Abfall', 'Reinigung', 'Stadtreinigung', 'Strassennetz', 'Stadthygiene', 'Verschmutzung', 'Müll']`
 - **Creator** `Stadtreinigung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wohnviertel` | text | — |
+| `ski` | double | — |
+| `quartal` | text | — |
+| `jahr` | text | — |
+| `quartalsnummer` | text | — |
+| `quartal_beginn` | date | — |
+| `quartal_ende` | date | — |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
 
 
     ///

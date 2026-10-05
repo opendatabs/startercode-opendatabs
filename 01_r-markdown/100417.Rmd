@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,25 @@ Auto generated R starter code for data set 100417.
 - **Keywords** `['Musik', 'Fragen', 'ESC']`
 - **Creator** `Aussenbeziehungen und Standortmarketing`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `ranking` | int | Gibt die Reihenfolge der Fragen in der FAQ-Liste an. |
+| `frage` | text | Enthält die gestellte Frage zum ESC. |
+| `antwort` | text | Enthält die vollständige Antwort auf die gestellte Frage. |
+| `sprache` | text | Gibt die Sprache der Frage und Antwort an (z. B. Deutsch). |
+| `verantwortung` | text | Zeigt an, welche Organisation oder Institution für die bereitgestellte Information verantwortlich ist. |
+| `kontakt` | text | Enthält eine Kontaktadresse oder E-Mail zur weiteren Klärung von Fragen. |
+| `link` | text | Enthält eine URL zu weiterführenden Informationen. |
+| `link_anzeigetext` | text | Enthält den Anzeigetext der URL |
+| `zuletzt_aktualisiert` | date | Datum der letzten Aktualisierung der Frage und Antwort. |
+| `thema` | text | Gibt das übergeordnete Thema an, zu dem die Frage gehört (z. B. "Tickets"). |
+| `keywords` | text | Enthält relevante Schlagworte zur besseren Kategorisierung und Suche der FAQ-Einträge. |
+| `antwort_html` | text | Enthält die Antwort in HTML-Format, um eine strukturierte und formatierte Darstellung zu ermöglichen. |
+| `veranstaltungsort` | text | — |
 
 
 # Load packages

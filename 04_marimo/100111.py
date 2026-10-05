@@ -56,7 +56,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100111`
+- **Dataset_identifier** `100111`
 - **Title** `Coronavirus (COVID-19): In Basel-Stadt verabreichte Impfungen`
 - **Description** `<p>Der Datensatz zeigt die Anzahl im Kanton Basel-Stadt gegen SARS-CoV-2 geimpfter Personen auf täglicher Basis. Zusätzlich wird angegeben, wie viele Personen im kantonalen Impfzentrum geimpft wurden und wie viele Impfungen durch baselstädtische Spitäler an ihr Gesundheitspersonal verabreicht wurden. Ebenso sind die Impfungen in Arzpraxen und Apotheken separat aufgeführt. Impfungen im Impfbus werden nicht separat ausgewiesen, sondern sind in der Anzahl im Impfzentrum verabreichten Impfungen integriert. Weiter finden Sie Angaben darüber, wie viele Personen mit einer ersten resp. einer zweiten Dosis geimpft wurden.  </p><p>Die im Kanton Basel-Stadt geimpften Personen müssen nicht zwingend im Kanton Basel-Stadt wohnen. Angaben zu den geimpften Personen mit Wohnsitz im Kanton Basel-Stadt finden Sie in diesem Datensatz: <a href="https://data.bs.ch/explore/dataset/100135/" target="_blank">https://data.bs.ch/explore/dataset/100135/</a></p><p>Die an dieser Stelle publizierten Zahlen können von jenen Zahlen abweichen, welche über Kanäle von Bundesstellen für den Kanton Basel-Stadt publiziert sind. Begründen lassen sich die Differenzen mit unterschiedlichen Aktualisierungszyklen. Es wird ab Montag, 10.5.2021 dieselbe Quelle (Vaccination Monitoring Data Lake, VMDL BAG) verwendet. </p><p>Leider können aufgrund der Quellenänderung die Impfungen der mobilen Equipen nicht mehr separat ausgewiesen werden. Sie werden zu den im Impfzentrum verabreichten Impfungen hinzugezählt. Da die VMDL-Werte auch rückwirkend übernommen werden, kommt es zu Abweichungen bei den täglich publizierten Werten gegenüber früher in diesem Datensatz veröffentlichten Werten. </p>
 <p>
@@ -72,6 +72,59 @@ Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial 
 - **Keywords** `['Corona', 'impfen', 'Prophylaxe', 'Vakzin', 'COVID-19', 'Coronavirus', 'Krankheit', 'Lungenentzündung']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Datum |
+| `total_verabreichte_impfungen` | int | Total bis dato im Kanton Basel-Stadt gegen SARS-CoV-2 verabreichte Impfungen |
+| `total_personen_mit_erster_dosis` | int | Total Personen, welche bis dato im Kanton Basel-Stadt mit mindestens einer Dosis gegen SARS-CoV-2 geimpft wurden |
+| `total_personen_mit_ausschliesslich_erster_dosis` | int | Total Personen, welche bis dato im Kanton Basel-Stadt ausschliesslich mit erster Dosis gegen SARS-CoV-2 geimpft wurden |
+| `total_personen_mit_zweiter_dosis` | int | Total Personen, welche im Kanton Basel-Stadt bis dato mit zweiter Dosis gegen SARS-CoV-2 geimpft wurden |
+| `total_personen_mit_dritter_dosis` | int | Total Personen, welche im Kanton Basel-Stadt bis dato mit dritter Dosis gegen SARS-CoV-2 geimpft wurden |
+| `total_personen_mit_vierter_dosis` | int | Total Personen, welche im Kanton Basel-Stadt bis dato mit vierter Dosis gegen SARS-CoV-2 geimpft wurden |
+| `total_personen_mit_fuenfter_dosis` | int | Total Personen, welche im Kanton Basel-Stadt bis dato mit fünfter Dosis gegen SARS-CoV-2 geimpft wurden |
+| `im_impfzentrum_verabreichte_impfungen_pro_tag` | int | Anzahl im kantonalen Impfzentrum gegen SARS-CoV-2 verabreichte Impfungen pro Tag |
+| `im_impfzentrum_mit_erster_dosis_geimpfte_personen_pro_tag` | int | Anzahl im kantonalen Impfzentrum mit erster Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `im_impfzentrum_mit_zweiter_dosis_geimpfte_personen_pro_tag` | int | Anzahl im kantonalen Impfzentrum mit zweiter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `im_impfzentrum_mit_dritter_dosis_geimpfte_personen_pro_tag` | int | Anzahl im kantonalen Impfzentrum mit dritter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `im_impfzentrum_mit_vierter_dosis_geimpfte_personen_pro_tag` | int | Anzahl im kantonalen Impfzentrum mit vierter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `im_impfzentrum_mit_fuenfter_dosis_geimpfte_personen_pro_tag` | int | Anzahl im kantonalen Impfzentrum mit fünfter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `in_aph_verabreichte_impfungen_pro_tag` | int | Anzahl durch die mobilen Impfequipen gegen SARS-CoV-2 verabreichte Impfungen pro Tag (Alters-, Pflegeheime und weitere Institutionen) |
+| `im_aph_mit_erster_dosis_geimpfte_personen_pro_tag` | int | Anzahl durch die mobilen Impfequipen mit erster Dosis gegen SARS-CoV-2 geimpfte Personen pro Tag (Alters-, Pflegeheime und weitere Institutionen) |
+| `im_aph_mit_zweiter_dosis_geimpfte_personen_pro_tag` | int | Anzahl durch die mobilen Impfequipen mit zweiter Dosis gegen SARS-CoV-2 geimpfte Personen pro Tag (Alters-, Pflegeheime und weitere Institutionen) |
+| `im_aph_mit_dritter_dosis_geimpfte_personen_pro_tag` | int | Anzahl durch die mobilen Impfequipen mit dritter Dosis gegen SARS-CoV-2 geimpfte Personen pro Tag (Alters-, Pflegeheime und weitere Institutionen) |
+| `im_aph_mit_vierter_dosis_geimpfte_personen_pro_tag` | int | Anzahl durch die mobilen Impfequipen mit vierter Dosis gegen SARS-CoV-2 geimpfte Personen pro Tag (Alters-, Pflegeheime und weitere Institutionen) |
+| `im_aph_mit_fuenfter_dosis_geimpfte_personen_pro_tag` | int | Anzahl durch die mobilen Impfequipen mit fünfter Dosis gegen SARS-CoV-2 geimpfte Personen pro Tag (Alters-, Pflegeheime und weitere Institutionen) |
+| `total_verabreichte_impfungen_pro_tag` | int | Total im Kanton Basel-Stadt gegen SARS-CoV-2 verabreichte Impfungen pro Tag |
+| `im_spital_verabreichte_impfungen_pro_tag` | int | Anzahl in kantonalen Spitälern gegen SARS-CoV-2 verabreichte Impfungen pro Tag |
+| `im_spital_mit_erster_dosis_geimpfte_personen_pro_tag` | int | Anzahl in kantonalen Spitälern mit erster Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `im_spital_mit_zweiter_dosis_geimpfte_personen_pro_tag` | int | Anzahl in kantonalen Spitälern mit zweiter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `im_spital_mit_dritter_dosis_geimpfte_personen_pro_tag` | int | Anzahl in kantonalen Spitälern mit dritter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `im_spital_mit_vierter_dosis_geimpfte_personen_pro_tag` | int | Anzahl in kantonalen Spitälern mit vierter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `im_spital_mit_fuenfter_dosis_geimpfte_personen_pro_tag` | int | Anzahl in kantonalen Spitälern mit fünfter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `anderswo_verabreichte_impfungen_pro_tag` | int | Anzahl in anderen kantonalen Institutionen (Arztpraxen, Apotheken, etc.) gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `anderswo_mit_erster_dosis_geimpfte_personen_pro_tag` | int | Anzahl in anderen kantonalen Institutionen (Arztpraxen, Apotheken, etc.) mit erster Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `anderswo_mit_zweiter_dosis_geimpfte_personen_pro_tag` | int | Anzahl in anderen kantonalen Institutionen (Arztpraxen, Apotheken, etc.) mit zweiter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `anderswo_mit_dritter_dosis_geimpfte_personen_pro_tag` | int | Anzahl in anderen kantonalen Institutionen (Arztpraxen, Apotheken, etc.) mit dritter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `anderswo_mit_vierter_dosis_geimpfte_personen_pro_tag` | int | Anzahl in anderen kantonalen Institutionen (Arztpraxen, Apotheken, etc.) mit vierter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `anderswo_mit_fuenfter_dosis_geimpfte_personen_pro_tag` | int | Anzahl in anderen kantonalen Institutionen (Arztpraxen, Apotheken, etc.) mit fünfter Dosis gegen SARS-CoV-2 geimpfter Personen pro Tag |
+| `total_auffrischimpfungen` | int | Total der im Rahmen der Auffrischimpfung (Booster) verabreichte Impfungen |
+| `auffrischimpfungen_pro_tag` | int | Anzahl der im Rahmen der Auffrischimpfung (Booster) verabreichte Impfungen an einem Tag |
+| `total_drittimpfungen_u_m_grundimmunisierung` | int | Total der im Rahmen der Grundimmunisierung mit dritter (oder mehr) Dosis verabreichten Impfungen |
+| `drittimpfungen_u_m_grundimmunisierung_pro_tag` | int | Anzahl der im Rahmen der Grundimmunisierung mit dritter (oder mehr) Dosis verabreichten Impfungen |
 
 
     ///

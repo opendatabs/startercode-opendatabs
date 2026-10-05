@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100153`
+- **Dataset_identifier** `100153`
 - **Title** `Coronavirus (COVID-19): Massentests an Schulen der Sekundarstufe II`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der SARS-CoV-2-Tests, welche an Schüler:innen und Lehrpersonen in baselstädtischen Schulen der Sekundarstufe II durchgeführt wurden. An dieser Schulstufe werden Einzeltests durchgeführt. Weitere Informationen zum Coronavirus in Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p><p>Dieser Datensatz wird seit Ende Februar 2022 nicht mehr aktualisiert. Seit Mitte März 2022 werden die Daten zu Tests in Basler Schulen in einem neuen Datensatz veröffentlich: <a href="https://data.bs.ch/explore/dataset/100183/" target="_blank">https://data.bs.ch/explore/dataset/100183/</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,29 @@ def _(mo):
 - **Keywords** `['SARS-CoV-2', 'Virus', 'Corona', 'Coronavirus', 'COVID-19', 'Test', 'PCR', 'Schule', 'Schüler', 'Schülerin', 'Lehrer', 'Lehrerin']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `firstdayofweek` | date | Datum des Montags der Woche |
+| `weekofyear` | text | Nr. der Woche im Jahr |
+| `result` | text | Zeigt an, ob ein SARS-CoV-2-Test positiv oder negativ ausgefallen ist |
+| `count` | int | Anzahl positiv resp. negativ getesteter Schülerinnen, Schüler und Lehrpersonen pro Woche |
+| `counttotal` | int | Anzahl getesteter Schülerinnen, Schüler und Lehrpersonen pro Woche |
+| `positivityratepercent` | double | Zeigt den Prozentsatz der Tests, die positiv auf SARS-CoV-2 getestet wurden |
+| `schoolcount` | int | Anzahl Schulen der Sekundarstufe II, deren Schülerinnen, Schüler und Lehrpersonen getestet wurden |
 
 
     ///

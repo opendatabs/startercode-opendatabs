@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100170`
+- **Dataset_identifier** `100170`
 - **Title** `Smarte Strasse: Verkehrslärm`
 - **Description** `<p>Das Amt für Umwelt und Energie (AUE) testet im Rahmen des Projekts «Smarte Strasse» einen akustischen Sensor bezüglich Funktionalität, Genauigkeit und Zuverlässigkeit. Der Lärmsensor erfasst Umgebungsgeräusche und erkennt mittels künstlicher Intelligenz die individuellen Lärmprofile verschiedener Fahrzeuge. Dadurch kann der Sensor dazu verwendet werden, in Echtzeit richtungsgetrennte Verkehrszählungen durchzuführen, und die Lärmeinwirkung sowie die Geschwindigkeit einzelner Verkehrsteilnehmer zu erfassen.</p><p><b>Wichtig:</b> Die Werte in der Spalte «Mittelungspegel» beschreiben ab dem 16.02.2022 um 06:55 Uhr den A-bewerteten äquivalenten Dauerschallpegel (Leq). Zuvor wurde der energetisch gemittelte Terzpegel abgebildet.<br></p><p class="" style="font-family: sans-serif;"><span style="font-weight: bolder;">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</span></p><ul><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href="https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen" target="_blank">https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen</a> </li><li>Genaue Standorte aller Sensoren: <a href="https://data.bs.ch/explore/dataset/100114/" target="_blank">https://data.bs.ch/explore/dataset/100114/</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><b>Hinweis: Die Sensoren an der Gundeldingerstrasse wurden am 29.6.23 abmontiert. Es werden keine Daten mehr erhoben.</b></p><p>Änderungsprotokoll: <br>29.06.2023 - Aktualisierungsintervall von "CONT" auf "NEVER" geändert.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,54 @@ def _(mo):
 - **Keywords** `['Lärm', 'Smarte Strasse']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Datum und Uhrzeit der Messung |
+| `general_level` | double | Gemittelter Schalldruckpegel in dB(A) über 5 Minuten |
+| `level_00025` | double | Terzbandpegel bei 25 Hz über 5 Minuten |
+| `level_00031_5` | double | Terzbandpegel bei 31.5 Hz über 5 Minuten |
+| `level_00040` | double | Terzbandpegel bei 40 Hz über 5 Minuten |
+| `level_00050` | double | Terzbandpegel bei 50 Hz über 5 Minuten |
+| `level_00063` | double | Terzbandpegel bei 63 Hz über 5 Minuten |
+| `level_00080` | double | Terzbandpegel bei 80 Hz über 5 Minuten |
+| `level_00100` | double | Terzbandpegel bei 100 Hz über 5 Minuten |
+| `level_00125` | double | Terzbandpegel bei 125 Hz über 5 Minuten |
+| `level_00160` | double | Terzbandpegel bei 160 Hz über 5 Minuten |
+| `level_00200` | double | Terzbandpegel bei 200 Hz über 5 Minuten |
+| `level_00250` | double | Terzbandpegel bei 250 Hz über 5 Minuten |
+| `level_00315` | double | Terzbandpegel bei 315 Hz über 5 Minuten |
+| `level_00400` | double | Terzbandpegel bei 400 Hz über 5 Minuten |
+| `level_00500` | double | Terzbandpegel bei 500 Hz über 5 Minuten |
+| `level_00630` | double | Terzbandpegel bei 630 Hz über 5 Minuten |
+| `level_00800` | double | Terzbandpegel bei 800 Hz über 5 Minuten |
+| `level_01000` | double | Terzbandpegel bei 1000 Hz über 5 Minuten |
+| `level_01250` | double | Terzbandpegel bei 1250 Hz über 5 Minuten |
+| `level_01600` | double | Terzbandpegel bei 1600 Hz über 5 Minuten |
+| `level_02000` | double | Terzbandpegel bei 2000 Hz über 5 Minuten |
+| `level_02500` | double | Terzbandpegel bei 2500 Hz über 5 Minuten |
+| `level_03150` | double | Terzbandpegel bei 3150 Hz über 5 Minuten |
+| `level_04000` | double | Terzbandpegel bei 4000 Hz über 5 Minuten |
+| `level_05000` | double | Terzbandpegel bei 5000 Hz über 5 Minuten |
+| `level_06300` | double | Terzbandpegel bei 6300 Hz über 5 Minuten |
+| `level_08000` | double | Terzbandpegel bei 8000 Hz über 5 Minuten |
+| `level_10000` | double | Terzbandpegel bei 10000 Hz über 5 Minuten |
+| `level_12500` | double | Terzbandpegel bei 12500 Hz über 5 Minuten |
+| `level_16000` | double | Terzbandpegel bei 16000 Hz über 5 Minuten |
+| `timestamp_text` | text | — |
 
 
     ///

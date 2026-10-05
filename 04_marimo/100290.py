@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100290`
+- **Dataset_identifier** `100290`
 - **Title** `BachApp: Extras`
 - **Description** `<p>Dieser Datensatz enthält Informationen, welche noch in keinem anderen kantonalen System geführt werden, aber für die BachApp benötigt werden. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,30 @@ def _(mo):
 - **Keywords** `['WC', 'Rhein']`
 - **Creator** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `sichtbar_von` | date | Sichtbar ab |
+| `sichtbar_bis` | date | Sichtbar bis |
+| `status` | text | Status |
+| `titel` | text | Titel |
+| `untertitel` | text | Untertitel |
+| `shape` | text | — |
+| `titel_en` | text | — |
+| `untertitel_en` | text | — |
 
 
     ///

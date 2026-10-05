@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -27,6 +27,20 @@ Ab 5. August 2021 können dritte Impfungen in den Daten enthalten sein. Initial 
 - **Keywords** `['Impfung', 'SARS-CoV-2', 'Coronavirus', 'Corona', 'Vaccination', 'impfen', 'geimpft']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `vacc_day` | date | Datum der Impfung |
+| `age_group` | text | Altersgruppe in Jahren. Impfberechtigte Bevölkerung: Personen ab 16 Jahre. |
+| `vacc_count` | int | 1: Erste Impfung; 2: Zweite Impfung einer Person; -1: Anzahl ausschliesslich mit erster Dosis geimpfter Personen |
+| `vacc_count_description` | text | Beschreibung des Impftyps in Klartext |
+| `count` | int | Anzahl Impfungen pro Tag, Altersgruppe und Impftyp |
+| `count_cum` | int | Kumulierte Anzahl Impfungen pro Altersgruppe und Impftyp seit Beginn der Impfkampagne |
+| `total_pop` | int | Anzahl Personen wohnhaft in BS der angegebenen Altersgruppe per Ende 2020 |
+| `count_cum_percentage_of_total_pop` | double | Quotient der kumulierten Anzahl Impfungen durch die Anzahl EinwohnerInnen der angegebenen Altersgruppe in % |
 
 
 # Load packages

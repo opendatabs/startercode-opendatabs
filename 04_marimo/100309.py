@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100309`
+- **Dataset_identifier** `100309`
 - **Title** `Grosser Rat: Interessensbindungen Ratsmitglieder`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die aktiven Interessensbindungen von Grossratsmitgliedern während ihrer Mitgliedschaft im Grossen Rat des Kantons Basel-Stadt.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Grosser Rat', 'Parlament', 'Interessensbindungen', 'Grossrat', 'Grossrätin', 'Legislative']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `rubrik` | text | Rubrik der Interessensbindung (Führung und Aufsicht oder staatliche Kommission) |
+| `intr_bind` | text | Name der zugehörigen Interessensbindung |
+| `funktion` | text | Funktion des Grossratsmitglieds in der Interessensbindung |
+| `text` | text | Name der zugehörigen Interessensbindung und Funktion des Grossratsmitglied |
+| `anrede` | text | Anrede des Grossratsmitglieds nach amtlichem Geschlecht |
+| `name` | text | Nachname des Grossratsmitglieds |
+| `vorname` | text | Vorname des Grossratsmitglieds |
+| `name_vorname` | text | Name und Vorname des Grossratsmitglieds |
+| `partei_kname` | text | Abkürzung der Parteizugehörigkeit des Grossratsmitglied (nur vorhanden, falls aktuelles Grossratsmitglied) |
+| `url_adr` | text | Link zum Grossratsmitglied auf der Webseite des Grossen Rates |
+| `uni_nr` | text | Individuelle Identifikationsnummer des Grossratsmitglieds innerhalb der Datenbank des Grossen Rates |
+| `url_ratsmitgliedschaften` | text | Link zum Datensatz "Grosser Rat: Ratsmitgliedschaften". Gefiltert nach aktueller Interessensbindung. |
 
 
     ///

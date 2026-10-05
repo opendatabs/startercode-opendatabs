@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,24 @@ Auto generated R starter code for data set 100019.
 - **Keywords** `['DEFI', 'Gesundheit', 'Herz-Kreislauf-Stillstand', 'Impulsgeber', 'Medizinisches Material', 'Notfall', 'Schockgeber', 'Herz', 'CPR', 'Lunge', 'Standort', 'Wiederbelebung']`
 - **Creator** `Rettung`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | Punktgeometrie des Objekts Defibrillator in LV95. |
+| `geo_shape` | geo_shape | — |
+| `id` | int | Eindeutiger Identifikator des Defibrillators. |
+| `standort` | text | Bezeichnung des Standorts des Defibrillators durch allgemeinverständlichen Namen des Gebäudes, der Anlage oder der Firma, an bzw. in dem sich der Defibrillator befindet. |
+| `strasse` | text | Name des Strasse, an dem sich das Gebäude oder die Anlage befindet, an bzw. in dem sich der Defibrillator befindet. |
+| `hausnummer` | text | Hausnummer der unter Strassenname beschriebenen Strasse. Sollte keine eindeutige Hausnummer vorhanden sein, wird dies durch "0" gekennzeichnet. |
+| `plz` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Bezeichnung der Ortschaft. |
+| `kanton` | text | Angabe des Kantons, zu dem das Gebäude bzw. die Anlage gehört. |
+| `verfuegbarkeit` | text | Gibt Auskunft über die Verfügbarkeit des Defibrillators. Oftmals sind Defibrillatoren in Gebäuden platziert und nur zu bestimmten Zeiten erreichbar. Jederzeit verfügbare Defibrillatoren sind mit "24/365" gekennzeichnet. |
+| `bemerkungen` | text | Angaben wichtiger Informationen zum Auffinden des Defibrillators innerhalb des Gebäudes oder der Anlage und zum individuellen Vorgehen vor Ort. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
 # Load packages

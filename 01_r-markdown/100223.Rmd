@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,23 @@ Auto generated R starter code for data set 100223.
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `tag` | text | Wochentag an dem die Stimmbeteiligung erhoben wurde |
+| `datum` | date | Datum an dem die Stimmbeteiligung erhoben wurde. |
+| `eingang_pro_tag` | int | Erhaltene Briefeingänge an diesem Tag |
+| `eingang_kumuliert` | int | Total erhaltene Briefeingänge bis zu diesem Datum |
+| `stimmbeteiligung` | double | Prozentualer Anteil der von Stimmberechtigten bereits abgegebenen Stimmzettel |
+| `datum_urnengang` | date | Datum des Urnengangs |
+| `tage_bis_urnengang` | int | Verbleibende Tage bis zum Urnengang |
+| `abstimmungen` | text | Ja: Urnengang mit Abstimmung; Nein: Urnengang ohne Abstimmung |
+| `wahlen` | text | Ja: Urnengang mit Wahlen; Nein: Urnengang ohne Wahlen |
+| `wahlen_typ` | text | Art der Wahl(-en) |
+| `datum_urnengang_text` | text | Datum des Urnengangs in YYYY-MM-DD-Format |
 
 
 # Load packages

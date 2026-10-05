@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100021`
+- **Dataset_identifier** `100021`
 - **Title** `Entsorgungsstellen`
 - **Description** `Der Bevölkerung werden die verschiedenen Entsorgungsstellen für ihre Abfälle und Wertstoffe angezeigt. Sie erhalten zudem die Informationen, was, wann und wie sie diese entsorgen können.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2026-08-10`
-- **Modified** `2026-10-04T00:00:00+00:00`
+- **Modified** `2026-10-05T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,36 @@ def _(mo):
 - **Keywords** `['Recycling', 'Wiederverwertung', 'Abfall', 'Müll', 'Entsorgen']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | text | — |
+| `es_name` | text | Name der Wiederverwendungsstelle |
+| `es_kategorie` | text | Kategorie der Wiederverwendungsstelle |
+| `es_beschreibung` | text | Beschreibung der Wiederverwendungsstelle |
+| `es_adresse` | text | Adresse der Wiederverwendungsstelle |
+| `es_postleitzahl` | text | Postleitzahl der Wiederverwendungsstelle |
+| `es_ortschaft` | text | Ortschaftsname der Wiederverwendungsstelle |
+| `es_telefon` | text | Telefonnummer für die Wiederverwendungsstelle |
+| `es_oeffnungszeit` | text | Öffnungszeiten der Wiederverwendungsstelle |
+| `mapbs_es_link` | text | Internetadresse der Wiederverwendungsstelle |
+| `es_zustaendigkeit` | text | Zuständigkeit der Wiederverwendungsstelle |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

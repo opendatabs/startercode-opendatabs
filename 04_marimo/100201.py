@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100201`
+- **Dataset_identifier** `100201`
 - **Title** `Liegenschaften: Parzellen`
 - **Description** `<p>Die Liegenschaften sind eine Informationsebene der amtlichen Vermessung, die alle Liegenschaften, flächenmässig ausgeschieden selbständigen und dauernen Rechte und Grenzpunkte enthält. Im kantonalen Modell von Basel-Stadt wird zwischen Liegenschaft und Allmendparzelle unterschieden. Zudem gibt es zusätzlich zum Baurecht auch Unterbaurechte.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächenhafte Ausdehnung der Liegenschaft |
+| `id` | int | Eindeutiger Indentifikator |
+| `parzellennummer` | text | In der Regel 10-stellige Nummer: erste 4 Stellen für Stammparzelle - 3 Stellen Stockwerknummer - 3 Stellen Miteigentumsanteilnummer. Der Parzellenindex ist nicht Teil der Parzellennummer.9000er\=Allmendparzellen.; Die Grundstücksnummer ist Teil der Identifikation des Grundstücks. Als Grundstücks-Identifikator muss ein kombinierter Schlüssel verwendet werden: Die Parzellennummer identifiziert in BS nur in Kombination mit der Sektion eindeutig ein Grundstück (CAPI\_GEMEINDE+CAPI\_SEKTION). Im KDM wird als Grundstücks- Identifikator zusätzlich auch die Gemeinde hinzugenommen (CAPI\_ID \= CAPI\_GEMEINDE+CAPI\_SEKTION+CAPI\_PARZELLENNUMMER). |
+| `parzellenindex` | text | Anzahl der geometrischen Änderungen am Grundstück; Der Index drückt eine Änderung bei einem Grundstück aus und wird dabei sequentiell hochgezählt. Diese Änderung kann sowohl die Grundbuchsicht (juristisches Objekt) wie auch die Vermessungssicht (geografisches Objekt) betreffen. |
+| `egrid` | text | Identifikationsnummer des elektronischen Grundstückinformationssystems (eGRIS). Der eidgenössische Grundstücksidentifikator ist in der ganzen Schweiz einheitlich und dient dem Informationsaustausch zwischen dem Grundbuch, der amtlichen Vermessung und den anderen Nutzerinnen und Nutzern. |
+| `sektionsname` | text | Name einer Sektion |
+| `grundstuecksart` | text | Art des selbständigen und dauernden Rechts |
+| `flaechenmass` | int | Flächemass der Liegenschaft |
+| `gueltigkeit` | text | Rechtsstatus eines Grundstücks. |
 
 
     ///

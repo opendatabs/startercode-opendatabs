@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,34 @@ Auto generated R starter code for data set 100134.
 - **Keywords** `['Corona', 'COVID-19', 'Spital', 'Krankheit', 'Coronavirus', 'Virus', 'Pandemie', 'Test', 'Lungenentzündung']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id_ts` | int | Eindeutiger Identifikator |
+| `institut` | text | Name der Teststelle |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `strasse` | text | Strassenname |
+| `hausnummer` | int | Hausnummer |
+| `plz` | text | 4-stellige Postleitzahl |
+| `ort` | text | Gemeinde |
+| `telefon` | text | Telefonnummer der Teststelle |
+| `bestehend` | text | Werden nur bestehende Patienten getestet |
+| `termin` | text | Sind Terminvereinbarungen notwendig |
+| `online` | text | URL für Online Anmeldung |
+| `bemerkung` | text | Bemerkungen zur Teststelle |
+| `oeff_wt` | text | Öffnungszeiten unter der Woche |
+| `oeff_we` | text | Öffnungszeiten am Wochenende |
+| `schnellte` | text | Verfügbarkeit von Schnelltests |
+| `kinder` | text | Testet diese Teststelle auch Kinder? |
+| `alter` | text | Mindestalter für Tests. Teststellen, welche Personen erst ab einem bestimmten Mindestalter testen, sind spezialisiert auf Corona-Tests bei Kindern. |
+| `testart` | text | Art der durchführenden Tests |
+| `symptom` | text | Müssen Kinder COVID-19 Symptome haben, um durch diese Teststelle getestet zu werden? |
+| `kommentar` | text | Bemerkungen zu Teststellen für Kinder |
+| `adressid` | text | — |
 
 
 # Load packages

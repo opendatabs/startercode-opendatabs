@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -26,6 +26,22 @@ Auto generated R starter code for data set 100158.
 - **Keywords** `['Luftqualität']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `messbeginn` | date | Beginn der Messung |
+| `messende` | date | Ende der Messung |
+| `standort` | text | Name des Standorts |
+| `parameter` | text | Gemessener Stoff |
+| `messwert` | double | Gemessener Wert |
+| `interventionswert` | double | Interventionswert |
+| `warnwert` | double | Warnwert |
+| `einheit` | text | Einheit, in welcher der Wert gemessen wird |
+| `messmethode` | text | Messmethode |
+| `geo_point_2d` | geo_point_2d | Koordinaten des Standorts |
 
 
 # Load packages

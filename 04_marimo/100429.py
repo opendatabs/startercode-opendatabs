@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100429`
+- **Dataset_identifier** `100429`
 - **Title** `Anreiseempfehlungen für Veranstaltungen im Raum St. Jakob`
 - **Description** `<p>Dieser Datensatz enthält eine Liste von Anreiseempfehlungen abhängig von Verkehrsmittel, ob der Verkehr gesperrt und ob es zusätzliche Parkplätze gibt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,30 @@ def _(mo):
 - **Keywords** `['St. Jakob', 'Gartenbad', 'Arena', 'Parken', 'St. Jakobshalle', 'St. Jakob-Park', 'St. Jakob-Arena', 'Sportanlage', 'Sperrung', 'Parkplätze', 'Verkehrsplanung']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `verkehrsmittel` | text | Betroffenes Verkehrsmittel betreffend Anreiseempfehlung |
+| `sperrung` | boolean | Ist eine Sperrung nötig? |
+| `zusatzpp` | boolean | Werden zusätzliche Parkplätze angeboten? |
+| `text_html` | text | Anreiseempfehlung als HTML |
+| `alt_texte` | text | Alternativtext für angezeigte Bilder |
+| `bildquellen` | text | Quelle des Bildes |
+| `link_anzeigetexte` | text | Anzeigetext für Knopf mit weiterführenden Links |
+| `links` | text | weiterführende Links |
 
 
     ///

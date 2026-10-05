@@ -55,7 +55,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100288`
+- **Dataset_identifier** `100288`
 - **Title** `Sauberkeitsindex pro Monat und Strassenabschnitt`
 - **Description** `<p class="">Dieser Datensatz enthält den Sauberkeitsindex für alle Strassenabschnitte in der Stadt Basel. Zur Berechnung des Sauberkeitsindex wird wie folgt vorgegangen:</p><p>Auf den Kehrrichtfahrzeugen sind Kameras installiert, die während der Einsätze Videoaufnahmen der Strassen machen. Ein Computer durchsucht anschliessend diese Videoaufnahmen nach Abfällen. Dieser sortiert die Abfälle in verschiedene Abfallkategorien (Zigarettenstummel, Papier, PET-Flaschen etc.) und zählt die Anzahl der gefundenen Abfälle jeder Kategorie. Zusätzlich wird für jede Abfallkategorie der Verschmutzungsgrad und der Störfaktor bestimmt. Daraus wird der Sauberkeitsindex berechnet. Danach werden die Videoaufnahmen aus Datenschutzgründen umgehend gelöscht.</p><p></p><p>Der Sauberkeitsindex wird auf einer Skala von 0 bis 5 angegeben, wobei die Werte folgendermassen beurteilt werden:<br><span style="font-family: inherit; font-size: 0.875rem;">Kleiner als 3: schlecht<br></span><span style="font-family: inherit; font-size: 0.875rem;">Zwischen 3 und 4: mittel<br></span><span style="font-family: inherit; font-size: 0.875rem;">Grösser als 4: gut</span></p><p>
 Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für die gesamte Stadt von mindestens 4.5.
@@ -70,6 +70,30 @@ Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für di
 - **Keywords** `['Sauberkeit', 'Kehrricht', 'Abfall', 'Reinigung', 'Stadtreinigung', 'Strassennetz', 'Stadthygiene', 'Verschmutzung', 'Müll']`
 - **Creator** `Stadtreinigung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datenstand` | date | Stand der Daten zu einem bestimmten Zeitpunkt |
+| `id` | text | Eindeutiger Identifikator |
+| `strasse` | text | Name des Strassenabschnitts |
+| `cci` | double | CCI steht für «Clean City Index» und ist der Sauberkeitsindex, der zwischen 0 (schmutzig) bis 5 (sauber) liegt. |
+| `anzahl_messungen` | int | Die Anzahl der Messungen umfasst die Anzahl der Durchfahrten des Kehrrichtlastwagens im jeweiligen Strassenabschnitt pro Monat. |
+| `letzte_messung` | datetime | Die letzte Messung des Sauberkeitsindexes des jeweiligen Strassenabschnitts. |
+| `geometry` | geo_shape | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
     ///

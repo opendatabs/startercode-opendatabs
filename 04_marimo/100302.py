@@ -61,7 +61,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100302`
+- **Dataset_identifier** `100302`
 - **Title** `Abwassermonitoring: Influenza und RSV`
 - **Description** `<p><b>Figur<br></b><span>Der Datensatz zeigt den 7-Tage-Median der RNA-Kopien des angegebenen Virus jeweils pro Tag und 100‘000 Personen im Abwasser der Abwasserreinigungs-Anlage (ARA) Basel sowie den 7-Tage-Median der entsprechenden Fallzahlen. Der Datensatz wird i.d.R. jeweils dienstags mit den Daten bis vorangegangenem Sonntag aktualisiert. In einzelnen Wochen kann es zu Verschiebungen kommen.</span></p><p><span style="font-weight: bolder;">Messung<br></span>Die ProRheno AG (Betreiber der ARA Basel) entnimmt jeweils eine 24h-Probe des Rohabwassers, welche durch das Kantonale Laboratorium Basel-Stadt (KL BS) auf RNA der angegebenen Viren untersucht wird. Die Messmethodik wurde dabei seit Beginn des Monitorings nicht verändert: siehe Publikation <a href="https://smw.ch/index.php/smw/article/view/3226" target="_blank">https://smw.ch/index.php/smw/article/view/3226</a>. Die Plausibilität der Werte wird laufend anhand interner Qualitätsparameter überprüft. Das Untersuchungsgebiet umfasst das Einzugsgebiet der ARA Basel, welches sich hauptsächlich aus dem Kanton Basel-Stadt sowie den Gemeinden Allschwil, Binningen, Birsfelden, Bottmingen, Oberwil und Schönenbuch (alle Kanton Baselland) zusammensetzt. Bis Ende Juni 2023 wurden die Messwerte des KL BS auch auf dem Abwasser-Dashboard des BAG <a href="https://www.covid19.admin.ch/de/epidemiologic/waste-water?wasteWaterFacility=270101" target="_blank">Covid-⁠19 Schweiz | Coronavirus | Dashboard (https://www.covid19.admin.ch/de/epidemiologic/waste-water?wasteWaterFacility=270101)</a> dargestellt. Ab Juli 2023 werden auf dieser Seite die Messwerte der EAWAG <a href="https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/" target="_blank">SARS-CoV2 im Abwasser - Eawag</a> (<a href="https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/" target="_blank">https://www.eawag.ch/de/abteilung/sww/projekte/sars-cov2-im-abwasser/</a>) publiziert, welche ebenfalls das Rohabwasser der ARA Basel untersucht. Die vom KL BS und der EAWAG verwendeten Untersuchungsmethoden sind sehr ähnlich aber nicht identisch.</p><p><span style='font-size:11.0pt;font-family:"Arial",sans-serif;
 mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:
@@ -74,7 +74,7 @@ wurden keine Abwasserproben auf Influenza und RSV untersucht.</span><br></p><p><
 </div>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-12-19`
-- **Modified** `2026-09-28T23:01:16+00:00`
+- **Modified** `2026-10-05T11:01:24+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-08-13T22:00:00+00:00`
 - **Temporal_coverage_end_date** `None`
@@ -82,6 +82,59 @@ wurden keine Abwasserproben auf Influenza und RSV untersucht.</span><br></p><p><
 - **Keywords** `['Abwasser', 'Influenza', 'RSV', 'Kanalisation', 'Krankheit', 'Kläranlage', 'Grippe']`
 - **Creator** `Kantonales Laboratorium`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | — |
+| `sample_ba_nr` | text | — |
+| `infa_gc_pcr` | double | — |
+| `infb_gc_pcr` | double | — |
+| `rsv_gc_pcr` | double | — |
+| `infa_gc_l` | double | — |
+| `infb_gc_l` | double | — |
+| `rsv_gc_l` | double | — |
+| `infa_gc_l_7_d_median` | double | — |
+| `infb_gc_l_7_d_median` | double | — |
+| `rsv_gc_l_7_d_median` | double | — |
+| `infa_gc_100_000_p` | double | — |
+| `infb_gc_100_000_p` | double | — |
+| `rsv_gc_100_000_p` | double | — |
+| `infa_gc_100_000_p_7_d_median` | double | — |
+| `infb_gc_100_000_p_7_d_median` | double | — |
+| `rsv_gc_100_000_p_7_d_median` | double | — |
+| `infa_gc_pmmov` | double | — |
+| `infb_gc_pmmov` | double | — |
+| `rsv_gc_pmmov` | double | — |
+| `infa_gc_pmmov_7_d_median` | double | — |
+| `infb_gc_pmmov_7_d_median` | double | — |
+| `rsv_gc_pmmov_7_d_median` | double | — |
+| `anz_pos_a_bs` | int | — |
+| `anz_pos_a_h1_bs` | double | — |
+| `anz_pos_a_h1n1_bs` | double | — |
+| `anz_pos_a_h3_bs` | double | — |
+| `anz_pos_b_bs` | int | — |
+| `anz_pos_a_bl` | int | — |
+| `anz_pos_b_bl` | int | — |
+| `anz_pos_all_bl` | int | — |
+| `infa_bs_bl` | int | — |
+| `infb_bs_bl` | int | — |
+| `7t_median_infa` | int | — |
+| `7t_median_infb` | int | — |
+| `kw` | int | — |
+| `kw_anz_pos_rsv_usb` | int | — |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,28 @@ Auto generated R starter code for data set 100514.
 - **Keywords** `['Vernehmlassungen', 'Parteien', 'Partizipation', 'Mitwirken']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `vernehmlassung` | text | — |
+| `url_vernehmlassung` | text | — |
+| `typ` | text | — |
+| `bereich` | text | — |
+| `kapitel` | text | — |
+| `antrag_bemerkung` | text | — |
+| `begrundung` | text | — |
+| `anhange` | text | — |
+| `erfassungsdatum` | date | — |
+| `briefruckmeldung` | text | — |
+| `organisation` | text | — |
+| `teilnehmerkategorie` | text | — |
+| `teilnehmer_in` | text | — |
+| `plz` | text | — |
+| `ort` | text | — |
+| `location` | geo_point_2d | — |
 
 
 # Load packages

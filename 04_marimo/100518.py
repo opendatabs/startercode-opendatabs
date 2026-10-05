@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100518`
+- **Dataset_identifier** `100518`
 - **Title** `Kantonale Abstimmungen - baselvotes`
 - **Description** `<p>Zeitreihe aller kantonalen Volksabstimmungen in Basel-Stadt seit 1875. Der Datensatz stammt vom politisch unabhängigen Verein Baselvotes <a href="https://baselvotes.ch" target="_blank">(Abstimmungsportal </a><a href="https://baselvotes.ch)" target="_blank">https://baselvotes.ch)</a> und wird vor und nach Abstimmungssonntagen laufend ergänzt. Auf Baselvotes findet sich auch zu jeder Abstimmung ein Kurzbeschrieb sowie Bildmaterial (u.a. Plakate, Inserate). </p><p>Kurztitel, Politikbereiche und statistische Kerndaten basieren im Wesentlichen auf Open Government Data des Statistischen Amtes Basel-Stadt. Urheberschaft und Parolen sowie die Positionen von Regierungsrat und Grossem Rat wurden von Baselvotes recherchiert und sind nicht in jedem Fall vollständig. Baselvotes unterscheidet bei der Rechtsform nicht zwischen «obligatorischem» und «angeordnetem» Referendum,  da die Klassifizierungen über die Zeit nicht einheitlich gehandhabt wurden.</p><p><b>Quellenangabe</b>: Bei Nutzung der Rubriken Urheberschaft und Parolen: Abstimmungsportal Baselvotes. Andere verlinkte Quellen (Grosser Rat, Staatskanzlei, Staatsarchiv usw.) sind mit dem jeweiligen Quellennachweis zu versehen.</p><p><b>Hinweis zur Lizenz:</b> Die Lizenz bezieht sich nicht auf verlinkte Inhalte. Hierfür müssen die die Nutzungsbestimmungen der Dritten beachtet werden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,59 @@ def _(mo):
 - **Keywords** `['Abstimmung', 'Stimmbeteiligung', 'Volksinitiative', 'Referendum', 'Grossratsbeschluss', 'Abstimmungsergebnisse', 'Stichfrage', 'Gegenvorschlag', 'Brieflich Wählende', 'Stimmberechtigte', 'Stimmzettel', 'Gültige Stimmen']`
 - **Creator** `Baselvotes`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `sn` | int | Laufende Nummer der Abstimmung in der Baselvotes-Datenbank (chronologisch). |
+| `title` | text | Kurztitel der Vorlage. Basiert im Wesentlichen auf Open Government Data des Statistischen Amtes Basel-Stadt. |
+| `offizieller_titel` | text | Offizieller Wortlaut der Vorlage gemäss Abstimmungsunterlagen. |
+| `date` | date | Datum der Volksabstimmung |
+| `abstimmungsergebnis` | text | Ergebnis der Abstimmung: «Angenommen» oder «Abgelehnt». Bei über 50 % Ja-Stimmen gilt die Vorlage als angenommen. Bei Referenden bedeutet «Angenommen» eine Bestätigung des Grossratsbeschlusses (Erfolg des Parlaments); bei Ablehnung war das Referendumskomitee erfolgreich. |
+| `ja_anteil` | double | Anteil der Ja-Stimmen in Prozent am Total der Stimmen mit gültiger Antwort. |
+| `rechtsform` | text | Rechtsform der Vorlage: Fakultatives Referendum, Obligatorisches Referendum, Volksinitiative oder Gegenvorschlag des Grossen Rates. Baselvotes verzichtet auf eine Unterscheidung obligatorischer Referenden in «obligatorisch» und «angeordnet», da die Klassifizierung historisch nicht einheitlich gehandhabt wurde. |
+| `politikbereich` | text | Betroffener Politikbereich. Klassifikation nach dem Codebook von swissvotes; Zuordnung im Wesentlichen gemäss Statistischem Amt Basel-Stadt. Mehrere Bereiche können kommagetrennt vorkommen. |
+| `bericht_des_regierungsrats` | text | Link zum Bericht bzw. Ratschlag des Regierungsrats. Bis ca. 2000 vorwiegend Staatsarchiv Basel-Stadt, danach Datenbank des Grossen Rates. |
+| `geschaftsnummer` | text | Geschäftsnummer der Vorlage im Grossen Rat (soweit vorhanden; bei älteren Vorlagen oft leer). |
+| `geschaftslink` | text | Link zum Geschäft in der Datenbank des Grossen Rates Basel-Stadt (vor allem jüngere Vorlagen). |
+| `grossratsbeschluss` | date | Datum des Grossratsbeschlusses zur Vorlage |
+| `kommissionsbericht` | text | Link zum Bericht der zuständigen Grossratskommission (soweit vorhanden). |
+| `parlamentsberatung` | text | Link zum Protokoll der Parlamentsberatung (Grossratsprotokoll). Bis ca. 2000 Staatsarchiv, danach Datenbank des Grossen Rates (seit 2005 Volltextprotokoll). |
+| `position_des_grossen_rates` | text | Haltung des Grossen Rates zur Vorlage (z. B. Befürwortend, Ablehnend, Keine Empfehlung), teilweise mit Stimmenzahlen aus der Ratssitzung. Freitext; nicht für alle Vorlagen vorhanden. |
+| `abstimmungsbuchlein` | text | Link zum Abstimmungsbüchlein. Jüngere Ausgaben Staatskanzlei Basel-Stadt; ältere Staatsarchiv Basel-Stadt oder Dokumente von Baselvotes. |
+| `erklarvideo` | text | Link zum Erklärvideo der Regierung (soweit vorhanden; vor allem jüngere Abstimmungen). |
+| `position_des_regierungsrats` | text | Haltung des Regierungsrats zur Vorlage (z. B. Befürwortend, Ablehnend, Keine Empfehlung). Freitext; nicht für alle Vorlagen vorhanden. |
+| `parteiparolen_ja` | text | Parteien, die eine Ja-Parole fassten. Von Baselvotes recherchiert; nicht in jedem Fall vollständig. Quellenangabe: Abstimmungsportal Baselvotes. |
+| `parteiparolen_nein` | text | Parteien, die eine Nein-Parole fassten. Von Baselvotes recherchiert; nicht in jedem Fall vollständig. Quellenangabe: Abstimmungsportal Baselvotes. |
+| `stimmfreigabe` | text | Parteien, die Stimmfreigabe beschlossen. Von Baselvotes recherchiert; nicht in jedem Fall vollständig. Quellenangabe: Abstimmungsportal Baselvotes. |
+| `parolen_weitere_ja` | text | Weitere Organisationen und Akteure (nicht Parteien) mit Ja-Parole. Von Baselvotes recherchiert; nicht in jedem Fall vollständig. Quellenangabe: Abstimmungsportal Baselvotes. |
+| `parolen_weitere_nein` | text | Weitere Organisationen und Akteure mit Nein-Parole. Von Baselvotes recherchiert; nicht in jedem Fall vollständig. Quellenangabe: Abstimmungsportal Baselvotes. |
+| `parolen_weitere_stimmfreigabe` | text | Weitere Organisationen und Akteure mit Stimmfreigabe. Von Baselvotes recherchiert; selten belegt. Quellenangabe: Abstimmungsportal Baselvotes. |
+| `primary_media` | text | Link zum Abstimmungsplakat (Schnittstelle zur Basler Plakatsammlung; Plakate bis ca. 1920). Nicht für alle Abstimmungen vorhanden. |
+| `ja_stimmen` | int | Anzahl Ja-Stimmen. |
+| `nein_stimmen` | int | Anzahl Nein-Stimmen. |
+| `stichfrage` | text | Ergebnis der Stichfrage bei Initiative und Gegenvorschlag als Freitext (Stimmanteile für Initiative und Gegenvorschlag). Nur wenn eine Stichfrage stattfand. |
+| `stichfrage_initiative` | double | Aus der Spalte Stichfrage abgeleitete Anzahl Stimmen für die Initiative bei der Stichfrage. Nur bei Vorlagen mit Stichfrage. |
+| `stichfrage_gegenvorschlag` | double | Aus der Spalte Stichfrage abgeleitete Anzahl Stimmen für den Gegenvorschlag bei der Stichfrage. Nur bei Vorlagen mit Stichfrage. |
+| `stimmbeteiligung` | double | Stimmbeteiligung in Prozent (Anteil der eingelegten Stimmzettel an den Stimmberechtigten). |
+| `stimmberechtigte` | int | Anzahl Stimmberechtigte. |
+| `nachanalyse_url` | text | Link zu einer Nachanalyse der Abstimmung (soweit vorhanden; nur vereinzelt). |
+| `basler_stadtbuch_artikel` | text | Link zum Eintrag in der Basler Chronik des Basler Stadtbuchs (seit 1879) bzw. zu einem zugehörigen Artikel. Ermöglicht auch den Abgleich mit nationalen Abstimmungen am selben Tag. |
+| `urheberschaft` | text | Urheberschaft der Initiative bzw. des Referendums (Komitee, Organisationen, Personenkreise). Von Baselvotes recherchiert. Quellenangabe: Abstimmungsportal Baselvotes. |
+| `unterschriften` | text | Anzahl eingereichter Unterschriften für Initiative oder Referendum. In Einzelfällen als Schätzwert oder Freitext erfasst (z. B. «rund 30'000»). |
+| `link_auf_baselvotes` | text | Link zur Detailseite der Abstimmung auf www.baselvotes.ch. |
 
 
     ///

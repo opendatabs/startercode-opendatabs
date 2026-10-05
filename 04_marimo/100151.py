@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100151`
+- **Dataset_identifier** `100151`
 - **Title** `Sport- und Bewegungsanlagen`
 - **Description** `<p>Der Datensatz bildet alle wichtigen Sport- und Bewegungsanlagen im Perimeter Kanton Basel-Stadt sowie alle kantonalen Sportanlagen ausserhalb der Kantons- und Landesgrenzen ab.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['Anlage', 'Bäder', 'Badi', 'Gartenbad', 'Hallenbad', 'Platz', 'Schwimmbad', 'Spielwiese', 'Training', 'Zentrum', 'Sport', 'Sportanlagen', 'OpenSportData']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktkoordinaten |
+| `geo_shape` | geo_shape | — |
+| `id` | int | Eindeutiger Identifikator |
+| `kategorie` | text | Kategorie des Sportangebots |
+| `name` | text | Name des Sportangebots |
+| `beschreibung` | text | Beschreibt u.a. die Ausstattung der Sportanlage oder die Sportarten, welche dort ausgeübt werden können. |
+| `strasse` | text | Strasse und Hausnummer |
+| `postleitzahl` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Bezeichnung der Ortschaft. |
+| `link` | text | Link zu weiterführenden Informationen zur Sportanlage. |
+| `zustaendigkeit` | text | Zuständigkeit fuer das Sportangebot |
+| `bemerkung` | text | Diverse Bemerkungen zum Gebrauch, Standort und der Zuständigkeit für das Sportangebot. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

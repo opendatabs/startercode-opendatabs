@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100404`
+- **Dataset_identifier** `100404`
 - **Title** `Velostadtplan: Hinweise`
 - **Description** `<p>Der Datensatz liefert weiterführende Informationen zur Velotauglichkeit des Strassennetzes und weist auf Gefahrenstellen, Einbahnstrassen und Steigungen verschiedener Intensitätsgrade hin.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Fahrrad', 'Velo', 'Veloroutennetz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktkoordinaten |
+| `geo_shape` | geo_shape | — |
+| `typ` | text | Definiert, ob es sich bei einem Punkt um eine Gefahrenstelle, eine Einbahnstrasse, oder eine Steigung handelt. |
+| `strasse` | text | Strassenname |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
+| `einbahn` | text | — |
+| `gefahrenstelle` | text | Name oder Beschreibung des Ortes, an welchem sich die Gefahrenstelle befindet. |
+| `gefahrenart` | text | Erklärt, weshalb ein Ort als gefährlich eingestuft wird. |
+| `steigung` | text | Intesitätsgrad der Steigung. |
+| `darstellungswinkel` | double | Rotation in Grad für die Ausrichtung von Punktsymbolen. |
 
 
     ///

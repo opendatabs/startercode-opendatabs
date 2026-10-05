@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100321`
+- **Dataset_identifier** `100321`
 - **Title** `Erwerb des Schweizer Bürgerrechts nach Geschlecht, Alter, Geburtsland und Staatsangehörigkeit bei Gesuchsstellung`
 - **Description** `Dieser Datensatz zeigt die Anzahl der das Schweizer Bürgerrecht erwerbenden Personen des Kantons Basel-Stadt nach Geschlecht, Alter, Geburtsland und Staatsangehörigkeit bei der Gesuchstellung. Die Staatsangehörigen aus Serbien, Montenegro und Kosovo werden bis zum Jahr 2014 unter «Serbien, Montenegro und Kosovo» zusammengefasst, seit dem Jahr 2015 können sie separat ausgewiesen werden. Der Datensatz wird jährlich aktualisiert. Ausländische Staatsangehörige, die zehn Jahre in der Schweiz gelebt haben und eine Niederlassungsbewilligung C besitzen, können sich um die ordentliche Einbürgerung bewerben. Die im Alter von 8 bis 18 in der Schweiz verbrachten Jahre zählen doppelt. Unter bestimmten Voraussetzungen ist nach kürzerer Aufenthaltsdauer eine erleichterte Einbürgerung möglich, z. B. nach fünf Jahren Aufenthalt und drei Jahren Ehe mit einer Schweizerin bzw. einem Schweizer. Auch in der Schweiz geborene ausländische Staatsangehörige der dritten Generation können sich bis zum Alter von 25 Jahren erleichtert einbürgern lassen, falls ein Grosseltern- und ein Elternteil in der Schweiz gelebt haben. Bis 2017 galten teilweise andere Bestimmungen, die bei bis zu diesem Zeitpunkt eingereichten Einbürgerungsgesuchen zum Tragen kamen. Neben den ordentlichen und den erleichterten Einbürgerungen gibt es weitere Einbürgerungen (z. B. infolge Anerkennung der Vaterschaft, Adoption, Wiedereinbürgerung oder Feststellung der Schweizer Staatsangehörigkeit), die hier ebenfalls berücksichtigt werden. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,29 @@ def _(mo):
 - **Keywords** `['Nationalität', 'Bevölkerungsbestand', 'Demographie', 'Ausländer', 'Einwohnerzahl', 'Einbürgerung']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Einbürgerungsjahr |
+| `geschlecht` | text | Geschlecht der eingebürgerten Person (männlich oder weiblich) |
+| `alter` | text | Alter am Ende des Einbürgerungsjahres |
+| `alter_numm` | text | Alter (mit Nummerierung) am Ende des Einbürgerungsjahres |
+| `geburtsland` | text | Geburtsland (Ausland oder Schweiz) |
+| `ehem_staaatsangehorigkeit` | text | Staatsangehörigkeit bei der Gesuchstellung |
+| `anzahl_eingeburgerte` | int | Anzahl Eingebürgerte |
 
 
     ///

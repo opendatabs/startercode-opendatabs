@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,21 @@ Auto generated R starter code for data set 100412.
 - **Keywords** `['Alter', 'Gemeinden', 'Wohnen', 'Demographie', 'Geschlecht', 'Lebensqualität', 'Einkommen', 'Befragungen']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/hintergrund/befragungen`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Jahr der Befragung |
+| `id` | text | ID der befragten Person |
+| `fragename` | text | Die Nummer der Frage auf dem Fragebogen |
+| `fragelabel` | text | Gestellte Frage |
+| `fragelabel_fortsetzung` | text | Fortsetzung zur Frage |
+| `fragelabel_anmerkung` | text | Anmerkung zur Frage |
+| `antwort` | text | Gegebene Antwort |
+| `fragespaltenreihenfolge` | text | — |
+| `antwortreihenfolge` | text | — |
 
 
 # Load packages

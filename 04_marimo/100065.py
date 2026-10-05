@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100065`
+- **Dataset_identifier** `100065`
 - **Title** `Teilhaltestellen des öffentlichen Verkehrs`
 - **Description** `Der Datensatz zeigt die Teilhaltestellen (Haltebereich des Busses oder des Trams je Fahrtrichtung) des öffentlichen Verkehrs im Kanton Basel-Stadt sowie teilweise in der trinationalen Agglomeration. Es wird nach Liniennummer, Transportunternehmen, Art und Typ der Haltestelle unterschieden.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,38 @@ def _(mo):
 - **Keywords** `['Tram', 'Bus', 'Zug', 'Haltestelle', 'Baustelle', 'Umleitung', 'ÖV']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `thst_nr` | text | Eindeutiger Identifikator der Teilhaltestellen |
+| `hst_nr` | text | Nummer der Haltestelle nach BAV |
+| `haltestl` | text | Name der Haltestelle |
+| `kt` | text | Gebiet. Wertebereich: Aargau (AG), Basel-Landschaft (BL), Basel-Stadt (BS), Deutschland (D), Frankreich (F), Jura (JU), Solothurn (SO). |
+| `richtung` | text | Fahrtrichtung |
+| `art` | text | Art der Haltestelle |
+| `typ` | text | Typ der Haltestelle |
+| `tramlinien` | text | Tramlinien, welche eine Teilhaltestelle bedienen |
+| `buslinien` | text | Buslinien, welche eine Teilhaltestelle bedienen |
+| `fahrplan` | text | Link zum Fahrplan |
+| `nachtlin` | text | Nachtlinien, welche eine Teilhaltestelle bedienen |
+| `tramzugang` | text | Zugangsmöglichkeit für Elektrorollstühle bei Tramhaltestellen; ja = hohe Kante (27 cm) |
+| `buszugang` | text | Zugangsmöglichkeit für Elektrorollstühle bei Bushaltestellen; ja = hohe Kante (22 cm) |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

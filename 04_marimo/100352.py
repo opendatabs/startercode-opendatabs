@@ -53,19 +53,68 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100352`
+- **Dataset_identifier** `100352`
 - **Title** `Kantonsblatt`
 - **Description** `<p>Das Kantonsblatt ist das offizielle Publikationsorgan des Kantons Basel-Stadt. Darin werden Meldungen (Gesetze, Verordnungen, Staatsverträge usw.) des Grossen Rats, des Regierungsrats und der Verwaltung veröffentlicht. Im vorliegenden Datensatz sind die aktuellen über das offizielle API des Kantonsblatts beziehbaren Meldungen in Tabellenform enthalten. </p><p>Bitte beachten Sie auch die Datenschutzerklärung des Kantonsblattes und die Hinweise zur Rechtsgültigkeit der Meldungen unter <a href="https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy" target="_blank">https://kantonsblatt.ch/tenant-kabbs#!/search/info/privacy-policy</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-05-31`
-- **Modified** `2026-10-04T00:33:59+00:00`
+- **Modified** `2026-10-05T00:34:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-01-02T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2031-10-01T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2031-10-04T22:00:00+00:00`
 - **Themes** `['Verwaltung', 'Gesetzgebung', 'Bau- und Wohnungswesen', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Publikation', 'Veröffentlichung', 'Baupublikationen', 'Reglemente', 'Handänderung', 'Anordnung', 'Verfügung', 'Beschlüsse', 'Erlasse', 'Konkurse', 'Grundbuch', 'Bewilligungen', 'Nutzungsgesuche', 'Kantonale Bekanntmachungen', 'Gerichtliche Entscheide', 'Vorladungen', 'Handelsregister', 'Amtsblatt', 'Zahlungsbefehl']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `rubric_de` | text | Rubrik |
+| `rubric` | text | Code der Rubrik |
+| `subrubric_de` | text | Unterrubrik |
+| `subrubric` | text | Code der Unterrubrik |
+| `publicationdate` | date | Datum, an dem die Veröffentlichung im Kantonsblatt für die Öffentlichkeit zugänglich gemacht wurde. |
+| `expirationdate` | date | Das Dokument kann nur bis zum angegebenen Datum aufgerufen werden. |
+| `language` | text | Sprache |
+| `registrationofficedisplayname` | text | Name der publizierenden Stelle |
+| `registrationofficeid` | text | Identifikationsnummer der publizierenden Stelle |
+| `registrationofficestreet` | text | Strasse der publizierenden Stelle |
+| `registrationofficestreetnumber` | text | Hausnummer der publizierenden Stelle |
+| `registrationofficeswisszipcode` | text | Postleitzahl der publizierenden Stelle |
+| `registrationofficetown` | text | Gemeinde der publizierenden Stelle |
+| `registrationofficecontainspostofficebox` | text | Hat die publizierende Stelle ein Postfach? "True" bedeutet Ja, "False" bedeutet Nein. |
+| `registrationofficepostofficeboxnumber` | text | Postfachnummer |
+| `registrationofficepostofficeboxswisszipcode` | text | Postfach Postleitzahl |
+| `registrationofficepostofficeboxtown` | text | Postfach Gemeinde |
+| `id` | text | Eindeutige Identifikationsnummer der Veröffentlichung. Wird im Gegensatz zur Meldungsnummer für API-Aufrufe und URL benötigt |
+| `publicationnumber` | text | Nummer zugehörig zur Veröffentlichung |
+| `publicationstate` | text | Nur PUBLISHED (veröffentlicht) vorhanden |
+| `primarytenantcode` | text | Code des primären veröffentlichenden Amtsblattes |
+| `primarytenantname` | text | primäres veröffentlichendes Amtsblatt |
+| `onbehalfof` | text | Name des Auftraggebers |
+| `legalremedy` | text | Rechtliche Hinweise |
+| `cantons` | text | Kürzel der beteiligten Kantone |
+| `secondarytenantstenantcode` | text | Code der zusätzlichen Mandanten, getrennt durch Komma |
+| `secondarytenantstenantname` | text | Zusätzliche Mandanten, getrennt durch Komma |
+| `secondarytenantspublicationdate` | text | Das Veröffentlichungsdatum weiterer Mandanten. In der gleichen Reihenfolge wie in der Spalte "Weitere Mandanten" aufgeführt. |
+| `repeatedpublicationspublicationnumber` | text | Falls die Veröffentlichung mehrmals getätigt wurde, werden hier die zugehörigen Meldungsnummern aufgeführt. |
+| `repeatedpublicationspublicationdate` | text | Falls die Veröffentlichung mehrmals getätigt wurde, werden hier die anderen Veröffentlichungsdaten aufgeführt. In der gleichen Reihenfolge wie in der Spalte "Mehrfache Veröffentlichungen" aufgeführt. |
+| `url_kantonsblatt` | text | Webansicht der Veröffentlichung auf der Webseite von www.kantonsblatt.ch (generiert mit Veröffentlichungs-ID) |
+| `url_pdf` | text | Downloadlink für die Veröffentlichung als PDF (generiert mit Veröffentlichungs-ID) |
+| `url_xml` | text | Downloadlink für die Veröffentlichung als XML-Datei (generiert mit Veröffentlichungs-ID) |
 
 
     ///

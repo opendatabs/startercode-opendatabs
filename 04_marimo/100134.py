@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100134`
+- **Dataset_identifier** `100134`
 - **Title** `Coronavirus (COVID-19): Teststellen`
 - **Description** `<p>Eine Übersicht der Standorte, an welchen sich die Bevölkerung während der Corona-Pandemie auf SARS-CoV-2 testen lassen konnte. Für Kinder werden von gewissen Teststellen zusätzlich zum Abstrich im Rachenbereich alternative Testmethoden angeboten. </p><p><b>Der Datensatz wurde vom Gesundheitsdepartement aktuell gehalten. Dieser wird seit 8. März 2023 nicht mehr aktualisiert. Man kann sich weiterhin bei einzelnen Arztpraxen und Institutionen testen lassen.</b></p><p>Weitere Informationen zum Coronavirus in Basel-Stadt sind hier zu finden: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,44 @@ def _(mo):
 - **Keywords** `['Corona', 'COVID-19', 'Spital', 'Krankheit', 'Coronavirus', 'Virus', 'Pandemie', 'Test', 'Lungenentzündung']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id_ts` | int | Eindeutiger Identifikator |
+| `institut` | text | Name der Teststelle |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `strasse` | text | Strassenname |
+| `hausnummer` | int | Hausnummer |
+| `plz` | text | 4-stellige Postleitzahl |
+| `ort` | text | Gemeinde |
+| `telefon` | text | Telefonnummer der Teststelle |
+| `bestehend` | text | Werden nur bestehende Patienten getestet |
+| `termin` | text | Sind Terminvereinbarungen notwendig |
+| `online` | text | URL für Online Anmeldung |
+| `bemerkung` | text | Bemerkungen zur Teststelle |
+| `oeff_wt` | text | Öffnungszeiten unter der Woche |
+| `oeff_we` | text | Öffnungszeiten am Wochenende |
+| `schnellte` | text | Verfügbarkeit von Schnelltests |
+| `kinder` | text | Testet diese Teststelle auch Kinder? |
+| `alter` | text | Mindestalter für Tests. Teststellen, welche Personen erst ab einem bestimmten Mindestalter testen, sind spezialisiert auf Corona-Tests bei Kindern. |
+| `testart` | text | Art der durchführenden Tests |
+| `symptom` | text | Müssen Kinder COVID-19 Symptome haben, um durch diese Teststelle getestet zu werden? |
+| `kommentar` | text | Bemerkungen zu Teststellen für Kinder |
+| `adressid` | text | — |
 
 
     ///

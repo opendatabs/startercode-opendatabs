@@ -58,7 +58,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100317`
+- **Dataset_identifier** `100317`
 - **Title** `Kandidierende der Ständeratswahlen 22. Oktober 2023`
 - **Description** `<p style="margin: 0cm 0cm 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Für die Ständeratswahlen vom 22. Oktober 2023 kandidieren vier Personen  für den Kanton Basel-Stadt. Insgesamt wird 1 Sitz im Ständerat gewählt.<o:p></o:p></span></p><p style="margin: 0cm 0cm 12pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 10.5pt; font-family: Arial, sans-serif;">Dieser Datensatz zeigt die Kandidierenden aus dem Kanton
 Basel-Stadt nach Geschlecht, Jahrgang und Beruf sowie die jeweiligen Listen.<o:p></o:p></span></p><p style="font-family: sans-serif;">
@@ -76,6 +76,31 @@ Basel-Stadt nach Geschlecht, Jahrgang und Beruf sowie die jeweiligen Listen.<o:p
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `listen_nr` | text | Nummer der Liste |
+| `listenbezeichnung` | text | Listenbezeichnung |
+| `bisher` | text | War die kandidierende Person bisher im Ständerat? |
+| `name_vorname` | text | Ganzer Name der kandidierenden Person |
+| `name` | text | Nachname der kandidierenden Person |
+| `vorname` | text | Vorname der kandidierenden Person |
+| `geschlecht` | text | amtliches Geschlecht der kandidierenden Person |
+| `jahrgang` | text | Jahr, in welchem die kandidierende Person geboren wurde |
+| `kurzbeschrieb` | text | Informationen zu der kandidierenden Person wie akademische(r) Titel, Beruf(e) etc. |
 
 
     ///

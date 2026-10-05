@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,23 @@ Auto generated R starter code for data set 100193.
 - **Keywords** `['Fischerei', 'Fangstatistik', 'Fische', 'Rhein', 'Birs', 'Wiese']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Jahr des Fangs |
+| `monat` | date | Jahr und Monat des Fangs |
+| `fischereikarte` | text | Fischereikarte: https://www.aue.bs.ch/wasser/fischen-basler-rheinknie/fischereikarten.html |
+| `gewasser` | text | Gewässer, wo der Fisch gefangen worden ist |
+| `fischart` | text | Art des gefangenen Fisches |
+| `lange` | double | Länge des gefangenen Fisches |
+| `kesslergrundel` | int | Anzahl der gefangenen Kesslergrundeln |
+| `schwarzmundgrundel` | int | Anzahl der gefangenen Schwarzmundgrundeln |
+| `geo_shape` | geo_shape | Geo Shape Gewässer |
+| `laufnummer` | text | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
 # Load packages

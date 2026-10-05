@@ -57,7 +57,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100005`
+- **Dataset_identifier** `100005`
 - **Title** `Standorte der IWB Ladestationen für Elektroautos`
 - **Description** `<p>IWB baut im Kanton Basel-Stadt ein Netz leistungsfähiger öffentlich zugänglicher Ladestationen auf, um der umweltfreundlichen und gerade für Ballungsgebiete idealen Elektromobilität entscheidende Impulse zu geben. Hier finden Sie unsere Ladestationen.</p>
 
@@ -74,6 +74,29 @@ def _(mo):
 - **Keywords** `['Ladestationen', 'Elektroautos', 'Elektromobilität', 'Elektroladestation']`
 - **Creator** `Industrielle Werke Basel`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `name` | text | — |
+| `description` | text | — |
+| `geometry` | geo_shape | — |
+| `beschreibung` | text | — |
+| `art` | text | — |
+| `ort` | text | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
     ///

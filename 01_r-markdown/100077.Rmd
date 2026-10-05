@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,27 @@ Auto generated R starter code for data set 100077.
 - **Keywords** `['covid19', 'pandemic', 'pandémie', 'Suisse', 'CH', 'Switzerland', 'coronavirus']`
 - **Creator** `OpenZH`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | — |
+| `time` | text | — |
+| `abbreviation_canton_and_fl` | text | — |
+| `ncumul_tested` | int | cumulative |
+| `ncumul_conf` | int | cumulative |
+| `new_hosp` | int | — |
+| `current_hosp` | int | at the given date |
+| `current_icu` | int | at the given date |
+| `current_vent` | int | at the given date |
+| `ncumul_released` | int | cumulative |
+| `ncumul_deceased` | int | cumulative |
+| `source` | text | — |
+| `current_isolated` | int | — |
+| `current_quarantined` | int | — |
+| `current_quarantined_riskareatravel` | int | — |
 
 
 # Load packages

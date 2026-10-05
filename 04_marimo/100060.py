@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100060`
+- **Dataset_identifier** `100060`
 - **Title** `Wohnbevölkerung nach Staatsangehörigkeit und Wohnviertel`
 - **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Wohnviertel. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-03-12`
-- **Modified** `2026-10-03T23:00:53+00:00`
+- **Modified** `2026-10-04T23:00:52+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,37 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wov_name` | text | Name des Wohnviertels |
+| `wohnviertel` | text | — |
+| `wov_label` | text | Nummerierung (Label) der statistischen Raumeinheit |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
+| `geo_point_2d` | geo_point_2d | — |
+| `jahr` | text | — |
+| `anteil_al` | double | Anteil Ausländer an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). |
+| `anteil_bs` | double | Anteil Kantonsbürger an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anteil_bsanch` | double | Anteil Kantonsbürger an der schweizerischen Bevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anteil_ch` | double | Anteil Schweizer an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anzahl_al` | text | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anzahl_bs` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anzahl_ch` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `gesbev_f` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `gemeinde_name` | text | Offizielle Bezeichnung der Gemeinde |
 
 
     ///

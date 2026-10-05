@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100038`
+- **Dataset_identifier** `100038`
 - **Title** `Standorte der Zählstellen für Verkehrszähldaten`
 - **Description** `Standorte der Dauerzählstellen für den motorisierten Individualverkehr (MIV) mit eigens für die Zählung installierten Induktionsschleifen und an den Induktionsschleifen von Lichtsignalanlagen (LSA). Zusätzlich die Standorte der Fussgänger- und Velozählstellen sowie der Kurzzeitzählstellen.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,40 @@ def _(mo):
 - **Keywords** `['Auto', 'Velo', 'Fussgänger', 'Lastwagen', 'LKW', 'Anhänger']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_zst` | text | — |
+| `name` | text | — |
+| `gemeinde` | text | — |
+| `klasse` | text | — |
+| `kombiniert` | text | — |
+| `art` | text | — |
+| `arme` | double | — |
+| `fahrstreif` | double | — |
+| `zweck` | text | — |
+| `typ` | text | — |
+| `strtyp` | text | — |
+| `eigentum` | text | — |
+| `betriebnah` | datetime | — |
+| `betriebzus` | text | — |
+| `link` | text | — |
+| `format` | text | — |
 
 
     ///

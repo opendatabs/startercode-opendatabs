@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100193`
+- **Dataset_identifier** `100193`
 - **Title** `Fischereistatistik Basel-Stadt`
 - **Description** `<p>Die Fischereistatistik enthält alle Fische, die aus Gewässern des Kantons Basel-Stadt entnommen worden sind. Fänge invasiver Schwarzmeergrundeln (Schwarzmundgrundeln und Kesslergrundeln) werden separat registriert. </p><p>Die Karte der verschiedenen Gewässer gibt einen Hinweis auf die Orte, an denen gefischt wird. Es kann aus ihr nicht abgeleitet werden, wo das Fischen nicht erlaubt ist. </p><p>Die Daten werden jährlich ergänzt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Fischerei', 'Fangstatistik', 'Fische', 'Rhein', 'Birs', 'Wiese']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Jahr des Fangs |
+| `monat` | date | Jahr und Monat des Fangs |
+| `fischereikarte` | text | Fischereikarte: https://www.aue.bs.ch/wasser/fischen-basler-rheinknie/fischereikarten.html |
+| `gewasser` | text | Gewässer, wo der Fisch gefangen worden ist |
+| `fischart` | text | Art des gefangenen Fisches |
+| `lange` | double | Länge des gefangenen Fisches |
+| `kesslergrundel` | int | Anzahl der gefangenen Kesslergrundeln |
+| `schwarzmundgrundel` | int | Anzahl der gefangenen Schwarzmundgrundeln |
+| `geo_shape` | geo_shape | Geo Shape Gewässer |
+| `laufnummer` | text | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
     ///

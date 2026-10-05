@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -26,6 +26,20 @@ Open Data Basel-Stadt erstellt und pflegt diese Dashboards, um öffentlich relev
 - **Keywords** `['Dashboard', 'Weiterverwendung', 'Datensätze', 'Datenportal', 'Nutzeranwendungen', 'Visualisierungen', 'Projekte', 'Datenanwendung', 'Datennutzung', 'Datenanalyse']`
 - **Creator** `Open Data Basel-Stadt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `title` | text | Der Titel des Dashboards |
+| `description` | text | Eine kurze Erklärung des Dashboards |
+| `published_at` | date | Das Datum, an dem das Dashboard veröffentlicht wurde |
+| `dashboard_category` | text | Kategorien, die das Dashboard beschreiben |
+| `themen` | text | Die übergeordneten Kategorien, die den Inhalt des Dashboards beschreiben und seine thematische Einordnung erleichtern. |
+| `url` | text | Der Weblink zur spezifischen Anwendung, Visualisierung oder zum Projekt, in dem der Datensatz verwendet wird. |
+| `foto` | text | Ein Foto des Dashboards |
+| `datensaetze` | text | Für das Dashboard relevante und verwendete Datensätze |
 
 
 # Load packages

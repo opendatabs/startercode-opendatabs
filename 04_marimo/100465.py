@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100465`
+- **Dataset_identifier** `100465`
 - **Title** `Gesammelte PET-Einwegflaschen im Kanton Basel-Stadt`
 - **Description** `Der Datensatz enthält die jährlich gesammelten Mengen an PET-Einweg-Getränkeflaschen im Kanton Basel-Stadt, gemessen in Kilogramm. Die Daten werden von PET-Recycling Schweiz erhoben und dem Statistischen Amt Basel-Stadt nach Kalenderjahr übermittelt. Abgebildet ist der Zeitraum ab 2014 mit jährlicher Aktualisierung. Erfasst werden ausschliesslich PET-Einweg-Getränkeflaschen, keine Mehrwegflaschen oder andere Kunststoffverpackungen. Die Mengen beruhen auf den Rückmeldungen von Sammelstellen, Detailhandel und Logistikpartnern und stellen aggregierte Jahreswerte für den gesamten Kanton Basel-Stadt dar. Da die PET-Getränkeflaschen in der Schweiz über ein effizientes, optimiertes, nationales Logistiknetzwerk gesammelt und rückgeführt werden, ist eine messerscharfe Eingrenzung auf den Kanton Basel-Stadt nicht möglich. Es kann sein, dass Sammelmengen von Detailhandelsfilialen im Kanton Basel-Stadt in ein Distributionszentrum ausserhalb des Kantons überführt werden und somit in den gemeldeten Daten nicht vorhanden sind. Schwankungen im Zeitverlauf können unter anderem durch veränderte Abfüllpraktiken (leichtere Flaschen, vermehrter Einsatz von Aluminiumdosen), die Verlagerung von Sammelstellen oder gesamtgesellschaftliche Trends in der Abfallvermeidung erklärt werden.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,24 @@ def _(mo):
 - **Keywords** `['Abfall']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Jahr |
+| `menge` | double | Menge in Kilogramm |
 
 
     ///

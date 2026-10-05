@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,26 @@ Auto generated R starter code for data set 100247.
 - **Keywords** `['Veranstaltungen', 'Event']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `idunique` | text | ID |
+| `sichtbar_von` | date | Sichtbar ab |
+| `sichtbar_bis` | date | Sichtbar bis |
+| `status` | text | Status |
+| `datum_von` | date | Beginn des Events |
+| `datum_bis` | date | Ende des Events |
+| `titel` | text | Name des Events |
+| `untertitel` | text | Motto des Events |
+| `text` | text | Beschreibung des Events |
+| `image` | text | — |
+| `shape` | text | — |
+| `titel_en` | text | — |
+| `untertitel_en` | text | — |
+| `text_en` | text | — |
 
 
 # Load packages

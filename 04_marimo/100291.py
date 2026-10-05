@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100291`
+- **Dataset_identifier** `100291`
 - **Title** `Gewässerschutzkarte: Gewässerschutzbereiche`
 - **Description** `<p>Gewässerschutzbereiche dienen dem qualitativen und quantitativen Schutz der ober- und unterirdischer Gewässer, denen im Kontext der Trinkwassergewinnung eine besondere Bedeutung zukommt. Die Gewässerschutzbereiche sind eindeutig definiert und unterlagern Grundwasserschutzzonen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['grundwasserschutz', 'grundwasser', 'gewasserschutz', 'gewasserschutzrecht', 'trinkwasser']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Die 2D Polygongeometrie kann aus Geraden bestehen. Multigeometrien werden nicht unterstützt. |
+| `idgbereich` | text | Eindeutiger Identifikator des Gewässerschutzbereichs. |
+| `typ` | text | Gewässerschutzbereiche unterscheiden sich im Kt. Basel-Stadt in unterirdische Gewässer, unterirdische Zuströmbereiche und übrige Bereiche. |
+| `kantypbez` | text | Bezeichnung des Schutzbereichtyps gemäss kantonalen Standard. |
+| `bemerkung` | text | Bemerkung zum Gewässerschutzbereich |
 
 
     ///

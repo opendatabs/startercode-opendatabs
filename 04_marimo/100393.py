@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100393`
+- **Dataset_identifier** `100393`
 - **Title** `Kandidierende der Grossratswahlen 2024 nach Häufigkeit der Kandidatur seit 2008`
 - **Description** `<p style="">Dieser Datensatz zeigt die Kandidierenden der Grossratswahlen 2024 nach Häufigkeit ihrer Kandidatur seit 2008<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe', 'Gesamterneuerungswahl']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `haufigkeit` | text | Häufigkeit von Kandidaturen |
+| `kandidaturen` | text | Kandidaturen seit 2008 |
+| `gewahlt` | text | Gewählt zwischen 2008 bis 2020 |
+| `anzahl` | double | Anzahl Kandidierende |
 
 
     ///

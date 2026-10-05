@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100182`
+- **Dataset_identifier** `100182`
 - **Title** `Bohrkataster`
 - **Description** `<p>Diese Daten zeigen alle öffentlich einsehbaren Bohrungen, Erdwärmesonden und Sondierbohrungen, die i. d. R. ins Grundwasser reichen und ausserhalb der Grundwasserschutzzonen S2 und S1 liegen. Sie geben Auskunft über die Art, den Zustand und die Dimensionen der Bohrungen und enthält Informationen zum Untergrund.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,47 @@ def _(mo):
 - **Keywords** `['Grundwasser', 'Erdwärme', 'Hydrogeologie']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `art_der_bohrung` | text | Abgeleitete Klassifikation (Transform) |
+| `bohr_katasternummer` | text | Eindeutiger Identifikator einer Bohrung (Bohr-Katasternummer) |
+| `ortsangabe` | text | Die Ortsangabe ist i.d.R. Strassenname mit und ohne Hausnummer, kann aber auch ein Flurname sein. |
+| `bohrjahr` | date | Erstellungsjahr der Bohrung |
+| `terrain_kote` | double | Kote (Höhe in m ü. M.) des Terrains (Gelände) |
+| `bohransatz_kote` | double | Kote (Höhe in m ü. M.), an der die Bohrung angesetzt wurde |
+| `hoehe_grundwasserspiegel` | double | Grundwasserspiegel/-stand in m ü. M. zum Zeitpunkt der Bohrung |
+| `datum_grundwasserspiegelmessung` | text | Datum, an dem die Höhe des Grundwasserspiegels gemessen wurde. Kann ein vollständiges Datum, eine Monats- und Jahresangabe oder nur ein Jahr beinhalten. |
+| `hoehe_felsoberkante` | double | Höhe der Felsoberkante der Bohrung in m.ü.M. |
+| `flurabstand` | double | Hoehe_Felsoberkante minus Hoehe_Grundwasserspiegel (nur wenn > 0) |
+| `stratigraphische_beschreibung_fels` | text | Beschreibung der Felsschicht |
+| `bohrsohle` | double | Unterkante bzw. der Endpunkt der Bohrung in m ü. M. |
+| `zustand_der_bohrung` | text | Beschreibt den aktuellen Zustand einer Bohrung |
+| `hydrologisches_jahrbuch` | boolean | Ist die zur einer Messstelle ausgebauten Bohrung im akutellen hydrologischen Jahrbuch vorhanden |
+| `rohr_durchmesser` | int | Durchmesser des eingebauten Rohrs in mm |
+| `grundwassermessstellen_typ` | text | Definiert, (a) ob die Messstelle zur Aufzeichnung von Wasserstand und Temperatur aufgehoben wurde (historisch) oder in Betrieb (online o. offline) ist und (b) ob sie über eine Datenfernübertragungseinheit/Modem verfügt (online) oder nicht (offline). |
+| `schraegbohrung` | boolean | Ist diese Bohrung eine Schrägbohrung |
+| `geplante_bohrung` | boolean | Handelt es sich um eine geplante Bohrung |
+| `geothermische_bohrung` | boolean | Wurde in der Bohrung eine Erdwärmesond verbaut |
+| `grundwasserdaten` | boolean | '1' wenn Grundwasserspiegel bekannt (>= 0), sonst '0' |
+| `profil` | text | Visuelle Darstellung der Schichten, die bei einer geologischen Bohrung im Untergrund angetroffen wurden. |
+| `situationsplan` | text | Plan zum Standort der Bohrung |
+| `foto` | text | Foto zur Lage der Bohrung |
 
 
     ///

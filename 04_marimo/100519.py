@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100519`
+- **Dataset_identifier** `100519`
 - **Title** `Anzahl durch Wärmepumpen beheizte Gebäude`
 - **Description** `Dieser Datensatz zeigt die monatliche Entwicklung der Anzahl Gebäude im Kanton Basel-Stadt, die als primäres Heizsystem (Variante: Hauptheizsystem) eine Wärmepumpe nutzen. Die Daten basieren auf dem kantonalen Gebäude- und Wohnungsregister (GWR) und umfassen ausschliesslich fertiggestellte Gebäude. Gezählt wird nicht die Anzahl der installierten Wärmepumpenanlagen, sondern die Anzahl der damit beheizten Gebäude. Genauso wie eine Wärmepumpe mehrere Gebäude beheizen kann, kann ein Gebäude von mehreren Anlagen versorgt werden. Entsprechend weichen die Zahlen von jenen des Amtes für Umwelt und Energie Basel-Stadt (AUE) ab. Diese sind unter <a href="https://www.bs.ch/wsu/aue/umweltdaten#heizungen">https://www.bs.ch/wsu/aue/umweltdaten#heizungen</a> abrufbar und zeigen die Anzahl Anlagen. Sprünge oder unerwartete Veränderungen in der Zeitreihe können zwei Ursachen haben: Einerseits werden laufend Nacherfassungen vorgenommen, andererseits können technische Anpassungen bei der Datenverearbeitung zu Verschiebungen führen. Datensprünge sind daher nicht zwingend als reale Veränderungen wie beispielweise den Heizungsersatz zurückfzuführen.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Gebäude', 'Heizung']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr_monat` | date | Jahr und Monat, an dem die Wärmepumpen erfasst wurden |
+| `jahr` | text | Jahr, an dem die Wärmepumpen erfasst wurden |
+| `monat` | int | Monat an dem die Wärmepumpen erfasst wurden |
+| `mit_warmepumpe_beheizte_gebaude` | double | — |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100064`
+- **Dataset_identifier** `100064`
 - **Title** `Liniennetz des öffentlichen Verkehrs`
 - **Description** `Der Datensatz zeigt das Liniennetz des öffentlichen Verkehrs im Kanton Basel-Stadt sowie teilweise in der trinationalen Agglomeration. Es wird nach Liniennummer, Transportunternehmen und Zeitdauer das Angebots unterschieden.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Tram', 'Bus', 'Zug', 'Haltestelle', 'Baustelle', 'Umleitung', 'ÖV']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `l_nr` | text | Eindeutiger Identifikator der Linien |
+| `liniennmr` | text | Liniennummer |
+| `strecke` | text | Strecke |
+| `hinrueck` | text | Hin- und Rückweg |
+| `fahrzeug` | text | Transportmittel |
+| `angebot` | text | Zeitraum, in welchem das Angebot besteht |
+| `tu` | text | Name des Transportunternehmens |
+| `shp_length` | int | Liniengeometrie |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,25 @@ Auto generated R starter code for data set 100120.
 - **Keywords** `['Verkehrsunfall', 'Fussgänger', 'Schaden', 'Gefährdung', 'Velo', 'Auto', 'Motorräder', 'Unfall', 'Verkehrsunfälle']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | text | Eindeutiger Identifikator des Unfalls |
+| `vu_typ` | text | Der Unfalltyp bezeichnet den Verkehrsvorgang bzw. die Konfliktsituation, welche massgebend für die Entstehung des Unfalls ist. |
+| `vu_schwerekategorie` | text | Beschreibung der Unfallschwerekategorie. |
+| `vu_jahr` | date | Unfalljahr in dem sich der Unfall ereignet hat. |
+| `vu_monat` | int | Unfallmonat in dem sich der Unfall ereignet hat. |
+| `vu_stunde` | int | Beschreibung der Unfallstunde, in der sich der Unfall ereignet hat. |
+| `vu_wochentag` | text | Wochentag an dem sich der Unfall ereignet hat. |
+| `vu_strassenart` | text | Art der Strasse auf der sich der Unfall ereignet hat. |
+| `vu_fussgaengerbeteiligung` | boolean | War ein Fussgänger am Unfall beteiligt. |
+| `vu_fahrradbeteiligung` | boolean | War ein Fahrrad am Unfall beteiligt. |
+| `vu_motorradbeteiligung` | boolean | War ein Motorrad am Unfall beteiligt. |
 
 
 # Load packages

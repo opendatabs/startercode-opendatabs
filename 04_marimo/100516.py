@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100516`
+- **Dataset_identifier** `100516`
 - **Title** `Vernehmlassungen`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die abgeschlossenen Vernehmlassungen des Kanton Basel-Stadt.</p><p style="font-family: sans-serif;">Weitere Datensätze rundum Vernehmlassungen in Basel-Stadt finden Sie hier: <a href="https://data.bs.ch/explore/?refines=tags:vernehmlassungen" target="_blank">https://data.bs.ch/explore/?refines=tags:vernehmlassungen</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Vernehmlassungen', 'Parteien', 'Partizipation', 'Mitwirken']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `name_vernehmlassung` | text | — |
+| `startdatum` | date | — |
+| `enddatum` | date | — |
+| `beschreibung` | text | — |
+| `url_textrueckmeldungen` | text | — |
+| `url_dokumente` | text | — |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100234`
+- **Dataset_identifier** `100234`
 - **Title** `Nutzungsplan - Zonenplan Stadt Basel: Überlagernde Festlegungen`
 - **Description** `<p>Der Datensatz beinhaltet die rechtskräftigen überlagernden Festlegungen gemäss dem Zonenplan. Diese Festlegungen können die Grundnutzung ergänzen, aber auch überstimmen (z.B. Bebauungspläne, Schutzzwecke von Natur- und Landschaftsschutzzonen).</p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,37 @@ def _(mo):
 - **Keywords** `['kantonaler Nutzungsplan', 'Landnutzung', 'Nutzungsplan', 'Nutzungsplanung', 'Flächennutzungsplan', 'Naturschutzzonen', 'Babauungsplan']`
 - **Creator** `Städtebau & Architektur`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Die 2D Polygongeometrie kann aus Geraden oder Kreisbögen bestehen. Multigeometrien werden nicht unterstützt. |
+| `id_ueberlagernde_festlegung` | text | Eindeutiger Identifikator der Nutzungszone. |
+| `festlegung_ueberlagernd` | text | Das Bau- und Planungsgesetz bestimmt die Art der zulässigen Bebauung bzw. Nutzung anhand von verschiedenen Klassen, wobei die Zuordnung zu Grundnutzung (Flächen) oder überlagernden Festlegungen (Flächen, Linien, Punkte) eindeutig ist. |
+| `festlegung_ueberlagernd_text` | text | Das Bau- und Planungsgesetz bestimmt die Art der zulässigen Bebauung bzw. Nutzung anhand von verschiedenen Klassen, wobei die Zuordnung zu Grundnutzung (Flächen) oder überlagernden Festlegungen (Flächen, Linien, Punkte) eindeutig ist. |
+| `schutzzweck` | text | Der Schutzzweck ist i.d.R. ein allgemeiner Text aus einem Planungsbeschluss oder auch nur dessen laufende Nummer. |
+| `bezeichnung` | text | Ein rechtskräftiger Bebauungsplan (BP) erhält eine Nummer wenn er in die Gesetzessammlung aufgenommen wird (z.B. BP 044 , siehe SG 730.150 - Spezielle Bauvorschriften und Bebauungspläne). Zwischen "BP" und der dreistelligen Nummer und einem allfälligen Freitext müssen Leerzeichen gesetzt werden (z.B. "BP 044 Steinentorstrasse") In MapBS wird der Freitext nicht angezeigt. Wenn mehrere Bebauungspläne gelten, wird die Bezeichnung entsprechend ergänzt (BP 214+108). |
+| `verbindlichkeit` | text | Die Verbindlichkeit von Planungsobjekten die in einer Planungskarte (z.B. in einem Zonenplan) dargestellt werden, kann sich unterscheiden. Manche Inhalte werden nicht in einem Nutzungsplanungsverfahren festgelegt, sondern stammen aus anderen Feststellungsverfahren anderer Behörden oder haben nur informativen Charakter. Das Minimale Geodatenmodell (MGDM) 73 des Bundes zur Nutzungsplanung gibt verschiedene Ausprägungen für die Verbindlichkeit und ihre Wirkung auf Eigentümer vor. Im Kanton Basel-Stadt werden die Verbindlichkeiten die nicht im Vefahren der Nutzungsplanung festgelegt wurden, allgemein als "orientierender Planinhalt" klassifiziert. |
+| `rekurs_haengig` | boolean | Das Attribut beschreibt, ob für eine in Kraft getretene Zone Rechtsmittel in Anspruch genommen wurden und eine gerichtliche Entscheidung noch aussteht. Verwendet wird dieses Attribut beim Gewässerraum und in der Nutzungsplanung und genau für die Gebiete/Zonen, ggf. Zonenteile für die der Einspruch gilt (diese werden dann mit einer speziellen Darstellung versehen). Obwohl der Rekurs bzw. die Einsprache also das politische Geschäft betrifft, können nur einzelne Inhalte (z.B. Parzellen/Zonen) davon betroffen sein. |
+| `geschaeftsbezeichnung` | text | Die Geschäftsbezeichung kann sich je nach ÖREB-Thema unterscheiden. Z.T. wird eine systematische Nummern/Buchstabenkombinationen (z.B. Bau- und Strassenlinien der Stadt Basel) benutzt, meist haben die Geschäftsbezeichnungen aber eine Ortspezifische Bezieichnung. Abkürzungen am Anfang der Bezeichnung weisen auf die Verbunden ÖREB Themen. Die Abkürzung TA steht für Technische Aenderung. |
+| `geschaeftsstatus` | text | Der Geschäftsstatus unterscheidet ob das politische Geschäft bereits in Kraft ist, oder ob es sich noch um eine laufende Änderung handelt. Bei laufende Änderungen wird zwischen Auflage- und Beschlussphase differenziert. Letztere werden durch unterschiedliche Rekurs- bzw. Referendumfristen vorgegeben. |
+| `datum_status` | date | Das Attribut bezeichnet den Start des aktuellen Geschäftsstatus. |
+| `geolink` | text | Enthält den Link zu allen Rechtsdokumenten auf ÖREBlex https://oereblex.bs.ch/, die das jeweilige Geschäft betreffen. Die Links werden als XML gespeichert und werden durch Austausch der Endung (".html") besser lesbar. |
+| `bemerkung_geschaeft` | text | Bemerkungen zum Geschäft |
+| `id_geschaeft` | text | Eindeutiger Identifikator des Geschäfts. |
 
 
     ///

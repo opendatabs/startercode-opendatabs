@@ -53,19 +53,43 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100082`
+- **Dataset_identifier** `100082`
 - **Title** `Standorte Messstationen Smart Climate Luftklima`
 - **Description** `<p>Der Datensatz zeigt die Standorte der Messstationen für den Datensatz <a href="https://data.bs.ch/explore/dataset/100009/" target="_blank">«Luftklima Smart Regio Basel» (https://data.bs.ch/explore/dataset/100009/)</a>.</p><p><b>Änderungsprotokoll:</b></p><p><b>18.04.2024:</b> Die Koordinaten werden automatisch plausibilisiert. Es werde nur Koordinaten angezeigt, die in einem bestimmten Umkreis von Basel sind. Der Code dazu ist hier verfügbar: <a href="https://github.com/opendatabs/data-processing/blob/master/meteoblue_wolf/etl.py" target="_blank">https://github.com/opendatabs/data-processing/blob/master/meteoblue_wolf/etl.py</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-05-12`
-- **Modified** `2026-10-04T21:10:29+00:00`
+- **Modified** `2026-10-05T11:10:32+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1999-12-30T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-03T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-04T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Wetter', 'Temperatur', 'Regen', 'Niederschlag', 'Sensoren', 'Klima', 'Wolf-Areal', 'Smart City Lab']`
 - **Creator** `meteoblue AG`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `name_original` | text | ID der Wetterstation |
+| `name_custom` | text | Name der Wetterstation |
+| `dates_min_date` | datetime | Älteste Aufzeichnung von Wetterdaten durch diese Station |
+| `dates_max_date` | datetime | Neuste Aufzeichnung von Wetterdaten durch diese Station |
+| `coords` | geo_point_2d | Automatisch plausibilisierte Koordinaten |
+| `lon` | double | — |
+| `lat` | double | — |
+| `stadtklima_basel_link` | text | Link auf die entsprechende Station auf der "Stadtklima Basel" Website, wo historische Daten und Vorhersagen abgerufen werden können. |
 
 
     ///

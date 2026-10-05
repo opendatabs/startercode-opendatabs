@@ -57,7 +57,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100357`
+- **Dataset_identifier** `100357`
 - **Title** `Baumkronenbedeckung`
 - **Description** `<p>Dieser Datensatz zeigt die gesamte durch Bäume beschattete Fläche (Baumkronenbedeckung) im Kanton Basel-Stadt in verschiedenen Jahren. Der Kanton Basel-Stadt erhebt durch Laserabtastung der Oberfläche (LiDAR) Daten zur Baumkronenbedeckung (durch Bäume beschattete Fläche) über die gesamte Kantonsfläche. Die von LiDAR abgeleitete Baumkronenbedeckung und Kennzahlen wurden für 2012, 2021 und 2024 berechnet. Die Nachführung wird in Zukunft alle drei Jahre stattfinden (2027 und 2030), so dass die Entwicklung der Baumkronendeckung in Basel genau verfolgt werden kann.</p><p>Die Stadtgärtnerei stellt der interessierten Öffentlichkeit dieses digitale Wissen zur Verfügung: <a href="https://www.bs.ch/bvd/stadtgaertnerei/unsere-abteilungen/gruenflaechenunterhalt/staedtischer-baumbestand#baumkronenbedeckung" target="_blank">Stadtgärtnerei des Kantons Basel-Stadt - Baumkronenbedeckung (https://www.bs.ch/bvd/stadtgaertnerei/unsere-abteilungen/gruenflaechenunterhalt/staedtischer-baumbestand#baumkronenbedeckung)</a>
 </p><p>
@@ -74,6 +74,26 @@ Man kann die LiDAR-Daten im PNG- und PGW-Format in der Tabellenansicht herunterl
 - **Keywords** `['Baum', 'Baumbestand', 'Baumkrone', 'Kronenbedeckung', 'Vegetation', 'LiDAR']`
 - **Creator** `Stadtgärtnerei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr |
+| `url_png` | text | Downloadlink zum Bild der Baumkronenbedeckung im PNG-Format. |
+| `url_pgw` | text | Downloadlink zur Weltdatei im PNG-Format. Eine Weltdatei enthält Georeferenzierungsdaten für ein zugehöriges Bild (hier im PNG-Format), um dessen genaue Positionierung auf einer Karte zu ermöglichen. |
+| `url_tif` | text | Downloadlink zum Bild der Baumkronenbedeckung im TIF/TIFF-Format. |
 
 
     ///

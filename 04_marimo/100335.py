@@ -55,7 +55,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100335`
+- **Dataset_identifier** `100335`
 - **Title** `Baustellen`
 - **Description** `<p>Dieser Datensatz enthält umfassende Informationen zu aktuellen und bevorstehende Baustellen (Baubewilligung erteilt) auf öffentlichem Grund im Kanton Basel-Stadt. Er enthält Informationen wie z. B. an welcher Strasse sich die Baustelle befindet, die Beschreibung des Projektes, mögliche Zusatzinformationen, Links zum Projekt und zu Anwohnerinformationen. Die Fallnummer der Allmendbewilligung und der Link zum OGD-Datensatz mit den Allmendbewilligungen sind ebenfalls im Datensatz aufgeführt.</p><p>Dieser Datensatz ist maschinenlesbar und barrierefrei. </p><p>
 </p><p>
@@ -70,6 +70,33 @@ Diese Daten werden vom Tiefbauamt des Kantons Basel-Stadt zur Verfügung gestell
 - **Keywords** `['Baustelle', 'bauen', 'Strasse', 'Allmendbewilligung', 'Baubeginn', 'Bauende']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `projekt_name` | text | Das ist die Strasse auf dem das Projekt stattfindet. |
+| `projekt_beschrieb` | text | Beschreibung |
+| `projekt_info` | text | Zusatzinformationen |
+| `projekt_link` | text | Link zum Projekt |
+| `datum_von` | date | Baubeginn |
+| `datum_bis` | date | Bauende |
+| `dokument1` | text | Dokument mit Anwohnerinformationen |
+| `dokument2` | text | Dokument mit Anwohnerinformationen |
+| `dokument3` | text | Dokument mit Anwohnerinformationen |
+| `id` | int | Fallnummer Allmendbewilligung |
+| `allmendbewilligungen` | text | Link zum OGD-Datensatz mit den Allmendbewilligungen |
 
 
     ///

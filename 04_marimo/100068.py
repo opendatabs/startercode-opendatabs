@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100068`
+- **Dataset_identifier** `100068`
 - **Title** `Rheinüberwachungsstation: Umweltanalyse Schwebstoffe`
 - **Description** `<p class="MsoNormal"><span style="font-size: 11pt; line-height: 16.8667px; font-family: Calibri, sans-serif;">Der Datensatz enthält die Analysedaten aus der binationalen Rheinüberwachungsstation (RÜS) in Weil am Rhein (Rhein-Kilometer 171,37) seit Bestehen der Station im Jahr 1993 aus der Matrix Schwebstoffe. </span></p><p class="MsoNormal"><span style="font-family: Calibri, sans-serif; font-size: 11pt;">Der Rhein wird aktuell auf 670 Schadstoffe untersucht, 420 davon täglich. Der Unterhalt der Anlage und die Analytik werden durch das Amt für Umwelt und Energie des Kantons Basel-Stadt (AUE) geleistet. Auftraggeber sind die Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg (LUBW) und das schweizerische Bundesamt für Umwelt (BAFU).</span><br></p><p class="MsoNormal"><span style="line-height: 16.8667px;"><font face="Calibri, sans-serif"><span style="font-size: 14.6667px;">Weitere Informationen: <a href="https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues" target="_blank">https://www.bs.ch/wsu/aue/abteilung-umweltlabor/rheinueberwachungsstation-weil-am-rhein-rues</a></span></font></span></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,46 @@ def _(mo):
 - **Keywords** `['Rhein', 'Messwert', 'Wasserqualität', 'Fluss', 'Bach', 'Chemie', 'Rüs']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `probentyp` | text | Unterscheidet zwischen Matrix Wasser und Feststoff (Schwebstoff) |
+| `probenahmestelle` | text | Ort, an dem die Probe entnommen wurde. |
+| `geo_point_2d` | geo_point_2d | Koordinaten der Probeentnahmestelle. |
+| `x_coord` | text | X-Koordinate der Probeentnahmestelle in WPSG:2056. |
+| `y_coord` | text | X-Koordinate der Probeentnahmestelle in WPSG:2056. |
+| `probenahmedatum` | text | Datum, an welchem die Probe entnommen wurde. |
+| `entnahmezeit` | text | Uhrzeit, zu der die Probe entnommen wurde. |
+| `probenahmedauer` | text | Dauer der Probenahme. Dauer codiert nach Konvention der Internationalen Kommission zum Schutz des Rheins (IKSR) 1M =24h; 14M=336h; 28M=672; 1M14 24h Mischprobe alle 14Tage; Sammelprobe=Dauer variabel abhängig von Schwebstoffanteil. MS steht für Mischung Stahl, MK für Mischung Kunststoff. E steht für Einzelmessung, M für Mischprobenentnahme. |
+| `reihenfolge` | text | Sortierfolge für Auswertungen. |
+| `gruppe` | text | Gruppe der gemessenen Stoffe. |
+| `parameter` | text | Gemessener Stoff. |
+| `bg` | double | Minimal bestimmbare Konzentration des gemessenen Stoffes. |
+| `wert` | text | Gemessener Wert. |
+| `wert_num` | double | Gemessener Wert als Dezimalzahl. Werte, die unterhalb der Bestimmungsgrenze liegen (z. B. <0,25) werden nicht angegeben. |
+| `einheit` | text | Einheit, in welcher der Wert gemessen wird. |
+| `auftragnr` | text | Nummer des Auftrags. |
+| `probennr` | text | Nummer der Probe. |
+| `resultatnummer` | text | Nummer des Resultats. |
+| `automatische_auswertung` | text | Angabe, ob eine automatische Auswertung erfolgte oder nicht. |
+| `cas_bezeichnung` | text | ID des chemischen Stoffs, siehe https://de.wikipedia.org/wiki/CAS-Nummer. |
+| `bafu_bezeichnung` | text | Bezeichnung gemäss Bundesamt für Umwelt BAFU. |
+| `allgemeine_parametergruppe` | text | Gruppe der Parameter. |
+| `probenahmedatum_date` | date | Datum der Probeentnahme. |
+| `probenahmejahr` | text | Jahr der Probeentnahme. |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,26 @@ Auto generated R starter code for data set 100287.
 - **Keywords** `['Sperrzone', 'Baustelle']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `idunique` | text | — |
+| `sichtbar_von` | date | — |
+| `sichtbar_bis` | date | — |
+| `status` | text | — |
+| `datum_von` | date | Datum Beginn der Baustelle |
+| `datum_bis` | date | Wenn bekannt, geplantes Ende der Baustelle. Sonst bis 31.12.2099 |
+| `titel` | text | Ort der Baustelle |
+| `untertitel` | text | Beschreibung der Baustelle |
+| `text` | text | Grund der Baustelle |
+| `image` | text | Bild |
+| `shape` | text | — |
+| `titel_en` | text | — |
+| `untertitel_en` | text | — |
+| `text_en` | text | — |
 
 
 # Load packages

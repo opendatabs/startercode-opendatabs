@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100160`
+- **Dataset_identifier** `100160`
 - **Title** `Smarte Strasse: Parkplatzbelegung`
 - **Description** `<p style="font-family: sans-serif;">Der Datensatz zeigt die Anzahl besetzter und freier Parkplätze in den beiden Zonen «blau» und «gelb».</p><p style="font-family: sans-serif;"><b>Die Detektion freier Parkplätze mittels Kamera befindet sich noch in der Testphase. Aus diesem Grund sind die Werte mit Vorsicht zu geniessen und können von den tatsächlichen Zuständen abweichen.</b><br></p><p style="font-family: sans-serif;">Zusätzlich relevante Datensätze für die Parkplatzbelegung:</p><ul><li><a href="https://data.bs.ch/explore/dataset/100171/" target="_blank">Zu- und Wegfahrten, Parkplatzauslastung</a></li><li><a href="https://data.bs.ch/explore/dataset/100176/" target="_blank">Parkplatz-Zonen</a></li></ul><p class="" style="font-family: sans-serif;">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</p><ul><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href="https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen" target="_blank">https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen</a> </li><li>Genaue Standorte aller Sensoren: <a href="https://data.bs.ch/explore/dataset/100114/" target="_blank">https://data.bs.ch/explore/dataset/100114/</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><b>Die Parkplatz-Kamera an der Gundeldingerstrasse wurde am Dienstag 4.10.2022 abmontiert. Es werden keine Daten mehr erhoben.</b><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,30 @@ def _(mo):
 - **Keywords** `['Smarte Strasse', 'Parkplatz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Zeitstempel |
+| `blue_total` | int | Total Anzahl erfasster blauer Parkplätze |
+| `blue_available` | int | Anzahl verfügbarer blauer Parkplätze |
+| `blue_occupied` | int | Anzahl besetzte blaue Parkplätze |
+| `yellow_total` | int | Total Anzahl erfasste gelbe Parkplätze |
+| `yellow_available` | int | Anzahl verfügbare gelbe Parkplätze |
+| `yellow_occupied` | int | Anzahl besetzte gelbe Parkplätze |
+| `timestamp_text` | text | — |
 
 
     ///

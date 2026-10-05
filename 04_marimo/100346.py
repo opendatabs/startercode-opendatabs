@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100346`
+- **Dataset_identifier** `100346`
 - **Title** `Kennzahlen der Abstimmungen`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die Resultate aller Volksabstimmungen seit dem 8. März 2015 für den Kanton Basel-Stadt. Es werden verschiedene Kennzahlen nach Gemeinde differenziert.</p><p style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">Kantonsblatt</a> (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">https://www.kantonsblatt.ch/#!/search/publications</a>) des Kantons Basel-Stadt publiziert werden.</p><p style="font-family: sans-serif;">Detaillierte Resultate auf Wahllokal-Ebene findet man im Datensatz <a href="https://data.bs.ch/explore/dataset/100345//" target="_blank">"Abstimmungen Details"</a> (<a href="https://data.bs.ch/explore/dataset/100345/" target="_blank">https://data.bs.ch/explore/dataset/100345/</a>)</p><p style="font-family: sans-serif;">Eine Liste der Wahllokale findet man im Datensatz "<a href="https://data.bs.ch/explore/dataset/100098//" target="_blank">Wahllokale Kanton Basel-Stadt</a>" (<a href="https://data.bs.ch/explore/dataset/100098//" target="_blank">https://data.bs.ch/explore/dataset/100098//</a>)</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,56 @@ def _(mo):
 - **Keywords** `['Abstimmung', 'Wahlen', 'Demokratie', 'Teilhabe']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `abst_datum` | date | Datum der Abstimmung |
+| `abst_id` | int | Laufnummer der Vorlage |
+| `abst_titel` | text | Titel der Vorlage |
+| `abst_id_titel` | text | — |
+| `abst_art` | text | Art der Vorlage; national oder kantonal |
+| `gemein_id` | int | — |
+| `gemein_name` | text | — |
+| `id` | text | Die ID besteht aus dem Datum, der ID der Vorlage und der ID der Gemeinde |
+| `result_art` | text | Zwischenresultat (brieflich Stimmende) oder Schlussresultat (alle Stimmen) |
+| `stimmber_anz` | int | Anzahl der Stimmberechtigten |
+| `stimmber_anz_m` | int | Anzahl der stimmberechtigten Männer |
+| `stimmber_anz_f` | int | Anzahl der stimmberechtigten Frauen |
+| `stimmr_anz` | int | Anzahl Stimmrechtsausweise |
+| `durchschn_stimmbet_pro_abst_art` | double | Anzahl gültige Stimmzettel geteilt durch Anzahl Stimmberechtigte im Kanton Basel-Stadt |
+| `durchschn_briefl_ant_pro_abst_art` | double | Anzahl brieflich abgegebene Stimmen geteilt durch Anzahl abgegebener Stimmen |
+| `anz_elektr_pro_abst_art` | int | Anzahl elektronisch Stimmender |
+| `eingel_anz` | int | Anzahl eingelegter Stimmzettel |
+| `leer_anz` | int | Anzahl leer eingelegter Stimmzettel |
+| `unguelt_anz` | int | Anzahl ungültiger Stimmzettel |
+| `guelt_anz` | int | Anzahl gültiger Stimmzettel |
+| `ja_anz` | double | Anzahl Ja-Stimmen |
+| `nein_anz` | int | Anzahl Nein-Stimmen |
+| `anteil_ja_stimmen` | double | Anteil der Ja-Stimmen am Total der Stimmen mit gültiger Antwort |
+| `abst_typ` | text | Angabe, ob für eine Vorlage ein Gegenvorschlag vorliegt oder nicht |
+| `gege_ja_anz` | int | Anzahl Ja-Stimmen für den Gegenvorschlag |
+| `gege_nein_anz` | int | Anzahl Nein-Stimmen für den Gegenvorschlag |
+| `sti_initiative_anz` | int | Anzahl Stimmen bei der Stichfrage für die Initiative |
+| `sti_gegenvorschlag_anz` | int | Anzahl Stimmen bei der Stichfrage für den Gegenvorschlag |
+| `gege_anteil_ja_stimmen` | double | Anteil der Ja-Stimmen für den Gegenvorschlag am Total der Stimmen mit gültiger Antwort |
+| `sti_anteil_init_stimmen` | double | Anteil der Stimmen bei der Stichfrage für die Initiative |
+| `init_oga_anz` | int | Anzahl Stimmen ohne gültige Antwort zu einer Vorlage |
+| `gege_oga_anz` | int | — |
+| `sti_oga_anz` | int | — |
+| `abst_datum_text` | text | — |
 
 
     ///

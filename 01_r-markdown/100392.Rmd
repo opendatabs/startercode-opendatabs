@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,21 @@ Auto generated R starter code for data set 100392.
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe', 'Gesamterneuerungswahl']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahljahr` | text | — |
+| `altersgruppe` | text | Altersgruppe Ende Wahljahr (berechnet als Wahljahr - Jahrgang) |
+| `listenkurzbezeichnung` | text | Abkürzung der Liste |
+| `geschlecht` | text | amtliches Geschlecht der kandidierenden Person |
+| `anzahl` | int | Anzahl Kandidierende |
+| `anteil` | double | Anteil im Wahljahr in % |
+| `anteil_altersgruppe` | double | Anteil im Wahljahr und in Altersgruppe in % |
+| `anteil_liste` | double | Anteil im Wahljahr und in Liste in % |
+| `frauenanteil_liste` | text | — |
 
 
 # Load packages

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100028.
 - **Description** `Dieser Datensatz enthält Bio-Klappen für organische Küchenabfälle im Kanton Basel-Stadt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-02-20`
-- **Modified** `2026-10-04T00:00:00+00:00`
+- **Modified** `2026-10-05T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -25,6 +25,20 @@ Auto generated R starter code for data set 100028.
 - **Keywords** `['Recycling', 'Wiederverwertung', 'Abfall', 'Müll', 'Entsorgen']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `rc_id` | int | Eindeutiger Identifikator |
+| `rc_name` | text | Bezeichnung der Bioklappe |
+| `rc_postleitzahl` | text | Postleitzahl |
+| `rc_ort` | text | Gemeinde |
+| `mapbs_rc_link` | text | Webseite-URL mit Informationen zur Bio-Klappe |
+| `map_links` | text | — |
 
 
 # Load packages

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100278`
+- **Dataset_identifier** `100278`
 - **Title** `Fischereiverbotszonen Rhein`
 - **Description** `<p>Der Datensatz beinhaltet die Zonen innerhalb des Kantons Basel-Stadt, in welchen das Fischen nicht erlaubt ist. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Angeln', 'Fischen']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id` | int | Identifikationsnummer |
+| `beschreibung` | text | Beschreibung |
+| `beschreibung_en` | text | — |
 
 
     ///

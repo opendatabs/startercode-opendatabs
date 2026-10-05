@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100030`
+- **Dataset_identifier** `100030`
 - **Title** `Schulstandorte (Gemeinden Riehen und Bettingen)`
 - **Description** `Schulstandorte der Primarstufe (Gemeinden Riehen und Bettingen)`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,38 @@ def _(mo):
 - **Keywords** `['Schule', 'Lernen', 'Schüler', 'Schülerinnen', 'Lehrer', 'Lehrerinnen']`
 - **Creator** `Gemeinde Riehen`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_schule` | int | — |
+| `standort` | text | — |
+| `typ` | text | — |
+| `name` | text | — |
+| `telefon1` | text | — |
+| `telefon2` | text | — |
+| `strasse` | text | — |
+| `hausnummer` | text | — |
+| `plz` | text | — |
+| `ort` | text | — |
+| `fax` | text | — |
+| `link` | text | — |
+| `geometrie` | text | — |
+| `map_links` | text | — |
 
 
     ///

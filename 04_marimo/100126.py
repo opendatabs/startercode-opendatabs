@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100126`
+- **Dataset_identifier** `100126`
 - **Title** `Wohnbevölkerung nach Geschlecht, Staatsangehörigkeit und Wohnviertel`
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Geschlecht und detaillierter Staatsangehörigkeit auf Ebene Wohnviertel per Jahresende. Die Daten werden jährlich aktualisiert.<br>Die hier veröffentlichten Werte der Jahre 1979 bis 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 1979 auf Auswertungen aus dem Einwohnerregister. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,30 @@ def _(mo):
 - **Keywords** `['Nationalität', 'Gemeinden', 'Bevölkerungsbestand', 'Geschlecht', 'Entwicklung', 'Einwohnerzahl', 'Bevölkerungsstruktur', 'Staatsangehörigkeit']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | text | Das genaue Datum der Datenerhebung. |
+| `gemeinde` | text | Name der politischen Gemeinde, in der sich das Wohnviertel befindet. |
+| `geschlecht` | text | M=Männlich, W=Weiblich |
+| `staatsangehoerigkeit` | text | Die Staatsangehörigkeit der erfassten Personen. |
+| `anzahl` | int | Anzahl Personen |
+| `jahr` | text | Das Jahr, in dem die Bevölkerungsdaten erfasst wurden. |
+| `wohnviertel_id` | text | Eindeutige Kennung zur Identifikation eines Wohnviertels im Kanton Basel-Stadt. |
+| `wohnviertel_name` | text | Name des Wohnviertels im Kanton Basel-Stadt. |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100171`
+- **Dataset_identifier** `100171`
 - **Title** `Smarte Strasse: Zu- und Wegfahrten, Parkplatzauslastung`
 - **Description** `<p>Der Datensatz zeigt die Anzahl Zu- und Wegfahrten sowie die mittlere Parkplatzauslastung für die beiden Zonen «blau» und «gelb».</p><p><b>Die Detektion freier Parkplätze mittels Kamera befindet sich noch in der Testphase. Aus diesem Grund sind die Werte mit Vorsicht zu geniessen und können von den tatsächlichen Zuständen abweichen.</b></p><p>Zusätzlich relevante Datensätze für die Parkplatzbelegung:</p><ul><li><a href="https://data.bs.ch/explore/dataset/100160/" target="_blank">Parkplatzbelegung</a></li><li><a href="https://data.bs.ch/explore/dataset/100176/" target="_blank">Parkplatz-Zonen</a><br></li></ul><p>Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</p><ul><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href="https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen" target="_blank">https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen</a> </li><li>Genaue Standorte aller Sensoren: <a href="https://data.bs.ch/explore/dataset/100114/" target="_blank">https://data.bs.ch/explore/dataset/100114/</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><b style="font-family">Hinweis:<br>Die Parkplatz-Kamera an der Gundeldingerstrasse wurde am Dienstag 4.10.2022 abmontiert. Es werden keine Daten mehr erhoben.</b><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Smarte Strasse', 'Parkplatz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `from` | datetime | Start der Messung |
+| `to` | datetime | Ende der Messung |
+| `type` | text | Parklatztyp |
+| `sum_inflow` | double | Summe Zufahrten |
+| `sum_outflow` | double | Summe Wegfahrten |
+| `avg_occupancy_abs` | double | Durchschnittliche Auslastung |
 
 
     ///

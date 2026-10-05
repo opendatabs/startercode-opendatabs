@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100059`
+- **Dataset_identifier** `100059`
 - **Title** `Wohnbevölkerung nach Staatsangehörigkeit und Gemeinde`
 - **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Gemeinde. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `gemeindename` | text | — |
+| `gemeinde` | int | — |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `jahr` | text | — |
+| `anteil_al` | double | Anteil Ausländer an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). |
+| `anteil_bs` | double | Anteil Kantonsbürger an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anteil_bsanch` | double | Anteil Kantonsbürger an der schweizerischen Bevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anteil_ch` | double | Anteil Schweizer an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anzahl_al` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anzahl_bs` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anzahl_ch` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `gesbev_f` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100229`
+- **Dataset_identifier** `100229`
 - **Title** `Kantonale Abstimmungen`
 - **Description** `Dieser Datensatz zeigt die Resultate der Volksabstimmungen im Kanton Basel-Stadt seit 1875. Die Daten vor 1921 wurden von <a href="https://baselvotes.ch/" target="_blank">baselvotes (https://baselvotes.ch)</a> zur Verfügung gestellt. Seit 1921 basieren die Daten auf den Statistischen Jahrbüchern. Für jede Abstimmungsvorlage sind alle amtlich publizierten Kennzahlen zum Schlussresultat ausgewiesen.<br><br>Zusätzlich sind alle Vorlagen inhaltlich dem hauptsächlich betroffenen Politikbereich zugeordnet. Die Zuteilung erfolgt auf Basis der Einteilung des Bundesamtes für Statistik, die im eidgenössischen Abstimmungsdatensatz der Datenplattform <a '="" href="https://swissvotes.ch/votes" target="_blank">swissvotes (https://swissvotes.ch/votes)</a> des Instituts für Politikwissenschaft der Universität Bern verwendet wird.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,48 @@ def _(mo):
 - **Keywords** `['Abstimmung', 'Stimmbeteiligung', 'Volksinitiative', 'Referendum', 'Grossratsbeschluss', 'Abstimungsergebnis', 'Stichfrage', 'Gegenvorschlag', 'Brieflich Wählende', 'Stimmberechtigte', 'Stimmzettel', 'Gültige Stimmen']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `bs_id` | text | Eindeutige Identifikationsnummer einer Vorlage. Sie setzt sich zusammen aus dem vierstelligen Abstimmungsjahr, der zweistelligen Laufnummer des Abstimmungstermins, und der zweistelligen Laufnummer der Vorlage. |
+| `jahr` | text | Jahr der Abstimmung |
+| `datum` | date | Datum der Abstimmung |
+| `abstimmungstermin_nr` | int | Laufnummer des Abstimmungstermins. Auch Termine ohne kantonale Abstimmung sind bei der chronologischen Vergabe der Laufnummer pro Kalenderjahr berücksichtigt. |
+| `vorlagen_id` | int | Laufnummer der Vorlage. Finden gleichzeitig eidgenössische Abstimmungen statt, setzen die kantonalen Vorlagen die Nummerierung fort. |
+| `titel` | text | Offizieller Wortlaut der Vorlage gemäss Abstimmungsunterlagen. |
+| `kurztitel` | text | Kurzform des offiziellen Wortlauts der Vorlage. |
+| `thema` | text | Betroffener Politikbereich. Klassifikation nach dem Codebook von swissvotes. Zuordnung durch das Statistische Amt Basel-Stadt. |
+| `unterthema` | text | Betroffener Politik-Detailbereich. Klassifikation nach dem Codebook von swissvotes. Zuordnung durch das Statistische Amt Basel-Stadt. |
+| `vorlagentyp` | text | Rechtsform der Vorlage. Beim fakultativen Referendum kann vom Stimmvolk mit 2000 Unterschriften (bis 1974 1000) eine Volksabstimmung über Gesetze und Grossratsbeschlüsse erwirkt werden. Bei Initiativen zu Verfassungs- oder Gesetzesvorlagen sind 3000 Unterschriften (bis Juni 1939 1000, danach 2000, von 1975 bis 2005 4000) erforderlich. Der Grosse Rat kann dem Stimmvolk einen Gegenvorschlag zu einer Initiative vorlegen. Verfassungsvorlagen unterliegen einem Abstimmungsobligatorium. Legt der Grosse Rat den Stimmberechtigten freiwillig weitere Vorlagen zur Abstimmung vor, handelt es sich um eine angeordnete Abstimmung. |
+| `stimmberechtigte` | int | Anzahl Stimmberechtigte |
+| `stimmrechtsausweise` | int | Anzahl abgegebener Stimmrechtsausweise |
+| `stimmzettel` | int | Anzahl eingelegter Stimmzettel |
+| `stimmbeteiligung` | double | Anteil der eingelegten Stimmzettel am Total der Stimmberechtigten |
+| `briefliche` | double | Anteil der brieflich abgegebenen Stimmzettel am Total der eingelegten Stimmzettel |
+| `ergebnis` | text | Abstimmungsergebnis. Beträgt der Anteil Ja-Stimmen über 50%, gilt die Vorlage als angenommen, bei unter 50% als abgelehnt. Bei Referenden bedeutet «Angenommen» eine Bestätigung des Grossratsbeschlusses (Erfolg des Parlaments). Bei einer Ablehnung ist das Referendumskomitee erfolgreich. Bis 1911 kam nicht die Volksinitiative, sondern der Grossratsbeschluss zur Volksinitiative an die Urne. Lautete die Empfehlung des Grossen Rates «Nein», bedeutete eine Nein-Mehrheit Annahme der Initiative. |
+| `leere` | int | Anzahl leer eingelegter Stimmzettel |
+| `ungueltige` | int | Anzahl ungültiger Stimmzettel |
+| `gueltige` | int | Anzahl gültiger Stimmzettel |
+| `ja_stimmen` | int | Anzahl Ja-Stimmen |
+| `nein_stimmen` | int | Anzahl Nein-Stimmen |
+| `ja_anteil` | double | Anteil der Ja-Stimmen am Total der Stimmen mit gültiger Antwort |
+| `grossratsbeschlussdatum` | date | Datum des Grossratsbeschlusses |
+| `stichfragenannahmen` | int | Anzahl Stimmberechtigte, die sich bei der Stichfrage für die jeweilige Vorlage aussprechen |
+| `stichfragenauslassung` | int | Anzahl Stimmberechtigte, die beim Stichentscheid keine gültige Antwort abgeben |
+| `unterschriften` | int | Anzahl eingereichter Unterschriften, um Initiativen und Referenden dem Volk zur Abstimmung vorzulegen |
 
 
     ///

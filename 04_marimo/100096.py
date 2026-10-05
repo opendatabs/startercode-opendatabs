@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100096`
+- **Dataset_identifier** `100096`
 - **Title** `Abfuhrtermine`
 - **Description** `<p>Abfuhrtermine der Stadtreinigung (Tiefbauamt) der Stadt Basel. Siehe auch <a href="https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfuhrplaene" target="_blank">https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfuhrplaene</a>. Abfuhranmeldung unter <a href="https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfaelle-abholen-lassen" target="_blank">https://www.bs.ch/themen/umwelt-und-bauen/abfall-und-sauberkeit/abfallabfuhr#abfaelle-abholen-lassen</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,29 @@ def _(mo):
 - **Keywords** `['Abfall', 'Recycling', 'Grüngut']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `termin` | date | Datum der Abfuhr |
+| `art` | text | Art der Abfuhr |
+| `wochentag` | text | Wochentag des Abfuhrtermins |
+| `dayofweek` | int | Wochentag als Zahl (1=Montag, 2=Dienstag, etc.) |
+| `zone` | text | Abfuhrzone |
+| `geo_shape` | geo_shape | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
     ///

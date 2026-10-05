@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,102 @@ Auto generated R starter code for data set 100281.
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Parlament', 'Nationalrat', 'Grosse Kammer', 'Bundeshaus']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahlbezeichnung` | text | Titel der Wahl |
+| `amtsdauer` | text | Anzahl Jahre, auf welche die Mitglieder gewählt werden |
+| `wahltermin` | date | Datum der Wahl |
+| `anzahl_sitze` | int | Anzahl Sitze, die zur Verfügung stehen |
+| `wahlkreis_nr` | text | Nummer des Wahlkreises |
+| `wahlkreis_code` | text | Code des Wahlkreises |
+| `wahlkreisbezeichnung` | text | Name des Wahlkreises |
+| `stimmberechtigte_manner` | int | Anzahl in einem Wahlkreis stimmberechtigter Männer |
+| `stimmberechtigte_frauen` | int | Anzahl in einem Wahlkreis stimmberechtigter Frauen |
+| `stimmberechtigte` | int | Anzahl Stimmberechtigter total in einem Wahlkreis |
+| `stimmberechtigte_auslandschweizer` | int | Anzahl stimmberechtigter Auslandschweizer |
+| `wahlzettel` | int | Anzahl Wahlzettel |
+| `briefliche_stimmabgaben` | int | Anzahl brieflich eingelegter Wahlzettel |
+| `ungestempelte_wahlzettel` | int | Anzahl ungestempelter Wahlzettel |
+| `ungultige_wahlzettel` | int | Anzahl ungültiger Wahlzettel |
+| `leere_wahlzettel` | int | Anzahl leer eingelegter Wahlzettel |
+| `unveranderte_wahlzettel` | int | Anzahl unveränderter Wahlzettel |
+| `veranderte_wahlzettel_mit_bezeichnung` | int | Anzahl veränderter Wahlzettel mit Listenbezeichnung (leere Linien zählen als Parteistimmen) |
+| `veranderte_wahlzettel_ohne_bezeichnung` | int | Anzahl veränderter Wahlzettel ohne Listenbezeichnung (leere Linien werden nicht gezählt) |
+| `leere_stimmen` | int | Anzahl leerer Stimmen |
+| `listen_nr` | text | Nummer der Liste |
+| `partei_id` | text | ID der Partei |
+| `parteikurzbezeichnung` | text | Parteikurzbezeichnung |
+| `parteibezeichnung` | text | Name der Partei |
+| `hlv_nr` | text | Nummer der Hauptlistenverbindung |
+| `hlv_bezeichnung` | text | Name der Hauptlistenverbindung |
+| `ulv_nr` | text | Nummer der Unterlistenverbindung |
+| `ulv_bezeichnung` | text | Name der Unterlistenverbindung |
+| `anzahl_sitze_liste` | int | Anzahl Sitze einer Liste in einem Wahlkreis |
+| `unveranderte_wahlzettel_liste` | int | Anzahl unveränderte Wahlzettel einer Liste in einem Wahlkreis |
+| `veranderte_wahlzettel_liste` | int | Anzahl veränderte Wahlzettel einer Liste in einem Wahlkreis |
+| `kandidatenstimmen_unveranderte_wahlzettel` | int | Anzahl Stimmen alle Kandidatinnen und Kandidaten einer Liste aus unveränderten Wahlzetteln |
+| `zusatzstimmen_unveranderte_wahlzettel` | int | Anzahl Zusatzstimmen für alle Kandidatinnen und Kandidaten einer Liste aus unveränderten Wahlzetteln |
+| `kandidatenstimmen_veranderte_wahlzettel` | int | Anzahl Stimmen für alle Kandidatinnen und Kandidaten einer Liste aus veränderten Wahlzetteln |
+| `zusatzstimmen_veranderte_wahlzettel` | int | Anzahl Zusatzstimmen für alle Kandidatinnen und Kandidaten einer Liste aus veränderten Wahlzetteln |
+| `kandidaten_nr` | text | Kandidaten-Nr |
+| `personen_id` | text | Laufnummer einer Person |
+| `kumulation` | text | Angabe, ob eine Kandidatin oder ein Kandidat auf einem unveränderten Wahlzettel mehrfach aufgeführt ist |
+| `bisher` | text | Angabe, ob eine Kandidatin oder ein Kandidat in der abgelaufenen Legislatur im Parlament vertreten war oder nicht |
+| `gewahlt` | text | Angabe, ob eine Kandidatin oder ein Kandidat gewählt ist |
+| `ganzer_name` | text | Nachname und Vorname, mit Komma getrennt |
+| `name` | text | Nachname |
+| `vorname` | text | Vorname |
+| `geschlecht` | text | Geschlecht |
+| `jahrgang` | text | Jahrgang |
+| `anrede` | text | Anrede |
+| `beruf` | text | Beruf gemäss Wahlzettel |
+| `heimatort` | text | — |
+| `stimmen_unveranderte_wahlzettel` | int | Anzahl Stimmen aus unveränderten Wahlzetteln |
+| `stimmen_veranderte_wahlzettel` | int | Anzahl Stimmen aus veränderten Wahlzetteln |
+| `stimmen_total_aus_wahlzettel` | int | Anzahl Stimmen total für eine Kandidatin oder einen Kandidaten. Die Summe dieser Stimmen über eine Partei ergibt nicht das Total der Parteistimmen, weil so die leeren Linien auf Parteilisten nicht mitgezählt werden. |
+| `01_fdp` | int | — |
+| `03_ldp` | int | — |
+| `04_evp` | int | — |
+| `05_sp` | int | — |
+| `09_edu` | int | — |
+| `10_glp` | int | — |
+| `12_svp` | int | — |
+| `14_va` | int | — |
+| `18_jsvp` | int | — |
+| `21_jgb` | int | — |
+| `23_jlb` | int | — |
+| `25_jglp` | int | — |
+| `00_ohne` | int | Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer Liste ohne Bezeichnung |
+| `rangfolge` | int | Rangfolge innerhalb einer Liste gemäss Anzahl Stimmen (bei Stimmengleichheit entscheidet das Los). |
+| `total_der_gultigen_wahlzettel` | int | Anzahl gültige Wahlzettel |
+| `stimmbeteiligung` | text | Anteil der eingelegten Wahlzettel am Total der Stimmberechtigten |
+| `anteil_brieflich_wahlende` | text | Anteil der brieflich eingelegten Wahlzettel am Total der eingelegten Wahlzettel |
+| `06_jfdp` | int | — |
+| `07_mitte` | int | — |
+| `08_bgb` | int | — |
+| `11_pda` | int | — |
+| `17_basta_rm` | int | — |
+| `20_juso` | int | — |
+| `22_jmitte` | int | — |
+| `24_sp60` | int | — |
+| `26_fdp` | int | — |
+| `27_basta_ja` | int | — |
+| `28_mv` | int | — |
+| `30_svp_gew` | int | — |
+| `31_svp60` | int | — |
+| `32_glp_k_u` | int | — |
+| `33_glp_b` | int | — |
+| `34_ldp_gew` | int | — |
+| `35_glp_r_e` | int | — |
+| `36_mitte60` | int | — |
+| `37_glp_kmu` | int | — |
+| `38_glp_i` | int | — |
+| `jahrgang_num` | int | — |
+| `alter_am_jahresende_2023` | int | Alter, berechnet nach der Formel "2023 minus Jahrgang" |
 
 
 # Load packages

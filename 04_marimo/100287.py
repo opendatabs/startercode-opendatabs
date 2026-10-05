@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100287`
+- **Dataset_identifier** `100287`
 - **Title** `Baustellen in Gewässernähe`
 - **Description** `<p>Dieser Datensatz enthält Informationen zu Baustellen in Gewässernähe, über welche die Bevölkerung z.B. via BachApp informiert werden soll. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,36 @@ def _(mo):
 - **Keywords** `['Sperrzone', 'Baustelle']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `idunique` | text | — |
+| `sichtbar_von` | date | — |
+| `sichtbar_bis` | date | — |
+| `status` | text | — |
+| `datum_von` | date | Datum Beginn der Baustelle |
+| `datum_bis` | date | Wenn bekannt, geplantes Ende der Baustelle. Sonst bis 31.12.2099 |
+| `titel` | text | Ort der Baustelle |
+| `untertitel` | text | Beschreibung der Baustelle |
+| `text` | text | Grund der Baustelle |
+| `image` | text | Bild |
+| `shape` | text | — |
+| `titel_en` | text | — |
+| `untertitel_en` | text | — |
+| `text_en` | text | — |
 
 
     ///

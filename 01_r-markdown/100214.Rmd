@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,25 @@ Auto generated R starter code for data set 100214.
 - **Keywords** `['Kunst', 'Kunsthandwerk', 'Öffentlichkeit', 'Raum', 'Architektur', 'Städtebau']`
 - **Creator** `Städtebau & Architektur`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_invnr` | text | Eindeutiger Identifikator, Inventar-Nummer |
+| `gruppe` | text | Gruppe zur Unterteilung in Kunst und Bau (KuB) und Kunst im öffentlichen Raum (KiöR) |
+| `fotonummer` | text | Dateiname des Fotos |
+| `ku_name` | text | Name der Kunstschaffende |
+| `werktitel` | text | Titel des Kunstwerks |
+| `datierung` | text | Datierung des Kunstwerks |
+| `standort` | text | Adresse und genauer Standortbeschrieb des Kunstwerks |
+| `pdf` | text | Dateiname des PDFs |
+| `rueckbau` | text | ist das Werk zurückgebaut |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
+| `foto_downloadlink` | file | Downloadlink |
 
 
 # Load packages

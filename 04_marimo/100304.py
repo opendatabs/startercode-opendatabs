@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100304`
+- **Dataset_identifier** `100304`
 - **Title** `Gasverbrauch im Versorgungsgebiet der IWB`
 - **Description** `<p style="">Dieser Datensatz beinhaltet die Summe des Gasverbrauchs, die innert Stunden-Intervallen aus dem Netz bezogen wird. Neben dem Kanton Basel-Stadt versorgt IWB auch weitere 29 Gemeinden in den Kantonen Basel-Landschaft, Solothurn und Aargau mit Gas. Diese sind auch im Datensatz enthalten.</p><p style="">Die Gemeinden, die im Versorgungsgebiet enthalten sind, sind:<br>Aesch BL, Allschwil, Arlesheim, Augst, Basel, Bettingen, Binningen, Birsfelden, Bottmingen, Dornach, Eiken, Ettingen, Frenkendorf, Frick, Füllinsdorf, Gipf-Oberfrick, Lausen, Liestal, Möhlin, Münchenstein, Muttenz, Oberwil, Oeschgen, Pfeffingen, Pratteln, Reinach BL, Rheinfelden, Riehen, Schönenbuch, Therwil, Wallbach<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -61,11 +61,38 @@ def _(mo):
 - **Modified** `2026-10-04T13:01:55+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-08-31T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-02T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-03T22:00:00+00:00`
 - **Themes** `['Energie']`
 - **Keywords** `['Stadtlast', 'Netzlast', 'Strom', 'Elektrizität', 'Elektro', 'Watt', 'Kilowattstunden', 'Stromverbrauch', 'Gas']`
 - **Creator** `Industrielle Werke Basel`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Startzeitpunkt der Messperiode |
+| `value` | double | Gasverbrauch innerhalb des Stundenintervalls |
+| `date` | date | Tag der Messung |
+| `time` | text | Startuhrzeit der Messung |
+| `year` | text | Jahr als Text |
+| `month` | int | Monat (1 = Januar, etc.) |
+| `day` | int | Tag |
+| `weekday` | int | Wochentag als Zahl (0 = Montag, 1 = Dienstag, etc.) |
+| `dayofyear` | int | Tag innerhalb des Jahres (1. Januar = 1, etc.) |
+| `quarter` | int | Quartal des Jahres (1, 2, 3, 4) |
+| `weekofyear` | int | Woche (1, 2, 3, etc.) |
 
 
     ///

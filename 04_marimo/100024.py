@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100024`
+- **Dataset_identifier** `100024`
 - **Title** `Kinder- und Jugendangebote`
 - **Description** `Die offene Kinder- und Jugendarbeit (OKJA) ist ein Freizeitangebot für Kindern ab 5 Jahren bis jungen Erwachsenen im Alter von bis 25 Jahren. Sie umfasst Angebote wie Jugendzentren, mobile Jugendarbeit, Abenteuerspielplätze oder Spielmobile. Spezifisches Charakteristikum ist, dass die Angebote offen, freiwillig und partizipativ organisiert sind.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['Sport', 'Turnen', 'Jugenarbeit', 'Freizeit', 'Treffpunkt']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_kj` | int | — |
+| `ki_angebot` | text | — |
+| `ju_angebot` | text | — |
+| `traeger` | text | — |
+| `angebot` | text | — |
+| `strasse_nr` | text | — |
+| `plz` | int | — |
+| `ort` | text | — |
+| `kanton` | text | — |
+| `link` | text | — |
+| `map_links` | text | — |
 
 
     ///

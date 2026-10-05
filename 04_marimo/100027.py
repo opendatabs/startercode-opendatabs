@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100027`
+- **Dataset_identifier** `100027`
 - **Title** `Recyclingstationen`
 - **Description** `Recyclingstationen für Glas, Weissblech, Aluminium und Batterien im Kanton Basel-Stadt.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-10-04T00:00:00+00:00`
+- **Modified** `2026-10-05T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Recycling', 'Wiederverwertung', 'Abfall', 'Müll', 'Entsorgen']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_rs` | int | — |
+| `name` | text | — |
+| `status` | int | — |
+| `adresse` | text | — |
+| `plz` | int | — |
+| `ort` | text | — |
+| `webseite` | text | — |
+| `map_links` | text | — |
 
 
     ///

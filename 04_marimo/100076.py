@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100076`
+- **Dataset_identifier** `100076`
 - **Title** `Coronavirus (COVID-19): Todesfälle Basel-Stadt nach Alter und Geschlecht`
 - **Description** `<div>Todesfälle von Einwohnern des Kantons Basel-Stadt mit der Coronavirus-Krankheit (COVID-19) nach Alter und Geschlecht. Die Daten wurden zu Beginn der Pandemie von Hand aus öffentlich zugänglichen offiziellen Quellen durch Mitarbeiter <span data-teams="true">von Open Data Basel-Stadt</span> erfasst. Inzwischen erhalten wir die Daten der Gestorbenen direkt von den Gesundheitsdiensten des Kantons. Die Quellenangabe der jeweiligen Zahlen ist direkt der Tabelle zu entnehmen.</div><div><br></div><div>Die gesamtschweizerischen Daten aller Kantone und des Fürstentums Liechtenstein (FL), welche die Fälle nach Alter und Geschlecht ausweisen, sind hier zu finden:</div><div><ul><li><a href="https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_alter_geschlecht_csv" target="_blank">https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_alter_geschlecht_csv</a></li></ul></div><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Änderungsprotokoll:</span></p><ul><li>Die Erhebung der Werte wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert. Aktualisierungsintervall von "DAILY" auf "NEVER" geändert.</li></ul>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Todesfälle', 'Lungenentzündung', 'Pandemie', 'Alter', 'Geschlecht', 'Corona']`
 - **Creator** `Open Data Basel-Stadt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | Datum der Datenveröffentlichung |
+| `area` | text | — |
+| `ageyear` | int | Alter in Jahren; [leer] = nicht veröffentlicht |
+| `ageyear_numeric` | int | Alter in Jahren, falls explizite eindeutige Altersangabe vorhanden |
+| `gender` | text | M = männlich, F = weiblich; [leer] = nicht veröffentlicht |
+| `newdeaths` | int | Anzahl mit COVID-19-Erkrankung verstorbene Personen mit Wohnsitz in Basel-Stadt |
+| `preexistingcond` | text | Y = bestehende Vorerkrankung, N = keine bestehende Vorerkrankung; [leer] = nicht veröffentlicht |
+| `ncumul_deceased` | int | Anzahl Verstorbene Personen bis zum aktuellen Datum |
+| `casenumberperday` | int | Eindeutige ID des Todesfalls pro Tag |
+| `source` | text | Datenquelle(n) |
 
 
     ///

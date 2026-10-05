@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100345`
+- **Dataset_identifier** `100345`
 - **Title** `Abstimmungen Details`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate aller Volksabstimmungen seit dem 8. März 2015 für den Kanton Basel-Stadt auf Ebene Wahllokal.</p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im <a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">Kantonsblatt</a> (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">https://www.kantonsblatt.ch/#!/search/publications</a>) des Kantons Basel-Stadt publiziert werden.</p><p>Die Gesamtresultate der Abstimmungen und die Resultate auf Gemeindeebene findet man im Datensatz <a href="https://data.bs.ch/explore/dataset/100346//" target="_blank">"Abstimmungen Kennzahlen"</a> (<a href="https://data.bs.ch/explore/dataset/100346/" target="_blank">https://data.bs.ch/explore/dataset/100346/</a>)</p><p>Eine Liste der Wahllokale findet man im Datensatz "<a href="https://data.bs.ch/explore/dataset/100098//" target="_blank">Wahllokale Kanton Basel-Stadt</a>" (<a href="https://data.bs.ch/explore/dataset/100098/" target="_blank">https://data.bs.ch/explore/dataset/100098/</a>)</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,52 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `abst_datum` | date | Datum der Abstimmung |
+| `abst_id` | int | Laufnummer der Vorlage |
+| `abst_titel` | text | Titel der Vorlage |
+| `abst_id_titel` | text | ID und Titel der Vorlage |
+| `abst_art` | text | Art der Vorlage; national oder kantonal |
+| `gemein_id` | int | Numerische Kennung, die jeder Gemeinde eine eindeutige Identifikation zuweist |
+| `gemein_name` | text | Die "Gemeinde" bezeichnet die geografische oder politische Einheit, in der die Abstimmung oder Wahl stattgefunden hat |
+| `wahllok_id` | int | Numerische Kennung, die jedem Wahllokal eine eindeutige Identifikation zugewiesen wird |
+| `wahllok_name` | text | Standort, an dem die Abstimmung durchgeführt wurde |
+| `id` | text | Die ID besteht aus dem Datum, der ID der Vorlage und der ID des Wahllokals |
+| `result_art` | text | Zwischenresultat (brieflich Stimmende) oder Schlussresultat (alle Stimmen). Zwischenresultate werden durch Schlussresultate überschrieben. |
+| `stimmr_anz` | int | Anzahl Stimmrechtsausweise |
+| `eingel_anz` | int | Anzahl eingelegter Stimmzettel |
+| `leer_anz` | int | Anzahl leer eingelegter Stimmzettel |
+| `unguelt_anz` | int | Anzahl ungültiger Stimmzettel |
+| `guelt_anz` | int | Anzahl gültiger Stimmzettel |
+| `ja_anz` | int | Anzahl Ja-Stimmen |
+| `nein_anz` | int | Anzahl Nein-Stimmen |
+| `anteil_ja_stimmen` | double | Anteill der Ja-Stimmen am Total der Stimmen mit gültiger Antwort |
+| `abst_typ` | text | Angabe, ob für eine Vorlage ein Gegenvorschlag zur Verfügung steht oder nicht |
+| `gege_ja_anz` | int | Anzahl Ja-Stimmen für den Gegenvorschlag |
+| `gege_nein_anz` | int | Anzahl Nein-Stimmen für den Gegenvorschlag |
+| `sti_initiative_anz` | int | Anzahl Stimmen bei der Stichfrage für die Initiative |
+| `sti_gegenvorschlag_anz` | int | Anzahl Stimmen bei der Stichfrage für den Gegenvorschlag |
+| `gege_anteil_ja_stimmen` | double | Anteil der Ja-Stimmen für den Gegenvorschlag |
+| `sti_anteil_init_stimmen` | double | Anteil der Stimmen bei der Stichfrage für die Initiative |
+| `init_oga_anz` | int | Anzahl Stimmen ohne gültige Antwort zu einer Vorlage |
+| `gege_oga_anz` | int | — |
+| `sti_oga_anz` | int | — |
+| `abst_datum_text` | text | Datum der Abstimmung |
 
 
     ///

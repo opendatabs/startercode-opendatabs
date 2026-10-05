@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,17 @@ Auto generated R starter code for data set 100420.
 - **Keywords** `['Wasser']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `aggregationsstufe` | text | Gibt an, auf welcher Ebene die Daten aggregiert wurden. Werte sind „Jahr“ (jährliche Daten) oder „Monat“ (monatliche Daten, ab 2005 verfügbar). |
+| `zeitperiode` | text | Das Jahr oder der Monat, für den der Wasserverbrauch erfasst wurde. Die jährlichen Daten reichen bis 1951 zurück, die monatlichen bis 2005. |
+| `kategorie` | text | Der Wasserverbrauch wird in verschiedene Kategorien unterteilt: Die Kategorie Haushaltungen, Gewerbe" umfasst Bezüger, bei denen keine klare Unterscheidung zwischen privatem und gewerblichem Verbrauch möglich ist. Jahresverbräuche bis zu 5'000 m³ pro Abonnent fallen in diese Gruppe. "Grossbezüger" umfasst grössere Verbrauchsmengen aus Gewerbe und Industrie, darunter Kindergärten, Schulhäuser, Spitäler, Verwaltungsgebäude, Landwirtschaftsbetriebe, Hotels und Baustellenwasser. Ab 5'000 m³ pro Jahr pro Abonnent werden diese Verbräuche automatisch dieser Kategorie zugeordnet. Die "Öffentlichen Brunnen" sind eine eigenständige Kategorie. Zusätzlich gibt es den Bereich "Andere öffentliche Zwecke", unter den Feuerwehrübungen, Strassen- und Tunnelreinigungen, Kanalisationsspülungen, die Bewässerung öffentlicher Grünanlagen sowie Wasserverbräuche in öffentlichen Schwimmbädern und Toiletten fallen. Die Kategorie "Eigenbedarf IWB" erfasst den Wasserverbrauch des Wasserversorgers selbst, beispielsweise für Reservoirreinigungen oder Leitungsspülungen. Die Kategorie "Verlust" umfasst sowohl echte Verluste durch Rohrbrüche und Leckagen als auch unechte Verluste, die durch Messfehler oder unkontrollierte Entnahmen entstehen. Zusätzlich gibt es drei statistische Werte für die Verbrauchsanalyse: "Mittlerer" Verbrauch gibt den durchschnittlichen Wasserverbrauch an. "Grösster" Verbrauch zeigt den höchsten gemessenen Wasserverbrauch. "Total" Verbrauch gibt die gesamte verbrauchte Wassermenge an." |
+| `einheitbeschreibung` | text | Gibt die Einheit der Verbrauchsangabe an. |
+| `menge` | double | Enthält den erfassten Wasserverbrauch in der jeweiligen Kategorie und Zeiteinheit. |
 
 
 # Load packages

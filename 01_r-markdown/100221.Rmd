@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,17 @@ Auto generated R starter code for data set 100221.
 - **Keywords** `['Sport', 'Förderung', 'Swisslos']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Das Jahr, in dem die Fördermittel bewilligt wurden. |
+| `beguenstigte` | text | Der Name des Sportvereins oder der Organisation, die die Förderung erhält. |
+| `unterstuetztes_projekt` | text | Die Bezeichnung des Projekts oder der Massnahme, für die die Fördermittel verwendet werden. Dies kann Veranstaltungen, Anschaffungen oder Vereinsaktivitäten umfassen. |
+| `beitrag` | double | Der bewilligte Förderbetrag in Schweizer Franken (CHF), der dem jeweiligen Verein oder der Organisation zugesprochen wurde. |
+| `column_1` | int | Der Index ist eine laufende Nummer, die jede Zeile im Datensatz eindeutig innerhalb eines Jahres identifiziert. Er dient dazu, die Einträge zu ordnen und zu referenzieren. |
 
 
 # Load packages

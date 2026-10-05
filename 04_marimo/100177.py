@@ -54,7 +54,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100177`
+- **Dataset_identifier** `100177`
 - **Title** `Öffentlicher Archivkatalog in RDF`
 - **Description** `<p>
 Das Staatsarchiv des Kantons Basel-Stadt fungiert als Gedächtnis von Staat und Stadt. Die reichhaltigen Bestände widerspiegeln die Geschichte Basels seit dem Mittelalter. Seit 1999 wird das Archivgut in einem Archivinformationssystem (scopeArchiv) erschlossen, zur Suche und Benutzung steht ein Digitaler Lesesaal (DLS) zur Verfügung (<a href="https://dls.staatsarchiv.bs.ch" target="_blank">https://dls.staatsarchiv.bs.ch</a>). </p><p>Das hier publizierte Datenset (<a href="https://ld.bs.ch/set/archival-catalog" target="_blank">https://ld.bs.ch/set/archival-catalog</a>) umfasst sämtliche öffentlich zugänglichen Informationen aus dem Archivsystem, transformiert in ein RDF-Datenmodell auf der Basis der archivspezifischen Ontologie Records in Context (RiC-O) (<a href="https://www.ica.org/standards/RiC/ontology" target="_blank">https://www.ica.org/standards/RiC/ontology</a>).  </p><p>SPARQL-Endpoint zur Datenabfrage: <a href="https://ld.bs.ch/sparql/" target="_blank">https://ld.bs.ch/sparql/</a><br></p><p>Dokumentation: <a href="https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline/wiki" target="_blank">https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline/wiki</a>  </p><p>Das Datenset wird permanent weiterentwickelt. Sowohl das Mapping nach RiC-O wie auch die Inhalte können ändern, Rückwärtskompatabilität kann nicht garantiert werden. Falls eine stabile Einbindung in Services geplant wird, bitten wir um Kontaktaufnahme.</p><p>Das Mapping zur Transformation der Daten nach RDF erfolgt primär durch die Mappingsprache RML (<a href="https://rml.io/specs/rml/" target="_blank">https://rml.io/specs/rml/</a>). Die Transformation erfolgt in einer ETL-Pipeline mit entsprechend integrierten Mappings (<a href="https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline" target="_blank">https://github.com/Staatsarchiv-Basel-Stadt/LOD-Pipeline</a>) der Firma zazuko (<a href="https://zazuko.com/" target="_blank">https://zazuko.com/</a>), deren Quellcode öffentlich ist.</p>`
@@ -68,6 +68,21 @@ Das Staatsarchiv des Kantons Basel-Stadt fungiert als Gedächtnis von Staat und 
 - **Keywords** `['Archiv', 'Archivkatalog', 'Geschichte Basels', 'LOD', 'LD', 'Linked Data', 'Linked Open Data', 'Linked', 'SPARQL']`
 - **Creator** `Staatsarchiv Basel-Stadt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+_No field information available._
 
 
     ///

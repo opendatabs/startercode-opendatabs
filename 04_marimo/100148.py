@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100148`
+- **Dataset_identifier** `100148`
 - **Title** `Sammlung Europa`
 - **Description** `<div><font color="#404040" face="Helvetica, sans-serif">Das Museum der Kulturen Basel (MKB) ist das grösste ethnologische Museum der Schweiz und eines der bedeutendsten seiner Art in Europa. Seine Sammlung geniesst Weltruf und zählt mehr als 340 000 Objekte. Rund 75 000 Objekte dieser Sammlung gehören zur Abteilung Europa. Sie wurden seit 1904 bis heute aus allen Teilen des Kontinents zusammengetragen.</font></div><div><font color="#404040" face="Helvetica, sans-serif"><br></font></div><div><font color="#404040" face="Helvetica, sans-serif">Die publizierten Daten sind mehrheitlich unbereinigt. Sowohl bei der erstmaligen Katalogisierung der Objekte, wie auch bei der Abschrift in die Datenbank gab es Inkonsistenzen, Fehler und Auslassungen. Darin enthaltene Terminologien können inzwischen unzutreffend, veraltet oder rassistisch beleidigend sein. </font></div><div><font color="#404040" face="Helvetica, sans-serif"><br></font></div><div><font color="#404040" face="Helvetica, sans-serif">Der Code zur Datenbereinigung ist hier (https://github.com/opendatabs/data-processing/blob/master/mkb_sammlung_europa/etl.py) zu finden. Gerne nehmen wir Ergänzungen dazu via Pull Request an. <br></font></div><div><br></div><div><b>Hinweis:</b></div><div>Dieser Datensatz wird nicht automatisiert aktualisiert. Die Online Sammlung des MKB (<a href="https://onlinecollection.mkb.ch/" target="_blank">https://onlinecollection.mkb.ch/</a>) wird monatlich aktualisiert und enthält die Daten aller Sammlungen.</div>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Kultur', 'Kunstobjekte', 'Ethnologie']`
 - **Creator** `Museum der Kulturen Basel`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `inventarnummer` | text | Die Inventarnummer besteht aus einem Präfix und einer Laufnummer. Unterschiedliche Präfixe deuten auf unterschiedliche Unter-Sammlungen hin. Standard ist VI, weil Europa die sechste Abteilung des Museums ist. |
+| `einlaufnummer` | text | Die Einlaufnummer besteht aus Suffix-Underline-Laufnummer. Sie nummeriert jeweils die Gruppe von Objekten, die zusammen ins Museum gekommen sind. |
+| `kurzbezeichnung` | text | Kurzbezeichnung ist die möglichst allgemeine Bezeichnung des Objekts. |
+| `titel` | text | Der Titel ist eine präzisere Bezeichnung, eine einheimische Bezeichnung oder der Werktitel (kann fehlen). |
+| `datierung` | text | Das geschätzte oder dokumentierte Jahr der Herstellung des Objekts (in der Regel sehr ungenau, fehlt häufig) |
+| `material_technik` | text | Angaben dazu, wie und/oder aus welchem Material das Objekt geschaffen wurde. |
+| `herkunft` | text | Geografische Herkunft des Objekts (nur eine von möglicherweise mehrfachen Herkunftsangaben) |
+| `einlauf_info` | text | Der/die Einlieferer*in brachte die Objekte ins Museum bzw. bezahlte dafür. Erwerbungsart ist in der Regel Kauf (dann bezahlte das Museum und als Einlieferer erscheint der aktuelle Kurator) oder Geschenk, teils auch Legat oder Tausch. Leider teilweise auch «unbekannt, alter Bestand». |
+| `masse` | text | Masse des Objekts |
 
 
     ///

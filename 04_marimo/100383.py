@@ -56,7 +56,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100383`
+- **Dataset_identifier** `100383`
 - **Title** `Solarkataster: Dachkanten`
 - **Description** `Die Klasse Dachkante ist ein wesentlicher Bestandteil des Geodatenmodells (KGDM) «Solarkataster» und beschreibt die Dachkanten der Gebäude, die in der Klasse Solarpotenzial erfasst sind. 
 <br> Sämtliche Datensätze zu dem Produkt "Solarkataster": <a href="https://data.bs.ch/explore/?refine.tags=solarkataster" target="_blank">https://data.bs.ch/explore/?refine.tags=solarkataster</a>
@@ -72,6 +72,25 @@ def _(mo):
 - **Keywords** `['Solarenergie', 'Solarkollektor']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_dkante` | int | Identifikator der Dachkante |
 
 
     ///

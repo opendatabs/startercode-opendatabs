@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100542`
+- **Dataset_identifier** `100542`
 - **Title** `Verteilung des Haushaltseinkommens nach Gemeinde`
 - **Description** `Der Datensatz zeigt Anzahl Haushalte nach Einkommensgruppen, Jahr und Gemeinden (Stadt Basel, Riehen und Bettingen). Das Haushaltseinkommen wird inklusive Sozialtransfer (Zum Nettoeinkommen aus der Steuerveranlagung werden die Unterstützungszahlungen aus Prämienverbilligungen, Familienmietzinsbeiträgen, Ergänzungsleistungen und Sozialhilfe addiert.) und exklusive Sozialtransfer (Es wird nur das Nettoeinkommen aus Erwerb, Renten, Pensionen, Erwerbsersatzleistungen sowie Miet- und Vermögenserträgen berücksichtigt.) ausgewiesen.<br><br>Weitere Informationen sowie interaktive Auswertungsmöglichkeiten finden Sie im Dashboard unter: <a href="https://statistik.bs.ch/haushaltseinkommen/">https://statistik.bs.ch/haushaltseinkommen/</a>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,36 @@ def _(mo):
 - **Keywords** `['Gemeinden', 'Einkommen', 'Sozialhilfe', 'Haushalt', 'Wohnviertel', 'Soziale Sicherheit']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/haushaltseinkommen/`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `bin_order` | int | Einkommensgruppen Nummer |
+| `bin` | text | Einkommensgruppen in CHF |
+| `jahr` | text | Jahr |
+| `id` | int | Nummerischer Wert Geo-Ebene (20 = Riehen, 30 = Bettingen, 40 = Basel) |
+| `gmd` | text | Gemeinde |
+| `group` | text | Das Haushaltseinkommen wird inklusive Sozialtransfer (Zum Nettoeinkommen aus der Steuerveranlagung werden die Unterstützungszahlungen aus Prämienverbilligungen, Familienmietzinsbeiträgen, Ergänzungsleistungen und Sozialhilfe addiert.) und; exklusive Sozia |
+| `typ` | text | NEK: Nettoeinkommen, AeEK: Äquivalenzeinkommen |
+| `n` | int | Anzahl Haushalte in Einkommensgruppe |
+| `n_total` | int | Total Anzahl Haushalte |
+| `q05` | double | 5%-Perzentile des Einkommens in CHF |
+| `q25` | double | 25%-Perzentile des Einkommens in CHF |
+| `q5` | double | Median in CHF |
+| `q75` | double | 75%-Perzentile des Einkommens in CHF |
+| `q95` | double | 95%-Perzentile des Einkommens in CHF |
 
 
     ///

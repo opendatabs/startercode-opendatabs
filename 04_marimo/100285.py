@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100285`
+- **Dataset_identifier** `100285`
 - **Title** `Treppen und Ausstiegsleitern an Gewässern`
 - **Description** `<p>Ein- und Ausstigsmöglichkeiten in bzw. aus Rhein, Birs und Wiese, welche z.B. in der BachApp publiziert werden. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Rhein', 'Treppen']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | Koordinaten |
+| `geo_shape` | geo_shape | — |
+| `typ_bez` | text | Art des Ausstiegs |
+| `ausstieg_moeglich` | text | Ausstiegsmöglichkeit |
+| `typ_bez_en` | text | — |
 
 
     ///

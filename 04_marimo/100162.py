@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100162`
+- **Dataset_identifier** `100162`
 - **Title** `Coronavirus (COVID-19): Geimpfte Personen mit Wohnsitz in Basel-Stadt`
 - **Description** `<p>Dieser Datensatz zeigt die SARS-CoV-2-Impfungen, welche an Personen mit Wohnsitz im Kanton Basel-Stadt verabreicht wurden nach Impfstatus. Unterschieden wird dabei auf oberster Ebene in teilweise geimpfte Personen, vollständig geimpfte Personen und Personen mit Auffrischimpfung. Die Definitionen dieser Einteilung finden Sie in den Spaltenbeschreibungen resp. im Datensatzschema. </p><p>Die Datenbasis bildet der Vaccination Monitoring Data Lake (VMDL) des BAG. Der Datensatz wird stündlich aktualisiert. </p><p>Anmerkung: Die geimpften Personen wohnen im Kanton Basel-Stadt, müssen aber nicht zwingend auch im Kanton Basel-Stadt geimpft worden sein. Aus diesem Grund unterscheiden sich die hier publizierten Zahlen auch von jenen im <a href="https://data.bs.ch/explore/dataset/100111/" target="_blank">Datensatz mit den im Kanton Basel-Stadt verabreichten Impfungen</a>.</p><p>Methodische Hinweise:<br>Als vollständig geimpft gelten folgende Personen:</p><ul><li>Mindestens zwei Dosen einer Mehrdosisimpfung</li><li>Eine Dosis einer Einmaldosisimpfung</li><li>Genesene (positiver PCR-Test) und mindestens eine Dosis einer Einmal- oder einer Mehrdosisimpfung</li></ul><p>Als teilweise geimpft gelten folgende Personen:</p><ul><li>Erste Dosis einer Mehrdosisimpfung</li></ul><p>Als mit mindestens einer Dosis geimpft gelten folgende Personen:</p><ul><li>Mindestens eine Dosis einer Einmal- oder einer Mehrfachdosisimpfung</li></ul><p>Als Impfung aufgefrischt gelten folgende Personen:</p><ul><li>Mindestens dritte Dosis einer Mehrfachdosisimpfung nach abgeschlossener Grundimmunisierung durch Mehrdosisimpfung</li><li>Genesene (positiver PCR-Test) mit zweiter Dosis einer Mehrdosisimpfung</li><li>Erste Dosis einer Mehrdosisimpfung nach abgeschlossener Grundimmunisierung durch eine Einmaldosisimpfung</li></ul><p>Der Code für die Berechnung der verschiedenen Impftypen kann unter diesem Link eingesehen werden: <a href="https://github.com/opendatabs/data-processing/blob/master/bag_coronavirus/src/etl_vmdl_impftyp.py" target="_blank">https://github.com/opendatabs/data-processing/blob/master/bag_coronavirus/src/etl_vmdl_impftyp.py</a><a href="https://github.com/opendatabs/data-processing/blob/master/bag_coronavirus/src/etl_vmdl_impftyp.py" target="_blank"></a></p><p>Die Meldepflicht der COVID-Impfungen via VMDL Plattform des Bundes wurde per 1. Juli 2023 aufgehoben. Nach diesem Datum wurden Impfungen deshalb nicht mehr systematisch erfasst. Der vorliegende Datensatz zeigt deshalb Impfungen nur bis 1. Juli 2023.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,49 @@ def _(mo):
 - **Keywords** `['SARS-CoV-2', 'Corona', 'Coronavirus', 'COVID-19', 'impfen', 'Impfung', 'Impftermin', 'Impfzentrum', 'Spital']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `vacc_day` | date | Datum |
+| `vollstaendig_geimpft` | int | Anzahl Personen, welche als vollständig gegen SARS-CoV-2 geimpft gelten. Dieser Status kann auf verschiedene Weise erreicht werden. |
+| `teilweise_geimpft` | int | Anzahl Personen, welche als teilweise gegen SARS-CoV-2 geimpft gelten. |
+| `mit_mindestens_einer_dosis_geimpft` | int | Anzahl Personen, welche mit mindestens einer Dosis gegen SARS-CoV-2 geimpft sind. |
+| `impfung_aufgefrischt` | int | Anzahl Personen, welche zusätzlich zur Grundimmunisierung eine Auffrischimpfung gegen SARS-CoV-2 erhalten haben. |
+| `neu_teilweise_geimpft` | int | Anzahl Personen, welche an einem bestimmten Datum gegenüber dem Vortag neu als teilweise gegen SARS-CoV-2 geimpft gelten. |
+| `neu_vollstaendig_geimpft` | int | Anzahl Personen, welche an einem bestimmten Datum gegenüber dem Vortag neu als vollständig gegen SARS-CoV-2 geimpft gelten. |
+| `neu_impfung_aufgefrischt` | int | Anzahl Personen, welche an einem bestimmten Datum gegenüber dem Vortag neu als zusätzlich mit einer Auffrischimpfung gegen SARS-CoV-2 geimpft gelten. |
+| `anteil_vollstaendig_geimpft_an_wohnbevoelkerung` | double | Anteil vollständig gegen SARS-CoV-2 geimpfter Personen an der Wohnbevölkerung |
+| `anteil_teilweise_geimpft_an_wohnbevoelkerung` | double | Anteil teilweise gegen SARS-CoV-2 geimpfter Personen an der Wohnbevölkerung |
+| `anteil_impfung_aufgefrischt_an_wohnbevoelkerung` | double | Anteil Personen, welche zusätzlich zur Grundimmunisierung eine Auffrischimpfung gegen SARS-CoV-2 erhalten haben an der Gesamtbevölkerung. |
+| `anteil_mit_mindestens_einer_dosis_geimpft` | double | Anteil Personen, welche mit mindestens einer Dosis gegen SARS-CoV-2 geimpft sind an der Gesamtbevölkerung. |
+| `11_erste_dosis_einer_mehrdosisimpfung_grundimmunisierung` | int | Anzahl Personen, welche mit der ersten Dosis einer Mehrfachdosisimpfung gegen SARS-CoV-2 geimpft sind. |
+| `12_zweite_dosis_einer_mehrdosisimpfung_grundimmunisierung` | int | Anzahl Personen, welche im Rahmen der Grundimmunisierung mit der zweiten Dosis einer Mehrdosisimpfung gegen SARS-CoV-2 geimpft sind. |
+| `101_genesen_mit_erster_dosis_einer_mehrdosisimpfung` | int | Anzahl Personen, welche als genesen gelten (positiver PCR-Test) und zusätzlich mit einer ersten Dosis einer Mehrdosisimpfung gegen SARS-CoV-2 geimpft sind. |
+| `29_mindestens_dritte_dosis_einer_mehrdosisimpfung_auffrischimpfung` | int | Anzahl Personen, welche im Rahmen der Auffrischimpfung mit mindestens einer dritten Dosis gegen SARS-CoV-2 geimpft sind. |
+| `19_mindestens_dritte_dosis_einer_mehrdosisimpfung_grundimmunisierung` | int | Anzahl Personen, welche im Rahmen der Grundimmunisierung mit mindestens drei Dosen einer Mehrdosisimpfung gegen SARS-CoV-2 geimpft sind. |
+| `1_impfung_mit_einmaldosis_grundimmunisierung` | int | Anzahl Personen, welche im Rahmen der Grundimmunisierung mit einer Einmaldosisimpfung gegen SARS-COV-2 geimpft sind. |
+| `100_genesen_mit_einmaldosis` | int | Anzahl Personen, welche als genesen gelten (positiver PCR-Test) und zusätzlich im Rahmen der Grundimmunisierung mit einer Einmaldosisimpfung gegen SARS-COV-2 geimpft sind. |
+| `22_zweite_dosis_mit_einer_mehrdosisimpfung_auffrischimpfung_einer_impfung_mit_einmaldosis` | int | Anzahl Personen, welche im Rahmen der Auffrischimpfung (nach Grundimmunisierung mit Einmaldosisimpfung) mit einer zweiten Dosis einer Mehrdosisimpfung gegen SRAS-CoV-2 geimpft sind. |
+| `1_andere` | int | Andere Impftypen |
+| `bevoelkerungszahl_statpop` | int | Bevölkerungszähl gemäss Bundesamt für Statistik (STATPOP) |
+| `anteil_mit_mindestens_dritter_dosis_geimpft_an_wohnbevoelkerung` | double | Anteil Personen, welche mit mindestens dritter Dosis gegen SARS-CoV-2 geimpft sind an der Gesamtbevölkerung. |
+| `anteil_mit_mindestens_zweiter_auffrischimpfung_geimpft_an_wohnbevoelkerung` | double | Anteil Personen, welche mit mindestens zweiter Auffrischimpfung gegen SARS-CoV-2 geimpft sind an der Gesamtbevölkerung. |
+| `102_genesen_mit_zweiter_dosis_einer_mehrdosisimpfung_grundimmunisierung` | int | Anzahl genesene Personen (positiver PCR-Test), welche mit 2. Dosis einer Mehrdosisimpfung im Rahmen der Grundimmunisierung gegen SARS-CoV-2 geimpft sind. |
+| `202_genesen_mit_zweiter_dosis_einer_mehrdosisimpfung_auffrischimpfung` | int | Anzahl genesene Personen (positiver PCR-Test), welche mit 2. Dosis einer Mehrdosisimpfung im Rahmen der Auffrischimpfung gegen SARS-CoV-2 geimpft sind. |
+| `39_mindestens_zweite_auffrischimpfung` | int | Anzahl Personen, welche mindestens eine zweite Auffrischimpfung erhalten haben. |
 
 
     ///

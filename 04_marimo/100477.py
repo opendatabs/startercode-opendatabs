@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100477`
+- **Dataset_identifier** `100477`
 - **Title** `Bodenbedeckung`
 - **Description** `<p>Die Bodenbedeckung ist eine Informationsebene der amtlichen Vermessung, in der Objekte wie Gebäude, befestigte Flächen, humusierte Flächen, Wasserflächen, bestockte Flächen und vegetationslose Flächen zusammengefasst sind.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächenausdehnung einer Bodenbedeckung |
+| `id` | int | Eindeutiger Indentifikator |
+| `bodenbedeckungsart` | text | Die Art der Bodebedeckung beschreibt die tatsächliche Bodennutzung des entsprechenden Objekts; Die Beschreibung der einzelnen Werte dient dem Verständnis, welche Objekte der Realwelt wie im Datenmodell zu; attributieren sind. Zudem ist die Beschreibung der Werte nicht abschliessend und darf nicht als; Erfassungsrichtlinie verstanden werden. |
 
 
     ///

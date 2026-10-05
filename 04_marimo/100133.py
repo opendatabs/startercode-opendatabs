@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100133`
+- **Dataset_identifier** `100133`
 - **Title** `Resultate der Wahl von sieben Präsidentinnen oder Präsidenten des Strafgerichts 9. Mai 2021`
 - **Description** `<p>Der Datensatz zeigt die Resultate des 1. Wahlgangs der Wahl zu sieben Präsidentinnen oder Präsidenten des Strafgerichts Basel-Stadt vom 9. Mai 2021. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,47 @@ def _(mo):
 - **Keywords** `['Richterin', 'Richter', 'Wahlen', 'Gericht']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahl_titel` | text | Name der Wahl |
+| `wahlgang` | int | 1. oder 2. Wahlgang |
+| `resultats_typ` | text | Zwischenresultat oder Schlussresultat |
+| `datum` | date | Datum der Wahl |
+| `anz_sitze` | int | Anzahl Sitze, die zu vergeben sind |
+| `kandidat_nr` | int | Kandidaten-Nr |
+| `name_ganz` | text | Name in der Form "Nachname, Vorname" |
+| `name` | text | Nachname |
+| `vorname` | text | Vorname |
+| `gemeinde` | text | Gemeinde |
+| `stimmen` | int | Anzahl Stimmen |
+| `vereinzelte` | int | Anzahl Stimmen, welche auf nicht kandidierende Kandidatinnen und Kandidaten entfielen |
+| `gewaehlt` | text | Angabe, ob eine Kandidatin oder ein Kandidat gewählt ist oder nicht |
+| `stimmrechtsausweise` | int | Anzahl Stimmrechtsausweise |
+| `eingelegte` | int | Anzahl eingelegte Wahlzettel |
+| `leere` | int | Anzahl leere Wahlzettel |
+| `ungueltige` | int | Anzahl ungültige Wahlzettel |
+| `gueltige` | int | Anzahl gültige Wahlzettel |
+| `anz_briefliche` | int | Anzahl brieflich eingelegter Wahlzettel |
+| `stimmber_total` | int | Anzahl Stimmberechtigter total |
+| `stimmber_maen` | int | Anzahl stimmberechtigter Männer |
+| `stimmber_fraue` | int | Anzahl stimmberechtigter Frauen |
+| `absolutes_mehr` | int | berechnet nach der Formel: (Ganzzahl((gültige Stimmen + leere Stimmen)/2 + 1) |
+| `stimmbeteiligung` | double | Anteil der eingelegten Wahlzettel am Total der Stimmberechtigten |
+| `ant_brieflich` | double | Anteil der brieflich eingelegten Wahlzettel am Total der eingelegten Wahlzettel |
 
 
     ///

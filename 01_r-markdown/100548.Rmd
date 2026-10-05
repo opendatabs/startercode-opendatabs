@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,17 @@ Auto generated R starter code for data set 100548.
 - **Keywords** `['Verwaltung']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/indikatorenportal/22540`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr |
+| `raumeinheit` | text | Raumeinheit |
+| `gesamtausgaben_in_fr` | int | — |
+| `bruttoinlandprodukt_in_fr` | int | Kantonales Bruttoinlandprodukt in Franken |
+| `staatsquote` | double | Die Staatsquote entspricht den «konsolidierten Gesamtausgaben» in Prozent des kantonalen Bruttoinlandprodukts (BIP) |
 
 
 # Load packages

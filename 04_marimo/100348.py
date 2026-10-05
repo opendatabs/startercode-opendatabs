@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100348`
+- **Dataset_identifier** `100348`
 - **Title** `Grosser Rat: Tagesordnungen und Traktandenlisten der Grossratssitzungen`
 - **Description** `<p>Dieser Datensatz bietet eine umfassende Übersicht über die Tagesordnungen und die zugehörigen Traktanden der Grossratssitzungen des Kantons Basel-Stadt.</p><p>Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch/ratsbetrieb/tagesordnung" target="_blank">https://grosserrat.bs.ch/ratsbetrieb/tagesordnung</a><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,57 @@ def _(mo):
 - **Keywords** `['Grosser Rat', 'Parlament', 'Legislative', 'Abstimmung', 'Geschäft', 'Kalender']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `tagesordnung_idnr` | int | Individuelle Identifikationsnummer der Tagesordnung |
+| `versand` | datetime | Datum der Aufschaltung und Publikation der Tagesordnung |
+| `tag1` | date | Datum der ersten Sitzung der Tagesordnung |
+| `text1` | text | Beschreibung der ersten Sitzung |
+| `tag2` | date | Datum der zweiten Sitzung der Tagesordnung |
+| `text2` | text | Beschreibung der zweiten Sitzung |
+| `tag3` | date | Datum der dritten Sitzung der Tagesordnung |
+| `text3` | text | Beschreibung der dritten Sitzung |
+| `bemerkung` | text | Weitere Informationen zur Tagesordnung |
+| `url_tagesordnung_dok` | text | Link zum PDF-Dokument der Tagesordnung |
+| `url_geschaeftsverzeichnis` | text | Link zum PDF-Dokument des Geschäftsverzeichnisses |
+| `url_sammelmappe` | text | Link zum PDF-Dokument der Sammelmappe |
+| `url_alle_dokumente` | text | Link zum PDF-Dokument des ZIP-Archivs |
+| `url_vollprotokoll` | text | Link zum PDF-Dokument des Vollprotokolls, falls vorhanden |
+| `url_audioprotokoll_tag1` | text | Link zu den Ton- und Videoaufzeichnungen der ersten Sitzung auf protokolle.grosserrat-basel.ch (bis und mit Juni 2023) |
+| `url_audioprotokoll_tag2` | text | Link zu den Ton- und Videoaufzeichnungen der zweiten Sitzung auf protokolle.grosserrat-basel.ch (bis und mit Juni 2023) |
+| `url_audioprotokoll_tag3` | text | Link zu den Ton- und Videoaufzeichnungen der dritten Sitzung auf protokolle.grosserrat-basel.ch (bis und mit Januar 2023) |
+| `gruppennummer` | int | Nummer der Gruppe des Traktandums |
+| `gruppentitel` | text | Gruppentitel des Traktandums |
+| `gruppentitel_pos` | int | Erste Laufnummer der Gruppe |
+| `traktanden_idnr` | int | Individuelle Identifikationsnummer des Traktandums |
+| `laufnr` | int | Laufnummer |
+| `laufnr_2` | int | Weitergehende Laufnummer |
+| `status` | text | Status des Traktandums (erledigt, offen, in Behandlung, abgesetzt, zurückgezogen, 2. Lesung, verschoben) |
+| `titel` | text | Titel des Traktandums |
+| `kommission` | text | Die für das Traktandum zuständigen Kommissionen |
+| `departement` | text | Die für das Traktandum zuständigen Departemente |
+| `signatur` | text | Die zu dem Traktandum zugehörigen Dokumenten-Signaturen (getrennt durch Komma) |
+| `url_ges` | text | Links der Geschäfte auf die Webseite des Grossen Rates (getrennt durch Semikolon) |
+| `url_geschaeft_ods` | text | Link zum Datensatz "Grosser Rat: Geschäfte". Gefiltert nach den Geschäften in den Signaturen. |
+| `url_dok` | text | Links der Dokumente auf der Webseite des Grossen Rates (getrennt durch Semikolon) |
+| `url_dokument_ods` | text | Link zum Datensatz "Grosser Rat: Dokumente". Gefiltert nach den Signaturen. |
+| `abstimmung` | text | Die zu dem Traktandum zugehörige Abstimmungen. Gespeichert im JSON-Format |
+| `anr` | text | Die dem Traktandum zugehörigen Nummern der Abstimmungen (getrennt durch Komma) |
+| `url_abstimmungen` | text | Link zum Datensatz "Grosser Rat: Live-Abstimmungsergebnisse". Gefiltert nach den Abstimmungen. |
 
 
     ///

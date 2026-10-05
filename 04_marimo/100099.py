@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100099`
+- **Dataset_identifier** `100099`
 - **Title** `Geborene nach Geschlecht, Staatsangehörigkeit und Geburtsmonat`
 - **Description** `Dieser Datensatz zeigt die Geborenen im Kanton Basel-Stadt nach Geschlecht, Staatsangehörigkeit und Geburtsmonat sowie nach Alter, Staatsangehörigkeit und Zivilstand der Eltern. Die Daten werden monatlich aktualisiert, wobei die Zahlen eines Monats jeweils am 16. Tag des nächsten Monats publiziert werden. Aufgrund von Nachmeldungen kann es jederzeit zu Änderungen bei bereits veröffentlichten Werten kommen. In den Daten des laufenden Jahres und bis ca. Juli auch in jenen des zurückliegenden Jahres sind ausser den Lebendgeborenen auch die Totgeborenen berücksichtigt, weil die Angabe zur Lebensfähigkeit jeweils erst im Juli des Folgejahres verfügbar ist. In weiter zurückliegenden Jahren sind nur die Lebendgeborenen berücksichtigt. Auch die Angaben zur Geburtenfolge und zum Zivilstand der Eltern sind jeweils erst im Juli des Folgejahres verfügbar.Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik <a href="https://statistik.bs.ch/unterthema/3" target="_blank">(https://statistik.bs.ch/unterthema/3)</a> abweichen: In Letzterer werden nachträglich gemeldete Geburten während vier Monaten gesammelt, danach gelten die Zahlen als definitiv. Später eintreffende Meldungen werden im letzten noch nicht abgeschlossenen Monat gezählt. In diesem Datensatz werden sie im Monat des Geburtsdatums gezählt.Aus Gründen des Persönlichkeitsschutzes können im Datensatz mit dem Geburtsdatum <a href="https://data.bs.ch/explore/dataset/100092/" target="_blank">(https://data.bs.ch/explore/dataset/100092/)</a> weniger Attribute veröffentlicht werden als im vorliegenden Datensatz. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-01-19`
-- **Modified** `2026-10-02T01:16:20+00:00`
+- **Modified** `2026-10-05T01:01:35+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Alter', 'Altersstruktur', 'Bevölkerungsbestand', 'Demographie', 'Geburtsort', 'Familie', 'Haushalt', 'Geburten', 'Bevölkerungsstruktur', 'Neugeboren']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Geburtsjahr |
+| `monat` | int | Geburtsmonat |
+| `geschlecht` | text | M=männlich, W=weiblich |
+| `nationalitaet` | text | Staatsangehörigkeit des Neugeborenen (Schweiz/Ausland) |
+| `alter_mutter` | int | Alter der Mutter bei Geburt des Kindes |
+| `alter_vater` | int | Alter des Vaters bei Geburt des Kindes |
+| `nationalitaet_mutter` | text | Staatsangehörigkeit der Mutter bei Geburt des Kindes (Schweiz/Ausland) |
+| `nationalitaet_vater` | text | Staatsangehörigkeit des Vaters bei Geburt des Kindes (Schweiz/Ausland) |
+| `verheiratet` | text | Gibt an, ob die Eltern bei Geburt des Kindes verheiratet waren |
+| `geburtenfolge` | int | Anzahl gemeinsame Kinder des Elternpaares (einschl. des Geborenen und allfälliger gemeinsamer Kinder des Ehepaares vor der Eheschliessung); bei unverheirateten Paaren wird der Wert 0 angegeben. |
+| `id` | int | Laufnummer |
 
 
     ///

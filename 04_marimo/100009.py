@@ -53,19 +53,45 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100009`
+- **Dataset_identifier** `100009`
 - **Title** `Smart Climate Luftklima`
 - **Description** `<p>Der Datensatz zeigt stündlich aktualisierte Angaben zu Lufttemperatur und Niederschlag, welche über Sensoren von meteoblue gemessen werden. </p><p>Es handelt sich um Rohdaten, welche nicht plausibilisiert oder korrigiert sind.</p><p>Die geografischen Koordinaten der Sensoren sind im Datensatz <a href="https://data.bs.ch/explore/dataset/100082/" target="_blank">«Standorte der Mess-Stationen Luftklima Smart Regio Basel»</a> verfügbar.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-05-13`
-- **Modified** `2026-10-04T21:11:19+00:00`
+- **Modified** `2026-10-05T11:11:17+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2017-03-31T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-03T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-04T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Wetter', 'Temperatur', 'Regen', 'Niederschlag', 'Sensoren', 'Klima', 'Wolf-Areal', 'Smart City Lab']`
 - **Creator** `meteoblue AG`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `name_original` | text | ID der Wetterstation |
+| `name_custom` | text | Name der Wetterstation |
+| `dates_max_date` | datetime | Datum und Zeit der Messung |
+| `meta_airtemp` | double | — |
+| `meta_rain_1h_val` | double | Total der Niederschläge innerhalb der letzten Stunde |
+| `meta_rain24h_sum` | double | Total der Niederschläge innerhalb der letzten 24 Stunden |
+| `meta_rain48h_sum` | double | Total der Niederschläge innerhalb der letzten 48 Stunden |
+| `coords` | geo_point_2d | Automatisch plausibilisierte Koordinaten |
+| `stadtklima_basel_link` | text | Link auf die entsprechende Station auf der "Stadtklima Basel" Website, wo historische Daten und Vorhersagen abgerufen werden können. |
+| `unix_timestamp` | int | Zeitstempel der Messung in Sekunden seit 1. Januar 1970 |
 
 
     ///

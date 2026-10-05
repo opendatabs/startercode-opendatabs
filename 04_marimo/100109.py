@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100109`
+- **Dataset_identifier** `100109`
 - **Title** `Coronavirus (COVID-19): Hospitalisierte in baselstädtischen Spitälern`
 - **Description** `<p>Dieser Datensatz zeigt Kennzahlen auf Tagesebene zu den in baselstädtischen Spitälern hospitalisierten Personen mit einem positiven Testresultat auf SARS-CoV-2. </p><p><b>Die tägliche Erhebung der baselstädtischen Spitalkapazitäten wurde per 1. Mai 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert.</b></p><p>Weitere Angaben zu den positiv auf SARS-CoV-2 getesteten Personen mit Wohnsitz im Kanton Basel-Stadt finden Sie unter diesem Link: <a href="https://data.bs.ch/explore/dataset/100073/table/?sort=timestamp">Coronavirus (COVID-19): Fallzahlen Basel-Stadt</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Corona', 'COVID-19', 'Spital', 'USB', 'Intensivstation', 'ICU', 'Beatmet', 'Coronavirus', 'Krankheit', 'Lungenentzündung']`
 - **Creator** `Bereich Gesundheitsversorgung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | Datum |
+| `current_hosp` | int | Anzahl in baselstädtischen Spitälern hospitalisierte Personen mit positivem Testresultat auf SARS-CoV-2. |
+| `current_hosp_resident` | int | Anzahl in baselstädtischen Spitälern hospitalisierte Personen mit Wohnsitz im Kanton Basel-Stadt und positivem Testresultat auf SARS-CoV-2. |
+| `current_hosp_non_resident` | int | Anzahl in baselstädtischen Spitälern hospitalisierte Personen mit ausserkantonalem oder internationalem Wohnsitz und positivem Testresultat auf SARS-CoV-2. |
+| `current_icu` | int | Anzahl auf Intensivpflegestationen in baselstädtischen Spitälern hospitalisierten Personen mit positivem Testresultat auf SARS-CoV-2. |
+| `imcu` | double | Anzahl auf intermediate care-Stationen in baselstädtischen Spitälern hospitalisierte Personen mit positivem Testresultat auf SARS-CoV-2. |
+| `normalstation` | double | Anzahl auf Normalstationen in baselstädtischen Spitälern hospitalisierte Personen mit positivem Testresultat auf SARS-CoV-2. |
+| `data_from_all_hosp` | text | True: Daten aller Spitäler sind für den entsprechenden Tag erfasst. False: Daten mindestens eines Spitals fehlen für den entsprechenden Tag. |
+| `data_plausible` | text | True: Analyse der Daten hat keine Auffälligkeiten ergeben. False: Daten auffällig, sollten genau kontrolliert werden vor dem Gebrauch. |
 
 
     ///

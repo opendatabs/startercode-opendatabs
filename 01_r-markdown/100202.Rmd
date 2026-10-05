@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,28 @@ Auto generated R starter code for data set 100202.
 - **Keywords** `['Administrative Einheit', 'Bezirk', 'Grundeigentum', 'Liegenschaft', 'Wohnviertel', 'Block']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `r1_nummer` | int | Parzellennummer |
+| `r1_egris_e` | text | Eidgenössischer Grundstücksidentifikator |
+| `r1_art` | int | Code zur Art der Liegenschaft |
+| `r1_art_txt` | text | Text zur Art der Liegenschaft |
+| `r1_sektion` | text | Sektion des Grundbuchkreises |
+| `bez_id` | text | ID des Bezirks |
+| `bez_name` | text | Name des Bezirks |
+| `wov_id` | text | ID des Wohnviertels |
+| `wov_name` | text | Name des Wohnviertels |
+| `blo_id` | text | ID des Blocks |
+| `blo_label` | text | Name des Blocks |
+| `gemeinde_name` | text | Name der Gemeinde |
+| `oid` | text | Eine eindeutige Identifizierungsnummer |
+| `point_x` | double | Geographische Länge in Projektion WGS 84 |
+| `point_y` | double | Geographische Breite in Projektion WGS 84 |
+| `geo_point_2d` | geo_point_2d | — |
 
 
 # Load packages

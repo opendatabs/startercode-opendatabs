@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100004`
+- **Dataset_identifier** `100004`
 - **Title** `Belegung der Elektroauto-Ladestationen der IWB`
 - **Description** `<p>IWB baut im Kanton Basel-Stadt ein Netz leistungsfähiger öffentlich zugänglicher Ladestationen auf, um der umweltfreundlichen und gerade für Ballungsgebiete idealen Elektromobilität entscheidende Impulse zu geben. </p><p>In der Pilotphase wurden die Parkplätze mit LoRa-angebunden Sensoren ausgestattet. Ziel war es festzustellen, ob Parkplätze durch Fahrzeuge besetzt werden, ohne dass diese einen aktiven Ladevorgang vornehmen. Nach internen Abstimmungen wird die IWB die Übermittlung der Daten ab ca. Mitte September 2022 nicht weiterführen. Gründe dafür sind Schwierigkeiten bei der Übertragung der Werte sowie eine fehlende Relevanz für die Praxis. Beim Roll-Out der weiteren öffentlichen Ladestationen auf Allmend werden voraussichtlich keine LoRa-Sensoren mehr verbaut. </p><p>Echtzeitdaten zur Belegung der Elektroauto-Ladestationen der gesamten Schweiz basierend auf dem Status des Ladevorgangs sind hier zu finden: <a href="https://opendata.swiss/de/dataset/ladestationen" target="_blank">https://opendata.swiss/de/dataset/ladestationen</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,21 @@ def _(mo):
 - **Keywords** `['Elektroautos', 'Elektromobilität', 'Ladestationen', 'IWB', 'Tankstellen', 'Elektroladestation', 'Echtzeit', 'Realtime']`
 - **Creator** `Industrielle Werke Basel`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+_No field information available._
 
 
     ///

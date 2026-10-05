@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,17 @@ Auto generated R starter code for data set 100017.
 - **Keywords** `None`
 - **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Die Fläche der Gemeinde.; Die Gemeindegrenze liegt vollständig vor. |
+| `id` | int | Eindeutiger Indentifikator |
+| `gemeinde_id` | int | Die Gemeindenummer BFS ist eine vom schweizerischen Bundesamt für Statistik erstellte, verwaltete und veröffentlichte Nummer des Gemeindeverzeichnis der Schweiz.; Durch Zuordnung der BFS-Gemeindenummer werden Gebäude, Bauprojekte und Strassen mit einer politischen Gemeinde verknüpft. Diese Zuordnung ist u.a. notwendig, um Parzellennummern und amtliche Gebäudenummern eindeutig identifizieren zu können. Die BFS-Gemeindenummer dient zudem als Schlüsselmerkmal zum Gemeindeverzeichnis und zum Strassenverzeichnis. Änderungen in der Gemeindestruktur (Gemeindefusionen und -trennungen) führen dazu, dass die BFS-Gemeindenummer eines Gebäudes ändert. Die BFS-Gemeindenummer wird aus dem Amtlichen Gemeindeverzeichnis entnommen. |
+| `gemeindename` | text | Offizielle Bezeichnung der Gemeinde |
 
 
 # Load packages

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100150`
+- **Dataset_identifier** `100150`
 - **Title** `Jahresübersicht Open-Data-Kennzahlen`
 - **Description** `<p>Der Datensatz enthält Kennzahlen zur Entwicklung, Nutzung und Nachfrage von Open Data im Kanton Basel-Stadt über mehrere Jahre hinweg. Die Daten werden seit 2019 jährlich durch das Data Competence Center (DCC) des Kantons Basel-Stadt erhoben und konsolidiert. Sie bilden eine zentrale Grundlage zur Analyse der kantonalen Open-Data-Aktivität.</p><p>Seit Anfang 2025 werden Anfragen über soziale Medien nicht mehr erfasst, da kein eigener Kanal mehr besteht.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Jahresbericht']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://data.bs.ch/pages/jahresbericht_ogd/`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Berichtsjahr der Kennzahlen |
+| `anzahl_anfragen` | int | Anzahl der Anfragen im Zusammenhang mit Open Data, die per E-Mail, Telefon, Kommentarfunktion oder über Social Media eingegangen sind. |
+| `registrierte_weiterverwendungen` | int | Anzahl der gemeldeten oder registrierten Weiterverwendungen von Open-Data-Datensätzen. |
+| `anzahl_downloads_summiert` | int | Gesamtzahl der Datensatz-Downloads pro Jahr. |
+| `anzahl_api_calls_summiert` | int | Gesamtzahl der API-Zugriffe pro Jahr. |
+| `neu_publizierte_datensatze` | int | Anzahl der im jeweiligen Jahr neu veröffentlichten Datensätze. |
+| `depublizierte_datensatze` | int | Anzahl der Datensätze, die im jeweiligen Jahr vom Portal entfernt wurden. |
+| `total_datensatze_auf_dem_datenportal` | int | Gesamtbestand der publizierten Datensätze zum Jahresende. |
+| `size_of_records_in_the_dataset_in_gb` | double | Gesamte Datenmenge der publizierten Datensätze in Gigabyte. |
+| `publizierende_organisationen` | int | Anzahl der Organisationseinheiten mit publizierten Datensätzen. |
+| `kommentar` | text | — |
 
 
     ///

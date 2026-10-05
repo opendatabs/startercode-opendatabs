@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100313`
+- **Dataset_identifier** `100313`
 - **Title** `Grosser Rat: Dokumente`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt Dokumente von Geschäften, die im Grossen Rat des Kantons Basel-Stadt behandelt werden.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Parlamentarische Vorstösse', 'Legislative', 'Geschäft']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `dokudatum` | date | Datum des Dokuments (entweder letztes Bearbeitungsdatum oder im Text explizit genanntes Dokumentendatum) |
+| `dok_laufnr` | text | Laufnummer des Dokuments |
+| `signatur_dok` | text | Signatur des Dokuments |
+| `titel_dok` | text | Nummer und Titel des Dokuments |
+| `url_dok` | text | Link zum Dokument auf der Webseite des Grossen Rates |
+| `laufnr_ges` | text | Laufnummer des Hauptgeschäfts zum zugehörigen Dokument |
+| `signatur_ges` | text | Signatur des Hauptgeschäfts zum zugehörigen Dokument |
+| `status_ges` | text | Status des Hauptgeschäfts zum zugehörigen Dokument (In Bearbeitung oder Abgeschlossen) |
+| `titel_ges` | text | Titel des Hauptgeschäfts zum zugehörigen Dokument |
+| `ga_rr_gr` | text | Typ des Hauptgeschäfts zum zugehörigen Dokument |
+| `url_ges` | text | Link zum Hauptgeschäft auf der Webseite des Grossen Rates |
+| `url_geschaeft_ods` | text | Link zum Datensatz "Grosser Rat: Geschäfte". Gefiltert nach Hauptgeschäft des aktuellen Dokuments. |
 
 
     ///

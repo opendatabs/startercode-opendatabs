@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100424`
+- **Dataset_identifier** `100424`
 - **Title** `Bewilligungen gemäss dem baselstädtischen Gesetz über öffentliche Ruhetage und Ladenöffnung`
 - **Description** `<p>Der Datensatz enthält Informationen zu der Anzahl an Ausnahmebewilligungen für verlängerte Öffnungszeiten im Kanton Basel-Stadt. Erfasst werden das Jahr, der Monat und die Anzahl der jeweils ausgestellten Bewilligungen. Diese Bewilligungen betreffen einerseits verlängerte oder ausserordentliche Ladenöffnungszeiten (z.B. Jubiläum, Neueröffnung, Event), und andererseits den Betrieb von offenen Verkaufsständen an besonderen Anlässen wie der Fasnacht, dem 1. August oder Nationalfeiertag. Zudem umfasst der Datensatz Bewilligungen für die Durchführung von Veranstaltungen an öffentlichen Ruhe- und Feiertagen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Bewilligungen', 'Öffnungszeiten', 'Ausnahmegenehmigungen']`
 - **Creator** `Arbeitsinspektorat`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Datum |
+| `jahr` | text | Jahr |
+| `monat` | int | Kalendermonat (1 = Januar, 12 = Dezember) |
+| `anzahl` | int | Anzahl |
 
 
     ///

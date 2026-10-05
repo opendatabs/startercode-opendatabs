@@ -57,7 +57,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100329`
+- **Dataset_identifier** `100329`
 - **Title** `Parkflächen`
 - **Description** `<p>In Basel stehen auf dem Stadtgebiet ungefähr 100'000 öffentliche und private Auto-Parkplätze zur Verfügung. Rund ein Viertel davon befindet sich auf Allmend. Ein Grossteil dieser Parkplätze befinden in der Blauen Zone und stehen hauptsächlich den Anwohnerinnen und Anwohner der Quartiere zur Verfügung. Daneben gibt es weitere Parkplatztypen: Gebührenpflichtige Parkplätze, Parkplätze für Velos und Motorräder, Parkplätze für Cars, usw.</p>
 
@@ -74,6 +74,39 @@ def _(mo):
 - **Keywords** `['Parkieren', 'Parkzone', 'Parkierung', 'Parkplatz', 'Parken', 'Auto', 'Velo', 'Fahrrad', 'Motorrad']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | text | Identifikationsnummer |
+| `strasse` | text | Name der Strasse, in der sich die Parkfläche befindet. |
+| `anzahl_parkfelder` | int | Anzahl der Parkplätze, die in dieser Parkfläche zur Verfügung stehen. |
+| `id_typ` | int | ID der Kategorie der Parkfläche, z.B. Blaue Zone, Weisse Zone, etc. |
+| `typ` | text | Kategorie der Parkfläche, z.B. Blaue Zone, Weisse Zone, etc. |
+| `tarif_gebiet` | text | Vier verschiedene Kategorien (-, A, B, C) |
+| `sopfg_geb` | int | Hängt von Tarif Gebiet ab. |
+| `tarif_id` | int | Eindeutige Kennung für den spezifischen Tarif. |
+| `tarif_code` | text | Weitere Unterteilung von Tarif Gebiet |
+| `gebpflicht` | text | Hängt von Tarif-Subzone ab |
+| `maxparkz` | int | Hängt von Tarif-Subzone ab |
+| `keinl` | text | Hängt von Tarif-Subzone ab |
+| `plz` | text | Postleitzahl |
+| `wov_id` | text | Eindeutige Kennung für das Wohnviertel, in dem die Parkfläche liegt. |
+| `wov_name` | text | Name des Wohnviertels, in dem sich die Parkfläche befindet. |
+| `bez_id` | text | Eindeutige Kennung für den Bezirk, in dem sich die Parkfläche befindet. |
+| `bez_name` | text | Name des Bezirks, in dem sich die Parkfläche befindet. |
 
 
     ///

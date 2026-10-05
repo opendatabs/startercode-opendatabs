@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100165`
+- **Dataset_identifier** `100165`
 - **Title** `Steuerstatistik Basel-Stadt: Kennzahlen seit 1991 nach Gemeinde und Wohnviertel`
 - **Description** `Zentrale Grössen der Steuerstatistik Basel-Stadt seit 1991 nach Gemeinde und Wohnviertel. Die Daten stammen aus den Steuerdaten der ordentlichen Veranlagung von ganzjährig in Basel-Stadt steuerpflichtigen Personen (ohne Auswärtige). Die Vermögenssteuer 2000 wurde zusammen mit der Einkommenssteuer 1999 bezogen. In der Steuerperiode 2000 sind nur Fälle mit Beginn der Steuerpflicht im Jahr 2000 aufgeführt, da die Vermögenssteuer 2001 wegen der Steuerharmonisierung erst zusammen mit der Einkommenssteuer 2001 bezogen worden ist.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,41 @@ def _(mo):
 - **Keywords** `['Gemeinden', 'Zeitreihe', 'Steuern', 'Einkommen', 'Wohnviertel']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `steuerjahr` | text | Jahr, auf das sich die Veranlagung bezieht. |
+| `wohnviertel` | int | Umfasst die Wohnviertel der Stadt Basel sowie die beiden Einwohnergemeinden Riehen und Bettingen. |
+| `wohnviertel_name` | text | — |
+| `n` | int | Ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `reineinkommen_mittelwert` | int | Mittelwert des Reineinkommens in Fr.; ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `reineinkommen_median` | int | Median des Reineinkommens in Fr.; ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `reineinkommen_ginik` | double | Gini-Koeffizient für das Reineinkommen; ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt. Der Gini-Koeffizient ist eine statistische Masszahl zur Messung der Einkommens- oder Vermögensungleichheit in einer Gesellschaft. Er variiert zwischen 0 und 1, wobei 0 für absolute Gleichheit steht und 1 für maximale Ungleichheit. |
+| `einkommen_steuerbar_mittelwert` | int | Mittelwert des steuerbaren Einkommens in Fr.; ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `einkommen_steuerbar_median` | int | Median des steuerbaren Einkommens in Fr.; ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `einkommen_steuerbetrag_ktgde_mittelwert` | int | Mittelwert des Einkommenssteuerertrags in Fr. (Kantons- und Gemeindesteuer); ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `einkommen_steuerbetrag_ktgde_median` | int | Median des Einkommenssteuerertrags in Fr. (Kantons- und Gemeindesteuer); ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `reinvermoegen_mittelwert` | int | Mittelwert des Reinvermögens in Fr.; ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `reinvermoegen_median` | int | Median des Reinvermögens in Fr.; ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `reinvermoegen_ginik` | double | Gini-Koeffizient für das Reinvermögen; ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt. Der Gini-Koeffizient ist eine statistische Masszahl zur Messung der Einkommens- oder Vermögensungleichheit in einer Gesellschaft. Er variiert zwischen 0 und 1, wobei 0 für absolute Gleichheit steht und 1 für maximale Ungleichheit. |
+| `vermoegen_steuerbar_mittelwert` | int | Mittelwert des steuerbaren Vermögens in Fr.; ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `vermoegen_steuerbar_median` | int | Median des steuerbaren Vermögens in Fr.; ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `vermoegen_steuerbetrag_ktgde_mittelwert` | int | Mittelwert des Vermögenssteuerertrags in Fr. (Kantons- und Gemeindesteuer); ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `vermoegen_steuerbetrag_ktgde_median` | int | Median des Vermögenssteuertrags in Fr. (Kantons- und Gemeindesteuer); ordentliche Veranlagungen von natürlichen Personen in Basel-Stadt; Quelle: Steuerstatistik Basel-Stadt |
+| `steuerjahr_zahl` | date | — |
 
 
     ///

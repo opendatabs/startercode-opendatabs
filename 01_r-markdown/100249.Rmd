@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -26,6 +26,18 @@ Die Kantonsstrassen Riehen und Bettingen zeigen die Kantonsstrassen in Riehen un
 - **Keywords** `['Weg', 'Mobilität', 'Strassennetz', 'Strasse', 'Wegnetz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_ksrb` | int | Eindeutiger Identifikator der Kantonsstrassen in Riehen und Bettingen |
+| `gemeinde` | text | Gemeinden (siehe 9.4 Wertebereich in der Modellbeschreibung) |
+| `eigentum` | text | Eigentümer |
+| `strasse` | text | Strassenname |
 
 
 # Load packages

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100010`
+- **Dataset_identifier** `100010`
 - **Title** `Leerstehende Wohnungen`
 - **Description** `Als Leerwohnung gilt eine Wohnung, welche am Stichtag (1. Juni) unbesetzt, aber bewohnbar ist und zur dauernden Miete von mindestens drei Monaten oder zum Verkauf angeboten wird. Folgende Wohnungen gelten nicht als Leerwohnungen: a) unbesetzt, aber bereits vermietet oder verkauft; b) unbesetzt, aber nicht zur Miete oder zum Verkauf angeboten; c) nicht mehr als Wohnung (Arztpraxen etc.) angeboten; d) einem beschränkten Personenkreis vorbehalten (z.B. Dienstwohnung); e) aus bau-, sanitätspolizeilichen oder richterlichen Gründen gesperrt; f) für weniger als drei Monate angeboten.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,21 @@ def _(mo):
 - **Keywords** `['Wohnung', 'Einfamilienhaus', 'Leerstand', 'Miete']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/unterthema/12#Leerstand`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+_No field information available._
 
 
     ///

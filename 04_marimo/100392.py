@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100392`
+- **Dataset_identifier** `100392`
 - **Title** `Kandidierende der Grossratswahlen nach Alter, Geschlecht und Liste seit 2020`
 - **Description** `<p style="">Dieser Datensatz zeigt die Kandidierenden der Grossratswahlen nach Altersgruppe, amtlichen Geschlecht und Liste seit 2020<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe', 'Gesamterneuerungswahl']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahljahr` | text | — |
+| `altersgruppe` | text | Altersgruppe Ende Wahljahr (berechnet als Wahljahr - Jahrgang) |
+| `listenkurzbezeichnung` | text | Abkürzung der Liste |
+| `geschlecht` | text | amtliches Geschlecht der kandidierenden Person |
+| `anzahl` | int | Anzahl Kandidierende |
+| `anteil` | double | Anteil im Wahljahr in % |
+| `anteil_altersgruppe` | double | Anteil im Wahljahr und in Altersgruppe in % |
+| `anteil_liste` | double | Anteil im Wahljahr und in Liste in % |
+| `frauenanteil_liste` | text | — |
 
 
     ///

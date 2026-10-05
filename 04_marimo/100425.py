@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100425`
+- **Dataset_identifier** `100425`
 - **Title** `Bewilligungen für Nacht-, Sonn- und/oder Feiertagsarbeit`
 - **Description** `<p>Der Datensatz dokumentiert die Anzahl an Bewilligungen für vorübergehende Nacht-, Sonn- und/oder Feiertagsarbeit im Kanton Basel-Stadt. Nacht-, Sonn- und Feiertagsarbeit sind grundsätzlich verboten. Falls für einen Betrieb dennoch Nacht-, Sonn und/oder Feiertagsarbeit erforderlich ist, können diese bewilligt werden, sofern die gesetzlichen Voraussetzungen gegeben sind. Arbeitszeitbewilligungen werden entweder durch die Kantone oder durch das Staatssekretariat für Wirtschaft (SECO) ausgestellt. Die kantonalen Behörden erteilen Bewilligungen, wenn ein dringendes Bedürfnis besteht (Art. 27 ArGV 1). Das SECO genehmigt Bewilligungen, wenn Nacht- oder Sonntagsarbeit unentbehrlich ist (Art. 28 ArGV 1). Der Datensatz enthält ausschliesslich jene Bewilligungen, die das Arbeitsinspektorat des Amtes für Wirtschaft und Arbeit (AWA) Basel-Stadt für vorübergehende Arbeiten (bis zu sechs Monaten) erteilt hat. Der Datensatz zeigt in aggregierter Form, wie viele Bewilligungen pro Monat ausgestellt wurden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Arbeitszeitbewilligungen', 'Feiertagsarbeit', 'Nachtarbeit', 'Bewilligungspflicht']`
 - **Creator** `Arbeitsinspektorat`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Datum |
+| `jahr` | text | Jahr |
+| `monat` | int | Kalendermonat (1 = Januar, 12 = Dezember) |
+| `anzahl` | int | Anzahl |
 
 
     ///

@@ -55,7 +55,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100380`
+- **Dataset_identifier** `100380`
 - **Title** `Entwicklung und Zusammenarbeit: Unterstützte Projekte`
 - **Description** `<p>Basel engagiert sich für die Verbesserung der Lebensumstände der Ärmsten dieser Welt. Für Projekte der ausländischen Entwicklungszusammenarbeit stellt der Kanton jährlich 2 Mio. Franken bereit. Mit den finanziellen Beiträgen sollen die Entwicklungschancen der Bevölkerung in den ärmsten Ländern der Welt oder in speziell benachteiligten Regionen nachhaltig verbessert werden. Die Entwicklungszusammenarbeit des Kantons Basel-Stadt engagiert sich ausschliesslich im Rahmen von Projekten im Ausland, wobei thematische Schwerpunkte im Fokus stehen (medizinische Versorgung, Landwirtschaft, Bildung, Gewerbeförderung etc.).</p>
 <p>Die <a href="https://www.bs.ch/pd/marketing/eza#kommission" target="_blank">Kommission für Entwicklungszusammenarbeit</a> (<a href="https://www.bs.ch/pd/marketing/eza#kommission" target="_blank">https://www.bs.ch/pd/marketing/eza#kommission</a>) trifft sich zwei Mal jährlich zur Auswahl von Projekten. Bei der Beurteilung von Projektanträgen orientiert sich die Kommission an einem Kriterienkatalog (Qualität, Relevanz, Effektivität, Wirkung, Nachhaltigkeit, Transparenz der Finanzierung, ethische Aspekte). Es wird darauf geachtet, dass bei der Vergabe der Mittel ein gewisser Turnus angewendet wird und Hilfswerke, welche in der Region domiziliert sind, besonders berücksichtigt werden.</p>
@@ -70,6 +70,30 @@ def _(mo):
 - **Keywords** `['Entwicklung', 'Entwicklungszusammenarbeit', 'Projekte', 'Engagement', 'Ausland', 'international', 'Medizin', 'Bildung', 'Landwirtschaft', 'Gewerbeförderung', 'Hilfswerk']`
 - **Creator** `Aussenbeziehungen und Standortmarketing`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Das Jahr, in dem das Projekt finanziell unterstützt wird. |
+| `projekt_titel` | text | Der Name des geförderten Entwicklungsprojekts. |
+| `staat` | text | Das Land, in dem das Projekt durchgeführt wird. |
+| `organisation` | text | Die Hilfsorganisation oder Institution, die das Projekt durchführt und um finanzielle Unterstützung bittet. |
+| `betrag_entscheid` | text | Der finanzielle Beitrag, der von der Kommission für das Projekt genehmigt wurde. |
+| `projektbeschrieb` | text | Eine kurze Zusammenfassung der Ziele und Aktivitäten des Projekts. |
+| `region` | text | Die spezifische Region innerhalb des Staates, in der das Projekt stattfindet. |
+| `sachgebiet` | text | Das Hauptthema oder der Schwerpunkt des Projekts (z.B. medizinische Versorgung, Bildung). |
 
 
     ///

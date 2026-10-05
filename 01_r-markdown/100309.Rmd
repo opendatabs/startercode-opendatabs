@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,24 @@ Auto generated R starter code for data set 100309.
 - **Keywords** `['Grosser Rat', 'Parlament', 'Interessensbindungen', 'Grossrat', 'Grossrätin', 'Legislative']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `rubrik` | text | Rubrik der Interessensbindung (Führung und Aufsicht oder staatliche Kommission) |
+| `intr_bind` | text | Name der zugehörigen Interessensbindung |
+| `funktion` | text | Funktion des Grossratsmitglieds in der Interessensbindung |
+| `text` | text | Name der zugehörigen Interessensbindung und Funktion des Grossratsmitglied |
+| `anrede` | text | Anrede des Grossratsmitglieds nach amtlichem Geschlecht |
+| `name` | text | Nachname des Grossratsmitglieds |
+| `vorname` | text | Vorname des Grossratsmitglieds |
+| `name_vorname` | text | Name und Vorname des Grossratsmitglieds |
+| `partei_kname` | text | Abkürzung der Parteizugehörigkeit des Grossratsmitglied (nur vorhanden, falls aktuelles Grossratsmitglied) |
+| `url_adr` | text | Link zum Grossratsmitglied auf der Webseite des Grossen Rates |
+| `uni_nr` | text | Individuelle Identifikationsnummer des Grossratsmitglieds innerhalb der Datenbank des Grossen Rates |
+| `url_ratsmitgliedschaften` | text | Link zum Datensatz "Grosser Rat: Ratsmitgliedschaften". Gefiltert nach aktueller Interessensbindung. |
 
 
 # Load packages

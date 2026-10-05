@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100225`
+- **Dataset_identifier** `100225`
 - **Title** `Schutzsuchende im Kanton Basel-Stadt nach Geschlecht, Altersklasse, Staatsangehörigkeit, Zuzugs- und Wegzugsmonat`
 - **Description** `Dieser Datensatz zeigt die Schutzsuchenden im Kanton Basel-Stadt nach Geschlecht, Altersgruppe, Staatsangehörigkeit, Zuzugs- und Wegzugsmonat. Er wird seit März 2024 nicht mehr aktualisiert.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,37 @@ def _(mo):
 - **Keywords** `['Alter', 'Bevölkerungsbestand', 'Staatsangehörigkeit', 'Schutzsuchende']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `laufnummer` | int | Personenbezogene Laufnummer |
+| `jahr` | text | Jahr des Bevölkerungsbestand |
+| `monat` | int | Monat des Bevölkerungsbestand |
+| `schutzstatus` | text | Schutzstatus |
+| `geschlecht` | text | Geschlecht der Schutzsuchenden (W: Weiblich, M: Männlich) |
+| `altersgruppen` | text | Schutzsuchende nach Altersgruppen |
+| `weggezogen` | int | 0: Schutzsuchende sind noch im Bevölkerungsbestand, 1: Schutzsuchende sind nicht mehr im Bevölkerungsbestand (entweder aufgrund von Wegzug, Wechsel des Status, Todesfall, Registerbereinigung etc.) |
+| `wegzugsjahr` | text | Jahr des Wegzugs (entweder aufgrund von Wegzug, Wechsel des Status, Todesfall, Registerbereinigung etc.) |
+| `wegzugsmonat` | int | Monat des Wegzugs (entweder aufgrund von Wegzug, Wechsel des Status, Todesfall, Registerbereinigung etc.) |
+| `zuzugsjahr` | text | Jahr des Zuzugs (aufgrund von Zuzug oder Wechsel des Status) |
+| `zuzugsmonat` | int | Monat des Zuzugs (aufgrund von Zuzug oder Wechsel des Status) |
+| `value_gender_bfs` | int | Value_gender_BFS |
+| `name_gender_bfs` | text | Name_gender_BFS |
+| `monat_und_jahr` | text | — |
+| `staatsangehoerigkeit` | text | Staatsangehörigkeit der Schutzsuchenden |
 
 
     ///

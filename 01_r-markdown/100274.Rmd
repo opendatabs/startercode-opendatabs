@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,27 @@ Auto generated R starter code for data set 100274.
 - **Keywords** `['Luftqualität']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `messbeginn` | date | Beginn der Messung |
+| `messende` | date | Ende der Messung |
+| `standort` | text | Name des Standorts |
+| `parameter` | text | Gemessener Stoff |
+| `messwert` | text | Gemessener Wert |
+| `messwert_zahlenformat` | double | Gemessener Wert bis auf 3 Dezimalstellen |
+| `3_dezimalstellen_messwert` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
+| `4_dezimalstellen_messwert` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
+| `5_dezimalstellen_messwert` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
+| `interventionswert` | double | Interventionswert |
+| `interventionswert_3_dez` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
+| `warnwert` | double | Warnwert |
+| `warnwert_3_dez` | double | Dieses Attribut wird verwendet, um die Anzahl der Dezimalstellen für die Darstellung von Messwerten im Rosental-Dashboard anzupassen. Diese Anpassung ist notwendig, da die Darstellungsoptionen im Datenportal begrenzt sind. Mit diesem Attribut können wir sicherstellen, dass die Dezimalstellen in der Visualisierung genau so angezeigt werden, wie es für die Präsentation der Daten erforderlich ist. |
+| `einheit` | text | Einheit, in welcher der Wert gemessen wird |
+| `messmethode` | text | Messmethode |
 
 
 # Load packages

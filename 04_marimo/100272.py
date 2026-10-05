@@ -53,19 +53,52 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100272`
+- **Dataset_identifier** `100272`
 - **Title** `Vorhersagen Birs: Wasserstand und Abfluss`
 - **Description** `<p>Hydrologische Vorhersagen (Wasserstand und Abfluss) für die Station "Birs - Münchenstein, Hofmatt". </p><p style="font-family: sans-serif;">Die Vorhersagen basieren auf den Meteo-Modellen ICON-CH1-EPS, ICON-CH2-EPS und IFS. Am Anfang der Zeitreihen stehen 24 Std. Messwerte, anschliessend fangen die Prognosen an. </p><p style="font-family: sans-serif;">Bei den ICON-Modellen wird der Kontroll-Lauf in den Spalten "Wasserstand" und "Abflussmenge" ausgewiesen. Der Kontroll-Lauf ist die hydrologische Vorhersage basierend auf der meteorologischen Kontrollvorhersage.</p><p>Stationsinfo: Die Station befindet sich bei "Hofmatt" in Münchenstein etwa auf Höhe der Brücke "Baselstrasse" über die Birs.</p><p>Weitere Informationen sind hier zu finden: <a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2106" target="_blank">https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2106</a><a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2106" target="_blank"></a></p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Änderungsprotokoll:</span></p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">30.05.2024:</span> Für die numerische Vorhersage wurde das Wettermodell COSMO mit dem neuen Wettermodell ICON (Icosahedral Nonhydrostatic Weather and Climate Model) ersetzt. Mehr Infos dazu finden Sie hier: <a href="https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html" target="_blank">https://www.meteoschweiz.admin.ch/ueber-uns/forschung-und-zusammenarbeit/projekte/2023/icon-22.html</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-03-06`
-- **Modified** `2026-10-04T21:01:18+00:00`
+- **Modified** `2026-10-05T11:01:19+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
-- **Temporal_coverage_start_date** `2026-10-01T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-12T22:00:00+00:00`
+- **Temporal_coverage_start_date** `2026-10-02T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-13T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Vorhersage', 'Gewässer', 'Fliessgewässer', 'Hydrologie']`
 - **Creator** `Bundesamt für Umwelt BAFU`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Datum und Uhrzeit |
+| `wasserstand` | double | Pegelstand in Meter über Meer. Bei den ICON-Modellen handelt es ich um die hydrologische Vorhersage basierend auf der meteorologischen Kontrollvorhersage (Kontroll-Lauf oder control run). |
+| `abfluss` | double | Abfliessende Wassermenge in Kubikmeter pro Sekunde. Bei den ICON-Modellen handelt es ich um die hydrologische Vorhersage basierend auf der meteorologischen Kontrollvorhersage (Kontroll-Lauf oder control run). |
+| `methode` | text | Das verwendete Meteo-Modell |
+| `ausgegeben_an` | datetime | Datum und Uhrzeit der Veröffentlichung |
+| `meteolauf` | datetime | Datum und Uhrzeit des Meteo-Laufs (der Zeitpunkt, zu dem die meteorologischen Vorhersagen erstellt wurden, die dann als Grundlage für das Modell zur Berechnung der hydrologischen Vorhersagen verwendet wird) |
+| `gemessene_werten_bis` | datetime | Datum und Uhrzeit, bis zu dem die Werte gemessen wurden |
+| `h_min` | double | Minimum (0%-Quantil) des Pegelstands in Meter über Meer |
+| `h_p25` | double | 25%-Quantil des Pegelstands in Meter über Meer |
+| `h_p50` | double | Median (50%-Quantil) des Pegelstands in Meter über Meer |
+| `h_p75` | double | 75%-Quantil des Pegelstands in Meter über Meer |
+| `h_max` | double | Maximum (100%-Quantil) des Pegelstands in Meter über Meer |
+| `q_min` | double | Minimum (0%-Quantil) der abfliessenden Wassermenge in Kubikmeter pro Sekunde |
+| `q_p25` | double | 25%-Quantil der abfliessenden Wassermenge in Kubikmeter pro Sekunde |
+| `q_p50` | double | Median (50%-Quantil) der abfliessenden Wassermenge in Kubikmeter pro Sekunde |
+| `q_p75` | double | 75%-Quantil der abfliessenden Wassermenge in Kubikmeter pro Sekunde |
+| `q_max` | double | Maximum (100%-Quantil) der abfliessenden Wassermenge in Kubikmeter pro Sekunde |
 
 
     ///

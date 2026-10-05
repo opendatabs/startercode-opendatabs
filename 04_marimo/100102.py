@@ -56,7 +56,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100102`
+- **Dataset_identifier** `100102`
 - **Title** `Resultate der Regierungsrats- und Regierungspräsidiumswahlen 2020`
 - **Description** `<p class="MsoNormal">Dieser Datensatz zeigt die Resultate der Regierungsratswahlen und der Regierungspräsidiumswahlen vom 25. Oktober und vom 29. November 2020. <o:p></o:p></p><p>
 
@@ -72,6 +72,71 @@ Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.<o:p>
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Präsident', 'Demokratie', 'Teilhabe', 'Gesamterneuerungswahl', 'Erster Wahlgang', 'Zweiter Wahlgang', 'Exekutive']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahl_titel` | text | Name der Wahl |
+| `wahlgang` | text | 1. oder 2. Wahlgang |
+| `art_der_wahl` | text | Gesamterneuerungswahl oder Ersatzwahl |
+| `datum` | date | Datum der Wahl |
+| `anzahl_sitze` | int | Anzahl Sitze, die zu vergeben sind |
+| `listen_nr` | int | Listen-Nr. |
+| `liste` | text | Kürzel der unterstützenden Parteien |
+| `kandidaten_nr` | int | Kandidaten-Nr. |
+| `bisher` | text | Angabe ob, eine Regierungsrätin oder ein Regierungsrat in der abgelaufenen Legislatur Mitglied des Regierungsrats war |
+| `ganzer_name` | text | Name in der Form "Nachname, Vorname" |
+| `name` | text | Nachname |
+| `vorname` | text | Vorname |
+| `geschlecht` | text | Geschlecht |
+| `jahrgang` | text | Jahrgang |
+| `alter` | int | Alter, berechnet mit der Formel "2020 minus Jahrgang" |
+| `partei` | text | Kürzel der Partei |
+| `beruf` | text | Beruf gemäss Wahlzettel |
+| `gemeinde` | text | Gemeinde |
+| `stimmen` | int | Anzahl Stimmen |
+| `gewahlt` | text | Angabe, ob eine Kandidatin oder ein Kandidat gewählt ist oder nicht |
+| `wahlzettel` | int | Anzahl eingelegter Wahlzettel |
+| `briefliche_stimmabgaben` | int | Anzahl brieflich eingelegter Wahlzettel |
+| `leere_stimmzettel` | int | Anzahl leer eingelegter Wahlzettel |
+| `ungultige_stimmzettel` | int | Anzahl ungültiger Wahlzettel |
+| `gultige_stimmzettel` | int | Anzahl gültiger Wahlzettel |
+| `vereinzelte_stimmen` | int | Anzahl Stimmen, welche auf nicht kandidierende Kandidatinnen und Kandidaten entfielen |
+| `absolutes_mehr` | int | berechnet nach der Formel: Ganzzahl((gültige Stimmen + leere Stimmen)/2) + 1) |
+| `stimmbeteiligung` | double | Anteil der eingelegten Wahlzettel am Total der Stimmberechtigten |
+| `stimmen_prasidium` | int | Anzahl Stimmen für das Regierungspräsidium |
+| `anteil_brieflich_stimmende` | double | Anteil der brieflich eingelegten Wahlzettel am Total der eingelegten Wahlzettel |
+| `prasidium` | int | 1 = Kandidiert für das Regierungspräsidium |
+| `kandidaten_nr_praidium` | int | Kandidaten-Nr. für die Wahl ins Regierungspräsidium |
+| `bisher_prasidium` | text | Angabe, ob eine Kandidatin oder ein Kandidat in der vorherigen Legislatur das Regierungspräsidium innehatte |
+| `gewahlt_prasidium` | text | Angabe, ob eine Kandidatin oder ein Kandidat für das Regierungspräsidium gewählt ist |
+| `wahlzettel_prasidium` | int | Anzahl eingelegte Wahlzettel für das Regierungspräsidium |
+| `briefliche_stimmabgaben_prasidium` | int | Anzahl brieflich eingelegte Wahlzettel für das Regierungspräsidium |
+| `leere_stimmzettel_prasidium` | int | Anzahl leer eingelegter Wahlzettel für das Regierungspräsidium |
+| `ungultige_stimmzettel_prasidium` | int | Anzahl ungültiger Wahlzettel für das Regierungspräsidium |
+| `gultige_stimmzettel_prasidium` | int | Anzahl gültiger Wahlzettel für das Regierungspräsidium |
+| `vereinzelte_stimmen_prasidium` | int | Anzahl Stimmen, welche für nicht für das Regierungspräsidium kandidierende Personen eingegangen sind |
+| `absolutes_mehr_prasidium` | int | berechnet nach der Formel: Ganzzahl((gültige Stimmen + leere Stimmen)/2) + 1) |
+| `stimmbeteiligung_prasidium` | double | Anteil eingelegter Wahlzettel am Total der Stimmberechtigten |
+| `anteil_brieflich_stimmende_prasidium` | double | Anteil der brieflich eingelegten Wahlzettel am Total der eingelegten Wahlzettel |
+| `gemeinde_id` | text | Gemeinde-ID |
+| `stimmberechtigte` | int | Total der Stimmberechtigten |
+| `stimmberechtigte_manner` | int | Anzahl stimmberechtigter Männer |
+| `stimmberechtigte_frauen` | int | Anzahl stimmberechtigter Frauen |
+| `stimmrechtsausweise` | int | Anzahl Stimmrechtsausweise |
+| `jahrgang_num` | int | Jahrgang formatiert als ganze Zahl |
 
 
     ///

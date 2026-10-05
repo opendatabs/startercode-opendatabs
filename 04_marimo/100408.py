@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100408`
+- **Dataset_identifier** `100408`
 - **Title** `Veränderte Wahlzettel der Grossratswahlen 20. Oktober 2024`
 - **Description** `<p>Bei den Grossratswahlen im Kanton Basel-Stadt am 20. Oktober 2024 kandidierten 870 Personen (verfügbar unter <a href="https://data.bs.ch/explore/dataset/100385/" target="_blank">https://data.bs.ch/explore/dataset/100385/</a>) für insgesamt 100 zu vergebende Sitze.</p><p> Es gingen insgesamt 42 640 gültige Wahlzettel ein, von denen 20 733 verändert wurden. Der Datensatz zeigt diese 20 733 Wahlzettel und jegliche Details dazu. </p><p>Leere Felder bei der Stimme bedeuten, dass das Feld leer gelassen wurde. Felder mit NULL bei der Stimme bedeuten, dass in diesem Wahlkreis weniger Stimmen zur Verfügung standen.</p><p>Die Listennummer 00 bedeutet, dass ein Wahlzettel ohne Bezeichnung ausgefüllt wurde (insgesamt 3 326 Wahlzettel). In diesem Fall werden leere Stimmen nicht gezählt.</p><p>Es gibt zwei Arten wie man einen Wahlzettel verändern kann: <br>Panaschieren bedeutet, dass Kandidierende von anderen Listen auf die ausgewählte Liste übertragen wurden. <br>Kumulieren bezeichnet das Mehrfachnennen eines Kandidierenden, wodurch diese mehr als eine Stimme erhält. <br>Im Datensatz wird "p" für panaschiert und "k" für kumuliert verwendet. Wenn ein Wahlzettel sowohl panaschiert als auch kumuliert wurde, wird ebenfalls "p" ausgewiesen. </p><p><span>Die Wahlergebnisse sind in einem separaten Datensatz (</span><a 255);"="" 255,="" background-color:="" href="https://data.bs.ch/explore/dataset/100399/" rgb(255,="" target="_blank">https://data.bs.ch/explore/dataset/100399/</a><span>) einsehbar, der die Verteilung der Stimmen und die gewählten Vertreter detailliert darstellt.</span></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,98 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe', 'Parlament', 'Grosser Rat', 'Grossrat', 'Grossrätin']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahljahr` | text | Wahljahr |
+| `wahlkreis` | text | Wahlkreis |
+| `anzahl_sitze` | int | Anzahl Sitze für Wahlkreis |
+| `listen_nr` | text | Listennummer |
+| `listenkurzbezeichnung` | text | Listenkurzbezeichnung |
+| `listenbezeichnung` | text | Listenbezeichnung |
+| `wahlzettel_id` | text | Eindeutiger Identifikator des Wahlzettels |
+| `wahlzettel_typ` | text | p = panaschiert; k = kumuliert |
+| `kandidat_01` | text | Kandidierenden Nr. der ersten Stimme |
+| `kandidat_01_name` | text | Ganzer Name der ersten Stimme |
+| `kandidat_02` | text | Kandidierenden Nr. der zweiten Stimme |
+| `kandidat_02_name` | text | Ganzer Name der zweiten Stimme |
+| `kandidat_03` | text | Kandidierenden Nr. der dritten Stimme |
+| `kandidat_03_name` | text | Ganzer Name der dritten Stimme |
+| `kandidat_04` | text | Kandidierenden Nr. der vierten Stimme |
+| `kandidat_04_name` | text | Ganzer Name der vierten Stimme |
+| `kandidat_05` | text | Kandidierenden Nr. der fünften Stimme |
+| `kandidat_05_name` | text | Ganzer Name der fünften Stimme |
+| `kandidat_06` | text | Kandidierenden Nr. der sechsten Stimme |
+| `kandidat_06_name` | text | Ganzer Name der sechsten Stimme |
+| `kandidat_07` | text | Kandidierenden Nr. der siebten Stimme |
+| `kandidat_07_name` | text | Ganzer Name der siebten Stimme |
+| `kandidat_08` | text | Kandidierenden Nr. der achten Stimme |
+| `kandidat_08_name` | text | Ganzer Name der achten Stimme |
+| `kandidat_09` | text | Kandidierenden Nr. der neunten Stimme |
+| `kandidat_09_name` | text | Ganzer Name der neunten Stimme |
+| `kandidat_10` | text | Kandidierenden Nr. der zehnten Stimme |
+| `kandidat_10_name` | text | Ganzer Name der zehnten Stimme |
+| `kandidat_11` | text | Kandidierenden Nr. der elften Stimme |
+| `kandidat_11_name` | text | Ganzer Name der elften Stimme |
+| `kandidat_12` | text | Kandidierenden Nr. der zwölften Stimme |
+| `kandidat_12_name` | text | Ganzer Name der zwölften Stimme |
+| `kandidat_13` | text | Kandidierenden Nr. der 13. Stimme |
+| `kandidat_13_name` | text | Ganzer Name der 13. Stimme |
+| `kandidat_14` | text | Kandidierenden Nr. der 14. Stimme |
+| `kandidat_14_name` | text | Ganzer Name der 14. Stimme |
+| `kandidat_15` | text | Kandidierenden Nr. der 15. Stimme |
+| `kandidat_15_name` | text | Ganzer Name der 15. Stimme |
+| `kandidat_16` | text | Kandidierenden Nr. der 16. Stimme |
+| `kandidat_16_name` | text | Ganzer Name der 16. Stimme |
+| `kandidat_17` | text | Kandidierenden Nr. der 17. Stimme |
+| `kandidat_17_name` | text | Ganzer Name der 17. Stimme |
+| `kandidat_18` | text | Kandidierenden Nr. der 18. Stimme |
+| `kandidat_18_name` | text | Ganzer Name der 18. Stimme |
+| `kandidat_19` | text | Kandidierenden Nr. der 19. Stimme |
+| `kandidat_19_name` | text | Ganzer Name der 19. Stimme |
+| `kandidat_20` | text | Kandidierenden Nr. der 20. Stimme |
+| `kandidat_20_name` | text | Ganzer Name der 20. Stimme |
+| `kandidat_21` | text | Kandidierenden Nr. der 21. Stimme |
+| `kandidat_21_name` | text | Ganzer Name der 21. Stimme |
+| `kandidat_22` | text | Kandidierenden Nr. der 22. Stimme |
+| `kandidat_22_name` | text | Ganzer Name der 22. Stimme |
+| `kandidat_23` | text | Kandidierenden Nr. der 23. Stimme |
+| `kandidat_23_name` | text | Ganzer Name der 23. Stimme |
+| `kandidat_24` | text | Kandidierenden Nr. der 24. Stimme |
+| `kandidat_24_name` | text | Ganzer Name der 24. Stimme |
+| `kandidat_25` | text | Kandidierenden Nr. der 25. Stimme |
+| `kandidat_25_name` | text | Ganzer Name der 25. Stimme |
+| `kandidat_26` | text | Kandidierenden Nr. der 26. Stimme |
+| `kandidat_26_name` | text | Ganzer Name der 26. Stimme |
+| `kandidat_27` | text | Kandidierenden Nr. der 27. Stimme |
+| `kandidat_27_name` | text | Ganzer Name der 27. Stimme |
+| `kandidat_28` | text | Kandidierenden Nr. der 28. Stimme |
+| `kandidat_28_name` | text | Ganzer Name der 28. Stimme |
+| `kandidat_29` | text | Kandidierenden Nr. der 29. Stimme |
+| `kandidat_29_name` | text | Ganzer Name der 29. Stimme |
+| `kandidat_30` | text | Kandidierenden Nr. der 30. Stimme |
+| `kandidat_30_name` | text | Ganzer Name der 30. Stimme |
+| `kandidat_31` | text | Kandidierenden Nr. der 31. Stimme |
+| `kandidat_31_name` | text | Ganzer Name der 31. Stimme |
+| `kandidat_32` | text | Kandidierenden Nr. der 32. Stimme |
+| `kandidat_32_name` | text | Ganzer Name der 32. Stimme |
+| `kandidat_33` | text | Kandidierenden Nr. der 33. Stimme |
+| `kandidat_33_name` | text | Ganzer Name der 33. Stimme |
+| `kandidat_34` | text | Kandidierenden Nr. der 34. Stimme |
+| `kandidat_34_name` | text | Ganzer Name der 34. Stimme |
 
 
     ///

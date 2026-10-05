@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -26,6 +26,11 @@ Das Staatsarchiv des Kantons Basel-Stadt fungiert als Gedächtnis von Staat und 
 - **Keywords** `['Archiv', 'Archivkatalog', 'Geschichte Basels', 'LOD', 'LD', 'Linked Data', 'Linked Open Data', 'Linked', 'SPARQL']`
 - **Creator** `Staatsarchiv Basel-Stadt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+_No field information available._
 
 
 # Load packages

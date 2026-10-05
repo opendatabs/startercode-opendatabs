@@ -56,7 +56,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100306`
+- **Dataset_identifier** `100306`
 - **Title** `Smarte Strasse: Aufrufe der Microsites`
 - **Description** `<p>Im Rahmen des Projekts «Smarte Strasse» wurden Sensoren an verschiedenen Standorten angebracht. Um
 die Transparenz zu erhöhen, werden im Projekt «Smarte Strasse» die Sensoren sowie die Daten,
@@ -72,6 +72,30 @@ gemacht.<br>Der vorliegende Datensatz zeigt die Anzahl der Seitenaufrufe der Mic
 - **Keywords** `['QR-Codes', 'Tracking', 'Seitenaufrufe']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | int | Willkürliche Identifikationsnummer |
+| `timestamp` | date | Gibt das Datum der Datenaufzeichnung an. |
+| `dataset_id` | text | Link zu den Daten, die auf der Microsite abgebildet werden. |
+| `api` | text | Abfrage zum Suchen nach den Daten auf der Microsite. Wenn die Microsite aufgerufen wird, dann werden die Daten aus dem Datensatz auf der Microsite abgebildet. Es entsteht eine Datenabfrage. Die Anzahl an Datenabfragen kann man messen. |
+| `nhits` | int | Anzahl der Suchanfragen auf der Microsite. |
+| `sensor` | text | Sensor |
+| `microsite` | text | Link zu der Microsite |
+| `geo_point` | geo_point_2d | Geo Point des Sensors |
 
 
     ///

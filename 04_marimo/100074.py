@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100074`
+- **Dataset_identifier** `100074`
 - **Title** `Veranstaltungen mit potenziellem Einfluss auf Veloverkehr`
 - **Description** `<p>Dieser Datensatz zeigt ausgewählte Veranstaltungen und Veranstaltungsreihen. Der Datensatz ist ursprünglich aufgebaut worden, um das Verkehrsaufkommen bei kantonalen Fahrrad-Zählstellen – welches unter anderem auch durch Veranstaltungen beeinflusst wird – besser interpretieren zu können. Aus diesem Grund sind nicht alle Veranstaltungen auf dem Kantonsgebiet im Datensatz enthalten, sondern nur diejenigen, von denen man sich einen potentiellen Einfluss auf die Anzahl an Zählstellen gezählten Velos erwartet. Der Datensatz wird durch das Statistische Amt Basel-Stadt nach bestem Wissen und Gewissen gepflegt und aktualisiert. Es besteht kein Anspruch auf Richtigkeit oder Vollständigkeit der gemachten Angaben. </p><p>Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,53 @@ def _(mo):
 - **Keywords** `['Adresse', 'Event', 'Ausgang', 'Velo', 'Ansammlung', 'Konzert', 'Publikum']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `tag_datum` | date | Tag, an welchem eine Veranstaltung stattfindet |
+| `name` | text | Name der Veranstaltung |
+| `kategorie_name` | text | Kategorie der Veranstaltung |
+| `termin_key` | int | ID eines Termins. Beispiel: Der Bummelsonntag hat innerhalb eines Jahres verschiedene Termin-Ids. |
+| `veranstaltung_key` | int | ID einer Veranstaltung über alle Jahre. Beispiel: Die Fasnacht hat über alle Jahre dieselbe Veranstaltungs-ID. |
+| `code` | text | Code der Veranstaltung |
+| `aktiv_code` | int | Anzeige, ob eine Veranstaltung noch durchgeführt wird oder nicht. Wertebereich: 1=aktiv, 0=inaktiv. |
+| `wiederkehrend_code` | int | Anzeige, ob eine Veranstaltung einmal oder mehrmals durchgeführt wird. Wertebereich: 1=wiederkehrend, 0=nicht wiederkehrend. |
+| `erfasst_ab` | date | Datum, ab welchem eine Veranstaltung erfasst wurde. |
+| `jahr_nummer` | text | Jahr, in welchem eine Veranstaltung stattfindet |
+| `dauer_in_tagen` | int | Dauer der Veranstaltung in Tagen |
+| `datum_von` | date | Erster Tag der Veranstaltung |
+| `datum_bis` | date | Letzter Tag der Veranstaltung |
+| `eingang_id_blockseite` | int | Blockseite, an der die Veranstaltung stattfindet; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `geo_point_2d` | geo_point_2d | Geo-Koordinaten; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `gebaeude_koordinate_x` | text | X-Koordinate des Gebäudes; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht) wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `gebaeude_koordinate_y` | text | Y-Koordinate des Gebäudes;Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `strasse_name_kanton` | text | Strassenname; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `eingang_hausnummer` | text | Hausnummer, an welcher die Veranstaltung stattfindet; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `wohnblock_id_kdm_vzbbb` | int | ID des Blocks; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `wohnbezirk_id_kdm` | int | ID des Bezirks; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `wohnbezirk_name` | text | Name des Bezirks; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `wohnviertel_id_kdm` | int | ID des Wohnviertels oder der Landgemeinde; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `wohnviertel_name` | text | Name des Wohnviertels oder der Landgemeinde; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `gemeinde_name` | text | Name der Gemeinde; Bei Veranstaltungen, welche nicht einer eindeutigen Örtlichkeit zugeordnet werden konnten (z.B. Basler Fasnacht), wurde wo möglich eine Adresse erfasst, an der besonders viel Personenaufkommen erwartet wird. Wo dies nicht möglich war, wurde keine Örtlichkeit erfasst. |
+| `wiederkehrend` | text | Anzeige, ob eine Veranstaltung einmal oder mehrmals durchgeführt wird. |
+| `aktiv` | text | Anzeige, ob eine Veranstaltung noch durchgeführt wird oder nicht. |
+| `beschreibung` | text | Beschreibung der Veranstaltung |
+| `veranstaltung_bemerkung` | text | Bemerkungen zur Veranstaltung |
+| `termin_bemerkung` | text | Hinweise zu einem Termin |
+| `kategorie_beschreibung` | text | Beschreibung der Veranstaltungskategorie |
 
 
     ///

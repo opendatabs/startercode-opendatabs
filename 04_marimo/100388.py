@@ -53,19 +53,40 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100388`
+- **Dataset_identifier** `100388`
 - **Title** `Aktuelle Temperaturen der Gartenbäder`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz enthält die aktuellen Wassertemperaturen in den Gartenbädern</p><p style="font-family: sans-serif;">Die Temperaturdaten werden alle 15 Minuten aktualisiert, indem ein automatisiertes Programm die neuesten Werte von der Webseite <a href="https://www.ed-baeder.ch/" target="_blank">https://www.ed-baeder.ch/</a> abruft. Auf dieser Webseite findet man auch sonstige Meldungen zu den Gartenbädern.</p><p style="font-family: sans-serif;">Falls ein Gartenbad geschlossen ist oder keine Temperaturmessung verfügbar ist, wird für diesen Zeitraum kein Wert im Datensatz vermerkt.</p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Weiterführende Links:</span></p><p style="font-family: sans-serif;">Weitere Informationen zu den Gartenbädern: <a href="https://www.bs.ch/themen/kultur-sport-und-freizeit/baeder-kunsteisbahnen-sportanlagen-und-raeume/gartenbaeder-basel" target="_blank">https://www.bs.ch/themen/kultur-sport-und-freizeit/baeder-kunsteisbahnen-sportanlagen-und-raeume/gartenbaeder-basel</a></p><p style="font-family: sans-serif;">Zeitreihe der Temperaturen der Gartenbäder als Datensatz: <a href="https://data.bs.ch/explore/dataset/100384/" target="_blank">https://data.bs.ch/explore/dataset/100384/</a></p><p style="font-family: sans-serif;">Diese und weitere Sportanlagen als Datensatz: <a href="https://data.bs.ch/explore/dataset/100151/" target="_blank">https://data.bs.ch/explore/dataset/100151/</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-08-16`
-- **Modified** `2026-10-04T21:45:34+00:00`
+- **Modified** `2026-10-05T11:45:38+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2026-10-03T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-03T22:00:00+00:00`
+- **Temporal_coverage_start_date** `2026-10-04T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-04T22:00:00+00:00`
 - **Themes** `['Kultur, Medien, Informationsgesellschaft, Sport', 'Tourismus']`
 - **Keywords** `['Hallenbad', 'Familienbad', 'Sportbad', 'behindertengerecht', 'Schwimmzone', 'Schwimmen', 'Baden', 'OpenSportData', 'Live']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `name` | text | Name des Bads |
+| `temperatur` | int | Temperatur des Wassers |
+| `zeitpunkt_job` | datetime | Zeitpunkt, an dem die Daten gescraped wurden |
+| `koordinaten` | geo_point_2d | Punktkoordinate des Bads |
+| `url_sportanlage` | text | Link zum Datensatz "Sport- und Bewegungsanlagen" |
 
 
     ///

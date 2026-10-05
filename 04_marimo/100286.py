@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100286`
+- **Dataset_identifier** `100286`
 - **Title** `Standorte der Smiley-Geschwindigkeitsanzeigen`
 - **Description** `Die Smiley-Geschwindigkeitsanzeigen dienen der Kantonspolizei Basel-Stadt zur Erhöhung der Verkehrssicherheit an der betreffenden Örtlichkeit. Die Wechselanzeige von der aktuell gefahrenen Geschwindigkeit und Smiley-Symbol (Lob oder Tadel) ohne Repression weist auf freundliche Weise auf ein allfälliges Fahrverhalten hin. Durch diese Selbstkontrolle soll das Fahrverhalten positiv beeinflusst, die vorgeschriebene Geschwindigkeit besser eingehalten und die Aufmerksamkeit der Verkehrsteilnehmenden erhöht werden. Mit den Geräten können zudem Verkehrsdaten anonym erfasst werden. Die Geschwindigkeitsanzeigen stehen nicht in einem Zusammenhang mit Ordnungsbussen oder einer strafrechtlichen Verfolgung.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-04-06`
-- **Modified** `2026-09-07T00:00:00+00:00`
+- **Modified** `2026-10-05T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2021-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-11-29T23:00:00+00:00`
@@ -66,6 +66,36 @@ def _(mo):
 - **Keywords** `['Strassenverkehrssicherheit', 'Geschwindigkeit']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_smiley` | int | Eindeutiger Identifikator (ID) |
+| `idstandort` | int | Identifikator des Standorts |
+| `strname` | text | Strassenname des Standorts, an dem Smiley-Geschwindigkeitsanzeige platziert wird |
+| `hausnr` | text | Hausnummer des Standorts, an dem Smiley-Geschwindigkeitsanzeige aufgestellt wird, falls keine vorhanden Detailangabe zu Standort in Attribut «Hinweis» |
+| `geschwind` | text | Signalisierte Geschwindigkeit (20 km/h, 30 km/h, 40 km/h, 50 km/h, 60 km/h, 80 km/h) |
+| `richtung` | text | Fahrtrichtung in Form des Strassenamens der anzufahrenden Strasse |
+| `hinweis` | text | Detailangaben zum Standort |
+| `status` | text | — |
+| `messbegin` | date | Datum des Beginn Smiley-Geschwindigkeitsanzeigen-Betriebs |
+| `messende` | date | Datum des Ende Smiley-Geschwindigkeitsanzeigen-Betriebs |
+| `ogdeinzel` | text | Link zur Einzelmessung auf OGD |
+| `odganalyse` | text | Link zur Analyse auf OGD |
 
 
     ///

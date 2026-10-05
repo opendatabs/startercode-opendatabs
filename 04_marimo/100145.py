@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100145`
+- **Dataset_identifier** `100145`
 - **Title** `Coronavirus (COVID-19): Massentests an Schulen der Primar- und Sekundarstufe I`
 - **Description** `<p>Dieser Datensatz zeigt die auf SARS-CoV-2 getesteten Klassen-Pools aus baselstädtischen Schulen der Primarstufe und der Sekundarstufe I. Es wird jeweils die Anzahl getesteter Pools sowie die Test-Positivitätsrate pro Woche angegeben. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a></p><p>Dieser Datensatz wird seit Ende Februar 2022 nicht mehr aktualisiert. Seit Mitte März 2022 werden die Daten zu Tests in Basler Schulen in einem neuen Datensatz veröffentlich: <a href="https://data.bs.ch/explore/dataset/100183/" target="_blank">https://data.bs.ch/explore/dataset/100183/</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,29 @@ def _(mo):
 - **Keywords** `['SARS-CoV-2', 'Virus', 'Corona', 'Coronavirus', 'COVID-19', 'Test', 'PCR', 'Schule', 'Schüler', 'Schülerin', 'Lehrer', 'Lehrerin']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `firstdayofweek` | date | Datum des Montags der Woche |
+| `weekofyear` | int | Nr. der Woche im Jahr |
+| `result` | text | Zeigt an, ob ein Pool positiv oder negativ auf SARS-CoV-2 getestet wurde |
+| `count` | int | Anzahl positiv resp. negativ getesteter Klassen-Pools in einer Woche |
+| `counttotal` | int | Anzahl in einer Woche getesteter Klassen-Pools total |
+| `positivityratepercent` | double | Zeigt den Prozentsatz der positiv auf SARS-CoV-2 getesteten Klassen-Pools |
+| `countsamples` | int | Anzahl in den Klassen-Pools einer Woche getesteter Schülerinnen und Schüler |
 
 
     ///

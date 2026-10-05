@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,19 @@ Auto generated R starter code for data set 100294.
 - **Keywords** `['Wetter', 'Luftfeuchtigkeit', 'Strahlung', 'Niederschlag', 'Wind', 'Temperatur', 'Regen']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Zeitstempel |
+| `precipitation` | double | Total der Niederschläge innerhalb der letzten Stunde |
+| `relativehumidityhc` | double | Luftfeuchtigkeit bezieht sich auf die Menge an Wassertröpfchen oder Wasserdampf, die in der Luft vorhanden sind. |
+| `solarradiation` | double | Globalstrahlung ist die Menge an Sonnenenergie, die auf eine horizontale Fläche in einer bestimmten Zeitspanne (normalerweise in Stunden) auftrifft. |
+| `airtemperaturehc` | double | Lufttemperatur bezieht sich auf die Masseinheit der Wärmeenergie, die in der Luft vorhanden ist. |
+| `windspeedultrasonic` | double | Windgeschwindigkeit bezieht sich auf die Geschwindigkeit, mit der sich Luft in horizontaler Richtung bewegt. |
+| `winddirultrasonic` | double | Windrichtung bezieht sich auf die Richtung, aus der der Wind weht. Sie wird normalerweise in Grad gemessen, wobei 0 Grad für Nord, 90 Grad für Ost, 180 Grad für Süd und 270 Grad für West steht. |
 
 
 # Load packages

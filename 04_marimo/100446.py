@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100446`
+- **Dataset_identifier** `100446`
 - **Title** `Hundenamen im Kanton Basel-Stadt seit 2008`
 - **Description** `Der Datensatz zeigt die Häufigkeit der (erfassten) Hundenamen im Kanton Basel-Stadt nach Jahr.<br>Eine Sammlung aller OGD-Datensätze über Hunde finden Sie hier: <a href="https://data.bs.ch/explore/?refine.tags=hund">https://data.bs.ch/explore/?refine.tags=hund</a><br>Weitere Informationen zu Tierbeständen im Kanton Basel-Stadt findet man im Statistikportal:<a href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}'>href='https://statistik.bs.ch/suche?search={"query":"","filterTheme":"successor-16.2"}</a>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['Freizeit', 'Hund']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr der Erfassung |
+| `hund_name` | text | Hundename |
+| `anzahl_hunde` | int | Anzahl Hunde mit diesem Namen im Kanton |
 
 
     ///

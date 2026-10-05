@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100080`
+- **Dataset_identifier** `100080`
 - **Title** `Weiterverwendungen von OGD Datensätzen`
 - **Description** `<p>Dieser Datensatz enthält eine Übersicht der von Nutzern gemeldeten Weiterverwendungen von Datensätzen aus dem Datenportal, einschliesslich Anwendungen, Visualisierungen und Projekte, die auf bestehenden Datensätzen basieren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,37 @@ def _(mo):
 - **Keywords** `['Weiterverwendung', 'Datensätze', 'Datenportal', 'Nutzeranwendungen', 'Visualisierungen', 'Projekte', 'Datenanwendung', 'Datennutzung', 'Datenanalyse']`
 - **Creator** `Open Data Basel-Stadt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `title` | text | Der Titel der Weiterverwendung, der die Anwendung, Visualisierung oder das Projekt beschreibt. |
+| `description` | text | Eine kurze Erklärung der Weiterverwendung, die den Kontext und die spezifische Nutzung des Datensatzes angibt. |
+| `url` | text | Der Weblink zur spezifischen Anwendung, Visualisierung oder zum Projekt, in dem der Datensatz verwendet wird. |
+| `created_at` | date | Das Datum, an dem die Weiterverwendung des Datensatzes gemeldet oder erstellt wurde. |
+| `reuse_category` | text | Die Kategorie oder der Typ der gemeldeten Nutzung des Datensatzes. |
+| `thumbnail` | file | Ein Vorschaubild, das die Weiterverwendung visuell repräsentiert und den Nutzern hilft, den Inhalt schnell zu identifizieren. |
+| `themes` | text | Die übergeordneten Kategorien, die den Inhalt des Datensatzes beschreiben und seine thematische Einordnung erleichtern. |
+| `creator_category` | text | Die Klassifizierung des Entwicklers oder der Organisation, die die Weiterverwendung des Datensatzes erstellt hat. |
+| `user_full_name` | text | Der Name der Person, Gruppe oder Organisation, die die Weiterverwendung des Datensatzes entwickelt oder erstellt hat. |
+| `dataset_title` | text | Der Name oder die Bezeichnung des Datensatzes, der dessen Inhalt und Thema zusammenfasst. |
+| `link_zum_datensatz` | text | Die URL, die direkten Zugriff auf den spezifischen Datensatz im Datenportal ermöglicht. |
+| `dataset_id` | text | Eine eindeutige Identifikationsnummer, die jedem Datensatz im Datenportal zugewiesen ist, um ihn von anderen Datensätzen zu unterscheiden. |
+| `publisher` | text | Die Organisation, die den Datensatz bereitgestellt oder veröffentlicht hat. |
+| `theme_picto` | text | Thema |
+| `dateforjoinclean` | text | — |
 
 
     ///

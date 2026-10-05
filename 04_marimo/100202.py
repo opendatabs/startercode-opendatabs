@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100202`
+- **Dataset_identifier** `100202`
 - **Title** `Zuordnung von Parzellen auf Statistische Raumeinheiten`
 - **Description** `Zuordnung von Liegenschaften und Allmendparzellen auf Statistische Raumeinheiten (Wohnviertel, Bezirk, Block). Zur Methodik: Von jeder Parzelle wird ein Mittelpunkt berechnet (Zentroid), und mit der Geometrie der statistischen Raumeinheiten verschnitten. Falls ein Parzellenmittelpunkt auf eine Grenze zwischen mehreren Raumeinheiten zu liegen kommt, so wird die Parzelle all diesen Raumeinheiten zugeordnet (es entstehen dadurch pro Parzelle mehrere Zeilen im Datensatz). Parzellen auf dem Rhein werden keiner statistischen Raumeinheit zugeordnet.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,38 @@ def _(mo):
 - **Keywords** `['Administrative Einheit', 'Bezirk', 'Grundeigentum', 'Liegenschaft', 'Wohnviertel', 'Block']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `r1_nummer` | int | Parzellennummer |
+| `r1_egris_e` | text | Eidgenössischer Grundstücksidentifikator |
+| `r1_art` | int | Code zur Art der Liegenschaft |
+| `r1_art_txt` | text | Text zur Art der Liegenschaft |
+| `r1_sektion` | text | Sektion des Grundbuchkreises |
+| `bez_id` | text | ID des Bezirks |
+| `bez_name` | text | Name des Bezirks |
+| `wov_id` | text | ID des Wohnviertels |
+| `wov_name` | text | Name des Wohnviertels |
+| `blo_id` | text | ID des Blocks |
+| `blo_label` | text | Name des Blocks |
+| `gemeinde_name` | text | Name der Gemeinde |
+| `oid` | text | Eine eindeutige Identifizierungsnummer |
+| `point_x` | double | Geographische Länge in Projektion WGS 84 |
+| `point_y` | double | Geographische Breite in Projektion WGS 84 |
+| `geo_point_2d` | geo_point_2d | — |
 
 
     ///

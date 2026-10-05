@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100417`
+- **Dataset_identifier** `100417`
 - **Title** `ESC Eurovision Song Contest - FAQ`
 - **Description** `<p>Der Datensatz umfasst Fragen und Antworten zum Eurovision Song Contest (ESC) und dient als strukturierte Informationsquelle für Interessierte. Die enthaltenen Informationen beziehen sich auf verschiedene Themen wie Tickets, Veranstaltungsorte, Programme und organisatorische Details.</p><p>Hier geht es zum FAQ: <a href="https://eurovision-basel.ch/faq/" target="_blank">https://eurovision-basel.ch/faq/</a></p>`
 - **Contact_name** `None`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['Musik', 'Fragen', 'ESC']`
 - **Creator** `Aussenbeziehungen und Standortmarketing`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `ranking` | int | Gibt die Reihenfolge der Fragen in der FAQ-Liste an. |
+| `frage` | text | Enthält die gestellte Frage zum ESC. |
+| `antwort` | text | Enthält die vollständige Antwort auf die gestellte Frage. |
+| `sprache` | text | Gibt die Sprache der Frage und Antwort an (z. B. Deutsch). |
+| `verantwortung` | text | Zeigt an, welche Organisation oder Institution für die bereitgestellte Information verantwortlich ist. |
+| `kontakt` | text | Enthält eine Kontaktadresse oder E-Mail zur weiteren Klärung von Fragen. |
+| `link` | text | Enthält eine URL zu weiterführenden Informationen. |
+| `link_anzeigetext` | text | Enthält den Anzeigetext der URL |
+| `zuletzt_aktualisiert` | date | Datum der letzten Aktualisierung der Frage und Antwort. |
+| `thema` | text | Gibt das übergeordnete Thema an, zu dem die Frage gehört (z. B. "Tickets"). |
+| `keywords` | text | Enthält relevante Schlagworte zur besseren Kategorisierung und Suche der FAQ-Einträge. |
+| `antwort_html` | text | Enthält die Antwort in HTML-Format, um eine strukturierte und formatierte Darstellung zu ermöglichen. |
+| `veranstaltungsort` | text | — |
 
 
     ///

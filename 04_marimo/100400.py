@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100400`
+- **Dataset_identifier** `100400`
 - **Title** `Resultate der Regierungsratswahlen 20. Oktober 2024`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate des ersten Wahlgangs der Regierungsratswahlen vom 20. Oktober 2024. </p><p>Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,57 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Regierung', 'Exekutive', 'Teilhabe', 'Demokratie', 'Ersatzwahl', 'Erster Wahlgang', 'Gesamterneuerungswahlen']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahlbezeichnung` | text | Titel der Wahl |
+| `amtsdauer` | text | Anzahl Jahre, für die die Mitglieder gewählt werden |
+| `wahltermin` | date | Datum der Wahl |
+| `anzahl_sitze` | int | Anzahl Sitze, die zur Verfügung stehen |
+| `wahlkreis_nr` | text | Nummer des Wahlkreises |
+| `wahlkreis_code` | text | Code des Wahlkreises |
+| `bezeichnung_wahlkreis` | text | Name des Wahlkreises |
+| `stimmberechtigte_manner` | int | Anzahl in einem Wahlkreis stimmberechtigter Männer |
+| `stimmberechtigte_frauen` | int | Anzahl in einem Wahlkreis stimmberechtigter Frauen |
+| `stimmberechtigte` | int | Anzahl Stimmberechtigte in einem Wahlkreis |
+| `stimmberechtigte_auslandschweizer` | int | Anzahl stimmberechtigter Auslandschweizer |
+| `wahlzettel` | int | Anzahl Wahlzettel |
+| `briefliche_stimmabgaben` | int | Anzahl brieflich eingelegter Wahlzettel |
+| `ungultige_wahlzettel` | int | Anzahl ungültiger Wahlzettel |
+| `leere_wahlzettel` | int | Anzahl leer eingelegter Wahlzettel |
+| `leere_stimmen` | int | Anzahl leerer Stimmen |
+| `ungultige_stimmen` | int | Anzahl ungültiger Stimmen |
+| `vereinzelte_stimmen` | int | Anzahl vereinzelter Stimmen |
+| `kandidaten_nr` | text | Kandidaten-Nr |
+| `personen_id` | text | Laufnummer einer Person |
+| `bisher` | text | Angabe, ob eine kandidierende Person in der abgelaufenen Legislatur im Parlament vertreten war oder nicht |
+| `gewahlt` | text | Angabe, ob eine kandidierende Person gewählt ist |
+| `ganzer_name` | text | Nachname und Vorname, mit Komma getrennt |
+| `name` | text | Nachname |
+| `vorname` | text | Vorname |
+| `geschlecht` | text | Geschlecht |
+| `jahrgang` | text | Jahrgang |
+| `anrede` | text | Anrede |
+| `beruf` | text | Beruf gemäss Wahlzettel |
+| `stimmen` | int | Anzahl Stimmen total für eine kandidierende Person |
+| `total_gultige_wahlzettel` | int | Anzahl gültige Wahlzettel |
+| `stimmbeteiligung` | text | Anteil der eingelegten Wahlzettel am Total der Stimmberechtigten |
+| `anteil_brieflich_wahlende` | text | Anteil der brieflich eingelegten Wahlzettel am Total der eingelegten Wahlzettel |
+| `absolutes_mehr` | int | berechnet nach der Formel: (Ganzzahl((gültige Wahlzettel + leere Wahlzettel)/2 + 1) |
+| `vereinzelte` | text | Spalte, damit bei Grafik "Vereinzelte" abgebildet werden kann |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,37 @@ Auto generated R starter code for data set 100132.
 - **Keywords** `None`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahl_titel` | text | Name der Wahl |
+| `wahlgang` | int | 1. oder 2. Wahlgang |
+| `resultats_typ` | text | Zwischenresultat oder Schlussresultat |
+| `datum` | date | Datum der Wahl |
+| `anz_sitze` | int | Anzahl Sitze, die zu vergeben sind |
+| `kandidat_nr` | int | Kandidaten-Nr |
+| `name_ganz` | text | Name in der Form "Nachname, Vorname" |
+| `name` | text | Nachname |
+| `vorname` | text | Vorname |
+| `gemeinde` | text | Gemeinde |
+| `stimmen` | int | Anzahl Stimmen |
+| `vereinzelte` | int | Anzahl Stimmen, welche auf nicht kandidierende Kandidatinnen und Kandidaten entfielen |
+| `gewaehlt` | text | Angabe, ob eine Kandidatin oder ein Kandidat gewählt ist oder nicht |
+| `stimmrechtsausweise` | int | Anzahl Stimmrechtsausweise |
+| `eingelegte` | int | Anzahl eingelegte Wahlzettel |
+| `leere` | int | Anzahl leere Wahlzettel |
+| `ungueltige` | int | Anzahl ungültige Wahlzettel |
+| `gueltige` | int | Anzahl gültige Wahlzettel |
+| `anz_briefliche` | int | Anzahl brieflich eingelegter Wahlzettel |
+| `stimmber_total` | int | Anzahl Stimmberechtigter total |
+| `stimmber_maen` | int | Anzahl stimmberechtigter Männer |
+| `stimmber_fraue` | int | Anzahl stimmberechtigter Frauen |
+| `absolutes_mehr` | int | berechnet nach der Formel: (Ganzzahl((gültige Stimmen + leere Stimmen)/2 + 1) |
+| `stimmbeteiligung` | double | Anteil der eingelegten Wahlzettel am Total der Stimmberechtigten |
+| `ant_brieflich` | double | Anteil der brieflich eingelegten Wahlzettel am Total der eingelegten Wahlzettel |
 
 
 # Load packages

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,26 @@ Auto generated R starter code for data set 100047.
 - **Keywords** `['Elektroautos', 'Elektromobilität', 'Ladestationen', 'IWB', 'Tankstellen', 'Elektroladestation', 'Echtzeit', 'Realtime']`
 - **Creator** `Industrielle Werke Basel`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `starttime` | datetime | Start Zeitpunkt des Ladevorgangs |
+| `stoptime` | datetime | Ende des Ladevorgangs |
+| `duration` | int | Ladedauer in Minuten |
+| `watthour` | int | Lademenge in Wh |
+| `kilowatthour` | double | Lademenge in [kWh] |
+| `station_capacity` | int | Maximale Ladeleistung der Ladestation |
+| `connectorid` | int | Anschluss 1 oder 2 der Ladestation |
+| `station_location_coordinates_lat` | double | Standort GPS Koordinaten Breitengrad |
+| `station_location_coordinates_lng` | double | Standort GPS Koordinaten Längengrad |
+| `station_connectortype` | int | Anschluss/ Stecker Typ |
+| `station_location` | geo_point_2d | — |
+| `starttimetext` | text | — |
+| `stoptimetext` | text | — |
+| `time_measured` | int | — |
 
 
 # Load packages

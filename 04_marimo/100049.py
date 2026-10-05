@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100049`
+- **Dataset_identifier** `100049`
 - **Title** `Luftqualität Station St. Johannplatz`
 - **Description** `<p>Standortbeschreibung: Die Messstation befindet sich in Basel auf dem St.Johannplatz, einem kleinen Park am Rande der Altstadt. Sie wird lokal beeinflusst durch eine mässig befahrene Strasse und Parkplatzsuchverkehr. 500m nördlich verläuft eine stark befahrene Strasse und in dieser Richtung liegt auch ein Teil der Chemischen Industrie. Die Station Basel St.Johannplatz gibt die Belastung wieder, wie sie als Hintergrund überall in der Stadt Basel anzutreffen ist.</p>Lage: Stadtzentrum in Park, offene Bebauung<p>Koordinaten: 2610790 / 1268370 bzw. N 47° 33.957 E 7° 34.921; 260 m ü. M.Geografische Lage: Juranordfuss</p><p>Siedlungsgrösse: 166'600 Einwohner</p><p>Verkehr, DTV (% LKW): &lt; 9'100 / 32'000 (8%)</p><p>Strassenabstand: 2 m / 500</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,29 @@ def _(mo):
 - **Keywords** `['Luft', 'Feinstaub', 'Ozon', 'Echtzeit', 'Realtime', 'Stickstoffdioxid', 'Stickoxid', 'O3', 'NO2', 'NOX']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum_zeit` | datetime | — |
+| `timestamp_text` | text | — |
+| `pm10_stundenmittelwerte_ug_m3` | double | — |
+| `pm2_5_stundenmittelwerte_ug_m3` | double | — |
+| `o3_stundenmittelwerte_ug_m3` | double | — |
+| `no2_stundenmittelwerte_ug_m3` | double | — |
+| `geo_point_2d` | geo_point_2d | Standort |
 
 
     ///

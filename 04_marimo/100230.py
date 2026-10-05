@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100230`
+- **Dataset_identifier** `100230`
 - **Title** `Gebäude (Gebäude- und Wohnungsregister GWR)`
 - **Description** `Gebäude gemäss Gebäude- und Wohnungsregister (GWR). <br><br>Ein Gebäude ist ein auf Dauer angelegter, mit einem Dach versehener, mit dem Boden fest verbundener Bau, der Personen aufnehmen kann und zu Wohnzwecken oder Zwecken der Arbeit, der Ausbildung, der Kultur, des Sports oder jeglicher anderer menschlicher Tätigkeit dient; ein Doppel-, Gruppen- und Reihenhaus zählt ebenfalls als ein Gebäude, wenn es einen eigenen Zugang von aussen hat und wenn zwischen den Gebäuden eine senkrechte vom Erdgeschoss bis zum Dach reichende tragende Trennmauer besteht.<br><br>Weitere Einzelheiten zur Erfassung von Gebäuden sind hier nachzulesen: <a href="https://www.housing-stat.ch/files/1754-2300.pdf" target="_blank">https://www.housing-stat.ch/files/1754-2300.pdf (Weisung zur Erfassung der Gebäude in der amtlichen Vermessung (AV) und im Gebäude- und Wohnungsregister (GWR)) </a><br><br>Einen Überblick über die im Register geführten Merkmal gibt folgendes Dokument: <a href="https://www.housing-stat.ch/files/881-2200.pdf" target="_blank">https://www.housing-stat.ch/files/881-2200.pdf (Merkmalskatalog 4.2)</a> bzw. online unter <a href="https://www.housing-stat.ch/de/help/42.html" target="_blank">https://www.housing-stat.ch/de/help/42.html (Online-Merkmalskatalog 4.2)</a><br><br>Die rechtliche Grundlage stellt die entsprechende eidgenössische Gesetzgebung dar: <a href="https://www.fedlex.admin.ch/eli/cc/2017/376/de" target="_blank">https://www.fedlex.admin.ch/eli/cc/2017/376/de (Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR))</a><br><br>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-24`
-- **Modified** `2026-10-04T05:26:07+00:00`
+- **Modified** `2026-10-05T04:26:22+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,89 @@ def _(mo):
 - **Keywords** `['Adresse', 'Wohnung', 'Gebäude', 'Wohnen', 'EGRID']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `egid` | int | Eidgenössischer Gebäudeidentifikator |
+| `gdekt` | text | Abkürzung Kanton |
+| `ggdenr` | int | Gemeindenummer |
+| `ggdename` | text | Gemeindename |
+| `egrid` | text | Eidgenössischer Grundstücksidentifikator |
+| `lgbkr` | int | Sektion |
+| `lparz` | text | Parzellennummer - nn(F) bedeutet, dass sich das Grundstück in Frankreich befindet. |
+| `lparzsx` | text | Suffix der Parzellennummer |
+| `ltyp` | text | Typ des Grundstücks |
+| `gebnr` | int | Gebäudenummer |
+| `gbez` | text | Gebäudebezeichnung |
+| `gkode` | double | E-Gebäudekoordinate |
+| `gkodn` | double | N-Gebäudekoordinate |
+| `gksce` | int | Koordinatenherkunft Code |
+| `gksce_decoded` | text | Koordinatenherkunft Bezeichnung |
+| `gstat` | int | Gebäudestatus Code |
+| `gstat_decoded` | text | Gebäudestatus Bezeichnung |
+| `gkat` | int | Gebäudekategorie Code |
+| `gkat_decoded` | text | Gebäudekategorie Bezeichnung |
+| `gklas` | int | Gebäudeklasse Code |
+| `gklas_decoded` | text | Gebäudeklasse Bezeichnung |
+| `gbauj` | int | Baujahr des Gebäudes |
+| `gbaum` | int | Baumonat des Gebäudes |
+| `gbaup` | int | Bauperiode Code |
+| `gbaup_decoded` | text | Bauperiode Bezeichnung |
+| `gabbj` | text | Abbruchjahr des Gebäudes |
+| `garea` | int | Gebäudefläche (in m2) |
+| `gvol` | int | Gebäudevolumen (in m3) |
+| `gvolnorm` | int | Norm des Gebäudevolumens Code |
+| `gvolnorm_decoded` | text | Norm des Gebäudevolumens Bezeichnung |
+| `gvolsce` | int | Informationsquelle zum Gebäudevolumen Code |
+| `gvolsce_decoded` | text | Informationsquelle zum Gebäudevolumen Bezeichnung |
+| `gastw` | int | Anzhl Geschosse |
+| `ganzwhg` | int | Anzahl Wohnugnen |
+| `gazzi` | int | Anzahl separate Wohnräume |
+| `gschutzr` | int | Zivilschutzraum Code |
+| `gschutzr_decoded` | text | Zivilschutzraum Bezeichnung |
+| `gebf` | int | Energiebezugsfläche |
+| `gwaerzh1` | int | Primärer Wärmeerzeuger der Heizung Code |
+| `gwaerzh1_decoded` | text | Primärer Wärmeerzeuger der Heizung Bezeichnung |
+| `genh1` | int | Primäre Energiequelle der Heizung Code |
+| `genh1_decoded` | text | Primäre Energiequelle der Heizung Bezeichnung |
+| `gwaersceh1` | int | Informationsquelle primäre Heizung Code |
+| `gwaersceh1_decoded` | text | Informationsquelle primäre Heizung Bezeichnung |
+| `gwaerdath1` | date | Informationsquelle primäre Heizung |
+| `gwaerzh2` | int | Sekundärer Wärmeerzeuger der Heizung Code |
+| `gwaerzh2_decoded` | text | Sekundärer Wärmeerzeuger der Heizung Bezeichnung |
+| `genh2` | int | Sekundäre Energiequelle der Heizung Code |
+| `genh2_decoded` | text | Sekundäre Energiequelle der Heizung Bezeichnung |
+| `gwaersceh2` | int | Informationsquelle sekundäre Heizung Code |
+| `gwaersceh2_decoded` | text | Informationsquelle sekundäre Heizung Bezeichnung |
+| `gwaerdath2` | date | Aktualisierungsdatum sekundäre Heizung |
+| `gwaerzw1` | int | Primärer Wärmeerzeuger Warmwasser Code |
+| `gwaerzw1_decoded` | text | Primärer Wärmeerzeuger Warmwasser Bezeichnung |
+| `genw1` | int | Primäre Energiequelle Warmwasser Code |
+| `genw1_decoded` | text | Primäre Energiequelle Warmwasser Bezeichnung |
+| `gwaerscew1` | int | Informationsquelle primäre Wasseraufbereitung Code |
+| `gwaerscew1_decoded` | text | Informationsquelle primäre Wasseraufbereitung Bezeichnung |
+| `gwaerdatw1` | date | Aktualisierungsdatum primäre Warmwasseraufbereitung |
+| `gwaerzw2` | int | Sekundärer Wärmeerzeuger Warmwasser Code |
+| `gwaerzw2_decoded` | text | Sekundärer Wärmeerzeuger Warmwasser Bezeichnung |
+| `genw2` | int | Sekundäre Energiequelle Warmwasser Code |
+| `genw2_decoded` | text | Sekundäre Energiequelle Warmwasser Bezeichnung |
+| `gwaerscew2` | int | Informationsquelle sekundäre Warmwasseraufbereitung Code |
+| `gwaerscew2_decoded` | text | Informationsquelle sekundäre Warmwasseraufbereitung Bezeichnung |
+| `gwaerdatw2` | date | Aktualisierungsdatum sekundäre Warmwasseraufbereitung |
+| `gexpdat` | date | Exportdatum |
 
 
     ///

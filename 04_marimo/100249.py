@@ -54,7 +54,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100249`
+- **Dataset_identifier** `100249`
 - **Title** `Strassen und Wege: Kantonsstrassen Riehen und Bettingen`
 - **Description** `Dieser Datensatz ist Teil des kantonalen Geodatenmodells des Kantons Basel-Stadt "Strassen und Wege" und stellt die Kantonsstrassen Riehen und Bettingen dar. <br>Weitere Daten zu "Strassen und Wege":<a href="https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege">https://data.bs.ch/explore/?refine.tags=Strassen+und+Wege</a><br>
 Die Kantonsstrassen Riehen und Bettingen zeigen die Kantonsstrassen in Riehen und Bettingen.`
@@ -68,6 +68,28 @@ Die Kantonsstrassen Riehen und Bettingen zeigen die Kantonsstrassen in Riehen un
 - **Keywords** `['Weg', 'Mobilität', 'Strassennetz', 'Strasse', 'Wegnetz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_ksrb` | int | Eindeutiger Identifikator der Kantonsstrassen in Riehen und Bettingen |
+| `gemeinde` | text | Gemeinden (siehe 9.4 Wertebereich in der Modellbeschreibung) |
+| `eigentum` | text | Eigentümer |
+| `strasse` | text | Strassenname |
 
 
     ///

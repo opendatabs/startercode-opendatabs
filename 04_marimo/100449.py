@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100449`
+- **Dataset_identifier** `100449`
 - **Title** `Angezeigte Straftaten nach Betäubungsmittelgesetz (BetmG)`
 - **Description** `<div>Der Datensatz enthält jährlich aggregierte Angaben zu polizeilich registrierten Anzeigen, die unter das Betäubungsmittelgesetz (BetmG) fallen und im Kanton Basel-Stadt erfasst wurden. Für ausgewählte Straftaten werden pro Jahr die Anzahl der registrierten Delikte sowie Angaben zu den beschuldigten Personen ausgewiesen. Dabei werden Merkmale der betroffenen Personen wie Geschlecht, Nationalität und Altersgruppe ausgewiesen. Die Daten sind nach Jahr, Gemeinde (Basel, Riehen, Bettingen und Gesamtkanton) sowie Straftat gegliedert und ermöglichen einen detaillierten Überblick über die strafrechtliche Entwicklung im Kanton Basel-Stadt seit 2009.</div><div>Der Datensatz enthält einzelne Straftaten sowie Zwischentotale und Gesamttotale pro Jahr und Gemeinde. </div><div>Von mehreren Tätern gemeinsam begangene Straftaten werden als ein Ereignis gezählt. Bei der Auflistung einzelner Straftatbestände werden Personen, die verschiedener Straftaten beschuldigt werden, pro Straftatbestand je einmal ausgewiesen. Im jeweiligen Gesamttotal der Gesetze und allfälligen Zwischentotalen wird eine beschuldigte Person jedoch, unabhängig davon, wie viele Straftaten ihr zur Last gelegt werden, nur einmal gezählt.</div>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,46 @@ def _(mo):
 - **Keywords** `['PKS', 'Kriminalstatistik', 'Betäubungsmittel', 'Polizei', 'Männer', 'Frauen', 'Schweizer', 'Ausländer', 'Beschuldigte', 'Alter', 'Straftaten']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/unterthema/sicherheit`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Jahr |
+| `gemeinde` | text | Gemeinde des Tatortes |
+| `gesetznummer` | double | Nummer des Gesetzes in der systematischen Sammlung des Bundesrechts |
+| `gesetz` | text | Titel des Gesetzes |
+| `gesetz_kurz` | text | Kurzbezeichnung des Gesetzes |
+| `sortierung_straftaten` | int | Interne Sortiernummer der Straftat |
+| `straftaten` | text | Bezeichnung der Deliktsgruppe bzw. des Tatbestands |
+| `anzahl_total` | int | Total der registrierten Straftaten |
+| `aufk` | int | Anzahl aufgeklärter Straftaten |
+| `anz_besch_maenner` | int | Anzahl männliche Beschuldigte |
+| `anz_besch_frauen` | int | Anzahl weibliche Beschuldigte |
+| `anz_besch_sex_na` | int | Anzahl beschuldigte Personen mit unbekanntem Geschlecht |
+| `anz_besch_ch` | int | Anzahl Beschuldigte Schweizer Staatsangehörigkeit |
+| `anz_besch_ausl` | int | Anzahl Beschuldigte ausländischer Staatsangehörigkeit |
+| `anz_besch_nat_na` | int | Anzahl beschuldigte Personen mit unbekannter Staatsangehörigkeit |
+| `anz_besch_0_17` | int | Anzahl Beschuldigte zwischen 0 und 17 Jahren |
+| `anz_besch_18_29` | int | Anzahl Beschuldigte zwischen 18 und 29 Jahren |
+| `anz_besch_30_39` | int | Anzahl Beschuldigte zwischen 30 und 39 Jahren |
+| `anz_besch_40_49` | int | Anzahl Beschuldigte zwischen 40 und 49 Jahren |
+| `anz_besch_50_59` | int | Anzahl Beschuldigte zwischen 50 und 59 Jahren |
+| `anz_besch_60_69` | int | Anzahl Beschuldigte zwischen 60 und 69 Jahren |
+| `anz_besch_ueber70` | int | Anzahl Beschuldigte über 70 Jahren |
+| `anz_besch_alter_na` | int | Anzahl beschuldigte Personen mit unbekanntem Alter |
+| `anz_besch_total` | int | Gesamtzahl der beschuldigten Personen |
 
 
     ///

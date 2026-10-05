@@ -54,7 +54,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100406`
+- **Dataset_identifier** `100406`
 - **Title** `Dashboards - Open Data Basel-Stadt`
 - **Description** `<p>Dieser Datensatz umfasst eine detaillierte Beschreibung der von Open Data Basel-Stadt entwickelten Dashboards. Die Dashboards dienen als visuelle Hilfsmittel zur Darstellung von Kennzahlen und Daten zu verschiedenen gesellschaftlichen Themen im Kanton Basel-Stadt.
 Open Data Basel-Stadt erstellt und pflegt diese Dashboards, um öffentlich relevante Daten benutzerfreundlich und transparent zu präsentieren.</p>`
@@ -68,6 +68,30 @@ Open Data Basel-Stadt erstellt und pflegt diese Dashboards, um öffentlich relev
 - **Keywords** `['Dashboard', 'Weiterverwendung', 'Datensätze', 'Datenportal', 'Nutzeranwendungen', 'Visualisierungen', 'Projekte', 'Datenanwendung', 'Datennutzung', 'Datenanalyse']`
 - **Creator** `Open Data Basel-Stadt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `title` | text | Der Titel des Dashboards |
+| `description` | text | Eine kurze Erklärung des Dashboards |
+| `published_at` | date | Das Datum, an dem das Dashboard veröffentlicht wurde |
+| `dashboard_category` | text | Kategorien, die das Dashboard beschreiben |
+| `themen` | text | Die übergeordneten Kategorien, die den Inhalt des Dashboards beschreiben und seine thematische Einordnung erleichtern. |
+| `url` | text | Der Weblink zur spezifischen Anwendung, Visualisierung oder zum Projekt, in dem der Datensatz verwendet wird. |
+| `foto` | text | Ein Foto des Dashboards |
+| `datensaetze` | text | Für das Dashboard relevante und verwendete Datensätze |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,17 @@ Auto generated R starter code for data set 100136.
 - **Keywords** `['Impfung', 'Corona', 'Coronavirus', 'SARS-CoV-2', 'geimpft', 'Warteliste', 'Impftermin', 'Vaccination', 'COVID-19']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | Zeitstand |
+| `age_group` | text | Altersklasse der Personen, welche sich für eine Impfung gegen SARS-CoV-2 angemeldet haben |
+| `has_appointments` | text | Angabe, ob eine angemeldete Person bereits einen Termin hat (Yes), nicht (No), oder auf Grund fehlender historischer Daten unbekannt (Unknown) |
+| `count` | int | Anzahl Personen in der jeweiligen Gruppe |
+| `week` | int | Wochennummer |
 
 
 # Load packages

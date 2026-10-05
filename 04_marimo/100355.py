@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100355`
+- **Dataset_identifier** `100355`
 - **Title** `Gesetzessammlung: Gesetzesänderungen`
 - **Description** `<p style="font-family: sans-serif;">Der Datensatz beschreibt  die in der zeitlichen Abfolge der Publikation oder des Inkrafttretens nachgeführte Gesetzessammlung (Chronologische Gesetzessammlung) des kantonalen und kommunalen Rechts im Kanton Basel-Stadt: <a href="https://www.gesetzessammlung.bs.ch/app/de/chronology/change_documents" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/chronology/change_documents</a></p><p style="font-family: sans-serif;">Die Erlasstexte in systematischer Form (Systematische Gesetzessammlung) können unter gesetzessammlung.bs.ch (<a href="https://www.gesetzessammlung.bs.ch/app/de/systematic/texts_of_law" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/systematic/texts_of_law</a>) oder auch in diesem Datensatz gefunden werden: <a href="https://data.bs.ch/explore/dataset/100354/" target="_blank">https://data.bs.ch/explore/dataset/100354/</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,47 @@ def _(mo):
 - **Keywords** `['Gesetz', 'Recht', 'Justiz', 'Systematik']`
 - **Creator** `Zentraler Rechtsdienst`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `change_date` | date | Datum, an dem die Änderung des Gesetzestext stattgefunden hat. |
+| `change_type` | text | Typ der Änderung, die am Gesetzestext vorgenommen wurde. Mögliche Werte:; abrogated: Das Gesetz wurde aufgehoben.; formless: Eine nicht inhaltliche Änderung, z. B. redaktionelle Anpassungen.; new: Ein neues Gesetz wurde hinzugefügt.; removed: Der Gesetzestext wurde entfernt.; total_revision: Eine vollständige Überarbeitung des Gesetzes.; version: Eine neue Version des Gesetzes wurde publiziert. |
+| `text_of_law_id` | text | technische ID des Gesetzestexts |
+| `text_of_law_systematic_number` | text | systematische Kennung des Gesetzestexts |
+| `text_of_law_is_active` | text | Zeigt an, ob der Gesetzestext derzeit aktiv ist. |
+| `text_of_law_version_id` | text | Technische ID der spezifischen Version des Gesetzestexts. |
+| `text_of_law_version_title` | text | Titel des Gesetzestexts. |
+| `text_of_law_version_keywords` | text | Schlüsselwörter, die den Inhalt des Gesetzestexts beschreiben. |
+| `text_of_law_version_info_badge` | text | Statusinformation zur aktuellen Version des Gesetzestexts. Mögliche Werte:; abrogated: Das Gesetz wurde offiziell aufgehoben.; current: Die Version des Gesetzes ist derzeit gültig.; not_current: Die Version des Gesetzes ist nicht mehr gültig.; removed: Die Version des Gesetzes wurde entfernt. |
+| `text_of_law_version_info_badge_date` | date | Datum, ab dem die Status-Info-Badge gilt. |
+| `text_of_law_version_type` | text | Typ der Übergangsänderung, die an der aktuellen Version des Gesetzestexts vorgenommen wurde. Mögliche Werte:; formless: Eine nicht inhaltliche Änderung, z. B. redaktionelle Anpassungen.; new: Ein neues Gesetz wurde hinzugefügt.; total_revision: Eine vollständige Überarbeitung des Gesetzes.; version: Eine neue Version des Gesetzes wurde erstellt. |
+| `text_of_law_version_continuation_type` | text | Der Übergangstyp der Gesetzesversion, der angibt, wie sich die Version des Gesetzes verändert hat. Mögliche Werte sind:; abrogated: Das Gesetz wurde aufgehoben oder annulliert.; formless: Eine nicht inhaltliche Änderung, z. B. redaktionelle Anpassungen ohne Änderung des Gesetzestextes.; removed: Der Gesetzestext wurde entfernt.; revised: Das Gesetz wurde überarbeitet, was in der Regel eine Änderung oder Ergänzung des bestehenden Textes bedeutet. |
+| `text_of_law_version_previous_type` | text | Der Typ der vorherigen Version des Gesetzestextes, bevor die Änderung vorgenommen wurde. Mögliche Werte:; abrogated: Das Gesetz wurde aufgehoben.; formless: Eine nicht inhaltliche Änderung, z. B. redaktionelle Anpassungen.; removed: Der Gesetzestext wurde entfernt.; revised: Das Gesetz wurde überarbeitet (z. B. eine Änderung, die die bestehenden Bestimmungen anpasst). |
+| `text_of_law_version_active_since` | date | Datum, an dem die aktuelle Version des Gesetzestexts aktiv wurde. |
+| `text_of_law_version_family_active_since` | date | Datum, an dem die aktuelle Version der Gesetzestextfamilie aktiv wurde oder letzte totale Revision |
+| `text_of_law_version_inactive_since` | date | Datum, an dem die aktuelle Version des Gesetzestexts inaktiv wurde. |
+| `text_of_law_version_found_at` | date | Datum, an dem diese Version des Gesetzestext gefunden oder zuletzt bestätigt wurde. |
+| `text_of_law_version_is_active` | text | Zeigt an, ob die Version des Gesetzestextes derzeit aktiv ist. |
+| `text_of_law_version_category_id` | int | Technische ID der Kategorie, zu der der Gesetzestext gehört. |
+| `text_of_law_version_category_name` | text | Name der Kategorie, zu der der Gesetzestext gehört. |
+| `tols_dta_original_url` | text | URL des Gesetzestexts in der offiziellen Gesetzessammlung Basel-Stadt. |
+| `tols_dta_url` | text | URL des Gesetzestexts auf lexfind.ch. |
+| `tols_dta_file_size` | int | Grösse der Gesetzestextdatei (in Bytes). |
+| `tolsv_dtah_url` | text | URL der Gesetzesversion auf lexfind.ch. |
+| `tolsv_dtah_file_size` | int | Grösse der Gesetzesversionsdatei (in Bytes). |
 
 
     ///

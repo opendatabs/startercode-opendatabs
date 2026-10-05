@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -27,6 +27,23 @@ Diese Daten werden vom Tiefbauamt des Kantons Basel-Stadt zur Verfügung gestell
 - **Keywords** `['Baustelle', 'bauen', 'Strasse', 'Allmendbewilligung', 'Baubeginn', 'Bauende']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `projekt_name` | text | Das ist die Strasse auf dem das Projekt stattfindet. |
+| `projekt_beschrieb` | text | Beschreibung |
+| `projekt_info` | text | Zusatzinformationen |
+| `projekt_link` | text | Link zum Projekt |
+| `datum_von` | date | Baubeginn |
+| `datum_bis` | date | Bauende |
+| `dokument1` | text | Dokument mit Anwohnerinformationen |
+| `dokument2` | text | Dokument mit Anwohnerinformationen |
+| `dokument3` | text | Dokument mit Anwohnerinformationen |
+| `id` | int | Fallnummer Allmendbewilligung |
+| `allmendbewilligungen` | text | Link zum OGD-Datensatz mit den Allmendbewilligungen |
 
 
 # Load packages

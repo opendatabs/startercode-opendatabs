@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100431`
+- **Dataset_identifier** `100431`
 - **Title** `Kantonale Partizipationsvorhaben`
 - **Description** `Entwicklungen im Quartier und in der Stadt haben einen direkten Einfluss auf das Lebensumfeld der Bevölkerung. Die Identifikation der Bevölkerung mit Plätzen, Einrichtungen und Angeboten in der Stadt führt zu Interesse und Anspruch der Teilhabe und Teilnahme an Entwicklungsprozessen. Gemäss § 55 der Kantonsverfassung vom 23. März 2005 und dem Partizipationsgesetz von Basel-Stadt, soll die Quartierbevölkerung von den Behörden partizipativ in die Entwicklungsprozesse einbezogen werden, welche sie besonders betreffen, in räumlicher Nähe liegen oder bedeutende Auswirkungen auf das Zusammenleben im Quartier und den öffentlichen Raum haben.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Partizipation', 'Quartierentwicklung', 'Projekte']`
 - **Creator** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | text | — |
+| `pt_projekttitel` | text | Titel des Projekts |
+| `pt_projektzuordnung` | text | Zugehörigkeit nach Projektname |
+| `pt_lage` | text | Lage des Projekts |
+| `pt_stadtteil` | text | Betroffener Stadtteil |
+| `pt_kategorie` | text | Kategorie des Ortes |
+| `pt_link` | text | Webseiten-Link zum Projekt |
+| `pt_zustaendigebehoerde` | text | Zuständige Behörde |
+| `pt_partizipationsform` | text | Form der Partizipation |
+| `map_links` | text | die Navigation mit verschiedenen Apps erlaubt |
 
 
     ///

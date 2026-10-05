@@ -61,7 +61,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100087`
+- **Dataset_identifier** `100087`
 - **Title** `Smart Climate Schallpegelmessungen`
 - **Description** `<p>Im Rahmen des Projektes «Smart Climate» von
 Smart Regio Basel (<a href="https://smartregiobasel.ch/de/projekte/smart-climate-plug-and-sense" target="_blank">https://smartregiobasel.ch/de/projekte/smart-climate-plug-and-sense</a>)
@@ -74,14 +74,37 @@ Pilotprojekt den Einsatz von kosteneffizienten Sensoren zur Erfassung des
 Schallpegeldaten (Leq) zur Verfügung gestellt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-25`
-- **Modified** `2026-10-04T21:00:09+00:00`
+- **Modified** `2026-10-05T11:45:08+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2020-06-23T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-03T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-04T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Schall', 'Lärm', 'Pegel', 'Lautstärke', 'Belästigung']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `station_id` | text | Name der Station |
+| `timestamp` | datetime | Datum und Uhrzeit der Messung |
+| `value` | double | Gemessene Lautstärke in Dezibel |
+| `geo_point_2d` | geo_point_2d | Koordinaten |
+| `latitude` | double | — |
+| `longitude` | double | — |
+| `eui` | text | ID der Mess-Station |
 
 
     ///

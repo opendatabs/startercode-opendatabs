@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100270`
+- **Dataset_identifier** `100270`
 - **Title** `Empfohlene Schwimmbereiche im Rhein`
 - **Description** `<p>Der Datensatz enthält die empfohlenen Schwimmbereiche im Rhein.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,24 @@ def _(mo):
 - **Keywords** `['Rhein', 'Fluss', 'Sport', 'Bachab', 'Schwimmen', 'Schwimmzone', 'BachApp', 'Schifffahrt', 'Schiff', 'Boot', 'Paddeln', 'SUP', 'Stand-Up-Paddeln', 'Treiben', 'Baden']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100213`
+- **Dataset_identifier** `100213`
 - **Title** `Velopumpen`
 - **Description** `<p>Dieser Datensatz zeigt die öffentlich verfügbaren Velopumpen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Auffüllen', 'Fahrrad', 'Pumpen']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktkoordinaten der jeweiligen Velopumpe in LV95. |
+| `geo_shape` | geo_shape | — |
+| `id_velopumpe` | int | Eindeutige Identifikationsnummer der Velopumpe zur internen Referenz und Verwaltung der Velopumpe. |
+| `anbieter` | text | Name des Anbieters bzw. des Betreibers, der die Velopumpe zur Verfügung stellt. |
+| `strasse` | text | Mit diesem Merkmal wird die Strassenbezeichnung in offizieller Schreibweise der Gemeinde erfasst.; Gemäss der Verordnung über die geografischen Namen fällt die Benennung der Strassen in den Zuständigkeitsbereich der Gemeinden.; Die Strassennamen müssen grundsätzlich den Empfehlungen "Gebäudeadressierung und Schreibweise von Strassennamen für die deutschsprachige Schweiz", herausgegeben vom Bundesamt für Landestopographie, folgen.; Bei einigen allein stehenden Gebäuden (landwirtschaftliche Gebäude, Berghütten usw.) kann die Gebäudeadresse nicht mit einer Strasse in Verbindung gebracht werden.; In diesem Fall kann der Strassenname durch den Namen eines benannten Gebiets ersetzt werden. |
+| `postleitzahl` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Bezeichnung der Ortschaft. |
+| `pumpe` | text | Typ oder Ausführung der Velopumpe (z. B. Standpumpe, Kompressor, verschiedene Ventilarten). |
+| `verfuegbarkeit` | text | Gibt an, ob die Velopumpe jederzeit, beschränkt oder nicht verfügbar ist. |
+| `webseite` | text | URL zu weiteren Informationen über die Velopumpe oder den betreibenden Velohändler. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

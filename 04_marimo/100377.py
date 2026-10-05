@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100377`
+- **Dataset_identifier** `100377`
 - **Title** `Gesundheitsversorgung (GSV): Tagesgäste von Tages- und Nachtpflegeeinrichtungen (TNP)`
 - **Description** `Dieser Datensatz enthält Kennzahlen zu den Tagesgästen von Tages- und Nachtpflegeeinrichtungen (TNP) im Kanton Basel-Stadt. Er umfasst Daten zur Anzahl der Gäste, aufgeschlüsselt nach Geschlecht, sowie Informationen zum Durchschnittsalter der Gäste.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Alter', 'Pflege']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Gibt das Jahr an, auf das sich die Daten beziehen. |
+| `id` | int | Eine eindeutige Kennung. |
+| `tagesgaeste_total` | int | Die Gesamtzahl der Tagesgäste. |
+| `davon_frauen` | int | Anzahl der Tagesgäste, die Frauen sind. |
+| `davon_frauen_pct` | double | Der prozentuale Anteil der Frauen an der Gesamtzahl der Tagesgäste. |
+| `davon_maenner` | double | Anzahl der Tagesgäste, die Männer sind. |
+| `davon_maenner_pct` | double | Der prozentuale Anteil der Männer an der Gesamtzahl der Tagesgäste. |
+| `durchschnittsalter_tagesgaeste` | double | Durchschnittliches Alter aller Tagesgäste. |
+| `durchschnittsalter_frauen` | double | Durchschnittliches Alter der weiblichen Tagesgäste. |
+| `durchschnittsalter_maenner` | double | Durchschnittliches Alter der männlichen Tagesgäste. |
 
 
     ///

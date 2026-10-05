@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100297`
+- **Dataset_identifier** `100297`
 - **Title** `Resultate der Nationalratswahlen 22. Oktober 2023 (aggregierte Daten)`
 - **Description** `<p class="MsoNormal" style="font-family: sans-serif;">Dieser Datensatz zeigt die aggregierten Resultate der Nationalratswahlen vom 22. Oktober 2023.<o:p></o:p></p><p style="font-family: sans-serif;"></p><p class="MsoNormal" style="font-family: sans-serif;">Bitte beachten Sie, dass die offiziell gültigen Schlussresultate im Kantonsblatt des Kantons Basel-Stadt publiziert werden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,61 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Parlament', 'Nationalrat', 'Grosse Kammer', 'Bundeshaus', 'aggregiert']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahlbezeichnung` | text | Titel der Wahl |
+| `amtsdauer` | text | Anzahl Jahre, auf welche die Mitglieder gewählt werden |
+| `wahltermin` | date | Datum der Wahl |
+| `anzahl_sitze` | int | Anzahl Sitze, die zur Verfügung stehen |
+| `wahlkreis_nr` | text | Nummer des Wahlkreises |
+| `wahlkreis_code` | text | Code des Wahlkreises |
+| `wahlkreisbezeichnung` | text | Name des Wahlkreises |
+| `stimmberechtigte_manner` | int | Anzahl in einem Wahlkreis stimmberechtigter Männer |
+| `stimmberechtigte_frauen` | int | Anzahl in einem Wahlkreis stimmberechtigter Frauen |
+| `stimmberechtigte` | int | Anzahl Stimmberechtigter total in einem Wahlkreis |
+| `stimmberechtigte_auslandschweizer` | int | Anzahl stimmberechtigter Auslandschweizer |
+| `wahlzettel` | int | Anzahl Wahlzettel |
+| `briefliche_stimmabgaben` | int | Anzahl brieflich eingelegter Wahlzettel |
+| `ungestempelte_wahlzettel` | int | Anzahl ungestempelter Wahlzettel |
+| `ungultige_wahlzettel` | int | Anzahl ungültiger Wahlzettel |
+| `leere_wahlzettel` | int | Anzahl leer eingelegter Wahlzettel |
+| `unveranderte_wahlzettel` | int | Anzahl unveränderter Wahlzettel |
+| `veranderte_wahlzettel_mit_bezeichnung` | int | Anzahl veränderter Wahlzettel mit Listenbezeichnung (leere Linien zählen als Parteistimmen) |
+| `veranderte_wahlzettel_ohne_bezeichnung` | int | Anzahl veränderter Wahlzettel ohne Listenbezeichnung (leere Linien werden nicht gezählt) |
+| `leere_stimmen` | int | Anzahl leerer Stimmen |
+| `listen_nr` | text | Nummer der Liste |
+| `partei_id` | text | ID der Partei |
+| `parteikurzbezeichnung` | text | Parteikurzbezeichnung |
+| `parteibezeichnung` | text | Name der Partei |
+| `hlv_nr` | text | Nummer der Hauptlistenverbindung |
+| `hlv_bezeichnung` | text | Name der Hauptlistenverbindung |
+| `ulv_nr` | text | Nummer der Unterlistenverbindung |
+| `ulv_bezeichnung` | text | Name der Unterlistenverbindung |
+| `anzahl_sitze_liste` | int | Anzahl Sitze einer Liste in einem Wahlkreis |
+| `unveranderte_wahlzettel_liste` | int | Anzahl unveränderte Wahlzettel einer Liste in einem Wahlkreis |
+| `veranderte_wahlzettel_liste` | int | Anzahl veränderte Wahlzettel einer Liste in einem Wahlkreis |
+| `kandidatenstimmen_unveranderte_wahlzettel` | int | Anzahl Stimmen alle Kandidatinnen und Kandidaten einer Liste aus unveränderten Wahlzetteln |
+| `zusatzstimmen_unveranderte_wahlzettel` | int | Anzahl Zusatzstimmen für alle Kandidatinnen und Kandidaten einer Liste aus unveränderten Wahlzetteln |
+| `kandidatenstimmen_veranderte_wahlzettel` | int | Anzahl Stimmen für alle Kandidatinnen und Kandidaten einer Liste aus veränderten Wahlzetteln |
+| `zusatzstimmen_veranderte_wahlzettel` | int | Anzahl Zusatzstimmen für alle Kandidatinnen und Kandidaten einer Liste aus veränderten Wahlzetteln |
+| `kandidatenstimmen` | int | Anzahl Stimmen total für alle Kandidatinnen und Kandidaten einer Liste |
+| `zusatzstimmen` | int | Anzahl Zusatzstimmen total für alle Kandidatinnen und Kandidaten einer Liste |
+| `parteistimmen` | int | — |
+| `anteil_an_summe_in` | double | — |
 
 
     ///

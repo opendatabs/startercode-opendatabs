@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100385`
+- **Dataset_identifier** `100385`
 - **Title** `Kandidierende der Grossratswahlen 20. Oktober 2024`
 - **Description** `<p style="font-family: sans-serif;">Für die Gesamterneuerungswahlen der 100 Mitglieder vom Grossen Rat vom 20. Oktober 2024 kandidieren 870 Personen auf insgesamt 16 Listen.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden nach Geschlecht, Jahrgang und Beruf.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,36 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe', 'Gesamterneuerungswahl']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahlkreis` | text | — |
+| `listen_nr` | text | Nummer der Liste |
+| `listenkurzbezeichnung` | text | Abkürzung der Liste |
+| `listenbezeichnung` | text | Listenbezeichnung |
+| `kand_nr` | text | Nummer der Kandidatur |
+| `bisher` | text | War die kandidierende Person bisher im Grossen Rat? |
+| `name_vorname` | text | Ganzer Name der kandidierenden Person |
+| `name` | text | Nachname der kandidierenden Person |
+| `vorname` | text | Vorname der kandidierenden Person |
+| `geschlecht` | text | Amtliches Geschlecht der kandidierenden Person |
+| `jahrgang` | text | Jahr, in welchem die kandidierende Person geboren wurde |
+| `zusatz` | text | Informationen zu der kandidierenden Person wie akademische(r) Titel, Beruf(e), Pronomen etc. |
+| `altersgruppe` | text | — |
+| `alter` | int | — |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -29,6 +29,19 @@ Weitere Informationen zum Projekt Atmo-VISION sind in der <a href="https://www.b
 - **Keywords** `['Luftqualität', 'Feinstaub', 'PM10', 'PM2.5', 'BVB']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `time` | datetime | Datum und Zeit in UTC |
+| `sensornr` | int | Identitätsnummer des Feinstaubsensors; Sensoren 236 und 240 sind stationär aufgestellt.; Sensoren 227, 228, 234, 235 und 237 sind auf den Trams montiert. |
+| `pm25` | double | Feinstaub mit Partikelgrösse < 2.5 tausendstel Millimeter |
+| `pm10` | double | Feinstaub mit Partikelgrösse < 10 tausendstel Millimeter |
+| `column_7` | geo_point_2d | Standort der Messung |
+| `longitude` | double | Längengrad |
+| `latitude` | double | Breitengrad |
 
 
 # Load packages

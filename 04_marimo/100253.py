@@ -55,7 +55,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100253`
+- **Dataset_identifier** `100253`
 - **Title** `Verkehrsberuhigte Zonen: Kernzone Verkehrskonzept Innenstadt`
 - **Description** `Dieser Datensatz beinhaltet die signalisierten Fussgängerzonen.
 Die verkehrsberuhigten Zonen setzen sich aus Fussgängerzonen, Begegnungszonen und Tempo 30-Zonen zusammen. Ebenso ist der Perimeter des Verkehrskonzepts Innenstadt mit der Kernzone mit eingeschränktem Motorfahrzeugverkehr dargestellt.<br>
@@ -70,6 +70,29 @@ Weitere Daten zu "Verkehrsberuhigte Zonen": <a href="https://data.bs.ch/explore/
 - **Keywords** `['Geschwindigkeitsbeschränkun', 'Fussgänger', 'Fussgängerzonen']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `objectid` | int | Identifikationsnummer (für kantonsinterne Zwecke verwendet) |
+| `vr_name` | text | Name |
+| `mapbs_vr_infos` | text | Infos |
+| `mapbs_vr_zufahrt` | text | Zufahrt |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

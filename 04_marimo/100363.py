@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100363`
+- **Dataset_identifier** `100363`
 - **Title** `Secondhand-Angebote / Wiederverwendungsstellen`
 - **Description** `Dieser Datensatz enthält die Standorte verschiedener Secondhand-Waren in der Region Basel, die entweder verkauft oder kostenlos weitergegeben werden. Diese Standorte können Secondhand-Läden, Brockenhäuser, Buchhandlungen, Bücherschränke, Lebensmittelverteilschränke oder Elektrofachgeschäfte umfassen. Bei einigen Standorten sind zusätzliche Informationen wie Telefonnummern und Links zu ihren Internetseiten verfügbar.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2026-08-10`
-- **Modified** `2026-10-04T00:00:00+00:00`
+- **Modified** `2026-10-05T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['Recycling', 'Entsorgung', 'Brauchbares', 'Secondhand-Shop', 'Brockenhaus', 'Bücher', 'Flohmarkt', 'Textilien', 'Elektrogeräte', 'Lebensmittel', 'Kleidung', 'Kleider', 'Antiquitäten']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | text | — |
+| `es_name` | text | Name der Wiederverwendungsstelle |
+| `es_kategorie` | text | Kategorie der Wiederverwendungsstelle |
+| `es_beschreibung` | text | Beschreibung der Wiederverwendungsstelle |
+| `es_adresse` | text | Adresse der Wiederverwendungsstelle |
+| `es_postleitzahl` | text | Postleitzahl der Wiederverwendungsstelle |
+| `es_ortschaft` | text | Ortschaftsname der Wiederverwendungsstelle |
+| `es_telefon` | text | Telefonnummer für die Wiederverwendungsstelle |
+| `es_oeffnungszeit` | text | Öffnungszeiten der Wiederverwendungsstelle |
+| `mapbs_es_link` | text | Internetadresse der Wiederverwendungsstelle |
+| `es_zustaendigkeit` | text | Zuständigkeit der Wiederverwendungsstelle |
 
 
     ///

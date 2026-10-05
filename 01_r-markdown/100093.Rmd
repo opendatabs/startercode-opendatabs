@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -26,6 +26,24 @@ Auto generated R starter code for data set 100093.
 - **Keywords** `['Smarte Strasse', 'Luftqualität', 'Feinstaub', 'PM2.5', 'O3', 'NO2']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Zeitstempel = Anfangszeit des 30 minütigen Messintervalls |
+| `g107_no2` | double | Halbstundenmittelwert NO2 [µg/m3] - Sensor Gundeldingerstrasse 107 |
+| `g107_03` | double | Halbstundenmittelwert O3 [µg/m3] - Sensor Gundeldingerstrasse 107 |
+| `g107_pm25` | double | Halbstundenmittelwert PM2.5 [µg/m3] - Sensor Gundeldingerstrasse 107 |
+| `g125_no2` | double | Halbstundenmittelwert NO2 [µg/m3] - Sensor Gundeldingerstrasse 125 |
+| `g125_o3` | double | Halbstundenmittelwert O3 [µg/m3] - Sensor Gundeldingerstrasse 125 |
+| `g125_pm25` | double | Halbstundenmittelwert PM2.5 [µg/m3] - Sensor Gundeldingerstrasse 125 |
+| `g131_no2` | double | Halbstundenmittelwert NO2 [µg/m3] - Sensor Gundeldingerstrasse 131 |
+| `g131_o3` | double | Halbstundenmittelwert O3 [µg/m3] - Sensor Gundeldingerstrasse 131 |
+| `g131_pm25` | double | Halbstundenmittelwert PM2.5 [µg/m3] - Sensor Gundeldingerstrasse 131 |
+| `timestamp_text` | text | — |
+| `anfangszeit` | text | — |
 
 
 # Load packages

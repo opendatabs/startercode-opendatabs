@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100183`
+- **Dataset_identifier** `100183`
 - **Title** `Coronavirus (COVID-19): Massentests an Schulen`
 - **Description** `<p>Dieser Datensatz zeigt die SARS-CoV-2-Tests, welche ab Mitte März 2022 an Schülerinnen und Schülern (SuS) sowie Lehrpersonen an baselstädtischen Schulen durchgeführt wurden. Es werden die Anzahl durchgeführter Tests sowie die Test-Positivitätsrate pro Woche aufgeführt. Weitere Informationen zum Coronavirus im Kanton Basel-Stadt: <a href="https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co" target="_blank">https://www.bs.ch/gd/md/gesundheitsschutz/uebertragbarekrankheiten/grippe-corona-und-co</a><a href="https://www.coronavirus.bs.ch/testen/testen-in-schulen.html" target="_blank"></a></p><p>Daten zu Massentests an Schulen vor Mitte März 2022, sowie in Betrieben im Kanton Basel-Stadt sind hier zu finden: <a href="https://data.bs.ch/explore/?sort=modified&amp;q=massentests" target="_blank">https://data.bs.ch/explore/?sort=modified&amp;q=massentests</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['SARS-CoV-2', 'COVID-19', 'Corona', 'Coronavirus', 'Test', 'PCR']`
 - **Creator** `Medizinische Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `firstdayofweek` | date | Datum des Montags der Woche |
+| `weekofyear` | int | Nr. der Woche im Jahr |
+| `result` | text | Resultat der Tests (negativ oder positiv) |
+| `count` | int | Anzahl positiv resp. negativ getesteter Personen pro Woche |
+| `counttotal` | int | Anzahl total getesteter Schülerinnen, Schüler oder Lehrpersonen pro Woche |
+| `positivityratepercent` | double | Anteil der positiven Tests an der Gesamtzahl der Tests der betreffenden Woche |
 
 
     ///

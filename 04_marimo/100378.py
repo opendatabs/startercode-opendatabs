@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100378`
+- **Dataset_identifier** `100378`
 - **Title** `Gesundheitsversorgung (GSV): Pflegebedürftige im Bereich der Pflege zu Hause (PzH)`
 - **Description** `Dieser Datensatz enthält Kennzahlen zu Pflegebedürftigen im Bereich der Pflege zu Hause (PzH). Er umfasst Daten zur Anzahl der Pflegebedürftigen, aufgeschlüsselt nach Geschlecht, sowie Informationen zum Durchschnittsalter der Pflegebedürftigen insgesamt und getrennt nach Frauen und Männern.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Pflege']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Gibt das Jahr an, auf das sich die Daten beziehen. |
+| `id` | int | Eine eindeutige Kennung. |
+| `pflegebeduerftige_total` | int | Die Gesamtzahl der Pflegebedürftige. |
+| `davon_frauen` | int | Anzahl der Pflegebedürftige, die Frauen sind. |
+| `davon_frauen_pct` | double | Der prozentuale Anteil der Frauen an der Gesamtzahl der Pflegebedürftige. |
+| `davon_maenner` | int | Anzahl der Pflegebedürftige, die Männer sind. |
+| `davon_maenner_pct` | double | Der prozentuale Anteil der Männer an der Gesamtzahl der Pflegebedürftige. |
+| `durchschnittsalter_pflegebeduerftige` | double | Durchschnittliches Alter aller Pflegebedürftige. |
+| `durchschnittsalter_frauen` | double | Durchschnittliches Alter der weiblichen Pflegebedürftige. |
+| `durchschnittsalter_maenner` | double | Durchschnittliches Alter der männlichen Pflegebedürftige. |
 
 
     ///

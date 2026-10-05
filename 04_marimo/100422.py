@@ -63,7 +63,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100422`
+- **Dataset_identifier** `100422`
 - **Title** `Geteilte Mikromobilität nach Gemeinde und Tag`
 - **Description** `<p>Der Datensatz zeigt die Verteilung von Fahrzeugen verschiedener Mikromobilitätsanbieter in Basel-Stadt, gegliedert nach Gemeinde und Tag. Er enthält verschiedene statistische Kennzahlen zur Anzahl der Fahrzeuge pro Gemeinde.</p>
 
@@ -78,7 +78,7 @@ Messungen pro Tag für die Berechnung des Durchschnitts.</p>
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Hinweis:</span></p><p style="font-family: sans-serif;">Die Daten enthalten eine Lücke zwischen dem 2. und 22. April 2025, da es einen Unterbruch im Extrahieren der Daten gab.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2026-10-04T04:03:38+00:00`
+- **Modified** `2026-10-05T04:03:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -86,6 +86,32 @@ Messungen pro Tag für die Berechnung des Durchschnitts.</p>
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'Shared', 'E-Mobility', 'Mobility', 'Veloverleih', 'Verkehr', 'Statistik']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | Datum |
+| `objid` | int | Eindeutiger Identifikator der Gemeinde |
+| `name` | text | Name der Gemeinde |
+| `geometry` | geo_shape | — |
+| `xs_provider_name` | text | Dienstleister, der die Mikromobilitätslösung zur Verfügung stellt |
+| `num_measures` | int | Anzahl Messungen an diesem Tag; maximal 144 |
+| `mean` | double | Durchschnittliche Anzahl an Fahrzeugen, die an diesem Tag in diesem Bezirk verfügbar waren |
+| `min` | double | Geringste Anzahl an Fahrzeugen, die an diesem Tag in diesem Bezirk verfügbar waren |
+| `max` | double | Höchste Anzahl an Fahrzeugen, die an diesem Tag in diesem Bezirk verfügbar waren |
+| `geo_point_2d` | geo_point_2d | — |
 
 
     ///

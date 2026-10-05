@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -26,6 +26,24 @@ Auto generated R starter code for data set 100178.
 - **Keywords** `['Smarte Strasse', 'Luftqualität', 'Feinstaub', 'PM2.5', 'O3', 'NO2']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Zeitstempel = Anfangszeit des 30 minütigen Messintervalls |
+| `a2hard_no2` | double | Halbstundenmittelwert NO2 [µg/m3] - Sensor A2 Hard |
+| `a2hard_o3` | double | Halbstundenmittelwert O3 [µg/m3] - Sensor A2 Hard |
+| `a2hard_pm25` | double | Halbstundenmittelwert PM2.5 [µg/m3] - Sensor A2 Hard |
+| `feldbergstr2_no2` | double | Halbstundenmittelwert NO2 [µg/m3] - Sensor Feldbergstrasse |
+| `feldbergstr2_o3` | double | Halbstundenmittelwert O3 [µg/m3] - Sensor Feldbergstrasse |
+| `feldbergstr2_pm25` | double | Halbstundenmittelwert PM2.5 [µg/m3] - Sensor Feldbergstrasse |
+| `stjohann2_no2` | double | Halbstundenmittelwert NO2 [µg/m3] - Sensor St. Johannsplatz |
+| `stjohann2_o3` | double | Halbstundenmittelwert O3 [µg/m3] - Sensor St. Johannsplatz |
+| `stjohann2_pm25` | double | Halbstundenmittelwert PM2.5 [µg/m3] - Sensor St. Johannsplatz |
+| `timestamp_text` | text | — |
+| `anfangszeit` | text | — |
 
 
 # Load packages

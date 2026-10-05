@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100106`
+- **Dataset_identifier** `100106`
 - **Title** `Tägliche Logiernächte, verfügbare und belegte Zimmer`
 - **Description** `Dieser Datensatz zeigt die Anzahl Logiernächte, verfügbare und belegte Zimmer in baselstädtischen Hotels nach Kategorie auf täglicher Basis.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,30 @@ def _(mo):
 - **Keywords** `['Event', 'Übernachtungen', 'Hotels', 'Ausland']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | — |
+| `hotelkategorie` | text | Hotelkategorie; 1- und 2-Sterne, 3-Sterne, 4- und 5-Sterne, Übrige. Die Kategorie Übrige umfasst: Hotels, die (noch) nicht kategorisiert wurden sowie B&Bs und Jugendherbergen. |
+| `anzlogiernaechte` | int | Anzahl Übernachtungen an einem bestimmten Tag in baselstädtischen Hotels |
+| `anzzimmerverfuegbarundgeoeffnet` | int | Anzahl Zimmer, welche an einem bestimmten Tag in einem baselstädtischen Hotel zur Verfügung stehen |
+| `anzzimmerbelegungen` | int | Anzahl an einem bestimmten Tag belegte Zimmer in einem baselstädtischen Hotel |
+| `jahr` | date | Jahr |
+| `monat` | int | Monat |
+| `tag` | int | Tag |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -28,6 +28,20 @@ gemacht.<br>Der vorliegende Datensatz zeigt die Anzahl der Seitenaufrufe der Mic
 - **Keywords** `['QR-Codes', 'Tracking', 'Seitenaufrufe']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | int | Willkürliche Identifikationsnummer |
+| `timestamp` | date | Gibt das Datum der Datenaufzeichnung an. |
+| `dataset_id` | text | Link zu den Daten, die auf der Microsite abgebildet werden. |
+| `api` | text | Abfrage zum Suchen nach den Daten auf der Microsite. Wenn die Microsite aufgerufen wird, dann werden die Daten aus dem Datensatz auf der Microsite abgebildet. Es entsteht eine Datenabfrage. Die Anzahl an Datenabfragen kann man messen. |
+| `nhits` | int | Anzahl der Suchanfragen auf der Microsite. |
+| `sensor` | text | Sensor |
+| `microsite` | text | Link zu der Microsite |
+| `geo_point` | geo_point_2d | Geo Point des Sensors |
 
 
 # Load packages

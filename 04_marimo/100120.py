@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100120`
+- **Dataset_identifier** `100120`
 - **Title** `Strassenverkehrsunfälle`
 - **Description** `Die Strassenverkehrsunfälle im Kanton Basel-Stadt seit 2011 werden nach Unfalltyp und Unfallschweregrad kategorisiert dargestellt. Die Daten werden jährlich aktualisiert.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['Verkehrsunfall', 'Fussgänger', 'Schaden', 'Gefährdung', 'Velo', 'Auto', 'Motorräder', 'Unfall', 'Verkehrsunfälle']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | text | Eindeutiger Identifikator des Unfalls |
+| `vu_typ` | text | Der Unfalltyp bezeichnet den Verkehrsvorgang bzw. die Konfliktsituation, welche massgebend für die Entstehung des Unfalls ist. |
+| `vu_schwerekategorie` | text | Beschreibung der Unfallschwerekategorie. |
+| `vu_jahr` | date | Unfalljahr in dem sich der Unfall ereignet hat. |
+| `vu_monat` | int | Unfallmonat in dem sich der Unfall ereignet hat. |
+| `vu_stunde` | int | Beschreibung der Unfallstunde, in der sich der Unfall ereignet hat. |
+| `vu_wochentag` | text | Wochentag an dem sich der Unfall ereignet hat. |
+| `vu_strassenart` | text | Art der Strasse auf der sich der Unfall ereignet hat. |
+| `vu_fussgaengerbeteiligung` | boolean | War ein Fussgänger am Unfall beteiligt. |
+| `vu_fahrradbeteiligung` | boolean | War ein Fahrrad am Unfall beteiligt. |
+| `vu_motorradbeteiligung` | boolean | War ein Motorrad am Unfall beteiligt. |
 
 
     ///

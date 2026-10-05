@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100226`
+- **Dataset_identifier** `100226`
 - **Title** `Kennzahlen zu den Basler Wohnvierteln und Landgemeinden - langer Datensatz`
 - **Description** `Ausgewählte statistische Kennzahlen der 19 Wohnviertel der Stadt Basel sowie der zwei Gemeinden Riehen und Bettingen seit 2015. Aufgrund einer veränderten Datenlage können die Indikatoren 3 (Religionszugehörigkeit) und 18 (Arbeitslosenquote) ab der Ausgabe 2020 nicht mehr dargestellt werden. Dieser lange Datensatz wurde zusätzlich zum bisher bereits bestehenden breiten Datensatz angelegt, um neben dem Publikationsjahr auch das jeweilige Datenjahr noch zu ergänzen. Die Berechnungsmethode für die Sozialhilfequote wurde 2022 für die Jahre ab 2017 rückwirkend angepasst.Zur Definition: <a href="https://statistik.bs.ch/files/faltblatt/Erlaeuterungen-Quartierradar.pdf" target="_blank">https://statistik.bs.ch/files/faltblatt/Erlaeuterungen-Quartierradar.pdf</a>.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Wohnen', 'Bevölkerungsbestand', 'Grünraum', 'Erwerbstätige', 'Arbeitslosigkeit', 'Bevölkerungsstruktur']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `publikationsjahr` | text | Jahr, in dem der Wert publiziert wurde |
+| `indikator_nr` | int | — |
+| `datenjahr` | text | Jahr, aus dem die Daten stammen |
+| `wert` | double | Wert des Indikators |
+| `indikator_label` | text | Definition des Indikators, Berechnungsgrundlage |
+| `indikator_name` | text | Kurzform des Indikators |
+| `wohnviertel_id` | int | Nummer des Wohnviertels (1-19) bzw. der Landgemeinde (20 und 30) |
+| `wohnviertel` | text | Offizielle Bezeichnungen der 19 Basler Wohnviertel und 2 Landgemeinden |
+| `rang` | int | — |
 
 
     ///

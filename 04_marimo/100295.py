@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100295`
+- **Dataset_identifier** `100295`
 - **Title** `Überwachung Luftqualität Transformation Areal Rosental: Gemessene Überschreitungen der Interventionswerte`
 - **Description** `<p>Bedingt durch die frühere Nutzung des Rosental Areals – auch bekannt als die Wiege der Basler Chemie - ist der Untergrund mit Schadstoffen belastet. Während der Tiefbauarbeiten im Rahmen der «Transformation <a href="https://rosentalmitte.ch/" target="_blank">Rosental Mitte</a>» überwacht das <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene" target="_blank">Lufthygieneamt beider Basel (LHA)</a> die Immissionen mittels Messungen der Luft <a href="https://data.bs.ch/pages/rosental-dashboard/" target="_blank">(Dashboard)</a>. </p><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Luftqualität']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | text | — |
+| `standort` | text | — |
+| `parameter` | text | — |
+| `messwert_ug_m3` | double | — |
+| `interventionswert_ug_m3` | double | — |
+| `info_massnahmen` | text | — |
 
 
     ///

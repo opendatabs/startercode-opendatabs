@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100098`
+- **Dataset_identifier** `100098`
 - **Title** `Wahllokale Kanton Basel-Stadt`
 - **Description** `<p>In diesem Datensatz sind die Wahllokale des Kantons Basel-Stadt aufgeführt, zusammen mit Informationen zu den entsprechenden Wahllokal-IDs, Gemeinde-IDs und den zugehörigen Gemeinden.<br>Insgesamt enthält der Datensatz Informationen zu verschiedenen Wahllokalen im Kanton Basel-Stadt, einschließlich der Angaben zu brieflichen, elektronischen und persönlichen Stimmenden an den einzelnen Standorten.<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Abstimmung', 'Wahlen', 'Demokratie']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahllok_name` | text | Wahllokal |
+| `wahllok_id` | int | Wahllokal-ID |
+| `gemein_id` | int | Gemeinde-ID |
+| `gemein_name` | text | Gemeinde |
+| `map_link` | text | — |
 
 
     ///

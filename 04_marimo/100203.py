@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100203`
+- **Dataset_identifier** `100203`
 - **Title** `Befragung 55plus (2019)`
 - **Description** `Antworten der kantonalen Bevölkerunsgbefragung von Personen ab 55 Jahren, wird alle vier Jahre durchgeführt. <br><br> Dieser Datensatz enthält pro Zeile eine Antwort einer Person zu einer Frage der Befragung. Die Daten können in anderen Formaten als ZIP Datei hier heruntergeladen werden: <a href="https://data-bs.ch/stata/befragungen/55plus/2019.zip">https://data-bs.ch/stata/befragungen/55plus/2019.zip</a> <br><br> Weitere Informationen zur Befragung sind im Statistikportal abgebildet:  <a href='https://statistik.bs.ch/suche?search={"query":"2019","filterTheme":"successor-50.4"}'>https://statistik.bs.ch/suche?search={"query":"2019","filterTheme":"successor-50.4"}</a>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Alter', 'Gemeinden', 'Wohnen', 'Demographie', 'Geschlecht', 'Lebensqualität', 'Einkommen', 'Befragungen']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr der Befragung |
+| `id` | text | ID der befragten Person |
+| `fragename` | text | Die Nummer der Frage auf dem Fragebogen |
+| `fragelabel` | text | Gestellte Frage |
+| `fragelabel_fortsetzung` | text | Fortsetzung zur Frage |
+| `fragelabel_anmerkung` | text | Anmerkung zur Frage |
+| `antwort` | text | Gegebene Antwort |
+| `fragespaltenreihenfolge` | text | — |
+| `antwortreihenfolge` | text | — |
 
 
     ///

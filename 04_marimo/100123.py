@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100123`
+- **Dataset_identifier** `100123`
 - **Title** `Lohntabelle des Kantons Basel-Stadt`
 - **Description** `Jahreslohn (inkl. 13. Monatslohn), Monatslohn, Stundenlohn nach Lohnklassen, Lohnstufe und Jahr. Da es seit dem 01.07.2022 einen kantonalen Mindestlohn gibt, wurden im Jahr 2022 zwei Lohntabellen publiziert. Bei der Lohntabelle ab dem Gültigkeitsdatum 01.07.2022 wurden die Löhne nach dem Mindestlohngesetz angepasst.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Staatspersonal', 'Lohn', 'Gehalt']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr |
+| `gueltigkeit` | date | Gültigkeit der Lohntabelle |
+| `lohnklassen` | int | Lohnklassen |
+| `lohnstufe` | text | Lohnstufe |
+| `jahrbruttolohnohne13` | int | Bruttojahreslohn ohne 13. Monatslohn |
+| `monatbruttoohne13` | double | Bruttomonatslohn ohne 13. Monatslohn |
+| `stundenbruttoohne13` | double | Bruttostudenlohn ohne 13. Monatslohn |
+| `jahrbruttolohnmit13` | double | Bruttojahreslohn inkl. 13.Monatslohn |
+| `sortiervariable` | int | Sortiervariable für die Spalte mit den Lohnstufen |
 
 
     ///

@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100125`
+- **Dataset_identifier** `100125`
 - **Title** `Wohnbevölkerung nach Bezirk`
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt auf Ebene Bezirk. Die Daten werden monatlich aktualisiert. Bis zum Jahr 2011 sind nur die Jahresendbestände verfügbar.<br>Die hier veröffentlichten Werte der Jahre 1979 bis 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 1979 auf Auswertungen aus dem Einwohnerregister. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-03-25`
-- **Modified** `2026-10-01T01:17:38+00:00`
+- **Modified** `2026-10-05T01:17:25+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Bezirk', 'Bevölkerungsbestand', 'Entwicklung', 'Einwohnerzahl', 'Bevölkerungsstruktur']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/unterthema/1`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | — |
+| `wohnviertel` | text | — |
+| `wov_id` | text | — |
+| `wohnbezirk` | text | — |
+| `bez_id` | text | — |
+| `gemeinde` | text | — |
+| `anzahl` | int | Anzahl Personen |
+| `jahr` | text | — |
+| `monat` | int | — |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
 
 
     ///

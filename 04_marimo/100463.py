@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100463`
+- **Dataset_identifier** `100463`
 - **Title** `Spielen in Basel: Spielgeräte`
 - **Description** `<p>Der Datensatz enthält Informationen zu den öffentlich zugänglichen Spielgeräten im Kanton Basel-Stadt.</p><p>Ein ergänzender Datensatz mit Informationen zu den zugehörigen Spielplätzen ist unter folgendem Link verfügbar: <a href="https://data.bs.ch/explore/dataset/100462" target="_blank">https://data.bs.ch/explore/dataset/100462</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Balancieren', 'Ballspiel', 'Karussell', 'Klettern', 'Rutsche', 'Skaten', 'Spielhaus', 'Spieltier', 'Tischfussball', 'Tischtennis', 'Wasserspiel', 'Freizeit', 'Aktivitäten', 'Bewegungen', 'Fantasie', 'Geschicklichkeit', 'Sand', 'Kinder', 'Jugendliche', 'Kindergarten', 'Kleinkind', 'Schulkind', 'Trampolin', 'Schaukeln', 'Wippe']`
 - **Creator** `Stadtgärtnerei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | int | Eindeutiger Identifikator des Spielgeräts |
+| `spielplatz_id` | int | Eindeutiger Identifikator des zugeordneten Spielplatzes, keine zwingende Angabe |
+| `spieltyp` | text | Übergerordneter Spieltyp; unterscheidet zwischen Ballspiel, Bewegung, Fantasie, Geschicklichkeit, Sand, Schaukeln, Wasser und Diverses |
+| `typen` | text | Liste aller Spielgerättypen, getrennt durch Komma |
+| `zielgruppen` | text | Liste aller Zielgruppen, getrennt durch Komma. Gibt an, für welche Altersgruppe die Spielgeräte am geeignetsten sind. |
+| `spielplatz_url` | text | Link zum Datensatz "Spielen in Basel: Spielplätze". Gefiltert nach Spielplatz. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
+| `geometry` | geo_shape | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
     ///

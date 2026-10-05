@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100156.
 - **Description** `Dieser Datensatz zeigt die Heiraten im Kanton Basel-Stadt nach Trauungsdatum, Alter, Staatsangehörigkeit und Namenswahl der Ehepartner. Seit dem Jahr 2024 enthält der Datensatz auch Heiraten zwischen gleichgeschlechtlichen Personen. Die Daten werden monatlich aktualisiert. <br><br>Eine Heirat wird in Basel-Stadt gezählt, wenn die Referenzperson (bei Heiraten zwischen verschiedengeschlechtlichen Personen in der Regel der Mann, bei Heiraten zwischen gleichgeschlechtlichen Personen in der Regel die ältere Person) in Basel-Stadt wohnt. <br><br>Die hier veröffentlichten Werte können aus methodischen Gründen von denjenigen in der öffentlichen Statistik abweichen: In Letzterer werden nachträglich gemeldete Heiraten im letzten noch nicht abgeschlossenen Jahr gezählt. In diesem Datensatz werden sie im Jahr des Trauungsdatums gezählt. <br><br>Quelle: Statistisches Amt des Kantons Basel-Stadt, Auswertungen zu den natürlichen Bevölkerungsbewegungen (Bundesamt für Statistik).`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2021-10-28`
-- **Modified** `2026-10-01T01:16:22+00:00`
+- **Modified** `2026-10-05T01:16:14+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -25,6 +25,29 @@ Auto generated R starter code for data set 100156.
 - **Keywords** `['Bevölkerungsbestand', 'Bevölkerungsstruktur', 'Trauung', 'Eheschliessung', 'Heirat']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `trauungsdat` | date | Datum der Trauung |
+| `jahr` | text | Jahr der Trauung |
+| `monat` | int | Monat der Trauung |
+| `woche_in_jahr` | int | Woche im Jahr in welcher die Trauung stattfand |
+| `datum_wochenstart_trauungsdatum` | date | Datum des Montags der Woche in welcher die Trauung stattfand |
+| `tag_in_jahr` | int | Tag im Jahr an welchem die Trauung stattfand |
+| `wochentag` | text | Wochentag an welchem die Trauung stattfand |
+| `alter_partner1_vollendet` | int | Alter Partner 1 in vollendeten Jahren |
+| `alter_partner2_vollendet` | int | Alter Partner 2 in vollendeten Jahren |
+| `namenswahl_partner1` | text | Namenswahl des Partnesr 1 |
+| `namenswahl_partner2` | text | Namenswahl des Partners 2 |
+| `nationalitat_partner1` | text | Staatsangehörigkeit des Partners 1 (Schweiz/Ausland) |
+| `nationalitat_partner2` | text | Staatsangehörigkeit des Partners 2 (Schweiz/Ausland) |
+| `partner1_geschlecht` | text | Geschlecht Partner 1 (M=Männlich, W=Weiblich) |
+| `partner2_geschlecht` | text | Geschlecht Partner 2 (M=Männlich, W=Weiblich) |
+| `partnerschafts_art` | text | Art der Partnerschaft (M+W= Mann + Frau, M+M=Mann+Mann, W+W=Frau+Frau) |
+| `anzahl` | int | Anzahl Trauungen |
 
 
 # Load packages

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100039`
+- **Dataset_identifier** `100039`
 - **Title** `Statistische Raumeinheiten: Bezirke`
 - **Description** `<p>Die Bezirke sind Untereinheiten der Wohnviertel. Jedes Wohnviertel mit Ausnahme von Klybeck und Kleinhüningen ist in 2 bis 8 Bezirke unterteilt. Insgesamt werden auf dem gesamten Kantonsgebiet 69 Bezirke unterschieden.<br>Code: Besteht aus Wohnviertel- und Bezirksnummerierung, z. B. Bezirk 2.4</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,29 @@ def _(mo):
 - **Keywords** `['Wohnbezirk', 'Wohnblock', 'Wohnblockseite', 'Wohnviertel', 'Statistik', 'Einteilung']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
+| `bez_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `bez_label` | text | Nummerierung (Label) der statistischen Raumeinheit |
+| `bez_name` | text | Name des Bezirks |
+| `wov_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
 
 
     ///

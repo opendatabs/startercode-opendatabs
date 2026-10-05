@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100031`
+- **Dataset_identifier** `100031`
 - **Title** `Sanitäre Anlagen`
 - **Description** `<p>Öffentliche sanitäre Anlagen und Nette Toiletten der Gemeinden Basel, Riehen und Bettingen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,36 @@ def _(mo):
 - **Keywords** `['Dusche', 'Sanitär', 'Toilette', 'WC']`
 - **Creator** `Tiefbauamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | Standortgeometrie der Anlage. |
+| `geo_shape` | geo_shape | — |
+| `id` | text | Identifikator der sanitären Anlage. |
+| `typ` | text | Weisst aus um was für eine sanitäre Anlage es sich handelt. |
+| `status` | text | Weisst aus ob die Anlage offen (in Betrieb), in Reperatur oder geschlossen ist. |
+| `kategorie` | text | Weisst aus ob es sich um eine selbstreinigende oder konventionelle Anlage handelt. |
+| `bezeichnung` | text | Bezeichnung der sanitären Anlage oder Name des Restaurants oder Geschäfts mit einer netten Toilette. |
+| `strasse` | text | Umfasst Strassennahme und teilweise eine Hausnummer. |
+| `plz` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Ortschaft |
+| `zusatz` | text | Der Zusatz weisst zusätzliche Informationen zur Anlage aus. Beispielsweise ob die Anlage saisonal ist. |
+| `gebuehr` | text | Weissst aus ob die Anlage gebührenpflichtig oder kostenlos ist. |
+| `eurokey` | boolean | Weisst aus ob die Anlage mit einem Eurokey Schlüsselsystem ausgerüstet ist. |
+| `link` | text | Verlinkung auf eine Webseite des Tiefbauamts. |
 
 
     ///

@@ -54,20 +54,48 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100415`
+- **Dataset_identifier** `100415`
 - **Title** `Geteilte Mikromobilität: Aktuelle Verfügbarkeit`
 - **Description** `<p>Der Datensatz beschreibt die aktuelle Verfügbarkeit von geteilten Mikromobilitätsangeboten.</p>
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2026-10-04T21:50:29+00:00`
+- **Modified** `2026-10-05T11:50:33+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
-- **Temporal_coverage_start_date** `2026-10-03T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-03T22:00:00+00:00`
+- **Temporal_coverage_start_date** `2026-10-04T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-04T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Raum und Umwelt']`
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'E-Mobility', 'Shared', 'Veloverleih', 'Verkehr', 'Mobility']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `xs_bike_id` | text | Eindeutige Kennung des verfügbaren Fahrzeugs. Wird für einige Anbieter (Bird, Bolt, Voi) bei jeder Verfügbarkeit neu generiert. |
+| `xs_provider_name` | text | Dienstleister, der die Mikromobilitätslösung zur Verfügung stellt |
+| `xs_vehicle_type_name` | text | Typ des angebotenen Fahrzeugs |
+| `xs_form_factor` | text | Bauweise oder das Layout des Fahrzeugs |
+| `xs_propulsion_type` | text | Art des Antriebs; "human" bedeutet manuelle Antriebskraft |
+| `xs_max_range_meters` | int | Reichweite des Fahrzeugs bei vollem Akku |
+| `xs_current_range_meters` | int | Aktuell verfügbare Reichweite des Fahrzeugs |
+| `xs_rental_uris` | text | Link zum Anbieter des Fahrzeugs |
+| `map_links` | text | — |
+| `timestamp` | datetime | Zeitpunkt der Datenerfassung |
 
 
     ///

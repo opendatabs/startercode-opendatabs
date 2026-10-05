@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,24 @@ Auto generated R starter code for data set 100379.
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Strafgericht', 'Gericht', 'Demokratie']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `titel` | text | Name der Wahl |
+| `datum` | date | Datum der Wahl |
+| `anzahl_sitze` | double | Anzahl Sitze, die zu vergeben sind. |
+| `listennr` | int | Listennummer |
+| `listenbezeichnung` | text | Listenbezeichnung |
+| `zeilennummer` | int | Kandidierendennummer |
+| `name` | text | Nachname der kandidierenden Person |
+| `vorname` | text | Vorname der kandidierenden Person |
+| `bisher` | text | — |
+| `geschlecht` | text | amtliches Geschlecht der kandidierenden Person |
+| `jahrgang` | text | Geburtsjahr der kandidierenden Person |
+| `zusatzliche_angaben` | text | Informationen zu der kandidierenden Person wie akademische(r) Titel, Beruf(e), Pronomen etc. |
 
 
 # Load packages

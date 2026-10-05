@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100293`
+- **Dataset_identifier** `100293`
 - **Title** `Überwachung Luftqualität Transformation Areal Rosental: Standorte`
 - **Description** `<p>Bedingt durch die frühere Nutzung des Rosental Areals – auch bekannt als die Wiege der Basler Chemie - ist der Untergrund mit Schadstoffen belastet. Während der Tiefbauarbeiten im Rahmen der «Transformation <a href="https://rosentalmitte.ch/" target="_blank">Rosental Mitte</a>» überwacht das <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene" target="_blank">Lufthygieneamt beider Basel (LHA)</a> die Immissionen mittels Messungen der Luft <a href="https://data.bs.ch/pages/rosental-dashboard/" target="_blank">(Dashboard)</a>. </p><p>Änderungsprotokoll:<br>23.4.2024: Die Messstation ROSEN 3 wurde verschoben. Alte geografische Breiten- und Längengrade 47.567827676637364, 7.603804744961502. Neue Breiten- und Lägengrade 47.567997530870265, 7.60479830196066.</p><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Luftqualität']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `name` | text | — |
+| `x_coord` | double | — |
+| `y_coord` | double | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
     ///

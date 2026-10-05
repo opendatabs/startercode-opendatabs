@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100513`
+- **Dataset_identifier** `100513`
 - **Title** `Anschauungsbeispiel: Vom Kanton in Auftrag gegebene Gutachten`
 - **Description** `<p>Dieser Datensatz ist ein Anschauungsbeispiel und zeigt die Struktur des Datensatzes für die vom Kanton in Auftrag gegebene Gutachten. Neben Metadaten wird eine URL zur Datei selber gezeigt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,28 @@ def _(mo):
 - **Keywords** `['Gutachten', 'Befund', 'Bewertung', 'Analyse', 'Schlussfolgerung', 'Empfehlung', 'Akademie', 'Universitäten']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `titel` | text | — |
+| `departement` | text | — |
+| `autor_innen` | text | — |
+| `erstellungsdatum` | date | — |
+| `dateiname` | text | — |
+| `url_datei` | text | — |
 
 
     ///

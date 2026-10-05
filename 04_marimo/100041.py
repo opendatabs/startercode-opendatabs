@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100041`
+- **Dataset_identifier** `100041`
 - **Title** `Statistische Raumeinheiten: Blockseiten`
 - **Description** `<p>Die statistische Blockseite ist die dem angrenzenden Strassenraum zugeordnete Seite eines statistischen Blocks. Blockseiten haben wie die Blöcke keine Namensbezeichnung und werden lediglich über die Nummer referenziert. Die Nummerierung der Blockseiten setzt sich zusammen aus der zweistelligen Wohnviertel-Nr., der einstelligen Bezirks-Nr. und der dreistelligen Block-Nr., gefolgt von einem vierstelligen Strassencode.<br>Code: Der erste Codeteil besteht aus Wohnviertel-, Bezirks- und Blocknummerierung (nicht punktgetrennt); dann folgt mit einem Unterstrich verbunden der zweite Codeteil, der Strassencode. Z. B. Blockseite 172005_1723</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Wohnbezirk', 'Wohnblock', 'Wohnblockseite', 'Wohnviertel', 'Einteilung', 'Statistik']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
+| `bls_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `bls_label` | text | Nummerierung (Label) der statistischen Raumeinheit |
+| `bls_name` | text | Name der Blockseite |
+| `str_code` | int | Code der Strasse |
+| `bez_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `blo_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
+| `wov_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
 
 
     ///

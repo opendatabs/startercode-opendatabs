@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100294`
+- **Dataset_identifier** `100294`
 - **Title** `Wetterstation Rosental Mitte`
 - **Description** `<p>Die Wetterstation wurde im Rahmen der «Transformation <a href="https://rosentalmitte.ch/" target="_blank">Rosental Mitte</a>» installiert. Das Areal soll dabei etappenweise für die Öffentlichkeit zugänglich gemacht und zu einem vollwertigen Stadtteil entwickelt werden. </p><p>Bedingt durch die frühere Nutzung des Rosental Areals – auch bekannt als die Wiege der Basler Chemie - ist der Untergrund mit Schadstoffen belastet. Während der Tiefbauarbeiten überwacht das <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene" target="_blank">Lufthygieneamt beider Basel (LHA)</a> die Immissionen mittels Messungen der Luft. Die Wetterstation zeichnet während der Überwachung u.a. Windrichtungen und Windgeschwindigkeiten auf, die bei der Interpretation der Immissionsmessungen hilfreich sind.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,29 @@ def _(mo):
 - **Keywords** `['Wetter', 'Luftfeuchtigkeit', 'Strahlung', 'Niederschlag', 'Wind', 'Temperatur', 'Regen']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Zeitstempel |
+| `precipitation` | double | Total der Niederschläge innerhalb der letzten Stunde |
+| `relativehumidityhc` | double | Luftfeuchtigkeit bezieht sich auf die Menge an Wassertröpfchen oder Wasserdampf, die in der Luft vorhanden sind. |
+| `solarradiation` | double | Globalstrahlung ist die Menge an Sonnenenergie, die auf eine horizontale Fläche in einer bestimmten Zeitspanne (normalerweise in Stunden) auftrifft. |
+| `airtemperaturehc` | double | Lufttemperatur bezieht sich auf die Masseinheit der Wärmeenergie, die in der Luft vorhanden ist. |
+| `windspeedultrasonic` | double | Windgeschwindigkeit bezieht sich auf die Geschwindigkeit, mit der sich Luft in horizontaler Richtung bewegt. |
+| `winddirultrasonic` | double | Windrichtung bezieht sich auf die Richtung, aus der der Wind weht. Sie wird normalerweise in Grad gemessen, wobei 0 Grad für Nord, 90 Grad für Ost, 180 Grad für Süd und 270 Grad für West steht. |
 
 
     ///

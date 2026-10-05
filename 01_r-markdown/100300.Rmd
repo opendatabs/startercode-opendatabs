@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,68 @@ Auto generated R starter code for data set 100300.
 - **Keywords** `['Wahlen', 'Bürgergemeinderat']`
 - **Creator** `Bürgergemeinde der Stadt Basel`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahlbezeichnung` | text | Titel der Wahl |
+| `amtsdauer` | text | Anzahl Jahre, auf welche die Mitglieder gewählt werden |
+| `wahltermin` | date | Datum der Wahl |
+| `anzahl_sitze` | int | Anzahl Sitze, die für einen Wahlkreis zur Verfügung stehen |
+| `wahlkreis_nr` | int | Nummer des Wahlkreises |
+| `wahlkreis_code` | int | Code des Wahlkreises |
+| `wahlkreisbezeichnung` | text | Name des Wahlkreises |
+| `stimmberechtigte_manner` | int | Anzahl in einem Wahlkreis stimmberechtigter Männer |
+| `stimmberechtigte_frauen` | int | Anzahl in einem Wahlkreis stimmberechtigter Frauen |
+| `stimmberechtigte` | int | Anzahl Stimmberechtigter total in einem Wahlkreis |
+| `stimmberechtigte_auslandschweizer` | int | Anzahl stimmberechtigter Auslandschweizer |
+| `wahlzettel` | int | Anzahl Wahlzettel |
+| `briefliche_stimmabgaben` | int | Anzahl brieflich eingelegter Wahlzettel |
+| `ungultige_wahlzettel` | int | Anzahl ungültiger Wahlzettel |
+| `leere_wahlzettel` | int | Anzahl leer eingelegter Wahlzettel |
+| `unveranderte_wahlzettel` | int | Anzahl unveränderter Wahlzettel |
+| `veranderte_wahlzettel_mit_bezeichnung` | int | Anzahl veränderter Wahlzettel mit Listenbezeichnung (leere Linien zählen als Parteistimmen) |
+| `veranderte_wahlzettel_ohne_bezeichnung` | int | Anzahl veränderter Wahlzettel ohne Listenbezeichnung (leere Linien werden nicht gezählt) |
+| `leere_stimmen` | int | Anzahl leerer Stimmen |
+| `partei_id` | int | ID der Partei |
+| `parteikurzbezeichnung` | text | Parteikurzbezeichnung |
+| `parteibezeichnung` | text | Name der Partei |
+| `anzahl_sitze_liste` | int | Anzahl Sitze einer Liste in einem Wahlkreis |
+| `unveranderte_wahlzettel_liste` | int | Anzahl unveränderte Wahlzettel einer Liste in einem Wahlkreis |
+| `veranderte_wahlzettel_liste` | int | Anzahl veränderte Wahlzettel einer Liste in einem Wahlkreis |
+| `kandidatenstimmen_unveranderte_wahlzettel` | int | Anzahl Stimmen aller Kandidatinnen und Kandidaten einer Liste aus unveränderten Wahlzetteln |
+| `zusatzstimmen_unveranderte_wahlzettel` | int | Anzahl Zusatzstimmen für alle Kandidatinnen und Kandidaten einer Liste aus unveränderten Wahlzetteln |
+| `kandidatenstimmen_veranderte_wahlzettel` | int | Anzahl Stimmen für alle Kandidatinnen und Kandidaten einer Liste aus veränderten Wahlzetteln |
+| `zusatzstimmen_veranderte_wahlzettel` | int | Anzahl Zusatzstimmen für alle Kandidatinnen und Kandidaten einer Liste aus veränderten Wahlzetteln |
+| `kandidaten_nr` | text | Kandidaten-Nr |
+| `kumulation` | text | K: eine Kandidatin oder ein Kandidat auf einem unveränderten Wahlzettel ist mehrfach aufgeführt. |
+| `bisher` | text | Angabe, ob eine Kandidatin oder ein Kandidat in der abgelaufenen Legislatur im Parlament vertreten war oder nicht |
+| `gewahlt` | text | Angabe, ob eine Kandidatin oder ein Kandidat gewählt ist |
+| `ganzer_name` | text | Nachname und Vorname, mit Komma getrennt |
+| `name` | text | Nachname |
+| `vorname` | text | Vorname |
+| `rangfolge` | int | Rangfolge innerhalb einer Liste gemäss Anzahl Stimmen (bei Stimmengleichheit entscheidet das Los). |
+| `00_ohne` | int | Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer Liste ohne Bezeichnung |
+| `01_fdp` | int | FDP. Die Liberalen Basel-Stadt und Jungfreisinnige; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
+| `03_ldp` | int | LDP Liberal-Demokratische Partei Basel-Stadt und Jungliberale; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
+| `04_evp` | int | Evangelische Volkspartei Basel-Stadt; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
+| `05_sp` | int | Sozialdemokratische Partei Basel-Stadt (SP) und JUSO; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
+| `07_mitte` | int | Die Mitte Basel-Stadt (MITTE); Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
+| `10_glp` | int | Grünliberale Partei Basel-Stadt; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
+| `12_svp` | int | Schweizerische Volkspartei Basel-Stadt (SVP); Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
+| `17_gp` | int | Grüne Partei (GP); Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
+| `27_basta` | int | Basels starke Alternative (BastA!); Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
+| `30_unabh` | int | Unabhängige (Unabh.); Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
+| `ungestempelte_wahlzettel` | int | Anzahl ungestempelter Wahlzettel |
+| `listen_nr` | text | Listen-Nr |
+| `stimmen_unveranderte_wahlzettel` | int | Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus unveränderten Wahlzetteln |
+| `stimmen_veranderte_wahlzettel` | int | Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus veränderten Wahlzetteln |
+| `stimmen_total_aus_wahlzettel` | int | Anzahl Stimmen total für eine Kandidatin oder einen Kandidaten |
+| `total_der_gultigen_wahlzettel` | int | Total der gültigen Wahlzettel |
+| `stimmbeteiligung` | geo_point_2d | Stimmbeteiligung: Berechnet als Anzahl Wahlzettel geteilt durch das Total der Stimmberechtigten |
+| `anteil_brieflich_wahlende` | text | Anteil brieflich Wählende: Berechnet als Anzahl Briefliche Stimmabgaben geteilt durch das Anzahl Wahlzettel. |
 
 
 # Load packages

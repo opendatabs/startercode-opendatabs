@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100077`
+- **Dataset_identifier** `100077`
 - **Title** `Coronavirus (COVID-19): Fallzahlen ganze Schweiz`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz basiert auf dem Github-repository (<a href="https://github.com/openZH/covid_19" target="_blank">https://github.com/openZH/covid_19</a>), das von OpenZH verwaltet wird. Die Daten wurden mit den geographischen Daten der Kantone angereichert, um Visualisierungen zu produzieren.</p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Hinweis:<br></span>Da seit dem 6. Mai 2024 keine Fallzahlen mehr von den Kantonen geliefert werden, wird dieser Datensatz nicht mehr aktualisiert. Auch die oben genannte Github-Repository wurde archiviert.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,37 @@ def _(mo):
 - **Keywords** `['covid19', 'pandemic', 'pandémie', 'Suisse', 'CH', 'Switzerland', 'coronavirus']`
 - **Creator** `OpenZH`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | — |
+| `time` | text | — |
+| `abbreviation_canton_and_fl` | text | — |
+| `ncumul_tested` | int | cumulative |
+| `ncumul_conf` | int | cumulative |
+| `new_hosp` | int | — |
+| `current_hosp` | int | at the given date |
+| `current_icu` | int | at the given date |
+| `current_vent` | int | at the given date |
+| `ncumul_released` | int | cumulative |
+| `ncumul_deceased` | int | cumulative |
+| `source` | text | — |
+| `current_isolated` | int | — |
+| `current_quarantined` | int | — |
+| `current_quarantined_riskareatravel` | int | — |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100197`
+- **Dataset_identifier** `100197`
 - **Title** `Wohnbevölkerung nach Postleitzahl seit 1979`
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt am Jahresende auf Ebene der Postleitzahlen-Gebiete ab dem Jahr 1979. Diese Gebiete orientieren sich nicht an den statistischen Raumeinheiten (Wohnviertel, Bezirk, Block,…), sondern wurden von der Schweizerischen Post vergeben.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['Bevölkerungsbestand']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr |
+| `postleitzahl` | text | Vierstellige Postleitzahl, eingeführt 1964 durch die Schweizerische Post. Die Postleitzahl definiert den Leitweg einer Sendung auf ihrer Reise zum Bestimmungsort. In grossen Städten dient sie zudem der Sortierung nach Zustellgruppen und Filialpoststellen. |
+| `anzahl` | int | Anzahl Personen |
 
 
     ///

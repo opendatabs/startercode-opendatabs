@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100129`
+- **Dataset_identifier** `100129`
 - **Title** `Vornamen der baselstädtischen Bevölkerung`
 - **Description** `Dieser Datensatz zeigt die Wohnbevölkerung des Kantons Basel-Stadt nach Vornamen. Die Daten werden jährlich aktualisiert. Bei mehreren Vornamen wird nur der erste berücksichtigt. Durch Bindestrich verbundene Vornamen zählen als ein Vorname. <br>Die hier veröffentlichten Werte der Jahre 1979 bis 2011 weichen aus methodischen Gründen von denjenigen in der kantonalen öffentlichen Statistik ab: In Letzterer wurde bis zum Jahr 2011 die Bevölkerungszahl durch Fortschreibung ermittelt. Seit dem Jahr 2012 basiert sie direkt auf Auswertungen aus dem kantonalen Einwohnerregister. Die hier veröffentlichten Werte hingegen basieren seit 1979 auf Auswertungen aus dem Einwohnerregister.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Bevölkerungsbestand', 'Entwicklung', 'Einwohnerzahl', 'Bevölkerungsstruktur', 'Nachname', 'Vorname', 'Name']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | — |
+| `vorname` | text | — |
+| `geschlecht` | text | — |
+| `anzahl` | int | — |
+| `jahr` | text | — |
 
 
     ///

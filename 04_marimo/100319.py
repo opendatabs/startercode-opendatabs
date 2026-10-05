@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100319`
+- **Dataset_identifier** `100319`
 - **Title** `Gesundheitsversorgung (GSV): Pflegeheimbewohnende`
 - **Description** `Wichtige Kennzahlen zu den Pflegeheimbewohnenden im Kanton Basel-Stadt. Dieser Datensatz fliesst zum Teil in Form eines Dashboard in den online Bericht des Bereiches Gesundheitsversorgung (GSV) des Gesundheitsdepartement Basel-Stadt. Die Kennzahlen werden per Stichtag Anfangs Jahr erhoben.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,48 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Jahr der Erhebung |
+| `id` | double | Identifikationsnummer |
+| `bewohner` | int | Anzahl der Pflegeheimbewohnenden |
+| `anzahl_frauen` | int | Anzahl Frauen in Pflegeheimen |
+| `anteil_frauen` | double | Anteil der Frauen aller Pflegeheimbewohnenden |
+| `anzahl_maenner` | int | Anzahl der Männer in Pflegeheimen |
+| `anteil_maenner` | double | Anteil der Männer aller Pflegeheimbewohnenden |
+| `mean_alter_bewohner` | double | Durchschnittsalter aller Pflegeheimbewohnenden |
+| `mean_alter_frauen` | double | Durchschnittsalter aller Pflegeheimbewohnerinnen |
+| `mean_alter_maenner` | double | Durchschnittsalter aller Pflegeheimbewohner |
+| `verstorben_bewohner` | int | Anzahl der verstorbenen Pflegeheimbewohnenden |
+| `alos` | double | Durchschnittliche Aufenthaltsdauer In Jahren aller Bewohnende in Pflegeheimen. Bezieht sich auf die PflegeheimbewohnerInnen, die im jeweiligen Jahr verstorben sind. |
+| `alos_frauen` | double | Durchschnittliche Aufenthaltsdauer in Jahren der Frauen. Bezieht sich auf die Pflegeheimbewohnerinnen, die im jeweiligen Jahr verstorben sind. |
+| `alos_maenner` | double | Durchschnittliche Aufenthaltsdauer in Jahren der Männer. Bezieht sich auf die Pflegeheimbewohner, die im jeweiligen Jahr verstorben sind. |
+| `mean_pflegestufe` | double | Durchschnittl. Pflegestufe |
+| `mean_pflegestufe_frauen` | double | Durchschnittl. Pflegestufe Frauen |
+| `mean_pflegestufe_maenner` | double | Durchschnittl. Pflegestufe Männer |
+| `mean_pflegestufe_65` | double | Durchschnittl. Pflegestufe bis 65-Jährige |
+| `mean_pflegestufe_66_bis_70` | double | Durchschnittl. Pflegestufe 66- bis 70-Jährige |
+| `mean_pflegestufe_71_bis_75` | double | Durchschnittl. Pflegestufe 71- bis 75-Jährige |
+| `mean_pflegestufe_76_bis_80` | double | Durchschnittl. Pflegestufe 76- bis 80-Jährige |
+| `mean_pflegestufe_81_bis_85` | double | Durchschnittl. Pflegestufe 81- bis 85-Jährige |
+| `mean_pflegestufe_86_bis_90` | double | Durchschnittl. Pflegestufe 86- bis 90-Jährige |
+| `mean_pflegestufe_91_bis_95` | double | Durchschnittl. Pflegestufe 91- bis 95-Jährige |
+| `mean_pflegestufe_96_bis_100` | double | Durchschnittl. Pflegestufe 96- bis 100-Jährige |
+| `mean_pflegestufe_101plus` | double | Durchschnittl. Pflegestufe 101-Jährige und älter |
 
 
     ///

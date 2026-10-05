@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100058`
+- **Dataset_identifier** `100058`
 - **Title** `Ordnungsbussen`
 - **Description** `<p>Dieser Datensatz zeigt die durch die Kantonspolizei Basel-Stadt ausgestellten Ordnungsbussen gemäss <a href="https://www.fedlex.admin.ch/eli/oc/2019/93/de" target="_blank">eidg. Ordnungsbussenverordnung</a>. Es handelt sich ausschliesslich um bereits bezahlte Bussen.</p><p>Der Datensatz enthält die Ordnungsbussen ab Januar 2017.</p><p>Die Daten im Zeitraum vom 1.1.2017 bis 30.11.2019 wurden korrigiert. Die entsprechenden Werte können deshalb minim von jenen abweichen, welche vor dem 21. April 2020 an dieser Stelle publiziert waren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,36 @@ def _(mo):
 - **Keywords** `['Strafzettel', 'Busse', 'Übertretung', 'Polizei', 'Parkplatz', 'Geschwindigkeit', 'Parkieren', 'Falschparken']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `laufnummer` | int | — |
+| `kategorie_bezeichnung` | text | Fahrzeugkategorie; enthält auch Fussgänger und Beifahrer; |
+| `wochentag` | text | Nummer und Bezeichnung des Wochentags, an welchem die Übertretung stattgefunden hat |
+| `ubertretungswochentagnummer` | int | Nummer des Wochentags, an welchem die Übertretung stattgefunden hat (1 = Sonntag, 2 = Montag, etc.) |
+| `ubertretungswochentag` | text | Wochentag, an welchem die Übertretung stattgefunden hat |
+| `ubertretungsmonat` | int | Monat, in welchem die Übertretung stattgefunden hat |
+| `ubertretungsjahr` | text | Jahr, in welchem die Übertretung stattgefunden hat |
+| `gk_limite` | double | Erlaubte Höchstgeschwindigkeit am Ort der Übertretung |
+| `u_ort_plz` | text | Postleitzahl des Ortes, an dem eine Übertretung stattgefunden hat. -1 bedeutet, dass sie nicht zu einer PLZ zuordenbar ist. |
+| `u_ort_ort` | text | Gemeinde, in welcher eine Übertretung stattgefunden hat |
+| `bussen_betrag` | int | Höhe der Busse in Franken |
+| `buzi` | text | Ziffer aus der eidg. Ordnungsbussenverordnung |
+| `buzi_zus` | text | Zusatz zur Ziffer aus der eidg. Ordnungsbussenverordnung |
+| `buzi_text` | text | Beschreibender Text zur Art der Übertretung gemäss eidg. Ordnungsbussenverordnung und Zusatz zur Ziffer aus der OBV |
 
 
     ///

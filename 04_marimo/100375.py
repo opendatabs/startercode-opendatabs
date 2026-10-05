@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100375`
+- **Dataset_identifier** `100375`
 - **Title** `Zivilschutzkataster Quartier`
 - **Description** `Einteilung und Gliederung der Zivilschutzorganisation in Basel-Stadt und Ausdehnung der einzelnen Zivilschutz-Blockpläne auf Quartierebene.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['Militär', 'Sicherheit']`
 - **Creator** `Rettung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `zs_id_quartier` | int | ID des Quatiers |
 
 
     ///

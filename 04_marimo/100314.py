@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100314`
+- **Dataset_identifier** `100314`
 - **Title** `Grosser Rat: Vorgänge von Geschäften`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt Vorgänge und Sitzungen von Geschäften (beziehungsweise Beschlüsse zu Geschäften), die im Grossen Rat des Kantons Basel-Stadt behandelt werden.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Grosser Rat', 'Parlament', 'Legislative', 'Abstimmung', 'Geschäft', 'Regierungsrat']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `beschlnr` | text | Nummer des Beschlusses des Vorgangs |
+| `nummer` | text | Nummer des Vorgangs |
+| `vermerk` | text | Vermerk zum Vorgang |
+| `siz_nr` | text | Nummer der Sitzung, an der der Vorgang bearbeitet wurde |
+| `siz_datum` | date | Datum der Sitzung, an der der Vorgang behandelt wurde |
+| `laufnr_ges` | text | Laufnummer des Geschäfts zum zugehörigen Vorgang |
+| `signatur_ges` | text | Signatur des Geschäfts zum zugehörigen Vorgang |
+| `status_ges` | text | Status des Geschäfts zum zugehörigen Vorgang (In Bearbeitung oder Abgeschlossen) |
+| `titel_ges` | text | Titel des Geschäfts zum zugehörigen Vorgang |
+| `ga_rr_gr` | text | Typ des Geschäfts zum zugehörigen Vorgang |
+| `url_ges` | text | Link zum Geschäft auf der Webseite des Grossen Rates |
+| `url_geschaeft_ods` | text | Link zum Datensatz "Grosser Rat: Geschäfte". Gefiltert nach aktuellem Geschäft. |
 
 
     ///

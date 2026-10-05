@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100354`
+- **Dataset_identifier** `100354`
 - **Title** `Gesetzessammlung: Gesetzestexte`
 - **Description** `<p>Der Datensatz beschreibt die Struktur und Inhalte der Systematischen Gesetzessammlung (<a href="https://www.gesetzessammlung.bs.ch/app/de/systematic/texts_of_law" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/systematic/texts_of_law</a>) sowie der Erlasstexte des Kantons Basel-Stadt. Er ermöglicht eine systematische Kategorisierung und Beschreibung der geltenden Rechtsnormen.</p><p>Erlassänderungen (Chronologische Gesetzessammlung) können unter gesetzessammlung.bs.ch (<a href="https://www.gesetzessammlung.bs.ch/app/de/chronology/change_documents" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/chronology/change_documents</a>) oder auch in diesem Datensatz gefunden werden: <a href="https://data.bs.ch/explore/dataset/100355/" target="_blank">https://data.bs.ch/explore/dataset/100355/</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,53 @@ def _(mo):
 - **Keywords** `['Gesetz', 'Recht', 'Justiz', 'Systematik']`
 - **Creator** `Zentraler Rechtsdienst`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `index` | text | Eindeutige, technische Identifikationsnummer der Gesetzessystematik |
+| `parent` | text | Technische ID von übergeordneten systematischen Einheiten |
+| `children` | text | Technische IDs von untergeordneten systematischen Einheiten |
+| `identifier` | text | Eindeutige Kennung zur Identifikation von systematischen Einheiten. |
+| `title` | text | Bezeichnung der systematischen Einheit innerhalb der Gesetzessammlung. |
+| `identifier_full` | text | Kennung der Systematik, einschliesslich aller übergeordneten Ebenen |
+| `title_full` | text | Titel der Systematik, einschliesslich aller übergeordneten Ebenen |
+| `id` | text | technische ID des Gesetzestexts |
+| `systematic_number` | text | systematische Kennung des Gesetzestexts |
+| `is_active` | text | Zeigt an, ob der Gesetzestext derzeit aktiv ist. |
+| `v_id` | int | Technische ID der spezifischen Version des Gesetzestexts. |
+| `title_de` | text | Titel des Gesetzestexts. |
+| `keywords_de` | text | Schlüsselwörter, die den Inhalt des Gesetzestexts beschreiben. |
+| `info_badge` | text | Statusinformation zur aktuellen Version des Gesetzestexts. Mögliche Werte:; abrogated: Das Gesetz wurde offiziell aufgehoben.; current: Die Version des Gesetzes ist derzeit gültig.; not_current: Die Version des Gesetzes ist nicht mehr gültig.; removed: Die Version des Gesetzes wurde entfernt. |
+| `info_badge_date` | date | Datum, ab dem die Status-Info-Badge gilt. |
+| `type` | text | Typ der Übergangsänderung, die an der aktuellen Version des Gesetzestexts vorgenommen wurde. Mögliche Werte:; formless: Eine nicht inhaltliche Änderung, z. B. redaktionelle Anpassungen.; new: Ein neues Gesetz wurde hinzugefügt.; total_revision: Eine vollständige Überarbeitung des Gesetzes.; version: Eine neue Version des Gesetzes wurde erstellt. |
+| `continuation_type` | text | Der Übergangstyp der Gesetzesversion, der angibt, wie sich die Version des Gesetzes verändert hat. Mögliche Werte sind:; abrogated: Das Gesetz wurde aufgehoben oder annulliert.; formless: Eine nicht inhaltliche Änderung, z. B. redaktionelle Anpassungen ohne Änderung des Gesetzestextes.; removed: Der Gesetzestext wurde entfernt.; revised: Das Gesetz wurde überarbeitet, was in der Regel eine Änderung oder Ergänzung des bestehenden Textes bedeutet. |
+| `previous_type` | text | Der Typ der vorherigen Version des Gesetzestextes, bevor die Änderung vorgenommen wurde. Mögliche Werte:; abrogated: Das Gesetz wurde aufgehoben.; formless: Eine nicht inhaltliche Änderung, z. B. redaktionelle Anpassungen.; removed: Der Gesetzestext wurde entfernt.; revised: Das Gesetz wurde überarbeitet (z. B. eine Änderung, die die bestehenden Bestimmungen anpasst). |
+| `version_active_since` | date | Datum, an dem die aktuelle Version des Gesetzestexts aktiv wurde. |
+| `family_active_since` | date | Datum, an dem die aktuelle Version der Gesetzestextfamilie aktiv wurde oder letzte totale Revision |
+| `version_inactive_since` | date | Datum, an dem die aktuelle Version des Gesetzestexts inaktiv wurde. |
+| `version_found_at` | date | Datum, an dem diese Version des Gesetzestext gefunden oder zuletzt bestätigt wurde. |
+| `category_id` | int | Technische ID der Kategorie, zu der der Gesetzestext gehört. |
+| `category_name` | text | Name der Kategorie, zu der der Gesetzestext gehört. |
+| `original_url_de` | text | URL des Gesetzestexts in der offiziellen Gesetzessammlung Basel-Stadt. |
+| `url_de` | text | URL des Gesetzestexts auf lexfind.ch. |
+| `text_of_law` | text | Der vollständige Text des Gesetzes. |
+| `gesetzestext_html` | text | Der vollständige Text des Gesetzes in HTML. |
+| `version_url_de` | text | URL der Gesetzesversion in der offiziellen Gesetzessammlung Basel-Stadt. |
+| `tolsv_dtah_url` | text | URL der Gesetzesversion auf lexfind.ch. |
+| `tolsv_dtah_file_size` | int | Grösse der Gesetzesversionsdatei (in Bytes). |
 
 
     ///

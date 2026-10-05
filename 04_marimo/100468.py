@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100468`
+- **Dataset_identifier** `100468`
 - **Title** `Open Data Basel-Stadt Mastodon-Posts`
 - **Description** `<p>Dieser Datensatz beinhaltet die Beiträge des offiziellen Open Data Basel-Stadt Mastodon Accounts (ohne Bilder): <a href="https://swiss.social/@opendatabs" target="_blank">https://swiss.social/@opendatabs</a>.</p><p>Dieser Datensatz wurde erstellt, damit der Mastodon-Feed auf der Homepage richtig geladen wird: <a href="https://data.bs.ch/pages/home/" target="_blank">https://data.bs.ch/pages/home/</a> .</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Social Media', 'Mastodon', 'HTML', 'Emojis', 'Facebook', 'X', 'Twitter', 'WhatsApp', 'LinkedIn', 'Soziale Medien', 'Instagram', 'Threads']`
 - **Creator** `Open Data Basel-Stadt`
 - **Reference** `https://swiss.social/@opendatabs.rss`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | text | — |
+| `link` | text | — |
+| `description` | text | Der Text des Posts in HTML |
+| `post` | text | Text des Posts |
+| `published` | datetime | — |
 
 
     ///

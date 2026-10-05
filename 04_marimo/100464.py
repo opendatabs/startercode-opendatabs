@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100464`
+- **Dataset_identifier** `100464`
 - **Title** `Informationen für den Raum St. Jakob`
 - **Description** `<p class="MsoNormal">Der Datensatz enthält aktuelle Informationen zu Verkehr, Bauarbeiten und infrastrukturellen Massnahmen im Raum St. Jakob in Basel. Er umfasst Hinweise zu temporären Änderungen im öffentlichen Verkehr, Baustellen, Umleitungen sowie Ersatzangeboten. Die Angaben werden regelmässig aktualisiert, soweit sie von den zuständigen Stellen bereitgestellt werden.<o:p></o:p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['St. Jakob', 'Gartenbad', 'Arena', 'Parken', 'St. Jakobshalle', 'St. Jakob-Park', 'St. Jakob-Arena', 'Sportanlage', 'Sperrung', 'Parkplätze', 'Verkehrsplanung']`
 - **Creator** `Kantonspolizei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `start` | date | Start Uhrzeit |
+| `ende` | date | Ende Uhrzeit |
+| `text_html` | text | — |
 
 
     ///

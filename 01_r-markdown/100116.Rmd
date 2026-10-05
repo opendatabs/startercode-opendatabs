@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,27 @@ Auto generated R starter code for data set 100116.
 - **Keywords** `['Coronavirus', 'Corona', 'COVID-19', 'PCR', 'Antigen', 'Krankheit', 'Lungenentzündung', 'Test', 'Pandemie']`
 - **Creator** `Bundesamt für Gesundheit BAG`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Falldatum, entspricht in der Regel dem Datum der Probeentnahme |
+| `georegion` | text | Wohnkanton, falls unbekannt: Kanton des Testcenters. Zusätzlich sind die aggregierten Einheiten CH, FL und CHFL vorhanden. |
+| `entries` | int | Anzahl durchgeführte Tests. Eine Person kann mehrfach getestet werden. |
+| `pop` | int | Anzahl EinwohnerInnen der vorliegenden Region, wie sie vom BAG zur Inzidenzberechnung verwendet wird. |
+| `dayofweek` | int | ID des Wochentags. 0 = Montag, 1 = Dienstag, etc. |
+| `wochentag` | text | Wochentag auf Deutsch |
+| `week` | int | — |
+| `offset_last7d` | int | — |
+| `offset_last14d` | int | — |
+| `offset_last28d` | int | — |
+| `sumdelta7d` | double | — |
+| `inzdelta7d` | double | — |
+| `type_variant` | text | — |
+| `entries_letzter_stand` | int | — |
+| `entries_neu_gemeldet` | int | — |
 
 
 # Load packages

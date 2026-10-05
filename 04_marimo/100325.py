@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100325`
+- **Dataset_identifier** `100325`
 - **Title** `Kantonales Leistungsverzeichnis: Gebühren`
 - **Description** `<p><b>Der Gebührenkatalog enthält die aktuellen Gebühren und Verweise auf die gültigen Gebührenordnungen im Kanton Basel-Stadt. Mit der Veröffentlichung dieser Informationen entspricht die kantonale Verwaltung ihrer Informationspflicht gemäss dem für Basel-Stadt verabschiedeten «Öffentlichkeitsprinzip», basierend auf dem Ratschlag des RR vom 07.09.2011.</b> </p><p>Die Veröffentlichung des aktuellen Gebührenkatalog auf dem kantonalen Datenportal <a href="https://data.bs.ch" target="_blank">https://data.bs.ch</a> als «Open Government Data» (OGD) ergänzt die bisherige Veröffentlichung der Gebühren als Excel Datei auf der Webseite <a href="https://www.bs.ch/publikationen/fd/gebuehrendatenbank1.html" target="_blank">des Kanton Basel-Stadt</a>. </p><p>Das kantonale Datenportal führt stets die aktuellen und gültigen Datensätze. Ergänzungen durch die Dienststellen werden ebenfalls automatisch nach einem Tag angezeigt. Das kantonale Datenportal ist als Informationsquelle und für Auswertungen die neue «Heimat» des Gebührenkatalogs.</p><p>Um die Daten lesbarer zu gestalten, wurden bisher als «Gebührenblöcke» oder «Sammelgebühren» veröffentlichte Gebühren von den zuständigen Dienststellen weiter aufgelöst. Die Daten werden neu granular und damit lesbarer dargestellt. Auch die Informationen zu Gebühren aus anderen Kantonen (Benchmarks) wurden weiter ergänzt, damit die dargestellten Informationen vergleichbar und transparent sind.</p><u><b>Warum machen wir das?</b></u><p>Ein Legislaturziel ist es, einen «niederschwelligen Service public» anzubieten. Die Veröffentlichung des Gebührenkatalogs setzt den Ratschlag des RR vom 07.09.2011 um. Die Veröffentlichung von Informationen ermöglicht es Aussenstehenden, die Bedeutung und den Wert der Institutionen und Behörden besser einzuschätzen. </p><p>Sämtliche angezeigte Daten sind öffentlich. Siewerden hiermit allen Interessierten zugänglich gemacht und verletzen keine Persönlichkeitsrechte, sind nicht sicherheitskritisch und unterliegen keinen Drittrechten (wie Copyrights).</p><u><b>Bitte geben Sie uns Rückmeldung!</b></u><p>Gerne nehmen wir Ihr geschätztes Feedback und Anregungen entgegen, wie wir die Beschreibung und Auswertung aktueller Gebühren sinnvoll erweitern und anreichern könnten, um diese «auswertbarer» zu machen. Entsprechende Vorschläge werden auf Umsetzbarkeit geprüft. </p><p>Über Ihre Rückmeldungen möchten wir verstehen, wer unsere Daten nutzt und wofür, damit wir die Qualität und Quantität der angebotenen Informationen weiter verbessern können.</p><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,30 @@ def _(mo):
 - **Keywords** `['eGovernment', 'Kosten', 'Preise', 'Dienstleistungen', 'Produkte', 'kantonale Aufgaben']`
 - **Creator** `IT BS`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `departement` | text | Departement |
+| `diensstelle` | text | Dienststelle |
+| `gegenstand_der_gebuhr` | text | Gegenstand/Name der Gebühr |
+| `rechtliche_grundlage` | text | Referenz auf die Rechtsgrundlagen der Gebühr. |
+| `hohe_der_gebuhr_en_chf` | text | Höhe der Einzelgebühr(en) in Franken oder Referenz zu Gebührenkatalog. |
+| `benchmark` | text | Benchmark, derselben Gebühr in anderen Kantonen |
+| `leistung` | text | Zugehörige Leistung |
+| `weiteregliederungoe` | text | Wenn vorhanden, weitere Aufteilung der Organisationseinheit |
 
 
     ///

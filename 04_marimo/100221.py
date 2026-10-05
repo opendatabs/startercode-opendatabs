@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100221`
+- **Dataset_identifier** `100221`
 - **Title** `Swisslos-Sportfonds Basel-Stadt`
 - **Description** `<p>Der Datensatz „Swisslos-Sportfonds Basel-Stadt“ dokumentiert die Vergabe von Fördermitteln aus dem Swisslos-Sportfonds im Kanton Basel-Stadt. Die Mittel dienen der Unterstützung des Breitensports, der Förderung von Sportvereinen und -verbänden sowie der Realisierung von Projekten im Leistungssport.</p><p>Der Datensatz enthält Informationen zu den begünstigten Sportvereinen und Organisationen, den geförderten Projekten sowie den jeweiligen Förderbeträgen. Die Unterstützung reicht von Beiträgen für Vereinsaktivitäten über die Anschaffung von Sportmaterial bis hin zur Durchführung von Veranstaltungen und Investitionen in Sportanlagen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Sport', 'Förderung', 'Swisslos']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Das Jahr, in dem die Fördermittel bewilligt wurden. |
+| `beguenstigte` | text | Der Name des Sportvereins oder der Organisation, die die Förderung erhält. |
+| `unterstuetztes_projekt` | text | Die Bezeichnung des Projekts oder der Massnahme, für die die Fördermittel verwendet werden. Dies kann Veranstaltungen, Anschaffungen oder Vereinsaktivitäten umfassen. |
+| `beitrag` | double | Der bewilligte Förderbetrag in Schweizer Franken (CHF), der dem jeweiligen Verein oder der Organisation zugesprochen wurde. |
+| `column_1` | int | Der Index ist eine laufende Nummer, die jede Zeile im Datensatz eindeutig innerhalb eines Jahres identifiziert. Er dient dazu, die Einträge zu ordnen und zu referenzieren. |
 
 
     ///

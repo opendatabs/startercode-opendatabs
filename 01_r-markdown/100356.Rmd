@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100356.
 - **Description** `<p>Dieser Datensatz enthält die Geschwindigkeitsklassen des motorisierten Individualverkehrs. Die Daten werden vor der Veröffentlichung nicht überprüft oder ergänzt. Daher können jederzeit Datenlücken oder falsche Messungen aufgrund technischer Probleme oder Verkehrsbehinderungen auftreten.</p><p>Aus Kostengründen sind nur die Werte des aktuellen Jahres und der letzten zwei Jahre als Tabelle / Visualisierung sichtbar bzw. via API abgreifbar. Die vollständigen Daten ab dem Jahr 2014 können hier heruntergeladen werden: <br><br>Leicht aufbereiteter Datensatz: <a href="https://data-bs.ch/mobilitaet/converted_MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/converted_MIV_Speed.csv </a><br>Rohdaten: <a href="https://data-bs.ch/mobilitaet/MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/MIV_Speed.csv</a><br><br>Die Daten einzelner Jahre ab dem Jahr 2014 können heruntergeladen werden unter der URL mit dem Muster https://data-bs.ch/mobilitaet/[JAHR]_MIV_Speed.csv, als zum Beispiel für das Jahr 2020 hier: <a href="https://data-bs.ch/mobilitaet/2020_MIV_Speed.csv" target="_blank">https://data-bs.ch/mobilitaet/2020_MIV_Speed.csv.</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-03-26`
-- **Modified** `2026-10-02T06:56:55+00:00`
+- **Modified** `2026-10-05T07:02:48+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-12-30T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-09-29T22:00:00+00:00`
@@ -25,6 +25,43 @@ Auto generated R starter code for data set 100356.
 - **Keywords** `['Auto', 'Motorrad', 'Bus', 'Lieferwagen', 'Lastwagen', 'Anhänger', 'Verkehr', 'Geschwindigkeit', 'km/h']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `zst_id` | text | — |
+| `sitename` | text | Name des Standorts |
+| `directionname` | text | Fahrtrichtung des Fahrzeugs |
+| `lanecode` | text | Nummer der Spur |
+| `lanename` | text | Name der Spur |
+| `date` | date | — |
+| `timefrom` | text | — |
+| `timeto` | text | — |
+| `traffictype` | text | — |
+| `total` | int | — |
+| `20` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von weniger als 20 km/h fahren. |
+| `20_30` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 20-30km/h fahren. |
+| `30_40` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 30-40km/h fahren. |
+| `40_50` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 40-50km/h fahren. |
+| `50_60` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 50-60km/h fahren. |
+| `60_70` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 60-70km/h fahren. |
+| `70_80` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 70-80km/h fahren. |
+| `80_90` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 80-90km/h fahren. |
+| `90_100` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 90-100km/h fahren. |
+| `100_110` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 100-110km/h fahren. |
+| `110_120` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 110-120km/h fahren. |
+| `120_130` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von 120-130km/h fahren. |
+| `130` | int | Anzahl der Fahrzeuge im motorisierten Individualverkehr, die mit einer Geschwindigkeit von über 130km/h fahren. |
+| `datetimefrom` | datetime | — |
+| `datetimeto` | datetime | — |
+| `year` | text | — |
+| `month` | text | — |
+| `day` | text | — |
+| `weekday` | text | Die Wochentage sind von 0 bis 6 durchnummeriert mit Montag als Wochenanfang mit der Nummer 0. |
+| `hourfrom` | text | — |
+| `dayofyear` | int | — |
 
 
 # Load packages

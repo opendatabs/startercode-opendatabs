@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100420`
+- **Dataset_identifier** `100420`
 - **Title** `Wasserverbrauch im Kanton Basel-Stadt und in Binningen seit 1951`
 - **Description** `Der Datensatz „Wasserverbrauch im Kanton Basel-Stadt und in Binningen“ enthält Informationen zum Wasserverbrauch in dieser Region. Er umfasst jährliche Verbrauchsdaten seit 1951 sowie monatliche Verbrauchsdaten seit 2005. Die Daten stammen von den Industriellen Werken Basel (IWB) und werden vom Statistischen Amt des Kantons Basel-Stadt veröffentlicht. Die Erhebung erfolgt durch öffentliche Organe, insbesondere die IWB, wobei die Daten jeweils zum Monats- und Jahresende erfasst werden. Der Datensatz enthält verschiedene Kategorien des Wasserverbrauchs, darunter Haushaltungen und Gewerbe, Grossbezüger wie Industriebetriebe, öffentliche Brunnen sowie weitere öffentliche Zwecke. Zudem sind der Eigenbedarf der IWB und die Wasserverluste im Versorgungsnetz erfasst. Neben diesen Gesamtverbräuchen gibt es auch Angaben zum mittleren und grössten Tagesverbrauch pro Kopf. Die Daten werden in Litern angegeben und auf Jahres- oder Monatsebene aggregiert. Sie basieren auf der Wasserabgabe im eigenen Versorgungsgebiet, das den Kanton Basel-Stadt und Binningen umfasst, ohne Berücksichtigung von Transitlieferungen an Gemeinden ausserhalb des Versorgungsgebiets. Bis 1985 wurden Haushaltungen ohne Gewerbe separat ausgewiesen, während Industrie und Gewerbe bis zu diesem Zeitpunkt gemeinsam erfasst wurden. Die Kategorie „Öffentliche Brunnen“ umfasst Brunnen im Stadtgebiet, die durch die IWB betrieben und unterhalten werden. Zudem wurden die Werte für die Jahre 2015 bis 2019 im Jahr 2021 revidiert.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Wasser']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `aggregationsstufe` | text | Gibt an, auf welcher Ebene die Daten aggregiert wurden. Werte sind „Jahr“ (jährliche Daten) oder „Monat“ (monatliche Daten, ab 2005 verfügbar). |
+| `zeitperiode` | text | Das Jahr oder der Monat, für den der Wasserverbrauch erfasst wurde. Die jährlichen Daten reichen bis 1951 zurück, die monatlichen bis 2005. |
+| `kategorie` | text | Der Wasserverbrauch wird in verschiedene Kategorien unterteilt: Die Kategorie Haushaltungen, Gewerbe" umfasst Bezüger, bei denen keine klare Unterscheidung zwischen privatem und gewerblichem Verbrauch möglich ist. Jahresverbräuche bis zu 5'000 m³ pro Abonnent fallen in diese Gruppe. "Grossbezüger" umfasst grössere Verbrauchsmengen aus Gewerbe und Industrie, darunter Kindergärten, Schulhäuser, Spitäler, Verwaltungsgebäude, Landwirtschaftsbetriebe, Hotels und Baustellenwasser. Ab 5'000 m³ pro Jahr pro Abonnent werden diese Verbräuche automatisch dieser Kategorie zugeordnet. Die "Öffentlichen Brunnen" sind eine eigenständige Kategorie. Zusätzlich gibt es den Bereich "Andere öffentliche Zwecke", unter den Feuerwehrübungen, Strassen- und Tunnelreinigungen, Kanalisationsspülungen, die Bewässerung öffentlicher Grünanlagen sowie Wasserverbräuche in öffentlichen Schwimmbädern und Toiletten fallen. Die Kategorie "Eigenbedarf IWB" erfasst den Wasserverbrauch des Wasserversorgers selbst, beispielsweise für Reservoirreinigungen oder Leitungsspülungen. Die Kategorie "Verlust" umfasst sowohl echte Verluste durch Rohrbrüche und Leckagen als auch unechte Verluste, die durch Messfehler oder unkontrollierte Entnahmen entstehen. Zusätzlich gibt es drei statistische Werte für die Verbrauchsanalyse: "Mittlerer" Verbrauch gibt den durchschnittlichen Wasserverbrauch an. "Grösster" Verbrauch zeigt den höchsten gemessenen Wasserverbrauch. "Total" Verbrauch gibt die gesamte verbrauchte Wassermenge an." |
+| `einheitbeschreibung` | text | Gibt die Einheit der Verbrauchsangabe an. |
+| `menge` | double | Enthält den erfassten Wasserverbrauch in der jeweiligen Kategorie und Zeiteinheit. |
 
 
     ///

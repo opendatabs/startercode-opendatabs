@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100019`
+- **Dataset_identifier** `100019`
 - **Title** `Defibrillatoren`
 - **Description** `<p>Der Datensatz zeigt sämtliche Standorte öffentlich zugänglicher Defibrillatoren in Basel-Stadt. Diese sind so auch in der First Responder App einsehbar. <br>Die entsprechenden Standorte sind in der Kartenanwendung mit einem grünen Herz-Symbol signalisiert und mit Beschreibungen zu Standort und Erreichbarkeit angereichert.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['DEFI', 'Gesundheit', 'Herz-Kreislauf-Stillstand', 'Impulsgeber', 'Medizinisches Material', 'Notfall', 'Schockgeber', 'Herz', 'CPR', 'Lunge', 'Standort', 'Wiederbelebung']`
 - **Creator** `Rettung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | Punktgeometrie des Objekts Defibrillator in LV95. |
+| `geo_shape` | geo_shape | — |
+| `id` | int | Eindeutiger Identifikator des Defibrillators. |
+| `standort` | text | Bezeichnung des Standorts des Defibrillators durch allgemeinverständlichen Namen des Gebäudes, der Anlage oder der Firma, an bzw. in dem sich der Defibrillator befindet. |
+| `strasse` | text | Name des Strasse, an dem sich das Gebäude oder die Anlage befindet, an bzw. in dem sich der Defibrillator befindet. |
+| `hausnummer` | text | Hausnummer der unter Strassenname beschriebenen Strasse. Sollte keine eindeutige Hausnummer vorhanden sein, wird dies durch "0" gekennzeichnet. |
+| `plz` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Bezeichnung der Ortschaft. |
+| `kanton` | text | Angabe des Kantons, zu dem das Gebäude bzw. die Anlage gehört. |
+| `verfuegbarkeit` | text | Gibt Auskunft über die Verfügbarkeit des Defibrillators. Oftmals sind Defibrillatoren in Gebäuden platziert und nur zu bestimmten Zeiten erreichbar. Jederzeit verfügbare Defibrillatoren sind mit "24/365" gekennzeichnet. |
+| `bemerkungen` | text | Angaben wichtiger Informationen zum Auffinden des Defibrillators innerhalb des Gebäudes oder der Anlage und zum individuellen Vorgehen vor Ort. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

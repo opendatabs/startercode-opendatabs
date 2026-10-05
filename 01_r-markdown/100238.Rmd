@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,17 @@ Auto generated R starter code for data set 100238.
 - **Keywords** `['Alter', 'Bevölkerungsbestand', 'Geschlecht', 'Herkunft', 'Bevölkerungsstruktur', 'Staatsangehörigkeit']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Bevölkerungsstands am Ende des Jahres |
+| `pers_alter` | int | Personenalter |
+| `geschlecht` | text | Geschlecht (w: weiblich, m: männlich) |
+| `herkunft` | text | CH: Bevölkerung mit schweizer Staatsangehörigkeit (Achtung: Alle Personen der Kategorie BS sind auch in der Kategorie CH enthalten.), A: Bevölkerungs mit ausländischer Staatsangehörigkeit, BS: Kantonsbürger des Kantons Basel-Stadt |
+| `anzahl` | int | — |
 
 
 # Load packages

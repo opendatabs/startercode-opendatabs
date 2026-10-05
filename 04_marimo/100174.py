@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100174`
+- **Dataset_identifier** `100174`
 - **Title** `Smarte Strasse: Luftqualität des Vortages`
 - **Description** `<p>Der Datensatz zeigt die Maximalwerte (O3) und Mittelwerte (NO2, PM 2.5) des Vortages für die verschiedenen Messwerte als Vergleichswerte für die Echtzeitdaten.<br>Die Echtzeitdaten sind unter folgendem Datensatz zu finden: <a href="https://data.bs.ch/explore/dataset/100093/" target="_blank">https://data.bs.ch/explore/dataset/100093/</a>  </p><p>Das <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bau-und-umweltschutzdirektion/lufthygiene" target="_blank">Lufthygieneamt beider Basel</a> (LHA) testet im Projekt «Smarte Strasse» kosteneffiziente Mikrosensoren auf ihre Genauigkeit und Zuverlässigkeit. Der installierte Sensor vom Typ «Nubo» der Firma Sensirion AG ist in der Lage, die Konzentration verschiedener Schadstoffe in der Luft in Echtzeit zu ermitteln. Gemessen werden die Gehalte der Gase Stickstoffdioxid (NO2) und Ozon (O3), sowie die feinere Fraktion des Feinstaubs «PM2.5». Die Belastungen mit Stickstoffdioxid und Feinstaub werden hauptsächlich durch den motorisierten Verkehr und durch Heizungen verursacht. Ozon wird in der Atmosphäre aus den Vorläuferschadstoffen Stickstoffdioxid und flüchtigen organischen Stoffen (VOC) unter Sonneneinwirkung gebildet. Parallel wurden drei «Nubo»- Sensoren an den permanenten Messstationen des LHA am St. Johanns-Platz, an der Feldbergastrasse und auf der Autobahn A2 in der Hard installiert und gegen die Referenzmessgeräte des LHA verglichen. Diese Werte stehen ebenfalls auf OGD zur Verfügung: <a href="https://data.bs.ch/explore/dataset/100178/" target="_blank">https://data.bs.ch/explore/dataset/100178/</a><br>Weitere Informationen zur Luftqualität in der Region Basel sind auf <a href="https://www.luftqualitaet.ch/" target="_blank">www.luftqualitaet.ch</a> verfügbar. Hintergrundinformationen zu Ozon und Feinstaub auf den Webseiten <a href="https://ozon-info.ch/" target="_blank">www.ozon-info.ch</a> und <a href="https://feinstaub.ch/" target="_blank">www.feinstaub.ch</a>. Angaben zu den gesundheitlichen Auswirkungen der Luftverschmutzung auf der Webseite <a href="https://www.swisstph.ch/de/projects/ludok/healtheffects/" target="_blank">https://www.swisstph.ch/de/projects/ludok/healtheffects/</a>.</p><p class="" style="font-family: sans-serif;"><span style="font-weight: bolder;">Weitere Informationen und Daten rund um das Projekt «Smarte Strasse» finden Sie unter den folgenden Links:</span></p><ul><li>Weitere Informationen zum Projekt «Smarte Strasse»: <a href="https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen" target="_blank">https://www.bs.ch/medienmitteilungen/pd/2022-pilotprojekt-smarte-strasse-neue-technologien-im-test-fuer-die-stadt-von-morgen</a> </li><li>Genaue Standorte aller Sensoren: <a href="https://data.bs.ch/explore/dataset/100114/" target="_blank">https://data.bs.ch/explore/dataset/100114/</a> </li><li>Weitere Datensätze rund um das Thema «Smarte Strasse»: <a href="https://data.bs.ch/explore/?refine.tags=smarte+strasse" target="_blank">https://data.bs.ch/explore/?refine.tags=smarte+strasse</a> </li></ul><p><span style="font-weight: bolder;">Hinweis:<br>Die Luft-Sensoren an der Gundeldingerstrasse wurden am 29.6.23 abmontiert. Seit Anfang/Mitte Juni wurden keine Daten mehr erhoben.</span><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Smarte Strasse', 'Luftqualität', 'Feinstaub', 'PM2.5', 'O3', 'NO2']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Zeitstempel = Anfangszeit des 30 minütigen Messintervalls |
+| `g107_no2` | double | Tagesmittelwert NO2 [µg/m3] - Sensor Gundeldingerstrasse 107 |
+| `g107_03` | double | Tageshöchstwert O3 [µg/m3] - Sensor Gundeldingerstrasse 107 |
+| `g107_pm25` | double | Tagesmittelwert PM2.5 [µg/m3] - Sensor Gundeldingerstrasse 107 |
+| `g125_no2` | double | Tagesmittelwert NO2 [µg/m3] - Sensor Gundeldingerstrasse 125 |
+| `g125_o3` | double | Tageshöchstwert O3 [µg/m3] - Sensor Gundeldingerstrasse 125 |
+| `g125_pm25` | double | Tagesmittelwert PM2.5 [µg/m3] - Sensor Gundeldingerstrasse 125 |
+| `g131_no2` | double | Tagesmittelwert NO2 [µg/m3] - Sensor Gundeldingerstrasse 131 |
+| `g131_o3` | double | Tageshöchstwert O3 [µg/m3] - Sensor Gundeldingerstrasse 131 |
+| `g131_pm25` | double | Tagesmittelwert PM2.5 [µg/m3] - Sensor Gundeldingerstrasse 131 |
+| `timestamp_text` | text | — |
+| `anfangszeit` | text | — |
 
 
     ///

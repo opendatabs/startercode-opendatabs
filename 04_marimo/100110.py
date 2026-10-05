@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100110`
+- **Dataset_identifier** `100110`
 - **Title** `Coronavirus (COVID-19): Reproduktionszahl (Re)`
 - **Description** `<p>Geschätzte tägliche effektive Reproduktionszahl für die Schweiz, die Schweizer Grossregionen sowie die Schweizer Kantone. Die effektive Reproduktionszahl ist ein Mass dafür, wie viele Personen eine infizierte Person durchschnittlich ansteckt. Die Werte wurden täglich von der ETH Zürich berechnet. Die Originaldaten sind auf <a href="https://github.com/covid-19-Re/dailyRe-Data" target="_blank">https://github.com/covid-19-Re/dailyRe-Data</a> sowie <a href="https://github.com/covid-19-Re/dailyRe-Data/blob/master/CHE-estimates.csv" target="_blank">https://github.com/covid-19-Re/dailyRe-Data/blob/master/CHE-estimates.csv</a> verfügbar.</p><p>Die geschätzte effektive Reproduktionszahl bildet aufgrund der Infektionsdynamik (Inkubationszeit, Meldeverzug, etc.) schweizweit das Infektionsgeschehen erst mit einer zeitlichen Verzögerung von 10-13 Tagen ab. Auf kantonaler Ebene beträgt die zeitliche Verzögerung 14-17 Tage. </p><p>Weitere Informationen zur Interpretation der effektiven Reproduktionszahl finden sich bei der Swiss National COVID-19 Task Force: <a href="https://sciencetaskforce.ch/reproduktionszahl/" target="_blank">https://sciencetaskforce.ch/reproduktionszahl/</a> </p><p>Details und Quellenangaben zur verwendeten Methodik finden sich auf dem COVID-19-Dashboard der ETH Zürich: <a href="https://ibz-shiny.ethz.ch/covid-19-re-international/" target="_blank">https://ibz-shiny.ethz.ch/covid-19-re-international/</a> </p><div><br></div>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,32 @@ def _(mo):
 - **Keywords** `['Coronavirus', 'Reproduktionszahl', 'Re', 'R-Wert', 'Re-Wert', 'COVID-19', 'Corona', 'Krankheit', 'Lungenentzündung']`
 - **Creator** `ETH Zurich, Department of Biosystems Science and Engineering`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `country` | text | Das Land, für welches die Werte geschätzt wurden |
+| `region` | text | Das Land, die Grossregion bzw. der Kanton, für welche/n die Werte geschätzt wurden |
+| `source` | text | Quelle aus der die verwendeten Daten stammen |
+| `data_type` | text | Art der für die Schätzung verwendeten Daten |
+| `estimate_type` | text | Die bei der Schätzung verwendete Methodik |
+| `date` | date | Datum, für welches die effektive Reproduktionszahl berechnet wurde. Da sich die effektive Reproduktionszahl erst mit zeitlichem Verzug berechnen lässt, liegt der letzte verfügbare Schätzwert in der Vergangenheit |
+| `median_r_mean` | double | Die mittlere geschätzte effektive Reproduktionszahl |
+| `median_r_highhpd` | double | Die obere Grenze des 95%-Vertrauensintervalls der mittleren geschätzten effektiven Reproduktionszahl |
+| `median_r_lowhpd` | double | Die untere Grenze des 95%-Vertrauensintervalls der mittleren geschätzten effektiven Reproduktionszahl |
+| `countryiso3` | text | Iso Code des Landes, für welches die Werte geschätzt wurden |
 
 
     ///

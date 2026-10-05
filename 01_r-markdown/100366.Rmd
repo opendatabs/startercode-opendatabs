@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100366.
 - **Description** `<p>Bauvorhaben, die eine wesentliche Aussenwirkung haben und Rechte Anderer betreffen können, wie etwa Neubauten, grosse Umbauten, Baumfällungen, Mobilfunkantennen oder Restaurationsbetriebe mit Nachtöffnungszeiten, werden im Kantonsblatt (<a href="https://www.kantonsblatt.ch/#!/search/publications" target="_blank">https://www.kantonsblatt.ch/#!/search/publications</a>) publiziert. </p><p>Für diesen Datensatz wird der bestehende Datensatz des Kantonsblatt nach der Unterrubrik "Baupublikationen" gefiltert (<a href="https://data.bs.ch/explore/dataset/100352/table/?refine.subrubric_de=Baupublikationen" target="_blank">https://data.bs.ch/explore/dataset/100352/table/?refine.subrubric_de=Baupublikationen</a>) und dessen Inhalt wird aus der "XML-Datei" herausgelesen.</p><p>Dieser Datensatz bildet die Bauherrschaft, die Projektverfasser und den Standort des Bauvorhabens als Projektadresse und Parzelle ab. Die Koordinaten der Parzelle werden mit der GeoBS API Basel-Stadt ergänzt (<a href="https://api.geo.bs.ch/" target="_blank">https://api.geo.bs.ch/</a>).</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-11-13`
-- **Modified** `2026-10-04T01:03:16+00:00`
+- **Modified** `2026-10-05T01:03:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -25,6 +25,50 @@ Auto generated R starter code for data set 100366.
 - **Keywords** `['Publikation', 'Bauvorhaben', 'Bauherrschaft', 'Sektion', 'Projektverfasser', 'Bauprojekt']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `publicationarea_selecttype` | text | Art des Bauprojekts |
+| `projectdescription` | text | Beschreibung des Bauprojekts |
+| `projectlocation_address_street` | text | Strasse, an dem das Bauprojekt geplant ist. |
+| `projectlocation_address_housenumber` | text | Hausnummer, an der das Bauprojekt geplant ist. |
+| `projectlocation_address_locationadditional` | text | — |
+| `projectlocation_address_swisszipcode` | text | Schweizerische Postleitzahl, in der das Bauprojekt geplant ist. |
+| `projectlocation_address_town` | text | Ortschaft, in der das Bauprojekt geplant ist. |
+| `districtcadastre_relation_section` | text | Sektion des Grundbuchkreises |
+| `districtcadastre_relation_plot` | text | Die Parzellennummer ist einer Parzelle bzw. einem Stück Land eindeutig zugeordnet. |
+| `buildingcontractor_legalentity_selecttype` | text | Zeigt an, ob es sich bei der Bauherrschaft um eine Person (person) oder Firma (company) handelt. Falls es eine Person ist, wird dies nicht als OGD veröffentlicht. |
+| `buildingcontractor_nouid` | text | Zeigt an, ob die Firma mit der Bauherrschaft keine UID angegeben hat. |
+| `buildingcontractor_company_name` | text | Name der Firma mit der Bauherrschaft |
+| `buildingcontractor_company_uid` | text | UID der Firma mit der Bauherrschaft |
+| `buildingcontractor_company_legalform` | text | Rechtsform der Firma mit der Bauherrschaft |
+| `buildingcontractor_company_customaddress` | text | Adresse der Firma mit der Bauherrschaft |
+| `buildingcontractor_company_country_name_de` | text | Land der Firma mit der Bauherrschaft |
+| `delegation_selecttype` | text | Zeigt an, ob eine Vertretung der Bauherrschaft vorhanden ist |
+| `delegation_buildingcontractor_legalentity_selecttype` | text | Zeigt an, ob es sich bei der Vertretung der Bauherrschaft um eine Person (person) oder Firma (company) handelt. Falls es eine Person ist, wird dies nicht als OGD veröffentlicht. |
+| `delegation_buildingcontractor_nouid` | text | Zeigt an, ob die Vertretung der Bauherrschaft keine UID angegeben hat. |
+| `delegation_buildingcontractor_company_name` | text | Name der Vertretung der Bauherrschaft |
+| `delegation_buildingcontractor_company_uid` | text | UID der Vertretung der Bauherrschaft |
+| `delegation_buildingcontractor_company_legalform` | text | Rechtsform der Vertretung der Bauherrschaft |
+| `delegation_buildingcontractor_company_customaddress` | text | Adresse der Vertretung der Bauherrschaft |
+| `delegation_buildingcontractor_company_country_name_de` | text | Land der Vertretung der Bauherrschaft |
+| `projectframer_selecttype` | text | Besitzt der Projektverfasser auch die Bauherrschaft ("buildingContractor")? Wenn nicht, wird dies mit "other" gezeigt. |
+| `projectframer_legalentity_selecttype` | text | Zeigt an, ob es sich bei dem Projektverfasser um eine Person ("person") oder Firma ("company") handelt. Falls es eine Person ist, wird dies nicht als OGD veröffentlicht. |
+| `projectframer_nouid` | text | Zeigt an, ob die projektverfassende Firma keine UID angegeben hat. |
+| `projectframer_company_name` | text | Name der projektverfassenden Firma |
+| `projectframer_company_uid` | text | UID des Projektverfassers |
+| `projectframer_company_legalform` | text | Rechtsform der projektverfassenden Firma |
+| `projectframer_company_customaddress` | text | Adresse der projektverfassenden Firma |
+| `projectframer_company_country_name_de` | text | Land der projektverfassenden Firma |
+| `locationcirculationoffice` | text | Ort der Planauflage und Öffnungszeiten |
+| `entrydeadline` | date | Ende der Frist für die Einsicht in die Baupläne |
+| `id` | text | Zugehörige ID der Bauveröffentlichung im Kantonsblatt |
+| `url_kantonsblatt_ods` | text | — |
+| `geo_shape` | geo_shape | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
 # Load packages

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100073`
+- **Dataset_identifier** `100073`
 - **Title** `Coronavirus (COVID-19): Fallzahlen Basel-Stadt`
 - **Description** `<div><div>Anzahl Fälle der Coronavirus-Krankheit (COVID-19) in Basel-Stadt. Die Daten wurden zu Beginn der Pandemie durch Mitarbeiter von <span data-teams="true">Open Data Basel-Stadt </span>von Hand aus öffentlich zugänglichen offiziellen Quellen eingetippt. Später wurden die Daten aus den Bulletins des Gesundheitsdepartements Basel-Stadt automatisiert ausgelesen. Mittlerweile stammen die Angaben direkt von den medizinischen Diensten des Gesundheitsdepartements Basel-Stadt.</div><div><br></div><div>Die Quellenangabe der jeweiligen Zahlen sind direkt der Tabelle zu entnehmen. </div><div><br></div></div><div>Die offiziellen Daten aller Kantone und des Fürstentums Liechtenstein (FL) sind hier zu finden: </div><ul><li>Interaktives Dashboard der Zahlen aller Kantone: <a href="https://data.bs.ch/pages/covid-19-dashboard/">https://data.bs.ch/pages/covid-19-dashboard/</a></li><li>Alle Kantone und FL in einem File: <a href="https://github.com/openZH/covid_19/blob/master/COVID19_Fallzahlen_CH_total_v2.csv" target="_blank">https://github.com/openZH/covid_19/blob/master/COVID19_Fallzahlen_CH_total_v2.csv</a></li><li>Ein File pro Kanton (z.T. sind in den einzelnen Files zusätzliche Spalten vorhanden gegenüber dem gesamtschweizerischen File): <a href="https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_total_csv_v2" target="_blank">https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_total_csv_v2</a><a href="https://github.com/openZH/covid_19/tree/master/fallzahlen_kanton_total_csv_v2" target="_blank"></a></li></ul><p>Informationen zu den durchgeführten Tests auf täglicher Basis gemäss Bundesamt für Gesundheit (BAG) finden sich neu in diesem Datensatz: <a href="https://data.bs.ch/explore/dataset/100094/" target="_blank">https://data.bs.ch/explore/dataset/100094/</a></p><p>Daten zu Todesfällen von Personen mit SARS-CoV-2 mit Wohnsitz in Basel-Stadt sind in diesem Datensatz zu finden: <a href="https://data.bs.ch/explore/dataset/100076/" target="_blank">https://data.bs.ch/explore/dataset/100076/</a><a "="" href="https://data.bs.ch/explore/dataset/100076////" target="_blank"></a></p><p>Daten zu den 7- und 14-Tages Inzidenzen sowie den Fallzahlen pro Gemeinde (Basel, Riehen, Bettingen) sind in diesem Datensatz: <a href="https://data.bs.ch/explore/dataset/100108/" target="_blank">https://data.bs.ch/explore/dataset/100108/</a></p><p><b>Änderungsprotokoll:</b></p><ul><li>Ab dem 5.11.2020 wurden keine Angaben mehr zu positiv getesteten Personen mit Wohnsitz ausserhalb des Kantons Basel-Stadt gemacht. Dies, weil die Tests mittlerweile durch eine grössere Anzahl Laboratorien durchgeführt wurden und nicht mehr alle Resultate der ausserkantonalen und internationalen Fälle dem kantonsärztlichen Dienst Basel-Stadt gemeldet wurden.</li><li><span>Ab 18.6.2022 wurden am Samstag und Sonntag keine neuen Daten in diesen Datensatz publiziert. </span></li><li><span>Ab 1. Februar 2023 wurden die Daten jeweils am Dienstag und am Freitag aktualisiert.</span></li><li><span>Ab 4. April 2023 werden die Daten jeweils am Dienstag aktualisiert. Die Daten werden somit einmal wöchentlich aktualisiert.</span></li><li><span>Die Erhebung der Fallzahlen wurde per 5. Juli 2023 sistiert. Der Datensatz wird nicht mehr aktualisiert.</span> Aktualisierungsintervall von "DAILY" auf "NEVER" geändert.</li></ul><p><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,46 @@ def _(mo):
 - **Keywords** `['Coronavirus', 'Virus', 'COVID-19', 'Krankheit', 'Spital', 'Quarantäne', 'Todesfälle', 'Lungenentzündung', 'Pandemie', 'Corona']`
 - **Creator** `Open Data Basel-Stadt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Datenstand |
+| `abbreviation_canton_and_fl` | text | — |
+| `current_isolated` | int | Ab dem 1.4.22 gelten Personen bis zum 5. Tag nach dem Tag des positiven Tests als "aktive Fälle". Frühere Definition: Mit dem neuen Coronavirus infizierte Personen, welche isoliert sind |
+| `current_quarantined` | int | Personen, welche sich in Quarantäne befinden, weil sie in engem Kontakt zu einem Infizierten Fall waren |
+| `current_quarantined_riskareatravel` | int | Personen, welche sich aufgrund einer Einreise aus einem Gebiet mit erhöhtem Ansteckungsrisiko gemäss BAG in Quarantäne befinden |
+| `current_quarantined_total` | int | Total der Personen in Quarantäne. |
+| `ncumul_conf` | double | Anzahl in Basel-Stadt auf das neue Coronavirus positiv getestete Personen mit Wohnsitz in Basel-Stadt (kumuliert) |
+| `ncumul_confirmed_non_resident` | int | Anzahl in Basel-Stadt auf Coronavirus positiv getestete Personen mit Wohnsitz ausserhalb Basel-Stadt insgesamt (kumuliert) |
+| `ndiff_conf` | int | Neu gemeldete Fälle mit Wohnsitz in Basel-Stadt gegenüber der letzten Meldung (i.d.R. gegenüber dem Vortag) |
+| `ndiff_confirmed_non_resident` | int | Neu gemeldete Fälle mit Wohnsitz ausserhalb des Kantons Basel-Stadt gegenüber der letzten Meldung (i.d.R. gegenüber dem Vortag) |
+| `current_hosp` | int | In Basel-Stadt hospitalisierte Personen mit COVID-19 Erkrankung (inkl. Fälle auf Intensivstationen) |
+| `current_hosp_resident` | int | Anzahl zum aktuellen Zeitpunkt an COVID-19 erkrankte in Basel-Stadt hospitalisierte Personen mit Wohnsitz in Basel-Stadt (inkl. Fälle auf Intensivstationen) |
+| `current_hosp_non_resident` | int | Anzahl zum aktuellen Zeitpunkt an COVID-19 erkrankte in Basel-Stadt hospitalisierte Personen mit Wohnsitz ausserhalb Basel-Stadt (inkl. Fälle auf Intensivstationen) |
+| `new_hosp` | int | Seit letzter Meldung neu hinzugekommene COVID-19 Fälle im Spital |
+| `current_icu` | int | An COVID-19 Erkrankte in Intensivstationen Basel-Städtischer Spitäler |
+| `current_vent` | int | Anzahl aktuell intubierte COVID-19 Fälle in Spitälern Basel-Stadt |
+| `ncumul_released` | int | Anzahl genesene Personen mit Wohnsitz im Kanton Basel-Stadt insgesamt (kumuliert). Definition ab dem 1.4.22: Personen gelten ab dem 6. Tag nach positivem Testresultat als genesen. Ursprüngliche Definition: Als genesen gilt, wer 10 Tage nach einem positiven Covid-19-Test resp. 10 Tage nach den ersten Symptomen mindestens 48 Stunden symptomfrei war. |
+| `ndiff_released` | int | Neu gemeldete Genesene gegenüber der letzten Meldung (i.d.R. gegenüber dem Vortag) |
+| `ncumul_deceased` | int | Anzahl mit COVID-19 Erkrankung verstorbene Personen mit Wohnsitz in Basel-Stadt, kumuliert |
+| `ndiff_deceased` | int | Neu gemeldete Gestorbene gegenüber der letzten Meldung (i.d.R. gegenüber dem Vortag) |
+| `source` | text | Datenquelle(n) |
+| `date` | date | Datum der Datenveröffentlichung |
+| `time` | text | Zeit der Datenveröffentlichung |
+| `week` | int | Nummer der Kalenderwoche |
 
 
     ///

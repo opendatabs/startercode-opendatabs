@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,18 @@ Auto generated R starter code for data set 100114.
 - **Keywords** `['Parkplatz', 'Ladestationen', 'Luftqualität', 'Verkehrslärm']`
 - **Creator** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `was_wird_gemessen` | text | — |
+| `verantwortlich` | text | — |
+| `qrc_nr` | double | — |
+| `zu_den_messwerten` | text | — |
+| `foto` | text | — |
+| `geo_point` | geo_point_2d | — |
 
 
 # Load packages

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,30 @@ Auto generated R starter code for data set 100038.
 - **Keywords** `['Auto', 'Velo', 'Fussgänger', 'Lastwagen', 'LKW', 'Anhänger']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_zst` | text | — |
+| `name` | text | — |
+| `gemeinde` | text | — |
+| `klasse` | text | — |
+| `kombiniert` | text | — |
+| `art` | text | — |
+| `arme` | double | — |
+| `fahrstreif` | double | — |
+| `zweck` | text | — |
+| `typ` | text | — |
+| `strtyp` | text | — |
+| `eigentum` | text | — |
+| `betriebnah` | datetime | — |
+| `betriebzus` | text | — |
+| `link` | text | — |
+| `format` | text | — |
 
 
 # Load packages

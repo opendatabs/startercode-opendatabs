@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100090`
+- **Dataset_identifier** `100090`
 - **Title** `Standorte Mess-Stationen Smart Climate Schallpegelmessungen`
 - **Description** `Der Datensatz zeigt die Standorte der Mess-Stationen für den Datensatz <a href="https://data.bs.ch/explore/dataset/100087/" target="_blank">«Smart Climate Schallpegelmessungen»</a>.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Lärm', 'Lautstärke', 'Belästigung']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `station_id` | text | Name der Station |
+| `eui` | text | ID der Mess-Station |
+| `geo_point_2d` | geo_point_2d | Koordinaten |
+| `latitude` | double | — |
+| `longitude` | double | — |
 
 
     ///

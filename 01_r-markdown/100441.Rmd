@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,36 @@ Auto generated R starter code for data set 100441.
 - **Keywords** `['Ausländer', 'Männer', 'Frauen', 'Schweizer', 'PKS', 'Kriminalstatistik', 'Beschuldigte', 'Alter', 'Straftaten', 'Polizei']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/unterthema/sicherheit`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Jahr |
+| `gemeinde` | text | Gemeinde des Tatortes |
+| `gesetznummer` | double | Nummer des Gesetzes in der systematischen Sammlung des Bundesrechts |
+| `gesetz` | text | Titel des Gesetzes |
+| `gesetz_kurz` | text | Kurzbezeichnung des Gesetzes |
+| `sortierung_straftaten` | int | Interne Sortiernummer der Straftat |
+| `straftaten` | text | Bezeichnung der Deliktsgruppe bzw. des Tatbestands |
+| `anzahl_total` | int | Total der registrierten Straftaten |
+| `aufk` | int | Anzahl aufgeklärter Straftaten |
+| `anz_besch_maenner` | int | Anzahl männliche Beschuldigte |
+| `anz_besch_frauen` | int | Anzahl weibliche Beschuldigte |
+| `anz_besch_sex_na` | int | Anzahl beschuldigte Personen mit unbekanntem Geschlecht |
+| `anz_besch_ch` | int | Anzahl Beschuldigte Schweizer Staatsangehörigkeit |
+| `anz_besch_ausl` | int | Anzahl Beschuldigte ausländischer Staatsangehörigkeit |
+| `anz_besch_nat_na` | int | Anzahl beschuldigte Personen mit unbekannter Staatsangehörigkeit |
+| `anz_besch_0_17` | int | Anzahl Beschuldigte zwischen 0 und 17 Jahren |
+| `anz_besch_18_29` | int | Anzahl Beschuldigte zwischen 18 und 29 Jahren |
+| `anz_besch_30_39` | int | Anzahl Beschuldigte zwischen 30 und 39 Jahren |
+| `anz_besch_40_49` | int | Anzahl Beschuldigte zwischen 40 und 49 Jahren |
+| `anz_besch_50_59` | int | Anzahl Beschuldigte zwischen 50 und 59 Jahren |
+| `anz_besch_60_69` | int | Anzahl Beschuldigte zwischen 60 und 69 Jahren |
+| `anz_besch_ueber70` | int | Anzahl Beschuldigte über 70 Jahren |
+| `anz_besch_alter_na` | int | Anzahl beschuldigte Personen mit unbekanntem Alter |
+| `anz_besch_total` | int | Gesamtzahl der beschuldigten Personen |
 
 
 # Load packages

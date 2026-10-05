@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100198`
+- **Dataset_identifier** `100198`
 - **Title** `Ein- und Ausfahrten öffentlicher Parkhäuser Basel`
 - **Description** `<p>Der Datensatz zeigt die Anzahl Ein- und Ausfahrten pro Stunde in bzw. aus öffentlichen Parkhäusern Basel. Die Daten werden jährlich ergänzt. Aus technischen Gründen sind die Daten des Parkhauses City erst ab 2021 vorhanden. <br></p><p>Im Parkhaus St. Jakob werden manchmal bei Grossanlässen keine Ein- und Ausfahrten gezählt. Diese Metriken sind für dieses Parkhaus deshalb mit Vorsicht zu analysieren. <br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `['Parkieren', 'Parkhaus', 'Auto', 'Autos', 'Bewegungen', 'Einfahrt', 'Ausfahrt']`
 - **Creator** `Parkhäuser Basel-Stadt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Start des Messintervalls von 1 h |
+| `title` | text | Name des Parkhauses |
+| `timestamp_text` | text | Zeitstempel wie vom Quellsystem geliefert in lokaler Zeitzone. Falls leer, so wurde diese Zeile nachträglich hinzugefügt, um Lücken in der Zeitreihe zu vermeiden. |
+| `einfahrten` | int | Anzahl Einfahrten im Messintervall |
+| `ausfahrten` | int | Anzahl Ausfahrten im Messintervall |
 
 
     ///

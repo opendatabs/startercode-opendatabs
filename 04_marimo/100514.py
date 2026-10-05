@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100514`
+- **Dataset_identifier** `100514`
 - **Title** `Rückmeldungen Vernehmlassungen`
 - **Description** `<p>Aufgrund der überarbeiteten Verordnung über das Vernehmlassungsverfahren (<a href="https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/133.300" target="_blank">https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/133.300</a>) werden alle Stellungnahmen zur Vernehmlassung publiziert.</p><p>Rückmeldungen, die Daten über Personen freigeben würden werden teils oder gar nicht veröffentlicht um den Datenschutz zu gewähren.</p><p>Weitere Datensätze rundum Vernehmlassungen in Basel-Stadt finden Sie hier: <a href="https://data.bs.ch/explore/?refines=tags:vernehmlassungen" target="_blank">https://data.bs.ch/explore/?refines=tags:vernehmlassungen</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,38 @@ def _(mo):
 - **Keywords** `['Vernehmlassungen', 'Parteien', 'Partizipation', 'Mitwirken']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `vernehmlassung` | text | — |
+| `url_vernehmlassung` | text | — |
+| `typ` | text | — |
+| `bereich` | text | — |
+| `kapitel` | text | — |
+| `antrag_bemerkung` | text | — |
+| `begrundung` | text | — |
+| `anhange` | text | — |
+| `erfassungsdatum` | date | — |
+| `briefruckmeldung` | text | — |
+| `organisation` | text | — |
+| `teilnehmerkategorie` | text | — |
+| `teilnehmer_in` | text | — |
+| `plz` | text | — |
+| `ort` | text | — |
+| `location` | geo_point_2d | — |
 
 
     ///

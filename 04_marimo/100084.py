@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100084`
+- **Dataset_identifier** `100084`
 - **Title** `Standorte Mess-Stationen Smart Climate Feinstaubmessungen`
 - **Description** `<p>Standorte der Mess-Stationen für Feinstaub für den Datensatz «Smart Climate Feinstaubmessungen» <a href="https://data.bs.ch/explore/dataset/100081/" target="_blank">https://data.bs.ch/explore/dataset/100081/</a>.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Luftqualität', 'Feinstaub', 'PM25', 'PM2.5']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `name` | text | — |
+| `id` | text | — |
+| `titel` | text | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
     ///

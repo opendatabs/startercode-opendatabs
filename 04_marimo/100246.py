@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100246`
+- **Dataset_identifier** `100246`
 - **Title** `BachApp: Infos - Allgemein`
 - **Description** `Der Datensatz enthält allgemeine Infotexte und Links, welche in der BachApp publiziert werden.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,38 @@ def _(mo):
 - **Keywords** `['Informationen', 'Angebote']`
 - **Creator** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | int | ID |
+| `status` | text | Status |
+| `sichtbar_von` | date | Sichtbar ab |
+| `sichtbar_bis` | date | Sichtbar bis |
+| `titel` | text | Informationstext |
+| `untertitel` | text | Informationstext |
+| `text` | text | Ausführlicher Informationstext |
+| `image_top` | text | — |
+| `fischli_anrede` | text | — |
+| `fischli_kurztext` | text | — |
+| `fischli_onboarding` | text | — |
+| `titel_en` | text | — |
+| `untertitel_en` | text | — |
+| `text_en` | text | — |
+| `fischli_anrede_en` | text | — |
+| `fischli_kurztext_en` | text | — |
 
 
     ///

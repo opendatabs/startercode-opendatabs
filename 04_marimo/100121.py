@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100121`
+- **Dataset_identifier** `100121`
 - **Title** `Schülerprognose Basel`
 - **Description** `Das Statistische Amt erstellt kleinräumige Prognosen zu den Schülerzahlen in den öffentlichen Schulen der Stadt Basel. Die Schülerzahlen werden für die ersten 8 Schulstufen (Kindergarten und Primarschule), 25 Schulperimeter und 5 Schuljahre in die Zukunft prognostiziert. Die Perimeter dienen als Planungsgrundlage und nicht als effektive Einzugsgebiete. Die Prognosen werden im Auftrag des Erziehungsdepartements Basel-Stadt erstellt und jährlich aktualisiert. Die Prognosezahlen berücksichtigen keine Schülerinnen und Schüler, die aufgrund von künftigen Arealentwicklungen in die Schulen eintreten werden. Die Schülerinnen und Schüler mit dem Schutzstatus S werden in diesem Datensatz nicht ausgewiesen.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,30 @@ def _(mo):
 - **Keywords** `['Zeitreihe', 'Prognose', 'Bildung', 'Schule', 'Schüler']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `schuljahr` | text | Schuljahr August - Juli, Stichtag jeweils zu Schuljahresbeginn im September |
+| `perimeter` | text | Einteilung des Stadtgebiets in 15 Schulperimeter. Die Schülerinnen und Schüler werden nach ihrer Wohnadresse den Perimetern zugeordnet. |
+| `schulstufe` | int | Einteilung gemäss HarmoS-Schulstufen. Schulstufen 1 und 2 bezeichnen die beiden Jahre im Kindergarten, die Schulstufen 3-6 die umgangssprachlich als Primarschuljahre 1-6 bezeichneten Schulstufen. |
+| `sus` | int | Schülerinnen und Schüler in öffentlichen Schulen von Basel, die in einem der Perimeter in Basel wohnhaft sind. Prognosejahre erkennt man am beistehenden Prognoseintervall. In den Prognosen nicht berücksichtigt sind künftige Arealentwicklungen. |
+| `unteres_prognoseintervall` | text | Das Prognoseintervall beschreibt die geschätzte Bandbreite, in welcher die tatsächliche Schülerzahl mit einer Wahrscheinlichkeit von 95% zu liegen kommen sollte. Das untere Prognoseintervall bezeichnet die untere Grenze dieser Bandbreite. |
+| `oberes_prognoseintervall` | text | Das Prognoseintervall beschreibt die geschätzte Bandbreite, in welcher die tatsächliche Schülerzahl mit einer Wahrscheinlichkeit von 95% zu liegen kommen sollte. Das obere Prognoseintervall bezeichnet die obere Grenze dieser Bandbreite. |
+| `typ` | text | Ist-Wert oder Resultat der Prognose |
+| `perimeter_id` | int | — |
 
 
     ///

@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100379`
+- **Dataset_identifier** `100379`
 - **Title** `Kandidierende der Gerichtspräsidienwahlen seit 2024`
 - **Description** `<p>Dieser Datensatz enthält Informationen zu den Kandidaturen für alle Gerichtspräsidienwahlen seit 2024<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Mitbestimmung', 'Strafgericht', 'Gericht', 'Demokratie']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `titel` | text | Name der Wahl |
+| `datum` | date | Datum der Wahl |
+| `anzahl_sitze` | double | Anzahl Sitze, die zu vergeben sind. |
+| `listennr` | int | Listennummer |
+| `listenbezeichnung` | text | Listenbezeichnung |
+| `zeilennummer` | int | Kandidierendennummer |
+| `name` | text | Nachname der kandidierenden Person |
+| `vorname` | text | Vorname der kandidierenden Person |
+| `bisher` | text | — |
+| `geschlecht` | text | amtliches Geschlecht der kandidierenden Person |
+| `jahrgang` | text | Geburtsjahr der kandidierenden Person |
+| `zusatzliche_angaben` | text | Informationen zu der kandidierenden Person wie akademische(r) Titel, Beruf(e), Pronomen etc. |
 
 
     ///

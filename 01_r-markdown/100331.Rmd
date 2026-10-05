@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,30 @@ Auto generated R starter code for data set 100331.
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `column_1` | int | — |
+| `wahljahr` | text | — |
+| `wahlkreis` | text | — |
+| `wahlzettel_type` | text | Beschreibt, ob der Wahlzettel in physischer oder elektronischer Form abgegeben wurde. |
+| `listen_nr` | text | — |
+| `parteikurzbezeichnung` | text | — |
+| `parteibezeichnung` | text | — |
+| `kandidat_1` | text | Kandidierenden Nr. der ersten Stimme |
+| `kandidat_1_name` | text | Ganzer Name der ersten Stimme |
+| `kandidat_2` | text | Kandidierenden Nr. der zweiten Stimme (NULL bedeutet keine Stimme) |
+| `kandidat_2_name` | text | Ganzer Name der zweiten Stimme (NULL bedeutet keine Stimme) |
+| `kandidat_3` | text | Kandidierenden Nr. der dritten Stimme (NULL bedeutet keine Stimme) |
+| `kandidat_3_name` | text | Ganzer Name der dritten Stimme (NULL bedeutet keine Stimme) |
+| `kandidat_4` | text | Kandidierenden Nr. der vierten Stimme (NULL bedeutet keine Stimme) |
+| `kandidat_4_name` | text | Ganzer Name der vierten Stimme (NULL bedeutet keine Stimme) |
+| `wahlzettel_typ` | text | p = panaschiert; k = kumuliert |
+| `listenverbindungen` | text | — |
+| `unterlistenverbindungen` | text | — |
 
 
 # Load packages

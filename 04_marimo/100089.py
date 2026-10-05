@@ -54,20 +54,40 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100089`
+- **Dataset_identifier** `100089`
 - **Title** `Rhein Wasserstand, Pegel und Abfluss`
 - **Description** `<p>Dieser Datensatz zeigt den Wasserstand und die Abflussmenge des Rheins in Basel auf der Kleinbasler Seite auf Höhe des Birs-Zuflusses. Es liegen aktuelle Werte alle 5 Minuten vor. Die Messungen werden im Auftrag des Bundesamts für Umwelt durchgeführt (siehe <a href="https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289" target="_blank">https://www.hydrodaten.admin.ch/de/seen-und-fluesse/stationen-und-daten/2289</a>).</p>
 <p>Der Pegel wird berechnet als [Wasserstand] - 240 m ü. M., siehe <a href="https://port-of-switzerland.ch/hafenservice/pegel/" target="_blank">https://port-of-switzerland.ch/hafenservice/pegel</a>. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-06-29`
-- **Modified** `2026-10-04T21:55:07+00:00`
+- **Modified** `2026-10-05T11:55:08+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
 - **Temporal_coverage_start_date** `2020-06-21T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-03T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-04T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Rhein', 'Pegel', 'Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser', 'Tiefe']`
 - **Creator** `Bundesamt für Umwelt BAFU`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `timestamp` | datetime | Datum und Uhrzeit |
+| `abfluss` | double | Abfliessende Wassermenge in Kubikmetern pro Sekunde |
+| `pegelhoehe` | double | Pegelstand in cm über dem Pegelnullstand von 240 m ü. M. |
+| `pegel` | double | Pegelstand in Metern über Meer |
 
 
     ///

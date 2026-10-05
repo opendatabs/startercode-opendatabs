@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100541`
+- **Dataset_identifier** `100541`
 - **Title** `Verteilung des Haushaltseinkommens im Kanton Basel-Stadt (Gesamtkanton)`
 - **Description** `Der Datensatz zeigt Anzahl Haushalte nach Einkommensgruppen und Jahr für den Kanton Basel-Stadt. Das Haushaltseinkommen wird inklusive Sozialtransfer (Zum Nettoeinkommen aus der Steuerveranlagung werden die Unterstützungszahlungen aus Prämienverbilligungen, Familienmietzinsbeiträgen, Ergänzungsleistungen und Sozialhilfe addiert.) und exklusive Sozialtransfer (Es wird nur das Nettoeinkommen aus Erwerb, Renten, Pensionen, Erwerbsersatzleistungen sowie Miet- und Vermögenserträgen berücksichtigt.) ausgewiesen.<br><br>Weitere Informationen sowie interaktive Auswertungsmöglichkeiten finden Sie im Dashboard unter: <a href="https://statistik.bs.ch/haushaltseinkommen/">https://statistik.bs.ch/haushaltseinkommen/</a>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Gemeinden', 'Einkommen', 'Sozialhilfe', 'Haushalt', 'Wohnviertel', 'Soziale Sicherheit']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/haushaltseinkommen/`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `bin_order` | int | Einkommensgruppen Nummer |
+| `bin` | text | Einkommensgruppen in CHF |
+| `jahr` | text | Jahr |
+| `group` | text | Das Haushaltseinkommen wird inklusive Sozialtransfer (Zum Nettoeinkommen aus der Steuerveranlagung werden die Unterstützungszahlungen aus Prämienverbilligungen, Familienmietzinsbeiträgen, Ergänzungsleistungen und Sozialhilfe addiert.) und; exklusive Sozialtransfer (Es wird nur das Nettoeinkommen aus Erwerb, Renten, Pensionen, Erwerbsersatzleistungen sowie Miet- und Vermögenserträgen berücksichtigt.) |
+| `typ` | text | NEK: Nettoeinkommen, AeEK: Äquivalenzeinkommen |
+| `n` | int | Anzahl Haushalte in Einkommensgruppe |
+| `n_total` | int | Total Anzahl Haushalte |
+| `q05` | double | 5%-Perzentile des Einkommens in CHF |
+| `q25` | double | 25%-Perzentile des Einkommens in CHF |
+| `q5` | double | Median in CHF |
+| `q75` | double | 75%-Perzentile des Einkommens in CHF |
+| `q95` | double | 95%-Perzentile des Einkommens in CHF |
 
 
     ///

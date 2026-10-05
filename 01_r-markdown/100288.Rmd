@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -27,6 +27,20 @@ Der Grosse Rat beauftragt das Tiefbauamt mit dem Erreichen eines Indexes für di
 - **Keywords** `['Sauberkeit', 'Kehrricht', 'Abfall', 'Reinigung', 'Stadtreinigung', 'Strassennetz', 'Stadthygiene', 'Verschmutzung', 'Müll']`
 - **Creator** `Stadtreinigung`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datenstand` | date | Stand der Daten zu einem bestimmten Zeitpunkt |
+| `id` | text | Eindeutiger Identifikator |
+| `strasse` | text | Name des Strassenabschnitts |
+| `cci` | double | CCI steht für «Clean City Index» und ist der Sauberkeitsindex, der zwischen 0 (schmutzig) bis 5 (sauber) liegt. |
+| `anzahl_messungen` | int | Die Anzahl der Messungen umfasst die Anzahl der Durchfahrten des Kehrrichtlastwagens im jeweiligen Strassenabschnitt pro Monat. |
+| `letzte_messung` | datetime | Die letzte Messung des Sauberkeitsindexes des jeweiligen Strassenabschnitts. |
+| `geometry` | geo_shape | — |
+| `geo_point_2d` | geo_point_2d | — |
 
 
 # Load packages

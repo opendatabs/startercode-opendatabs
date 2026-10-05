@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100402`
+- **Dataset_identifier** `100402`
 - **Title** `Hochbauprojekte aus Verwaltungs- und Finanzvermögen`
 - **Description** `<p>Die Hochbauprojekte zeigen eine repräsentative Auswahl an Projektstandorten laufender und abgeschlossener Hochbauprojekte des Kantons Basel-Stadt. Die Projektstandorte sind mit Projektinformationen und teilweise auch Projektdokumentationen hinterlegt, welche mittels Link abgerufen werden können.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Hochbauprojekte', 'Projekte', 'Projektstandorte', 'Standorte']`
 - **Creator** `Städtebau & Architektur`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | Punktgeometrie des Hochbauprojektes. Diese wird von der zuständigen Stelle generiert, orientiert sich aber zumeist an den Gebäudeeingängen (der Vermessungsdaten). |
+| `geo_shape` | geo_shape | — |
+| `id` | int | Eindeutiger Identifikator der Hochbauprojekte |
+| `projektbezeichnung` | text | Nennt das Objekt (Bau) und was am Objekt gemacht wird. |
+| `fertigstellung` | int | Gibt das Jahr an, in welchem die Baumassnahmen abgeschlossen wurden. |
+| `adresse` | text | Strassenname und Hausnummer des jeweiligen Hochbauprojekts. |
+| `postleitzahl` | int | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `email` | text | E-Mail-Adresse der zuständigen kantonalen Fachstelle. |
+| `link` | text | Internetadresse des Kantons, welche auf das jeweilige Projekt verweist mit weiteren Informationen (Bild, Projektbeschrieb und Meilensteine). |
 
 
     ///

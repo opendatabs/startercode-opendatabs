@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100341`
+- **Dataset_identifier** `100341`
 - **Title** `Tagesheime und Kitas`
 - **Description** `<p>«Kitas», «Kindertagesstätten» oder «Tagesheime» sind Einrichtungen, in denen Kinder regelmässig tagsüber durch qualifizierte Fachpersonen und in geeigneten Räumlichkeiten betreut werden. «Tagesfamilien» sind Familien, in denen Kinder gegen Entgelt und regelmässig in geeigneten Räumlichkeiten betreut werden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,33 @@ def _(mo):
 - **Keywords** `['Betreuung', 'Kinder', 'Kindertagesstätten', 'Tagesfamilie', 'Familie', 'Tagesstruktur', 'Horte', 'Mittagstische']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktkoordinaten des Tagesheim- oder Kitastandorts. |
+| `geo_shape` | geo_shape | — |
+| `id_institutionsnummer` | int | Eindeutiger Identifikator der Tagesheime und Kitas. |
+| `name` | text | Bezeichnung des Standortes des Tagesheims und/oder Kita. |
+| `strasse` | text | Strassenname des Tagesheim/Kita |
+| `hausnummer` | text | Hausnummer der Einrichtung, gegebenenfalls mit alphanummerischem Zusatz (z.B. 27a) |
+| `postleitzahl` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Bezeichnung der Ortschaft. |
+| `telefon` | text | Telefonnummer des jeweiligen Tagesheims und/oder Kita. |
+| `homepage` | text | Internetadresse zu weiterführenden Informationen zum jeweiligen Tagesheim und/oder Kita. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

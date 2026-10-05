@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100398`
+- **Dataset_identifier** `100398`
 - **Title** `Grundwassernutzung`
 - **Description** `Dieser Datensatz enthält die Standorte von Grundwasserentnahme- und Rückgabestellen im Kanton Basel-Stadt. Die Daten zeigen, wo Grundwasser beispielsweise für thermische Nutzung oder als Brauchwasser verwendet wird.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,35 @@ def _(mo):
 - **Keywords** `['Wasser', 'Grundwasser', 'Grundwassernutzung', 'Brunnen', 'Umwelt']`
 - **Creator** `Amt für Umwelt und Energie`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | text | Identifikator des Standorts |
+| `nutzabsich` | text | Nutzungsabsicht des Standorts |
+| `gewart` | text | Gewässerart des Standorts |
+| `objekttyp` | text | — |
+| `katasternr` | text | Katasternummer aus dem Bohrkataster |
+| `foerdermet` | text | Fördermethode der Entnahme |
+| `zweck` | text | — |
+| `nutzzustan` | text | — |
+| `foerderkat` | text | Bewilligte Förderleistung (Kategorie) |
+| `anmerkung` | text | — |
+| `map_links` | text | Website with links to exact location on various maps (Google Maps, Apple Maps, etc.) |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
 
 
     ///

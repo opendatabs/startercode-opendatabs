@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,23 @@ Auto generated R starter code for data set 100026.
 - **Keywords** `['Begegnungsort', 'Erziehung', 'Familie', 'Treffpunkt', 'Versammlung', 'Raum', 'Anlass', 'Party', 'Fest', 'Niederschwellig']`
 - **Creator** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktkoordinaten |
+| `geo_shape` | geo_shape | — |
+| `id_quartierangebot` | int | Eindeutiger Identifikator des Quartiertreffpunkts. |
+| `name` | text | Bezeichnung des Standorts. |
+| `typ` | text | Verschiedene Arten von Quartierangeboten. |
+| `strasse` | text | Strasse und Hausnummer des Standorts. |
+| `postleitzahl` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Bezeichnung der Ortschaft. |
+| `telefon` | text | Telefonnummer für den Kontakt mit dem Quartiertreffpunkt. |
+| `link` | text | Link auf die Webseite des Quartiertreffpunkts. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
 # Load packages

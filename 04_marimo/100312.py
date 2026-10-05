@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100312`
+- **Dataset_identifier** `100312`
 - **Title** `Grosser Rat: Zuweisungen von Geschäften`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt Zuweisungen von Geschäften, die im Grossen Rat des Kantons Basel-Stadt behandelt werden.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,42 @@ def _(mo):
 - **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Legislative', 'Geschäft', 'Gremien']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `kurzname_an` | text | Kurzname des Gremiums, dem das Geschäft zugewiesen wurde |
+| `name_an` | text | Name des Gremiums, dem das Geschäft zugewiesen wurde |
+| `uni_nr_an` | text | Individuelle Identifikationsnummer des Gremiums, dem das Geschäft zugewiesen wurde, innerhalb der Datenbank des Grossen Rates |
+| `url_gremium_an` | text | Link zum Datensatz "Grosser Rat: Gremium". Gefiltert nach dem aktuellen Gremium, dem das Geschäft zugewiesen wurde. |
+| `erledigt` | date | Datum, an dem die zugewiesene Aufgabe erledigt wurde |
+| `status_zuw` | text | Status der Zuweisung (In Bearbeitung, Fertig, Abgeschlossen oder Abgebrochen). "Abgeschlossen" und "Fertig" unterscheiden sich nur darin, dass bei "Fertig" nur die zugewiesene Aufgabe abgeschlossen ist, aber noch nicht das ganze Geschäft. |
+| `termin` | date | Datum, an dem die Zuweisung abgeschlossen sein soll. |
+| `titel_zuw` | text | Titel der Zuweisung |
+| `bem` | text | Bemerkung zur Zuweisung |
+| `laufnr_ges` | text | Laufnummer des Geschäfts zur zugehörigen Zuweisung |
+| `signatur_ges` | text | Signatur des Geschäfts zur zugehörigen Zuweisung |
+| `status_ges` | text | Status des Geschäfts zur zugehörigen Zuweisung (In Bearbeitung oder Abgeschlossen) |
+| `titel_ges` | text | Titel des Geschäfts zur zugehörigen Zuweisung |
+| `ga_rr_gr` | text | Typ des Geschäfts zur zugehörigen Zuweisung |
+| `url_ges` | text | Link zum Geschäft auf der Webseite des Grossen Rates |
+| `url_geschaeft_ods` | text | Link zum Datensatz "Grosser Rat: Geschäfte". Gefiltert nach aktuellem Geschäft. |
+| `kurzname_von` | text | Kurzname des Gremiums, das das Geschäft zuweist |
+| `name_von` | text | Name des Gremiums, das das Geschäft zuweist |
+| `uni_nr_von` | text | Individuelle Identifikationsnummer des Gremiums, das das Geschäft zuweist, innerhalb der Datenbank des Grossen Rates |
+| `url_gremium_von` | text | Link zum Datensatz "Grosser Rat: Gremium". Gefiltert nach dem aktuellem Gremium, das das Geschäft zugewiesen hat. |
 
 
     ///

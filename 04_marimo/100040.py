@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100040`
+- **Dataset_identifier** `100040`
 - **Title** `Statistische Raumeinheiten: Blöcke`
 - **Description** `<p>Ein Block wird in der Regel von allen Seiten durch Strassen begrenzt. In einzelnen Fällen wird die Abgrenzung durch andere Merkmale vorgegeben (Bahnareale, Wald, Grünzone, Landwirtschaftszone etc.). Statistische Blöcke werden über eine dreistellige Block-Nr. referenziert.<br>Code: Besteht aus Wohnviertel-, Bezirks- und Blocknummerierung, z. B. Block 17.2.005</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,29 @@ def _(mo):
 - **Keywords** `['Wohnbezirk', 'Wohnblock', 'Wohnblockseite', 'Wohnviertel', 'Statistik', 'Einteilung']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
+| `blo_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `blo_label` | text | Nummerierung (Label) der statistischen Raumeinheit |
+| `wov_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `bez_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
 
 
     ///

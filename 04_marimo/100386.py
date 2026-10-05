@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100386`
+- **Dataset_identifier** `100386`
 - **Title** `Kandidierende der Regierungsratswahlen 20. Oktober 2024`
 - **Description** `<p style="font-family: sans-serif;">Für die Wahl der sieben Mitglieder des Regierungsrates des Regierungsrat vom 20. Oktober 2024 kandidieren zwölf Personen.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden des ersten Wahlgangs nach Geschlecht, Jahrgang und Beruf.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,31 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Ersatzwahlen', 'Demokratie', 'Teilhabe', 'Erster Wahlgang', 'Gesamterneuerungswahl', 'Mitbestimmung', 'Kandidatur', 'Regierung']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `listen_nr` | text | Nummer der Liste |
+| `listenbezeichnung` | text | Listenbezeichnung |
+| `bisher` | text | — |
+| `name_vorname` | text | Ganzer Name der kandidierenden Person |
+| `name` | text | Nachname der kandidierenden Person |
+| `vorname` | text | Vorname der kandidierenden Person |
+| `geschlecht` | text | amtliches Geschlecht der kandidierenden Person |
+| `jahrgang` | text | Jahr, in welchem die kandidierende Person geboren wurde |
+| `zusatz` | text | Informationen zu der kandidierenden Person wie akademische(r) Titel, Beruf(e), Pronomen etc. |
 
 
     ///

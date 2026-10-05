@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100394`
+- **Dataset_identifier** `100394`
 - **Title** `Kandidierende der Grossratswahlen nach Berufsgruppe seit 2020`
 - **Description** `<p style="">Dieser Datensatz zeigt die Kandidierenden der Grossratswahlen nach Berufsgruppe seit 2020<br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe', 'Gesamterneuerungswahl']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahljahr` | text | — |
+| `berufsgruppe` | text | Berufsgruppe |
+| `anzahl` | int | Anzahl Kandidierende in Berufsgruppe |
+| `anteil` | double | Anzahl Kandidierende in Berufsgruppe / Anzahl Kandidierende |
 
 
     ///

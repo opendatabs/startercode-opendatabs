@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100255`
+- **Dataset_identifier** `100255`
 - **Title** `BachApp: Am Fluss`
 - **Description** `<p>Der Datensatz enthält Informationstexte und FAQs, inkl. Details zur Kampagne #RHYLAX (<a href="https://www.bs.ch/pd/kantons-und-stadtentwicklung/stadtteile/vermittlung#rhylax-respekt-und-ruecksicht-am-rheinbord" target="_blank">https://www.bs.ch/pd/kantons-und-stadtentwicklung/stadtteile/vermittlung#rhylax-respekt-und-ruecksicht-am-rheinbord</a>) des Kantons, welche in der BachApp veröffentlicht werden. </p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,36 @@ def _(mo):
 - **Keywords** `['Fragen', 'Fluss']`
 - **Creator** `Kantons- und Stadtentwicklung`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id` | int | ID |
+| `status` | text | Status |
+| `sichtbar_von` | date | Sichtbar ab |
+| `sichtbar_bis` | date | Sichtbar bis |
+| `kategorie` | text | Art des Informationstext |
+| `titel_kurz` | text | Thema, das die Information betrifft |
+| `titel` | text | — |
+| `text` | text | Informationstext |
+| `icon` | text | — |
+| `image_top` | text | — |
+| `shape` | text | — |
+| `titel_kurz_en` | text | — |
+| `titel_en` | text | — |
+| `text_en` | text | — |
 
 
     ///

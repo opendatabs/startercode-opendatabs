@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100186`
+- **Dataset_identifier** `100186`
 - **Title** `Grosser Rat: Live-Abstimmungsergebnisse`
 - **Description** `<p>Dieser Datensatz zeigt die Resultate der Abstimmungen des Grossen Rates Basel-Stadt, einzeln für jedes Ratsmitglied und jede Abstimmung. An Sitzungstagen werden die Daten in Echtzeit aktualisiert. </p><p>Abstimmungen an Sitzungen, welche während der Coronavirus-Ausnahmesituation 2020/2021 im Kongresscenter Basel abgehalten wurden, sind nun auch in diesem Datensatz vorhanden. </p><p>Die Daten können auch als Website und PDF Datei hier eingesehen werden: </p><ul><li>Aktuelle Sitzung: <a href="https://grosserrat.bs.ch/ratsbetrieb/tagesordnung/abstimmungsergebnisse" target="_blank">https://grosserrat.bs.ch/ratsbetrieb/tagesordnung/abstimmungsergebnisse</a><a href="http://abstimmungen.grosserrat-basel.ch/index_aktuell.php" target="_blank"></a></li><li>Vergangene Sitzungen (Archiv): <a href="http://abstimmungen.grosserrat-basel.ch/index_archiv.php" target="_blank">http://abstimmungen.grosserrat-basel.ch/index_archiv.php</a><a href="http://abstimmungen.grosserrat-basel.ch/index_archiv.php" target="_blank"></a></li></ul><p>Bitte beachten Sie, dass für das offizielle Abstimmungsergebnis das jeweilige Sitzungsprotokoll des Grossen Rates massgeblich ist (elektronische Fassung: <a href="https://ratsprotokolle.grosserrat.bs.ch/shareparl/" target="_blank">https://ratsprotokolle.grosserrat.bs.ch/shareparl/</a>)</p><p>Änderungsprotokoll:<br>5. April 2024: Der Parlamentsdienst nutzt seit dem September 2023 ein neues Abstimmungssystem. Dies führt zu einigen Änderungen bei den Daten, die geliefert werden. Die Daten konnten mit folgenden Spalten ergänzt werden: Signatur Geschäft, Signatur Dokument, Erweiterte Abstimmungsnummer, Anrede der abstimmenden Person und Funktion der abstimmenden Person. Des Weiteren haben sich die Abstimmungstypen geändert.<br>Die Abstimmungstypen vor dem September 2023: Abstimmung, Schlussabstimmung, Antrag, offene Wahl, Rückweisung, Eventualabstimmung, Eintreten, Ordnungsantrag, ungültig<br>Die Abstimmungstypen nach dem September 2023: Anwesenheit, Ad Hoc einfaches Mehr, Ad Hoc 2/3 Mehr, Eventual Abstimmung, Schlussabstimmung, Quorum erfassen</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,54 @@ def _(mo):
 - **Keywords** `['Abstimmung', 'Parlament', 'Grosser Rat', 'Legislative', 'Geschäft', 'Grossrat', 'Grossrätin', 'Kalender']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | date | Datum |
+| `zeit` | text | Uhrzeit |
+| `traktandum` | int | Nummer des Traktandums, falls vorhanden, gemäss Tagesordnung (Traktandenliste) |
+| `subtraktandum` | int | Nummer des Subtraktandums, falls vorhanden, gemäss Tagesordnung (Traktandenliste) |
+| `geschaeft` | text | Titel des Geschäfts |
+| `signatur_ges` | text | Signatur des Geschäfts |
+| `url_ges` | text | Link zum Geschäft auf der Webseite des Grossen Rates |
+| `url_geschaeft_ods` | text | Link zum Datensatz "Grosser Rat: Geschäfte". Gefiltert nach dem Geschäft. |
+| `signatur_dok` | text | Signatur des Dokuments |
+| `abst_nr` | text | Laufende Nummerierung der Abstimmungen an einem Sitzungstag |
+| `typ` | text | Abstimmungstyp (ab September 2023 gibt es neue Typen) |
+| `anz_j` | int | Anzahl Grossratsmitglieder, welche mit "Ja" abgestimmt haben |
+| `anz_n` | int | Anzahl Grossratsmitglieder, welche mit "Nein" abgestimmt haben |
+| `anz_e` | int | Anzahl Grossratsmitglieder, welche sich der Stimme enthalten haben |
+| `anz_a` | int | Anzahl Grossratsmitglieder, welche bei der Abstimmung nicht anwesend waren |
+| `anz_p` | int | Anzahl Stimmen der Ratspräsidentin oder des Ratspräsidenten (= maximal 1) |
+| `sitz_nr` | int | Nummer des Sitzes des Grossratsmitglieds |
+| `mitglied_anrede` | text | Anrede des Grossratsmitglieds |
+| `mitglied_nachname` | text | Nachname des Grossratsmitglieds |
+| `mitglied_vorname` | text | Vorname des Grossratsmitglieds |
+| `mitglied_name` | text | Vor- und Nachname des Grossratsmitglieds |
+| `fraktion` | text | Fraktion des Grossratsmitglieds |
+| `mitglied_name_fraktion` | text | Name und Fraktionszugehörigkeit des Grossratsmitglieds |
+| `mitglied_funktion` | text | Funktion des Grossratsmitglieds (Mitglied, Präsident/in, Statthalter/in) |
+| `entscheid_mitglied` | text | Stimmverhalten des Grossratsmitglieds (Ja, Nein, Enthaltung, Abwesend, Präsidium) |
+| `gr_uni_nr` | text | Individuelle Identifikationsnummer des Grossratsmitglied innerhalb der Datenbank des Grossen Rates. |
+| `gr_url` | text | Link zum Grossratsmitglied auf der Webseite des Grossen Rates |
+| `gr_url_ods` | text | Link zum Datensatz "Grosser Rat: Ratsmitgliedschaften". Gefiltert nach Grossratsmitglied. |
+| `zeitstempel_text` | datetime | Datum und Uhrzeit |
+| `datenstand_text` | datetime | Datum und Uhrzeit des Datenexports |
+| `anr` | text | Besteht aus [Abstimmungsnummer]-[Datum]-[Uhrzeit] |
+| `url_abstimmung_dok` | text | Link zum Dokument der Abstimmung auf der Webseite des Grossen Rates |
 
 
     ///

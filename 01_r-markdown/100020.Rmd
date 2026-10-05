@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,23 @@ Auto generated R starter code for data set 100020.
 - **Keywords** `['Angebot', 'Bildung', 'Eltern', 'Förderung', 'Frühbereich', 'Kinder', 'Vorbereitung', 'Baby', 'Mutter', 'Vater', 'Krankheit', 'Gesundheit']`
 - **Creator** `Jugend, Familie und Sport`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | Punktgeometrie des Elternberatung Standort. |
+| `geo_shape` | geo_shape | — |
+| `id` | int | Eindeutiger Identifikator der Elternberatung. |
+| `name` | text | Bezeichnung des Standortes der jeweiligen Elternberatung. |
+| `adresse` | text | Strassenname und Hausnummer des jeweiligen Standortes der Elternberatung. |
+| `plz` | text | Numerischer Wert mit 4 Positionen gemäss offiziellem PLZ-Verzeichnis der Schweizerischen Post. |
+| `ort` | text | Offizielle Bezeichnung der Gemeinde |
+| `kanton` | text | Name des Kantons in dem der Standort der Elternberatung liegt. |
+| `telefon` | text | Telefonnummer für den Elternberatungs Standort. |
+| `homepage` | text | Internetadresse zur Homepage der Elternberatung. |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
 # Load packages

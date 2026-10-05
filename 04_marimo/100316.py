@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100316`
+- **Dataset_identifier** `100316`
 - **Title** `Kandidierende der Nationalratswahlen 22. Oktober 2023`
 - **Description** `<p style="font-family: sans-serif;">Für die Nationalratswahlen vom 22. Oktober 2023 kandidieren 122 Personen auf insgesamt 32 Listen für den Kanton Basel-Stadt. Insgesamt werden vier Sitze im Nationalrat gewählt.</p><p style="font-family: sans-serif; margin-bottom: 1em;">Dieser Datensatz zeigt die Kandidierenden aus dem Kanton Basel-Stadt nach Geschlecht, Jahrgang und Beruf sowie alle Listen und ihre Haupt- und Unterlistenverbindungen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,38 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Abstimmung', 'Demokratie', 'Teilhabe']`
 - **Creator** `Staatskanzlei`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `listen_nr` | text | Nummer der Liste |
+| `listenkurzbezeichnung` | text | Abkürzung der Liste |
+| `listenbezeichnung` | text | Listenbezeichnung |
+| `hlv_mit` | text | Hauptlistenverbindungen |
+| `hlv_link` | text | Mit dem Klick auf den Link wird der Datensatz nach allen Listen gefiltert, die in der gleichen Hauptlistenverbindung sind. |
+| `ulv_mit` | text | Unterlistenverbindungen |
+| `ulv_link` | text | Mit dem Klick auf den Link wird der Datensatz nach allen Listen gefiltert, die in der gleichen Unterlistenverbindung sind. |
+| `kand_nr` | text | Nummer der Kandidatur |
+| `bisher` | text | War die kandidierende Person bisher im Nationalrat? |
+| `name_vorname` | text | Ganzer Name der kandidierenden Person |
+| `name` | text | Nachname der kandidierenden Person |
+| `vorname` | text | Vorname der kandidierenden Person |
+| `geschlecht` | text | amtliches Geschlecht der kandidierenden Person |
+| `jahrgang` | text | Jahr, in welchem die kandidierende Person geboren wurde |
+| `kurzbeschrieb` | text | Informationen zu der kandidierenden Person wie akademische(r) Titel, Beruf(e), Pronomen etc. |
+| `wh_in` | text | — |
 
 
     ///

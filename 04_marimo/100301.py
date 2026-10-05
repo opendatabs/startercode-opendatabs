@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100301`
+- **Dataset_identifier** `100301`
 - **Title** `Resultate der Bürgergemeinderatswahlen 2023 auf Listenebene`
 - **Description** `<p>Der vorliegende Datensatz beinhaltet Resultate der Bürgergemeinderatswahlen Basel 2023 auf Listenebene. Weitere Informationen zu den Wahlen sind hier zu finden: <a href="https://bgbasel.ch/de/politische-organe/buergergemeinderat/wahlen2023.html" target="_blank">https://bgbasel.ch/de/politische-organe/buergergemeinderat/wahlen2023.html</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,57 @@ def _(mo):
 - **Keywords** `['Wahlen', 'Bürgergemeinderat']`
 - **Creator** `Bürgergemeinde der Stadt Basel`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wahlbezeichnung` | text | Titel der Wahl |
+| `amtsdauer` | text | Anzahl Jahre, auf welche die Mitglieder gewählt werden |
+| `wahltermin` | date | Datum der Wahl |
+| `anzahl_sitze` | int | Anzahl Sitze, die für einen Wahlkreis zur Verfügung stehen |
+| `wahlkreis_nr` | int | Nummer des Wahlkreises |
+| `wahlkreis_code` | int | Code des Wahlkreises |
+| `wahlkreisbezeichnung` | text | Name des Wahlkreises |
+| `stimmberechtigte_manner` | int | Anzahl in einem Wahlkreis stimmberechtigter Männer |
+| `stimmberechtigte_frauen` | int | Anzahl in einem Wahlkreis stimmberechtigter Frauen |
+| `stimmberechtigte` | int | Anzahl Stimmberechtigter total in einem Wahlkreis |
+| `stimmberechtigte_auslandschweizer` | int | Anzahl stimmberechtigter Auslandschweizer |
+| `wahlzettel` | int | Anzahl Wahlzettel |
+| `briefliche_stimmabgaben` | int | Anzahl brieflich eingelegter Wahlzettel |
+| `ungultige_wahlzettel` | int | Anzahl ungültiger Wahlzettel |
+| `leere_wahlzettel` | int | Anzahl leer eingelegter Wahlzettel |
+| `unveranderte_wahlzettel` | int | Anzahl unveränderter Wahlzettel |
+| `veranderte_wahlzettel_mit_bezeichnung` | int | Anzahl veränderter Wahlzettel mit Listenbezeichnung (leere Linien zählen als Parteistimmen) |
+| `veranderte_wahlzettel_ohne_bezeichnung` | int | Anzahl veränderter Wahlzettel ohne Listenbezeichnung (leere Linien werden nicht gezählt) |
+| `leere_stimmen` | int | Anzahl leerer Stimmen |
+| `partei_id` | int | ID der Partei |
+| `parteikurzbezeichnung` | text | Parteikurzbezeichnung |
+| `parteibezeichnung` | text | Name der Partei |
+| `anzahl_sitze_liste` | int | Anzahl Sitze einer Liste in einem Wahlkreis |
+| `unveranderte_wahlzettel_liste` | int | Anzahl unveränderte Wahlzettel einer Liste in einem Wahlkreis |
+| `veranderte_wahlzettel_liste` | int | Anzahl veränderte Wahlzettel einer Liste in einem Wahlkreis |
+| `kandidatenstimmen_unveranderte_wahlzettel` | int | Anzahl Stimmen aller Kandidatinnen und Kandidaten einer Liste aus unveränderten Wahlzetteln |
+| `zusatzstimmen_unveranderte_wahlzettel` | int | Anzahl Zusatzstimmen für alle Kandidatinnen und Kandidaten einer Liste aus unveränderten Wahlzetteln |
+| `kandidatenstimmen_veranderte_wahlzettel` | int | Anzahl Stimmen für alle Kandidatinnen und Kandidaten einer Liste aus veränderten Wahlzetteln |
+| `zusatzstimmen_veranderte_wahlzettel` | text | Anzahl Zusatzstimmen für alle Kandidatinnen und Kandidaten einer Liste aus veränderten Wahlzetteln |
+| `ungestempelte_wahlzettel` | int | Anzahl ungestempelter Wahlzettel |
+| `listen_nr` | text | Listen-Nr |
+| `kandidatenstimmen` | int | Anzahl Stimmen total für alle Kandidatinnen und Kandidaten einer Liste |
+| `zusatzstimmen` | text | Anzahl Zusatzstimmen total für alle Kandidatinnen und Kandidaten einer Liste |
+| `parteistimmen` | int | Anzahl Stimmen total für einer Liste |
+| `anteil_an_summe_in` | double | Prozentsatz des Anteils an der Summe der Stimmen für eine Liste |
 
 
     ///

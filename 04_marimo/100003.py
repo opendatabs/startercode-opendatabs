@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100003`
+- **Dataset_identifier** `100003`
 - **Title** `Basler Index der Konsumentenpreise`
 - **Description** `Entwicklung des Basler Index der Konsumentenpreise BIK (Basis Dezember 2025 = 100) nach Hauptgruppe seit 1939.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,21 @@ def _(mo):
 - **Keywords** `['Preise', 'Teuerung', 'Index', 'Warenkorb', 'Konsum']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/unterthema/9#Preise`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+_No field information available._
 
 
     ///

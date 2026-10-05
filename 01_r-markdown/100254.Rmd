@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -17,14 +17,72 @@ Auto generated R starter code for data set 100254.
 - **Description** `<p>Tagesdaten der NBCN-Station (Swiss National Basic Climatological Network) Basel-Binningen der MeteoSchweiz. Komplette, <a href="https://www.meteoschweiz.admin.ch/klima/klimawandel/entwicklung-temperatur-niederschlag-sonnenschein/homogene-messreihen-ab-1864/homogenisierung-von-klima-messreihen.html" target="_blank">nicht homogenisierte</a>  Datenreihe der wichtigsten Tageswerte seit Messbeginn.</p><p> Methodischer Hinweis:<br>Die Berechnung des Tagesmittels der Lufttemperatur erfolgte je nach historischer Zeitperiode unterschiedlich. <br>Bis 1980 wurden die Temperaturwerte nur dreimal täglich erfasst, der Mittelwert basiert entsprechend auf diesen drei Ablesungen. Ab 1981 liegen Stundenmittel zugrunde und ab 2018 10min-Werte. Das tägliche Minimum und Maximum der Lufttemperatur wurde bis 1980 anhand von Minimum- bzw. Maximum-Thermometern erfasst.</p><p>Hinweis 20. Februar 2026:<br>Die Daten wurden mit neuen Spalten mit verschiedenen Messwerten zum Wetter angereichert. Die alten Spaltennamen bestehen weiterhin. Die Daten werden neu aus dieser Quelle bezogen: https://www.meteoschweiz.admin.ch/service-und-publikationen/applikationen/ext/daten-ohne-programmierkenntnisse-herunterladen.html#lang=de&amp;mdt=normal&amp;sid=BAS </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2023-02-10`
-- **Modified** `2026-10-04T11:42:12+00:00`
+- **Modified** `2026-10-05T11:42:10+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1863-12-31T23:30:14+00:00`
-- **Temporal_coverage_end_date** `2026-10-01T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-02T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Niederschlag', 'Strahlung', 'Druck', 'Luftdruck', 'Sonne', 'Klimatologie', 'Klima', 'Temperatur', 'Lufttemperatur', 'Sonnenschein', 'Sonnenscheindauer', 'Wetter', 'Luftfeuchtigkeit', 'Atmosphäre']`
 - **Creator** `MeteoSchweiz`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | — |
+| `jahr` | text | — |
+| `gre000d0` | int | Tagesmittel |
+| `hto000d0` | int | Morgenmessung von 6 UTC |
+| `nto000d0` | double | Tagesmittel |
+| `prestad0` | double | Tagesmittel auf Stationshöhe (QFE) |
+| `rre150d0` | double | Tagessumme 6 UTC - 6 UTC Folgetag |
+| `sre000d0` | int | Tagessumme |
+| `tre200d0` | double | 2 m über Boden; Die Berechnung erfolgte je nach historischer Zeitperiode unterschiedlich - weitere Hinweise sind im Informationstext zu finden. |
+| `tre200dn` | double | 2 m über Boden; Die Berechnung erfolgte je nach historischer Zeitperiode unterschiedlich - weitere Hinweise sind im Informationstext zu finden. |
+| `tre200dx` | double | 2 m über Boden; Die Berechnung erfolgte je nach historischer Zeitperiode unterschiedlich - weitere Hinweise sind im Informationstext zu finden. |
+| `ure200d0` | double | Tagesmittel, 2 m über Boden |
+| `tre005d0` | double | 5 cm über Gras |
+| `tre005dn` | double | 5 cm über Gras |
+| `tre005dx` | double | 5 cm über Gras |
+| `pva200d0` | double | Tagesmittel, 2 m über Boden |
+| `pp0qffd0` | double | Tagesmittel, reduziert auf Meeresniveau (QFF) |
+| `ppz850d0` | double | Tagesmittel, gpm = Gallonen pro Minute |
+| `ppz700d0` | double | Tagesmittel, gpm = Gallonen pro Minute |
+| `pp0qnhd0` | double | Tagesmittel, reduziert auf Meeresniveau mit Standardatmosphäre (QNH) |
+| `fkl010d0` | double | Tagesmittel in m/s |
+| `fkl010d1` | double | Tagesmaximum in m/s |
+| `fu3010d0` | double | Tagesmittel in km/h |
+| `fu3010d1` | double | Tagesmaximum in km/h |
+| `fkl010d3` | double | Tagesmaximum in m/s |
+| `fu3010d3` | double | Tagesmaximum in km/h |
+| `wcc006d0` | int | Tageswert |
+| `rka150d0` | double | Tagessumme 0 UTC - 0 UTC |
+| `htoautd0` | double | Morgenmessung von 6 UTC |
+| `oli000d0` | int | Tagesmittel |
+| `olo000d0` | int | Tagesmittel |
+| `osr000d0` | int | Tagesmittel |
+| `ods000d0` | int | Tagesmittel |
+| `sremaxdv` | int | relativ zur absolut möglichen Tagessumme |
+| `erefaod0` | double | Tagessumme |
+| `xcd000d0` | double | CDD: Cooling Degree Day, nach USA |
+| `dkl010d0` | int | Tagesmittel |
+| `xno000d0` | double | SIA: Heizgradtage |
+| `xno012d0` | double | — |
+| `rreetsd0` | double | Tagessumme, Wasserbilanz, R-ETS |
+| `tso005d0` | double | Tagesmittel |
+| `tso010d0` | double | Tagesmittel |
+| `tso020d0` | double | Tagesmittel |
+| `hns000d0` | int | Tagessumme 6 UTC - 6 UTC Folgetag |
+| `w1p012d0` | boolean | — |
+| `w2p001d0` | boolean | — |
+| `w2p002d0` | boolean | — |
+| `w3p002d0` | boolean | — |
+| `w5p002d0` | boolean | — |
+| `est000d0` | boolean | — |
+| `nto002d0` | boolean | Bewölkungsmittel kleiner 20 % |
+| `nto008d0` | boolean | Bewölkungsmittel grösser 80 % |
 
 
 # Load packages

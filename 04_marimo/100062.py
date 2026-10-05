@@ -53,12 +53,12 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100062`
+- **Dataset_identifier** `100062`
 - **Title** `Wohnbevölkerung nach Staatsangehörigkeit und Block`
 - **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Block. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-03-12`
-- **Modified** `2026-10-03T23:03:31+00:00`
+- **Modified** `2026-10-04T23:03:34+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1997-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`
@@ -66,6 +66,40 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `block` | text | — |
+| `blo_label` | text | Nummerierung (Label) der statistischen Raumeinheit |
+| `bez_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `bez_name` | text | Name des Bezirks |
+| `wov_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `wov_name` | text | Name des Wohnviertels |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
+| `geo_point_2d` | geo_point_2d | — |
+| `jahr` | date | — |
+| `anteil_al` | double | Anteil Ausländer an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). |
+| `anteil_bs` | double | Anteil Kantonsbürger an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. |
+| `anteil_bsanch` | double | Anteil Kantonsbürger an der schweizerischen Bevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. |
+| `anteil_ch` | double | Anteil Schweizer an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. |
+| `anzahl_al` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. |
+| `anzahl_bs` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. |
+| `anzahl_ch` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. |
+| `gesbev_f` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. |
 
 
     ///

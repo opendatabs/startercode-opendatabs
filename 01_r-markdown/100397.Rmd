@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -20,7 +20,7 @@ Auto generated R starter code for data set 100397.
 </p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-12-13`
-- **Modified** `2026-10-04T03:00:21+00:00`
+- **Modified** `2026-10-05T03:00:29+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2024-09-27T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2032-08-07T22:00:00+00:00`
@@ -28,6 +28,17 @@ Auto generated R starter code for data set 100397.
 - **Keywords** `['Schule', 'Lernen', 'Schüler', 'Lehrer']`
 - **Creator** `Generalsekretariat`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `year` | date | Jahr, in dem der Ferienzeitraum oder schulfreie Tag liegt. Dieses Attribut gibt den allgemeinen Zeitrahmen des Eintrags an. |
+| `name` | text | Name des Ferienzeitraums oder des schulfreien Tages. Der Name beschreibt die Art des schulfreien Tages (z. B. Sommerferien oder Basler Fasnacht). |
+| `start_date` | date | Datum, an dem der Ferienzeitraum oder schulfreie Tag beginnt. |
+| `end_date` | date | Datum, an dem der Ferienzeitraum oder schulfreie Tag endet. Bei eintägigen Ereignissen ist das Startdatum identisch mit dem Enddatum. |
+| `name_short` | text | Für die 5 Schulferien ist dies ein Kurzname (z.B. Sommer), für alle anderen Einträge der Name. Wird gebraucht für die Tabellen auf bs.ch. |
 
 
 # Load packages

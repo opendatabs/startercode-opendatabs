@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,17 @@ Auto generated R starter code for data set 100075.
 - **Keywords** `['Tram', 'Bus', 'Haltestelle', 'Einsteiger', 'Fahrgäste', 'Passagier']`
 - **Creator** `Basler Verkehrs-Betriebe`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `startdatum_kalenderwoche_monat` | date | Das Attribut 'Startdatum Kalenderwoche/Monat' gibt den Anfang des Zeitraums an, für den die Fahrgastzahlen erfasst wurden, entweder den ersten Tag der Woche oder den ersten Tag des Monats entsprechend der Granularität. |
+| `fahrgaste_einsteiger_innen` | double | — |
+| `kalenderwoche` | int | Kalenderwoche |
+| `granularitat` | text | Das Attribut 'Granularität' bestimmt, ob die Fahrgastdaten auf wöchentlicher oder monatlicher Basis erfasst wurden, um die zeitliche Detailgenauigkeit der Daten zu definieren. |
+| `datum_der_monatswerte` | date | Datum der Monatswerte |
 
 
 # Load packages

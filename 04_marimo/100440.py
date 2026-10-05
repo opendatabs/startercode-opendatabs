@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100440`
+- **Dataset_identifier** `100440`
 - **Title** `Velostadtplan: Fussgängerzone`
 - **Description** `<p>Der Datensatz stellt die signalisierten Fussgängerzonen dar. In diesen darf das Velo nur geschoben werden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['Fahrrad', 'Velo', 'Veloroutennetz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | 2D-Flächengeometrie des Bereichs der Fussgängerzone. |
+| `name` | text | Name der Fussgängerzone. |
 
 
     ///

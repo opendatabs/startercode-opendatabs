@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100244`
+- **Dataset_identifier** `100244`
 - **Title** `Gefahrenstufen für Hochwasser`
 - **Description** `<p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'><span style='font-family: "Frutiger Neue Bold", Arial, sans-serif; font-size: 15.4px;'>Entsprechend den Bestimmungen der Alarmierungsverordnung verwendet das BAFU für die Warnung vor Hochwasser eine fünfstufige Gefahrenskala. Die Gefahrenstufen geben Auskunft über die Intensität des Ereignisses, die möglichen Auswirkungen und Verhaltensempfehlungen.</span><br></p><p style='margin-bottom: 11px; font-size: 1.1em; line-height: 1.5; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'>Die Schwellenwerte, die die Gefahrenstufen abgrenzen, werden ausgehend vom vorhandenen Wissen über das Verhalten des jeweiligen Fliessgewässers festgelegt (Pegel, ab dem das Gewässer über die Ufer tritt, ab dem erste Schäden eintreten usw.). Diese Schwellenwerte entsprechen in etwa der Jährlichkeit von Hochwasserereignissen, also einer Wiederkehrperiode von durchschnittlich 2, 10, 30 oder 100 Jahren.</p><ul style='line-height: 1.5; margin: 1.5em 0px 0px; padding: 0px 0px 0px 0.4em; list-style-type: square; color: rgb(69, 69, 69); font-family: "Frutiger Neue Regular", Arial, sans-serif;'><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 1 </span>entspricht ungefähr einer Abflussmenge, die unter dem Wert liegt, der im Durchschnitt einmal in 2 Jahren erreicht wird.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 2 </span>entspricht ungefähr einer Abflussmenge, die durchschnittlich einmal innerhalb von 2 bis 10 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 3 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 10 bis 30 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 4 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt einmal innerhalb von 30 bis 100 Jahren auftritt.</li><li style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;">Die <span style='font-family: "Frutiger Neue Bold", Arial, sans-serif;'>Gefahrenstufe 5 </span>entspricht ungefähr einer Abflussmenge, die im Durchschnitt höchstens einmal in 100 Jahren auftritt.</li></ul><p style="font-size: 1.1em; line-height: 1.5; margin-left: 0.8em;"><br></p><p style="line-height: 1.5; margin-left: 0.8em;"><span style="font-size: 15.4px;">Für weitere Informationen siehe </span><a href="https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser" target="_blank">https://www.hydrodaten.admin.ch/de/die-5-gefahrenstufen-fuer-hochwasser</a><span style="font-size: 15.4px;"> </span><br></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Rhein', 'Birs', 'Wiese', 'Pegel', 'Wasserstand', 'Abflussmenge', 'Strömung', 'Wasser']`
 - **Creator** `Bundesamt für Umwelt BAFU`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `station_id` | text | — |
+| `station_name` | text | — |
+| `gefahrenstufe_1` | text | Gefahrenstufe 1 (m3/s) |
+| `gefahrenstufe_2` | text | Gefahrenstufe 2 (m3/s) |
+| `gefahrenstufe_3` | text | Gefahrenstufe 3 (m3/s) |
+| `gefahrenstufe_4` | text | Gefahrenstufe 4 (m3/s) |
+| `gefahrenstufe_5` | text | Gefahrenstufe 5 (m3/s) |
+| `wl1` | int | Obergrenze der Gefahrenstufe 1 |
+| `wl2` | int | Obergrenze der Gefahrenstufe 2 |
+| `wl3` | int | Obergrenze der Gefahrenstufe 3 |
+| `wl4` | int | Obergrenze der Gefahrenstufe 4 |
+| `link` | text | — |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,20 @@ Auto generated R starter code for data set 100126.
 - **Keywords** `['Nationalität', 'Gemeinden', 'Bevölkerungsbestand', 'Geschlecht', 'Entwicklung', 'Einwohnerzahl', 'Bevölkerungsstruktur', 'Staatsangehörigkeit']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `datum` | text | Das genaue Datum der Datenerhebung. |
+| `gemeinde` | text | Name der politischen Gemeinde, in der sich das Wohnviertel befindet. |
+| `geschlecht` | text | M=Männlich, W=Weiblich |
+| `staatsangehoerigkeit` | text | Die Staatsangehörigkeit der erfassten Personen. |
+| `anzahl` | int | Anzahl Personen |
+| `jahr` | text | Das Jahr, in dem die Bevölkerungsdaten erfasst wurden. |
+| `wohnviertel_id` | text | Eindeutige Kennung zur Identifikation eines Wohnviertels im Kanton Basel-Stadt. |
+| `wohnviertel_name` | text | Name des Wohnviertels im Kanton Basel-Stadt. |
 
 
 # Load packages

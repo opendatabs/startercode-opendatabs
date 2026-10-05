@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,24 @@ Auto generated R starter code for data set 100314.
 - **Keywords** `['Grosser Rat', 'Parlament', 'Legislative', 'Abstimmung', 'Geschäft', 'Regierungsrat']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `beschlnr` | text | Nummer des Beschlusses des Vorgangs |
+| `nummer` | text | Nummer des Vorgangs |
+| `vermerk` | text | Vermerk zum Vorgang |
+| `siz_nr` | text | Nummer der Sitzung, an der der Vorgang bearbeitet wurde |
+| `siz_datum` | date | Datum der Sitzung, an der der Vorgang behandelt wurde |
+| `laufnr_ges` | text | Laufnummer des Geschäfts zum zugehörigen Vorgang |
+| `signatur_ges` | text | Signatur des Geschäfts zum zugehörigen Vorgang |
+| `status_ges` | text | Status des Geschäfts zum zugehörigen Vorgang (In Bearbeitung oder Abgeschlossen) |
+| `titel_ges` | text | Titel des Geschäfts zum zugehörigen Vorgang |
+| `ga_rr_gr` | text | Typ des Geschäfts zum zugehörigen Vorgang |
+| `url_ges` | text | Link zum Geschäft auf der Webseite des Grossen Rates |
+| `url_geschaeft_ods` | text | Link zum Datensatz "Grosser Rat: Geschäfte". Gefiltert nach aktuellem Geschäft. |
 
 
 # Load packages

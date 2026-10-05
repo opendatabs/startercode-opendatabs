@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100426`
+- **Dataset_identifier** `100426`
 - **Title** `Velostadtplan: Eignung`
 - **Description** `<p>Der Datensatz beschreibt, wie gut sich einzelne Strassenabschnitte zum Velofahren eignen. Die Eignung kann je nach Infrastruktur auf demselben Strassenabschnitt zwischen den beiden Fahrtrichtungen variieren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,25 @@ def _(mo):
 - **Keywords** `['Fahrrad', 'Velo', 'Veloroutennetz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | 2D-Liniengeometrie. Es handelt sich hierbei um Linien, welche mit einem Versatz nach links und rechts von den Strassenachsen der Mobilität abgeleitet wurden. Dies ermöglicht eine unterschiedliche Darstellung auf demselben Segment in beide Fahrtrichtungen. |
+| `klassifikation` | text | Einordnung des Eignungsgrades eines Strassenabschnitts für Velofahrende. |
 
 
     ///

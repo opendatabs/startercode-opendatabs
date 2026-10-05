@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100305`
+- **Dataset_identifier** `100305`
 - **Title** `Tigermückenbekämpfungsgebiet`
 - **Description** `<p>Die kantonale Strategie zur Bekämpfung der Tigermücke beruht auf den vier Pfeilern «Überwachung» (Monitoring), «Prävention», «Bekämpfung» und «Koordination». Das kantonale Laboratorium koordiniert mit betroffenen kantonalen Dienststellen und den Gemeinden die Massnahmen im öffentlichen Bereich. Dazu gehört die Überwachung und die Bekämpfung im öffentlichen Raum. Der Kanton sensibilisiert zudem die Öffentlichkeit und stellt umfangreiches Informationsmaterial und ein biologisches Bekämpfungsmittel der Bevölkerung kostenlos zur Verfügung. In der Bekämpfungszone besteht eine Pflicht Präventions-/Bekämpfungsmassnahmen durchzuführen. Im privaten Bereich sind die Privaten für die Umsetzung der Massnahmen zuständig.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Kantonales Laboratorium`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächengeometrie des Gebiets.&#x20; |
+| `id` | text | Unique Identifier eines Gebiets.&#x20; |
+| `webseite_link` | text | Link auf die Webseite des Kantonslabor.&#x20; |
+| `merkblatt_link` | text | Link auf das Merkblatt des Kantonslabor zur Tigermückenbekämpfung.&#x20; |
 
 
     ///

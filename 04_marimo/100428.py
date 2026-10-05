@@ -58,7 +58,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100428`
+- **Dataset_identifier** `100428`
 - **Title** `Geteilte Mikromobilität nach Bezirk, Wochentagesabschnitt und Monat`
 - **Description** `<p>Der Datensatz zeigt die Verteilung von Fahrzeugen der Mikromobilitätsanbieter in Basel-Stadt, gegliedert nach Bezirk, Tagesabschnitten von drei Stunden jedes Wochentags und Monats. </p>
 <p>Die Daten berücksichtigen Merkmale wie Fahrzeugtyp, Bauweise, Antriebsart und Reichweite des Fahrzeugs bei vollem Akku.</p>
@@ -68,7 +68,7 @@ die alle 10 Minuten aktualisiert werden. </p><p>Für die Bezirke wird folgender
 <p>Eine Übersicht der Datensätze zur geteilten Mikromobilität findet man unter folgendem Link: <a href="https://data.bs.ch/explore/?refine.tags=mikromobilitaet" target="_blank">https://data.bs.ch/explore/?refine.tags=mikromobilitaet</a> </p><p style="font-family: sans-serif;"><span style="font-weight: bolder;">Hinweis:</span></p><p style="font-family: sans-serif;">Die Daten enthalten eine Lücke zwischen dem 2. und 22. April 2025, da es einen Unterbruch im Extrahieren der Daten gab.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-12`
-- **Modified** `2026-10-04T04:04:17+00:00`
+- **Modified** `2026-10-05T04:04:08+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2026-07-31T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-09-29T22:00:00+00:00`
@@ -76,6 +76,40 @@ die alle 10 Minuten aktualisiert werden. </p><p>Für die Bezirke wird folgender
 - **Keywords** `['Trottinett', 'Scooter', 'Velo', 'Sharing', 'Shared', 'E-Mobility', 'Mobility', 'Veloverleih', 'Verkehr']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | Monat |
+| `weekday` | int | Wochentag (0=Montag, 1=Dienstag, …, 6=Sonntag) |
+| `timerange_start` | text | Start der Zeitspanne |
+| `timerange_end` | text | Ende der Zeitspanne |
+| `gemeinde_na` | text | Name der Gemeinde |
+| `wov_id` | text | Eindeutiger Identifikater des Wohnviertels |
+| `wov_name` | text | Name des Wohnviertels |
+| `bez_id` | text | Eindeutiger Identifikator des Bezirks |
+| `bez_name` | text | Name des Bezirks |
+| `xs_provider_name` | text | Dienstleister, der die Mikromobilitätslösung zur Verfügung stellt |
+| `xs_vehicle_type_name` | text | Typ des angebotenen Fahrzeugs |
+| `xs_form_factor` | text | Bauweise oder das Layout des Fahrzeugs |
+| `xs_propulsion_type` | text | Art des Antriebs; "human" bedeutet manuelle Antriebskraft |
+| `xs_max_range_meters` | int | Reichweite des Fahrzeugs bei vollem Akku |
+| `num_measures` | int | Anzahl Messungen an diesem Tag; maximal 144 |
+| `mean` | double | Durchschnittliche Anzahl an Fahrzeugen, die an diesem Tag in diesem Bezirk verfügbar waren |
+| `min` | double | Geringste Anzahl an Fahrzeugen, die an diesem Tag in diesem Bezirk verfügbar waren |
+| `max` | double | Höchste Anzahl an Fahrzeugen, die an diesem Tag in diesem Bezirk verfügbar waren |
 
 
     ///

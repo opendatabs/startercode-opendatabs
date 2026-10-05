@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100063`
+- **Dataset_identifier** `100063`
 - **Title** `Haltestellen des öffentlichen Verkehrs`
 - **Description** `Der Datensatz zeigt die Haltestellen des öffentlichen Verkehrs im Kanton Basel-Stadt sowie teilweise in der trinationalen Agglomeration. Es wird nach Transportunternehmen, Art und Typ der Haltestelle unterschieden.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,36 @@ def _(mo):
 - **Keywords** `['Tram', 'Bus', 'Zug', 'Haltestelle', 'Baustelle', 'Umleitung', 'ÖV']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `hst_nr` | text | Eindeutiger Identifikator der Haltestellen nach BAV |
+| `name` | text | Haltestellenname nach BAV |
+| `angezname` | text | Angezeigter Name der Haltestelle |
+| `tu_nr` | text | Nummer des Transportunternehmens nach BAV |
+| `tu` | text | Name des Transportunternehmens |
+| `gde_nr` | int | Gemeindenummer nach BFS |
+| `gde` | text | Gemeinde |
+| `kt` | text | Gebiet. Wertebereich: Aargau (AG), Basel-Landschaft (BL), Basel-Stadt (BS), Deutschland (D), Frankreich (F), Jura (JU), Solothurn (SO). |
+| `hoehe` | int | Höhe in m ü. M. (Angabe nach BAV) |
+| `hstart` | text | Art der Haltestelle |
+| `art` | text | Typ der Haltestelle |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
     ///

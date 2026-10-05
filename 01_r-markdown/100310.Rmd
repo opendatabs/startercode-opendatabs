@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,20 @@ Auto generated R starter code for data set 100310.
 - **Keywords** `['Grosser Rat', 'Gremien', 'Parlament', 'Legislative']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `ist_aktuelles_gremium` | text | Aktives durch den Grossen Rat gewähltes Gremium |
+| `kurzname` | text | Kurzname des Gremiums |
+| `name` | text | Name des Gremiums |
+| `gremientyp` | text | Typ des Gremiums (Kommission, Fraktion, Parlament) |
+| `uni_nr` | text | Individuelle Identifikationsnummer des Gremiums innerhalb der Datenbank des Grossen Rates. |
+| `url_mitgliedschaften` | text | Link zum Datensatz "Grosser Rat: Mitgliedschaften in Gremien". Gefiltert nach aktuellem Gremium. |
+| `url_urheber` | text | Link zum Datensatz "Grosser Rat: Geschäfte". Gefiltert nach Geschäften, bei denen das aktuelle Gremium als Urheber gilt. |
+| `url_zugew_geschaefte` | text | Link zum Datensatz "Grosser Rat: Zuweisungen". Gefiltert nach Zuweisungen, die an das aktuelle Gremium gemacht wurden. |
 
 
 # Load packages

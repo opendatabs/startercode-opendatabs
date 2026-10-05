@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100017`
+- **Dataset_identifier** `100017`
 - **Title** `Gemeinde`
 - **Description** `<p>Die Gemeindegrenzen sind Bestandteil der Informationsebene Hoheitsgrenzen der amtlichen Vermessung und bilden die Gemeindegrenzen inklusive Hoheitsgrenzpunkte des Kantons Basel-Stadt ab. Der Kanton Basel-Stadt beinhaltet die Gemeinden Basel, Bettingen und Riehen.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,27 @@ def _(mo):
 - **Keywords** `None`
 - **Creator** `Grundbuch- und Vermessungsamt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Die Fläche der Gemeinde.; Die Gemeindegrenze liegt vollständig vor. |
+| `id` | int | Eindeutiger Indentifikator |
+| `gemeinde_id` | int | Die Gemeindenummer BFS ist eine vom schweizerischen Bundesamt für Statistik erstellte, verwaltete und veröffentlichte Nummer des Gemeindeverzeichnis der Schweiz.; Durch Zuordnung der BFS-Gemeindenummer werden Gebäude, Bauprojekte und Strassen mit einer politischen Gemeinde verknüpft. Diese Zuordnung ist u.a. notwendig, um Parzellennummern und amtliche Gebäudenummern eindeutig identifizieren zu können. Die BFS-Gemeindenummer dient zudem als Schlüsselmerkmal zum Gemeindeverzeichnis und zum Strassenverzeichnis. Änderungen in der Gemeindestruktur (Gemeindefusionen und -trennungen) führen dazu, dass die BFS-Gemeindenummer eines Gebäudes ändert. Die BFS-Gemeindenummer wird aus dem Amtlichen Gemeindeverzeichnis entnommen. |
+| `gemeindename` | text | Offizielle Bezeichnung der Gemeinde |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,28 @@ Auto generated R starter code for data set 100250.
 - **Keywords** `['Durchgangsstrassen', 'Erschliessungsstrasse', 'Europastrasse', 'Feldweg', 'Gasse', 'Geschwindigkeit', 'Hauptstrasse', 'Hierarchie', 'HLS', 'Hochleistungsstrasse', 'HSS', 'HVS', 'Kantonsstrassen', 'Mobilität', 'Mobilitätsnetz', 'Nationalstrasse', 'Netz', 'Parkanlage', 'Promenade', 'QSS', 'Quartiersammelstrasse', 'Strassennetzhierarchie', 'Temporegime', 'Verkehrsorientierte', 'Waldweg', 'Weg', 'Strassennetz', 'Wegnetz']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_strasse_weg` | int | Eindeutiger Identifikator der Strasse |
+| `strassennummer` | int | Strassennummer |
+| `strassenname` | text | Strassenname |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
+| `strassennetzhierarchie_code` | text | Abkürzung der Strassennetzhierarchie |
+| `strassennetzhierarchie_text` | text | Strassennetzhierarchie |
+| `strassenkategorie` | text | verkehrsorientierte oder siedlungsorientierte Strasssen |
+| `wegkategorie` | text | Wegkategorie |
+| `geschwindigkeit` | int | permanent signalisierte Geschwindigkeit (Höchstgeschwindigkeit; ohne temporäre Signalisation durch Baustellen oder ähnliches) |
+| `regime` | text | permanent signalisiertes Temporegime (mit Höchstgeschwindigkeitsangabe) |
+| `strassenlaenge` | double | Gesamtlänge der Strasse |
+| `strassenabschnittslaenge` | double | Länge des Geometriesegments einer Strasse |
+| `zulassung_velo` | boolean | Angabe ob Velo zugelassen ist |
+| `eigentuemer` | text | Eigentümer der Strasse |
 
 
 # Load packages

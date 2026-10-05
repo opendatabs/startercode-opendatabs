@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,26 @@ Auto generated R starter code for data set 100544.
 - **Keywords** `['Gemeinden', 'Einkommen', 'Sozialhilfe', 'Haushalt', 'Wohnviertel', 'Soziale Sicherheit']`
 - **Creator** `Statistisches Amt`
 - **Reference** `https://statistik.bs.ch/haushaltseinkommen/`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `bin_order` | int | Einkommensgruppen Nummer |
+| `bin` | text | Einkommensgruppen in CHF |
+| `jahr` | text | Jahr |
+| `group` | text | Das Haushaltseinkommen wird inklusive Sozialtransfer (Zum Nettoeinkommen aus der Steuerveranlagung werden die Unterstützungszahlungen aus Prämienverbilligungen, Familienmietzinsbeiträgen, Ergänzungsleistungen und Sozialhilfe addiert.) und; exklusive Sozia |
+| `altergruppennr` | int | Altersgruppen Nummer |
+| `altergruppen` | text | Die Zuteilung der Altersgruppen erfolgt durch die älteste Person im Haushalt. |
+| `typ` | text | NEK: Nettoeinkommen, AeEK: Äquivalenzeinkommen |
+| `n` | text | Anzahl Haushalte in Einkommensgruppe |
+| `n_total` | int | Total Anzahl Haushalte |
+| `q05` | double | 5%-Perzentile des Einkommens in CHF |
+| `q25` | double | 25%-Perzentile des Einkommens in CHF |
+| `q5` | double | Median in CHF |
+| `q75` | double | 75%-Perzentile des Einkommens in CHF |
+| `q95` | double | 95%-Perzentile des Einkommens in CHF |
 
 
 # Load packages

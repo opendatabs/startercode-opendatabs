@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100124`
+- **Dataset_identifier** `100124`
 - **Title** `Perimeter der Schülerprognosen Basel-Stadt`
 - **Description** `Die Karte zeigt Schulperimeter im Kanton Basel-Stadt. Die Perimeter werden zu Planungszwecken vom Erziehungsdepartement Basel-Stadt und von der Gemeinde Riehen verwendet. Insbesondere dienen sie als räumliche Grundlage für die kleinräumigen Schülerprognosen, die im Auftrag des Erziehungsdepartements Basel-Stadt und der Gemeinde Riehen erstellt werden.<br><br><b>Hinweis:</b><br>Die Perimeter entsprechen dem Stand der Prognose vor dem Schuljahr 2024/2025 und sind nicht mehr aktuell. Der Datensatz bleibt aus Gründen der Transparenz weiterhin verfügbar. Eine Aktualisierung wird geprüft.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,26 @@ def _(mo):
 - **Keywords** `['Gemeinden', 'Geodaten', 'Polygondaten', 'Bildung', 'Schule', 'Schüler']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `nummer` | int | Laufnummer der Perimeter |
+| `zonen` | text | Räumliche Einheiten, die zu Planungszwecken vom Erziehungsdepartement Basel-Stadt und von der Gemeinde Riehen verwendet werden. Die Perimeter dienen als Planungsgrundlage und nicht als effektive Einzugsgebiete. |
 
 
     ///

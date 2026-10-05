@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100311`
+- **Dataset_identifier** `100311`
 - **Title** `Grosser Rat: Geschäfte`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz bietet eine umfassende Übersicht über Geschäfte, die im Grossen Rat des Kantons Basel-Stadt behandelt werden.</p><p style="font-family: sans-serif;">Die Daten können auch auf der Webseite des Grossen Rates eingesehen werden:<br><a href="https://grosserrat.bs.ch" target="_blank">https://grosserrat.bs.ch</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,52 @@ def _(mo):
 - **Keywords** `['Regierungsrat', 'Grosser Rat', 'Parlament', 'Parlamentarische Vorstösse', 'Legislative', 'Geschäft', 'Abstimmung']`
 - **Creator** `Parlamentsdienst des Grossen Rates`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `beginn_ges` | date | Datum, an dem des Geschäft zum ersten mal traktandiert ist. |
+| `ende_ges` | date | Abschlussdatum des Geschäfts |
+| `laufnr_ges` | text | Laufnummer des Geschäfts |
+| `signatur_ges` | text | Signatur des Geschäfts |
+| `status_ges` | text | Status des Geschäfts (In Bearbeitung oder Abgeschlossen) |
+| `titel_ges` | text | Titel des Geschäfts |
+| `departement_ges` | text | Falls der Urheber des Geschäfts der Regierungsrat ist, wird erfasst, welches Departement das Geschäft erfasst hat. |
+| `ga_rr_gr` | text | Typ des Geschäfts |
+| `url_ges` | text | Link zum Geschäft auf der Webseite des Grossen Rates |
+| `url_zuweisungen` | text | Link zum Datensatz "Grosser Rat: Zuweisungen". Gefiltert nach aktuellem Geschäft. |
+| `url_dokumente` | text | Link zum Datensatz "Grosser Rat: Dokumente". Gefiltert nach aktuellem Geschäft. |
+| `url_vorgaenge` | text | Link zum Datensatz "Grosser Rat: Vorgänge von Geschäften". Gefiltert nach aktuellem Geschäft. |
+| `anrede_urheber` | text | Wenn Urheber eine Person ist, dann wird hier die Anrede nach amtlichen Geschlecht festgehalten. |
+| `gremientyp_urheber` | text | Wenn Urheber ein Gremium ist, dann wird hier der Typ des Gremiums festgehalten (Kommission oder Regierungsrat). |
+| `name_urheber` | text | Wenn Urheber eine Person ist, dann wird hier der Nachname der Person festgehalten. Ansonsten der Name des Gremiums. |
+| `vorname_urheber` | text | Wenn Urheber eine Person ist, dann wird hier der Vorname der Person festgehalten. Ansonsten der Kurzname des Gremiums. |
+| `name_vorname_urheber` | text | Wenn Urheber eine Person ist, dann wird hier der Ganze Name der Person festgehalten. |
+| `partei_kname_urheber` | text | Wenn Urheber eine Person und noch aktuell Grossratsmitglied ist, dann wird hier die Abkürzung der Parteizugehörigkeit festgehalten. |
+| `url_urheber` | text | Wenn Urheber eine Person ist, dann wird hier der Link zum Grossratsmitglied auf der Webseite des Grossen Rates festgehalten. |
+| `nr_urheber` | text | Individuelle Identifikationsnummer des Urhebers innerhalb der Datenbank des Grossen Rates. |
+| `url_urheber_ratsmitgl` | text | Link zum Datensatz "Grosser Rat: Ratsmitgliedschaften". Gefiltert nach dem aktuellen Urheber. |
+| `anrede_miturheber` | text | Wenn Miturheber eine Person ist, dann wird hier die Anrede nach amtlichen Geschlecht festgehalten. |
+| `gremientyp_miturheber` | text | Wenn Miturheber ein Gremium ist, dann wird hier der Typ des Gremiums festgehalten (Kommission oder Regierungsrat). |
+| `name_miturheber` | text | Wenn Miturheber eine Person ist, dann wird hier der Nachname der Person festgehalten. Ansonsten der Name des Gremiums. |
+| `vorname_miturheber` | text | Wenn Miturheber eine Person ist, dann wird hier der Vorname der Person festgehalten. Ansonsten der Kurzname des Gremiums. |
+| `name_vorname_miturheber` | text | Wenn Miturheber eine Person ist, dann wird hier der Ganze Name der Person festgehalten. |
+| `partei_kname_miturheber` | text | Wenn Miturheber eine Person und noch aktuell Grossratsmitglied ist, dann wird hier die Abkürzung der Parteizugehörigkeit festgehalten. |
+| `url_miturheber` | text | Wenn Urheber eine Person ist, dann wird hier der Link zum Grossratsmitglied auf der Webseite des Grossen Rates festgehalten. |
+| `nr_miturheber` | text | Individuelle Identifikationsnummer des Miturhebers innerhalb der Datenbank des Grossen Rates. |
+| `url_miturheber_ratsmitgl` | text | Link zum Datensatz "Grosser Rat: Ratsmitgliedschaften". Gefiltert nach dem aktuellen Miturheber. |
 
 
     ///

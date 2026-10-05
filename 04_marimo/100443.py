@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100443`
+- **Dataset_identifier** `100443`
 - **Title** `FAQ zur KI-Richtlinie`
 - **Description** `<div>Im Online-FAQ (<a href="https://www.bs.ch/schwerpunkte/daten/databs/schwerpunkte/kuenstliche-intelligenz/ki-faq" target="_blank">https://www.bs.ch/schwerpunkte/daten/databs/schwerpunkte/kuenstliche-intelligenz/ki-faq</a>) - befüllt durch diesen Datensatz - des DCC Data Competence Center  finden Sie eine hilfreiche und informative Auflistung der häufigsten Fragen und Antworten im Zusammenhang mit der Nutzung von künstlicher Intelligenz in der Verwaltung.</div><div>Die Richtlinie von Online-Tools der künstlichen Intelligenz (KI-Nutzung) in der Verwaltung (KI-Richtlinie) regelt den Umgang mit online verfügbaren, kantonsexternen Instrumenten der künstlichen Intelligenz und dient unter anderem den Mitarbeitenden der kantonalen Verwaltung im Arbeitsalltag.</div>`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,34 @@ def _(mo):
 - **Keywords** `['Künstliche Intelligenz', 'Artificial Intelligence', 'AI', 'Richtlinien', 'öffentliche Verwaltung', 'LLM', 'KI-Agenten', 'KI-Anwendung', 'Datenschutz', 'Datensicherheit']`
 - **Creator** `Statistisches Amt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `order` | double | — |
+| `frage` | text | — |
+| `antwort` | text | — |
+| `sprache` | text | — |
+| `verantwortung` | text | — |
+| `kontakt` | text | — |
+| `link_anzeigetext` | text | — |
+| `zuletzt_aktualisiert` | datetime | — |
+| `thema` | text | — |
+| `keywords` | text | — |
+| `link` | text | — |
+| `antwort_html` | text | — |
 
 
     ///

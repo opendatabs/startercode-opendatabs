@@ -53,7 +53,7 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100029`
+- **Dataset_identifier** `100029`
 - **Title** `Schulstandorte (Gemeinde Basel)`
 - **Description** `Die Karte zeigt die Schulstandorte (Kindergärten, Primar-, Sekundarschule, Gymnasium, Zentrum für Brückenangebote, Allgemeine Gewerbeschule, Fachmaturitätsschule, Spezialangebote sowie Tagesstrukturen, Sportplätze, Turnhallen ausserhalb von Schulstandorten und Schwimmhallen) der Gemeinde Basel.`
 - **Contact_name** `Open Data Basel-Stadt`
@@ -66,6 +66,29 @@ def _(mo):
 - **Keywords** `['Schule', 'Lernen', 'Schüler', 'Schülerinnen', 'Lehrer', 'Lehrerinnen']`
 - **Creator** `Zentrale Dienste`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `sc_schulstandort` | text | Bezeichnung des Schulstandorts |
+| `sc_schultyp` | text | Art des Schulhauses |
+| `sc_adresse` | text | Adresse des Schulhauses |
+| `mapbs_sc_link` | text | Internetadresse des Schulhauses |
+| `map_links` | text | — |
 
 
     ///

@@ -53,19 +53,88 @@ def _(mo):
         r"""
     /// details | Metadata
 
-    - **Dataset_identifier** `100057`
+- **Dataset_identifier** `100057`
 - **Title** `OGD Datensätze`
 - **Description** `Metadaten zu den im vorliegenden Datenportal publizierten OGD Datensätzen.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2026-10-04T21:03:11+00:00`
+- **Modified** `2026-10-05T11:03:11+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceNotRequired`
-- **Temporal_coverage_start_date** `1097-08-21T23:25:52+00:00`
+- **Temporal_coverage_start_date** `1097-08-20T23:25:52+00:00`
 - **Temporal_coverage_end_date** `5025-04-28T22:00:00+00:00`
 - **Themes** `['Verwaltung']`
 - **Keywords** `['Datensatz', 'OGD', 'Metadaten']`
 - **Creator** `Open Data Basel-Stadt`
 - **Reference** `None`
+
+
+    ///
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    /// details | Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `dataset_identifier` | text | Eindeutiger Identifikator des Datensatzes |
+| `federated_dataset` | text | Verbundener/Föderierter Datensatz. Ist der Datensatz von einem anderen Huwise-Datensatz abgeleitet? |
+| `title` | text | Datensatz-Titel |
+| `description` | text | Datensatz-Beschreibung in HTML |
+| `themes` | text | Themen werden (mehrere möglich) gewählt zwischen "Gesundheit", "Kultur, Medien, Informationsgesellschaft, Sport", "Bildung, Wissenschaft", "Raum und Umwelt", "Mobilität und Verkehr", "Arbeit, Erwerb", "Volkswirtschaft", "Verwaltung", "Kriminalität, Strafrecht", "Bau- und Wohnungswesen", "Energie", "Soziale Sicherheit", "Bevölkerung", "Finanzen", "Geographie", "Gesetzgebung", "Handel", "Industrie, Dienstleistungen", "Land- und Forstwirtschaft", "Öffentliche Ordnung und Sicherheit", "Politik", "Preise", "Statistische Grundlagen", "Tourismus" und "Gebäude". |
+| `keywords` | text | Schlüsselwörter sind weitere Themen und Wörter, die den Datensatz auffindbarer machen. |
+| `license` | text | Lizenz unter der der Datensatz öffentlich gemacht wird. |
+| `language` | text | verfügbare Sprachen |
+| `timezone` | text | Zeitzone, unter welcher die Datumsfelder des Datensatzes laufen. |
+| `modified` | datetime | Letzte Änderung des Datensatzes. Es kann pro Datensatz eingestellt werden, ob sich dieses Feld an das Feld "Data processed" oder "Metadata processed" angleicht. Das Feld kann auch zusätzlich manuell eingestellt werden. |
+| `data_processed` | datetime | Letzte Änderung der Daten. Dieses Feld ändert sich, sobald der Zeitstempel der Daten sich ändert. |
+| `metadata_processed` | datetime | Letzte Änderung der Metadaten. Dieses Feld ändert sich, sobald mindestens ein Metadatenfeld geändert wird. |
+| `reference` | text | URL der Datenquelle |
+| `attributions` | text | Zuschreibungen. Quelle der Daten, die aus rechtlichen Gründen angegeben werden müssen |
+| `created` | date | Erstellungsdatum der Ressource. |
+| `issued` | date | Datum der formellen Ausgabe (z. B. Veröffentlichung) der Verteilung. |
+| `creator` | text | Die für die Erstellung der Ressource verantwortliche Einheit. |
+| `contributor` | text | Ein Beitragender, der für Beiträge zur Ressource verantwortlich ist. |
+| `contact_name` | text | Relevante Kontaktinformationen für die katalogisierte Ressource. |
+| `contact_email` | text | Relevante Kontakt-E-Mail-Informationen für die katalogisierte Ressource. |
+| `accrual_periodicity` | text | Die Häufigkeit, mit der der Datensatz veröffentlicht wird. Wir empfehlen, einen der aufgeführten Werte zu verwenden. |
+| `spatial` | text | Der geografische Bereich, der vom Datensatz abgedeckt wird. |
+| `temporal` | text | Der Zeitraum, den der Datensatz abdeckt. |
+| `granularity` | text | Der Detaillierungsgrad der Daten. Diese Eigenschaft ist veraltet. |
+| `data_quality` | text | Die Datenqualität. Diese Eigenschaft ist veraltet. |
+| `publisher_type` | text | The entity type responsible for making the item available. (http://purl.org/adms/publishertype/1.0) |
+| `conforms_to` | text | Ein etablierter Standard, dem die beschriebene Ressource entspricht. |
+| `temporal_coverage_start_date` | datetime | Das temporale Startdatum des Datensatzes. |
+| `temporal_coverage_end_date` | datetime | Das zeitliche Enddatum des Datensatzes. |
+| `rights` | text | Informationen darüber, wer auf die Ressource zugreifen kann, oder ein Hinweis auf ihren Sicherheitsstatus. Informationen über Lizenzen und Rechte KÖNNEN für die Ressource bereitgestellt werden. |
+| `rml_mapping` | text | Die RDF Mapping Language (RML) ist eine Mapping-Sprache, die definiert wurde, um benutzerdefinierte Mapping-Regeln von heterogenen Datenstrukturen und Serialisierungen zum RDF-Datenmodell [RDF-CONCEPTS] auszudrücken. |
+| `publizierende_organisation` | text | Publizierende Organisation. Im Fall von Basel-Stadt meist das übergeordnete Departement des Herausgebers. |
+| `geodaten_modellbeschreibung` | text | — |
+| `tags` | text | Tags um die Datensätze gruppieren zu können. |
+| `number_of_records` | int | Anzahl Dateneinträge |
+| `size_of_records_in_the_dataset_in_bytes` | int | Grösse des Datensatzes in Bytes. 1 Byte = 8 Bit. |
+| `reuse_count` | int | Anzahl Weiterverwendungen, die beim Datensatz registriert wurden. |
+| `api_call_count` | int | Anzahl Aufrufe der API (Programmierschnittstelle) |
+| `download_count` | int | Die Gesamtzahl der Downloads |
+| `attachments_download_count` | int | Die Gesamtzahl der Downloads eines Anhangs aus dem Datensatz |
+| `file_fields_download_count` | int | Die Gesamtzahl der kumulierten Downloads von Dateien (die in einem Feld gespeichert sind) |
+| `popularity_score` | double | Der Beliebtheitswert ist das Ergebnis einer Berechnung, die die Anzahl der Downloads, Wiederverwendungen und API-Aufrufe eines Datensatzes berücksichtigt. Je höher der Wert, desto häufiger wird der Datensatz verwendet. Sie können diese Datensätze nach der kumulativen Anzahl der Downloads, API-Aufrufe oder Wiederverwendungen sortieren, indem Sie auf „Mehr anzeigen“ klicken. |
+| `visibility_domain_or_restricted` | text | Sichtbarkeit |
+| `creator_1` | text | Person oder Organisation, die die Daten publiziert. Der Dateneigner i.e. Herausgeber. |
+| `published` | text | Ist der Datensatz veröffentlicht? |
+| `publishing_properties` | text | Eigenschaften zur Veröffentlichung |
+| `update_frequency` | text | Aktualisierungshäufigkeit |
+| `domain0` | text | Domäne |
+| `license_1` | text | Nutzungsbedingungen. Terms of Use. Achtung! Nicht das gleiche wie Lizenz. |
+| `access_rights` | text | Zugriffsbedingungen |
+| `relation` | text | Relation. URL zur Datenquelle und weiteren nützlichen Links |
+| `url_dataset` | text | URL zum Datensatz |
+| `creator_category` | text | — |
 
 
     ///

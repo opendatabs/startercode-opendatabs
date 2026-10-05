@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-04"
+date: "2026-10-05"
 output: html_document
 ---
 
@@ -25,6 +25,22 @@ Auto generated R starter code for data set 100110.
 - **Keywords** `['Coronavirus', 'Reproduktionszahl', 'Re', 'R-Wert', 'Re-Wert', 'COVID-19', 'Corona', 'Krankheit', 'Lungenentzündung']`
 - **Creator** `ETH Zurich, Department of Biosystems Science and Engineering`
 - **Reference** `None`
+
+
+## Data dictionary
+
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `country` | text | Das Land, für welches die Werte geschätzt wurden |
+| `region` | text | Das Land, die Grossregion bzw. der Kanton, für welche/n die Werte geschätzt wurden |
+| `source` | text | Quelle aus der die verwendeten Daten stammen |
+| `data_type` | text | Art der für die Schätzung verwendeten Daten |
+| `estimate_type` | text | Die bei der Schätzung verwendete Methodik |
+| `date` | date | Datum, für welches die effektive Reproduktionszahl berechnet wurde. Da sich die effektive Reproduktionszahl erst mit zeitlichem Verzug berechnen lässt, liegt der letzte verfügbare Schätzwert in der Vergangenheit |
+| `median_r_mean` | double | Die mittlere geschätzte effektive Reproduktionszahl |
+| `median_r_highhpd` | double | Die obere Grenze des 95%-Vertrauensintervalls der mittleren geschätzten effektiven Reproduktionszahl |
+| `median_r_lowhpd` | double | Die untere Grenze des 95%-Vertrauensintervalls der mittleren geschätzten effektiven Reproduktionszahl |
+| `countryiso3` | text | Iso Code des Landes, für welches die Werte geschätzt wurden |
 
 
 # Load packages
