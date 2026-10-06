@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-05"
+date: "2026-10-06"
 output: html_document
 ---
 
@@ -29,14 +29,7 @@ Auto generated R starter code for data set 100171.
 
 ## Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `from` | datetime | Start der Messung |
-| `to` | datetime | Ende der Messung |
-| `type` | text | Parklatztyp |
-| `sum_inflow` | double | Summe Zufahrten |
-| `sum_outflow` | double | Summe Wegfahrten |
-| `avg_occupancy_abs` | double | Durchschnittliche Auslastung |
+_No field information available._
 
 
 # Load packages

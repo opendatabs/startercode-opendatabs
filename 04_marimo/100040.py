@@ -80,7 +80,15 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
+| `blo_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `blo_label` | text | Nummerierung (Label) der statistischen Raumeinheit |
+| `wov_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `bez_id` | text | Eindeutiger Identifikator der statistischen Raumeinheit |
+| `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
 
 
     ///

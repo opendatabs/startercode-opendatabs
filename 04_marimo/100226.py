@@ -80,7 +80,17 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `publikationsjahr` | text | Jahr, in dem der Wert publiziert wurde |
+| `indikator_nr` | int | — |
+| `datenjahr` | text | Jahr, aus dem die Daten stammen |
+| `wert` | double | Wert des Indikators |
+| `indikator_label` | text | Definition des Indikators, Berechnungsgrundlage |
+| `indikator_name` | text | Kurzform des Indikators |
+| `wohnviertel_id` | int | Nummer des Wohnviertels (1-19) bzw. der Landgemeinde (20 und 30) |
+| `wohnviertel` | text | Offizielle Bezeichnungen der 19 Basler Wohnviertel und 2 Landgemeinden |
+| `rang` | int | — |
 
 
     ///

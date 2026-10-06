@@ -80,7 +80,52 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | text | Das Jahr bezeichnet das Wintersemster (bis 2006) oder das Herbstsemester (seit 2007) des gegeben Jahres. Stichtag für das Wintersemester ist der 15. Dezember, für das Herbstsemester der 15. November. |
+| `internationale_studenten` | int | Studenten, welche vor Studienbeginn einen Wohnort im Ausland hatten. |
+| `schweizer_studenten` | int | Studenten, welche vor Studienbeginn einen Wohnort in der Schweiz hatten. |
+| `studenten_total` | int | Gesamtanzahl Studenten an der Universität Basel. |
+| `internationale_studentinnen` | int | Studentinnen, welche vor Studienbeginn einen Wohnort im Ausland hatten. |
+| `schweizer_studentinnen` | int | Studentinnen, welche vor Studienbeginn einen Wohnort in der Schweiz hatten. |
+| `studentinnen_total` | int | Gesamtanzahl Studentinnen an der Universität Basel. |
+| `studierende_total` | int | Gesamtanzahl Studierende an der Universität Basel. |
+| `theologie_m` | int | Studenten an der Theologischen Fakultät. |
+| `theologie_f` | int | Studentinnen an der Theologischen Fakultät. |
+| `theologie_total` | int | Gesamtanzahl Studierende an der Theologischen Fakultät. |
+| `jurisprudenz_m` | int | Studenten an der Juristischen Fakultät. |
+| `jurisprudenz_f` | int | Studentinnen an der Juristischen Fakultät. |
+| `jurisprudenz_total` | int | Gesamtanzahl Studierende an der Juristischen Fakultät. |
+| `medizin_m` | int | Studenten an der Medizinischen Fakultät. |
+| `medizin_f` | int | Studentinnen an der Medizinischen Fakultät. |
+| `medizin_total` | int | Gesamtanzahl Studierende an der Medizinischen Fakultät. |
+| `philosophie1_m` | int | Studenten an der Philosophisch-Historischen Fakultät (seit 1966 ohne Lehramtsstudierende). |
+| `philosophie1_f` | int | Studentinnen an der Philosophisch-Historischen Fakultät (seit 1966 ohne Lehramtsstudierende). |
+| `philosophie1_total` | int | Gesamtanzahl Studierende an der Philosophisch-Historischen Fakultät (seit 1966 ohne Lehramtsstudierende). |
+| `psychologie_m` | int | Studenten an der Psychologischen Fakultät (seit 2003 wird der Fachbereich Psychologie in einer eigenen Fakultät geführt und ist damit nicht mehr Teil der Philosophisch-Historischen Fakultät). |
+| `psychologie_f` | int | Studentinnen an der Psychologischen Fakultät (seit 2003 wird der Fachbereich Psychologie in einer eigenen Fakultät geführt und ist damit nicht mehr Teil der Philosophisch-Historischen Fakultät). |
+| `psychologie_total` | int | Gesamtanzahl Studierende an der Psychologischen Fakultät (seit 2003 wird der Fachbereich Psychologie in einer eigenen Fakultät geführt und ist damit nicht mehr Teil der Philosophisch-Historischen Fakultät). |
+| `wirtschaft_m` | int | Studenten an der Wirtschaftlichen Fakultät (seit 1995 wird der Fachbereich Wirtschaft in einer eigenen Fakultät der Wirtschaftswissenschaften geführt, davor wurde das Fach Ökonomie in der Philosophisch-Historischen Fakultät Philosophie geführt; ). |
+| `wirtschaft_f` | int | Studentinnen an der Wirtschaftlichen Fakultät (seit 1995 wird der Fachbereich Wirtschaft in einer eigenen Fakultät der Wirtschaftswissenschaften geführt, davor wurde das Fach Ökonomie in der Philosophisch-Historischen Fakultät Philosophie geführt). |
+| `wirtschaft_total` | int | Gesamtanzahl Studierende an der Wirtschaftlichen Fakultät (seit 1995 wird der Fachbereich Wirtschaft in einer eigenen Fakultät der Wirtschaftswissenschaften geführt, davor wurde das Fach Ökonomie in der Philosophisch-Historischen Fakultät Philosophie geführt). |
+| `philosophie2_m` | int | Studenten an der Philosophisch-Naturwissenschaftlichen Fakultät (seit 1966 ohne Lehramtsstudierende). |
+| `philosophie2_f` | int | Studentinnen an derPhilosophisch-Naturwissenschaftlichen Fakultät (seit 1966 ohne Lehramtsstudierende). |
+| `philosophie2_total` | int | Gesamtanzahl Studierende an der Philosophisch-Naturwissenschaftlichen Fakultät (seit 1966 ohne Lehramtsstudierende). |
+| `universitatbasel_m` | int | Studenten mit einem Studienfach, welches von mehreren Fakultäten gemeinsam angeboten wird (seit 2005 werden die Studierenden separat ausgewiesen). |
+| `universitatbasel_f` | int | Studentinnen mit einem Studienfach, welches von mehreren Fakultäten gemeinsam angeboten wird (seit 2005 werden die Studierenden separat ausgewiesen). |
+| `universitatbasel_total` | int | Gesamtanzahl Studierende mit einem Studienfach, welches von mehreren Fakultäten gemeinsam angeboten wird (seit 2005 werden die Studierenden separat ausgewiesen). |
+| `lehrerausbildung_m` | int | Studenten in der Lehrerausbildung (Lehramtsstudierende werden von 1966 bis 2012 separat ausgewiesen, obwohl sie keine eigene Fakultät bilden). |
+| `lehrerausbildung_f` | int | Studentinnen in der Lehrerausbildung (Lehramtsstudierende werden von 1966 bis 2012 separat ausgewiesen, obwohl sie keine eigene Fakultät bilden; ). |
+| `lehrerausbildung_total` | int | Gesamtanzahl Studierende in der Lehrerausbildung (Lehramtsstudierende werden von 1966 bis 2012 separat ausgewiesen, obwohl sie keine eigene Fakultät bilden). |
+| `advancedstudies_m` | int | Studenten im Advanced Studies Programm der Universität Basel (seit 2004). |
+| `advancedstudies_f` | int | Studentinnen im Advanced Studies Programm der Universität Basel (seit 2004). |
+| `advancedstudies_total` | int | Gesamtanzahl Studierende im Advanced Studies Programm der Universität Basel (seit 2004). |
+| `bildungswissenschaften_m` | int | Studenten in der Fachrichtung Bildungswissenschaften (Studierende der Bildungswissenschaften werden seit 2016 separat ausgewiesen, obwohl sie keine eigene Fakultät bilden). |
+| `bildungswissenschaften_f` | int | Studentinnen in der Fachrichtung Bildungswissenschaften (Studierende der Bildungswissenschaften werden seit 2016 separat ausgewiesen, obwohl sie keine eigene Fakultät bilden). |
+| `bildungswissenschaften_total` | int | Gesamtanzahl Studierende in der Fachrichtung Bildungswissenschaften (Studierende der Bildungswissenschaften werden seit 2016 separat ausgewiesen, obwohl sie keine eigene Fakultät bilden). |
+| `philosophie_m` | int | Studenten in der Philosophischen Fakultät (seit 1937 gibt es die Philosophisch-Naturwissenschaftliche Fakultät und die Philosophisch-Historische Fakultät, welche durch eine Aufspaltung der Philosophischen Fakultät entstanden sind). |
+| `philosophie_f` | int | Studentinnen in der Philosophischen Fakultät (seit 1937 gibt es die Philosophisch-Naturwissenschaftliche Fakultät und die Philosophisch-Historische Fakultät, welche durch eine Aufspaltung der Philosophischen Fakultät entstanden sind). |
+| `philosophie_total` | int | Gesamtanzahl Studierende in der Philosophischen Fakultät (seit 1937 gibt es die Philosophisch-Naturwissenschaftliche Fakultät und die Philosophisch-Historische Fakultät, welche durch eine Aufspaltung der Philosophischen Fakultät entstanden sind). |
 
 
     ///

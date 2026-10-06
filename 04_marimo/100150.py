@@ -80,7 +80,19 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `jahr` | date | Berichtsjahr der Kennzahlen |
+| `anzahl_anfragen` | int | Anzahl der Anfragen im Zusammenhang mit Open Data, die per E-Mail, Telefon, Kommentarfunktion oder über Social Media eingegangen sind. |
+| `registrierte_weiterverwendungen` | int | Anzahl der gemeldeten oder registrierten Weiterverwendungen von Open-Data-Datensätzen. |
+| `anzahl_downloads_summiert` | int | Gesamtzahl der Datensatz-Downloads pro Jahr. |
+| `anzahl_api_calls_summiert` | int | Gesamtzahl der API-Zugriffe pro Jahr. |
+| `neu_publizierte_datensatze` | int | Anzahl der im jeweiligen Jahr neu veröffentlichten Datensätze. |
+| `depublizierte_datensatze` | int | Anzahl der Datensätze, die im jeweiligen Jahr vom Portal entfernt wurden. |
+| `total_datensatze_auf_dem_datenportal` | int | Gesamtbestand der publizierten Datensätze zum Jahresende. |
+| `size_of_records_in_the_dataset_in_gb` | double | Gesamte Datenmenge der publizierten Datensätze in Gigabyte. |
+| `publizierende_organisationen` | int | Anzahl der Organisationseinheiten mit publizierten Datensätzen. |
+| `kommentar` | text | — |
 
 
     ///

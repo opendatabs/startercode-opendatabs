@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-05"
+date: "2026-10-06"
 output: html_document
 ---
 
@@ -29,7 +29,18 @@ Auto generated R starter code for data set 100216.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id_ufsp` | text | Eindeutiger Identifikator |
+| `kategorie` | text | Kategorie des Unfallschwerpunktes |
+| `kategoriebeschreibung` | text | Beschreibung der Kategorie des Unfallschwerpunktes |
+| `jahr` | date | Jahr |
+| `strasse` | text | Strassenname |
+| `anlagetyp` | text | Anlagetyp |
+| `lichtsign` | text | Ist eine Lichtsignalanlage vorhanden |
+| `ortschaft` | text | Gemeinde |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
 
 
 # Load packages

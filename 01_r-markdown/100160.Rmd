@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-05"
+date: "2026-10-06"
 output: html_document
 ---
 
@@ -29,16 +29,7 @@ Auto generated R starter code for data set 100160.
 
 ## Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `timestamp` | datetime | Zeitstempel |
-| `blue_total` | int | Total Anzahl erfasster blauer Parkplätze |
-| `blue_available` | int | Anzahl verfügbarer blauer Parkplätze |
-| `blue_occupied` | int | Anzahl besetzte blaue Parkplätze |
-| `yellow_total` | int | Total Anzahl erfasste gelbe Parkplätze |
-| `yellow_available` | int | Anzahl verfügbare gelbe Parkplätze |
-| `yellow_occupied` | int | Anzahl besetzte gelbe Parkplätze |
-| `timestamp_text` | text | — |
+_No field information available._
 
 
 # Load packages

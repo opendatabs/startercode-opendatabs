@@ -80,16 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `timestamp` | datetime | Zeitstempel |
-| `blue_total` | int | Total Anzahl erfasster blauer Parkplätze |
-| `blue_available` | int | Anzahl verfügbarer blauer Parkplätze |
-| `blue_occupied` | int | Anzahl besetzte blaue Parkplätze |
-| `yellow_total` | int | Total Anzahl erfasste gelbe Parkplätze |
-| `yellow_available` | int | Anzahl verfügbare gelbe Parkplätze |
-| `yellow_occupied` | int | Anzahl besetzte gelbe Parkplätze |
-| `timestamp_text` | text | — |
+_No field information available._
 
 
     ///

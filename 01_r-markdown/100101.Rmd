@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-05"
+date: "2026-10-06"
 output: html_document
 ---
 
@@ -29,72 +29,7 @@ Auto generated R starter code for data set 100101.
 
 ## Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `wahlbezeichnung` | text | Titel der Wahl |
-| `amtsdauer` | text | Anzahl Jahre, für die die Mitglieder gewählt werden. |
-| `wahltermin` | date | Datum der Wahl |
-| `anzahl_sitze` | int | Anzahl Sitze, die für einen Wahlkreis zur Verfügung stehen |
-| `wahlkreis_nr` | text | Nummer des Wahlkreises |
-| `wahlkreis_code` | text | Code des Wahlkreises |
-| `wahlkreisbezeichnung` | text | Name des Wahlkreises |
-| `stimmberechtigte_manner` | int | Anzahl in einem Wahlkreis stimmberechtigter Männer |
-| `stimmberechtigte_frauen` | int | Anzahl in einem Wahlkreis stimmberechtigter Frauen |
-| `stimmberechtigte` | int | Anzahl Stimmberechtigter total in einem Wahlkreis |
-| `stimmberechtigte_auslandschweizer` | int | Anzahl stimmberechtigter Auslandschweizer |
-| `wahlzettel` | int | Anzahl Wahlzettel |
-| `briefliche_stimmabgaben` | int | Anzahl brieflich eingelegter Wahlzettel |
-| `ungultige_wahlzettel` | int | Anzahl ungültiger Wahlzettel |
-| `leere_wahlzettel` | int | Anzahl leer eingelegter Wahlzettel |
-| `unveranderte_wahlzettel` | int | Anzahl unveränderter Wahlzettel |
-| `veranderte_wahlzettel_mit_bezeichnung` | int | Anzahl veränderter Wahlzettel mit Listenbezeichnung (leere Linien zählen als Parteistimmen) |
-| `veranderte_wahlzettel_ohne_bezeichnung` | int | Anzahl veränderter Wahlzettel ohne Listenbezeichnung (leere Linien werden nicht gezählt) |
-| `leere_stimmen` | int | Anzahl leerer Stimmen |
-| `listen_nr` | text | Nummer der Liste |
-| `partei_id` | text | ID der Partei |
-| `parteikurzbezeichnung` | text | Parteikurzbezeichnung |
-| `parteibezeichnung` | text | Name der Partei |
-| `anzahl_sitze_liste` | int | Anzahl Sitze einer Liste in einem Wahlkreis |
-| `unveranderte_wahlzettel_liste` | int | Anzahl unveränderte Wahlzettel einer Liste in einem Wahlkreis |
-| `veranderte_wahlzettel_liste` | int | Anzahl veränderte Wahlzettel einer Liste in einem Wahlkreis |
-| `kandidatenstimmen_unveranderte_wahlzettel` | int | Anzahl Stimmen aller Kandidierenden einer Liste aus unveränderten Wahlzetteln |
-| `zusatzstimmen_unveranderte_wahlzettel` | int | Anzahl Zusatzstimmen aller Kandidierenden einer Liste aus unveränderten Wahlzetteln |
-| `kandidatenstimmen_veranderte_wahlzettel` | int | Anzahl Stimmen aller Kandidierenden einer Liste aus veränderten Wahlzetteln |
-| `zusatzstimmen_veranderte_wahlzettel` | int | Anzahl Zusatzstimmen aller Kandidierenden einer Liste aus veränderten Wahlzetteln |
-| `kandidaten_nr` | text | Kandidaten-Nr |
-| `personen_id` | text | Laufnummer einer Person |
-| `laufnummer` | text | Kandidaten-Laufnummer |
-| `kumulation` | text | Angabe, ob eine kandidierende Person auf einem unveränderten Wahlzettel mehrfach aufgeführt ist |
-| `bisher` | text | Angabe, ob eine kandidierende Person in der abgelaufenen Legislatur im Parlament vertreten war oder nicht |
-| `gewahlt` | text | Angabe, ob eine kandidierende Person gewählt ist |
-| `ganzer_name` | text | Nachname und Vorname, mit Komma getrennt |
-| `name` | text | Nachname |
-| `vorname` | text | Vorname |
-| `geschlecht` | text | Geschlecht |
-| `jahrgang` | text | Jahrgang |
-| `anrede` | text | Anrede |
-| `beruf` | text | Beruf gemäss Wahlzettel |
-| `stimmen_uvwz` | int | Anzahl Stimmen aus unveränderten Wahlzetteln |
-| `stimmen_vwz` | int | Anzahl Stimmen aus veränderten Wahlzetteln |
-| `stimmen_total` | int | Anzahl Stimmen total für eine kandidierende Person. Die Summe dieser Stimmen über eine Partei ergibt nicht das Total der Parteistimmen, weil so die leeren Linien auf Parteilisten nicht mitgezählt werden. |
-| `01_fdp` | int | FDP. Die Liberalen Basel-Stadt und Jungfreisinnige; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `03_ldp` | int | LDP Liberal-Demokratische Partei Basel-Stadt und Jungliberale; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `02_pp` | int | PIRATEN - Piratenpartei beider Basel; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `04_evp` | int | Evangelische Volkspartei Basel-Stadt; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `05_sp` | int | Sozialdemokratische Partei Basel-Stadt (SP) und JUSO; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `07_cvp` | int | CVP Basel-Stadt und Junge CVP Basel-Stadt; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `08_gb` | int | Bündnis Grüne, BastA!, junges grünes bündnis; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `10_glp` | int | Grünliberale Partei Basel-Stadt; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `12_svp` | int | Schweizerische Volkspartei Basel-Stadt (SVP); Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `13_fuk` | int | freistaat unteres kleinbasel f-u-k.ch; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `14_va` | int | Volks-Aktion gegen zuviele Ausländer und Asylanten in unserer Heimat (VA) - Liste Ausländerstopp; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `16_ab` | int | Aktives Bettingen; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `19_bdv` | int | Bettinger Dorfvereinigung - BDV; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `28_pb` | int | Parteiloser Bürger für eine Untersuchung der Coronamassnahmen; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `29_kl` | int | Kommunistische Liste - Partei der Arbeit Schweiz; Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer veränderten Liste dieser Partei |
-| `00_ohne` | int | Anzahl Stimmen für eine Kandidatin oder einen Kandidaten aus einer Liste ohne Bezeichnung |
-| `rangfolge` | int | Rangfolge innerhalb einer Liste gemäss Anzahl Stimmen (bei Stimmengleichheit entscheidet das Los). |
-| `alter` | int | Alter des Kandidierenden Ende 2020 |
+_No field information available._
 
 
 # Load packages

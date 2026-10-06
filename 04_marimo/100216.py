@@ -80,7 +80,18 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `id_ufsp` | text | Eindeutiger Identifikator |
+| `kategorie` | text | Kategorie des Unfallschwerpunktes |
+| `kategoriebeschreibung` | text | Beschreibung der Kategorie des Unfallschwerpunktes |
+| `jahr` | date | Jahr |
+| `strasse` | text | Strassenname |
+| `anlagetyp` | text | Anlagetyp |
+| `lichtsign` | text | Ist eine Lichtsignalanlage vorhanden |
+| `ortschaft` | text | Gemeinde |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
 
 
     ///

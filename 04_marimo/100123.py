@@ -80,17 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `jahr` | text | Jahr |
-| `gueltigkeit` | date | Gültigkeit der Lohntabelle |
-| `lohnklassen` | int | Lohnklassen |
-| `lohnstufe` | text | Lohnstufe |
-| `jahrbruttolohnohne13` | int | Bruttojahreslohn ohne 13. Monatslohn |
-| `monatbruttoohne13` | double | Bruttomonatslohn ohne 13. Monatslohn |
-| `stundenbruttoohne13` | double | Bruttostudenlohn ohne 13. Monatslohn |
-| `jahrbruttolohnmit13` | double | Bruttojahreslohn inkl. 13.Monatslohn |
-| `sortiervariable` | int | Sortiervariable für die Spalte mit den Lohnstufen |
+_No field information available._
 
 
     ///

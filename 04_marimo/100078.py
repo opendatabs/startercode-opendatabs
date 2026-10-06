@@ -80,13 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `date` | date | — |
-| `kategorie` | text | Andere Kategorien = allgemeiner und anderer nicht-gewerblicher Verkehr |
-| `pax` | int | Anzahl Passagiere |
-| `fret` | double | in Tonnen |
-| `mvt` | int | Starts und Landungen |
+_No field information available._
 
 
     ///

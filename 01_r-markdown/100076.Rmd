@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-05"
+date: "2026-10-06"
 output: html_document
 ---
 
@@ -29,7 +29,18 @@ Auto generated R starter code for data set 100076.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | Datum der Datenveröffentlichung |
+| `area` | text | — |
+| `ageyear` | int | Alter in Jahren; [leer] = nicht veröffentlicht |
+| `ageyear_numeric` | int | Alter in Jahren, falls explizite eindeutige Altersangabe vorhanden |
+| `gender` | text | M = männlich, F = weiblich; [leer] = nicht veröffentlicht |
+| `newdeaths` | int | Anzahl mit COVID-19-Erkrankung verstorbene Personen mit Wohnsitz in Basel-Stadt |
+| `preexistingcond` | text | Y = bestehende Vorerkrankung, N = keine bestehende Vorerkrankung; [leer] = nicht veröffentlicht |
+| `ncumul_deceased` | int | Anzahl Verstorbene Personen bis zum aktuellen Datum |
+| `casenumberperday` | int | Eindeutige ID des Todesfalls pro Tag |
+| `source` | text | Datenquelle(n) |
 
 
 # Load packages

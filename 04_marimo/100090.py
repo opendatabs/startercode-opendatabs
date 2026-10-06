@@ -80,13 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `station_id` | text | Name der Station |
-| `eui` | text | ID der Mess-Station |
-| `geo_point_2d` | geo_point_2d | Koordinaten |
-| `latitude` | double | — |
-| `longitude` | double | — |
+_No field information available._
 
 
     ///

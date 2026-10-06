@@ -80,14 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `from` | datetime | Start der Messung |
-| `to` | datetime | Ende der Messung |
-| `type` | text | Parklatztyp |
-| `sum_inflow` | double | Summe Zufahrten |
-| `sum_outflow` | double | Summe Wegfahrten |
-| `avg_occupancy_abs` | double | Durchschnittliche Auslastung |
+_No field information available._
 
 
     ///

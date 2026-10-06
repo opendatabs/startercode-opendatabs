@@ -80,17 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `geo_point_2d` | geo_point_2d | — |
-| `geo_shape` | geo_shape | — |
-| `objid` | text | Laufnummer |
-| `kart_id` | text | — |
-| `flaeche` | double | Fläche in m² |
-| `art` | text | Name der Art in deutsch und latein (in Klammern) |
-| `deckung` | text | Deckungsgrad in % gemäss den folgenden Klassen: <1, 1-5, 5-15, 15-25, 25-50, 50-75, 75-100. |
-| `abundanz` | text | Individuenzahl gemäss den folgenden Klassen: 1-10, 11-100, 101-1000, >1000. |
-| `jahr` | text | Kartierungsjahr |
+_No field information available._
 
 
     ///

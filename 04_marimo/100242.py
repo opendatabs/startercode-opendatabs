@@ -80,15 +80,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `geo_point_2d` | geo_point_2d | — |
-| `geo_shape` | geo_shape | — |
-| `id_durchgangsstrasse` | int | Eindeutiger Identifikator der Strasse |
-| `durchgangsstrassennummer` | text | Nummer der Durchgangsstrasse |
-| `durchgangsstrassentyp` | text | Typ der Durchgangsstrasse |
-| `strecke` | text | Routenverlauf der gesamten Durchgangsstrasse |
-| `bemerkungen` | text | Routenverlauf der Durchgangsstrasse in Basel-Stadt |
+_No field information available._
 
 
     ///

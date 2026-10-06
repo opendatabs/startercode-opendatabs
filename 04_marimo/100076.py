@@ -80,7 +80,18 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | Datum der Datenveröffentlichung |
+| `area` | text | — |
+| `ageyear` | int | Alter in Jahren; [leer] = nicht veröffentlicht |
+| `ageyear_numeric` | int | Alter in Jahren, falls explizite eindeutige Altersangabe vorhanden |
+| `gender` | text | M = männlich, F = weiblich; [leer] = nicht veröffentlicht |
+| `newdeaths` | int | Anzahl mit COVID-19-Erkrankung verstorbene Personen mit Wohnsitz in Basel-Stadt |
+| `preexistingcond` | text | Y = bestehende Vorerkrankung, N = keine bestehende Vorerkrankung; [leer] = nicht veröffentlicht |
+| `ncumul_deceased` | int | Anzahl Verstorbene Personen bis zum aktuellen Datum |
+| `casenumberperday` | int | Eindeutige ID des Todesfalls pro Tag |
+| `source` | text | Datenquelle(n) |
 
 
     ///

@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-05"
+date: "2026-10-06"
 output: html_document
 ---
 
@@ -29,7 +29,32 @@ Auto generated R starter code for data set 100108.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `test_datum` | date | Datum, an welchem das Testresultat vorliegt. In der Regel liegt ein Testresultat innerhalb von 24 Stunden nach dem erfolgten Test vor. |
+| `faelle_bs` | int | Anzahl positiv auf SARS-CoV-2 getesteter Personen am Datum Test-Resultat mit Wohnsitz im Kanton Basel-Stadt |
+| `faelle_bs_kum` | int | Kumulierte Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz im Kanton Basel-Stadt |
+| `faelle_basel` | int | Anzahl positiv auf SARS-CoV-2 getesteter Personen am Datum Test-Resultat mit Wohnsitz in der Stadt Basel |
+| `faelle_basel_kum` | int | Kumulierte Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz in der Stadt Basel |
+| `faelle_riehen` | int | Anzahl positiv auf SARS-CoV-2 getesteter Personen am Datum Test-Resultat mit Wohnsitz in der Gemeinde Riehen |
+| `faelle_riehen_kum` | int | Kumulierte Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz in der Gemeinde Riehen |
+| `faelle_bettingen` | int | Anzahl positiv auf SARS-CoV-2 getesteter Personen am Datum Test-Resultat mit Wohnsitz in der Gemeinde Bettingen |
+| `faelle_bettingen_kum` | int | Kumulierte Anzahl positiv auf SARS-CoV-2 getesteter Personen mit Wohnsitz in der Gemeinde Bettingen |
+| `inzidenz07_bs` | double | 7-Tage-Inzidenz Basel-Stadt; berechnet nach der Formel: (("Kumulierte Fälle BS" heute) minus ("Kumulierte Fälle BS" heute-7 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz14_bs` | double | 14-Tage-Inzidenz Basel-Stadt; berechnet nach der Formel: (("Kumulierte Fälle BS" heute) minus ("Kumulierte Fälle BS" heute-14 Tage) durch (Einwohnerzahl durch 100 000 Personen))); Einwohnerzahl gemäss STATPOP. |
+| `summe_07_tage_bs` | int | Summe der Anzahl positiv auf SARS-CoV-2 getesteten Personen mit Wohnsitz in Basel-Stadt der letzten 7 Tage |
+| `summe_14_tage_bs` | int | Summe der Anzahl positiv auf SARS-Cov-2 getesteten Personen mit Wohnsitz in Basel-Stadt der letzten 14 Tage |
+| `mittel_07_tage_bs` | double | Mittel der Anzahl positiv auf SARS-CoV-2 getesteten Personen mit Wohnsitz in Basel-Stadt pro Tag über die letzten 7 Tage |
+| `mittel_14_tage_bs` | double | Mittel der Anzahl positiv auf SARS-CoV-2 getesteten Personen mit Wohnsitz in Basel-Stadt pro Tag über die letzten 14 Tage |
+| `inzidenz_basel_07` | double | 7-Tage-Inzidenz Basel; berechnet nach der Formel: (("Kumulierte Fälle Basel" heute) minus ("Kumulierte Fälle Basel" heute-7 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz_basel_14` | double | 14-Tage-Inzidenz Basel; berechnet nach der Formel: (("Kumulierte Fälle Basel" heute) minus ("Kumulierte Fälle Basel" heute-14 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz_riehen_07` | double | 7-Tage-Inzidenz Riehen; berechnet nach der Formel: (("Kumulierte Fälle Riehen" heute) minus ("Kumulierte Fälle Riehen" heute-7 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz_riehen_14` | double | 14-Tage-Inzidenz Riehen; berechnet nach der Formel: (("Kumulierte Fälle Riehen" heute) minus ("Kumulierte Fälle Riehen" heute-14 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz_bettingen_07` | double | 7-Tage-Inzidenz Bettingen; berechnet nach der Formel: (("Kumulierte Fälle Bettingen" heute) minus ("Kumulierte Fälle Bettingen" heute-7 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `inzidenz_bettingen_14` | double | 14-Tage-Inzidenz Bettingen; berechnet nach der Formel: (("Kumulierte Fälle Bettingen" heute) minus ("Kumulierte Fälle Bettingen" heute-14 Tage) geteilt durch (Einwohnerzahl durch 100 000))); Einwohnerzahl gemäss STATPOP. |
+| `weekday_nr` | int | Nummer des Wochentags (Montag=0, Sonntag=6) |
+| `weekday` | text | Name des Wochentags auf Englisch |
+| `wochentag` | text | Name des Wochentags auf Deutsch |
 
 
 # Load packages

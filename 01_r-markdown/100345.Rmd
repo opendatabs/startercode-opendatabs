@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-05"
+date: "2026-10-06"
 output: html_document
 ---
 
@@ -29,7 +29,38 @@ Auto generated R starter code for data set 100345.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `abst_datum` | date | Datum der Abstimmung |
+| `abst_id` | int | Laufnummer der Vorlage |
+| `abst_titel` | text | Titel der Vorlage |
+| `abst_id_titel` | text | ID und Titel der Vorlage |
+| `abst_art` | text | Art der Vorlage; national oder kantonal |
+| `gemein_id` | int | Numerische Kennung, die jeder Gemeinde eine eindeutige Identifikation zuweist |
+| `gemein_name` | text | Die "Gemeinde" bezeichnet die geografische oder politische Einheit, in der die Abstimmung oder Wahl stattgefunden hat |
+| `wahllok_id` | int | Numerische Kennung, die jedem Wahllokal eine eindeutige Identifikation zugewiesen wird |
+| `wahllok_name` | text | Standort, an dem die Abstimmung durchgeführt wurde |
+| `id` | text | Die ID besteht aus dem Datum, der ID der Vorlage und der ID des Wahllokals |
+| `result_art` | text | Zwischenresultat (brieflich Stimmende) oder Schlussresultat (alle Stimmen). Zwischenresultate werden durch Schlussresultate überschrieben. |
+| `stimmr_anz` | int | Anzahl Stimmrechtsausweise |
+| `eingel_anz` | int | Anzahl eingelegter Stimmzettel |
+| `leer_anz` | int | Anzahl leer eingelegter Stimmzettel |
+| `unguelt_anz` | int | Anzahl ungültiger Stimmzettel |
+| `guelt_anz` | int | Anzahl gültiger Stimmzettel |
+| `ja_anz` | int | Anzahl Ja-Stimmen |
+| `nein_anz` | int | Anzahl Nein-Stimmen |
+| `anteil_ja_stimmen` | double | Anteill der Ja-Stimmen am Total der Stimmen mit gültiger Antwort |
+| `abst_typ` | text | Angabe, ob für eine Vorlage ein Gegenvorschlag zur Verfügung steht oder nicht |
+| `gege_ja_anz` | int | Anzahl Ja-Stimmen für den Gegenvorschlag |
+| `gege_nein_anz` | int | Anzahl Nein-Stimmen für den Gegenvorschlag |
+| `sti_initiative_anz` | int | Anzahl Stimmen bei der Stichfrage für die Initiative |
+| `sti_gegenvorschlag_anz` | int | Anzahl Stimmen bei der Stichfrage für den Gegenvorschlag |
+| `gege_anteil_ja_stimmen` | double | Anteil der Ja-Stimmen für den Gegenvorschlag |
+| `sti_anteil_init_stimmen` | double | Anteil der Stimmen bei der Stichfrage für die Initiative |
+| `init_oga_anz` | int | Anzahl Stimmen ohne gültige Antwort zu einer Vorlage |
+| `gege_oga_anz` | int | — |
+| `sti_oga_anz` | int | — |
+| `abst_datum_text` | text | Datum der Abstimmung |
 
 
 # Load packages

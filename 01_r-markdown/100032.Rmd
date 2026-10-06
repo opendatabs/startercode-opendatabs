@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-05"
+date: "2026-10-06"
 output: html_document
 ---
 
@@ -29,18 +29,7 @@ Auto generated R starter code for data set 100032.
 
 ## Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `geo_point_2d` | geo_point_2d | — |
-| `geo_shape` | geo_shape | — |
-| `objid` | text | — |
-| `objectid` | int | — |
-| `informatio` | text | — |
-| `kategorie` | text | — |
-| `routenbez` | text | — |
-| `rbeschreib` | text | — |
-| `richtung` | text | — |
-| `shape_leng` | double | — |
+_No field information available._
 
 
 # Load packages
