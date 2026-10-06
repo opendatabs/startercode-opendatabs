@@ -1,7 +1,9 @@
 # /// script
-# requires-python = ">=3.12"
+# # pandas' pd.to_datetime() segfaults under Python 3.14 (as of pandas 2.3.2) -- cap below it
+# requires-python = ">=3.12,<3.14"
 # dependencies = [
 #     "marimo",
+#     "folium==0.20.0",
 #     "matplotlib==3.10.6",
 #     "missingno==0.5.2",
 #     "pandas==2.3.2",
@@ -58,7 +60,7 @@ def _(mo):
 - **Description** `Wohnungen gemäss Gebäude- und Wohnungsregister (GWR). <br><br>Eine Wohnung ist eine Gesamtheit von Räumen, die für eine Wohnnutzung geeignet sind, eine bauliche Einheit bilden, einen Zugang entweder von aussen oder von einem gemeinsam mit anderen Wohnungen genutzten Bereich innerhalb des Gebäudes haben, über eine Kocheinrichtung (oder mindestens der technischen Installation für den Einbau einer Kocheinrichtung) verfügen und keine Fahrnis darstellen.<br><br>Einen Überblick über die im Register geführten Merkmal gibt folgendes Dokument: <a href="https://www.housing-stat.ch/files/881-2200.pdf" target="_blank">https://www.housing-stat.ch/files/881-2200.pdf (Merkmalskatalog 4.2)</a> bzw. online unter <a href="https://www.housing-stat.ch/de/help/42.html" target="_blank">https://www.housing-stat.ch/de/help/42.html (Online-Merkmalskatalog 4.2)</a><br><br>Die rechtliche Grundlage stellt die entsprechende eidgenössische Gesetzgebung dar: <a href="https://www.fedlex.admin.ch/eli/cc/2017/376/de" target="_blank">https://www.fedlex.admin.ch/eli/cc/2017/376/de (Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR))</a><br><br>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-24`
-- **Modified** `2026-10-05T04:26:44+00:00`
+- **Modified** `2026-10-06T04:26:50+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -80,7 +82,27 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `egid` | int | Eidgenössischer Gebäudeidentifikator |
+| `ewid` | int | Eidgenössischer Wohnungsidentifikator |
+| `edid` | int | Eidgenössischer Eingangsidentifikator |
+| `whgnr` | int | Administrative Wohnungsnummer |
+| `weinr` | text | Physische Wohnungsnummer |
+| `wstwk` | int | Stockwerk Code |
+| `wstwk_decoded` | text | Stockwerk Bezeichnung |
+| `wbez` | text | Lage auf dem Stockwerk |
+| `wmehrg` | int | Mehrgeschossige Wohnung Code |
+| `wmehrg_decoded` | text | Mehrgeschossige Wohnung Bezeichnung |
+| `wbauj` | text | Baujahr der Wohnung |
+| `wabbj` | text | Abbruchjahr der Wohnung |
+| `wstat` | int | Wohnungsstatus Code |
+| `wstat_decoded` | text | Wohnungsstatus Bezeichnung |
+| `warea` | int | Wohnungsfläche (in m2) |
+| `wazim` | int | Anzahl Zimmer |
+| `wkche` | int | Kocheinrichtung Code |
+| `wkche_decoded` | text | Kocheinrichtung Bezeichnung |
+| `wexpdat` | date | Exportdatum |
 
 
     ///
@@ -123,20 +145,29 @@ def _(os):
 
 @app.cell
 def _(io, pd, requests):
-    def download_csv_chunk(
+    def download_csv_page(
         session: requests.Session,
         dataset_id: str,
-        extra_params: dict | None = None,
+        limit: int,
+        where: str | None = None,
     ) -> pd.DataFrame:
+        # offset is always 0 here: the export endpoint only allows offset + limit
+        # <= 10,000 for true pagination (likely an Elasticsearch deep-pagination
+        # limit) and returns 400 Bad Request beyond that, but an offset=0 request
+        # bypasses this and can return far larger result sets directly -- so
+        # get_dataset uses `where` date-range filters instead of offset to split
+        # large datasets, always fetching each slice from offset=0.
         base_url = "https://data.bs.ch/api/explore/v2.1"
         url = f"{base_url}/catalog/datasets/{dataset_id}/exports/csv"
 
         params = {
             "timezone": "Europe/Zurich",
             "use_labels": "false",
+            "offset": 0,
+            "limit": limit,
         }
-        if extra_params:
-            params.update(extra_params)
+        if where:
+            params["where"] = where
 
         r = session.get(url, params=params)
         r.raise_for_status()
@@ -152,136 +183,119 @@ def _(io, pd, requests):
         )
 
         return df
-    return (download_csv_chunk,)
+    return (download_csv_page,)
 
 
 @app.cell
-def _():
-    def pick_best_facet(facets_json: dict, max_rows_per_chunk: int) -> tuple[str | None, list[str]]:
-        """
-        Choose a facet column where each bucket has <= max_rows_per_chunk rows.
-        Among all such columns, pick the one with the smallest worst-case bucket.
-        Returns (facet_name, list_of_values) or (None, []) if nothing suitable.
-        """
-        best_name = None
-        best_values: list[str] = []
-        best_max_bucket = None
-
-        for facet in facets_json.get("facets", []):
-            facet_name = facet.get("name")
-            value_list = facet.get("facets", [])
-            if not facet_name or not value_list:
-                continue
-
-            counts = [v.get("count", 0) for v in value_list]
-            if not counts:
-                continue
-
-            max_bucket = max(counts)
-            if max_bucket > max_rows_per_chunk:
-                # this facet would still exceed the chunk limit for some values
-                continue
-
-            if best_max_bucket is None or max_bucket < best_max_bucket:
-                best_max_bucket = max_bucket
-                best_name = facet_name
-                best_values = [v.get("value") for v in value_list if v.get("value") is not None]
-
-        return best_name, best_values
-
-
-@app.cell
-def _(download_csv_chunk, ensure_data_dir, mo, os, pd, requests):
-    def get_dataset(dataset_id: str, max_rows_per_chunk: int = 50_000) -> pd.DataFrame:
+def _(download_csv_page, ensure_data_dir, mo, os, pd, requests):
+    def get_dataset(dataset_id: str, max_rows: int = 200_000) -> pd.DataFrame:
         """
         Download a dataset from data.bs.ch.
 
-        - For small datasets (<= max_rows_per_chunk): single CSV export.
-        - For large datasets:
-            * Inspect /facets to find a good splitting column.
-            * Download one CSV per facet value via refine.<col>=<value>.
-            * Additionally download rows where that column is NULL via q=#null(<col>).
+        Datasets up to max_rows rows are downloaded in full. This is starter
+        code meant to get you exploring a dataset quickly, not a complete data
+        pipeline -- some datasets in this catalogue have tens of millions of
+        rows, far more than is practical (or useful) to pull into a notebook.
+        For those, only a SAMPLE of max_rows rows is downloaded instead, spread
+        evenly across the dataset's time range if it has a date/datetime field
+        (so the sample isn't just the oldest or most recent slice), or just the
+        first max_rows rows otherwise. A disclaimer is printed when this happens
+        -- if you need the complete dataset, download it directly from the data
+        shop link above instead.
 
-        The combined result is written to ../data/{dataset_id}.csv and returned as a DataFrame.
+        The result is written to ../data/{dataset_id}.csv and returned as a DataFrame.
         """
         base_url = "https://data.bs.ch/api/explore/v2.1"
         records_url = f"{base_url}/catalog/datasets/{dataset_id}/records"
-        facets_url = f"{base_url}/catalog/datasets/{dataset_id}/facets"
+        schema_url = f"{base_url}/catalog/datasets/{dataset_id}"
 
         session = requests.Session()
-        common_params = {
-            "timezone": "Europe/Zurich",
-            "use_labels": "false",
-        }
+        common_params = {"timezone": "Europe/Zurich", "use_labels": "false"}
 
-        # 1) Get total_count via /records
         r = session.get(records_url, params={**common_params, "limit": 1})
         r.raise_for_status()
-        meta = r.json()
-        total_count = meta.get("total_count", 0)
-
-        if not isinstance(total_count, int):
-            # fall back to simple export if we can't read total_count
-            total_count = 0
-
-        # 2) Small dataset: single CSV export
-        if total_count == 0 or total_count <= max_rows_per_chunk:
-            df = download_csv_chunk(session, dataset_id, extra_params={})
-            data_path = ensure_data_dir()
-            csv_path = os.path.join(data_path, f"{dataset_id}.csv")
-            df.to_csv(csv_path, index=False)
-            return df
-
-        # 3) Large dataset: inspect /facets to decide how to split
-        r = session.get(facets_url, params=common_params)
-        r.raise_for_status()
-        facets_json = r.json()
-
-        facet_name, facet_values = pick_best_facet(facets_json, max_rows_per_chunk=max_rows_per_chunk)
-
-        if facet_name is None or not facet_values:
-            raise RuntimeError(
-                f"Could not find a facet column to split dataset {dataset_id} into "
-                f"chunks of <= {max_rows_per_chunk} rows. Please handle this dataset manually."
-            )
-
-        dfs: list[pd.DataFrame] = []
-
-        # 4) Download each facet value (refine.<facet_name>=value)
-        n_parts = len(facet_values) + 1  # +1 for NULLs
-
-        with mo.status.progress_bar(
-            total=n_parts,
-            title=f"Lade Datensatz {dataset_id}",
-            subtitle=f"Split nach '{facet_name}'…",
-        ) as bar:
-            # NULLs
-            bar.update(subtitle=f"{facet_name} = NULL")
-            null_query = {"qv1": f"#null({facet_name})"}
-            try:
-                df_null = download_csv_chunk(session, dataset_id, extra_params=null_query)
-                if not df_null.empty:
-                    dfs.append(df_null)
-            except requests.HTTPError as e:
-                print(f"Warning: NULL download for {facet_name} failed: {e}")
-            # non-NULL values
-            for v in facet_values:
-                bar.update(subtitle=f"{facet_name} = {v!r}")
-                params = {"refine": f'{facet_name}:"{v}"'}
-                df_chunk = download_csv_chunk(session, dataset_id, extra_params=params)
-                dfs.append(df_chunk)
-
-        # 5) Combine all parts, save to a single CSV, return DataFrame
-        if dfs:
-            full_df = pd.concat(dfs, ignore_index=True)
-        else:
-            full_df = pd.DataFrame()
+        total_count = r.json().get("total_count", 0)
+        if not isinstance(total_count, int) or total_count <= 0:
+            total_count = 1
 
         data_path = ensure_data_dir()
         csv_path = os.path.join(data_path, f"{dataset_id}.csv")
-        full_df.to_csv(csv_path, index=False)
 
-        return full_df
+        # full dataset fits comfortably in a single request
+        if total_count <= max_rows:
+            df = download_csv_page(session, dataset_id, limit=total_count)
+            df.to_csv(csv_path, index=False)
+            return df
+
+        # a plain print() here lands in marimo's console stream, which the
+        # read-only `marimo run` app view doesn't display -- mo.output.append()
+        # attaches it to the *calling* cell's actual output instead, so it's
+        # visible in both edit and run mode
+        mo.output.append(
+            f"Note: this dataset has {total_count:,} rows, too many to download in "
+            f"full here, so a SAMPLE of {max_rows:,} rows is used instead. "
+            "This is NOT the complete dataset -- see the data shop link above "
+            "if you need everything."
+        )
+
+        r = session.get(schema_url)
+        r.raise_for_status()
+        date_field = next(
+            (f["name"] for f in r.json().get("fields", []) if f.get("type") in ("date", "datetime")),
+            None,
+        )
+
+        # no date field to spread the sample across -- just take the first max_rows
+        if date_field is None:
+            df = download_csv_page(session, dataset_id, limit=max_rows)
+            df.to_csv(csv_path, index=False)
+            return df
+
+        import datetime
+
+        def parse_date_str(value):
+            # NOT pd.Timestamp/pd.to_datetime: those segfault the whole
+            # Python process under Python 3.14 with current pandas versions
+            # (confirmed reproducible) -- plain datetime parsing has no such
+            # issue, and day-granularity is all the `where` filter below
+            # needs anyway
+            value = value.split("T")[0]
+            parts = value.split("-")
+            year = int(parts[0])
+            month = int(parts[1]) if len(parts) > 1 else 1
+            day = int(parts[2]) if len(parts) > 2 else 1
+            return datetime.date(year, month, day)
+
+        r = session.get(
+            records_url, params={**common_params, "limit": 1, "order_by": f"{date_field} asc"}
+        )
+        r.raise_for_status()
+        start = parse_date_str(r.json()["results"][0][date_field])
+        r = session.get(
+            records_url, params={**common_params, "limit": 1, "order_by": f"{date_field} desc"}
+        )
+        r.raise_for_status()
+        end = parse_date_str(r.json()["results"][0][date_field]) + datetime.timedelta(days=1)
+
+        n_windows = 10
+        rows_per_window = max_rows // n_windows
+        span_days = (end - start).days
+        edges = [
+            start + datetime.timedelta(days=round(i * span_days / n_windows))
+            for i in range(n_windows + 1)
+        ]
+
+        dfs: list[pd.DataFrame] = []
+        with mo.status.progress_bar(total=n_windows, title=f"Lade Stichprobe von {dataset_id}") as bar:
+            for i in range(n_windows):
+                lo, hi = edges[i].strftime("%Y-%m-%d"), edges[i + 1].strftime("%Y-%m-%d")
+                bar.update(subtitle=f"{lo} bis {hi}")
+                where = f"{date_field} >= date'{lo}' and {date_field} < date'{hi}'"
+                dfs.append(download_csv_page(session, dataset_id, limit=rows_per_window, where=where))
+
+        df = pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame()
+        df.to_csv(csv_path, index=False)
+        return df
     return (get_dataset,)
 
 @app.cell(hide_code=True)
@@ -291,10 +305,12 @@ def _(mo):
 
 
 @app.cell
-def _(get_dataset):
+def _(get_dataset, mo):
     # Read the dataset
     df = get_dataset(dataset_id="100232")
-    df
+    # mo.output.append() (not a bare trailing `df`) so this stacks below any
+    # disclaimer get_dataset() already appended, instead of replacing it
+    mo.output.append(df)
     return (df,)
 
 
@@ -326,10 +342,119 @@ def _(df, pd, plt):
     try:
         df.hist(bins=25, rwidth=0.9)
         plt.tight_layout()
-        plt.show()
+        hist_output = plt.gcf()
     except ValueError:
-        print("No numerical data to plot.")
+        hist_output = "No numerical data to plot."
+    hist_output
     return
+
+
+@app.cell
+def _(df):
+    # plot geographic points/shapes on a map
+    if "geo_shape" in df.columns or "geo_point_2d" in df.columns:
+        try:
+            import datetime
+            import json
+
+            import folium
+            from folium.plugins import MarkerCluster, TimestampedGeoJson
+
+            MAX_FEATURES = 5000  # keep the map responsive for datasets with many geo rows
+
+            def try_parse_date(value):
+                # NOT pd.to_datetime: segfaults the whole Python process
+                # under Python 3.14 with current pandas versions (confirmed
+                # reproducible) -- plain datetime parsing has no such issue
+                if not isinstance(value, str):
+                    return None
+                try:
+                    value = value.split("T")[0]
+                    parts = value.split("-")
+                    return datetime.date(
+                        int(parts[0]),
+                        int(parts[1]) if len(parts) > 1 else 1,
+                        int(parts[2]) if len(parts) > 2 else 1,
+                    )
+                except (ValueError, IndexError):
+                    return None
+
+            has_shapes = "geo_shape" in df.columns and df["geo_shape"].notna().any()
+
+            if has_shapes:
+                # geo_shape holds the real geometry (e.g. polygons); geo_point_2d is
+                # often just a simplified representative point of the same feature
+                shapes = df["geo_shape"].dropna()
+                if len(shapes) > MAX_FEATURES:
+                    shapes = shapes.sample(MAX_FEATURES, random_state=0)
+                features = [
+                    {"type": "Feature", "geometry": json.loads(shape), "properties": {}}
+                    for shape in shapes
+                ]
+                m = folium.Map()
+                layer = folium.GeoJson({"type": "FeatureCollection", "features": features})
+                layer.add_to(m)
+                m.fit_bounds(layer.get_bounds())
+            else:
+                # look for a usable time column so a dataset with many repeated
+                # readings (e.g. sensor measurements) isn't all shown at once --
+                # instead the map gets a time slider to step/animate through it
+                time_col = None
+                for col in df.columns:
+                    if any(k in col.lower() for k in ("zeit", "datum", "date", "time", "jahr")):
+                        parsed = df[col].apply(try_parse_date)
+                        if parsed.notna().mean() > 0.8:
+                            time_col = col
+                            break
+
+                geo = df["geo_point_2d"].dropna().str.split(",", expand=True).astype(float)
+                geo.columns = ["lat", "lon"]
+
+                if time_col is not None:
+                    times = df.loc[geo.index, time_col].apply(try_parse_date)
+                    valid = geo.join(times.rename("time")).dropna()
+                    if len(valid) > MAX_FEATURES:
+                        valid = valid.sample(MAX_FEATURES, random_state=0)
+                    features = [
+                        {
+                            "type": "Feature",
+                            "geometry": {"type": "Point", "coordinates": [row.lon, row.lat]},
+                            "properties": {
+                                "times": [row.time.isoformat()],
+                                "icon": "circle",
+                                "iconstyle": {
+                                    "fillColor": "#d62728",
+                                    "fillOpacity": 0.6,
+                                    "stroke": False,
+                                    "radius": 5,
+                                },
+                            },
+                        }
+                        for row in valid.itertuples()
+                    ]
+                    m = folium.Map(location=[geo["lat"].mean(), geo["lon"].mean()], zoom_start=13)
+                    TimestampedGeoJson(
+                        {"type": "FeatureCollection", "features": features},
+                        period="P1D",
+                        duration="P30D",  # rolling window: points fade out after 30 days
+                        add_last_point=False,
+                    ).add_to(m)
+                else:
+                    if len(geo) > MAX_FEATURES:
+                        geo = geo.sample(MAX_FEATURES, random_state=0)
+                    m = folium.Map(location=[geo["lat"].mean(), geo["lon"].mean()], zoom_start=13)
+                    cluster = MarkerCluster().add_to(m)
+                    for _, row in geo.iterrows():
+                        folium.CircleMarker(location=[row["lat"], row["lon"]], radius=4).add_to(cluster)
+
+            geo_output = m
+        except (ValueError, AttributeError):
+            geo_output = "Could not parse geographic data for plotting."
+    else:
+        geo_output = "This dataset does not contain geographic data (geo_point_2d/geo_shape)."
+    geo_output
+    return
+
 
 @app.cell(hide_code=True)
 def _(mo):

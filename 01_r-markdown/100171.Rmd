@@ -29,7 +29,14 @@ Auto generated R starter code for data set 100171.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `from` | datetime | Start der Messung |
+| `to` | datetime | Ende der Messung |
+| `type` | text | Parklatztyp |
+| `sum_inflow` | double | Summe Zufahrten |
+| `sum_outflow` | double | Summe Wegfahrten |
+| `avg_occupancy_abs` | double | Durchschnittliche Auslastung |
 
 
 # Load packages

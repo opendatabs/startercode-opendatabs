@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100232.
 - **Description** `Wohnungen gemäss Gebäude- und Wohnungsregister (GWR). <br><br>Eine Wohnung ist eine Gesamtheit von Räumen, die für eine Wohnnutzung geeignet sind, eine bauliche Einheit bilden, einen Zugang entweder von aussen oder von einem gemeinsam mit anderen Wohnungen genutzten Bereich innerhalb des Gebäudes haben, über eine Kocheinrichtung (oder mindestens der technischen Installation für den Einbau einer Kocheinrichtung) verfügen und keine Fahrnis darstellen.<br><br>Einen Überblick über die im Register geführten Merkmal gibt folgendes Dokument: <a href="https://www.housing-stat.ch/files/881-2200.pdf" target="_blank">https://www.housing-stat.ch/files/881-2200.pdf (Merkmalskatalog 4.2)</a> bzw. online unter <a href="https://www.housing-stat.ch/de/help/42.html" target="_blank">https://www.housing-stat.ch/de/help/42.html (Online-Merkmalskatalog 4.2)</a><br><br>Die rechtliche Grundlage stellt die entsprechende eidgenössische Gesetzgebung dar: <a href="https://www.fedlex.admin.ch/eli/cc/2017/376/de" target="_blank">https://www.fedlex.admin.ch/eli/cc/2017/376/de (Verordnung über das eidgenössische Gebäude- und Wohnungsregister (VGWR))</a><br><br>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-11-24`
-- **Modified** `2026-10-05T04:26:44+00:00`
+- **Modified** `2026-10-06T04:26:50+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -29,7 +29,27 @@ Auto generated R starter code for data set 100232.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `egid` | int | Eidgenössischer Gebäudeidentifikator |
+| `ewid` | int | Eidgenössischer Wohnungsidentifikator |
+| `edid` | int | Eidgenössischer Eingangsidentifikator |
+| `whgnr` | int | Administrative Wohnungsnummer |
+| `weinr` | text | Physische Wohnungsnummer |
+| `wstwk` | int | Stockwerk Code |
+| `wstwk_decoded` | text | Stockwerk Bezeichnung |
+| `wbez` | text | Lage auf dem Stockwerk |
+| `wmehrg` | int | Mehrgeschossige Wohnung Code |
+| `wmehrg_decoded` | text | Mehrgeschossige Wohnung Bezeichnung |
+| `wbauj` | text | Baujahr der Wohnung |
+| `wabbj` | text | Abbruchjahr der Wohnung |
+| `wstat` | int | Wohnungsstatus Code |
+| `wstat_decoded` | text | Wohnungsstatus Bezeichnung |
+| `warea` | int | Wohnungsfläche (in m2) |
+| `wazim` | int | Anzahl Zimmer |
+| `wkche` | int | Kocheinrichtung Code |
+| `wkche_decoded` | text | Kocheinrichtung Bezeichnung |
+| `wexpdat` | date | Exportdatum |
 
 
 # Load packages

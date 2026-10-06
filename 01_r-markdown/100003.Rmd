@@ -29,7 +29,36 @@ Auto generated R starter code for data set 100003.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `date` | date | Erhebungsmonat und -jahr |
+| `year` | text | Jahr des Erhebungsdatums |
+| `month` | int | Monat des Erhebungsdatums |
+| `bfsid` | int | Positionsnummer; der Identifikator des BFS für die Warenposition |
+| `warenkorb_hierarchie` | text | Aneinanderreihung der Felder Hauptgruppe bis Ebene8 |
+| `name` | text | Bezeichnung der Warenkorbposition |
+| `name1` | text | Erste und oberste Ebene der hierarchischen Struktur des Warenkorbs |
+| `name2` | text | 2. Ebene der hierarchischen Struktur des Warenkorbs |
+| `name3` | text | 3. Ebene der hierarchischen Struktur des Warenkorbs |
+| `name4` | text | 4. Ebene der hierarchischen Struktur des Warenkorbs |
+| `name5` | text | 5. Ebene der hierarchischen Struktur des Warenkorbs |
+| `name6` | text | 6. Ebene der hierarchischen Struktur des Warenkorbs |
+| `name7` | text | 7. Ebene der hierarchischen Struktur des Warenkorbs |
+| `name8` | text | 8. Ebene der hierarchischen Struktur des Warenkorbs |
+| `weight` | double | Das zum Erhebungsdatum gültige Gewicht der Warenkorbposition |
+| `depth` | int | Die zum Erhebungsdatum gültige hierarchische Tiefe der Warenkorbposition in der Warenkorb-Hierarchie |
+| `currentsortorder` | int | Die Sortier-Reihenfolge gemäss BFS in der aktuellen Erhebung |
+| `currentname` | text | Bezeichnung der Warenkorbposition in der aktuellen Erhebung |
+| `currentweight` | double | Gewicht in der aktuellen Erhebung |
+| `currentdepth` | int | Tiefe der Warenkorb-Hierarchie |
+| `revisiondate` | date | Das Datum der Revision, die zum Zeitpunkt der Erhebung dieses Indexeintrags gültig war |
+| `viewrevisiondate` | date | Das Datum der Revision, in der dieser Eintrag skaliert ist |
+| `currentvalue` | double | Basler Index aktuell, gerundet auf 4 Nachkommastellen; Indexwert x(p) für die Warenposition p in der Erhebung t. |
+| `lastmonthvalue` | double | Basler Index Vormonat, gerundet auf 4 Nachkommastellen; Indexwert x(p, t-1) im Vormonat für eine Warenposition p in der Erhebung t. |
+| `lastyearvalue` | double | Basler Index Vorjahr, gerundet auf 4 Nachkommastellen; Indexwert x(p, t-12) des gleichen Monats im Vorjahr für eine Warenposition p in der Erhebung t. |
+| `monthpriceincrease` | double | Monatsteuerung (in %), gerundet auf 4 Nachkommastellen |
+| `yearpriceincrease` | double | Jahresteuerung (in %), gerundet auf 4 Nachkommastellen |
+| `relweight` | double | — |
 
 
 # Load packages
