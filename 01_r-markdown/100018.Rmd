@@ -29,37 +29,7 @@ Auto generated R starter code for data set 100018.
 
 ## Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `geo_point_2d` | geo_point_2d | Koordinaten |
-| `geo_shape` | geo_shape | — |
-| `begehrenid` | int | Kennziffer des Begehrens. Ein Begehren kann mehrere Adressbelegungen umfassen. |
-| `lokalitaid` | int | Kennziffer des Standorts |
-| `belegungid` | int | Kennziffer der Belegung |
-| `bezeichng` | text | Beschreibung der Belegung |
-| `artbeg_id` | int | Kennziffer der Art des Begehrens |
-| `artbeg_bez` | text | Bezeichnung der Art des Begehrens |
-| `eingangsdatum` | date | Eingangsdatum |
-| `entscheid_datum` | date | Entscheid-Datum |
-| `entsch_id` | int | Kennziffer der Entscheidkategorie |
-| `entsch_bez` | text | Name der Entscheidkategorie |
-| `strassenid` | int | Strassen-Nummer |
-| `belgartid` | int | Kennziffer der Art der Belegung |
-| `belgartbez` | text | Name der Art der Belegung |
-| `belaartid` | int | Kennziffer der Belastungsart |
-| `belaartbez` | text | Name der Belastungsart |
-| `merkmal_id` | int | Kennziffer des Merkmals des Geschäfts |
-| `merkmalbez` | text | Name des Merkmals des Geschäfts |
-| `merkmalwrt` | text | Wert des Merkmals des Geschäfts, z. B. Baukosten |
-| `einheit_id` | int | Kennziffer der Einheit |
-| `einheitbez` | text | Einheit, in welcher die Belegung erfasst ist. Kosten werden über die Einheit berechnet. Z.B. m2 oder Wochen. |
-| `belestatid` | int | Kennziffer des Status der Belegung |
-| `belestatbe` | text | Name des Status der Belegung |
-| `idunique` | text | — |
-| `datumeing` | text | — |
-| `datuments` | text | — |
-| `datum_von` | date | — |
-| `datum_bis` | date | — |
+_No field information available._
 
 
 # Load packages
