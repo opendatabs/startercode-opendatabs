@@ -60,10 +60,10 @@ def _(mo):
 - **Description** `<p>Stündlich aktualisierte Belegungsdaten der öffentlichen Parkhäuser der Stadt Basel, bezogen über das Parkleitsystem Basel (<a href="https://www.parkleitsystem-basel.ch" target="_blank">https://www.parkleitsystem-basel.ch</a>).</p><p>Historische Daten mit kleinerer zeitlicher Auflösung können auch über das API von ParkenDD bezogen werden, wie hier am Beispiel der Parkhäuser der Stadt Zürich beschrieben: <a href="https://opendatazurich.github.io/parkendd-api//" target="_blank">https://opendatazurich.github.io/parkendd-api//</a> (die Parkhäuser von Basel sind über diese URL abrufbar: <a href="https://api.parkendd.de/Basel" target="_blank">https://api.parkendd.de/Basel</a>). </p><p>Die Standorte der Parkhäuser sind in diesem Datensatz ersichtlich: <a href="https://data.bs.ch/explore/dataset/100044/" target="_blank">https://data.bs.ch/explore/dataset/100044/</a>.<a href="https://data.bs.ch/explore/dataset/100044/" target="_blank"></a></p><p>Änderungsprotokoll:</p><p>14.08.2023 - Neue Spalte "auslastungen" wurde hinzugefügt.</p><p>28.11.2024 - Es gibt eine Lücke vom 21. Oktober 2024 bis zum 28. November 2024.</p><p>28.11.2024 - Centralbahnparking wurde zu Centralbahn umbenannt in den Spalten id, id2, name, title.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2026-10-07T22:05:49+00:00`
+- **Modified** `2026-10-08T07:06:10+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-02-06T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-06T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-07T22:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr']`
 - **Keywords** `['Parkplatz', 'Parkhaus', 'Autos', 'Elektroautos', 'Frei', 'Echtzeit', 'Realtime']`
 - **Creator** `Parkhäuser Basel-Stadt`
@@ -354,6 +354,11 @@ def _(df):
             from folium.plugins import MarkerCluster, TimestampedGeoJson
 
             MAX_FEATURES = 5000  # keep the map responsive for datasets with many geo rows
+            # shapes (polygons) carry far more coordinate data per feature than
+            # points do -- 5000 points stays well under marimo's ~10MB output
+            # limit, but 5000 polygons can serialize to 15-20MB and get replaced
+            # with a "too large to show" message instead of the map
+            MAX_SHAPE_FEATURES = 2000
 
             def try_parse_date(value):
                 # NOT pd.to_datetime: segfaults the whole Python process
@@ -374,32 +379,65 @@ def _(df):
 
             has_shapes = "geo_shape" in df.columns and df["geo_shape"].notna().any()
 
+            # look for a usable time column so a dataset with many repeated/
+            # overlapping records isn't all shown at once -- instead the map
+            # gets a time slider to step/animate through it. Applies whether
+            # the dataset has point or shape (polygon) geometry.
+            time_col = None
+            for col in df.columns:
+                if any(k in col.lower() for k in ("zeit", "datum", "date", "time", "jahr")):
+                    parsed = df[col].apply(try_parse_date)
+                    if parsed.notna().mean() > 0.8:
+                        time_col = col
+                        break
+
             if has_shapes:
                 # geo_shape holds the real geometry (e.g. polygons); geo_point_2d is
-                # often just a simplified representative point of the same feature
-                shapes = df["geo_shape"].dropna()
-                if len(shapes) > MAX_FEATURES:
-                    shapes = shapes.sample(MAX_FEATURES, random_state=0)
-                features = [
-                    {"type": "Feature", "geometry": json.loads(shape), "properties": {}}
-                    for shape in shapes
-                ]
-                m = folium.Map()
-                layer = folium.GeoJson({"type": "FeatureCollection", "features": features})
-                layer.add_to(m)
-                m.fit_bounds(layer.get_bounds())
+                # often just a simplified representative point of the same feature.
+                # A handful of rows in some datasets use GeometryCollection, which
+                # nests sub-geometries under "geometries" instead of a direct
+                # "coordinates" key -- folium/Leaflet can't render that, so those
+                # rows are skipped rather than crashing the whole map.
+                if time_col is not None:
+                    shape_times = df[time_col].apply(try_parse_date)
+                    valid = df[["geo_shape"]].join(shape_times.rename("time")).dropna()
+                    if len(valid) > MAX_SHAPE_FEATURES:
+                        valid = valid.sample(MAX_SHAPE_FEATURES, random_state=0)
+                    features = [
+                        {
+                            "type": "Feature",
+                            "geometry": geometry,
+                            "properties": {
+                                "times": [row.time.isoformat()],
+                                "style": {"color": "#d62728", "fillOpacity": 0.4},
+                            },
+                        }
+                        for row in valid.itertuples()
+                        if "coordinates" in (geometry := json.loads(row.geo_shape))
+                    ]
+                    m = folium.Map()
+                    layer = TimestampedGeoJson(
+                        {"type": "FeatureCollection", "features": features},
+                        period="P1D",
+                        duration="P30D",  # rolling window: shapes fade out after 30 days
+                        add_last_point=False,
+                    )
+                    layer.add_to(m)
+                    m.fit_bounds(layer.get_bounds())
+                else:
+                    shapes = df["geo_shape"].dropna()
+                    if len(shapes) > MAX_SHAPE_FEATURES:
+                        shapes = shapes.sample(MAX_SHAPE_FEATURES, random_state=0)
+                    features = [
+                        {"type": "Feature", "geometry": geometry, "properties": {}}
+                        for shape in shapes
+                        if "coordinates" in (geometry := json.loads(shape))
+                    ]
+                    m = folium.Map()
+                    layer = folium.GeoJson({"type": "FeatureCollection", "features": features})
+                    layer.add_to(m)
+                    m.fit_bounds(layer.get_bounds())
             else:
-                # look for a usable time column so a dataset with many repeated
-                # readings (e.g. sensor measurements) isn't all shown at once --
-                # instead the map gets a time slider to step/animate through it
-                time_col = None
-                for col in df.columns:
-                    if any(k in col.lower() for k in ("zeit", "datum", "date", "time", "jahr")):
-                        parsed = df[col].apply(try_parse_date)
-                        if parsed.notna().mean() > 0.8:
-                            time_col = col
-                            break
-
                 geo = df["geo_point_2d"].dropna().str.split(",", expand=True).astype(float)
                 geo.columns = ["lat", "lon"]
 

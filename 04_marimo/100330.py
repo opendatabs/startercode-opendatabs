@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz umfasst die Firmen des Kantons Basel-Stadt, die im Handelsregister des Zefix (Zentraler Firmenindex) registriert sind. Das Zefix bildet das öffentlich zugängliche Angebot des Eidgenössischen Amtes für das Handelsregister (EHRA). Es stellt die Daten des Zentralregisters über verschiedene Zugänge wie die Zefix Webapplikation (<a href="https://www.zefix.admin.ch/" target="_blank">https://www.zefix.admin.ch/</a>), die Zefix REST API (<a href="https://www.zefix.admin.ch/ZefixPublicREST/swagger-ui/index.html" target="_blank">https://www.zefix.admin.ch/ZefixPublicREST/swagger-ui/index.html</a>), die Zefix Mobile App (<a href="https://www.zefixapp.ch" target="_blank">https://www.zefixapp.ch</a>/) und als Linked Data in LINDAS (<a href="https://lindas.admin.ch/" target="_blank">https://lindas.admin.ch/</a>, was hier verwendet wurde) über das Internet zur Verfügung. Über Zefix können die Daten sämtlicher im Handelsregister eingetragener Rechtseinheiten sowie die täglichen Handelsregisterpublikationen im SHAB (Schweizerischen Handelsamtsblatt, <a href="https://www.shab.ch/" target="_blank">https://www.shab.ch/</a>) abgerufen werden. Der hier angebotene Datensatz beinhaltet tagesaktuelle Kerndaten der aktiven, im Handelsregister eingetragenen Rechtseinheiten, wie Firma/Name, Sitz und Domiziladresse.</p><p>LINDAS (Linked Data Service) fungiert in diesem Kontext als Plattform für die Vernetzung und den Zugriff auf diverse Datenquellen in der Schweiz, einschliesslich der Daten aus dem Zefix. Zur Gewinnung spezifischer Informationen über die im Kanton Basel-Stadt registrierten Unternehmen wird eine SPARQL-Abfrage verwendet. SPARQL, eine Abfragesprache für Daten im RDF-Format, ermöglicht den Zugriff auf detaillierte Datensätze über die Firmen aus dem LINDAS-Netzwerk. Die SPARQL-Abfrage kann unter einem bereitgestellten Link (<a href="https://s.zazuko.com/2WjT8iZ" target="_blank">https://s.zazuko.com/2WjT8iZ</a>) aufgerufen werden. Die Abfrage wurde mithilfe der vorhandenen SPARQL-Abfrage von opendata.swiss (<a href="https://opendata.swiss/de/dataset/zefix-zentraler-firmenindex" target="_blank">https://opendata.swiss/de/dataset/zefix-zentraler-firmenindex</a>) zum Zefix erweitert: <a href="https://github.com/opendatabs/data-processing/blob/master/zefix_handelsregister/etl.py" target="_blank">https://github.com/opendatabs/data-processing/blob/master/zefix_handelsregister/etl.py</a></p><p>Diese Zefix-Daten und die der anderen Kantone werden von Open Data Basel-Stadt täglich aktualisiert und können unter folgendem HTTPS-Link heruntergeladen werden: <br><i>https://data-bs.ch/stata/zefix_handelsregister/all_cantons/companies_[Kantonskürzel].csv<br></i>Im Beispiel von Basel-Landschaft lautet der Link:<br><a href="https://data-bs.ch/stata/zefix_handelsregister/all_cantons/companies_BL.csv" target="_blank">https://data-bs.ch/stata/zefix_handelsregister/all_cantons/companies_BL.csv </a><br></p><p>Der Datensatz enthält neben den Grundinformationen der Firmen auch erweiterte Spalten wie die Koordinaten der Unternehmen, die mithilfe der Betriebsadresse und von Nominatim (<a href="https://nominatim.org/" target="_blank">https://nominatim.org/</a>) berechnet wurden. Nominatim ist ein Open-Source-Tool zur Geokodierung, das heisst, es wandelt Standortdaten wie Adressen oder Ortsnamen in geografische Koordinaten (Längen- und Breitengrade) um und umgekehrt.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-01-18`
-- **Modified** `2026-10-07T00:06:24+00:00`
+- **Modified** `2026-10-08T00:06:10+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -356,6 +356,11 @@ def _(df):
             from folium.plugins import MarkerCluster, TimestampedGeoJson
 
             MAX_FEATURES = 5000  # keep the map responsive for datasets with many geo rows
+            # shapes (polygons) carry far more coordinate data per feature than
+            # points do -- 5000 points stays well under marimo's ~10MB output
+            # limit, but 5000 polygons can serialize to 15-20MB and get replaced
+            # with a "too large to show" message instead of the map
+            MAX_SHAPE_FEATURES = 2000
 
             def try_parse_date(value):
                 # NOT pd.to_datetime: segfaults the whole Python process
@@ -376,32 +381,65 @@ def _(df):
 
             has_shapes = "geo_shape" in df.columns and df["geo_shape"].notna().any()
 
+            # look for a usable time column so a dataset with many repeated/
+            # overlapping records isn't all shown at once -- instead the map
+            # gets a time slider to step/animate through it. Applies whether
+            # the dataset has point or shape (polygon) geometry.
+            time_col = None
+            for col in df.columns:
+                if any(k in col.lower() for k in ("zeit", "datum", "date", "time", "jahr")):
+                    parsed = df[col].apply(try_parse_date)
+                    if parsed.notna().mean() > 0.8:
+                        time_col = col
+                        break
+
             if has_shapes:
                 # geo_shape holds the real geometry (e.g. polygons); geo_point_2d is
-                # often just a simplified representative point of the same feature
-                shapes = df["geo_shape"].dropna()
-                if len(shapes) > MAX_FEATURES:
-                    shapes = shapes.sample(MAX_FEATURES, random_state=0)
-                features = [
-                    {"type": "Feature", "geometry": json.loads(shape), "properties": {}}
-                    for shape in shapes
-                ]
-                m = folium.Map()
-                layer = folium.GeoJson({"type": "FeatureCollection", "features": features})
-                layer.add_to(m)
-                m.fit_bounds(layer.get_bounds())
+                # often just a simplified representative point of the same feature.
+                # A handful of rows in some datasets use GeometryCollection, which
+                # nests sub-geometries under "geometries" instead of a direct
+                # "coordinates" key -- folium/Leaflet can't render that, so those
+                # rows are skipped rather than crashing the whole map.
+                if time_col is not None:
+                    shape_times = df[time_col].apply(try_parse_date)
+                    valid = df[["geo_shape"]].join(shape_times.rename("time")).dropna()
+                    if len(valid) > MAX_SHAPE_FEATURES:
+                        valid = valid.sample(MAX_SHAPE_FEATURES, random_state=0)
+                    features = [
+                        {
+                            "type": "Feature",
+                            "geometry": geometry,
+                            "properties": {
+                                "times": [row.time.isoformat()],
+                                "style": {"color": "#d62728", "fillOpacity": 0.4},
+                            },
+                        }
+                        for row in valid.itertuples()
+                        if "coordinates" in (geometry := json.loads(row.geo_shape))
+                    ]
+                    m = folium.Map()
+                    layer = TimestampedGeoJson(
+                        {"type": "FeatureCollection", "features": features},
+                        period="P1D",
+                        duration="P30D",  # rolling window: shapes fade out after 30 days
+                        add_last_point=False,
+                    )
+                    layer.add_to(m)
+                    m.fit_bounds(layer.get_bounds())
+                else:
+                    shapes = df["geo_shape"].dropna()
+                    if len(shapes) > MAX_SHAPE_FEATURES:
+                        shapes = shapes.sample(MAX_SHAPE_FEATURES, random_state=0)
+                    features = [
+                        {"type": "Feature", "geometry": geometry, "properties": {}}
+                        for shape in shapes
+                        if "coordinates" in (geometry := json.loads(shape))
+                    ]
+                    m = folium.Map()
+                    layer = folium.GeoJson({"type": "FeatureCollection", "features": features})
+                    layer.add_to(m)
+                    m.fit_bounds(layer.get_bounds())
             else:
-                # look for a usable time column so a dataset with many repeated
-                # readings (e.g. sensor measurements) isn't all shown at once --
-                # instead the map gets a time slider to step/animate through it
-                time_col = None
-                for col in df.columns:
-                    if any(k in col.lower() for k in ("zeit", "datum", "date", "time", "jahr")):
-                        parsed = df[col].apply(try_parse_date)
-                        if parsed.notna().mean() > 0.8:
-                            time_col = col
-                            break
-
                 geo = df["geo_point_2d"].dropna().str.split(",", expand=True).astype(float)
                 geo.columns = ["lat", "lon"]
 
