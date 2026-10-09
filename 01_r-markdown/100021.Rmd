@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-08"
+date: "2026-10-09"
 output: html_document
 ---
 
@@ -29,7 +29,22 @@ Auto generated R starter code for data set 100021.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `gml_id` | text | — |
+| `es_name` | text | Name der Wiederverwendungsstelle |
+| `es_kategorie` | text | Kategorie der Wiederverwendungsstelle |
+| `es_beschreibung` | text | Beschreibung der Wiederverwendungsstelle |
+| `es_adresse` | text | Adresse der Wiederverwendungsstelle |
+| `es_postleitzahl` | text | Postleitzahl der Wiederverwendungsstelle |
+| `es_ortschaft` | text | Ortschaftsname der Wiederverwendungsstelle |
+| `es_telefon` | text | Telefonnummer für die Wiederverwendungsstelle |
+| `es_oeffnungszeit` | text | Öffnungszeiten der Wiederverwendungsstelle |
+| `mapbs_es_link` | text | Internetadresse der Wiederverwendungsstelle |
+| `es_zustaendigkeit` | text | Zuständigkeit der Wiederverwendungsstelle |
+| `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
 # Load packages

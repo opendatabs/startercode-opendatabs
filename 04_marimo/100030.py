@@ -82,7 +82,24 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `id_schule` | int | — |
+| `standort` | text | — |
+| `typ` | text | — |
+| `name` | text | — |
+| `telefon1` | text | — |
+| `telefon2` | text | — |
+| `strasse` | text | — |
+| `hausnummer` | text | — |
+| `plz` | text | — |
+| `ort` | text | — |
+| `fax` | text | — |
+| `link` | text | — |
+| `geometrie` | text | — |
+| `map_links` | text | — |
 
 
     ///

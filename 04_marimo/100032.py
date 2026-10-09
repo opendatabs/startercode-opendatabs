@@ -82,7 +82,18 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | — |
+| `geo_shape` | geo_shape | — |
+| `objid` | text | — |
+| `objectid` | int | — |
+| `informatio` | text | — |
+| `kategorie` | text | — |
+| `routenbez` | text | — |
+| `rbeschreib` | text | — |
+| `richtung` | text | — |
+| `shape_leng` | double | — |
 
 
     ///

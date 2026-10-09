@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-10-08"
+date: "2026-10-09"
 output: html_document
 ---
 
@@ -29,7 +29,23 @@ Auto generated R starter code for data set 100060.
 
 ## Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `wov_name` | text | Name des Wohnviertels |
+| `wohnviertel` | text | — |
+| `wov_label` | text | Nummerierung (Label) der statistischen Raumeinheit |
+| `geo_shape` | geo_shape | Flächengeometrie (Polygon) |
+| `geo_point_2d` | geo_point_2d | — |
+| `jahr` | text | — |
+| `anteil_al` | double | Anteil Ausländer an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). |
+| `anteil_bs` | double | Anteil Kantonsbürger an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anteil_bsanch` | double | Anteil Kantonsbürger an der schweizerischen Bevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anteil_ch` | double | Anteil Schweizer an der Gesamtbevölkerung; Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anzahl_al` | text | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anzahl_bs` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `anzahl_ch` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `gesbev_f` | int | Jahresendbestand, exkl. Personen an administrativen Meldeadressen. |
+| `gemeinde_name` | text | Offizielle Bezeichnung der Gemeinde |
 
 
 # Load packages
