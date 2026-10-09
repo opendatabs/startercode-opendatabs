@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `Der Bevölkerung werden die verschiedenen Entsorgungsstellen für ihre Abfälle und Wertstoffe angezeigt. Sie erhalten zudem die Informationen, was, wann und wie sie diese entsorgen können.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2026-08-10`
-- **Modified** `2026-10-08T00:00:00+00:00`
+- **Modified** `2026-10-09T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

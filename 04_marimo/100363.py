@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `Dieser Datensatz enthält die Standorte verschiedener Secondhand-Waren in der Region Basel, die entweder verkauft oder kostenlos weitergegeben werden. Diese Standorte können Secondhand-Läden, Brockenhäuser, Buchhandlungen, Bücherschränke, Lebensmittelverteilschränke oder Elektrofachgeschäfte umfassen. Bei einigen Standorten sind zusätzliche Informationen wie Telefonnummern und Links zu ihren Internetseiten verfügbar.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2026-08-10`
-- **Modified** `2026-10-08T00:00:00+00:00`
+- **Modified** `2026-10-09T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`

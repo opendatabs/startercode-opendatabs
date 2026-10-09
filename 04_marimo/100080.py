@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz enthält eine Übersicht der von Nutzern gemeldeten Weiterverwendungen von Datensätzen aus dem Datenportal, einschliesslich Anwendungen, Visualisierungen und Projekte, die auf bestehenden Datensätzen basieren.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-10-09`
-- **Modified** `2026-06-09T07:10:31+00:00`
+- **Modified** `2026-10-09T13:10:25+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-10-17T22:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-01-16T23:00:00+00:00`
@@ -96,9 +96,10 @@ def _(mo):
 | `dataset_title` | text | Der Name oder die Bezeichnung des Datensatzes, der dessen Inhalt und Thema zusammenfasst. |
 | `link_zum_datensatz` | text | Die URL, die direkten Zugriff auf den spezifischen Datensatz im Datenportal ermöglicht. |
 | `dataset_id` | text | Eine eindeutige Identifikationsnummer, die jedem Datensatz im Datenportal zugewiesen ist, um ihn von anderen Datensätzen zu unterscheiden. |
-| `publisher` | text | Die Organisation, die den Datensatz bereitgestellt oder veröffentlicht hat. |
 | `theme_picto` | text | Thema |
 | `dateforjoinclean` | text | — |
+| `id` | text | — |
+| `creator` | text | Die für die Erstellung der Ressource verantwortliche Einheit. |
 
 
     ///
