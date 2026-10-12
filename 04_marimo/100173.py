@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `Rohe und standardisierte Sterberaten des Kantons Basel-Stadt nach Geschlecht und Altersgruppen seit 2012. Die Sterberaten werden monatlich aktualisiert. Aufgrund von verzögerten Ereignis-Meldungen können sich die Werte der Vormonate (Anzahl Todesfälle, Sterbeziffer/-rate) nach einer Aktualisierung leicht ändern. Die standardisierte Sterberate bezieht sich auf die mittlere Bevölkerung des Monats Januar 2012 des Kantons Basel-Stadt. Durch die Standardisierung erhält man so in der Altersgruppe "Alle" eine altersstandardisierte Sterberate für das jeweilige Geschlecht.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2022-04-01`
-- **Modified** `2026-09-01T10:45:35+00:00`
+- **Modified** `2026-10-12T06:00:41+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2011-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2026-06-30T22:00:00+00:00`
