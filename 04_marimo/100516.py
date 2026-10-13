@@ -59,7 +59,7 @@ def _(mo):
 - **Title** `Vernehmlassungen`
 - **Description** `<p style="font-family: sans-serif;">Dieser Datensatz zeigt die abgeschlossenen Vernehmlassungen des Kanton Basel-Stadt.</p><p style="font-family: sans-serif;">Weitere Datensätze rundum Vernehmlassungen in Basel-Stadt finden Sie hier: <a href="https://data.bs.ch/explore/?refines=tags:vernehmlassungen" target="_blank">https://data.bs.ch/explore/?refines=tags:vernehmlassungen</a> </p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2026-02-28`
+- **Issued** `2026-07-15`
 - **Modified** `2026-09-01T10:54:10+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
