@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `Dieser Datensatz enthält die Standorte von Grundwasserentnahme- und Rückgabestellen im Kanton Basel-Stadt. Die Daten zeigen, wo Grundwasser beispielsweise für thermische Nutzung oder als Brauchwasser verwendet wird.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-05-13`
-- **Modified** `2026-07-07T00:00:00+00:00`
+- **Modified** `2026-10-06T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
