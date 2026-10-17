@@ -63,7 +63,7 @@ def _(mo):
 - **Modified** `2026-10-16T14:01:53+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-05-05T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-10-13T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-15T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt', 'Bevölkerung', 'Verwaltung', 'Öffentliche Ordnung und Sicherheit']`
 - **Keywords** `['Müll', 'Bebbisagg', 'illegal']`
 - **Creator** `Stadtreinigung`
