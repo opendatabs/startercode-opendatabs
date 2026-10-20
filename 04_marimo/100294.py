@@ -63,7 +63,7 @@ def _(mo):
 - **Modified** `2026-10-19T08:45:08+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-04-29T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-09-25T22:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-10-18T22:00:00+00:00`
 - **Themes** `['Raum und Umwelt']`
 - **Keywords** `['Wetter', 'Luftfeuchtigkeit', 'Strahlung', 'Niederschlag', 'Wind', 'Temperatur', 'Regen']`
 - **Creator** `Amt für Umwelt und Energie`
