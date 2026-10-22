@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `Dieser Datensatz enthält Kennzahlen zu Pflegebedürftigen im Bereich der Pflege zu Hause (PzH). Er umfasst Daten zur Anzahl der Pflegebedürftigen, aufgeschlüsselt nach Geschlecht, sowie Informationen zum Durchschnittsalter der Pflegebedürftigen insgesamt und getrennt nach Frauen und Männern.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2024-12-20`
-- **Modified** `2025-09-15T16:30:48+00:00`
+- **Modified** `2026-10-22T05:43:30+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2015-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`
