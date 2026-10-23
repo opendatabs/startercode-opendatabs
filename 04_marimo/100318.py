@@ -63,7 +63,7 @@ def _(mo):
 - **Modified** `2025-08-19T23:00:57+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2016-12-31T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2025-12-30T23:00:00+00:00`
 - **Themes** `['Gesundheit']`
 - **Keywords** `None`
 - **Creator** `Statistisches Amt`
