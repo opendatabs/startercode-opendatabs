@@ -35,13 +35,13 @@ Auto generated R starter code for data set 100431.
 | `geo_shape` | geo_shape | — |
 | `gml_id` | text | — |
 | `pt_projekttitel` | text | Titel des Projekts |
-| `pt_projektzuordnung` | text | Zugehörigkeit nach Projektname |
 | `pt_lage` | text | Lage des Projekts |
 | `pt_stadtteil` | text | Betroffener Stadtteil |
 | `pt_kategorie` | text | Kategorie des Ortes |
 | `pt_link` | text | Webseiten-Link zum Projekt |
 | `pt_zustaendigebehoerde` | text | Zuständige Behörde |
 | `pt_partizipationsform` | text | Form der Partizipation |
+| `pt_projektzuordnung` | text | Zugehörigkeit nach Projektname |
 | `map_links` | text | die Navigation mit verschiedenen Apps erlaubt |
 
 

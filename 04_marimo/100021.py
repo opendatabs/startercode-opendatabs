@@ -93,10 +93,10 @@ def _(mo):
 | `es_adresse` | text | Adresse der Wiederverwendungsstelle |
 | `es_postleitzahl` | text | Postleitzahl der Wiederverwendungsstelle |
 | `es_ortschaft` | text | Ortschaftsname der Wiederverwendungsstelle |
-| `es_telefon` | text | Telefonnummer für die Wiederverwendungsstelle |
-| `es_oeffnungszeit` | text | Öffnungszeiten der Wiederverwendungsstelle |
 | `mapbs_es_link` | text | Internetadresse der Wiederverwendungsstelle |
 | `es_zustaendigkeit` | text | Zuständigkeit der Wiederverwendungsstelle |
+| `es_telefon` | text | Telefonnummer für die Wiederverwendungsstelle |
+| `es_oeffnungszeit` | text | Öffnungszeiten der Wiederverwendungsstelle |
 | `map_links` | text | URL zur Navigation des Standorts in einer Karten-App |
 
 
