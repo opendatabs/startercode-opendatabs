@@ -32,7 +32,7 @@ Auto generated R starter code for data set 100294.
 | Field | Type | Description |
 | :-- | :-- | :-- |
 | `timestamp` | datetime | Zeitstempel |
-| `precipitation` | double | Total der Niederschläge innerhalb der letzten Stunde |
+| `precipitation` | double | Total der Niederschläge innerhalb der letzten 10 Minuten |
 | `relativehumidityhc` | double | Luftfeuchtigkeit bezieht sich auf die Menge an Wassertröpfchen oder Wasserdampf, die in der Luft vorhanden sind. |
 | `solarradiation` | double | Globalstrahlung ist die Menge an Sonnenenergie, die auf eine horizontale Fläche in einer bestimmten Zeitspanne (normalerweise in Stunden) auftrifft. |
 | `airtemperaturehc` | double | Lufttemperatur bezieht sich auf die Masseinheit der Wärmeenergie, die in der Luft vorhanden ist. |
