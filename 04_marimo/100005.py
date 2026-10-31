@@ -68,7 +68,7 @@ def _(mo):
 <p>Echtzeitdaten zur Belegung der Elektroauto-Ladestationen der gesamten Schweiz basierend auf dem Status des Ladevorgangs sind hier zu finden: <a href="https://opendata.swiss/de/dataset/ladestationen" target="_blank">https://opendata.swiss/de/dataset/ladestationen</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-05`
-- **Modified** `2026-10-29T23:00:20+00:00`
+- **Modified** `2026-10-30T23:00:43+00:00`
 - **Rights** `NonCommercialAllowed-CommercialWithPermission-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
