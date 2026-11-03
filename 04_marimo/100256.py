@@ -40,7 +40,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Nutzungsplan - Zonenplan Riehen: Überlagernde Festlegungen**
+    # **Überlagernde Festlegung (Riehen)**
     **Description**: <p>Der Datensatz beinhaltet die rechtskräftigen überlagernden Festlegungen gemäss dem Zonenplan. Diese Festlegungen können die Grundnutzung ergänzen, aber auch überstimmen (z.B. Bebauungspläne, Schutzzwecke von Natur- und Landschaftsschutzzonen)</p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100256)*.
@@ -56,16 +56,16 @@ def _(mo):
     /// details | Metadata
 
 - **Dataset_identifier** `100256`
-- **Title** `Nutzungsplan - Zonenplan Riehen: Überlagernde Festlegungen`
+- **Title** `Überlagernde Festlegung (Riehen)`
 - **Description** `<p>Der Datensatz beinhaltet die rechtskräftigen überlagernden Festlegungen gemäss dem Zonenplan. Diese Festlegungen können die Grundnutzung ergänzen, aber auch überstimmen (z.B. Bebauungspläne, Schutzzwecke von Natur- und Landschaftsschutzzonen)</p><p>Weitere Daten zum Thema Nutzungsplanung: <a href="https://data.bs.ch/explore/?refine.tags=Nutzungsplanung" target="_blank">https://data.bs.ch/explore/?refine.tags=Nutzungsplanung</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2018-04-30`
-- **Modified** `2026-05-05T00:00:00+00:00`
+- **Modified** `2026-09-30T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Geographie', 'Raum und Umwelt']`
-- **Keywords** `['kantonaler Nutzungsplan', 'Landnutzung', 'Nutzungsplan', 'Nutzungsplanung', 'Flächennutzungsplan', 'Naturschutzzonen', 'Bebauungsplan']`
+- **Keywords** `['kantonaler Nutzungsplan', 'Landnutzung', 'Nutzungsplan', 'Nutzungsplanung']`
 - **Creator** `Einwohnergemeinde Riehen`
 - **Reference** `None`
 

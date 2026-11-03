@@ -40,7 +40,7 @@ def _(mo):
     mo.md(
         r"""
     ## Dataset
-    # **Strassen und Wege: Durchgangsstrassen**
+    # **Durchgangsstrasse**
     **Description**: <p>Der Datensatz beinhaltet die Durchgangsstrassen gemäss eidgenössischer Durchgangsstrassenverordung (741.272).</p><p>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?refine.tags=STWE" target="_blank">https://data.bs.ch/explore/?refine.tags=STWE</a></p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100242)*.
@@ -56,7 +56,7 @@ def _(mo):
     /// details | Metadata
 
 - **Dataset_identifier** `100242`
-- **Title** `Strassen und Wege: Durchgangsstrassen`
+- **Title** `Durchgangsstrasse`
 - **Description** `<p>Der Datensatz beinhaltet die Durchgangsstrassen gemäss eidgenössischer Durchgangsstrassenverordung (741.272).</p><p>Weitere Daten zu "Strassen und Wege": <a href="https://data.bs.ch/explore/?refine.tags=STWE" target="_blank">https://data.bs.ch/explore/?refine.tags=STWE</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-03-05`
@@ -65,7 +65,7 @@ def _(mo):
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Mobilität und Verkehr', 'Geographie']`
-- **Keywords** `['Durchgangsstrassen', 'Erschliessungsstrasse', 'Europastrasse', 'Feldweg', 'Gasse', 'Geschwindigkeit', 'Hauptstrasse', 'Hierarchie', 'HLS', 'Hochleistungsstrasse', 'HSS', 'HVS', 'Kantonsstrassen', 'Mobilität', 'Mobilitätsnetz', 'Nationalstrasse', 'Netz', 'Parkanlage', 'Promenade', 'QSS', 'Quartiersammelstrasse', 'Strassennetzhierarchie', 'Temporegime', 'Verkehrsorientierte', 'Waldweg', 'Weg', 'Strassennetz', 'Wegnetz']`
+- **Keywords** `['Durchgangsstrassen', 'Erschliessungsstrasse', 'Europastrasse', 'Feldweg', 'Gasse', 'Geschwindigkeit', 'Hauptstrasse', 'Hierarchie', 'HLS', 'Hochleistungsstrasse', 'HSS', 'HVS', 'Kantonsstrassen', 'Mobilität', 'Mobilitätsnetz', 'Nationalstrasse', 'Netz', 'Parkanlage', 'Promenade', 'QSS', 'Quartiersammelstrasse', 'Strassennetzhierarchie', 'Temporegime', 'Verkehrsorientierte', 'Waldweg']`
 - **Creator** `Amt für Mobilität`
 - **Reference** `None`
 

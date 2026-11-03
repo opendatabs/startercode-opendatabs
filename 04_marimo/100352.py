@@ -63,7 +63,7 @@ def _(mo):
 - **Modified** `2026-11-03T00:34:26+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2019-01-02T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2031-11-01T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2031-11-02T23:00:00+00:00`
 - **Themes** `['Verwaltung', 'Gesetzgebung', 'Bau- und Wohnungswesen', 'Kultur, Medien, Informationsgesellschaft, Sport']`
 - **Keywords** `['Publikation', 'Veröffentlichung', 'Baupublikationen', 'Reglemente', 'Handänderung', 'Anordnung', 'Verfügung', 'Beschlüsse', 'Erlasse', 'Konkurse', 'Grundbuch', 'Bewilligungen', 'Nutzungsgesuche', 'Kantonale Bekanntmachungen', 'Gerichtliche Entscheide', 'Vorladungen', 'Handelsregister', 'Amtsblatt', 'Zahlungsbefehl']`
 - **Creator** `Staatskanzlei`
