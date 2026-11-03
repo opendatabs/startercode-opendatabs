@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-11-02"
+date: "2026-11-03"
 output: html_document
 ---
 
@@ -34,8 +34,8 @@ Auto generated R starter code for data set 100003.
 | `date` | date | Erhebungsmonat und -jahr |
 | `year` | text | Jahr des Erhebungsdatums |
 | `month` | int | Monat des Erhebungsdatums |
-| `bfsid` | int | Positionsnummer; Identifikator des BFS für die Warenposition |
-| `warenkorb_hierarchie` | text | Aneinanderreihung der Felder Hauptgruppe bis Ebene 8 |
+| `bfsid` | int | Positionsnummer; der Identifikator des BFS für die Warenposition |
+| `warenkorb_hierarchie` | text | Aneinanderreihung der Felder Hauptgruppe bis Ebene8 |
 | `name` | text | Bezeichnung der Warenkorbposition |
 | `name1` | text | Erste und oberste Ebene der hierarchischen Struktur des Warenkorbs |
 | `name2` | text | 2. Ebene der hierarchischen Struktur des Warenkorbs |
@@ -53,9 +53,9 @@ Auto generated R starter code for data set 100003.
 | `currentdepth` | int | Tiefe der Warenkorb-Hierarchie |
 | `revisiondate` | date | Das Datum der Revision, die zum Zeitpunkt der Erhebung dieses Indexeintrags gültig war |
 | `viewrevisiondate` | date | Das Datum der Revision, in der dieser Eintrag skaliert ist |
-| `currentvalue` | double | Basler Index aktuell, gerundet auf 4 Nachkommastellen; Indexwert x(p) für die Warenposition p in der Erhebung t |
-| `lastmonthvalue` | double | Basler Index Vormonat, gerundet auf 4 Nachkommastellen; Indexwert x(p, t-1) im Vormonat für eine Warenposition p in der Erhebung t |
-| `lastyearvalue` | double | Basler Index Vorjahr, gerundet auf 4 Nachkommastellen; Indexwert x(p, t-12) des gleichen Monats im Vorjahr für eine Warenposition p in der Erhebung t |
+| `currentvalue` | double | Basler Index aktuell, gerundet auf 4 Nachkommastellen; Indexwert x(p) für die Warenposition p in der Erhebung t. |
+| `lastmonthvalue` | double | Basler Index Vormonat, gerundet auf 4 Nachkommastellen; Indexwert x(p, t-1) im Vormonat für eine Warenposition p in der Erhebung t. |
+| `lastyearvalue` | double | Basler Index Vorjahr, gerundet auf 4 Nachkommastellen; Indexwert x(p, t-12) des gleichen Monats im Vorjahr für eine Warenposition p in der Erhebung t. |
 | `monthpriceincrease` | double | Monatsteuerung (in %), gerundet auf 4 Nachkommastellen |
 | `yearpriceincrease` | double | Jahresteuerung (in %), gerundet auf 4 Nachkommastellen |
 | `relweight` | double | — |
