@@ -82,14 +82,7 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-| Field | Type | Description |
-| :-- | :-- | :-- |
-| `geo_point_2d` | geo_point_2d | — |
-| `geo_shape` | geo_shape | — |
-| `gml_id` | text | — |
-| `lg_lsaname` | text | Name der Lichtsignalanlage |
-| `lg_lsanummer` | int | Nummer der Lichtsignalanlage |
-| `map_links` | text | — |
+_No field information available._
 
 
     ///
