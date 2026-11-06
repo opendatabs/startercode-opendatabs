@@ -85,13 +85,12 @@ def _(mo):
 | Field | Type | Description |
 | :-- | :-- | :-- |
 | `geo_point_2d` | geo_point_2d | — |
-| `geo_shape` | geo_shape | — |
+| `geo_shape` | geo_shape | 2D-Flächengeometrie des Schulstandorts. |
 | `standort` | text | Name des Schulstandorts. |
 | `schultyp` | text | Kategorisierung des Schultyps. |
 | `adresse` | text | Zusammenzug aus den Attributen *Strasse Hausnummer, Postleitzahl Ort* |
 | `link` | text | Adresse zum Internetauftritt des Schulstandorts. |
 | `stac_layer` | text | Ursprünglicher STAC-/Geometa-Layername vor dem Zusammenführen |
-| `map_links` | text | — |
 
 
     ///
