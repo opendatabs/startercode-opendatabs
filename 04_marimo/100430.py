@@ -41,7 +41,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Lichtsignalanlagen**
-    **Description**: Der Datensatz Lichtsignalanlagen umfasst alle Standorte von Lichtsignalanalgen Basel-Stadt, welche durch die Abteilung Verkehrssteuerung vom Amt für Mobilität projektiert, gebaut und betrieben werden.
+    **Description**: <p>Der Datensatz Lichtsignalanlagen umfasst alle Standorte von Lichtsignalanalgen Basel-Stadt, welche durch die Abteilung Verkehrssteuerung vom Amt für Mobilität projektiert, gebaut und betrieben werden.</p>
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100430)*.
     """
@@ -57,16 +57,16 @@ def _(mo):
 
 - **Dataset_identifier** `100430`
 - **Title** `Lichtsignalanlagen`
-- **Description** `Der Datensatz Lichtsignalanlagen umfasst alle Standorte von Lichtsignalanalgen Basel-Stadt, welche durch die Abteilung Verkehrssteuerung vom Amt für Mobilität projektiert, gebaut und betrieben werden.`
+- **Description** `<p>Der Datensatz Lichtsignalanlagen umfasst alle Standorte von Lichtsignalanalgen Basel-Stadt, welche durch die Abteilung Verkehrssteuerung vom Amt für Mobilität projektiert, gebaut und betrieben werden.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
-- **Issued** `2025-03-17`
-- **Modified** `2026-02-10T00:00:00+00:00`
+- **Issued** `2025-03-04`
+- **Modified** `2026-10-27T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
 - **Themes** `['Mobilität und Verkehr']`
-- **Keywords** `['Verkehr', 'Ampeln', 'Kreuzung', 'LSA', 'Lichtzeichenanlage', 'LZA']`
-- **Creator** `Amt für Mobilität`
+- **Keywords** `['Ampeln', 'Knoten', 'Kreuzung', 'LSA', 'Signale', 'Signalgeber', 'Signalgruppen', 'Verkehr']`
+- **Creator** `Mobilität`
 - **Reference** `None`
 
 
@@ -82,7 +82,13 @@ def _(mo):
         r"""
     /// details | Data dictionary
 
-_No field information available._
+| Field | Type | Description |
+| :-- | :-- | :-- |
+| `geo_point_2d` | geo_point_2d | 2D-Punktgeometrie |
+| `geo_shape` | geo_shape | — |
+| `lsa_name` | text | Name der Lichtsignalanlage |
+| `lsa_nr` | int | Nummer der Lichtsignalanlage |
+| `standort` | text | Lagebeschreibung der Lichtsignalanlage |
 
 
     ///
