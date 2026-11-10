@@ -63,7 +63,7 @@ def _(mo):
 - **Modified** `2026-11-09T14:35:30+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2025-11-03T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-01-29T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-11-08T23:00:00+00:00`
 - **Themes** `['Verwaltung']`
 - **Keywords** `['Künstliche Intelligenz', 'Artificial Intelligence', 'AI', 'Richtlinien', 'öffentliche Verwaltung', 'LLM', 'KI-Agenten', 'KI-Anwendung', 'Datenschutz', 'Datensicherheit']`
 - **Creator** `Statistisches Amt`
