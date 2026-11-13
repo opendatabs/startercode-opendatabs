@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `<p>Antworten der kantonalen Bevölkerungsbefragung zu Lebenslage und Zufriedenheit im Kanton Basel-Stadt, wird alle vier Jahre durchgeführt. Dieser Datensatz enthält pro Zeile eine Antwort einer Person zu einer Frage der Befragung. Die Befragung umfasst Themen wie Wohnsituation, Sicherheit, Mobilität, Erwerbs- und finanzielle Lage, Bildung, Zusammenleben, Politik, Digitalisierung sowie Gesundheit.</p><p>  Die Daten können in anderen Formaten als ZIP-Datei hier heruntergeladen werden: <a href="https://data-bs.ch/stata/befragungen/bevoelkerung/2019.zip" target='"_blank"'>https://data-bs.ch/stata/befragungen/bevoelkerung/2019.zip</a></p><p>  Eine Vorschau der Daten, die pro Zeile alle Antworten einer Person enthält, sind hier zu finden: <a href="https://datatools.bs.ch/Bevoelkerungsbefragung_2019" target='"_blank"'>https://datatools.bs.ch/Bevoelkerungsbefragung_2019</a></p><p>  Weitere Informationen zur Befragung sind im Statistikportal abgebildet: <a href='https://statistik.bs.ch/suche?search={"query":"2019","filterTheme":"successor-50.1","filterType":[],"filterDateFrom":null,"filterDateTo":null,"sort":"Relevanz","selectedResult":null}' target='"_blank"'>https://statistik.bs.ch/suche?search={"query":"2019","filterTheme":"successor-50.1","filterType":[],"filterDateFrom":null,"filterDateTo":null,"sort":"Relevanz","selectedResult":null}</a></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2026-06-15`
-- **Modified** `2026-06-08T08:39:02+00:00`
+- **Modified** `2026-11-12T14:24:35+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2018-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2019-12-30T23:00:00+00:00`

@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `<p>Dieser Datensatz enthält die aggregierten erwarteten Besucherzahlen von Events nach Tag im Raum St. Jakob. Er erfasst für Tage mit Events das Datum und die Kategorie der Besucherzahl.</p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `None`
-- **Modified** `2026-11-05T12:55:25+00:00`
+- **Modified** `2026-11-10T11:11:46+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
