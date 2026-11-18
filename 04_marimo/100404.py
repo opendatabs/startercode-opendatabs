@@ -89,7 +89,7 @@ def _(mo):
 | `typ` | text | Definiert, ob es sich bei einem Punkt um eine Gefahrenstelle, eine Einbahnstrasse, oder eine Steigung handelt. |
 | `strasse` | text | Strassenname |
 | `gemeinde` | text | Offizielle Bezeichnung der Gemeinde |
-| `einbahn` | text | — |
+| `einbahn` | text | Weist aus ob und in welche Richtung Einbahn für eine Strasse gilt.&#x20; |
 | `gefahrenstelle` | text | Name oder Beschreibung des Ortes, an welchem sich die Gefahrenstelle befindet. |
 | `gefahrenart` | text | Erklärt, weshalb ein Ort als gefährlich eingestuft wird. |
 | `steigung` | text | Intesitätsgrad der Steigung. |

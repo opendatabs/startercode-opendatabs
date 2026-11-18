@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `Die offene Kinder- und Jugendarbeit (OKJA) ist ein Freizeitangebot für Kindern ab 5 Jahren bis jungen Erwachsenen im Alter von bis 25 Jahren. Sie umfasst Angebote wie Jugendzentren, mobile Jugendarbeit, Abenteuerspielplätze oder Spielmobile. Spezifisches Charakteristikum ist, dass die Angebote offen, freiwillig und partizipativ organisiert sind.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2019-11-06`
-- **Modified** `2021-07-16T00:00:00+00:00`
+- **Modified** `2026-11-13T00:00:00+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
