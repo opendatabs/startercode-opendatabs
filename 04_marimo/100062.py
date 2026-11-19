@@ -41,7 +41,7 @@ def _(mo):
         r"""
     ## Dataset
     # **Wohnbevölkerung nach Staatsangehörigkeit und Block**
-    **Description**: Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Block. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.
+    **Description**: Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Block. Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Block. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet (z.B. KESB), ohne dass sie dort physisch Wohnsitz haben. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.
 
     *You can find the dataset [under this link](https://data.bs.ch/explore/dataset/100062)*.
     """
@@ -57,10 +57,10 @@ def _(mo):
 
 - **Dataset_identifier** `100062`
 - **Title** `Wohnbevölkerung nach Staatsangehörigkeit und Block`
-- **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Block. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet, welche dort aber keinen physischen Wohnsitz haben (z.B. KESB). Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
+- **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Block. Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Block. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet (z.B. KESB), ohne dass sie dort physisch Wohnsitz haben. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-03-12`
-- **Modified** `2026-11-19T00:03:19+00:00`
+- **Modified** `2026-11-19T15:11:10+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1997-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`

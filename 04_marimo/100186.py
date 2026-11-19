@@ -63,7 +63,7 @@ def _(mo):
 - **Modified** `2026-11-18T21:14:42+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2012-06-05T22:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-11-10T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-11-17T23:00:00+00:00`
 - **Themes** `['Politik', 'Gesetzgebung', 'Verwaltung']`
 - **Keywords** `['Abstimmung', 'Parlament', 'Grosser Rat', 'Legislative', 'Geschäft', 'Grossrat', 'Grossrätin', 'Kalender']`
 - **Creator** `Parlamentsdienst des Grossen Rates`

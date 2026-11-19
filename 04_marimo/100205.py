@@ -64,10 +64,10 @@ def _(mo):
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
-- **Themes** `['Bevölkerung']`
-- **Keywords** `['Alter', 'Gemeinden', 'Wohnen', 'Demographie', 'Geschlecht', 'Lebensqualität', 'Einkommen']`
+- **Themes** `['Bevölkerung', 'Bildung, Wissenschaft', 'Gesundheit', 'Mobilität und Verkehr']`
+- **Keywords** `['Alter', 'Wohnen', 'Lebensqualität', 'Einkommen', 'Befragungen', 'Haushalt', 'Sicherheit', 'Bildung', 'Mobilität', 'Freizeit', 'Zufriedenheit', 'Pflege', 'Kultur', 'Freiwilligenarbeit', 'Altersangebote', 'Gesundheit', 'Unterstützung', 'Finanzen']`
 - **Creator** `Statistisches Amt`
-- **Reference** `None`
+- **Reference** `https://statistik.bs.ch/hintergrund/befragungen`
 
 
     ///
