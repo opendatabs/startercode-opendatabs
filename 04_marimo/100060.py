@@ -60,7 +60,7 @@ def _(mo):
 - **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Wohnviertel. Personen an administrativen Meldeadressen sind nicht berücksichtigt. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet (z.B. KESB), ohne dass sie dort physisch Wohnsitz haben. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-03-12`
-- **Modified** `2026-11-19T15:08:45+00:00`
+- **Modified** `2026-11-20T00:00:50+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
