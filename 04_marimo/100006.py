@@ -63,7 +63,7 @@ def _(mo):
 - **Modified** `2026-11-25T07:52:05+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-12-30T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-11-21T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-11-22T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Autos', 'Motorräder', 'Busse', 'Lieferwagen', 'Lastwagen', 'Anhänger', 'Verkehr', 'Verkehrszählung', 'Erhebung']`
 - **Creator** `Amt für Mobilität`
