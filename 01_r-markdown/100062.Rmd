@@ -1,6 +1,6 @@
 ---
 title: "Open Government Data, provided by Statistisches Amt des Kantons Basel-Stadt - DCC Data Competence Center"
-date: "2026-11-26"
+date: "2026-11-27"
 output: html_document
 ---
 
@@ -17,7 +17,7 @@ Auto generated R starter code for data set 100062.
 - **Description** `Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Block. Dieser Datensatz beinhaltet Angaben zur Wohnbevölkerung des Kantons Basel-Stadt am Jahresende nach Staatsangehörigkeit (Schweiz/Ausland) und Kantonsbürgerschaft auf Ebene Block. An administrativen Meldeadressen sind Personen aus administrativen Gründen gemeldet (z.B. KESB), ohne dass sie dort physisch Wohnsitz haben. Aus Datenschutzgründen werden nur Raumeinheiten mit mindestens 4 Einwohnern ausgewiesen. Quelle: Statistisches Amt Basel-Stadt, Bevölkerungsstatistik.`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2020-03-12`
-- **Modified** `2026-11-26T00:04:10+00:00`
+- **Modified** `2026-11-27T00:04:01+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `1997-12-31T23:00:00+00:00`
 - **Temporal_coverage_end_date** `2024-12-30T23:00:00+00:00`
