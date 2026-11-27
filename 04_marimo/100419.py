@@ -70,7 +70,7 @@ und Verkehrsmassnahmen enthalten. Der Datensatz ist eine wichtige
 Datengrundlage für die Planungsstellen in den Kantonen BS und BL.<o:p></o:p></p>`
 - **Contact_name** `Open Data Basel-Stadt`
 - **Issued** `2025-12-04`
-- **Modified** `2026-11-26T06:50:31+00:00`
+- **Modified** `2026-11-27T15:50:27+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `None`
 - **Temporal_coverage_end_date** `None`
@@ -97,15 +97,16 @@ def _(mo):
 | `id` | text | Eindeutiger Identifikator des Events |
 | `name` | text | Name des Events |
 | `link` | text | — |
-| `ort` | text | Gebäude des Events |
+| `standort` | text | Veranstaltungsstandort |
 | `datum` | date | Datum |
-| `start` | text | Start Uhrzeit |
+| `beginn` | text | Beginn Uhrzeit |
 | `ende` | text | Ende Uhrzeit |
+| `info_text_html` | text | Informationstext als HTML |
 | `sperrung` | text | Ist eine Sperrung nötig? |
 | `zusatzpp` | boolean | Werden zusätzliche Parkplätze angeboten? |
 | `ticketintegration` | boolean | — |
 | `bemerkung` | text | — |
-| `info_text_html` | text | Informationstext als HTML |
+| `ics_link` | text | URL für den Download der ICS-Datei mit dem Event |
 
 
     ///
