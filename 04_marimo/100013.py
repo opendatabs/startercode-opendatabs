@@ -63,7 +63,7 @@ def _(mo):
 - **Modified** `2026-11-27T08:03:15+00:00`
 - **Rights** `NonCommercialAllowed-CommercialAllowed-ReferenceRequired`
 - **Temporal_coverage_start_date** `2023-12-30T23:00:00+00:00`
-- **Temporal_coverage_end_date** `2026-11-23T23:00:00+00:00`
+- **Temporal_coverage_end_date** `2026-11-24T23:00:00+00:00`
 - **Themes** `['Mobilität und Verkehr', 'Tourismus']`
 - **Keywords** `['Verkehr', 'Verkehrszählung', 'Erhebung', 'Fussgänger', 'Fussverkehr', 'Velo', 'Fahrrad']`
 - **Creator** `Amt für Mobilität`
